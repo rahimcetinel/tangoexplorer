@@ -1,0 +1,13 @@
+---
+interface Props {
+  selected?: boolean;
+  class?: string;
+  [key: string]: unknown;
+}
+
+const { selected = false, class: className, ...rest } = Astro.props;
+---
+
+<article class:list={['app-ev', selected && 'is-selected', className]} {...rest}>
+  <slot />
+</article>

@@ -1,0 +1,37 @@
+---
+interface Props {
+  href: string;
+  class?: string;
+}
+
+const { href, class: className } = Astro.props;
+
+function isExternal(link: string): boolean {
+  if (!/^https?:\/\//i.test(link)) {
+    return false;
+  }
+  try {
+    const host = new URL(link).hostname;
+    return (
+      host !== 'localhost' &&
+      host !== '127.0.0.1' &&
+      !host.endsWith('.pages.dev') &&
+      host !== 'tangoexplorer.com' &&
+      host !== 'www.tangoexplorer.com'
+    );
+  } catch {
+    return true;
+  }
+}
+
+const external = isExternal(href);
+---
+
+<a
+  href={href}
+  class={className}
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noopener noreferrer' : undefined}
+>
+  <slot />
+</a>

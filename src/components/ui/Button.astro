@@ -1,0 +1,25 @@
+---
+interface Props {
+  variant?: 'solid' | 'ghost';
+  href?: string;
+  download?: string;
+  type?: 'button' | 'submit';
+  class?: string;
+  [key: string]: unknown;
+}
+
+const { variant = 'ghost', href, download, type = 'button', class: className, ...rest } = Astro.props;
+const classes = ['app-btn', variant === 'solid' && 'app-btn-solid', className];
+---
+
+{
+  href ? (
+    <a class:list={classes} href={href} download={download} {...rest}>
+      <slot />
+    </a>
+  ) : (
+    <button class:list={classes} type={type} {...rest}>
+      <slot />
+    </button>
+  )
+}

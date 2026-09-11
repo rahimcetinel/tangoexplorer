@@ -1,0 +1,132 @@
+---
+import ExternalLink from './ExternalLink.astro';
+import EventImage from './EventImage.astro';
+import type { NewsEntry } from '../lib/news';
+import { kindLabels, ui, type Locale } from '../lib/i18n';
+
+interface Props {
+  post: NewsEntry;
+  locale: Locale;
+  duration?: number | null;
+  showImage?: boolean;
+}
+
+const { post, locale, duration, showImage = true } = Astro.props;
+const copy = ui[locale];
+const d = post.data;
+const kinds = kindLabels[locale];
+const kind = d.kinds[0];
+const place = d.eventLocation || [d.city, d.country].filter(Boolean).join(', ');
+const cityCountry = [d.city, d.country].filter(Boolean).join(', ');
+const showCityCountry = Boolean(cityCountry && cityCountry !== place);
+const hasEvent = Boolean(d.eventWhen || place || d.eventWebsite || d.eventFacebook || d.eventInstagram || d.image || duration || kind);
+const webDistinct = d.eventWebsite && d.eventWebsite.replace(/\/$/, '') !== d.sourceUrl.replace(/\/$/, '');
+const hasLinks = Boolean(webDistinct || d.eventFacebook || d.eventInstagram);
+
+function hostOf(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
+---
+
+{
+  (hasEvent || d.sourceUrl) && (
+    <aside class="app-facts-box" id="facts">
+      {showImage && d.image && (
+        <div class="app-facts-img">
+          <EventImage
+            src={d.image}
+            alt={d.eventName ? `${d.eventName}` : copy.eventImage}
+            initialsFrom={d.eventName || d.title}
+            sizes="408px"
+          />
+        </div>
+      )}
+      <div class="app-facts-grid">
+        {hasEvent && (
+          <div>
+            <h2 class="app-facts-label">{copy.event}</h2>
+            {d.eventName && <p class="app-facts-name">{d.eventName}</p>}
+            <dl class="app-facts-dl">
+              {d.eventWhen && (
+                <div>
+                  <dt>{copy.date}</dt>
+                  <dd>{d.eventWhen}</dd>
+                </div>
+              )}
+              {place && (
+                <div>
+                  <dt>{copy.place}</dt>
+                  <dd>{place}</dd>
+                </div>
+              )}
+              {showCityCountry && (
+                <div>
+                  <dt>{copy.filterCity}</dt>
+                  <dd>{cityCountry}</dd>
+                </div>
+              )}
+              {kind && (
+                <div>
+                  <dt>{copy.kind}</dt>
+                  <dd>{kinds[kind]}</dd>
+                </div>
+              )}
+              {duration != null && duration > 0 && (
+                <div>
+                  <dt>{copy.duration}</dt>
+                  <dd>{copy.durationDays(duration)}</dd>
+                </div>
+              )}
+            </dl>
+          </div>
+        )}
+        <div id="links">
+          {hasLinks && (
+            <>
+              <h2 class="app-facts-label">{copy.links}</h2>
+              <ul class="app-links">
+                {webDistinct && (
+                  <li>
+                    {copy.web}:
+                    <ExternalLink class="app-link" href={d.eventWebsite!}>
+                      {hostOf(d.eventWebsite!)}
+                    </ExternalLink>
+                  </li>
+                )}
+                {d.eventInstagram && (
+                  <li>
+                    Instagram:
+                    <ExternalLink class="app-link" href={d.eventInstagram}>
+                      {hostOf(d.eventInstagram)}
+                    </ExternalLink>
+                  </li>
+                )}
+                {d.eventFacebook && (
+                  <li>
+                    Facebook:
+                    <ExternalLink class="app-link" href={d.eventFacebook}>
+                      {hostOf(d.eventFacebook)}
+                    </ExternalLink>
+                  </li>
+                )}
+              </ul>
+            </>
+          )}
+          <div class:list={['app-source', hasLinks && 'has-links']}>
+            <p class="app-facts-label">{copy.source}</p>
+            <p>
+              {d.source}:
+              <ExternalLink class="app-link break-all" href={d.sourceUrl}>
+                {d.sourceUrl}
+              </ExternalLink>
+            </p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  )
+}

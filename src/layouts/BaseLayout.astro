@@ -1,0 +1,83 @@
+---
+import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
+import JsonLd from '../components/JsonLd.astro';
+import { ui, type Locale } from '../lib/i18n';
+import { OG_FALLBACK } from '../lib/images';
+import { alternateUrls, siteGraph, absUrl, type OgType } from '../lib/seo';
+
+interface Props {
+  title: string;
+  description?: string;
+  locale?: Locale;
+  ogImage?: string;
+  ogType?: OgType;
+  newsSlug?: string;
+  robots?: string;
+  jsonLd?: object[];
+}
+
+const locale: Locale = Astro.props.locale ?? 'en';
+const copy = ui[locale];
+const {
+  title,
+  description = copy.defaultDescription,
+  ogImage,
+  ogType = 'website',
+  newsSlug,
+  robots,
+  jsonLd = [],
+} = Astro.props;
+const site = Astro.site ?? new URL('https://tangoexplorer.com');
+const pathname = Astro.url.pathname !== '/' && Astro.url.pathname.endsWith('/')
+  ? Astro.url.pathname.slice(0, -1)
+  : Astro.url.pathname;
+const canonical = absUrl(site, pathname || '/');
+const alts = alternateUrls(site, locale, pathname || '/', newsSlug);
+const ogAbs = new URL(ogImage || OG_FALLBACK, site).href;
+const ogLocale = locale === 'tr' ? 'tr_TR' : 'en_US';
+const ogLocaleAlt = locale === 'tr' ? 'en_US' : 'tr_TR';
+const graph = [...siteGraph(locale, site), ...jsonLd];
+---
+
+<!doctype html>
+<html lang={copy.htmlLang}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    {robots && <meta name="robots" content={robots} />}
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={alts.en} />
+    <link rel="alternate" hreflang="tr" href={alts.tr} />
+    <link rel="alternate" hreflang="x-default" href={alts.en} />
+    <meta property="og:site_name" content={copy.brand} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogLocaleAlt} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogAbs} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogAbs} />
+    <link
+      rel="preload"
+      href="/fonts/source-sans-3-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <JsonLd graph={graph} />
+    <ClientRouter />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen">
+    <a class="skip-link" href="#main">{copy.skipToContent}</a>
+    <slot />
+  </body>
+</html>

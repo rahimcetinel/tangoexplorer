@@ -1,0 +1,55 @@
+---
+import AppShell from '../layouts/AppShell.astro';
+import Header from './Header.astro';
+import { getNews } from '../lib/news';
+import { homePath, ui, type Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const copy = ui[locale];
+const posts = await getNews(locale);
+---
+
+<AppShell title={`${copy.aboutTitle} — ${copy.brand}`} description={copy.aboutTitle} locale={locale} posts={posts}>
+  <Fragment slot="center">
+    <Header
+      locale={locale}
+      crumbs={[
+        { label: copy.home, href: homePath(locale) },
+        { label: copy.aboutTitle },
+      ]}
+    />
+    <main id="main" class="app-page">
+      <h1 class="app-page-title">{copy.aboutTitle}</h1>
+      <div class="app-prose">
+        <p>{copy.aboutP1}</p>
+        <p>{copy.aboutP2}</p>
+        <h2>{copy.aboutSources}</h2>
+        <ul>
+          <li>
+            <a href="https://tangocat.net/" target="_blank" rel="noopener noreferrer">Tangocat</a>
+            — {copy.aboutTangocat}
+          </li>
+          <li>
+            <a href="https://hoy-milonga.com/turkiye/tr" target="_blank" rel="noopener noreferrer">Hoy Milonga Türkiye</a>
+            — {copy.aboutHoy}
+          </li>
+          <li>
+            {copy.aboutSocial} <code>sources/inbox/</code>
+          </li>
+        </ul>
+        <p>{copy.aboutEventLinks}</p>
+        <p>{copy.aboutFilters}</p>
+      </div>
+    </main>
+  </Fragment>
+  <Fragment slot="detail">
+    <div class="app-detail-inner">
+      <p class="app-detail-eyebrow">{copy.aboutTitle}</p>
+      <p class="text-sm text-ink-soft">{copy.footerBlurb}</p>
+    </div>
+  </Fragment>
+</AppShell>

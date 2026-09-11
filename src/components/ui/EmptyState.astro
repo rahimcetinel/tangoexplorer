@@ -1,0 +1,13 @@
+---
+interface Props {
+  class?: string;
+  hidden?: boolean;
+  [key: string]: unknown;
+}
+
+const { class: className, hidden, ...rest } = Astro.props;
+---
+
+<p class:list={['ui-empty', 'app-empty', className]} hidden={hidden} {...rest}>
+  <slot />
+</p>

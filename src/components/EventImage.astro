@@ -1,0 +1,38 @@
+---
+import { Picture } from 'astro:assets';
+import { eventImage } from '../lib/images';
+import { initials } from '../lib/timeline';
+
+interface Props {
+  src?: string;
+  alt: string;
+  initialsFrom?: string;
+  eager?: boolean;
+  sizes?: string;
+  class?: string;
+}
+
+const { src, alt, initialsFrom = alt, eager = false, sizes = '252px', class: className } = Astro.props;
+const meta = eventImage(src);
+const letters = initials(initialsFrom);
+---
+
+{
+  meta ? (
+    <Picture
+      src={meta}
+      alt={alt}
+      formats={['avif', 'webp']}
+      widths={[252, 408, 816, 1200]}
+      sizes={sizes}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+      fetchpriority={eager ? 'high' : undefined}
+      class:list={['event-image', className]}
+    />
+  ) : (
+    <span class="event-image-fallback" aria-hidden="true">
+      {letters}
+    </span>
+  )
+}

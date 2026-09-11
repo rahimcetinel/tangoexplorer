@@ -1,0 +1,29 @@
+---
+import { ui, type Locale } from '../lib/i18n';
+import type { MonthColumn } from '../lib/timeline';
+
+interface Props {
+  locale: Locale;
+  months: MonthColumn[];
+}
+
+const { locale, months } = Astro.props;
+const copy = ui[locale];
+---
+
+<nav class="app-ribbon" data-month-ribbon aria-label={copy.jumpTo}>
+  <span class="app-ribbon-label">{copy.jumpTo}</span>
+  {
+    months.map((month) => (
+      <a
+        class="app-mchip"
+        href={`#col-${month.key}`}
+        data-month={month.key}
+        aria-pressed="false"
+      >
+        {month.label}
+        <b data-month-count>{month.count}</b>
+      </a>
+    ))
+  }
+</nav>

@@ -1,0 +1,15 @@
+---
+import CategoryView from '../../components/CategoryView.astro';
+import { categories } from '../../content.config';
+import type { Category } from '../../lib/i18n';
+
+export function getStaticPaths() {
+  return categories.map((category) => ({
+    params: { category },
+  }));
+}
+
+const category = Astro.params.category as Category;
+---
+
+<CategoryView locale="en" category={category} />

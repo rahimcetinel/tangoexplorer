@@ -1,0 +1,52 @@
+---
+import CompactCard from './CompactCard.astro';
+import TimelineCard from './TimelineCard.astro';
+import { currentMonthKey, type MonthColumn } from '../lib/timeline';
+import type { Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+  months: MonthColumn[];
+  selectedSlug?: string;
+  eagerMonths?: string[];
+}
+
+const { locale, months, selectedSlug, eagerMonths = [] } = Astro.props;
+const nowMonth = currentMonthKey();
+const eager = new Set(eagerMonths);
+---
+
+<div class="app-viewport">
+  <div class="app-board" data-board data-now-month={nowMonth} tabindex="0" aria-label="Timeline">
+    {
+      months.map((month) => {
+        const full = eager.has(month.key);
+        return (
+          <section
+            class="app-col"
+            id={`col-${month.key}`}
+            data-month-col
+            data-month={month.key}
+            data-lazy={full ? 'false' : 'true'}
+            data-fragment={full ? undefined : `/fragments/${locale}/${month.key}`}
+          >
+            <header class="app-col-head">
+              <h2>{month.label}</h2>
+              <span class="sr-only" data-col-count>
+                {month.count}
+              </span>
+              <div class="app-col-line" aria-hidden="true" />
+            </header>
+            {month.posts.map((post) =>
+              full ? (
+                <TimelineCard post={post} locale={locale} selected={selectedSlug} />
+              ) : (
+                <CompactCard post={post} locale={locale} selected={selectedSlug} />
+              ),
+            )}
+          </section>
+        );
+      })
+    }
+  </div>
+</div>

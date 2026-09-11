@@ -1,0 +1,23 @@
+---
+interface Props {
+  href?: string;
+  pressed?: boolean;
+  class?: string;
+  [key: string]: unknown;
+}
+
+const { href, pressed = false, class: className, ...rest } = Astro.props;
+const classes = ['app-chip', pressed && 'is-active', className];
+---
+
+{
+  href ? (
+    <a class:list={classes} href={href} aria-pressed={String(pressed)} {...rest}>
+      <slot />
+    </a>
+  ) : (
+    <button class:list={classes} type="button" aria-pressed={String(pressed)} {...rest}>
+      <slot />
+    </button>
+  )
+}

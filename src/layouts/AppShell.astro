@@ -1,0 +1,56 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Rail from '../components/Rail.astro';
+import { homePath, ui, type Locale } from '../lib/i18n';
+import type { NewsEntry } from '../lib/news';
+import type { OgType } from '../lib/seo';
+
+interface Props {
+  title: string;
+  description?: string;
+  locale: Locale;
+  mode?: 'home' | 'page';
+  newsSlug?: string;
+  posts: NewsEntry[];
+  ogImage?: string;
+  ogType?: OgType;
+  robots?: string;
+  jsonLd?: object[];
+}
+
+const { title, description, locale, mode = 'page', newsSlug, posts, ogImage, ogType, robots, jsonLd } = Astro.props;
+const copy = ui[locale];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale={locale}
+  ogImage={ogImage}
+  ogType={ogType}
+  newsSlug={newsSlug}
+  robots={robots}
+  jsonLd={jsonLd}
+>
+  <div
+    class="app-shell"
+    data-app-shell
+    data-mode={mode}
+    data-home-path={homePath(locale)}
+    data-i18n-count={locale === 'tr' ? '{n} haber' : '{n} stories'}
+  >
+    <Rail locale={locale} posts={posts} newsSlug={newsSlug} mode={mode} />
+    <div class="app-center">
+      <slot name="center" />
+    </div>
+    <div class="app-detail-backdrop" data-detail-backdrop hidden></div>
+    <aside
+      class="app-detail"
+      data-detail-panel={mode === 'home' ? '' : undefined}
+      aria-label={copy.detailEyebrow}
+      id={mode === 'home' ? 'detail-panel' : undefined}
+    >
+      <slot name="detail" />
+    </aside>
+  </div>
+</BaseLayout>

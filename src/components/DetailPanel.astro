@@ -1,0 +1,32 @@
+---
+import { ui, type Locale } from '../lib/i18n';
+import Skeleton from './ui/Skeleton.astro';
+import Panel from './ui/Panel.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const copy = ui[Astro.props.locale];
+---
+
+<Panel>
+  <div class="app-detail-eyebrow">
+    <span>{copy.detailEyebrow}</span>
+    <button type="button" class="app-detail-close" data-detail-close aria-label={copy.closeDetail}>
+      ×
+    </button>
+  </div>
+  <div class="ui-skeleton-wrap" data-detail-skeleton hidden>
+    <Skeleton />
+  </div>
+  <p class="ui-empty app-empty" data-detail-error hidden>
+    {copy.loadError}
+    <a class="app-link" data-detail-error-link href="#">
+      {copy.openPage}
+    </a>
+  </p>
+  <div data-article-frame>
+    <slot />
+  </div>
+</Panel>

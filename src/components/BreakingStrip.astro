@@ -1,0 +1,32 @@
+---
+import type { NewsEntry } from '../lib/news';
+import { newsPath, ui, type Locale } from '../lib/i18n';
+import { newsSlug } from '../lib/news';
+
+interface Props {
+  items: NewsEntry[];
+  locale: Locale;
+}
+
+const { items, locale } = Astro.props;
+const copy = ui[locale];
+---
+
+{
+  items.length > 0 && (
+    <div class="bg-burgundy text-paper">
+      <div class="mx-auto flex max-w-6xl items-center gap-4 overflow-hidden px-4 py-2 text-sm">
+        <span class="shrink-0 border border-paper/40 px-2 py-0.5 text-xs font-bold tracking-widest uppercase">
+          {copy.breaking}
+        </span>
+        <div class="flex min-w-0 flex-wrap gap-x-6 gap-y-1">
+          {items.map((item) => (
+            <a class="truncate hover:underline" href={newsPath(locale, newsSlug(item))}>
+              {item.data.title}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}

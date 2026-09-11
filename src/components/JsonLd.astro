@@ -1,0 +1,11 @@
+---
+import { jsonLdDocument } from '../lib/seo';
+
+interface Props {
+  graph: object[];
+}
+
+const { graph } = Astro.props;
+---
+
+<Fragment set:html={`<script type="application/ld+json">${jsonLdDocument(graph)}</script>`} />

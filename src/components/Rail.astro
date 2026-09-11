@@ -1,0 +1,119 @@
+---
+import Footer from './Footer.astro';
+import Chip from './ui/Chip.astro';
+import SectionHeading from './ui/SectionHeading.astro';
+import {
+  aboutPath,
+  categoryLabels,
+  categoryPath,
+  homePath,
+  kindLabels,
+  ui,
+  type Category,
+  type Locale,
+} from '../lib/i18n';
+import { eventKinds, type NewsEntry } from '../lib/news';
+import { uniqueSorted } from '../lib/filters';
+
+interface Props {
+  locale: Locale;
+  posts: NewsEntry[];
+  newsSlug?: string;
+  mode?: 'home' | 'page';
+}
+
+const { locale, posts, mode = 'page' } = Astro.props;
+const copy = ui[locale];
+const home = homePath(locale);
+const currentPath = Astro.url.pathname;
+const kinds = kindLabels[locale];
+const usedKinds = eventKinds.filter((kind) => posts.some((post) => post.data.kinds.includes(kind)));
+const countries = uniqueSorted(
+  posts.map((post) => post.data.country),
+  locale,
+);
+const nav: { href: string; label: string; count?: number }[] = [
+  { href: home, label: copy.home, count: posts.length },
+  ...(Object.entries(categoryLabels[locale]) as [Category, string][]).map(([id, label]) => ({
+    href: categoryPath(locale, id),
+    label,
+  })),
+  { href: aboutPath(locale), label: copy.about },
+];
+
+function chipHref(key: 'kind' | 'country', value: string): string {
+  const params = new URLSearchParams();
+  params.set(key, value);
+  return `${home}?${params.toString()}`;
+}
+---
+
+<aside class="app-rail" aria-label={copy.browse}>
+  <p class="app-brand">
+    <a href={home}>
+      {copy.brandLead}<em>{copy.brandAccent}</em>
+    </a>
+  </p>
+  <p class="app-tag">{copy.kicker}</p>
+
+  <h2 class="app-rail-label">{copy.browse}</h2>
+  <nav class="app-nav" aria-label={copy.browse}>
+    {
+      nav.map((item) => {
+        const current =
+          currentPath === item.href || (item.href !== home && currentPath.startsWith(item.href));
+        return (
+          <a href={item.href} class:list={['app-nav-link', current && 'is-active']} aria-current={current ? 'page' : undefined}>
+            <span>{item.label}</span>
+            {item.count != null && (
+              <span class="app-nav-count" data-filter-count>
+                {item.count}
+              </span>
+            )}
+          </a>
+        );
+      })
+    }
+  </nav>
+
+  {
+    mode === 'home' && (
+      <>
+        <div class="app-rail-heading">
+          <SectionHeading>{copy.filterByKind}</SectionHeading>
+          <button type="button" class="app-rail-reset" data-filter-clear>
+            {copy.filterClear}
+          </button>
+        </div>
+        <div class="app-chips" role="group" aria-label={copy.filterByKind}>
+          {usedKinds.map((kind) => (
+            <Chip
+              href={chipHref('kind', kind)}
+              data-filter-chip="kind"
+              data-value={kind}
+            >
+              {kinds[kind]}
+            </Chip>
+          ))}
+        </div>
+
+        <div class="app-rail-heading">
+          <SectionHeading>{copy.filterCountry}</SectionHeading>
+        </div>
+        <div class="app-chips" role="group" aria-label={copy.filterCountry}>
+          {countries.map((country) => (
+            <Chip
+              href={chipHref('country', country)}
+              data-filter-chip="country"
+              data-value={country}
+            >
+              {country}
+            </Chip>
+          ))}
+        </div>
+      </>
+    )
+  }
+
+  <Footer locale={locale} />
+</aside>

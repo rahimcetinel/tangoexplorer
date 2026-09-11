@@ -1,0 +1,15 @@
+---
+interface Props {
+  lines?: number;
+  class?: string;
+}
+
+const { lines = 5, class: className } = Astro.props;
+---
+
+<div class:list={['ui-skeleton', className]} aria-hidden="true">
+  <div class="ui-skeleton-media" />
+  {Array.from({ length: lines }).map(() => (
+    <div class="ui-skeleton-line" />
+  ))}
+</div>

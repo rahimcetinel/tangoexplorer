@@ -1,0 +1,109 @@
+---
+import { render } from 'astro:content';
+import EventBox from './EventBox.astro';
+import EventActions from './EventActions.astro';
+import EventImage from './EventImage.astro';
+import {
+  categoryLabels,
+  categoryPath,
+  formatNewsDate,
+  kindLabels,
+  newsPath,
+  ui,
+  type Locale,
+} from '../lib/i18n';
+import { getNews, newsSlug, type NewsEntry } from '../lib/news';
+import { eventDurationDays, whenBadge } from '../lib/calendar';
+import { groupingDate, monthLabel } from '../lib/timeline';
+
+interface Props {
+  locale: Locale;
+  post: NewsEntry;
+  variant?: 'page' | 'panel';
+}
+
+const { locale, post, variant = 'page' } = Astro.props;
+const copy = ui[locale];
+const { Content } = await render(post);
+const slug = newsSlug(post);
+const d = post.data;
+const pageUrl = new URL(newsPath(locale, slug), Astro.site ?? 'https://tangoexplorer.com').href;
+const labels = categoryLabels[locale];
+const kinds = kindLabels[locale];
+const kind = d.kinds[0];
+const duration = d.eventStart ? eventDurationDays(d.eventStart, d.eventEnd) : null;
+const badge = whenBadge(d.eventStart);
+const badgeLabel =
+  badge === 'today' ? copy.whenToday : badge === 'tomorrow' ? copy.whenTomorrow : badge === 'this-week' ? copy.whenThisWeek : null;
+const related = (await getNews(locale))
+  .filter((item) => item.id !== post.id && item.data.category === post.data.category)
+  .slice(0, 3);
+const place = d.eventLocation || [d.city, d.country].filter(Boolean).join(', ');
+const month = monthLabel(groupingDate(post), locale);
+---
+
+<div data-article>
+  <p class="app-kicker">
+    <a href={categoryPath(locale, d.category)}>{labels[d.category]}</a>
+    {kind && <> · {kinds[kind]}</>}
+    {place && <> · {place}</>}
+    <> · {month}</>
+    {badgeLabel && <span class="app-when-badge">{badgeLabel}</span>}
+  </p>
+  {
+    variant === 'page' ? (
+      <h1 class="app-article-title" tabindex="-1">
+        {d.title}
+      </h1>
+    ) : (
+      <h2 class="app-article-title" tabindex="-1">
+        {d.title}
+      </h2>
+    )
+  }
+  <p class="app-lede">{d.summary}</p>
+  {
+    d.image && (
+      <div class="app-heroimg">
+        <EventImage
+          src={d.image}
+          alt={d.eventName || d.title}
+          initialsFrom={d.title}
+          eager={variant === 'page'}
+          sizes="(min-width: 860px) 720px, 100vw"
+        />
+        {d.imageCredit && (
+          <p class="app-image-credit">
+            {copy.imageCredit}: {d.imageCredit}
+          </p>
+        )}
+      </div>
+    )
+  }
+  <div class="app-article-body drop-cap">
+    <Content />
+  </div>
+  <EventBox post={post} locale={locale} duration={duration} showImage={false} />
+  <EventActions locale={locale} post={post} pageUrl={pageUrl} permalink={variant === 'panel'} />
+  <p class="app-timeline-pos">
+    {copy.timelinePosition}: <b>{month}</b>
+    {d.eventWhen && <> · {d.eventWhen}</>}
+    <> · {formatNewsDate(d.date, locale)}</>
+  </p>
+  {
+    related.length > 0 && (
+      <section class="app-related">
+        <h3 class="app-related-title">{copy.related}</h3>
+        <ul>
+          {related.map((item) => (
+            <li>
+              <a data-detail-link href={newsPath(locale, newsSlug(item))}>
+                {item.data.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+</div>

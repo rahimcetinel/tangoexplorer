@@ -1,0 +1,73 @@
+---
+import AppShell from '../layouts/AppShell.astro';
+import Header from './Header.astro';
+import ArticleInner from './ArticleInner.astro';
+import EventBox from './EventBox.astro';
+import EventActions from './EventActions.astro';
+import {
+  categoryLabels,
+  categoryPath,
+  homePath,
+  newsPath,
+  ui,
+  type Locale,
+} from '../lib/i18n';
+import { getNews, newsSlug, type NewsEntry } from '../lib/news';
+import { eventDurationDays } from '../lib/calendar';
+import { getImage } from 'astro:assets';
+import { eventImage, OG_FALLBACK } from '../lib/images';
+import { articleGraph } from '../lib/seo';
+
+interface Props {
+  locale: Locale;
+  post: NewsEntry;
+}
+
+const { locale, post } = Astro.props;
+const copy = ui[locale];
+const slug = newsSlug(post);
+const posts = await getNews(locale);
+const pageUrl = new URL(newsPath(locale, slug), Astro.site ?? 'https://tangoexplorer.com').href;
+const duration = post.data.eventStart ? eventDurationDays(post.data.eventStart, post.data.eventEnd) : null;
+const crumbs = [
+  { label: copy.home, href: homePath(locale) },
+  { label: categoryLabels[locale][post.data.category], href: categoryPath(locale, post.data.category) },
+  { label: post.data.eventName || post.data.title },
+];
+const cover = eventImage(post.data.image);
+const ogImage = cover
+  ? (await getImage({ src: cover, width: 1200, height: 630, format: 'jpg' })).src
+  : OG_FALLBACK;
+const jsonLd = [articleGraph(locale, post, pageUrl, new URL(ogImage, Astro.site ?? 'https://tangoexplorer.com').href, new URL(Astro.site ?? 'https://tangoexplorer.com'))];
+---
+
+<AppShell
+  title={`${post.data.title} — ${copy.brand}`}
+  description={post.data.summary}
+  locale={locale}
+  mode="page"
+  posts={posts}
+  newsSlug={slug}
+  ogImage={ogImage}
+  ogType="article"
+  jsonLd={jsonLd}
+>
+  <Fragment slot="center">
+    <Header locale={locale} newsSlug={slug} crumbs={crumbs} />
+    <main id="main" class="app-article">
+      <ArticleInner locale={locale} post={post} variant="page" />
+    </main>
+  </Fragment>
+  <Fragment slot="detail">
+    <div class="app-detail-inner">
+      <p class="app-detail-eyebrow">{copy.detailEyebrow}</p>
+      <h2 class="app-article-title">{post.data.eventName || post.data.title}</h2>
+      <EventBox post={post} locale={locale} duration={duration} />
+      <EventActions locale={locale} post={post} pageUrl={pageUrl} />
+    </div>
+  </Fragment>
+</AppShell>
+<script>
+  import { initAppShell } from '../scripts/app-shell';
+  initAppShell();
+</script>

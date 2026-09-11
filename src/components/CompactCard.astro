@@ -1,0 +1,49 @@
+---
+import Card from './ui/Card.astro';
+import { categoryLabels, kindLabels, newsPath, type Locale } from '../lib/i18n';
+import { newsSlug, type NewsEntry } from '../lib/news';
+import { isoDate } from '../lib/filters';
+import { dayLabel, searchText } from '../lib/timeline';
+
+interface Props {
+  post: NewsEntry;
+  locale: Locale;
+  selected?: string;
+}
+
+const { post, locale, selected } = Astro.props;
+const slug = newsSlug(post);
+const href = newsPath(locale, slug);
+const labels = categoryLabels[locale];
+const kinds = kindLabels[locale];
+const kind = post.data.kinds[0];
+const day = dayLabel(post.data.eventStart, post.data.eventEnd);
+const place = post.data.eventLocation || [post.data.city, post.data.country].filter(Boolean).join(', ');
+const isSelected = selected === slug;
+---
+
+<Card
+  selected={isSelected}
+  class="app-ev-compact"
+  data-card
+  data-kinds={post.data.kinds.join(',')}
+  data-format={post.data.format}
+  data-country={post.data.country ?? ''}
+  data-city={post.data.city ?? ''}
+  data-source={post.data.sourceKey}
+  data-start={isoDate(post.data.eventStart)}
+  data-end={isoDate(post.data.eventEnd)}
+  data-search={searchText(post)}
+>
+  <a href={href} data-detail-link>
+    <div class="app-ev-in">
+      {day && <span class="app-ev-day">{day}</span>}
+      <p class="app-ev-cat">
+        {labels[post.data.category]}
+        {kind && <> · {kinds[kind]}</>}
+      </p>
+      <h3>{post.data.title}</h3>
+      {place && <p class="app-ev-loc">{place}</p>}
+    </div>
+  </a>
+</Card>

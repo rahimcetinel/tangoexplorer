@@ -1,0 +1,18 @@
+---
+import { ui, type Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const copy = ui[Astro.props.locale];
+---
+
+<footer class="app-foot">
+  <p>{copy.footerBlurb}</p>
+  <p>
+    {copy.sourcesLabel}:{' '}
+    <a href="https://tangocat.net/" target="_blank" rel="noopener noreferrer">Tangocat</a>,{' '}
+    <a href="https://hoy-milonga.com/turkiye/tr" target="_blank" rel="noopener noreferrer">Hoy Milonga</a>
+  </p>
+</footer>

@@ -1,0 +1,51 @@
+---
+import AppShell from '../layouts/AppShell.astro';
+import Header from './Header.astro';
+import NewsCard from './NewsCard.astro';
+import { getNews } from '../lib/news';
+import { categoryLabels, homePath, ui, type Category, type Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+  category: Category;
+}
+
+const { locale, category } = Astro.props;
+const copy = ui[locale];
+const label = categoryLabels[locale][category];
+const posts = await getNews(locale);
+const filtered = posts.filter((post) => post.data.category === category);
+---
+
+<AppShell title={`${label} — ${copy.brand}`} description={`${copy.brand} ${label}`} locale={locale} posts={posts}>
+  <Fragment slot="center">
+    <Header
+      locale={locale}
+      crumbs={[
+        { label: copy.home, href: homePath(locale) },
+        { label },
+      ]}
+    />
+    <main id="main" class="app-page">
+      <p class="app-kicker">{copy.category}</p>
+      <h1 class="app-page-title">{label}</h1>
+      {
+        filtered.length === 0 ? (
+          <p class="app-empty">{copy.emptyCategory}</p>
+        ) : (
+          <div class="app-page-grid">
+            {filtered.map((post) => (
+              <NewsCard post={post} locale={locale} />
+            ))}
+          </div>
+        )
+      }
+    </main>
+  </Fragment>
+  <Fragment slot="detail">
+    <div class="app-detail-inner">
+      <p class="app-detail-eyebrow">{copy.category}</p>
+      <p class="text-sm text-ink-soft">{copy.filterCount(filtered.length)}</p>
+    </div>
+  </Fragment>
+</AppShell>

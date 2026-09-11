@@ -1,0 +1,69 @@
+---
+import Button from './ui/Button.astro';
+import { newsPath, ui, type Locale } from '../lib/i18n';
+import { newsSlug, type NewsEntry } from '../lib/news';
+import { buildIcs, googleCalendarUrl, icsHref } from '../lib/calendar';
+
+interface Props {
+  locale: Locale;
+  post: NewsEntry;
+  pageUrl: string;
+  permalink?: boolean;
+}
+
+const { locale, post, pageUrl, permalink = false } = Astro.props;
+const copy = ui[locale];
+const d = post.data;
+const slug = newsSlug(post);
+const start = d.eventStart;
+const place = d.eventLocation || [d.city, d.country].filter(Boolean).join(', ');
+const ics = start
+  ? buildIcs({
+      uid: slug,
+      title: d.eventName || d.title,
+      description: d.summary,
+      location: place,
+      url: pageUrl,
+      start,
+      end: d.eventEnd,
+    })
+  : '';
+const google = start
+  ? googleCalendarUrl({
+      title: d.eventName || d.title,
+      details: d.summary,
+      location: place,
+      start,
+      end: d.eventEnd,
+    })
+  : '';
+---
+
+{
+  start && (
+    <div class="app-actions">
+      <Button variant="solid" href={icsHref(ics)} download={`${slug}.ics`}>
+        {copy.addToCalendar}
+      </Button>
+      <Button href={google} target="_blank" rel="noopener noreferrer">
+        {copy.googleCalendar}
+      </Button>
+    </div>
+  )
+}
+<div class="app-actions">
+  <Button
+    data-share
+    data-share-url={pageUrl}
+    data-share-title={d.title}
+    data-copied={copy.linkCopied}
+    data-copy-label={copy.copyLink}
+  >
+    {copy.share}
+  </Button>
+  {
+    permalink && (
+      <Button href={newsPath(locale, slug)}>{copy.openPage}</Button>
+    )
+  }
+</div>

@@ -1,0 +1,68 @@
+---
+import { categoryLabels, formatNewsDate, type Locale } from '../lib/i18n';
+import { newsPath } from '../lib/i18n';
+import { newsSlug, type NewsEntry } from '../lib/news';
+import { isoDate } from '../lib/filters';
+import EventImage from './EventImage.astro';
+
+interface Props {
+  post: NewsEntry;
+  locale: Locale;
+  featured?: boolean;
+}
+
+const { post, locale, featured = false } = Astro.props;
+const href = newsPath(locale, newsSlug(post));
+const meta = [post.data.eventWhen, post.data.eventLocation].filter(Boolean).join(' · ');
+const labels = categoryLabels[locale];
+const cardAttrs = {
+  'data-card': '',
+  'data-kinds': post.data.kinds.join(','),
+  'data-format': post.data.format,
+  'data-country': post.data.country ?? '',
+  'data-city': post.data.city ?? '',
+  'data-source': post.data.sourceKey,
+  'data-start': isoDate(post.data.eventStart),
+  'data-end': isoDate(post.data.eventEnd),
+};
+---
+
+{
+  featured ? (
+    <article {...cardAttrs} class="border-b border-rule pb-8">
+      <a href={href} class="group grid gap-6 lg:grid-cols-12">
+        {post.data.image && (
+          <div class="lg:col-span-4">
+            <EventImage src={post.data.image} alt="" initialsFrom={post.data.title} sizes="(min-width: 1024px) 320px, 100vw" />
+          </div>
+        )}
+        <div class={post.data.image ? 'lg:col-span-8' : 'lg:col-span-12'}>
+          <p class="text-xs font-bold tracking-widest text-burgundy uppercase">
+            {labels[post.data.category]} · {formatNewsDate(post.data.date, locale)}
+          </p>
+          <h2 class="font-display mt-3 text-4xl leading-tight font-bold group-hover:text-burgundy sm:text-5xl">
+            {post.data.title}
+          </h2>
+          <p class="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">{post.data.summary}</p>
+          {meta && <p class="mt-3 text-sm font-semibold text-ink">{meta}</p>}
+        </div>
+      </a>
+    </article>
+  ) : (
+    <article {...cardAttrs} class="border-b border-rule py-5">
+      <a href={href} class="group block">
+        {post.data.image && (
+          <EventImage src={post.data.image} alt="" initialsFrom={post.data.title} sizes="(min-width: 768px) 50vw, 100vw" class="mb-3 h-40 w-full border border-rule object-cover" />
+        )}
+        <p class="text-xs font-bold tracking-widest text-burgundy uppercase">
+          {labels[post.data.category]} · {formatNewsDate(post.data.date, locale)}
+        </p>
+        <h3 class="font-display mt-1.5 text-xl leading-snug font-bold group-hover:text-burgundy">
+          {post.data.title}
+        </h3>
+        <p class="mt-2 text-ink-soft">{post.data.summary}</p>
+        {meta && <p class="mt-2 text-sm text-ink-soft">{meta}</p>}
+      </a>
+    </article>
+  )
+}

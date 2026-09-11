@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /fragments/
+
+Sitemap: https://tangoexplorer.com/sitemap-index.xml
