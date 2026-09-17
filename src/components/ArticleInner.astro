@@ -15,6 +15,7 @@ import {
 import { getNews, newsSlug, type NewsEntry } from '../lib/news';
 import { eventDurationDays, whenBadge } from '../lib/calendar';
 import { groupingDate, monthLabel } from '../lib/timeline';
+import { regionLabels, regionOf, regionPath } from '../lib/regions';
 
 interface Props {
   locale: Locale;
@@ -40,11 +41,16 @@ const related = (await getNews(locale))
   .slice(0, 3);
 const place = d.eventLocation || [d.city, d.country].filter(Boolean).join(', ');
 const month = monthLabel(groupingDate(post), locale);
+const region = regionOf(d.country);
 ---
 
 <div data-article>
   <p class="app-kicker">
-    <a href={categoryPath(locale, d.category)}>{labels[d.category]}</a>
+    {region ? (
+      <a href={regionPath(locale, region)}>{regionLabels[locale][region]}</a>
+    ) : (
+      <a href={categoryPath(locale, d.category)}>{labels[d.category]}</a>
+    )}
     {kind && <> · {kinds[kind]}</>}
     {place && <> · {place}</>}
     <> · {month}</>

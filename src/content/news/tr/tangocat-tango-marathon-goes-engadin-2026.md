@@ -17,6 +17,9 @@ country: "Switzerland"
 city: "Scuol"
 eventStart: 2026-09-18
 eventEnd: 2026-09-20
+image: "/events/tangocat-tango-marathon-goes-engadin-2026.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/tango-marathon-goes-engadin-scuol-d8c614
 ---
 
 Tango-Marathon goes Engadin 2026, Eylül 18-20 2026 tarihleri arasında Switzerland, Scuol konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

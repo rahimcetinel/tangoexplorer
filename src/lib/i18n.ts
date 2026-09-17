@@ -1,4 +1,4 @@
-import { categories, eventKinds, contentFormats } from '../content.config';
+import { categories, eventKinds, contentFormats } from './taxonomy';
 
 export type Category = (typeof categories)[number];
 
@@ -22,6 +22,10 @@ export function categoryPath(locale: Locale, category: string): string {
   return locale === 'en' ? `/category/${category}` : `/tr/kategori/${category}`;
 }
 
+export function milongasPath(locale: Locale): string {
+  return locale === 'en' ? '/milongas' : '/tr/milongalar';
+}
+
 export function otherLocale(locale: Locale): Locale {
   return locale === 'en' ? 'tr' : 'en';
 }
@@ -35,8 +39,14 @@ export function switchLocalePath(locale: Locale, pathname: string, slug?: string
   if (parts.includes('category') || parts.includes('kategori')) {
     return categoryPath(target, parts.at(-1) ?? '');
   }
+  if (parts.includes('region') || parts.includes('bolge')) {
+    return target === 'en' ? `/region/${parts.at(-1) ?? ''}` : `/tr/bolge/${parts.at(-1) ?? ''}`;
+  }
   if (parts.includes('about') || parts.includes('hakkinda')) {
     return aboutPath(target);
+  }
+  if (parts.includes('milongas') || parts.includes('milongalar')) {
+    return milongasPath(target);
   }
   return homePath(target);
 }
@@ -118,6 +128,16 @@ export const monthShort: Record<Locale, readonly string[]> = {
   tr: ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'],
 };
 
+export const weekdaysShort: Record<Locale, readonly string[]> = {
+  en: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+  tr: ['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Paz'],
+};
+
+export const weekdaysLong: Record<Locale, readonly string[]> = {
+  en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+  tr: ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi', 'Pazar'],
+};
+
 export const whenPresets: Record<Locale, readonly { id: string; label: string }[]> = {
   en: [
     { id: 'this-week', label: 'This Week' },
@@ -147,6 +167,8 @@ export const ui = {
     related: 'More in this category',
     breaking: 'Breaking',
     browse: 'Browse',
+    menu: 'Menu & filters',
+    filters: 'Filters',
     jumpTo: 'Jump to',
     searchPlaceholder: 'Search events, cities…',
     searchLabel: 'Search',
@@ -154,6 +176,7 @@ export const ui = {
     filterKind: 'Kind',
     filterFormat: 'Format',
     filterCountry: 'Country',
+    filterCountryCity: 'Country / City',
     filterCity: 'City',
     filterWhen: 'When',
     filterYear: 'Year',
@@ -174,6 +197,8 @@ export const ui = {
     kind: 'Kind',
     duration: 'Duration',
     durationDays: (n: number) => (n === 1 ? '1 day' : `${n} days`),
+    edition: 'Edition',
+    registrationOpens: 'Registration opens',
     addToCalendar: 'Add to calendar',
     googleCalendar: 'Google Calendar',
     share: 'Share',
@@ -209,6 +234,28 @@ export const ui = {
       'Event stories keep the Tangocat listing as the source. If the event has its own website, Instagram, or Facebook, those open in a new tab.',
     aboutFilters:
       'The homepage filters by kind and country, with a jump-to month strip and a search over titles, summaries, cities and countries. Facebook group posts can be filed as event or blog.',
+    milongas: 'Milongas',
+    milongaTitle: 'Milongas & practicas',
+    milongaIntro: 'Weekly milonga and practica listings by city, day and time.',
+    milongaPick: 'Pick a milonga to see its details.',
+    milongaEmpty: 'No milongas match these filters.',
+    milongaRegion: 'Region',
+    milongaCity: 'City',
+    milongaDay: 'Day',
+    milongaType: 'Type',
+    milongaAllDays: 'All days',
+    milongaTypeMilonga: 'Milonga',
+    milongaTypePractica: 'Practica',
+    milongaTime: 'Time',
+    milongaVenue: 'Venue',
+    milongaAddress: 'Address',
+    milongaPrice: 'Price',
+    milongaOrganizers: 'Organizers',
+    milongaVerified: 'Last verified',
+    milongaMap: 'Map',
+    milongaOpenSource: 'Open on Hoy Milonga',
+    milongaSource: 'Source',
+    milongaUpdated: 'Listing data',
     langEn: 'EN',
     langTr: 'TR',
     langSwitch: 'Türkçe',
@@ -228,6 +275,8 @@ export const ui = {
     related: 'Aynı kategoriden',
     breaking: 'Son dakika',
     browse: 'Göz at',
+    menu: 'Menü ve filtreler',
+    filters: 'Filtreler',
     jumpTo: 'Git',
     searchPlaceholder: 'Etkinlik, şehir ara…',
     searchLabel: 'Ara',
@@ -235,6 +284,7 @@ export const ui = {
     filterKind: 'Tür',
     filterFormat: 'Biçim',
     filterCountry: 'Ülke',
+    filterCountryCity: 'Ülke / Şehir',
     filterCity: 'Şehir',
     filterWhen: 'Zaman',
     filterYear: 'Yıl',
@@ -255,6 +305,8 @@ export const ui = {
     kind: 'Tür',
     duration: 'Süre',
     durationDays: (n: number) => (n === 1 ? '1 gün' : `${n} gün`),
+    edition: 'Edisyon',
+    registrationOpens: 'Kayıt açılışı',
     addToCalendar: 'Takvime ekle',
     googleCalendar: 'Google Takvim',
     share: 'Paylaş',
@@ -290,6 +342,28 @@ export const ui = {
       'Etkinlik haberlerinde Tangocat kaydı kaynak olarak durur. Etkinliğin kendi web, Instagram ve Facebook adresleri varsa ayrı link olarak, yeni pencerede açılır.',
     aboutFilters:
       'Ana sayfada tür ve ülke çipleri, aya atlama şeridi ve başlık, özet, şehir, ülke araması vardır. Facebook grubundan gelen yazılar etkinlik veya blog olarak ayrılabilir.',
+    milongas: 'Milongalar',
+    milongaTitle: 'Milongalar & praktikalar',
+    milongaIntro: 'Şehir, gün ve saate göre haftalık milonga ve praktika listeleri.',
+    milongaPick: 'Detaylar için bir milonga seçin.',
+    milongaEmpty: 'Bu filtrelere uyan milonga yok.',
+    milongaRegion: 'Bölge',
+    milongaCity: 'Şehir',
+    milongaDay: 'Gün',
+    milongaType: 'Tür',
+    milongaAllDays: 'Tüm günler',
+    milongaTypeMilonga: 'Milonga',
+    milongaTypePractica: 'Praktika',
+    milongaTime: 'Saat',
+    milongaVenue: 'Mekân',
+    milongaAddress: 'Adres',
+    milongaPrice: 'Fiyat',
+    milongaOrganizers: 'Organizatör',
+    milongaVerified: 'Son doğrulama',
+    milongaMap: 'Harita',
+    milongaOpenSource: 'Hoy Milonga’da aç',
+    milongaSource: 'Kaynak',
+    milongaUpdated: 'Liste verisi',
     langEn: 'EN',
     langTr: 'TR',
     langSwitch: 'English',

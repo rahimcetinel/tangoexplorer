@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Castel San Pietro Terme"
 eventStart: 2026-11-14
 eventEnd: 2026-11-15
+image: "/events/tangocat-bohemios-amatissima-tango-marathon.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/bohemios-amatissima-tango-marathon-1b0125
 ---
 
 Bohemios Amatissima Tango Marathon is listed (November 14-15 2026) in Italy, Castel San Pietro Terme. This is a date and place summary, not a copy of the source programme.

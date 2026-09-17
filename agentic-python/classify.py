@@ -118,30 +118,54 @@ def parse_when(when: str, fallback_year: int) -> tuple[date | None, date | None]
     if not when:
         return None, None
     text = when.replace("–", "-").replace("—", "-")
-    year_m = re.search(r"(20\d{2})", text)
-    year = int(year_m.group(1)) if year_m else fallback_year
+    years = [int(value) for value in re.findall(r"(20\d{2})", text)]
+    stripped = re.sub(r"(20\d{2})", " ", text)
     month_names = "|".join(MONTHS.keys())
+
+    def year_for(index: int) -> int:
+        if years:
+            return years[min(index, len(years) - 1)]
+        return fallback_year
+
     two_month = re.search(
         rf"({month_names})\s+(\d{{1,2}})\s*-\s*({month_names})\s+(\d{{1,2}})",
-        text,
+        stripped,
         re.I,
     )
     if two_month:
-        start = date(year, MONTHS[two_month.group(1).lower()], int(two_month.group(2)))
-        end = date(year, MONTHS[two_month.group(3).lower()], int(two_month.group(4)))
-        if end < start:
-            end = date(year + 1, end.month, end.day)
-        return start, end
-    same_month = re.search(rf"({month_names})\s+(\d{{1,2}})\s*-\s*(\d{{1,2}})", text, re.I)
+        m1 = MONTHS[two_month.group(1).lower()]
+        m2 = MONTHS[two_month.group(3).lower()]
+        d1, d2 = int(two_month.group(2)), int(two_month.group(4))
+        if len(years) >= 2:
+            start_year, end_year = years[0], years[-1]
+        else:
+            single = years[0] if years else fallback_year
+            if m2 < m1:
+                start_year, end_year = single - 1, single
+            else:
+                start_year = end_year = single
+        return date(start_year, m1, d1), date(end_year, m2, d2)
+    same_month = re.search(rf"({month_names})\s+(\d{{1,2}})\s*-\s*(\d{{1,2}})", stripped, re.I)
     if same_month:
+        year = year_for(0)
         month = MONTHS[same_month.group(1).lower()]
-        start = date(year, month, int(same_month.group(2)))
-        end = date(year, month, int(same_month.group(3)))
-        return start, end
-    single = re.search(rf"({month_names})\s+(\d{{1,2}})\b", text, re.I)
+        return date(year, month, int(same_month.group(2))), date(year, month, int(same_month.group(3)))
+    day_first_range = re.search(rf"(\d{{1,2}})\s*-\s*(\d{{1,2}})\s+({month_names})", stripped, re.I)
+    if day_first_range:
+        year = year_for(0)
+        month = MONTHS[day_first_range.group(3).lower()]
+        return date(year, month, int(day_first_range.group(1))), date(year, month, int(day_first_range.group(2)))
+    single = re.search(rf"({month_names})\s+(\d{{1,2}})", stripped, re.I)
     if single:
+        year = year_for(0)
         month = MONTHS[single.group(1).lower()]
         start = date(year, month, int(single.group(2)))
+        return start, start
+    day_first = re.search(rf"(\d{{1,2}})\s+({month_names})", stripped, re.I)
+    if day_first:
+        year = year_for(0)
+        month = MONTHS[day_first.group(2).lower()]
+        start = date(year, month, int(day_first.group(1)))
         return start, start
     return None, None
 

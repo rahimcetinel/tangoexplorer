@@ -11,19 +11,14 @@ const { locale, months } = Astro.props;
 const copy = ui[locale];
 ---
 
-<nav class="app-ribbon" data-month-ribbon aria-label={copy.jumpTo}>
-  <span class="app-ribbon-label">{copy.jumpTo}</span>
+<nav class="app-ribbon" data-month-ribbon aria-label={copy.filterMonth}>
+  <span class="app-ribbon-label">{copy.filterMonth}</span>
   {
     months.map((month) => (
-      <a
-        class="app-mchip"
-        href={`#col-${month.key}`}
-        data-month={month.key}
-        aria-pressed="false"
-      >
+      <button type="button" class="app-mchip" data-month={month.key} aria-pressed="false">
         {month.label}
         <b data-month-count>{month.count}</b>
-      </a>
+      </button>
     ))
   }
 </nav>

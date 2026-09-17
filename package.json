@@ -11,6 +11,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "ingest": "python agentic-python/ingest.py",
+    "ingest-hoy": "python agentic-python/ingest_hoy.py",
+    "ingest-tangoverse": "python agentic-python/ingest_tangoverse.py",
+    "ingest-tmd": "python agentic-python/ingest_tmd.py",
     "publish-news": "python agentic-python/publish.py",
     "deploy": "astro build && wrangler pages deploy dist --project-name tango-news"
   },

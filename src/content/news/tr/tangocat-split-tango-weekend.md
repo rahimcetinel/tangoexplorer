@@ -20,6 +20,9 @@ eventEnd: 2026-09-21
 image: "/events/tangocat-split-tango-weekend.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://www.tangoandme.hr/images/festivals/splittangoweekend/bg-splittangoweekend1-mob.jpg
+edition: 3
+registrationStart: 2026-02-04
+eventWebsite: https://www.tangoandme.hr/hr/festivali/split-tango-weekend
 ---
 
 Split Tango Weekend, Eylül 17-21 2026 tarihleri arasında Croatia, Split konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

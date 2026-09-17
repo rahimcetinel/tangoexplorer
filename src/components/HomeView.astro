@@ -28,7 +28,7 @@ const title =
 <AppShell title={title} locale={locale} mode="home" posts={posts}>
   <Fragment slot="center">
     <h1 class="sr-only">{copy.brand}</h1>
-    <Header locale={locale} search />
+    <Header locale={locale} />
     <MonthRibbon locale={locale} months={months} />
     <main id="main" class="app-main-board">
       <TimelineBoard locale={locale} months={months} selectedSlug={selectedSlug} eagerMonths={eagerMonths} />

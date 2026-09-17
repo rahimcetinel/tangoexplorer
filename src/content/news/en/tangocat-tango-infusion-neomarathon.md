@@ -17,6 +17,9 @@ country: "Hungary"
 city: "Budapest"
 eventStart: 2026-10-16
 eventEnd: 2026-10-18
+image: "/events/tangocat-tango-infusion-neomarathon.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/tango-infusion-neomarathon-tim-26-8d71f5
 ---
 
 Tango Infusion Neomarathon is listed (October 16-18 2026) in Hungary, Budapest. This is a date and place summary, not a copy of the source programme.

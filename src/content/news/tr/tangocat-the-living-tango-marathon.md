@@ -17,6 +17,12 @@ country: "İtalya"
 city: "Rome"
 eventStart: 2027-02-05
 eventEnd: 2027-02-07
+edition: 1
+registrationStart: 2026-07-28
+eventWebsite: https://www.facebook.com/share/1CaQNR8gfk/?mibextid=wwXIfr
+image: "/events/tangocat-the-living-tango-marathon.jpg"
+imageCredit: "TMD"
+imageSourceUrl: https://www.tangomarathons.com/events/2027-the-living-tango-marathon-edition-1-2/
 ---
 
 The Living Tango Marathon, Şubat 5-7, 2027 tarihleri arasında Italy, Rome konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

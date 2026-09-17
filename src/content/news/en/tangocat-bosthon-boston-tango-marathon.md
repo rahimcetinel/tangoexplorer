@@ -3,7 +3,7 @@ title: "BOSthon - Boston Tango Marathon"
 date: 2026-09-10
 category: dunya
 source: Tangocat
-sourceUrl: https://tangocat.net/go/BOSthon+-+Boston+Tango+Marathon/10228
+sourceUrl: https://tangocat.net/go/BOSth%C3%B3n+Tango+Marathon/9861
 locale: en
 summary: "BOSthon - Boston Tango Marathon (September 17-21 2026) in United States, Boston. Source: Tangocat."
 eventName: "BOSthon - Boston Tango Marathon"

@@ -17,6 +17,11 @@ country: "Almanya"
 city: "Berlin"
 eventStart: 2026-11-05
 eventEnd: 2026-11-08
+registrationStart: 2026-05-15
+eventWebsite: https://www.lavirutaberlin.com
+image: "/events/tangocat-la-viruta-berlin.png"
+imageCredit: "TMD"
+imageSourceUrl: https://www.tangomarathons.com/events/2026-la-viruta-berlin/
 ---
 
 La Viruta Berlin, Kasım 5-8 2026 tarihleri arasında Germany, Berlin konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

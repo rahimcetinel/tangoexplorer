@@ -7,6 +7,8 @@ export const sourceLabels: Record<(typeof sourceKeys)[number], string> = {
   facebook: 'Facebook',
   tangocat: 'Tangocat',
   hoymilonga: 'Hoy Milonga',
+  tangoverse: 'Tangoverse',
+  tmd: 'TMD',
 };
 
 export function isoDate(value: Date | undefined): string {

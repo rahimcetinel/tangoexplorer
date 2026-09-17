@@ -1,26 +1,8 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { categories, eventKinds, contentFormats, sourceKeys } from './lib/taxonomy';
 
-export const categories = [
-  'etkinlik',
-  'festival',
-  'turkiye',
-  'dunya',
-  'topluluk',
-] as const;
-
-export const eventKinds = [
-  'festival',
-  'marathon',
-  'encuentro',
-  'workshop',
-  'ders',
-  'pratik',
-] as const;
-
-export const contentFormats = ['etkinlik', 'blog'] as const;
-
-export const sourceKeys = ['instagram', 'facebook', 'tangocat', 'hoymilonga'] as const;
+export { categories, eventKinds, contentFormats, sourceKeys };
 
 const news = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
@@ -45,11 +27,13 @@ const news = defineCollection({
     imageSourceUrl: z.string().url().optional(),
     kinds: z.array(z.enum(eventKinds)).default([]),
     format: z.enum(contentFormats).default('etkinlik'),
-    sourceKey: z.enum(['instagram', 'facebook', 'tangocat', 'hoymilonga', 'diger']).default('diger'),
+    sourceKey: z.enum(['instagram', 'facebook', 'tangocat', 'hoymilonga', 'tangoverse', 'tmd', 'diger']).default('diger'),
     country: z.string().optional(),
     city: z.string().optional(),
     eventStart: z.coerce.date().optional(),
     eventEnd: z.coerce.date().optional(),
+    edition: z.coerce.number().optional(),
+    registrationStart: z.coerce.date().optional(),
   }),
 });
 

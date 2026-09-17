@@ -17,6 +17,12 @@ country: "İtalya"
 city: "Bologna"
 eventStart: 2026-10-30
 eventEnd: 2026-11-01
+image: "/events/tangocat-amarcord-bologna-tango-marathon.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/amarcord-bologna-tango-marathon-8bc1b8
+edition: 9
+registrationStart: 2026-04-01
+eventWebsite: https://www.bolognatangomarathon.it
 ---
 
 "AmarCORd" Bologna Tango Marathon is listed (October 30 - November 1 2026) in Italy, Bologna. This is a date and place summary, not a copy of the source programme.

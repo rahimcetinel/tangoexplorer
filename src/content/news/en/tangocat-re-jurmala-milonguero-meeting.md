@@ -17,6 +17,8 @@ country: "Latvia"
 city: "Jūrmala"
 eventStart: 2026-11-13
 eventEnd: 2026-11-15
+registrationStart: 2026-03-25
+eventWebsite: https://www.rigaembrace.lv/information/
 ---
 
 RE-Jurmala Milonguero Meeting is listed (November 13-15 2026) in Latvia, Jūrmala. This is a date and place summary, not a copy of the source programme.

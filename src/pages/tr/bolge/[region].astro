@@ -1,0 +1,13 @@
+---
+import RegionView from '../../../components/RegionView.astro';
+import { regions } from '../../../lib/regions';
+import type { Region } from '../../../lib/regions';
+
+export function getStaticPaths() {
+  return regions.map((region) => ({ params: { region } }));
+}
+
+const region = Astro.params.region as Region;
+---
+
+<RegionView locale="tr" region={region} />

@@ -17,6 +17,8 @@ country: "İspanya"
 city: "Barcelona"
 eventStart: 2026-10-02
 eventEnd: 2026-10-04
+edition: 2
+registrationStart: 2026-05-01
 ---
 
 El Olivo Tango Rave 2026 is listed (October 2-4 2026) in Spain, Barcelona. This is a date and place summary, not a copy of the source programme.

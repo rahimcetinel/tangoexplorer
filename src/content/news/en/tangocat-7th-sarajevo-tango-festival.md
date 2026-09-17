@@ -17,6 +17,12 @@ country: "Bosnia and Herzegovina"
 city: "Sarajevo"
 eventStart: 2027-02-04
 eventEnd: 2027-02-07
+edition: 7
+registrationStart: 2026-09-15
+eventWebsite: https://www.sarajevotangofestival.com
+image: "/events/tangocat-7th-sarajevo-tango-festival.jpg"
+imageCredit: "TMD"
+imageSourceUrl: https://www.tangomarathons.com/events/2027-sarajevo-tango-festival-edition-7/
 ---
 
 7th Sarajevo Tango Festival is listed (February 4-7, 2027) in Bosnia and Herzegovina, Sarajevo. This is a date and place summary, not a copy of the source programme.

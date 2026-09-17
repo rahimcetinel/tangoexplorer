@@ -17,6 +17,12 @@ country: "İtalya"
 city: "Conversano"
 eventStart: 2026-10-02
 eventEnd: 2026-10-04
+edition: 7
+registrationStart: 2026-04-06
+eventWebsite: https://www.tangoeventipuglia.com
+image: "/events/tangocat-norba-tango-marathon-2026.jpg"
+imageCredit: "TMD"
+imageSourceUrl: https://www.tangomarathons.com/events/2026-norba-tango-marathon-2026-edition-7/
 ---
 
 Norba Tango Marathon 2026, Ekim 2-4 2026 tarihleri arasında Italy, Conversano konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

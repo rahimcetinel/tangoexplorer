@@ -17,6 +17,9 @@ country: "Greece"
 city: "Thessaloniki"
 eventStart: 2026-12-11
 eventEnd: 2026-12-13
+image: "/events/tangocat-porteno-tango-festival.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/porteno-tango-festival-2ae9da
 ---
 
 Porteno Tango Festival, Aralık 11-13 2026 tarihleri arasında Greece, Thessaloniki konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

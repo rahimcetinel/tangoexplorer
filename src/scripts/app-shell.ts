@@ -1,9 +1,26 @@
 import { initDetailPanel } from './detail-panel';
 
-type Filters = { kind: string; country: string; q: string };
+type DetailApi = { open: (url: string, push: boolean, focus?: boolean) => void } | null;
+
+type Filters = { kind: string; country: string; city: string; q: string };
+
+type IndexItem = {
+  s: string;
+  t: string;
+  m: string;
+  ml: string;
+  c: string;
+  k: string;
+  co: string;
+  ci: string;
+  w: string;
+  q: string;
+};
+
+const KEYS = ['kind', 'country', 'city', 'q'] as const;
 
 function emptyFilters(): Filters {
-  return { kind: '', country: '', q: '' };
+  return { kind: '', country: '', city: '', q: '' };
 }
 
 function readUrl(): Filters {
@@ -11,38 +28,29 @@ function readUrl(): Filters {
   return {
     kind: params.get('kind') ?? '',
     country: params.get('country') ?? '',
+    city: params.get('city') ?? '',
     q: params.get('q') ?? '',
   };
 }
 
-function writeUrl(filters: Filters) {
+function writeUrl(filters: Filters, basePath: string) {
   const params = new URLSearchParams();
-  for (const key of ['kind', 'country', 'q'] as const) {
+  for (const key of KEYS) {
     if (filters[key]) {
       params.set(key, filters[key]);
     }
   }
   const query = params.toString();
-  const path = window.location.pathname;
-  const next = query ? `${path}?${query}` : path;
+  const next = query ? `${basePath}?${query}` : basePath;
   window.history.replaceState(history.state ?? {}, '', next);
 }
 
-function matches(card: HTMLElement, filters: Filters): boolean {
-  const kinds = (card.dataset.kinds || '').split(',').filter(Boolean);
-  if (filters.kind && !kinds.includes(filters.kind)) {
-    return false;
-  }
-  if (filters.country && card.dataset.country !== filters.country) {
-    return false;
-  }
-  if (filters.q) {
-    const haystack = (card.dataset.search || '').toLowerCase();
-    if (!haystack.includes(filters.q.toLowerCase())) {
-      return false;
-    }
-  }
-  return true;
+function escapeHtml(value: string): string {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;');
 }
 
 function initShare() {
@@ -84,6 +92,9 @@ async function hydrateColumn(col: HTMLElement) {
   if (!url) {
     return;
   }
+  const board = col.closest<HTMLElement>('[data-board]');
+  const boardCategory = board?.dataset.boardCategory || '';
+  const boardRegion = board?.dataset.boardRegion || '';
   col.dataset.lazy = 'loading';
   try {
     const response = await fetch(url, { headers: { Accept: 'text/html' } });
@@ -96,8 +107,22 @@ async function hydrateColumn(col: HTMLElement) {
     if (!incoming) {
       throw new Error('missing cards');
     }
-    col.querySelectorAll('[data-card]').forEach((card) => card.remove());
+    col.querySelectorAll('[data-card], [data-col-placeholder]').forEach((node) => node.remove());
     const imported = document.importNode(incoming, true);
+    if (boardCategory) {
+      imported.querySelectorAll<HTMLElement>('[data-card]').forEach((card) => {
+        if (card.dataset.category !== boardCategory) {
+          card.remove();
+        }
+      });
+    }
+    if (boardRegion) {
+      imported.querySelectorAll<HTMLElement>('[data-card]').forEach((card) => {
+        if (card.dataset.region !== boardRegion) {
+          card.remove();
+        }
+      });
+    }
     col.append(...imported.children);
     col.dataset.lazy = 'ready';
     document.dispatchEvent(new Event('timeline:hydrated'));
@@ -126,7 +151,7 @@ function initLazyMonths() {
         void hydrateColumn(col);
       }
     },
-    { root: board, rootMargin: '280px', threshold: 0.01 },
+    { root: board, rootMargin: '480px', threshold: 0.01 },
   );
   lazy.forEach((col) => observer.observe(col));
 }
@@ -137,32 +162,50 @@ function initJumpTo() {
   if (!board || !ribbon) {
     return;
   }
+  let activeMonth = '';
 
   function setActive(key: string) {
+    activeMonth = key;
     ribbon!.querySelectorAll<HTMLElement>('[data-month]').forEach((chip) => {
       const on = chip.dataset.month === key;
       chip.classList.toggle('is-active', on);
       chip.setAttribute('aria-pressed', String(on));
     });
+    board!.dataset.view = key ? 'single' : 'all';
+    board!.querySelectorAll<HTMLElement>('[data-month-col]').forEach((col) => {
+      col.classList.toggle('is-month-active', col.dataset.month === key);
+    });
+    if (key) {
+      board!.scrollTo({ top: 0 });
+    }
   }
 
   ribbon.addEventListener('click', (event) => {
-    const chip = (event.target as Element | null)?.closest<HTMLAnchorElement>('[data-month]');
+    const chip = (event.target as Element | null)?.closest<HTMLElement>('[data-month]');
     if (!chip) {
       return;
     }
-    const col = document.getElementById(`col-${chip.dataset.month}`);
+    event.preventDefault();
+    const key = chip.dataset.month || '';
+    if (key === activeMonth) {
+      setActive('');
+      return;
+    }
+    const col = document.getElementById(`col-${key}`);
     if (!col) {
       return;
     }
-    event.preventDefault();
-    void hydrateColumn(col);
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    board.scrollTo({ left: col.offsetLeft - 16, behavior: reduce ? 'auto' : 'smooth' });
-    setActive(chip.dataset.month || '');
+    if (col.dataset.lazy === 'true') {
+      void hydrateColumn(col).then(() => setActive(key));
+      return;
+    }
+    setActive(key);
   });
 
   board.addEventListener('keydown', (event) => {
+    if (board.dataset.view === 'single') {
+      return;
+    }
     if (event.key === 'ArrowRight') {
       event.preventDefault();
       board.scrollBy({ left: 268, behavior: 'smooth' });
@@ -173,87 +216,190 @@ function initJumpTo() {
     }
   });
 
+  setActive('');
   const nowKey = board.dataset.nowMonth;
   const nowCol = nowKey ? document.getElementById(`col-${nowKey}`) : null;
   if (nowCol) {
     board.scrollTo({ left: nowCol.offsetLeft - 16 });
-    setActive(nowKey!);
-  } else {
-    const first = ribbon.querySelector<HTMLElement>('[data-month]');
-    if (first?.dataset.month) {
-      setActive(first.dataset.month);
-    }
   }
 }
 
-function initFilters() {
+function initFilters(detail: DetailApi) {
   const shell = document.querySelector<HTMLElement>('[data-app-shell]');
-  if (!shell || shell.dataset.mode !== 'home') {
+  const boardMode = shell?.dataset.mode === 'home' || shell?.dataset.mode === 'category';
+  if (!shell || !boardMode) {
     return;
   }
 
-  const columns = [...document.querySelectorAll<HTMLElement>('[data-month-col]')];
+  const board = document.querySelector<HTMLElement>('[data-board]');
+  const viewport = document.querySelector<HTMLElement>('.app-viewport');
+  const ribbon = document.querySelector<HTMLElement>('[data-month-ribbon]');
+  const results = document.querySelector<HTMLElement>('[data-results]');
+  const emptyEl = document.querySelector<HTMLElement>('[data-filter-empty]');
+  const searches = [...document.querySelectorAll<HTMLInputElement>('[data-search-input]')];
   const chips = [...document.querySelectorAll<HTMLElement>('[data-filter-chip]')];
-  const empty = document.querySelector<HTMLElement>('[data-filter-empty]');
-  const countEls = [...document.querySelectorAll<HTMLElement>('[data-filter-count]')];
-  const search = document.querySelector<HTMLInputElement>('[data-search-input]');
-  const clearButtons = [...document.querySelectorAll<HTMLElement>('[data-filter-clear]')];
+  const selects = [...document.querySelectorAll<HTMLSelectElement>('[data-filter-select]')];
+  const cityMapEl = document.querySelector<HTMLElement>('[data-city-map]');
+  const cityMap = cityMapEl ? (JSON.parse(cityMapEl.dataset.cityMap || '{}') as Record<string, string[]>) : {};
+  const allCities = [...new Set(Object.values(cityMap).flat())].sort((a, b) => a.localeCompare(b, 'en'));
+  const allLabel = cityMapEl?.dataset.i18nAll || 'All';
+  const locale = shell.dataset.locale || 'en';
+  const boardCategory = board?.dataset.boardCategory || '';
+  const emptyText = emptyEl?.textContent?.trim() || 'No results';
+  const newsBase = locale === 'tr' ? '/tr/haber/' : '/news/';
   let filters = readUrl();
+  let index: IndexItem[] = [];
+  let indexPromise: Promise<IndexItem[]> | null = null;
 
-  function cards(): HTMLElement[] {
-    return [...document.querySelectorAll<HTMLElement>('[data-card]')];
+  function loadIndex(): Promise<IndexItem[]> {
+    if (!indexPromise) {
+      indexPromise = fetch(`/search-index/${locale}.json`, {
+        headers: { Accept: 'application/json' },
+        cache: 'no-store',
+      })
+        .then((response) => (response.ok ? response.json() : []))
+        .then((data: unknown) => {
+          index = Array.isArray(data) ? (data as IndexItem[]) : [];
+          return index;
+        })
+        .catch(() => {
+          index = [];
+          return index;
+        });
+    }
+    return indexPromise;
   }
 
-  function syncChips() {
+  function fillCityOptions() {
+    const citySelect = selects.find((select) => select.dataset.filterSelect === 'city');
+    if (!citySelect) {
+      return;
+    }
+    const list = filters.country ? (cityMap[filters.country] ?? []) : allCities;
+    citySelect.innerHTML =
+      `<option value="">${allLabel}</option>` +
+      list.map((city) => `<option value="${city}">${city}</option>`).join('');
+    if (filters.city && list.includes(filters.city)) {
+      citySelect.value = filters.city;
+    } else {
+      filters.city = '';
+      citySelect.value = '';
+    }
+  }
+
+  function syncControls() {
     chips.forEach((chip) => {
-      const key = chip.dataset.filterChip as 'kind' | 'country';
+      const key = chip.dataset.filterChip as 'kind' | 'country' | 'city';
       const value = chip.dataset.value || '';
       const on = filters[key] === value && Boolean(value);
       chip.classList.toggle('is-active', on);
       chip.setAttribute('aria-pressed', String(on));
     });
-    if (search) {
-      search.value = filters.q;
+    selects.forEach((select) => {
+      const key = select.dataset.filterSelect as 'country' | 'city';
+      if (key !== 'city') {
+        select.value = filters[key];
+      }
+    });
+    fillCityOptions();
+    searches.forEach((input) => {
+      input.value = filters.q;
+    });
+  }
+
+  function isActive(): boolean {
+    return Boolean(filters.kind || filters.country || filters.city || filters.q);
+  }
+
+  function renderSummary() {
+    const el = document.querySelector<HTMLElement>('[data-menu-summary]');
+    if (!el) {
+      return;
+    }
+    const parts = [filters.kind, filters.country, filters.city, filters.q].filter(Boolean);
+    el.innerHTML = parts.length
+      ? parts.map((part) => `<span class="is-chip">${escapeHtml(part)}</span>`).join('')
+      : '';
+  }
+
+  function setMode(searching: boolean) {
+    if (viewport) {
+      viewport.hidden = searching;
+    }
+    if (ribbon) {
+      ribbon.hidden = searching;
+    }
+    if (results) {
+      results.hidden = !searching;
+    }
+    if (emptyEl) {
+      emptyEl.hidden = true;
     }
   }
 
-  function apply() {
-    let visible = 0;
-    for (const card of cards()) {
-      const show = matches(card, filters);
-      card.hidden = !show;
-      if (show) {
-        visible += 1;
-      }
+  function renderResults(): IndexItem[] {
+    if (!results) {
+      return [];
     }
-    for (const col of columns) {
-      const any = [...col.querySelectorAll<HTMLElement>('[data-card]')].some((card) => !card.hidden);
-      col.hidden = !any;
-      const count = [...col.querySelectorAll<HTMLElement>('[data-card]')].filter((card) => !card.hidden).length;
-      const badge = col.querySelector('[data-col-count]');
-      if (badge) {
-        badge.textContent = String(count);
+    const query = filters.q.toLowerCase();
+    const items = index.filter((item) => {
+      if (boardCategory && item.c !== boardCategory) {
+        return false;
       }
-    }
-    document.querySelectorAll<HTMLElement>('[data-month]').forEach((chip) => {
-      const col = document.getElementById(`col-${chip.dataset.month}`);
-      chip.hidden = Boolean(col?.hidden);
-      const count = chip.querySelector('[data-month-count]');
-      if (count && col) {
-        const n = [...col.querySelectorAll<HTMLElement>('[data-card]')].filter((card) => !card.hidden).length;
-        count.textContent = String(n);
+      if (filters.kind && !item.k.split(',').includes(filters.kind)) {
+        return false;
       }
+      if (filters.country && item.co !== filters.country) {
+        return false;
+      }
+      if (filters.city && item.ci !== filters.city) {
+        return false;
+      }
+      if (query && !item.q.includes(query)) {
+        return false;
+      }
+      return true;
     });
-    if (empty) {
-      empty.hidden = visible > 0;
+    if (!items.length) {
+      results.innerHTML = `<p class="app-empty">${escapeHtml(emptyText)}</p>`;
+      return items;
     }
-    const tpl = shell.dataset.i18nCount || '{n}';
-    const label = tpl.replace('{n}', String(visible));
-    countEls.forEach((el) => {
-      el.textContent = label;
-    });
-    writeUrl(filters);
-    syncChips();
+    const tpl = shell!.dataset.i18nCount || '{n}';
+    const countLabel = tpl.replace('{n}', String(items.length));
+    results.innerHTML =
+      `<p class="app-results-count">${escapeHtml(countLabel)}</p>` +
+      items
+        .slice(0, 80)
+        .map(
+          (item) =>
+            `<button type="button" class="app-result" data-result data-month="${item.m}" data-href="${newsBase}${item.s}">` +
+            `<span class="app-result-month">${escapeHtml(item.ml)}</span>` +
+            `<span class="app-result-title">${escapeHtml(item.t)}</span>` +
+            (item.w ? `<span class="app-result-where">${escapeHtml(item.w)}</span>` : '') +
+            `</button>`,
+        )
+        .join('');
+    return items;
+  }
+
+  async function apply(options: { preview?: boolean } = {}) {
+    writeUrl(filters, shell!.dataset.closePath || window.location.pathname);
+    syncControls();
+    renderSummary();
+    if (!isActive()) {
+      setMode(false);
+      return;
+    }
+    setMode(true);
+    if (results) {
+      results.innerHTML =
+        '<div class="app-results-skeleton"><div class="app-card-skeleton"></div><div class="app-card-skeleton"></div><div class="app-card-skeleton"></div></div>';
+    }
+    await loadIndex();
+    const items = renderResults();
+    if (options.preview && items.length && !window.matchMedia('(max-width: 1279px)').matches) {
+      detail?.open(`${newsBase}${items[0]!.s}`, false, false);
+    }
   }
 
   document.addEventListener('click', (event) => {
@@ -264,7 +410,19 @@ function initFilters() {
     if (target.closest('[data-filter-clear]')) {
       event.preventDefault();
       filters = emptyFilters();
-      apply();
+      void apply({ preview: true });
+      return;
+    }
+    const result = target.closest<HTMLElement>('[data-result]');
+    if (result) {
+      event.preventDefault();
+      const href = result.dataset.href || '';
+      results
+        ?.querySelectorAll<HTMLElement>('[data-result]')
+        .forEach((el) => el.classList.toggle('is-active', el === result));
+      if (href) {
+        detail?.open(href, true);
+      }
       return;
     }
     const chip = target.closest<HTMLElement>('[data-filter-chip]');
@@ -275,28 +433,47 @@ function initFilters() {
     const key = chip.dataset.filterChip as 'kind' | 'country';
     const value = chip.dataset.value || '';
     filters[key] = filters[key] === value ? '' : value;
-    apply();
+    void apply({ preview: true });
+  });
+
+  document.addEventListener('change', (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLSelectElement) || !target.dataset.filterSelect) {
+      return;
+    }
+    const key = target.dataset.filterSelect as 'country' | 'city';
+    filters[key] = target.value;
+    if (key === 'country') {
+      filters.city = '';
+    }
+    syncControls();
+    void apply({ preview: true });
   });
 
   let searchTimer = 0;
-  search?.addEventListener('input', () => {
-    window.clearTimeout(searchTimer);
-    searchTimer = window.setTimeout(() => {
-      filters.q = search.value.trim();
-      apply();
-    }, 150);
+  searches.forEach((input) => {
+    input.addEventListener('input', () => {
+      window.clearTimeout(searchTimer);
+      searchTimer = window.setTimeout(() => {
+        filters.q = input.value.trim();
+        searches.forEach((other) => {
+          if (other !== input) {
+            other.value = filters.q;
+          }
+        });
+        void apply();
+      }, 150);
+    });
   });
 
-  clearButtons.forEach(() => undefined);
-  document.addEventListener('timeline:hydrated', () => apply());
-  syncChips();
-  apply();
+  syncControls();
+  void apply({ preview: true });
 }
 
 export function initAppShell() {
-  initFilters();
+  const detail = initDetailPanel();
+  initFilters(detail);
   initLazyMonths();
   initJumpTo();
-  initDetailPanel();
   initShare();
 }

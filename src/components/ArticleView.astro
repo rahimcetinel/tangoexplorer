@@ -53,7 +53,7 @@ const jsonLd = [articleGraph(locale, post, pageUrl, new URL(ogImage, Astro.site 
   jsonLd={jsonLd}
 >
   <Fragment slot="center">
-    <Header locale={locale} newsSlug={slug} crumbs={crumbs} />
+    <Header locale={locale} crumbs={crumbs} />
     <main id="main" class="app-article">
       <ArticleInner locale={locale} post={post} variant="page" />
     </main>

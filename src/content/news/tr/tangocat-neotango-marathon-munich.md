@@ -3,7 +3,7 @@ title: "Neotango Marathon Munich"
 date: 2026-09-10
 category: dunya
 source: Tangocat
-sourceUrl: https://tangocat.net/go/Neotango+Marathon+Munich/10883
+sourceUrl: https://tangocat.net/go/Neotango+Marathon+M%C3%BCnchen/10591
 locale: tr
 summary: "Neotango Marathon Munich Kasım 13-16 2026 tarihleri arasında Germany, Munich konumunda duyuruldu. Kaynak: Tangocat."
 eventName: "Neotango Marathon Munich"

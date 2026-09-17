@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Kraków"
 eventStart: 2026-11-06
 eventEnd: 2026-11-08
+image: "/events/tangocat-krakow-vinyl-tango-marathon-de-oro-2026.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/krakow-vinyl-tango-marathon-de-oro-397bf9
 ---
 
 Krakow Vinyl Tango Marathon De Oro 2026 is listed (November 6-8 2026) in Poland, Kraków. This is a date and place summary, not a copy of the source programme.

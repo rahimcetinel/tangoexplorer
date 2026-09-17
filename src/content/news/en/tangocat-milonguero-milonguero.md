@@ -20,6 +20,9 @@ eventEnd: 2026-11-01
 image: "/events/tangocat-milonguero-milonguero.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://www.milonguero-milonguero.com/s/img/emotionheader.jpg
+edition: 15
+registrationStart: 2026-06-20
+eventWebsite: https://www.milonguero-milonguero.com
 ---
 
 MILONGUERO MILONGUERO is listed (October 29 - November 1 2026) in Spain, Calp. This is a date and place summary, not a copy of the source programme.

@@ -17,6 +17,12 @@ country: "Türkiye"
 city: "Antalya"
 eventStart: 2026-11-05
 eventEnd: 2026-11-10
+image: "/events/tangocat-sol-de-invierno-tango-marathon-5th-edition.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/sol-de-invierno-tango-marathon-eb5d7e
+edition: 5
+registrationStart: 2026-05-01
+eventWebsite: https://www.inviernotangomarathon.com
 ---
 
 Sol de Invierno Tango Marathon 5th Edition, Kasım 5-10 2026 tarihleri arasında Türkiye, Antalya konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

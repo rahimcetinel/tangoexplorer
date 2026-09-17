@@ -17,6 +17,9 @@ country: "Fransa"
 city: "Lille"
 eventStart: 2026-09-18
 eventEnd: 2026-09-20
+image: "/events/tangocat-lille-tango-festival-3eme-edition.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/lille-tango-festival-2026
 ---
 
 Lille Tango Festival 3eme Edition is listed (September 18-20 2026) in France, Lille. This is a date and place summary, not a copy of the source programme.

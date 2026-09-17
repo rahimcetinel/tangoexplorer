@@ -17,6 +17,9 @@ country: "Türkiye"
 city: "İstanbul"
 eventStart: 2027-02-10
 eventEnd: 2027-02-15
+image: "/events/tangocat-odessa-istanbul-winter-tango-marathon.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/odessa-istanbul-winter-tango-marathon-9b557b
 ---
 
 Odessa & Istanbul Winter Tango Marathon, Şubat 10-15, 2027 tarihleri arasında Türkiye, Istanbul konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

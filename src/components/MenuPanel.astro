@@ -1,0 +1,209 @@
+---
+import Chip from './ui/Chip.astro';
+import Footer from './Footer.astro';
+import {
+  aboutPath,
+  homePath,
+  kindLabels,
+  milongasPath,
+  weekdaysShort,
+  ui,
+  type Locale,
+} from '../lib/i18n';
+import type { NewsEntry } from '../lib/news';
+import { uniqueSorted, citiesByCountry } from '../lib/filters';
+import { DAYS_ORDER, HOY_REGIONS } from '../lib/hoy';
+import { countByRegion, regionLabels, regionPath, regions } from '../lib/regions';
+
+interface Props {
+  locale: Locale;
+  mode: 'home' | 'category' | 'milonga' | 'page';
+  posts: NewsEntry[];
+}
+
+const { locale, mode, posts } = Astro.props;
+const copy = ui[locale];
+const home = homePath(locale);
+const currentPath = Astro.url.pathname;
+const kinds = kindLabels[locale];
+const usedKinds = (['festival', 'marathon'] as const).filter((kind) =>
+  posts.some((post) => post.data.kinds.includes(kind)),
+);
+const countries = uniqueSorted(
+  posts.map((post) => post.data.country),
+  locale,
+);
+const cities = uniqueSorted(
+  posts.map((post) => post.data.city),
+  locale,
+);
+const cityMap = citiesByCountry(posts);
+const counts = countByRegion(posts);
+const nav: { href: string; label: string; count?: number; live?: boolean }[] = [
+  { href: home, label: copy.home, count: posts.length, live: mode === 'home' },
+  ...regions.map((region) => ({
+    href: regionPath(locale, region),
+    label: regionLabels[locale][region],
+    count: counts[region],
+  })),
+  { href: milongasPath(locale), label: copy.milongas },
+  { href: aboutPath(locale), label: copy.about },
+];
+const showFilters = mode === 'home' || mode === 'category';
+
+function chipHref(value: string): string {
+  const params = new URLSearchParams();
+  params.set('kind', value);
+  return `${home}?${params.toString()}`;
+}
+---
+
+<div class="app-menu-inner">
+  {
+    mode !== 'page' && (
+      <label class="app-menu-search">
+        <span class="sr-only">{copy.searchLabel}</span>
+        <input type="search" data-search-input placeholder={copy.searchPlaceholder} autocomplete="off" />
+      </label>
+    )
+  }
+  <section class="app-acc" data-acc>
+    <button type="button" class="app-acc-head" data-acc-head aria-expanded="true">
+      <span>{copy.browse}</span><span class="app-acc-chev" aria-hidden="true">▾</span>
+    </button>
+    <div class="app-acc-body" data-acc-body>
+      <nav class="app-nav" aria-label={copy.browse}>
+        {
+          nav.map((item) => {
+            const current =
+              currentPath === item.href || (item.href !== home && currentPath.startsWith(item.href));
+            return (
+              <a
+                href={item.href}
+                class:list={['app-nav-link', current && 'is-active']}
+                aria-current={current ? 'page' : undefined}
+              >
+                <span>{item.label}</span>
+                {item.count != null &&
+                  (item.live ? (
+                    <span class="app-nav-count" data-filter-count>
+                      {item.count}
+                    </span>
+                  ) : (
+                    <span class="app-nav-count">{item.count}</span>
+                  ))}
+              </a>
+            );
+          })
+        }
+      </nav>
+    </div>
+  </section>
+
+  {
+    mode === 'milonga' ? (
+      <section class="app-acc" data-acc>
+        <button type="button" class="app-acc-head" data-acc-head aria-expanded="true">
+          <span>{copy.filters}</span><span class="app-acc-chev" aria-hidden="true">▾</span>
+        </button>
+        <div class="app-acc-body" data-acc-body>
+          <div class="app-rail-selects">
+            <label class="app-select-field">
+              <span class="app-select-label">{copy.milongaRegion}</span>
+              <span class="app-select-wrap">
+                <select data-milonga-region>
+                  {HOY_REGIONS.map((region) => (
+                    <option value={region.id}>{locale === 'tr' ? region.tr : region.en}</option>
+                  ))}
+                </select>
+              </span>
+            </label>
+            <label class="app-select-field">
+              <span class="app-select-label">{copy.milongaCity}</span>
+              <span class="app-select-wrap">
+                <select data-milonga-city>
+                  <option value="">{copy.filterAll}</option>
+                </select>
+              </span>
+            </label>
+          </div>
+          <div class="app-acc-sub">{copy.milongaDay}</div>
+          <div class="app-chips" role="group" aria-label={copy.milongaDay} data-milonga-days>
+            <button type="button" class="app-chip is-active" data-milonga-day="">
+              {copy.milongaAllDays}
+            </button>
+            {DAYS_ORDER.map((day, index) => (
+              <button type="button" class="app-chip" data-milonga-day={day}>
+                {weekdaysShort[locale][index]}
+              </button>
+            ))}
+          </div>
+          <div class="app-acc-sub">{copy.milongaType}</div>
+          <div class="app-chips" role="group" aria-label={copy.milongaType} data-milonga-types>
+            <button type="button" class="app-chip is-active" data-milonga-type="">
+              {copy.filterAll}
+            </button>
+            <button type="button" class="app-chip" data-milonga-type="milonga">
+              {copy.milongaTypeMilonga}
+            </button>
+            <button type="button" class="app-chip" data-milonga-type="practica">
+              {copy.milongaTypePractica}
+            </button>
+          </div>
+          <button type="button" class="app-rail-reset" data-milonga-clear>
+            {copy.filterClear}
+          </button>
+        </div>
+      </section>
+    ) : (
+      showFilters && (
+        <section class="app-acc" data-acc>
+          <button type="button" class="app-acc-head" data-acc-head aria-expanded="true">
+            <span>{copy.filters}</span><span class="app-acc-chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="app-acc-body" data-acc-body>
+            <div class="app-acc-sub">{copy.filterByKind}</div>
+            <div class="app-chips" role="group" aria-label={copy.filterByKind}>
+              {usedKinds.map((kind) => (
+                <Chip href={mode === 'home' ? chipHref(kind) : undefined} data-filter-chip="kind" data-value={kind}>
+                  {kinds[kind]}
+                </Chip>
+              ))}
+            </div>
+            <div class="app-rail-selects" data-city-map={JSON.stringify(cityMap)} data-i18n-all={copy.filterAll}>
+              <label class="app-select-field">
+                <span class="app-select-label">{copy.filterCountry}</span>
+                <span class="app-select-wrap">
+                  <select data-filter-select="country">
+                    <option value="">{copy.filterAll}</option>
+                    {countries.map((country) => (
+                      <option value={country}>{country}</option>
+                    ))}
+                  </select>
+                </span>
+              </label>
+              <label class="app-select-field">
+                <span class="app-select-label">{copy.filterCity}</span>
+                <span class="app-select-wrap">
+                  <select data-filter-select="city">
+                    <option value="">{copy.filterAll}</option>
+                    {cities.map((city) => (
+                      <option value={city}>{city}</option>
+                    ))}
+                  </select>
+                </span>
+              </label>
+            </div>
+            <button type="button" class="app-rail-reset" data-filter-clear>
+              {copy.filterClear}
+            </button>
+          </div>
+        </section>
+      )
+    )
+  }
+
+  <div class="app-menu-foot">
+    <Footer locale={locale} />
+  </div>
+</div>

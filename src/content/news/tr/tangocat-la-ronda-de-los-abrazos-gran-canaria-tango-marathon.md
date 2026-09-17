@@ -17,6 +17,11 @@ country: "İspanya"
 city: "Las Palmas de Gran Canaria"
 eventStart: 2026-11-12
 eventEnd: 2026-11-15
+image: "/events/tangocat-la-ronda-de-los-abrazos-gran-canaria-tango-marathon.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/la-ronda-de-los-abrazos-c3e18e
+edition: 3
+eventWebsite: https://www.tangograncanaria.com
 ---
 
 la Ronda de Los Abrazos - Gran Canaria Tango Marathon, Kasım 12-15 2026 tarihleri arasında Spain, Las Palmas de Gran Canaria konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

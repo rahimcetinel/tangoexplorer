@@ -20,6 +20,8 @@ eventEnd: 2026-10-11
 image: "/events/tangocat-papusa-tango-cita.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/41b295_a3d40b67df8c4ab68c797ac3db78282b%7Emv2_d_4000_6000_s_4_2.jpg/v1/fit/w_2500,h_1330,al_c/41b295_a3d40b67df8c4ab68c797ac3db78282b%7Emv2_d_4000_6000_s_4_2.jpg
+edition: 7
+eventWebsite: https://www.papusa.de/monastery-accommodation
 ---
 
 Papusa Tango Cita, Ekim 9-11 2026 tarihleri arasında Germany, Berkheim konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

@@ -21,6 +21,8 @@ city: Istanbul
 eventStart: 2026-11-10
 eventEnd: 2026-11-16
 imageCredit: "Organiser / listing image"
+edition: 13
+registrationStart: 2026-05-05
 ---
 
 13 Sultans of Istanbul Tango Marathon Festival Cup 2026 is listed for 10–16 November in Istanbul, Turkey. This text is not a copy of the source programme; it only summarises the date, place, and title.

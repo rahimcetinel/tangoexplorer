@@ -17,6 +17,12 @@ country: "Almanya"
 city: "Kirchzarten"
 eventStart: 2026-10-01
 eventEnd: 2026-10-04
+image: "/events/tangocat-schwarzwalder-kirschtango-marathon.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/schwarzwalder-kirschtango-marathon-1cf9fe
+edition: 1
+registrationStart: 2026-06-15
+eventWebsite: https://www.swktm.de
 ---
 
 Schwarzwälder Kirschtango Marathon, Ekim 1-4 2026 tarihleri arasında Germany, Kirchzarten konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

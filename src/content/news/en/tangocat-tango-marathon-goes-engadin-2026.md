@@ -17,6 +17,9 @@ country: "Switzerland"
 city: "Scuol"
 eventStart: 2026-09-18
 eventEnd: 2026-09-20
+image: "/events/tangocat-tango-marathon-goes-engadin-2026.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/tango-marathon-goes-engadin-scuol-d8c614
 ---
 
 Tango-Marathon goes Engadin 2026 is listed (September 18-20 2026) in Switzerland, Scuol. This is a date and place summary, not a copy of the source programme.

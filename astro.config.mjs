@@ -14,7 +14,11 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/fragments/') && !page.includes('/404'),
+      filter: (page) =>
+        !page.includes('/fragments/') &&
+        !page.includes('/search-index/') &&
+        !page.includes('/hoy-milongas.json') &&
+        !page.includes('/404'),
       i18n: {
         defaultLocale: 'en',
         locales: {

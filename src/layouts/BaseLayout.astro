@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import { ClientRouter } from 'astro:transitions';
 import JsonLd from '../components/JsonLd.astro';
 import { ui, type Locale } from '../lib/i18n';
 import { OG_FALLBACK } from '../lib/images';
@@ -67,13 +66,33 @@ const graph = [...siteGraph(locale, site), ...jsonLd];
     <meta name="twitter:image" content={ogAbs} />
     <link
       rel="preload"
-      href="/fonts/source-sans-3-latin-400-normal.woff2"
+      href="/fonts/fraunces-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/fraunces-latin-ext.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter-latin-ext.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <JsonLd graph={graph} />
-    <ClientRouter />
     <title>{title}</title>
   </head>
   <body class="min-h-screen">

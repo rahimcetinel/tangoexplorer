@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Lignano Sabbiadoro"
 eventStart: 2026-11-12
 eventEnd: 2026-11-15
+image: "/events/tangocat-giriamo-tango-fest.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/giriamo-tango-fest-4003fd
 ---
 
 Giriamo Tango Fest, Kasım 12-15 2026 tarihleri arasında Italy, Lignano Sabbiadoro konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

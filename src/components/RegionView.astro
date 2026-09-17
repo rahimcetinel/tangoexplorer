@@ -1,0 +1,86 @@
+---
+import AppShell from '../layouts/AppShell.astro';
+import Header from './Header.astro';
+import MonthRibbon from './MonthRibbon.astro';
+import TimelineBoard from './TimelineBoard.astro';
+import DetailPanel from './DetailPanel.astro';
+import ArticleInner from './ArticleInner.astro';
+import EmptyState from './ui/EmptyState.astro';
+import { getNews, newsSlug } from '../lib/news';
+import { homePath, ui, type Locale } from '../lib/i18n';
+import { eagerMonthKeys, groupByMonth } from '../lib/timeline';
+import { regionLabels, regionOf, regionPath, type Region } from '../lib/regions';
+
+interface Props {
+  locale: Locale;
+  region: Region;
+}
+
+const { locale, region } = Astro.props;
+const copy = ui[locale];
+const label = regionLabels[locale][region];
+const allPosts = await getNews(locale);
+const posts = allPosts.filter((post) => regionOf(post.data.country) === region);
+const months = groupByMonth(posts, locale);
+const selected = posts[0];
+const selectedSlug = selected ? newsSlug(selected) : undefined;
+const eagerMonths = eagerMonthKeys(selected);
+---
+
+<AppShell
+  title={`${label} — ${copy.brand}`}
+  description={`${copy.brand} ${label}`}
+  locale={locale}
+  mode="category"
+  closePath={regionPath(locale, region)}
+  posts={allPosts}
+>
+  <Fragment slot="center">
+    <Header
+      locale={locale}
+      search
+      crumbs={[
+        { label: copy.home, href: homePath(locale) },
+        { label },
+      ]}
+    />
+    {
+      months.length === 0 ? (
+        <main id="main" class="app-page">
+          <EmptyState>{copy.emptyCategory}</EmptyState>
+        </main>
+      ) : (
+        <>
+          <MonthRibbon locale={locale} months={months} />
+          <main id="main" class="app-main-board">
+            <TimelineBoard
+              locale={locale}
+              months={months}
+              selectedSlug={selectedSlug}
+              eagerMonths={eagerMonths}
+              region={region}
+            />
+            <EmptyState data-filter-empty hidden>
+              {copy.filterEmpty}
+            </EmptyState>
+          </main>
+        </>
+      )
+    }
+  </Fragment>
+  <Fragment slot="detail">
+    <DetailPanel locale={locale}>
+      {
+        selected ? (
+          <ArticleInner locale={locale} post={selected} variant="panel" />
+        ) : (
+          <EmptyState>{copy.emptyCategory}</EmptyState>
+        )
+      }
+    </DetailPanel>
+  </Fragment>
+</AppShell>
+<script>
+  import { initAppShell } from '../scripts/app-shell';
+  initAppShell();
+</script>

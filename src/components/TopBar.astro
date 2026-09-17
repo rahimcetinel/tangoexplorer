@@ -1,0 +1,123 @@
+---
+import MenuPanel from './MenuPanel.astro';
+import {
+  aboutPath,
+  homePath,
+  milongasPath,
+  otherLocale,
+  switchLocalePath,
+  ui,
+  type Locale,
+} from '../lib/i18n';
+import type { NewsEntry } from '../lib/news';
+import { regionLabels, regionPath, regions } from '../lib/regions';
+
+interface Props {
+  locale: Locale;
+  mode: 'home' | 'category' | 'milonga' | 'page';
+  posts: NewsEntry[];
+  newsSlug?: string;
+}
+
+const { locale, mode, posts, newsSlug } = Astro.props;
+const copy = ui[locale];
+const home = homePath(locale);
+const currentPath = Astro.url.pathname;
+const altHref = switchLocalePath(locale, currentPath, newsSlug);
+const alt = otherLocale(locale);
+const showSearch = mode === 'home' || mode === 'category' || mode === 'milonga';
+const today = new Intl.DateTimeFormat(locale === 'tr' ? 'tr-TR' : 'en-GB', {
+  weekday: 'short',
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+}).format(new Date());
+const nav: { href: string; label: string }[] = [
+  { href: home, label: copy.home },
+  ...regions.map((region) => ({ href: regionPath(locale, region), label: regionLabels[locale][region] })),
+  { href: milongasPath(locale), label: copy.milongas },
+  { href: aboutPath(locale), label: copy.about },
+];
+---
+
+<div class="app-head" data-app-head>
+  <header class="app-topbar">
+    <a class="app-brand" href={home}>
+      {copy.brandLead}<em>{copy.brandAccent}</em>
+    </a>
+    <span class="app-topbar-date">{today}</span>
+    <nav class="app-topnav" aria-label={copy.browse}>
+      {
+        nav.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              currentPath === item.href || (item.href !== home && currentPath.startsWith(item.href))
+                ? 'is-active'
+                : '',
+            ]}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="app-topbar-right">
+      {
+        showSearch && (
+          <label class="app-search">
+            <span class="sr-only">{copy.searchLabel}</span>
+            <input type="search" data-search-input placeholder={copy.searchPlaceholder} autocomplete="off" />
+          </label>
+        )
+      }
+      <nav class="app-lang" aria-label="Language">
+        <a
+          href={locale === 'en' ? currentPath : altHref}
+          class:list={[locale === 'en' && 'is-active']}
+          aria-current={locale === 'en' ? 'true' : undefined}
+        >
+          {copy.langEn}
+        </a>
+        <span aria-hidden="true"> / </span>
+        <a
+          href={locale === 'tr' ? currentPath : altHref}
+          class:list={[locale === 'tr' && 'is-active']}
+          hreflang={alt}
+          lang={alt}
+          aria-current={locale === 'tr' ? 'true' : undefined}
+        >
+          {copy.langTr}
+        </a>
+      </nav>
+      <button
+        type="button"
+        class="app-menu-square"
+        data-menu-toggle
+        aria-expanded="false"
+        aria-controls="app-menu"
+        aria-label={copy.menu}
+      >
+        <span class="app-burger" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+  <button type="button" class="app-menuline" data-menu-toggle aria-expanded="false" aria-controls="app-menu">
+    <span class="app-menuline-label">
+      <span class="app-burger" aria-hidden="true"></span>
+      {copy.menu}
+    </span>
+    <span class="app-menuline-summary" data-menu-summary></span>
+    <span class="app-menuline-chev" aria-hidden="true">▾</span>
+  </button>
+</div>
+
+<div class="app-menupanel" id="app-menu" data-menu-panel hidden>
+  <MenuPanel locale={locale} mode={mode} posts={posts} />
+</div>
+<div class="app-menu-backdrop" data-menu-backdrop hidden></div>
+
+<script>
+  import { initTopBar } from '../scripts/top-bar';
+  initTopBar();
+</script>

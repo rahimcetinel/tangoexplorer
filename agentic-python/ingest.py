@@ -9,6 +9,7 @@ import html as htmlmod
 import json
 import re
 import sys
+import unicodedata
 import urllib.request
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -27,7 +28,7 @@ USER_AGENT = "TangoNews/0.1 (+https://tango-news.pages.dev)"
 TANGOCAT_URL = "https://tangocat.net/"
 HOY_MILONGA_URL = "https://hoy-milonga.com/turkiye/tr/milongas"
 TURKEY_MARKERS = ("rkiye", "turkey")
-HORIZON_MONTHS = 6
+HORIZON_MONTHS = 12
 
 
 def fetch(url: str) -> str:
@@ -41,6 +42,15 @@ def fingerprint(*parts: str) -> str:
     return hashlib.sha256(joined.encode("utf-8")).hexdigest()[:16]
 
 
+def norm_title(value: str) -> str:
+    """Diacritic/punctuation/edition-insensitive title for duplicate detection."""
+    text = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode("ascii")
+    text = re.sub(r"[^a-z0-9 ]", " ", text.lower())
+    text = re.sub(r"\b\d{1,2}(st|nd|rd|th)?\b", " ", text)
+    text = re.sub(r"\b(edition|edicion|editio|anniversary)\b", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
 def existing_keys() -> set[str]:
     keys: set[str] = set()
     if not NEWS_DIR.exists():
@@ -50,6 +60,20 @@ def existing_keys() -> set[str]:
         text = path.read_text(encoding="utf-8")
         for match in re.finditer(r"^(title|sourceUrl):\s*(.+)$", text, re.M):
             keys.add(match.group(2).strip().strip('"').lower())
+        front = text.split("---", 2)[1] if text.startswith("---") else ""
+
+        def field(name: str) -> str:
+            found = re.search(rf"^{name}:\s*\"?(.+?)\"?\s*$", front, re.M)
+            return found.group(1).strip().strip('"') if found else ""
+
+        event_start = field("eventStart")
+        city = field("city")
+        for value in (field("title"), field("eventName")):
+            if value:
+                month = event_start[:7] if event_start else ""
+                keys.add("t:" + norm_title(value) + "|" + month)
+        if event_start and city:
+            keys.add("s:" + event_start + "|" + norm_title(city))
     return keys
 
 
@@ -280,6 +304,10 @@ def main() -> int:
         published = item["id"] in known or item["title"].lower() in known
         if item["source"] != "hoy-milonga":
             published = published or item["sourceUrl"].lower() in known
+        month = (item.get("eventStart") or "")[:7]
+        published = published or ("t:" + norm_title(item["title"]) + "|" + month) in known
+        if item.get("eventStart") and item.get("city"):
+            published = published or ("s:" + item["eventStart"] + "|" + norm_title(item["city"])) in known
         item["alreadyPublished"] = published
         if (
             item["source"] == "tangocat"

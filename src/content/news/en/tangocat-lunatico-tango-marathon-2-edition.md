@@ -3,7 +3,7 @@ title: "Lunatico Tango Marathon 2 edition"
 date: 2026-09-10
 category: dunya
 source: Tangocat
-sourceUrl: https://tangocat.net/go/Lunatico+Tango+Marathon+2+edition/10865
+sourceUrl: https://tangocat.net/go/Lunatico+Tango+Marathon/10039
 locale: en
 summary: "Lunatico Tango Marathon 2 edition (November 26-29 2026) in Poland, Kraków. Source: Tangocat."
 eventName: "Lunatico Tango Marathon 2 edition"

@@ -20,6 +20,8 @@ eventEnd: 2026-11-23
 image: "/events/tangocat-utopia-encuentro-2026.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://69e30b81bd3592d241df45ecd0296354.cdn.bubble.io/cdn-cgi/image/w=,h=,f=auto,dpr=1,fit=contain/f1770910423447x685005746112369900/Logo.jpg
+registrationStart: 2026-04-03
+eventWebsite: https://tangoutopia.com/wp/utopia-encuentro-2026/
 ---
 
 Utopia Encuentro 2026 is listed (November 19-23 2026) in United States, Durham. This is a date and place summary, not a copy of the source programme.

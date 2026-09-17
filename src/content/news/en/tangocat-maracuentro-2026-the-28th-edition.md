@@ -20,6 +20,9 @@ eventEnd: 2026-10-04
 image: "/events/tangocat-maracuentro-2026-the-28th-edition.png"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://impro.usercontent.one/appid/oneComWsb/domain/maracuentro.com/media/maracuentro.com/onewebmedia/Fotos/Hintergrund/20250303_Maracuentro-Mariposas_Farbig_PNG-8.png?etag=%223fae8-67c5cb55%22&sourceContentType=image%2Fpng&quality=85
+edition: 28
+registrationStart: 2026-03-26
+eventWebsite: https://maracuentro.com/
 ---
 
 Maracuentro 2026: The 28th Edition is listed (October 1-4 2026) in Switzerland, Basel. This is a date and place summary, not a copy of the source programme.

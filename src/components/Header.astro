@@ -1,30 +1,18 @@
 ---
-import {
-  formatMastheadDate,
-  otherLocale,
-  switchLocalePath,
-  ui,
-  type Locale,
-} from '../lib/i18n';
+import { ui, type Locale } from '../lib/i18n';
 
 interface Props {
   locale: Locale;
-  newsSlug?: string;
-  search?: boolean;
   crumbs?: Array<{ label: string; href?: string }>;
 }
 
-const { locale, newsSlug, search = false, crumbs } = Astro.props;
+const { locale, crumbs } = Astro.props;
 const copy = ui[locale];
-const today = formatMastheadDate(new Date(), locale);
-const currentPath = Astro.url.pathname;
-const altHref = switchLocalePath(locale, currentPath, newsSlug);
-const alt = otherLocale(locale);
 ---
 
-<header class="app-topbar">
-  {
-    crumbs && crumbs.length > 0 ? (
+{
+  crumbs && crumbs.length > 0 && (
+    <div class="app-crumbbar">
       <nav class="app-crumb" aria-label="Breadcrumb">
         {crumbs.map((crumb, index) => (
           <>
@@ -33,42 +21,7 @@ const alt = otherLocale(locale);
           </>
         ))}
       </nav>
-    ) : (
-      <p class="app-date">{today}</p>
-    )
-  }
-  {
-    search && (
-      <label class="app-search">
-        <span class="sr-only">{copy.searchLabel}</span>
-        {/* Phase 3: replace client filter with a Cloudflare/static search index. */}
-        <input
-          type="search"
-          name="q"
-          data-search-input
-          placeholder={copy.searchPlaceholder}
-          autocomplete="off"
-        />
-      </label>
-    )
-  }
-  <nav class="app-lang" aria-label="Language">
-    <a
-      href={locale === 'en' ? currentPath : altHref}
-      class:list={[locale === 'en' && 'is-active']}
-      aria-current={locale === 'en' ? 'true' : undefined}
-    >
-      {copy.langEn}
-    </a>
-    <span aria-hidden="true"> / </span>
-    <a
-      href={locale === 'tr' ? currentPath : altHref}
-      class:list={[locale === 'tr' && 'is-active']}
-      hreflang={alt}
-      lang={alt}
-      aria-current={locale === 'tr' ? 'true' : undefined}
-    >
-      {copy.langTr}
-    </a>
-  </nav>
-</header>
+      <span class="app-crumbbar-kicker">{copy.kicker}</span>
+    </div>
+  )
+}

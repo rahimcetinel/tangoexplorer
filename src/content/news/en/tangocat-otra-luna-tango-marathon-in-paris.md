@@ -20,6 +20,9 @@ eventEnd: 2027-02-14
 image: "/events/tangocat-otra-luna-tango-marathon-in-paris.png"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://tango-marathon.otraluna.paris/assets/img/og-banner.png
+edition: 8
+registrationStart: 2026-07-20
+eventWebsite: https://otraluna.paris
 ---
 
 Otra Luna Tango Marathon In Paris is listed (February 12-14, 2027) in France, Paris. This is a date and place summary, not a copy of the source programme.

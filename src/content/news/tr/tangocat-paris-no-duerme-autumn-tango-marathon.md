@@ -17,6 +17,11 @@ country: "Fransa"
 city: "Paris"
 eventStart: 2026-11-13
 eventEnd: 2026-11-15
+edition: 2
+eventWebsite: https://tango-space.com/paris-no-duerme
+image: "/events/tangocat-paris-no-duerme-autumn-tango-marathon.png"
+imageCredit: "TMD"
+imageSourceUrl: https://www.tangomarathons.com/events/2026-paris-no-duerme-autumn-tango-marathon-edition-2/
 ---
 
 Paris No Duerme - Autumn Tango Marathon, Kasım 13-15 2026 tarihleri arasında France, Paris konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

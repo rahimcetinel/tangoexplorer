@@ -1,9 +1,21 @@
 ---
 import AppShell from '../layouts/AppShell.astro';
 import Header from './Header.astro';
-import NewsCard from './NewsCard.astro';
-import { getNews } from '../lib/news';
-import { categoryLabels, homePath, ui, type Category, type Locale } from '../lib/i18n';
+import MonthRibbon from './MonthRibbon.astro';
+import TimelineBoard from './TimelineBoard.astro';
+import DetailPanel from './DetailPanel.astro';
+import ArticleInner from './ArticleInner.astro';
+import EmptyState from './ui/EmptyState.astro';
+import { getNews, newsSlug } from '../lib/news';
+import {
+  categoryLabels,
+  categoryPath,
+  homePath,
+  ui,
+  type Category,
+  type Locale,
+} from '../lib/i18n';
+import { eagerMonthKeys, groupByMonth } from '../lib/timeline';
 
 interface Props {
   locale: Locale;
@@ -13,11 +25,22 @@ interface Props {
 const { locale, category } = Astro.props;
 const copy = ui[locale];
 const label = categoryLabels[locale][category];
-const posts = await getNews(locale);
-const filtered = posts.filter((post) => post.data.category === category);
+const allPosts = await getNews(locale);
+const posts = allPosts.filter((post) => post.data.category === category);
+const months = groupByMonth(posts, locale);
+const selected = posts[0];
+const selectedSlug = selected ? newsSlug(selected) : undefined;
+const eagerMonths = eagerMonthKeys(selected);
 ---
 
-<AppShell title={`${label} — ${copy.brand}`} description={`${copy.brand} ${label}`} locale={locale} posts={posts}>
+<AppShell
+  title={`${label} — ${copy.brand}`}
+  description={`${copy.brand} ${label}`}
+  locale={locale}
+  mode="category"
+  closePath={categoryPath(locale, category)}
+  posts={allPosts}
+>
   <Fragment slot="center">
     <Header
       locale={locale}
@@ -26,26 +49,43 @@ const filtered = posts.filter((post) => post.data.category === category);
         { label },
       ]}
     />
-    <main id="main" class="app-page">
-      <p class="app-kicker">{copy.category}</p>
-      <h1 class="app-page-title">{label}</h1>
-      {
-        filtered.length === 0 ? (
-          <p class="app-empty">{copy.emptyCategory}</p>
-        ) : (
-          <div class="app-page-grid">
-            {filtered.map((post) => (
-              <NewsCard post={post} locale={locale} />
-            ))}
-          </div>
-        )
-      }
-    </main>
+    {
+      months.length === 0 ? (
+        <main id="main" class="app-page">
+          <EmptyState>{copy.emptyCategory}</EmptyState>
+        </main>
+      ) : (
+        <>
+          <MonthRibbon locale={locale} months={months} />
+          <main id="main" class="app-main-board">
+            <TimelineBoard
+              locale={locale}
+              months={months}
+              selectedSlug={selectedSlug}
+              eagerMonths={eagerMonths}
+              category={category}
+            />
+            <EmptyState data-filter-empty hidden>
+              {copy.filterEmpty}
+            </EmptyState>
+          </main>
+        </>
+      )
+    }
   </Fragment>
   <Fragment slot="detail">
-    <div class="app-detail-inner">
-      <p class="app-detail-eyebrow">{copy.category}</p>
-      <p class="text-sm text-ink-soft">{copy.filterCount(filtered.length)}</p>
-    </div>
+    <DetailPanel locale={locale}>
+      {
+        selected ? (
+          <ArticleInner locale={locale} post={selected} variant="panel" />
+        ) : (
+          <EmptyState>{copy.emptyCategory}</EmptyState>
+        )
+      }
+    </DetailPanel>
   </Fragment>
 </AppShell>
+<script>
+  import { initAppShell } from '../scripts/app-shell';
+  initAppShell();
+</script>

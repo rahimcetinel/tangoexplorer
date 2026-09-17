@@ -17,6 +17,9 @@ country: "Netherlands"
 city: "Groningen"
 eventStart: 2026-10-15
 eventEnd: 2026-10-18
+image: "/events/tangocat-tango-festival-groningen-2026.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/tango-festival-groningen-2026-7c88f3
 ---
 
 Tango Festival Groningen 2026, Ekim 15-18 2026 tarihleri arasında Netherlands, Groningen konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

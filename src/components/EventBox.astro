@@ -2,7 +2,7 @@
 import ExternalLink from './ExternalLink.astro';
 import EventImage from './EventImage.astro';
 import type { NewsEntry } from '../lib/news';
-import { kindLabels, ui, type Locale } from '../lib/i18n';
+import { formatNewsDate, kindLabels, ui, type Locale } from '../lib/i18n';
 
 interface Props {
   post: NewsEntry;
@@ -19,7 +19,7 @@ const kind = d.kinds[0];
 const place = d.eventLocation || [d.city, d.country].filter(Boolean).join(', ');
 const cityCountry = [d.city, d.country].filter(Boolean).join(', ');
 const showCityCountry = Boolean(cityCountry && cityCountry !== place);
-const hasEvent = Boolean(d.eventWhen || place || d.eventWebsite || d.eventFacebook || d.eventInstagram || d.image || duration || kind);
+const hasEvent = Boolean(d.eventWhen || place || d.eventWebsite || d.eventFacebook || d.eventInstagram || d.image || duration || kind || d.edition != null || d.registrationStart);
 const webDistinct = d.eventWebsite && d.eventWebsite.replace(/\/$/, '') !== d.sourceUrl.replace(/\/$/, '');
 const hasLinks = Boolean(webDistinct || d.eventFacebook || d.eventInstagram);
 
@@ -79,6 +79,18 @@ function hostOf(url: string): string {
                 <div>
                   <dt>{copy.duration}</dt>
                   <dd>{copy.durationDays(duration)}</dd>
+                </div>
+              )}
+              {d.edition != null && (
+                <div>
+                  <dt>{copy.edition}</dt>
+                  <dd>{d.edition}</dd>
+                </div>
+              )}
+              {d.registrationStart && (
+                <div>
+                  <dt>{copy.registrationOpens}</dt>
+                  <dd>{formatNewsDate(d.registrationStart, locale)}</dd>
                 </div>
               )}
             </dl>

@@ -20,6 +20,9 @@ eventEnd: 2026-10-24
 image: "/events/tangocat-the-nightwatch-tango-festival.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://www.nightwatchtangofestival.com/wp-content/uploads/2026/08/Nightwatch-Clean-logo-with-background.jpg
+edition: 1
+registrationStart: 2026-08-14
+eventWebsite: https://www.nightwatchtangofestival.com/
 ---
 
 The Nightwatch Tango Festival, Ekim 23-24 2026 tarihleri arasında Netherlands, Oegstgeest konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

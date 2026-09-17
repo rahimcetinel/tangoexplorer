@@ -17,6 +17,7 @@ country: "Almanya"
 city: "Karlsruhe"
 eventStart: 2026-11-06
 eventEnd: 2026-11-08
+eventWebsite: https://www.tangomarathonkarlsruhe.com/de/
 ---
 
 Tamaka 8th Tangomarathon Karlsruhe is listed (November 6-8 2026) in Germany, Karlsruhe. This is a date and place summary, not a copy of the source programme.

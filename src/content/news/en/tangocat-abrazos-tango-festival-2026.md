@@ -17,6 +17,9 @@ country: "United States"
 city: "New York"
 eventStart: 2026-11-13
 eventEnd: 2026-11-15
+image: "/events/tangocat-abrazos-tango-festival-2026.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/abrazos-tango-festival-a77fdb
 ---
 
 Abrazos Tango Festival 2026 is listed (November 13-15 2026) in United States, New York. This is a date and place summary, not a copy of the source programme.

@@ -20,6 +20,9 @@ eventEnd: 2026-09-28
 image: "/events/tangocat-ephesus-tango-marathon.png"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://ephesustangomarathon.com/assets/images/banner/01-v2026.png?v=2026
+edition: 4
+registrationStart: 2026-05-01
+eventWebsite: https://www.ephesustangomarathon.com
 ---
 
 Ephesus Tango Marathon, Eylül 24-28 2026 tarihleri arasında Türkiye, Şirince konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

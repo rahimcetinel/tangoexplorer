@@ -42,7 +42,7 @@ MONTH_RE = "|".join(sorted((re.escape(name) for name in MONTHS), key=len, revers
 
 def load_dotenv(path: Path) -> None:
     if not path.is_file():
-        raise SystemExit(f".env yok: {path}")
+        return
     for raw in path.read_text(encoding="utf-8").splitlines():
         line = raw.strip()
         if not line or line.startswith("#") or "=" not in line:

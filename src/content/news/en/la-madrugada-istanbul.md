@@ -21,6 +21,8 @@ city: Istanbul
 eventStart: 2026-09-30
 eventEnd: 2026-10-04
 imageCredit: "Organiser / listing image"
+edition: 4
+registrationStart: 2026-03-25
 ---
 
 La Madrugada Tango Marathon, Festival and Cup runs 30 September–4 October 2026 in Istanbul. The long Tangocat title is a hint: this is not only a marathon floor. Festival and cup sit in the same week.

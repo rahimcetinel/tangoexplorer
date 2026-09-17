@@ -1,6 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import Rail from '../components/Rail.astro';
+import TopBar from '../components/TopBar.astro';
 import { homePath, ui, type Locale } from '../lib/i18n';
 import type { NewsEntry } from '../lib/news';
 import type { OgType } from '../lib/seo';
@@ -9,17 +9,32 @@ interface Props {
   title: string;
   description?: string;
   locale: Locale;
-  mode?: 'home' | 'page';
+  mode?: 'home' | 'category' | 'milonga' | 'page';
   newsSlug?: string;
   posts: NewsEntry[];
   ogImage?: string;
   ogType?: OgType;
   robots?: string;
   jsonLd?: object[];
+  closePath?: string;
 }
 
-const { title, description, locale, mode = 'page', newsSlug, posts, ogImage, ogType, robots, jsonLd } = Astro.props;
+const {
+  title,
+  description,
+  locale,
+  mode = 'page',
+  newsSlug,
+  posts,
+  ogImage,
+  ogType,
+  robots,
+  jsonLd,
+  closePath,
+} = Astro.props;
 const copy = ui[locale];
+const isBoard = mode === 'home' || mode === 'category' || mode === 'milonga';
+const resolvedClosePath = closePath ?? homePath(locale);
 ---
 
 <BaseLayout
@@ -36,21 +51,25 @@ const copy = ui[locale];
     class="app-shell"
     data-app-shell
     data-mode={mode}
+    data-locale={locale}
     data-home-path={homePath(locale)}
+    data-close-path={isBoard ? resolvedClosePath : undefined}
     data-i18n-count={locale === 'tr' ? '{n} haber' : '{n} stories'}
   >
-    <Rail locale={locale} posts={posts} newsSlug={newsSlug} mode={mode} />
-    <div class="app-center">
-      <slot name="center" />
+    <TopBar locale={locale} mode={mode} posts={posts} newsSlug={newsSlug} />
+    <div class="app-body">
+      <div class="app-center">
+        <slot name="center" />
+      </div>
+      <aside
+        class="app-detail"
+        data-detail-panel={isBoard ? '' : undefined}
+        aria-label={copy.detailEyebrow}
+        id={isBoard ? 'detail-panel' : undefined}
+      >
+        <slot name="detail" />
+      </aside>
     </div>
     <div class="app-detail-backdrop" data-detail-backdrop hidden></div>
-    <aside
-      class="app-detail"
-      data-detail-panel={mode === 'home' ? '' : undefined}
-      aria-label={copy.detailEyebrow}
-      id={mode === 'home' ? 'detail-panel' : undefined}
-    >
-      <slot name="detail" />
-    </aside>
   </div>
 </BaseLayout>

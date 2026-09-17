@@ -17,6 +17,9 @@ country: "Almanya"
 city: "Bayreuth"
 eventStart: 2026-09-18
 eventEnd: 2026-09-20
+image: "/events/tangocat-7th-tangozauber-festival-bayreuth.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/7-tangozauber-bayreuth-8c210b
 ---
 
 7th Tangozauber Festival Bayreuth, Eylül 18-20 2026 tarihleri arasında Germany, Bayreuth konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

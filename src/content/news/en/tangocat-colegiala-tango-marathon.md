@@ -17,6 +17,12 @@ country: "İtalya"
 city: "Marina di Bibbona"
 eventStart: 2026-10-22
 eventEnd: 2026-10-25
+edition: 11
+registrationStart: 2026-03-18
+eventWebsite: https://www.colegialamarathon.com
+image: "/events/tangocat-colegiala-tango-marathon.jpg"
+imageCredit: "TMD"
+imageSourceUrl: https://www.tangomarathons.com/events/2026-colegiala-tango-marathon-2026-banana-funky-edition-11/
 ---
 
 COLEGIALA Tango Marathon is listed (October 22-25 2026) in Italy, Marina di Bibbona. This is a date and place summary, not a copy of the source programme.

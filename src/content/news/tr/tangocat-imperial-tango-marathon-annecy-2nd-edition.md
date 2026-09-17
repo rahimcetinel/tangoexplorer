@@ -17,6 +17,12 @@ country: "Fransa"
 city: "Annecy"
 eventStart: 2026-10-23
 eventEnd: 2026-10-25
+image: "/events/tangocat-imperial-tango-marathon-annecy-2nd-edition.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/imperial-tango-marathon-57a88a
+edition: 2
+registrationStart: 2026-05-01
+eventWebsite: https://www.imperialtangomarathon.com/
 ---
 
 Imperial Tango Marathon Annecy, 2nd édition, Ekim 23-25 2026 tarihleri arasında France, Annecy konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

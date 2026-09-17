@@ -17,6 +17,11 @@ country: "Czechia"
 city: "Brno"
 eventStart: 2026-10-16
 eventEnd: 2026-10-18
+image: "/events/tangocat-brnos-aires-tango-marathon.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/brnos-aires-tango-marathon-a673db
+edition: 2
+eventWebsite: https://brnosaires.com/marathon/
 ---
 
 Brnos Aires Tango Marathon, Ekim 16-18 2026 tarihleri arasında Czechia, Brno konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

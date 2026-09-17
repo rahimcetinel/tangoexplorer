@@ -3,9 +3,9 @@ import Card from './ui/Card.astro';
 import EventImage from './EventImage.astro';
 import { categoryLabels, kindLabels, newsPath, type Locale } from '../lib/i18n';
 import { newsSlug, type NewsEntry } from '../lib/news';
-import { isoDate } from '../lib/filters';
-import { dayLabel, initials, searchText } from '../lib/timeline';
+import { dayLabel, initials } from '../lib/timeline';
 import { eventImage } from '../lib/images';
+import { regionLabels, regionOf } from '../lib/regions';
 
 interface Props {
   post: NewsEntry;
@@ -19,6 +19,8 @@ const href = newsPath(locale, slug);
 const labels = categoryLabels[locale];
 const kinds = kindLabels[locale];
 const kind = post.data.kinds[0];
+const region = regionOf(post.data.country);
+const regionLabel = region ? regionLabels[locale][region] : labels[post.data.category];
 const day = dayLabel(post.data.eventStart, post.data.eventEnd);
 const place = post.data.eventLocation || [post.data.city, post.data.country].filter(Boolean).join(', ');
 const isSelected = selected === slug;
@@ -28,14 +30,8 @@ const meta = eventImage(post.data.image);
 <Card
   selected={isSelected}
   data-card
-  data-kinds={post.data.kinds.join(',')}
-  data-format={post.data.format}
-  data-country={post.data.country ?? ''}
-  data-city={post.data.city ?? ''}
-  data-source={post.data.sourceKey}
-  data-start={isoDate(post.data.eventStart)}
-  data-end={isoDate(post.data.eventEnd)}
-  data-search={searchText(post)}
+  data-category={post.data.category}
+  data-region={region ?? ''}
 >
   <a href={href} data-detail-link>
     <div class:list={['app-ev-ph', !meta && 'noimg']} data-initials={initials(post.data.title)}>
@@ -44,7 +40,7 @@ const meta = eventImage(post.data.image);
     </div>
     <div class="app-ev-in">
       <p class="app-ev-cat">
-        {labels[post.data.category]}
+        {regionLabel}
         {kind && <> · {kinds[kind]}</>}
       </p>
       <h3>{post.data.title}</h3>

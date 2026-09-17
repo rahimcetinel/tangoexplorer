@@ -21,6 +21,8 @@ city: Antalya
 eventStart: 2027-05-19
 eventEnd: 2027-05-25
 imageCredit: "Organiser / listing image"
+edition: 10
+registrationStart: 2026-09-01
 ---
 
 10th Caliente Tango Marathon Antalya, May 19-25, 2027 tarihleri arasında Türkiye, Antalya konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

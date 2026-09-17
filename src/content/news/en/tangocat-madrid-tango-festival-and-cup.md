@@ -20,6 +20,9 @@ eventEnd: 2026-12-07
 image: "/events/tangocat-madrid-tango-festival-and-cup.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://madridtangofest.com/wp-content/uploads/go-x/u/2292a16d-1131-47b3-a4ef-d7fae6896e8a/image-1200x675.jpg
+edition: 8
+registrationStart: 2026-06-20
+eventWebsite: http://www.madridtangofest.com
 ---
 
 Madrid Tango Festival and CUP is listed (December 4-7 2026) in Spain, Madrid. This is a date and place summary, not a copy of the source programme.

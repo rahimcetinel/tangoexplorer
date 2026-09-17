@@ -26,5 +26,9 @@ pnpm-debug.log*
 # ingest output
 agentic-python/out/
 
+# python cache
+__pycache__/
+*.pyc
+
 # Windows
 Thumbs.db

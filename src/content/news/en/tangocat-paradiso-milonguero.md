@@ -17,6 +17,12 @@ country: "Almanya"
 city: "Ludwigshafen"
 eventStart: 2026-11-13
 eventEnd: 2026-11-15
+edition: 7
+registrationStart: 2026-04-02
+eventWebsite: https://paradisomilonguero.de
+image: "/events/tangocat-paradiso-milonguero.jpg"
+imageCredit: "TMD"
+imageSourceUrl: https://www.tangomarathons.com/events/2026-paradiso-milonguero-tango-marathon-pablo-ver%c3%b3n-workshops-edition-7/
 ---
 
 Paradiso Milonguero is listed (November 13-15 2026) in Germany, Ludwigshafen. This is a date and place summary, not a copy of the source programme.

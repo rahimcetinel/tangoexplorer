@@ -37,6 +37,11 @@
 - `getNews()` locale başına cache (build’de tekrar `getCollection` yok).
 - Cloudflare Web Analytics (3.4) atlandı: beacon token yok, çerez/gelir hedefi yok.
 - Diakritik slug: NFKD + ł/ø eşlemesi. `tango-news-neden-var` gibi bilinçli id’ler dokunulmadı. Astro `redirects` meta-refresh’i kaldırıldı; 301’ler `public/_redirects`.
+- Milongalar sayfası: `/milongas` + `/tr/milongalar`. Veri `ingest_hoy.py` ile Hoy Milonga’nın 8 bölgesinden (`turkiye, buenos-aires, berlin, nordrhein-westfalen, england, athens, miami, sao-paulo`) çekilir; `src/data/hoy-milongas.json` yazılır ve `/hoy-milongas.json` uç noktasından sunulur (sayfaya gömülmez). Liste/filtreler istemcide çalışır. Hoy `eventType` çoğunlukla `milonga`; gerçek tür `genre` alanından (practica) türetilir. İptal/`hasEnded` kayıtlar elenir. Uzun ömürlü Meta token gerekmez (Hoy public sayfa).
+- İçerik tutarlılığı: `content.config` sabitleri `src/lib/taxonomy.ts`’e taşındı (istemci script’leri `i18n` üzerinden `astro:content` çekmesin diye).
+- Faz 3 düzen revizyonu: sabit sol rail kaldırıldı. Yerine üst bar (marka + birincil nav + arama + dil) ve onun altında **“Menü & Filtreler”** çizgisi; tıklanınca sayfanın üstüne açılan panel (`.app-menupanel`) gelir. Ana görünüm artık **2 kolon** (liste + sağ detay). Panel içindeki bölümler (`data-acc`) masaüstünde açık, **mobilde akordeon** (kapalı başlar). `Rail.astro` ve `ui/SectionHeading.astro` kaldırıldı; footer panele taşındı. `--head-h` üst bar yüksekliğini verir.
+- Kaynak: **Tangoverse** (`ingest_tangoverse.py`). Public Supabase REST (anon key JS bundle’dan otomatik bulunur), salt-okuma. `--images` mevcut görselsiz kayıtların kapaklarını eşleştirip indirir (sıkı eşleştirme: başlık token’ı veya aynı gün; yanlış görsel riskini düşürür). `--publish` yalnızca üst düzey `festival/marathon/weekend/milonga` kayıtlarını ekler (alt etkinlikler `parent_event_id` ile atlanır), mevcut içerikle dedupe eder. Atıf: `source: Tangoverse` + etkinlik sayfası linki; görselde `imageCredit: Tangoverse`. `sourceKey: tangoverse` (şema + `sourceLabels`).
+- Kaynak: **TMD / Tango Marathon Directory** (`ingest_tmd.py`). Public WordPress REST (`/wp-json/tmd/v3/events`, `start_date_min` + `meta_fields=end_date,website` + `include_taxonomies`), salt-okuma; robots sinyali `use=reference` ile uyumlu, atıf “TMD”. `--enrich` mevcut kayıtlara **edisyon** ve **kayıt açılışı** (`registrationStart`) + eksik `eventWebsite` ekler; `--publish` yeni maraton/festival/encuentro ekler; görseller etkinlik sayfasından `wp-post-image` kazınarak alınır. Şemada yeni alanlar: `edition`, `registrationStart`; `sourceKey: tmd`.
 
 ## Günlük döngü
 
@@ -44,6 +49,10 @@
 python agentic-python/ingest.py
 python agentic-python/publish.py --dry-run
 python agentic-python/publish.py
+python agentic-python/ingest_hoy.py
+python agentic-python/ingest_tangoverse.py --images
+python agentic-python/ingest_tangoverse.py --publish
+python agentic-python/ingest_tmd.py
 npm run build
 npx wrangler pages deploy dist --project-name tango-news
 ```

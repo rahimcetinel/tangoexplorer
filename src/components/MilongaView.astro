@@ -1,0 +1,47 @@
+---
+import AppShell from '../layouts/AppShell.astro';
+import Header from './Header.astro';
+import { getNews } from '../lib/news';
+import { milongasPath, ui, type Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const copy = ui[locale];
+const posts = await getNews(locale);
+---
+
+<AppShell
+  title={`${copy.milongaTitle} — ${copy.brand}`}
+  description={copy.milongaIntro}
+  locale={locale}
+  mode="milonga"
+  closePath={milongasPath(locale)}
+  posts={posts}
+>
+  <Fragment slot="center">
+    <Header locale={locale} />
+    <main id="main" class="app-main-board app-milonga">
+      <div class="app-milonga-tabs" data-milonga-tabs></div>
+      <div class="app-milonga-list" data-milonga-list></div>
+      <p class="app-empty" data-milonga-empty hidden>{copy.milongaEmpty}</p>
+    </main>
+  </Fragment>
+  <Fragment slot="detail">
+    <div class="app-detail-inner" data-milonga-detail>
+      <div class="app-detail-eyebrow">
+        <span>{copy.milongas}</span>
+        <button type="button" class="app-detail-close" data-milonga-close aria-label={copy.closeDetail}>
+          ×
+        </button>
+      </div>
+      <p class="app-empty">{copy.milongaPick}</p>
+    </div>
+  </Fragment>
+</AppShell>
+<script>
+  import { initMilongas } from '../scripts/milongas';
+  initMilongas();
+</script>

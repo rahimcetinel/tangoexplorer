@@ -45,20 +45,6 @@ export function initials(title: string): string {
   return letters.join('') || title.slice(0, 2).toUpperCase();
 }
 
-export function searchText(post: NewsEntry): string {
-  return [
-    post.data.title,
-    post.data.summary,
-    post.data.eventName,
-    post.data.city,
-    post.data.country,
-    post.data.eventLocation,
-  ]
-    .filter(Boolean)
-    .join(' ')
-    .toLowerCase();
-}
-
 export function groupByMonth(posts: NewsEntry[], locale: Locale): MonthColumn[] {
   const groups = new Map<string, NewsEntry[]>();
   for (const post of posts) {
@@ -89,12 +75,8 @@ export function currentMonthKey(now: Date = new Date()): string {
   return `${now.getFullYear()}-${month}`;
 }
 
-export function nextMonthKey(now: Date = new Date()): string {
-  return currentMonthKey(new Date(now.getFullYear(), now.getMonth() + 1, 1));
-}
-
 export function eagerMonthKeys(selected?: NewsEntry, now: Date = new Date()): string[] {
-  const keys = new Set([currentMonthKey(now), nextMonthKey(now)]);
+  const keys = new Set([currentMonthKey(now)]);
   if (selected) {
     keys.add(monthKey(groupingDate(selected)));
   }

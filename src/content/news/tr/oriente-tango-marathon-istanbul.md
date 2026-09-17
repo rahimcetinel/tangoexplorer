@@ -21,6 +21,8 @@ city: İstanbul
 eventStart: 2026-09-17
 eventEnd: 2026-09-20
 imageCredit: "Organiser / listing image"
+edition: 3
+registrationStart: 2026-01-17
 ---
 
 Oriente Tango Marathon 17–20 Eylül 2026’da İstanbul’da. Tangocat, etkinliği Türkiye / İstanbul satırında gösteriyor.

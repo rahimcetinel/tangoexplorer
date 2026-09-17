@@ -1,23 +1,32 @@
 ---
-import CompactCard from './CompactCard.astro';
 import TimelineCard from './TimelineCard.astro';
 import { currentMonthKey, type MonthColumn } from '../lib/timeline';
-import type { Locale } from '../lib/i18n';
+import type { Category, Locale } from '../lib/i18n';
 
 interface Props {
   locale: Locale;
   months: MonthColumn[];
   selectedSlug?: string;
   eagerMonths?: string[];
+  category?: Category;
+  region?: string;
 }
 
-const { locale, months, selectedSlug, eagerMonths = [] } = Astro.props;
+const { locale, months, selectedSlug, eagerMonths = [], category, region } = Astro.props;
 const nowMonth = currentMonthKey();
 const eager = new Set(eagerMonths);
 ---
 
 <div class="app-viewport">
-  <div class="app-board" data-board data-now-month={nowMonth} tabindex="0" aria-label="Timeline">
+  <div
+    class="app-board"
+    data-board
+    data-now-month={nowMonth}
+    data-board-category={category}
+    data-board-region={region}
+    tabindex="0"
+    aria-label="Timeline"
+  >
     {
       months.map((month) => {
         const full = eager.has(month.key);
@@ -31,22 +40,29 @@ const eager = new Set(eagerMonths);
             data-fragment={full ? undefined : `/fragments/${locale}/${month.key}`}
           >
             <header class="app-col-head">
-              <h2>{month.label}</h2>
-              <span class="sr-only" data-col-count>
-                {month.count}
-              </span>
+              <div class="app-col-head-row">
+                <h2>{month.label}</h2>
+                <span class="app-col-count" data-col-count>
+                  {month.count}
+                </span>
+              </div>
               <div class="app-col-line" aria-hidden="true" />
             </header>
-            {month.posts.map((post) =>
-              full ? (
-                <TimelineCard post={post} locale={locale} selected={selectedSlug} />
-              ) : (
-                <CompactCard post={post} locale={locale} selected={selectedSlug} />
-              ),
-            )}
+            {full
+              ? month.posts.map((post) => (
+                  <TimelineCard post={post} locale={locale} selected={selectedSlug} />
+                ))
+              : (
+                  <div class="app-col-placeholder" data-col-placeholder aria-hidden="true">
+                    {Array.from({ length: Math.min(4, month.count) }).map(() => (
+                      <div class="app-card-skeleton" />
+                    ))}
+                  </div>
+                )}
           </section>
         );
       })
     }
   </div>
 </div>
+<div class="app-results" data-results hidden></div>

@@ -17,6 +17,9 @@ country: "Czechia"
 city: "Prague"
 eventStart: 2026-10-03
 eventEnd: 2026-10-04
+image: "/events/tangocat-al-compas-de-un-tango.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/al-compas-de-un-tango-dd0019
 ---
 
 Al compás de un tango is listed (October 3-4 2026) in Czechia, Prague. This is a date and place summary, not a copy of the source programme.

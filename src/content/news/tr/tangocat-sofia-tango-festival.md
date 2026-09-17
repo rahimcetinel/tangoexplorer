@@ -17,6 +17,9 @@ country: "Bulgaria"
 city: "Sofia"
 eventStart: 2026-09-17
 eventEnd: 2026-09-20
+image: "/events/tangocat-sofia-tango-festival.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/sofia-tango-festival-7c53ac
 ---
 
 Sofia Tango Festival, Eylül 17-20 2026 tarihleri arasında Bulgaria, Sofia konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.
