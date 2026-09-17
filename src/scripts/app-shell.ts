@@ -107,7 +107,8 @@ async function hydrateColumn(col: HTMLElement) {
     if (!incoming) {
       throw new Error('missing cards');
     }
-    col.querySelectorAll('[data-card], [data-col-placeholder]').forEach((node) => node.remove());
+    const target = col.querySelector<HTMLElement>('[data-month-grid]') ?? col;
+    target.querySelectorAll('[data-card], [data-col-placeholder], .app-card-skeleton').forEach((node) => node.remove());
     const imported = document.importNode(incoming, true);
     if (boardCategory) {
       imported.querySelectorAll<HTMLElement>('[data-card]').forEach((card) => {
@@ -123,7 +124,7 @@ async function hydrateColumn(col: HTMLElement) {
         }
       });
     }
-    col.append(...imported.children);
+    target.append(...imported.children);
     col.dataset.lazy = 'ready';
     document.dispatchEvent(new Event('timeline:hydrated'));
   } catch {
@@ -206,13 +207,13 @@ function initJumpTo() {
     if (board.dataset.view === 'single') {
       return;
     }
-    if (event.key === 'ArrowRight') {
+    if (event.key === 'ArrowDown') {
       event.preventDefault();
-      board.scrollBy({ left: 268, behavior: 'smooth' });
+      board.scrollBy({ top: 320, behavior: 'smooth' });
     }
-    if (event.key === 'ArrowLeft') {
+    if (event.key === 'ArrowUp') {
       event.preventDefault();
-      board.scrollBy({ left: -268, behavior: 'smooth' });
+      board.scrollBy({ top: -320, behavior: 'smooth' });
     }
   });
 
@@ -220,7 +221,7 @@ function initJumpTo() {
   const nowKey = board.dataset.nowMonth;
   const nowCol = nowKey ? document.getElementById(`col-${nowKey}`) : null;
   if (nowCol) {
-    board.scrollTo({ left: nowCol.offsetLeft - 16 });
+    board.scrollTo({ top: nowCol.offsetTop - 8 });
   }
 }
 

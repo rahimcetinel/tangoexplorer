@@ -32,7 +32,7 @@ const eager = new Set(eagerMonths);
         const full = eager.has(month.key);
         return (
           <section
-            class="app-col"
+            class="app-month"
             id={`col-${month.key}`}
             data-month-col
             data-month={month.key}
@@ -48,17 +48,15 @@ const eager = new Set(eagerMonths);
               </div>
               <div class="app-col-line" aria-hidden="true" />
             </header>
-            {full
-              ? month.posts.map((post) => (
-                  <TimelineCard post={post} locale={locale} selected={selectedSlug} />
-                ))
-              : (
-                  <div class="app-col-placeholder" data-col-placeholder aria-hidden="true">
-                    {Array.from({ length: Math.min(4, month.count) }).map(() => (
-                      <div class="app-card-skeleton" />
-                    ))}
-                  </div>
-                )}
+            <div class="app-month-grid" data-month-grid>
+              {full
+                ? month.posts.map((post) => (
+                    <TimelineCard post={post} locale={locale} selected={selectedSlug} />
+                  ))
+                : Array.from({ length: Math.min(8, month.count) }).map(() => (
+                    <div class="app-card-skeleton" />
+                  ))}
+            </div>
           </section>
         );
       })
