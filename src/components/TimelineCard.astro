@@ -6,6 +6,7 @@ import { newsSlug, type NewsEntry } from '../lib/news';
 import { dayLabel, initials } from '../lib/timeline';
 import { eventImage } from '../lib/images';
 import { regionLabels, regionOf } from '../lib/regions';
+import { countryHue } from '../lib/country-color';
 
 interface Props {
   post: NewsEntry;
@@ -25,6 +26,7 @@ const day = dayLabel(post.data.eventStart, post.data.eventEnd);
 const place = post.data.eventLocation || [post.data.city, post.data.country].filter(Boolean).join(', ');
 const isSelected = selected === slug;
 const meta = eventImage(post.data.image);
+const hue = countryHue(post.data.country);
 ---
 
 <Card
@@ -44,7 +46,11 @@ const meta = eventImage(post.data.image);
         {kind && <> · {kinds[kind]}</>}
       </p>
       <h3>{post.data.title}</h3>
-      {place && <p class="app-ev-loc">{place}</p>}
+      {place && (
+        <p class:list={['app-ev-loc', hue && 'is-country']} style={hue ? `--cc-h:${hue}` : undefined}>
+          {place}
+        </p>
+      )}
     </div>
   </a>
 </Card>

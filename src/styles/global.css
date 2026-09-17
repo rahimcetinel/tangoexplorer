@@ -1110,6 +1110,17 @@ body:has(.app-shell) {
   margin: 0;
 }
 
+.app-ev-loc.is-country {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: hsl(var(--cc-h) 62% 30%);
+  background: hsl(var(--cc-h) 66% 94%);
+  border: 1px solid hsl(var(--cc-h) 52% 80%);
+}
+
 .app-detail {
   background: var(--color-paper);
   overflow: auto;
