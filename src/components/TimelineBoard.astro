@@ -39,15 +39,6 @@ const eager = new Set(eagerMonths);
             data-lazy={full ? 'false' : 'true'}
             data-fragment={full ? undefined : `/fragments/${locale}/${month.key}`}
           >
-            <header class="app-col-head">
-              <div class="app-col-head-row">
-                <h2>{month.label}</h2>
-                <span class="app-col-count" data-col-count>
-                  {month.count}
-                </span>
-              </div>
-              <div class="app-col-line" aria-hidden="true" />
-            </header>
             <div class="app-month-grid" data-month-grid>
               {full
                 ? month.posts.map((post) => (

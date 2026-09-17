@@ -764,49 +764,6 @@ body:has(.app-shell) {
   display: none;
 }
 
-.app-col-head {
-  position: sticky;
-  top: 0;
-  background: var(--color-cream);
-  padding: 2px 0 10px;
-  z-index: 2;
-  flex-shrink: 0;
-}
-
-.app-col-head h2 {
-  font-family: var(--font-display);
-  font-size: 1.12rem;
-  margin: 0;
-}
-
-.app-col-line {
-  height: 3px;
-  background: var(--color-burgundy);
-  border-radius: 3px;
-  margin-top: 8px;
-  width: 32px;
-}
-
-.app-col-head-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.app-col-count {
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--color-ink-soft);
-  opacity: 0.85;
-}
-
-.app-col-placeholder {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
 .app-card-skeleton {
   height: 118px;
   border-radius: var(--radius-md);
@@ -1830,10 +1787,6 @@ body:has(.app-shell) {
 
 .app-ev.is-selected {
   box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-indigo) 30%, transparent);
-}
-
-.app-col-line {
-  background: var(--color-indigo);
 }
 
 .app-mitem.is-selected {
