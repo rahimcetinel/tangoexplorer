@@ -233,7 +233,7 @@ body:has(.app-shell) {
 }
 
 .app-menu-square {
-  display: none;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 40px;
@@ -262,26 +262,6 @@ body:has(.app-shell) {
   color: var(--color-ink);
 }
 
-.app-menuline {
-  width: 100%;
-  background: var(--color-ink);
-  color: var(--color-paper);
-  border: 0;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 11px 22px;
-  font-size: 0.85rem;
-  text-align: left;
-}
-
-.app-menuline-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 700;
-}
-
 .app-burger {
   width: 16px;
   height: 2px;
@@ -308,43 +288,12 @@ body:has(.app-shell) {
   top: 5px;
 }
 
-.app-menuline-summary {
-  margin-left: auto;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.app-menuline-summary .is-none {
-  color: color-mix(in srgb, var(--color-paper) 62%, transparent);
-  font-weight: 500;
-}
-
-.app-menuline-summary .is-chip {
-  background: color-mix(in srgb, var(--color-paper) 16%, transparent);
-  border-radius: 999px;
-  padding: 3px 10px;
-  font-size: 0.74rem;
-  font-weight: 600;
-}
-
-.app-menuline-chev {
-  transition: transform 0.2s;
-  opacity: 0.85;
-}
-
-.app-menuline.is-open .app-menuline-chev {
-  transform: rotate(180deg);
-}
-
 .app-menupanel {
   position: fixed;
   left: 0;
   right: 0;
-  top: var(--head-h, 104px);
-  max-height: calc(100dvh - var(--head-h, 104px));
+  top: var(--head-h, 64px);
+  max-height: calc(100dvh - var(--head-h, 64px));
   z-index: 45;
   background: var(--color-paper);
   border-bottom: 1px solid var(--color-rule);
@@ -368,7 +317,7 @@ body:has(.app-shell) {
 
 .app-menu-backdrop {
   position: fixed;
-  inset: var(--head-h, 104px) 0 0 0;
+  inset: var(--head-h, 64px) 0 0 0;
   background: color-mix(in srgb, var(--color-ink) 35%, transparent);
   z-index: 44;
 }
@@ -1690,14 +1639,6 @@ body:has(.app-shell) {
 
   .app-topnav {
     display: none;
-  }
-
-  .app-menuline {
-    display: none;
-  }
-
-  .app-menu-square {
-    display: inline-flex;
   }
 
   .app-menu-search {
