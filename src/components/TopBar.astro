@@ -42,6 +42,16 @@ const nav: { href: string; label: string }[] = [
 
 <div class="app-head" data-app-head>
   <header class="app-topbar">
+    <button
+      type="button"
+      class="app-menu-square"
+      data-menu-toggle
+      aria-expanded="false"
+      aria-controls="app-menu"
+      aria-label={copy.menu}
+    >
+      <span class="app-burger" aria-hidden="true"></span>
+    </button>
     <a class="app-brand" href={home}>
       {copy.brandLead}<em>{copy.brandAccent}</em>
     </a>
@@ -90,16 +100,6 @@ const nav: { href: string; label: string }[] = [
           {copy.langTr}
         </a>
       </nav>
-      <button
-        type="button"
-        class="app-menu-square"
-        data-menu-toggle
-        aria-expanded="false"
-        aria-controls="app-menu"
-        aria-label={copy.menu}
-      >
-        <span class="app-burger" aria-hidden="true"></span>
-      </button>
     </div>
   </header>
 </div>

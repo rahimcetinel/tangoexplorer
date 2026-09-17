@@ -181,6 +181,7 @@ body:has(.app-shell) {
   line-height: 1;
   letter-spacing: -0.02em;
   white-space: nowrap;
+  margin-left: 6px;
 }
 
 .app-brand em {
