@@ -33,7 +33,7 @@ NEWS_TR = ROOT / "src" / "content" / "news" / "tr"
 HOMEPAGE = "https://tangoverse.net/"
 USER_AGENT = "TangoNews/0.1 (+https://tangoexplorer.com)"
 
-ALLOWED_TYPES = {"festival", "marathon", "weekend", "milonga"}
+ALLOWED_TYPES = {"festival", "marathon", "weekend"}
 KIND_MAP = {
     "festival": ["festival"],
     "marathon": ["marathon"],
