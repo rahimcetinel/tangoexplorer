@@ -938,7 +938,9 @@ body:has(.app-shell) {
 .app-ev a {
   color: inherit;
   text-decoration: none;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .app-ev-ph {
@@ -1086,6 +1088,10 @@ body:has(.app-shell) {
 
 .app-ev-in {
   padding: 10px 11px 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 6.5rem;
 }
 
 .app-ev-cat {
@@ -1108,17 +1114,18 @@ body:has(.app-shell) {
   font-size: 0.68rem;
   color: var(--color-ink-soft);
   margin: 0;
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .app-ev-loc.is-country {
   display: inline-block;
-  margin-top: 4px;
   padding: 2px 8px;
   border-radius: 999px;
   font-weight: 700;
-  color: hsl(var(--cc-h) 62% 30%);
-  background: hsl(var(--cc-h) 66% 94%);
-  border: 1px solid hsl(var(--cc-h) 52% 80%);
+  color: var(--cc);
+  background: color-mix(in srgb, var(--cc) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--cc) 40%, transparent);
 }
 
 .app-detail {
