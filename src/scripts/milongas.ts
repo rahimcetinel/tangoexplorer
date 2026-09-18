@@ -1,4 +1,5 @@
 import { DAYS_ORDER, regionLabel, type HoyData, type Milonga } from '../lib/hoy';
+import { PALETTE } from '../lib/country-color';
 import { ui, weekdaysLong, weekdaysShort, type Locale } from '../lib/i18n';
 
 type Filters = { region: string; city: string; day: string; type: string; q: string };
@@ -37,6 +38,7 @@ export function initMilongas() {
   let items: Milonga[] = [];
   let selected: string | null = null;
   let filters = readUrl();
+  let cityColors = new Map<string, string>();
 
   function readUrl(): Filters {
     const params = new URLSearchParams(window.location.search);
@@ -160,7 +162,9 @@ export function initMilongas() {
       `</span>` +
       `<span class="app-mitem-tags">` +
       `<span class="app-mitem-type is-${item.type}">${typeLabel}</span>` +
-      (item.city ? `<span class="app-mitem-city">${escapeHtml(item.city)}</span>` : '') +
+      (item.city
+        ? `<span class="app-mitem-city" style="--cc:${cityColors.get(item.city) || ''}">${escapeHtml(item.city)}</span>`
+        : '') +
       (item.price ? `<span class="app-mitem-price">${escapeHtml(item.price)}</span>` : '') +
       `</span>` +
       `</button>`
@@ -169,6 +173,7 @@ export function initMilongas() {
 
   function renderList() {
     const filtered = items.filter(matches);
+    cityColors = new Map(citiesForRegion().map((city, index) => [city, PALETTE[index % PALETTE.length]]));
     if (emptyEl) emptyEl.hidden = filtered.length > 0;
     const groups: { day: string; rows: Milonga[] }[] = [];
     if (filters.day) {

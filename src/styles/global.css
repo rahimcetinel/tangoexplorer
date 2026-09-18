@@ -1572,9 +1572,9 @@ body:has(.app-shell) {
   border-radius: 999px;
   padding: 2px 8px;
   white-space: nowrap;
-  background: color-mix(in srgb, var(--color-indigo) 12%, transparent);
-  color: var(--color-indigo);
-  border: 1px solid color-mix(in srgb, var(--color-indigo) 30%, transparent);
+  background: color-mix(in srgb, var(--cc, var(--color-indigo)) 12%, transparent);
+  color: var(--cc, var(--color-indigo));
+  border: 1px solid color-mix(in srgb, var(--cc, var(--color-indigo)) 30%, transparent);
 }
 
 .app-mitem-price {
