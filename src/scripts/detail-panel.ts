@@ -40,8 +40,8 @@ export function initDetailPanel() {
 
   const homePath = shell.dataset.homePath || '/';
   const closePath = shell.dataset.closePath || homePath;
-  const overlayQuery = window.matchMedia('(max-width: 1279px)');
   let lastTrigger: HTMLElement | null = null;
+  panel.setAttribute('role', 'dialog');
 
   function setSelected(url: string | null) {
     const path = url ? new URL(url, window.location.origin).pathname : '';
@@ -58,15 +58,11 @@ export function initDetailPanel() {
   }
 
   function setOpen(open: boolean) {
-    const overlay = overlayQuery.matches;
     panel!.classList.toggle('is-open', open);
-    if (overlay) {
-      panel!.setAttribute('aria-hidden', String(!open));
-    } else {
-      panel!.removeAttribute('aria-hidden');
-    }
-    backdrop?.toggleAttribute('hidden', !open || !overlay);
-    document.body.classList.toggle('detail-open', open && overlay);
+    panel!.setAttribute('aria-hidden', String(!open));
+    panel!.toggleAttribute('aria-modal', open);
+    backdrop?.toggleAttribute('hidden', !open);
+    document.body.classList.toggle('detail-open', open);
   }
 
   const skeleton = panel.querySelector<HTMLElement>('[data-detail-skeleton]');
@@ -173,11 +169,6 @@ export function initDetailPanel() {
   if (NEWS_RE.test(window.location.pathname)) {
     setOpen(true);
     setSelected(window.location.href);
-  } else {
-    const selected = document.querySelector<HTMLElement>('[data-card].is-selected a[data-detail-link]');
-    if (selected) {
-      setSelected(selected.href);
-    }
   }
 
   return { open, close };

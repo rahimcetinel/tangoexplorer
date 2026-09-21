@@ -34,6 +34,7 @@ const {
 } = Astro.props;
 const copy = ui[locale];
 const isBoard = mode === 'home' || mode === 'category' || mode === 'milonga';
+const drawer = mode === 'home' || mode === 'category';
 const resolvedClosePath = closePath ?? homePath(locale);
 ---
 
@@ -51,6 +52,7 @@ const resolvedClosePath = closePath ?? homePath(locale);
     class="app-shell"
     data-app-shell
     data-mode={mode}
+    data-drawer={drawer ? '' : undefined}
     data-locale={locale}
     data-home-path={homePath(locale)}
     data-close-path={isBoard ? resolvedClosePath : undefined}
