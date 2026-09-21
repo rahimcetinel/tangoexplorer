@@ -24,6 +24,11 @@ function eventEndMs(post: NewsEntry): number | null {
   return end ? startOfUtcDay(end) : null;
 }
 
+export function isUpcoming(post: NewsEntry, now: Date = new Date()): boolean {
+  const start = eventStartMs(post);
+  return start === null || start >= startOfUtcDay(now);
+}
+
 export function compareByEventDate(a: NewsEntry, b: NewsEntry, today: Date = new Date()): number {
   const todayMs = startOfUtcDay(today);
   const aEnd = eventEndMs(a);
@@ -56,7 +61,7 @@ export async function getNews(locale: Locale): Promise<NewsEntry[]> {
   let cached = newsCache.get(locale);
   if (!cached) {
     cached = getCollection('news', (entry) => entry.data.locale === locale).then((posts) =>
-      posts.sort((a, b) => compareByEventDate(a, b)),
+      posts.filter((post) => isUpcoming(post)).sort((a, b) => compareByEventDate(a, b)),
     );
     newsCache.set(locale, cached);
   }
