@@ -61,10 +61,13 @@ function chipHref(value: string): string {
 <div class="app-menu-inner">
   {
     mode !== 'page' && (
-      <label class="app-menu-search">
-        <span class="sr-only">{copy.searchLabel}</span>
-        <input type="search" data-search-input placeholder={copy.searchPlaceholder} autocomplete="off" />
-      </label>
+      <div class="app-menu-search">
+        <label class="app-menu-search-field">
+          <span class="sr-only">{copy.searchLabel}</span>
+          <input type="search" data-search-input placeholder={copy.searchPlaceholder} autocomplete="off" />
+        </label>
+        <div class="app-suggest" data-suggest role="listbox" hidden />
+      </div>
     )
   }
   <section class="app-acc" data-acc>

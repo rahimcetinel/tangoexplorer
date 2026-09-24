@@ -451,9 +451,121 @@ function initFilters(detail: DetailApi) {
     void apply({ preview: true });
   });
 
+  type Searcher = { input: HTMLInputElement; box: HTMLElement | null; items: IndexItem[]; active: number };
+
+  const searchers: Searcher[] = searches.map((input) => ({
+    input,
+    box:
+      input.closest('.app-search, .app-menu-search')?.querySelector<HTMLElement>('[data-suggest]') ?? null,
+    items: [],
+    active: -1,
+  }));
   let searchTimer = 0;
-  searches.forEach((input) => {
+
+  function closeMenu() {
+    const menu = document.querySelector<HTMLElement>('[data-menu-panel]');
+    const menuBackdrop = document.querySelector<HTMLElement>('[data-menu-backdrop]');
+    const toggle = document.querySelector<HTMLElement>('[data-menu-toggle]');
+    if (!menu || menu.hidden) {
+      return;
+    }
+    menu.hidden = true;
+    if (menuBackdrop) {
+      menuBackdrop.hidden = true;
+    }
+    toggle?.setAttribute('aria-expanded', 'false');
+    toggle?.classList.remove('is-open');
+    document.body.classList.remove('menu-open');
+  }
+
+  function hideSuggest(except?: Searcher) {
+    searchers.forEach((searcher) => {
+      if (searcher === except || !searcher.box) {
+        return;
+      }
+      searcher.box.hidden = true;
+      searcher.active = -1;
+    });
+  }
+
+  function suggestMatches(query: string, limit: number): IndexItem[] {
+    const q = query.toLowerCase();
+    if (!q) {
+      return [];
+    }
+    return index
+      .filter((item) => {
+        if (boardCategory && item.c !== boardCategory) return false;
+        if (filters.kind && !item.k.split(',').includes(filters.kind)) return false;
+        if (filters.country && item.co !== filters.country) return false;
+        if (filters.city && item.ci !== filters.city) return false;
+        return item.q.includes(q);
+      })
+      .slice(0, limit);
+  }
+
+  function renderSuggest(searcher: Searcher, items: IndexItem[]) {
+    searcher.items = items;
+    searcher.active = -1;
+    const box = searcher.box;
+    if (!box) {
+      return;
+    }
+    if (!items.length) {
+      box.hidden = true;
+      box.innerHTML = '';
+      return;
+    }
+    box.innerHTML = items
+      .map(
+        (item, idx) =>
+          `<button type="button" class="app-suggest-item" role="option" data-suggest-index="${idx}" data-href="${newsBase}${item.s}">` +
+          `<span class="app-suggest-title">${escapeHtml(item.t)}</span>` +
+          `<span class="app-suggest-meta">${escapeHtml(item.ml)}${item.w ? ` · ${escapeHtml(item.w)}` : ''}</span>` +
+          `</button>`,
+      )
+      .join('');
+    box.hidden = false;
+  }
+
+  function moveActive(searcher: Searcher, delta: number) {
+    const box = searcher.box;
+    if (!box || box.hidden || !searcher.items.length) {
+      return;
+    }
+    searcher.active = (searcher.active + delta + searcher.items.length) % searcher.items.length;
+    box.querySelectorAll<HTMLElement>('.app-suggest-item').forEach((el, idx) => {
+      const on = idx === searcher.active;
+      el.classList.toggle('is-active', on);
+      if (on) {
+        el.scrollIntoView({ block: 'nearest' });
+      }
+    });
+  }
+
+  async function submitSearch() {
+    window.clearTimeout(searchTimer);
+    const active =
+      searchers.find((searcher) => searcher.input === document.activeElement)?.input ?? searches[0];
+    filters.q = (active?.value ?? filters.q).trim();
+    searches.forEach((input) => {
+      if (input !== active) {
+        input.value = filters.q;
+      }
+    });
+    hideSuggest();
+    closeMenu();
+    if (active) {
+      active.blur();
+    }
+    await apply();
+  }
+
+  searchers.forEach((searcher) => {
+    const { input } = searcher;
+    input.addEventListener('focus', () => void loadIndex(), { once: true });
     input.addEventListener('input', () => {
+      hideSuggest(searcher);
       window.clearTimeout(searchTimer);
       searchTimer = window.setTimeout(() => {
         filters.q = input.value.trim();
@@ -462,9 +574,64 @@ function initFilters(detail: DetailApi) {
             other.value = filters.q;
           }
         });
-        void apply();
-      }, 150);
+        if (!filters.q) {
+          renderSuggest(searcher, []);
+          void apply();
+          return;
+        }
+        void loadIndex().then(() => renderSuggest(searcher, suggestMatches(input.value, 6)));
+      }, 120);
     });
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        moveActive(searcher, 1);
+        return;
+      }
+      if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        moveActive(searcher, -1);
+        return;
+      }
+      if (event.key === 'Escape') {
+        if (searcher.box && !searcher.box.hidden) {
+          event.preventDefault();
+          event.stopPropagation();
+          searcher.box.hidden = true;
+        }
+        return;
+      }
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        const picked = searcher.active >= 0 ? searcher.items[searcher.active] : undefined;
+        if (picked) {
+          hideSuggest();
+          closeMenu();
+          detail?.open(`${newsBase}${picked.s}`, true);
+          return;
+        }
+        void submitSearch();
+      }
+    });
+    input.addEventListener('search', () => void submitSearch());
+  });
+
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) {
+      return;
+    }
+    const picked = target.closest<HTMLElement>('[data-suggest-index]');
+    if (picked) {
+      event.preventDefault();
+      hideSuggest();
+      closeMenu();
+      detail?.open(picked.dataset.href || '', true);
+      return;
+    }
+    if (!target.closest('.app-search') && !target.closest('.app-menu-search')) {
+      hideSuggest();
+    }
   });
 
   syncControls();

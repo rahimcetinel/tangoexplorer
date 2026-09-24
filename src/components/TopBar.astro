@@ -75,10 +75,13 @@ const nav: { href: string; label: string }[] = [
     <div class="app-topbar-right">
       {
         showSearch && (
-          <label class="app-search">
-            <span class="sr-only">{copy.searchLabel}</span>
-            <input type="search" data-search-input placeholder={copy.searchPlaceholder} autocomplete="off" />
-          </label>
+          <div class="app-search">
+            <label class="app-search-field">
+              <span class="sr-only">{copy.searchLabel}</span>
+              <input type="search" data-search-input placeholder={copy.searchPlaceholder} autocomplete="off" />
+            </label>
+            <div class="app-suggest" data-suggest role="listbox" hidden />
+          </div>
         )
       }
       <nav class="app-lang" aria-label="Language">
