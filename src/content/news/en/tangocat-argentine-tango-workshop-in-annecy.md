@@ -17,6 +17,9 @@ country: "Fransa"
 city: "Annecy"
 eventStart: 2026-09-14
 eventEnd: 2026-09-18
+image: "/events/tangocat-argentine-tango-workshop-in-annecy.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.vacances-tango.com/wp-content/uploads/2024/01/logoVacanaces-Tango.jpg
 ---
 
 Argentine Tango workshop in Annecy is listed (September 14-18 2026) in France, Annecy. This is a date and place summary, not a copy of the source programme.

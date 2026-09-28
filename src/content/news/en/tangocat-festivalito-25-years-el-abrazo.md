@@ -17,6 +17,9 @@ country: "Almanya"
 city: "Hamburg"
 eventStart: 2026-10-30
 eventEnd: 2026-11-01
+image: "/events/tangocat-festivalito-25-years-el-abrazo.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.elabrazo-tangohamburg.de/wp-content/uploads/2018/01/elabrazo-logo.png
 ---
 
 Festivalito 25 Years el Abrazo is listed (October 30 - November 1 2026) in Germany, Hamburg. This is a date and place summary, not a copy of the source programme.

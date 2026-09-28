@@ -17,6 +17,9 @@ country: "İspanya"
 city: "Barcelona"
 eventStart: 2027-02-19
 eventEnd: 2027-02-21
+image: "/events/tangocat-brilloso-tango-marathon.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://thb.tildacdn.com/tild6463-3735-4630-b363-306165303431/-/empty/logo_Brilloso_Tango_.png
 ---
 
 Brilloso Tango Marathon, Şubat 19-21, 2027 tarihleri arasında Spain, Barcelona konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

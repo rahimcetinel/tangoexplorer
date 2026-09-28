@@ -17,6 +17,9 @@ country: "İspanya"
 city: "Barcelona"
 eventStart: 2027-06-11
 eventEnd: 2027-06-13
+image: "/events/tangocat-3-brilloso-big-tango-festival.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://thb.tildacdn.com/tild3063-3833-4130-b232-333332613235/-/resize/504x/TANGOFEST3_3.jpg
 ---
 
 3 Brilloso Big Tango Festival is listed (June 11-13, 2027) in Spain, Barcelona. This is a date and place summary, not a copy of the source programme.

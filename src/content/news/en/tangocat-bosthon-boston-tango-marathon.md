@@ -17,6 +17,9 @@ country: "United States"
 city: "Boston"
 eventStart: 2026-09-17
 eventEnd: 2026-09-21
+image: "/events/tangocat-bosthon-boston-tango-marathon.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://bosthon.com/wp-content/uploads/2021/04/cropped-Logo-black-512x512-1-32x32.png
 ---
 
 BOSthon - Boston Tango Marathon is listed (September 17-21 2026) in United States, Boston. This is a date and place summary, not a copy of the source programme.

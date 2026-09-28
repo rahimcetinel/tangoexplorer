@@ -10,12 +10,18 @@ import time
 from pathlib import Path
 from urllib.parse import urlparse
 
-from event_links import download_image, scrape_event_site, scrape_og_image
+from event_links import download_image, scrape_event_site, scrape_og_image, scrape_page_images
 
 ROOT = Path(__file__).resolve().parents[1]
 NEWS_DIR = ROOT / "src" / "content" / "news"
 IMAGE_DIR = ROOT / "src" / "assets" / "events"
 ENV_PATH = ROOT / ".env"
+SELF_HOSTS = ("tangoexplorer.com", "tango-news.pages.dev")
+
+
+def _is_self(url: str) -> bool:
+    host = urlparse(url).netloc.lower()
+    return any(hint in host for hint in SELF_HOSTS)
 
 
 def load_env() -> dict[str, str]:
@@ -92,33 +98,46 @@ def instagram_media_url(username: str, env: dict[str, str]) -> str | None:
     return None
 
 
-def pick_source(fm: str, env: dict[str, str]) -> tuple[str | None, str]:
+def pick_candidates(fm: str, env: dict[str, str]) -> list[tuple[str, str]]:
     source_url = fm_get(fm, "sourceUrl")
     website = fm_get(fm, "eventWebsite")
     instagram = fm_get(fm, "eventInstagram")
     source_key = fm_get(fm, "sourceKey")
 
+    if source_url and _is_self(source_url):
+        source_url = ""
+    if website and _is_self(website):
+        website = ""
+
+    found: list[tuple[str, str]] = []
+
     if source_url:
-        og, _final = scrape_og_image(source_url)
-        if og:
-            return og, source_url
+        found.extend((url, source_url) for url in scrape_page_images(source_url))
         time.sleep(0.12)
 
     if website:
         scraped = scrape_event_site(website)
         if scraped.get("imageUrl"):
-            return scraped["imageUrl"], website
+            found.append((scraped["imageUrl"], website))
+        found.extend((url, website) for url in scrape_page_images(website))
         og, _final = scrape_og_image(website)
         if og:
-            return og, website
+            found.append((og, website))
         time.sleep(0.12)
 
     if source_key == "instagram" or instagram:
         user = instagram_username(instagram)
         media = instagram_media_url(user, env)
         if media:
-            return media, instagram or source_url
-    return None, ""
+            found.append((media, instagram or source_url))
+
+    seen: set[str] = set()
+    unique: list[tuple[str, str]] = []
+    for url, page in found:
+        if url and url not in seen:
+            seen.add(url)
+            unique.append((url, page))
+    return unique
 
 
 def update_pair(stem: str, image: str, credit: str, source_url: str) -> int:
@@ -168,22 +187,30 @@ def main() -> int:
     for path in missing:
         fm, _body = split_frontmatter(path.read_text(encoding="utf-8"))
         print(f"image {path.stem} ...")
-        url, page = pick_source(fm, env)
+        candidates = pick_candidates(fm, env)
         time.sleep(0.15)
-        if not url:
+        if not candidates:
             print("  no image")
             continue
         found += 1
         if args.dry_run:
-            print(f"  would save {url}")
+            print(f"  would save {candidates[0][0]}")
             continue
-        local = download_image(url, IMAGE_DIR, path.stem)
+        local = None
+        used_url = ""
+        used_page = ""
+        for url, page in candidates:
+            local = download_image(url, IMAGE_DIR, path.stem)
+            if local:
+                used_url = url
+                used_page = page or url
+                break
         if not local:
             print("  download failed")
             continue
-        host = urlparse(page or url).netloc.replace("www.", "")
-        credit = f"Open Graph image ({host})" if host else "Open Graph image"
-        n = update_pair(path.stem, local, credit, url)
+        host = urlparse(used_page).netloc.replace("www.", "")
+        credit = f"Event image ({host})" if host else "Event image"
+        n = update_pair(path.stem, local, credit, used_url)
         updated += n
         print(f"  saved {local} ({n} files)")
 

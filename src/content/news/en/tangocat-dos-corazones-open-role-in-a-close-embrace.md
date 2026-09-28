@@ -17,6 +17,9 @@ country: "Almanya"
 city: "Saarbrücken"
 eventStart: 2026-12-04
 eventEnd: 2026-12-06
+image: "/events/tangocat-dos-corazones-open-role-in-a-close-embrace.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.tangokombinat.de/wp-content/uploads/2019/04/cropped-schriftzug_kombi_rot-Kopie-32x32.jpg
 ---
 
 Dos Corazones - Open Role in a Close Embrace is listed (December 4-6 2026) in Germany, Saarbrücken. This is a date and place summary, not a copy of the source programme.

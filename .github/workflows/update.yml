@@ -49,6 +49,7 @@ jobs:
           python agentic-python/ingest_tmd.py || true
           python agentic-python/ingest_instagram.py || true
           python agentic-python/publish_instagram.py || true
+          python agentic-python/collect_images.py --limit 60 || true
 
       - name: Build
         run: npm run build

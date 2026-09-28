@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Sant'Ilario d'Enza"
 eventStart: 2026-10-03
 eventEnd: 2026-10-04
+image: "/events/tangocat-emilia-tango-weekend.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://vogliaditango.it/image/logoW.png
 ---
 
 Emilia Tango Weekend, Ekim 3-4 2026 tarihleri arasında Italy, Sant'Ilario d'Enza konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

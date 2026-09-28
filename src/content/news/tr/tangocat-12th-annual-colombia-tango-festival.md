@@ -17,6 +17,9 @@ country: "Colombia"
 city: "Medellín"
 eventStart: 2026-10-26
 eventEnd: 2026-11-02
+image: "/events/tangocat-12th-annual-colombia-tango-festival.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.colombiatangofestival.com/images/Logo.png
 ---
 
 12th Annual Colombia Tango Festival, Ekim 26 - Kasım 2 2026 tarihleri arasında Colombia, Medellín konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

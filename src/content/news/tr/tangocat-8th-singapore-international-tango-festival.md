@@ -17,6 +17,9 @@ country: "Singapore"
 city: "Singapore"
 eventStart: 2026-10-01
 eventEnd: 2026-10-04
+image: "/events/tangocat-8th-singapore-international-tango-festival.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://sitf.sg/wp-content/uploads/2023/03/SITF-FULL-LOGO.png
 ---
 
 8th Singapore International Tango Festival, Ekim 1-4 2026 tarihleri arasında Singapore, Singapore konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

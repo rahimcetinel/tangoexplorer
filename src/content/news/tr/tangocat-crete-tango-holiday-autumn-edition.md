@@ -17,6 +17,9 @@ country: "Greece"
 city: "Myrthianos Plakias"
 eventStart: 2026-10-24
 eventEnd: 2026-11-07
+image: "/events/tangocat-crete-tango-holiday-autumn-edition.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://sutango.com/wp-content/uploads/cropped-SuTango_Logo_frei_2-removebg-preview.png
 ---
 
 Crete Tango Holiday Autumn Edition, Ekim 24 - Kasım 7 2026 tarihleri arasında Greece, Myrthianos Plakias konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Bologna"
 eventStart: 2026-12-30
 eventEnd: 2027-01-02
+image: "/events/tangocat-bologna-tango-encuentro.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.serendipityart.it/wp/wp-content/uploads/2015/08/serendipity_ico.png
 ---
 
 Bologna Tango Encuentro is listed (December 30 - January 2 , 2027) in Italy, Bologna. This is a date and place summary, not a copy of the source programme.

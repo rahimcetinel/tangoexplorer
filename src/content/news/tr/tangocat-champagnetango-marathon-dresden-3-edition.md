@@ -17,6 +17,9 @@ country: "Almanya"
 city: "Dresden"
 eventStart: 2027-03-12
 eventEnd: 2027-03-14
+image: "/events/tangocat-champagnetango-marathon-dresden-3-edition.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://static.wixstatic.com/media/31d8cb_f7460478c59d4f39bcc682b20dfca38f%7Emv2.jpeg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/31d8cb_f7460478c59d4f39bcc682b20dfca38f%7Emv2.jpeg
 ---
 
 Champagnetango Marathon Dresden 3. Edition, Mart 12-14, 2027 tarihleri arasında Germany, Dresden konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

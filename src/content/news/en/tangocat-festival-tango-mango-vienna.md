@@ -17,6 +17,9 @@ country: "Austria"
 city: "Vienna"
 eventStart: 2027-04-22
 eventEnd: 2027-04-25
+image: "/events/tangocat-festival-tango-mango-vienna.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://festival.tangomango.at/images/vienna-tango-mango-meta.jpg
 ---
 
 Festival Tango Mango Vienna is listed (April 22-25, 2027) in Austria, Vienna. This is a date and place summary, not a copy of the source programme.

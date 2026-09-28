@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Monza"
 eventStart: 2027-03-05
 eventEnd: 2027-03-07
+image: "/events/tangocat-empathic-tango.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.empathictango.it/IT/wp-content/uploads/2021/09/cropped-LogoEmpathicTango.png
 ---
 
 Empathic Tango is listed (March 5-7, 2027) in Italy, Monza. This is a date and place summary, not a copy of the source programme.

@@ -17,6 +17,9 @@ country: "Fransa"
 city: "Rémalard-en-Perche"
 eventStart: 2026-09-19
 eventEnd: 2026-09-20
+image: "/events/tangocat-festival-de-tango-argentin-buenos-aires-en-perche.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.buenosairesenperche.com/wp-content/uploads/2022/06/LogoBAP_Header_05.png
 ---
 
 Festival de Tango Argentin Buenos Aires en Perche is listed (September 19-20 2026) in France, Rémalard-en-Perche. This is a date and place summary, not a copy of the source programme.

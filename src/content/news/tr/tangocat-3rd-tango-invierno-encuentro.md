@@ -17,6 +17,9 @@ country: "Greece"
 city: "Kavala"
 eventStart: 2027-02-04
 eventEnd: 2027-02-07
+image: "/events/tangocat-3rd-tango-invierno-encuentro.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://files.websitestool.com/a8/ee/a8ee17b1-2886-4164-b871-4786965e0405.jpg
 ---
 
 3rd Tango Invierno Encuentro, Şubat 4-7, 2027 tarihleri arasında Greece, Kavala konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

@@ -17,6 +17,9 @@ country: "Vietnam"
 city: "Hanoi"
 eventStart: 2027-03-21
 eventEnd: 2027-04-12
+image: "/events/tangocat-discover-vietnam-cambodia-culture-and-tango-marathon.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://tangoinvietnam.wordpress.com/wp-content/uploads/2017/05/img_1510.jpg?w=640
 ---
 
 Discover Vietnam & Cambodia Culture And Tango Marathon is listed (March 21 - April 12, 2027) in Vietnam, Hanoi. This is a date and place summary, not a copy of the source programme.

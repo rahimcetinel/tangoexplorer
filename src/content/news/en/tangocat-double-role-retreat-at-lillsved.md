@@ -17,6 +17,9 @@ country: "Sweden"
 city: "Lillsved"
 eventStart: 2026-10-02
 eventEnd: 2026-10-04
+image: "/events/tangocat-double-role-retreat-at-lillsved.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://tangoqueerer.se/wp-content/uploads/2024/01/20210903_152336-1024x768.jpg
 ---
 
 Double role retreat at Lillsved is listed (October 2-4 2026) in Sweden, Lillsved. This is a date and place summary, not a copy of the source programme.

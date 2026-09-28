@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Turin"
 eventStart: 2027-03-25
 eventEnd: 2027-03-29
+image: "/events/tangocat-25-tango-torino-festival.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://scontent.fsaw2-3.fna.fbcdn.net/v/t39.30808-1/492697439_1137892755019202_1488161071491798438_n.jpg?stp=dst-jpg_tt6&cstp=mx1366x1365&ctp=s720x720&_nc_cat=106&ccb=1-7&_nc_sid=3ab345&_nc_ohc=pvFrvh11em0Q7kNvwFMBkhV&_nc_oc=AdownSSKxnO9sz0rYurjgBA76WZrSaiW3H2XgDLwYpLgBDUsPHu8dn7shu03EITrghM&_nc_zt=24&_nc_ht=scontent.fsaw2-3.fna&_nc_gid=jKm-grRd7UlSrxqyti7-AA&_nc_ss=7b20f&oh=00_AQPVmEymib23ZVMkIvriJS4XqKRUVX6Dcf5sQaB3M4-Qfw&oe=6AC00A30
 ---
 
 25 Tango Torino Festival, Mart 25-29, 2027 tarihleri arasında Italy, Turin konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

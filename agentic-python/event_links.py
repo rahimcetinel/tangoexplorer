@@ -16,6 +16,18 @@ MAX_IMAGE = 2_000_000
 SKIP_FB = ("sharer", "share.php", "dialog/", "plugins/", "tr?")
 SKIP_IG = ("share", "/p/", "/reel/", "/stories/")
 LOGO_HINT = re.compile(r"logo|brand|og.?image", re.I)
+GENERIC_HOSTS = (
+    "facebook.com",
+    "instagram.com",
+    "twitter.com",
+    "x.com",
+    "youtube.com",
+    "youtu.be",
+    "google.com",
+    "linktr.ee",
+    "t.me",
+    "wa.me",
+)
 MONTHS_TR = (
     ("January", "Ocak"),
     ("February", "Şubat"),
@@ -144,15 +156,14 @@ def pick_instagram(urls: list[str], token: str = "") -> str | None:
     return fallback if not token else None
 
 
-def pick_image(base: str, parser: PageParser) -> str | None:
+def pick_image_candidates(base: str, parser: PageParser) -> list[str]:
     parsed = urlparse(base)
     host = parsed.netloc.lower().replace("www.", "")
     origin = f"{parsed.scheme}://{parsed.netloc}"
+    generic_host = any(hint in host for hint in GENERIC_HOSTS)
     candidates: list[str] = []
     if parser.og_image:
         candidates.append(parser.og_image)
-    for guess in ("/images/logo.webp", "/images/logo.png", "/images/logo.jpg"):
-        candidates.append(origin + guess)
     for src in parser.images:
         if LOGO_HINT.search(src):
             candidates.append(src)
@@ -162,6 +173,9 @@ def pick_image(base: str, parser: PageParser) -> str | None:
             if "icon" in low or "sprite" in low:
                 continue
             candidates.append(src)
+    if not generic_host:
+        for guess in ("/images/logo.webp", "/images/logo.png", "/images/logo.jpg"):
+            candidates.append(origin + guess)
     same: list[str] = []
     other: list[str] = []
     for src in candidates:
@@ -170,7 +184,26 @@ def pick_image(base: str, parser: PageParser) -> str | None:
             continue
         src_host = urlparse(abs_url).netloc.lower().replace("www.", "")
         (same if src_host == host else other).append(abs_url)
-    return (same or other or [None])[0]
+    return same + other
+
+
+def pick_image(base: str, parser: PageParser) -> str | None:
+    candidates = pick_image_candidates(base, parser)
+    return candidates[0] if candidates else None
+
+
+def scrape_page_images(url: str) -> list[str]:
+    try:
+        final, data, _ctype = request(url, max_bytes=MAX_HTML)
+    except Exception:
+        return []
+    html = data.decode("utf-8", errors="replace")
+    parser = PageParser()
+    try:
+        parser.feed(html)
+    except Exception:
+        return []
+    return pick_image_candidates(final, parser)
 
 
 def scrape_event_site(website: str) -> dict[str, str]:

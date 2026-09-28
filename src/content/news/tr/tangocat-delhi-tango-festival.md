@@ -17,6 +17,9 @@ country: "India"
 city: "New Delhi"
 eventStart: 2026-09-24
 eventEnd: 2026-09-27
+image: "/events/tangocat-delhi-tango-festival.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://delhitangofestival.in/img/tangologo.png
 ---
 
 Delhi Tango Festival, Eylül 24-27 2026 tarihleri arasında India, New Delhi konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

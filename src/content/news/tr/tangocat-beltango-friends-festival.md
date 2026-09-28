@@ -17,6 +17,9 @@ country: "Serbia"
 city: "Belgrade"
 eventStart: 2026-09-16
 eventEnd: 2026-09-20
+image: "/events/tangocat-beltango-friends-festival.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.beltango.com/images/beltango-logo-150.png
 ---
 
 Beltango & Friends Festival, Eylül 16-20 2026 tarihleri arasında Serbia, Belgrade konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

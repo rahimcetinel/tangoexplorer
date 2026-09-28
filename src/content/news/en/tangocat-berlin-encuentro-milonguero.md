@@ -17,6 +17,9 @@ country: "Almanya"
 city: "Berlin"
 eventStart: 2026-11-12
 eventEnd: 2026-11-15
+image: "/events/tangocat-berlin-encuentro-milonguero.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://berlinencuentromilonguero.com/wp-content/uploads/2026/05/BEM-Logo.png
 ---
 
 Berlin Encuentro Milonguero is listed (November 12-15 2026) in Germany, Berlin. This is a date and place summary, not a copy of the source programme.

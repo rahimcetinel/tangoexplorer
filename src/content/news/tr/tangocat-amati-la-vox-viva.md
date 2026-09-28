@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Castel San Pietro Terme"
 eventStart: 2026-09-26
 eventEnd: 2026-09-26
+image: "/events/tangocat-amati-la-vox-viva.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.serendipityart.it/wp/wp-content/uploads/2015/08/serendipity_ico.png
 ---
 
 Amati La Vox Viva, Eylül 26 2026 tarihleri arasında Italy, Castel San Pietro Terme konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

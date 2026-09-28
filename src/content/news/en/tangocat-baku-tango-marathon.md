@@ -17,6 +17,9 @@ country: "Azerbaijan"
 city: "Baku"
 eventStart: 2026-10-09
 eventEnd: 2026-10-11
+image: "/events/tangocat-baku-tango-marathon.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.bakutangomarathon.com/api/images/section/logo_image
 ---
 
 Baku Tango Marathon is listed (October 9-11 2026) in Azerbaijan, Baku. This is a date and place summary, not a copy of the source programme.

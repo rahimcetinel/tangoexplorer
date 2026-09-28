@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Bergamo"
 eventStart: 2027-02-26
 eventEnd: 2027-02-28
+image: "/events/tangocat-bergamo-festango.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://bergamofestango.com/wp-content/uploads/2020/02/logo-bergamofestango-white.png
 ---
 
 Bergamo Festango, Şubat 26-28, 2027 tarihleri arasında Italy, Bergamo konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.
