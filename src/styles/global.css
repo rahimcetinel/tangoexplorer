@@ -1682,9 +1682,9 @@ body.detail-open {
   border-radius: 999px;
   padding: 2px 9px;
   white-space: nowrap;
-  background: color-mix(in srgb, var(--cc, var(--color-indigo)) 14%, transparent);
-  color: var(--cc, var(--color-indigo));
-  border: 1px solid color-mix(in srgb, var(--cc, var(--color-indigo)) 45%, transparent);
+  background: var(--cc, var(--color-indigo));
+  color: #fff;
+  border: 1px solid var(--cc, var(--color-indigo));
 }
 
 .app-mitem-price {

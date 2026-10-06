@@ -23,7 +23,7 @@ function distinctPalette(count: number): string[] {
   const step = 360 / Math.max(count, 1);
   for (let index = 0; index < count; index += 1) {
     const hue = Math.round((index * step + 40) % 360);
-    colors.push(`hsl(${hue}, 60%, 40%)`);
+    colors.push(`hsl(${hue}, 62%, 38%)`);
   }
   return colors;
 }
