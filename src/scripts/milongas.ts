@@ -254,6 +254,8 @@ export function initMilongas() {
     panel?.classList.remove('is-open');
     if (backdrop) backdrop.hidden = true;
     document.body.classList.remove('detail-open');
+    selected = null;
+    renderDetail();
   }
 
   function fullRender() {

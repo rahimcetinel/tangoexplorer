@@ -43,6 +43,11 @@
 - Kaynak: **Tangoverse** (`ingest_tangoverse.py`). Public Supabase REST (anon key JS bundle’dan otomatik bulunur), salt-okuma. `--images` mevcut görselsiz kayıtların kapaklarını eşleştirip indirir (sıkı eşleştirme: başlık token’ı veya aynı gün; yanlış görsel riskini düşürür). `--publish` yalnızca üst düzey `festival/marathon/weekend/milonga` kayıtlarını ekler (alt etkinlikler `parent_event_id` ile atlanır), mevcut içerikle dedupe eder. Atıf: `source: Tangoverse` + etkinlik sayfası linki; görselde `imageCredit: Tangoverse`. `sourceKey: tangoverse` (şema + `sourceLabels`).
 - Kaynak: **TMD / Tango Marathon Directory** (`ingest_tmd.py`). Public WordPress REST (`/wp-json/tmd/v3/events`, `start_date_min` + `meta_fields=end_date,website` + `include_taxonomies`), salt-okuma; robots sinyali `use=reference` ile uyumlu, atıf “TMD”. `--enrich` mevcut kayıtlara **edisyon** ve **kayıt açılışı** (`registrationStart`) + eksik `eventWebsite` ekler; `--publish` yeni maraton/festival/encuentro ekler; görseller etkinlik sayfasından `wp-post-image` kazınarak alınır. Şemada yeni alanlar: `edition`, `registrationStart`; `sourceKey: tmd`.
 
+## Test suite
+
+- Vitrin Playwright testleri `e2e/` altında. Varsayılan hedef `https://tangoexplorer.com`; yerel için `BASE_URL`. `npm run test:e2e`. 2026-10-06'da yazıldı, çalıştırılmadı.
+- Kapsam: sayfalar, menü, filtre, arama, zaman çizelgesi, detay paneli, milonga, dil, 404, mobil ve JS kapalı. Ingest/publish yok.
+
 ## Günlük döngü
 
 ```

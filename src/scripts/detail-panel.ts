@@ -104,7 +104,7 @@ export function initDetailPanel() {
     } catch {
       skeleton?.setAttribute('hidden', '');
       if (errorLink) {
-        errorLink.href = url;
+        errorLink.setAttribute('href', new URL(url, window.location.origin).pathname);
       }
       errorBox?.removeAttribute('hidden');
       setOpen(true);

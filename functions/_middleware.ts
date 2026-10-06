@@ -18,7 +18,15 @@ const SAFE_METHODS = new Set(['GET', 'HEAD', 'OPTIONS']);
 
 export const onRequest: PagesFunction = async (context) => {
   const { request, next } = context;
-  const { pathname } = new URL(request.url);
+  const url = new URL(request.url);
+
+  // Canonical host: www → apex (Pages _redirects cannot do host-based rules).
+  if (url.hostname.startsWith('www.')) {
+    url.hostname = url.hostname.slice(4);
+    return Response.redirect(url.toString(), 301);
+  }
+
+  const { pathname } = url;
 
   // Never touch Cloudflare-internal routes (analytics beacon etc.).
   if (pathname.startsWith('/cdn-cgi/')) {

@@ -15,7 +15,8 @@
     "ingest-tangoverse": "python agentic-python/ingest_tangoverse.py",
     "ingest-tmd": "python agentic-python/ingest_tmd.py",
     "publish-news": "python agentic-python/publish.py",
-    "deploy": "astro build && wrangler pages deploy dist --project-name tango-news"
+    "deploy": "astro build && wrangler pages deploy dist --project-name tango-news",
+    "test:e2e": "playwright test -c e2e/playwright.config.ts"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
@@ -29,6 +30,7 @@
     "esbuild": true
   },
   "devDependencies": {
+    "@playwright/test": "^1.56.1",
     "wrangler": "^4.129.0"
   }
 }

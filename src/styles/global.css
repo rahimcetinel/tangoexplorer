@@ -300,7 +300,7 @@ body:has(.app-shell) {
   right: 0;
   top: var(--head-h, 64px);
   max-height: calc(100dvh - var(--head-h, 64px));
-  z-index: 45;
+  z-index: 60;
   background: var(--color-paper);
   border-bottom: 1px solid var(--color-rule);
   overflow: auto;
@@ -325,7 +325,7 @@ body:has(.app-shell) {
   position: fixed;
   inset: var(--head-h, 64px) 0 0 0;
   background: color-mix(in srgb, var(--color-ink) 35%, transparent);
-  z-index: 44;
+  z-index: 55;
 }
 
 .app-acc-head {
@@ -798,6 +798,8 @@ body:has(.app-shell) {
   min-height: 0;
   overflow: auto;
   padding: 18px 24px 40px;
+  position: relative;
+  z-index: 50;
 }
 
 .app-results-count {
@@ -1121,14 +1123,8 @@ body:has(.app-shell) {
   cursor: pointer;
 }
 
-/* The detail panel is a permanent column on desktop; the close affordance
-   only applies to the overlay drawer below 1280px. */
-@media (min-width: 1280px) {
-  .app-detail-close {
-    display: none;
-  }
-}
-
+/* The close affordance is shown wherever a closable detail exists (drawer or
+   the milongas column); the article-page detail column has no close button. */
 .app-detail-backdrop {
   display: none;
 }
@@ -1152,7 +1148,7 @@ body:has(.app-shell) {
   position: fixed;
   inset: 0 0 0 auto;
   width: min(560px, 100%);
-  z-index: 50;
+  z-index: 51;
   box-shadow: var(--shadow-panel);
   animation: panel-in 200ms ease;
 }

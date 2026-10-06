@@ -204,17 +204,14 @@ function initJumpTo() {
   });
 
   board.addEventListener('keydown', (event) => {
+    if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') {
+      return;
+    }
+    event.preventDefault();
     if (board.dataset.view === 'single') {
       return;
     }
-    if (event.key === 'ArrowDown') {
-      event.preventDefault();
-      board.scrollBy({ top: 320, behavior: 'smooth' });
-    }
-    if (event.key === 'ArrowUp') {
-      event.preventDefault();
-      board.scrollBy({ top: -320, behavior: 'smooth' });
-    }
+    board.scrollBy({ top: event.key === 'ArrowDown' ? 320 : -320, behavior: 'smooth' });
   });
 
   setActive('');
