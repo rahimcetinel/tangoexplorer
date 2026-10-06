@@ -1822,10 +1822,10 @@ body.detail-open {
   border-color: var(--color-teal);
 }
 
-.app-chip:hover,
+.app-chip:not(.is-active):hover,
 .app-select-wrap select:hover,
-.app-mchip:hover,
-.app-mtab:hover {
+.app-mchip:not(.is-active):hover,
+.app-mtab:not(.is-active):hover {
   border-color: var(--color-indigo);
   color: var(--color-indigo);
 }
