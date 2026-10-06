@@ -18,6 +18,20 @@ function escapeHtml(value: string): string {
     .replaceAll('"', '&quot;');
 }
 
+const GOLDEN_ANGLE = 137.508;
+
+function distinctPalette(count: number): string[] {
+  if (count <= PALETTE.length) {
+    return PALETTE.slice(0, count);
+  }
+  const colors: string[] = [];
+  for (let index = 0; index < count; index += 1) {
+    const hue = Math.round((index * GOLDEN_ANGLE) % 360);
+    colors.push(`hsl(${hue}, 60%, 38%)`);
+  }
+  return colors;
+}
+
 export function initMilongas() {
   const shell = document.querySelector<HTMLElement>('[data-app-shell]');
   const listEl = document.querySelector<HTMLElement>('[data-milonga-list]');
@@ -161,10 +175,10 @@ export function initMilongas() {
       (meta ? `<span class="app-mitem-meta">${escapeHtml(meta)}</span>` : '') +
       `</span>` +
       `<span class="app-mitem-tags">` +
-      `<span class="app-mitem-type is-${item.type}">${typeLabel}</span>` +
       (item.city
         ? `<span class="app-mitem-city" style="--cc:${cityColors.get(item.city) || ''}">${escapeHtml(item.city)}</span>`
         : '') +
+      `<span class="app-mitem-type is-${item.type}">${typeLabel}</span>` +
       (item.price ? `<span class="app-mitem-price">${escapeHtml(item.price)}</span>` : '') +
       `</span>` +
       `</button>`
@@ -173,7 +187,9 @@ export function initMilongas() {
 
   function renderList() {
     const filtered = items.filter(matches);
-    cityColors = new Map(citiesForRegion().map((city, index) => [city, PALETTE[index % PALETTE.length]]));
+    const regionCities = citiesForRegion();
+    const palette = distinctPalette(regionCities.length);
+    cityColors = new Map(regionCities.map((city, index) => [city, palette[index]!]));
     if (emptyEl) emptyEl.hidden = filtered.length > 0;
     const groups: { day: string; rows: Milonga[] }[] = [];
     if (filters.day) {
