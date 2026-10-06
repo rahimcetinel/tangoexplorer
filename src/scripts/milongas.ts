@@ -20,9 +20,11 @@ function escapeHtml(value: string): string {
 
 const GOLDEN_ANGLE = 137.508;
 
+const CITY_PALETTE = PALETTE.filter((color) => color !== '#0f766e' && color !== '#c2410c');
+
 function distinctPalette(count: number): string[] {
-  if (count <= PALETTE.length) {
-    return PALETTE.slice(0, count);
+  if (count <= CITY_PALETTE.length) {
+    return CITY_PALETTE.slice(0, count);
   }
   const colors: string[] = [];
   for (let index = 0; index < count; index += 1) {

@@ -1664,6 +1664,18 @@ body.detail-open {
   background: transparent;
 }
 
+.app-mitem-type.is-milonga {
+  color: var(--color-teal);
+  border-color: color-mix(in srgb, var(--color-teal) 30%, transparent);
+  background: transparent;
+}
+
+.app-mitem-type.is-practica {
+  color: var(--color-orange);
+  border-color: color-mix(in srgb, var(--color-orange) 30%, transparent);
+  background: transparent;
+}
+
 .app-mitem-city {
   font-size: 0.66rem;
   font-weight: 800;
