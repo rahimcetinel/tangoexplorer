@@ -1,5 +1,4 @@
 import { DAYS_ORDER, regionLabel, type HoyData, type Milonga } from '../lib/hoy';
-import { PALETTE } from '../lib/country-color';
 import { ui, weekdaysLong, weekdaysShort, type Locale } from '../lib/i18n';
 
 type Filters = { region: string; city: string; day: string; type: string; q: string };
@@ -18,18 +17,13 @@ function escapeHtml(value: string): string {
     .replaceAll('"', '&quot;');
 }
 
-const GOLDEN_ANGLE = 137.508;
-
-const CITY_PALETTE = PALETTE.filter((color) => color !== '#0f766e' && color !== '#c2410c');
-
+// Evenly spaced hues so every city in a region gets a maximally distinct tone.
 function distinctPalette(count: number): string[] {
-  if (count <= CITY_PALETTE.length) {
-    return CITY_PALETTE.slice(0, count);
-  }
   const colors: string[] = [];
+  const step = 360 / Math.max(count, 1);
   for (let index = 0; index < count; index += 1) {
-    const hue = Math.round((index * GOLDEN_ANGLE) % 360);
-    colors.push(`hsl(${hue}, 60%, 38%)`);
+    const hue = Math.round((index * step + 40) % 360);
+    colors.push(`hsl(${hue}, 60%, 40%)`);
   }
   return colors;
 }
