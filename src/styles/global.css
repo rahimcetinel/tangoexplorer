@@ -39,17 +39,17 @@
 @theme {
   --font-display: "Fraunces", "Times New Roman", serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-cream: #eef1f4;
+  --color-cream: #faf6f2;
   --color-paper: #ffffff;
-  --color-ink: #0f1826;
-  --color-ink-soft: #4a5768;
-  --color-burgundy: #1c3a5e;
-  --color-burgundy-dark: #142a45;
-  --color-rule: #d3dae1;
-  --color-gold: #8a6a33;
-  --color-teal: #0f766e;
-  --color-orange: #c2410c;
-  --color-indigo: #4338ca;
+  --color-ink: #1e1a17;
+  --color-ink-soft: #6b5e54;
+  --color-burgundy: #a83250;
+  --color-burgundy-dark: #8a2640;
+  --color-rule: #e4d8cc;
+  --color-gold: #9a7230;
+  --color-teal: #1a8a7a;
+  --color-orange: #d15a28;
+  --color-indigo: #5a2d82;
 }
 
 :root {
@@ -68,10 +68,10 @@
   --radius-sm: 7px;
   --radius-md: 12px;
   --radius-pill: 999px;
-  --shadow-card: 0 10px 24px rgba(28, 58, 94, 0.16);
-  --shadow-panel: -12px 0 32px rgba(15, 24, 38, 0.2);
+  --shadow-card: 0 10px 24px rgba(90, 45, 130, 0.14);
+  --shadow-panel: -12px 0 32px rgba(30, 26, 23, 0.2);
   --surface: var(--color-paper);
-  --surface-muted: #e2e7ec;
+  --surface-muted: #f0e8de;
   --line: var(--color-rule);
 }
 
@@ -304,7 +304,7 @@ body:has(.app-shell) {
   background: var(--color-paper);
   border-bottom: 1px solid var(--color-rule);
   overflow: auto;
-  box-shadow: 0 24px 48px rgba(15, 24, 38, 0.22);
+  box-shadow: 0 24px 48px rgba(30, 26, 23, 0.22);
 }
 
 .app-menu-inner {
@@ -631,7 +631,7 @@ body:has(.app-shell) {
   background: var(--color-paper);
   border: 1px solid var(--color-rule);
   border-radius: 12px;
-  box-shadow: 0 18px 44px rgba(15, 24, 38, 0.22);
+  box-shadow: 0 18px 44px rgba(30, 26, 23, 0.22);
   padding: 6px;
   z-index: 60;
 }
