@@ -75,6 +75,13 @@ export function currentMonthKey(now: Date = new Date()): string {
   return `${now.getFullYear()}-${month}`;
 }
 
+// Only the current month and later, so the board never shows a stale month
+// group before "today" (kept consistent with the month ribbon).
+export function upcomingMonths(posts: NewsEntry[], locale: Locale, now: Date = new Date()): MonthColumn[] {
+  const current = monthKey(now);
+  return groupByMonth(posts, locale).filter((month) => month.key >= current);
+}
+
 export function eagerMonthKeys(selected?: NewsEntry, now: Date = new Date()): string[] {
   const keys = new Set([currentMonthKey(now)]);
   if (selected) {

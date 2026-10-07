@@ -15,7 +15,7 @@ import {
   type Category,
   type Locale,
 } from '../lib/i18n';
-import { eagerMonthKeys, groupByMonth } from '../lib/timeline';
+import { eagerMonthKeys, upcomingMonths } from '../lib/timeline';
 
 interface Props {
   locale: Locale;
@@ -27,7 +27,7 @@ const copy = ui[locale];
 const label = categoryLabels[locale][category];
 const allPosts = await getNews(locale);
 const posts = allPosts.filter((post) => post.data.category === category);
-const months = groupByMonth(posts, locale);
+const months = upcomingMonths(posts, locale);
 const selected = posts[0];
 const selectedSlug = selected ? newsSlug(selected) : undefined;
 const eagerMonths = eagerMonthKeys(selected);

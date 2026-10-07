@@ -8,7 +8,7 @@ import ArticleInner from './ArticleInner.astro';
 import EmptyState from './ui/EmptyState.astro';
 import { getNews, newsSlug } from '../lib/news';
 import { homePath, ui, type Locale } from '../lib/i18n';
-import { eagerMonthKeys, groupByMonth } from '../lib/timeline';
+import { eagerMonthKeys, upcomingMonths } from '../lib/timeline';
 import { regionLabels, regionOf, regionPath, type Region } from '../lib/regions';
 
 interface Props {
@@ -21,7 +21,7 @@ const copy = ui[locale];
 const label = regionLabels[locale][region];
 const allPosts = await getNews(locale);
 const posts = allPosts.filter((post) => regionOf(post.data.country) === region);
-const months = groupByMonth(posts, locale);
+const months = upcomingMonths(posts, locale);
 const selected = posts[0];
 const selectedSlug = selected ? newsSlug(selected) : undefined;
 const eagerMonths = eagerMonthKeys(selected);
