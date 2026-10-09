@@ -400,6 +400,15 @@ function initFilters(detail: DetailApi) {
     }
   }
 
+  // On overlay layouts the open menu covers the results, so close it after a
+  // filter change so the filtered list is actually visible; on desktop the menu
+  // is a dropdown and can stay open for multi-select.
+  function closeMenuOnOverlay() {
+    if (window.matchMedia('(max-width: 1279px)').matches) {
+      closeMenu();
+    }
+  }
+
   document.addEventListener('click', (event) => {
     const target = event.target;
     if (!(target instanceof Element)) {
@@ -409,6 +418,7 @@ function initFilters(detail: DetailApi) {
       event.preventDefault();
       filters = emptyFilters();
       void apply({ preview: true });
+      closeMenuOnOverlay();
       return;
     }
     const result = target.closest<HTMLElement>('[data-result]');
@@ -432,6 +442,7 @@ function initFilters(detail: DetailApi) {
     const value = chip.dataset.value || '';
     filters[key] = filters[key] === value ? '' : value;
     void apply({ preview: true });
+    closeMenuOnOverlay();
   });
 
   document.addEventListener('change', (event) => {
@@ -446,6 +457,7 @@ function initFilters(detail: DetailApi) {
     }
     syncControls();
     void apply({ preview: true });
+    closeMenuOnOverlay();
   });
 
   type Searcher = { input: HTMLInputElement; box: HTMLElement | null; items: IndexItem[]; active: number };

@@ -25,6 +25,7 @@ test('kind chip filters, toggles off, and can be cleared', async ({ page }, test
     await expect(page.locator('[data-detail-panel]')).toHaveClass(/is-open/);
   }
 
+  await openFilters(page);
   await chip.click();
   await expect.poll(() => searchParams(page).get('kind')).toBeNull();
   await expect(page.locator('.app-viewport')).toBeVisible();
@@ -49,10 +50,12 @@ test('country narrows cities and changing country drops the city', async ({ page
     nodes.map((node) => (node as HTMLOptionElement).value).filter(Boolean),
   );
   if (citiesForFirst.length > 0) {
+    await openFilters(page);
     await city.selectOption(citiesForFirst[0]!);
     await expect.poll(() => searchParams(page).get('city')).toBe(citiesForFirst[0]);
   }
 
+  await openFilters(page);
   await country.selectOption(second);
   await expect.poll(() => searchParams(page).get('country')).toBe(second);
   await expect.poll(() => searchParams(page).get('city')).toBeNull();
@@ -62,9 +65,11 @@ test('clear removes kind, country, city, and query', async ({ page }) => {
   await page.goto('/');
   await openFilters(page);
   await page.locator('[data-filter-select="country"]').selectOption({ index: 1 });
+  await openFilters(page);
   await page.locator('[data-filter-chip="kind"]').first().click();
   await expect.poll(() => searchParams(page).get('kind')).not.toBeNull();
 
+  await openFilters(page);
   await page.locator('[data-filter-clear]').click();
   await expect.poll(() => page.url()).not.toMatch(/[?&](kind|country|city|q)=/);
   await expect(page.locator('.app-viewport')).toBeVisible();
