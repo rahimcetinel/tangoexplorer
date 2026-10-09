@@ -17,6 +17,9 @@ country: "Fransa"
 city: "Dammartin-en-Goële"
 eventStart: 2026-10-23
 eventEnd: 2026-10-25
+image: "/events/tangocat-tango-retreat-im-schloss.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=28672982852304909
 ---
 
 Tango Retreat im Schloß, Ekim 23-25 2026 tarihleri arasında France, Dammartin-en-Goële konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

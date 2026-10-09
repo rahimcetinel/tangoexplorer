@@ -17,6 +17,9 @@ country: "Finland"
 city: "Helsinki"
 eventStart: 2027-02-25
 eventEnd: 2027-02-28
+image: "/events/tangocat-tango-frostbite.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=4591811184372868
 ---
 
 Tango Frostbite is listed (February 25-28, 2027) in Finland, Helsinki. This is a date and place summary, not a copy of the source programme.

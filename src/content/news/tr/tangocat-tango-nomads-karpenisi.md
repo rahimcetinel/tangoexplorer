@@ -17,6 +17,9 @@ country: "Greece"
 city: "Lefkada"
 eventStart: 2027-02-05
 eventEnd: 2027-02-07
+image: "/events/tangocat-tango-nomads-karpenisi.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://tangonomads.gr/assets/images/ogimage.jpg
 ---
 
 Tango Nomads Karpenisi, Şubat 5-7, 2027 tarihleri arasında Greece, Lefkada konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

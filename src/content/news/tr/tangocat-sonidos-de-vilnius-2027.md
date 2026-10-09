@@ -17,6 +17,9 @@ country: "Lithuania"
 city: "Vilnius"
 eventStart: 2027-04-29
 eventEnd: 2027-05-02
+image: "/events/tangocat-sonidos-de-vilnius-2027.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.metai.eu/wp-content/uploads/2025/12/IMG_0157-576x1024.jpeg
 ---
 
 Sonidos de Vilnius 2027, Nisan 29 - Mayıs 2, 2027 tarihleri arasında Lithuania, Vilnius konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

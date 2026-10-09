@@ -17,6 +17,9 @@ country: "Belgium"
 city: "Antwerp"
 eventStart: 2026-10-24
 eventEnd: 2026-10-24
+image: "/events/tangocat-tango-eterno-argentine-tango-show-antwerp.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://tango-eterno.com/images/tild6366-6165-4232-a565-303364646432.jpg
 ---
 
 Tango Eterno – Argentine Tango Show (Antwerp) is listed (October 24 2026) in Belgium, Antwerp. This is a date and place summary, not a copy of the source programme.

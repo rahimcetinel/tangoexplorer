@@ -17,6 +17,9 @@ country: "Latvia"
 city: "Riga"
 eventStart: 2027-05-21
 eventEnd: 2027-05-23
+image: "/events/tangocat-tango-wagner-house.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://tangowagnerhouse.lv/wp-content/uploads/2025/07/rsz_twh4-kompress1.jpg
 ---
 
 Tango Wagner House, Mayıs 21-23, 2027 tarihleri arasında Latvia, Riga konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

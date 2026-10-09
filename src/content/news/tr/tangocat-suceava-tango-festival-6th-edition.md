@@ -17,6 +17,9 @@ country: "Romania"
 city: "Șcheia"
 eventStart: 2027-02-26
 eventEnd: 2027-02-28
+image: "/events/tangocat-suceava-tango-festival-6th-edition.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1513650509807546
 ---
 
 SUCEAVA Tango Festival 6th Edition, Şubat 26-28, 2027 tarihleri arasında Romania, Șcheia konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

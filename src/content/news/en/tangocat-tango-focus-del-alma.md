@@ -17,6 +17,9 @@ country: "Romania"
 city: "Timișoara"
 eventStart: 2027-05-20
 eventEnd: 2027-05-23
+image: "/events/tangocat-tango-focus-del-alma.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1505087847778533
 ---
 
 Tango Focus Del Alma is listed (May 20-23, 2027) in Romania, Timișoara. This is a date and place summary, not a copy of the source programme.

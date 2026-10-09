@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Sopot"
 eventStart: 2027-05-06
 eventEnd: 2027-05-09
+image: "/events/tangocat-sopot-tango-maraton.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://sopottango.pl/_assets/images/2d0b56e7e51cf11036ad8734bdb67e2d.png
 ---
 
 Sopot Tango Maraton is listed (May 6-9, 2027) in Poland, Sopot. This is a date and place summary, not a copy of the source programme.

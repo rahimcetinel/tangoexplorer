@@ -17,6 +17,9 @@ country: "Netherlands"
 city: "Austerlitz"
 eventStart: 2026-12-29
 eventEnd: 2027-01-03
+image: "/events/tangocat-taboe-tango-camp-dance-into-the-new-year.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://tangoatelier.com/wp-content/uploads/2026/06/Hele-logo-tango-atelier.png
 ---
 
 Taboe Tango Camp: Dance Into The New Year, Aralık 29 - Ocak 3 , 2027 tarihleri arasında Netherlands, Austerlitz konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.
