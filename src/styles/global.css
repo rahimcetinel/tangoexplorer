@@ -921,6 +921,12 @@ body:has(.app-shell) {
   height: 100%;
 }
 
+/* Fallback art is slightly muted so it reads as a placeholder, not the real
+   event photo (roughly 10% desaturation + a touch brighter). */
+.app-ev-ph .app-ev-fallback {
+  filter: saturate(0.9) brightness(1.05);
+}
+
 .app-ev-ph .event-image-fallback {
   display: grid;
   place-items: center;
