@@ -3,10 +3,11 @@ import Card from './ui/Card.astro';
 import EventImage from './EventImage.astro';
 import { categoryLabels, kindLabels, newsPath, type Locale } from '../lib/i18n';
 import { newsSlug, type NewsEntry } from '../lib/news';
-import { dayLabel, initials } from '../lib/timeline';
+import { dayLabel } from '../lib/timeline';
 import { eventImage } from '../lib/images';
 import { regionLabels, regionOf } from '../lib/regions';
 import { countryColor } from '../lib/country-color';
+import { fallbackImage } from '../lib/fallback';
 
 interface Props {
   post: NewsEntry;
@@ -36,8 +37,12 @@ const color = countryColor(post.data.country);
   data-region={region ?? ''}
 >
   <a href={href} data-detail-link>
-    <div class:list={['app-ev-ph', !meta && 'noimg']} data-initials={initials(post.data.title)}>
-      <EventImage src={post.data.image} alt="" initialsFrom={post.data.title} sizes="252px" />
+    <div class="app-ev-ph">
+      {meta ? (
+        <EventImage src={post.data.image} alt="" initialsFrom={post.data.title} sizes="252px" />
+      ) : (
+        <img class="event-image app-ev-fallback" src={fallbackImage(slug)} alt="" loading="lazy" decoding="async" />
+      )}
       {day && <span class="app-ev-day">{day}</span>}
     </div>
     <div class="app-ev-in">
