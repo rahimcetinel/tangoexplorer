@@ -1,6 +1,7 @@
 ---
 import Card from './ui/Card.astro';
 import EventImage from './EventImage.astro';
+import { Picture } from 'astro:assets';
 import { categoryLabels, kindLabels, newsPath, type Locale } from '../lib/i18n';
 import { newsSlug, type NewsEntry } from '../lib/news';
 import { dayLabel } from '../lib/timeline';
@@ -41,7 +42,16 @@ const color = countryColor(post.data.country);
       {meta ? (
         <EventImage src={post.data.image} alt="" initialsFrom={post.data.title} sizes="252px" />
       ) : (
-        <img class="event-image app-ev-fallback" src={fallbackImage(slug)} alt="" loading="lazy" decoding="async" />
+        <Picture
+          src={fallbackImage(slug)}
+          alt=""
+          formats={['avif', 'webp']}
+          widths={[252, 408, 816]}
+          sizes="252px"
+          loading="lazy"
+          decoding="async"
+          class:list={['event-image', 'app-ev-fallback']}
+        />
       )}
       {day && <span class="app-ev-day">{day}</span>}
     </div>

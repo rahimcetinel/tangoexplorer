@@ -1,12 +1,18 @@
-const FALLBACK_COUNT = 100;
+import type { ImageMetadata } from 'astro';
 
-// Deterministic per-event pick so a card keeps the same fallback art on every
+const modules = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/fallbacks/*.{jpg,jpeg,png,webp,avif}',
+  { eager: true },
+);
+
+const entries = Object.entries(modules).sort(([a], [b]) => a.localeCompare(b));
+
+// Deterministic per-event pick so a card keeps the same fallback photo on every
 // render (avoids the "random image changes on reload" problem).
-export function fallbackImage(seed: string): string {
+export function fallbackImage(seed: string): ImageMetadata {
   let hash = 0;
   for (let index = 0; index < seed.length; index += 1) {
     hash = (hash * 31 + seed.charCodeAt(index)) >>> 0;
   }
-  const index = hash % FALLBACK_COUNT;
-  return `/fallbacks/fb-${String(index).padStart(3, '0')}.svg`;
+  return entries[hash % entries.length]![1].default;
 }
