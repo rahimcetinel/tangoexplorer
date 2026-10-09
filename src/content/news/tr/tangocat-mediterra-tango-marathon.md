@@ -17,6 +17,9 @@ country: "Türkiye"
 city: "Kemer"
 eventStart: 2026-10-14
 eventEnd: 2026-10-19
+image: "/events/tangocat-mediterra-tango-marathon.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://mediterratangomarathon.com/assets/img/mtmlogow.png
 ---
 
 Mediterra Tango Marathon, Ekim 14-19 2026 tarihleri arasında Türkiye, Kemer konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

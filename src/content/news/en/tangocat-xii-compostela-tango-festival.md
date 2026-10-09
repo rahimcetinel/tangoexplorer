@@ -17,6 +17,9 @@ country: "İspanya"
 city: "Santiago de Compostela"
 eventStart: 2027-02-12
 eventEnd: 2027-02-14
+image: "/events/tangocat-xii-compostela-tango-festival.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://compostelatangoclub.es/wp-content/uploads/elementor/thumbs/ctc-logo-qup4b708trqfr5pus2g4mp6rbjwidyhf5wjqlnypds.png
 ---
 
 XII Compostela Tango Festival is listed (February 12-14, 2027) in Spain, Santiago de Compostela. This is a date and place summary, not a copy of the source programme.

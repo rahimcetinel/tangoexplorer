@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Formia"
 eventStart: 2026-09-25
 eventEnd: 2026-09-27
+image: "/events/tangocat-festival-formianum-tango-argentino.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=833601879790722
 ---
 
 Festival formianum Tango Argentino is listed (September 25-27 2026) in Italy, Formia. This is a date and place summary, not a copy of the source programme.

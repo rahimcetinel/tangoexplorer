@@ -17,6 +17,9 @@ country: "Greece"
 city: "Neochori"
 eventStart: 2026-12-04
 eventEnd: 2026-12-06
+image: "/events/tangocat-9th-tango-escape-to-lake-plastiras.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=3113951055461312
 ---
 
 9th Tango Escape to Lake Plastiras, Aralık 4-6 2026 tarihleri arasında Greece, Neochori konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

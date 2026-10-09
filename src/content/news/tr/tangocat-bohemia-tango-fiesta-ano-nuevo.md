@@ -17,6 +17,9 @@ country: "İspanya"
 city: "Málaga"
 eventStart: 2026-12-31
 eventEnd: 2027-01-03
+image: "/events/tangocat-bohemia-tango-fiesta-ano-nuevo.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1319121886436409
 ---
 
 Bohemia Tango Fiesta - Año Nuevo, Aralık 31 - Ocak 3 , 2027 tarihleri arasında Spain, Málaga konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

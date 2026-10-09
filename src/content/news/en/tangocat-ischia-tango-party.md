@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Ischia"
 eventStart: 2027-04-30
 eventEnd: 2027-05-03
+image: "/events/tangocat-ischia-tango-party.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.tangoallegria.it/mobile/immagini/ischia_party_2024.jpg
 ---
 
 Ischia Tango Party is listed (April 30 - May 3, 2027) in Italy, Ischia. This is a date and place summary, not a copy of the source programme.

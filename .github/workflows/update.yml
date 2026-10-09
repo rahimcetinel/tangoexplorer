@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: update-site
@@ -50,6 +50,16 @@ jobs:
           python agentic-python/ingest_instagram.py || true
           python agentic-python/publish_instagram.py || true
           python agentic-python/collect_images.py --limit 60 || true
+
+      - name: Persist collected images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A src/assets/events src/content/news
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: backfill event images [skip ci]"
+            git push
+          fi
 
       - name: Build
         run: npm run build

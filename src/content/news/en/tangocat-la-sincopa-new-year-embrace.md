@@ -17,6 +17,9 @@ country: "Fransa"
 city: "Paris"
 eventStart: 2026-12-31
 eventEnd: 2027-01-02
+image: "/events/tangocat-la-sincopa-new-year-embrace.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1046415491647608
 ---
 
 La Sincopa New Year Embrace is listed (December 31 - January 2 , 2027) in France, Paris. This is a date and place summary, not a copy of the source programme.

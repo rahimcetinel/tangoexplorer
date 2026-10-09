@@ -17,6 +17,9 @@ country: "Estonia"
 city: "Tallinn"
 eventStart: 2026-09-10
 eventEnd: 2026-09-14
+image: "/events/tangocat-los-amigos-en-tallinn-tango-marathon-2026.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=2515893542214218
 ---
 
 Los Amigos en Tallinn Tango Marathon 2026 is listed (September 10-14 2026) in Estonia, Tallinn. This is a date and place summary, not a copy of the source programme.

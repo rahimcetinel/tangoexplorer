@@ -17,6 +17,9 @@ country: "Fransa"
 city: "Crespin"
 eventStart: 2027-08-22
 eventEnd: 2027-08-28
+image: "/events/tangocat-retraite-tango-emilie-pablo-tegli.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1498425965382075
 ---
 
 Retraite Tango Emilie & Pablo Tegli is listed (August 22-28, 2027) in France, Crespin. This is a date and place summary, not a copy of the source programme.

@@ -17,6 +17,9 @@ country: "İspanya"
 city: "Sencelles"
 eventStart: 2027-07-31
 eventEnd: 2027-08-07
+image: "/events/tangocat-tango-week-mallorca-2027.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=png/path/s9ac66636098ee8ad/image/i789a0f3b9835bdf8/version/1785173573/image.png
 ---
 
 Tango Week Mallorca 2027 is listed (July 31 - August 7, 2027) in Spain, Sencelles. This is a date and place summary, not a copy of the source programme.

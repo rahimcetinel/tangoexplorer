@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Verona"
 eventStart: 2027-01-22
 eventEnd: 2027-01-26
+image: "/events/tangocat-romeo-and-juliet-tango-marathon.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://static.wixstatic.com/media/2c5277_00bc5b26078445b3850ea435cef440ac~mv2.png/v1/fill/w_204,h_69,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Romeo%20juliet%20scritta_edited_edited.png
 ---
 
 Romeo and Juliet Tango Marathon is listed (January 22-26, 2027) in Italy, Verona. This is a date and place summary, not a copy of the source programme.

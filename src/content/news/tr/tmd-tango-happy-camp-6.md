@@ -17,6 +17,9 @@ country: "France"
 city: "Peymeinade"
 eventStart: 2027-07-02
 eventEnd: 2027-07-04
+image: "/events/tmd-tango-happy-camp-6.png"
+imageCredit: "Event image (tangomarathons.com)"
+imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2017/04/TMD-Logo-e1483284195338.png
 ---
 
 TANGO HAPPY CAMP 6, 2–4 Temmuz 2027 tarihlerinde France, Peymeinade konumunda planlanıyor. Bu metin kaynak sayfanın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

@@ -17,6 +17,9 @@ country: "Czechia"
 city: "Prague"
 eventStart: 2027-05-07
 eventEnd: 2027-05-09
+image: "/events/tangocat-nochero-soy.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://imgur.com/dFzdKKw.jpg
 ---
 
 Nochero soy, Mayıs 7-9, 2027 tarihleri arasında Czechia, Prague konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

@@ -17,6 +17,9 @@ country: "Almanya"
 city: "Wuppertal"
 eventStart: 2026-09-27
 eventEnd: 2026-09-27
+image: "/events/tangocat-xxvi-ball-tango-argentino-festival.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://tango-tango.de/images/design/Tangohund-Wuppertal.jpg
 ---
 
 XXVI Ball Tango Argentino & Festival, Eylül 27 2026 tarihleri arasında Germany, Wuppertal konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

@@ -17,6 +17,9 @@ country: "İspanya"
 city: "Seville"
 eventStart: 2027-01-07
 eventEnd: 2027-01-10
+image: "/events/tangocat-la-macarena-milonguero-encuentro-2027-5th-edition.webp"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://static.xx.fbcdn.net/rsrc.php/yd/r/LiSc0sYjn_n.webp
 ---
 
 La Macarena Milonguero Encuentro 2027 5th Edition is listed (January 7-10, 2027) in Spain, Seville. This is a date and place summary, not a copy of the source programme.

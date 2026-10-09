@@ -17,6 +17,9 @@ country: "Czechia"
 city: "Prague"
 eventStart: 2027-05-07
 eventEnd: 2027-05-09
+image: "/events/tangocat-nochero-soy.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://imgur.com/dFzdKKw.jpg
 ---
 
 Nochero soy is listed (May 7-9, 2027) in Czechia, Prague. This is a date and place summary, not a copy of the source programme.

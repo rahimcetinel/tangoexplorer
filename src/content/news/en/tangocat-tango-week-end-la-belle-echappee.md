@@ -17,6 +17,9 @@ country: "Fransa"
 city: "Paris"
 eventStart: 2026-10-30
 eventEnd: 2026-11-01
+image: "/events/tangocat-tango-week-end-la-belle-echappee.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=4466167463631388
 ---
 
 Tango Week-end La Belle Échappée is listed (October 30 - November 1 2026) in France, Paris. This is a date and place summary, not a copy of the source programme.

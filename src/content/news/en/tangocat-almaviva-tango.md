@@ -17,6 +17,9 @@ country: "Fransa"
 city: "Luxeuil-les-Bains"
 eventStart: 2027-05-14
 eventEnd: 2027-05-16
+image: "/events/tangocat-almaviva-tango.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://static.wixstatic.com/media/ffff49_cddd073aa7a94369a9c6278cb8109b43f002.jpg
 ---
 
 Almaviva Tango is listed (May 14-16, 2027) in France, Luxeuil-les-Bains. This is a date and place summary, not a copy of the source programme.

@@ -17,6 +17,9 @@ country: "Fransa"
 city: "Grimaud"
 eventStart: 2026-10-02
 eventEnd: 2026-10-04
+image: "/events/tangocat-la-parisiana-d-azur-week-end-tango.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1340916451480170
 ---
 
 La Parisiana D’Azur Week-End Tango is listed (October 2-4 2026) in France, Grimaud. This is a date and place summary, not a copy of the source programme.

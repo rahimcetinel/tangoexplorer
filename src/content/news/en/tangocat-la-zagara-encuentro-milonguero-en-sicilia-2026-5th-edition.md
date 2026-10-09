@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Milazzo"
 eventStart: 2026-10-22
 eventEnd: 2026-10-25
+image: "/events/tangocat-la-zagara-encuentro-milonguero-en-sicilia-2026-5th-edition.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=2707619956288252
 ---
 
 La Zagara Encuentro Milonguero en Sicilia 2026 (5th edition) is listed (October 22-25 2026) in Italy, Milazzo. This is a date and place summary, not a copy of the source programme.

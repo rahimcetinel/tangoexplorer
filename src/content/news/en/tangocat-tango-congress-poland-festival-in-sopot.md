@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Sopot"
 eventStart: 2026-10-15
 eventEnd: 2026-10-18
+image: "/events/tangocat-tango-congress-poland-festival-in-sopot.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1653155239358250
 ---
 
 Tango Congress Poland - Festival in Sopot is listed (October 15-18 2026) in Poland, Sopot. This is a date and place summary, not a copy of the source programme.

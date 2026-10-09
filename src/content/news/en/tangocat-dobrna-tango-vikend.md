@@ -17,6 +17,9 @@ country: "Slovenia"
 city: "Ljubljana"
 eventStart: 2026-10-23
 eventEnd: 2026-10-25
+image: "/events/tangocat-dobrna-tango-vikend.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=2063645787842035
 ---
 
 Dobrna Tango Vikend is listed (October 23-25 2026) in Slovenia, Ljubljana. This is a date and place summary, not a copy of the source programme.

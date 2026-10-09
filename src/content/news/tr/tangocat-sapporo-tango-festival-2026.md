@@ -17,6 +17,9 @@ country: "Japan"
 city: "Sapporo"
 eventStart: 2026-10-22
 eventEnd: 2026-10-25
+image: "/events/tangocat-sapporo-tango-festival-2026.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=978854984640108
 ---
 
 Sapporo Tango Festival 2026, Ekim 22-25 2026 tarihleri arasında Japan, Sapporo konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

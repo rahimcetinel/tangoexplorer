@@ -17,6 +17,9 @@ country: "İspanya"
 city: "Oiartzun"
 eventStart: 2026-10-16
 eventEnd: 2026-10-18
+image: "/events/tangocat-maratangueando.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1642467357042496
 ---
 
 Maratangueando, Ekim 16-18 2026 tarihleri arasında Spain, Oiartzun konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

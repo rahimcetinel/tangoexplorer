@@ -17,6 +17,9 @@ country: "Norway"
 city: "Oslo"
 eventStart: 2026-10-03
 eventEnd: 2026-10-04
+image: "/events/tangocat-tango-feast-from-the-depths-to-the-surface.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=937243105306956
 ---
 
 TANGO FEAST “From the depths to the surface”, Ekim 3-4 2026 tarihleri arasında Norway, Oslo konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

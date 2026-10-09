@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Biała Podlaska"
 eventStart: 2026-09-11
 eventEnd: 2026-09-13
+image: "/events/tangocat-milongi-babiego-lata-czwarta-edycja.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1172268111762076
 ---
 
 Milongi Babiego Lata - czwarta edycja is listed (September 11-13 2026) in Poland, Biała Podlaska. This is a date and place summary, not a copy of the source programme.

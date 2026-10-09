@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Warsaw"
 eventStart: 2027-01-22
 eventEnd: 2027-01-24
+image: "/events/tangocat-warsaw-tango-meeting-2027.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1635773671301121
 ---
 
 Warsaw Tango Meeting 2027 is listed (January 22-24, 2027) in Poland, Warsaw. This is a date and place summary, not a copy of the source programme.

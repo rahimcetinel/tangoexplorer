@@ -17,6 +17,9 @@ country: "Greece"
 city: "Alexandroupoli"
 eventStart: 2027-03-25
 eventEnd: 2027-03-28
+image: "/events/tangocat-nostos-tango-marathon-2027.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://greecetangoevents.gr/wp-content/uploads/2026/08/Nostos-logo-cover.jpg
 ---
 
 Nostos Tango Marathon 2027, Mart 25-28, 2027 tarihleri arasında Greece, Alexandroupoli konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

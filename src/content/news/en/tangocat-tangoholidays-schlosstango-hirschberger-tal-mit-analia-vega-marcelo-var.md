@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Piechowice"
 eventStart: 2027-05-05
 eventEnd: 2027-05-09
+image: "/events/tangocat-tangoholidays-schlosstango-hirschberger-tal-mit-analia-vega-marcelo-var.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1029163819776993
 ---
 
 Tangoholidays Schlosstango Hirschberger Tal mit Analia Vega & Marcelo Varela is listed (May 5-9, 2027) in Poland, Piechowice. This is a date and place summary, not a copy of the source programme.

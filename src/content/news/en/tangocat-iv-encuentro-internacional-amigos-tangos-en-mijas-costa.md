@@ -17,6 +17,9 @@ country: "İspanya"
 city: "Fuengirola"
 eventStart: 2026-10-08
 eventEnd: 2026-10-11
+image: "/events/tangocat-iv-encuentro-internacional-amigos-tangos-en-mijas-costa.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1825413261438120
 ---
 
 IV Encuentro Internacional Amigos Tangos en Mijas Costa is listed (October 8-11 2026) in Spain, Fuengirola. This is a date and place summary, not a copy of the source programme.

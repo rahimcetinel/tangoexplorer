@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Santa Margherita Ligure"
 eventStart: 2026-10-30
 eventEnd: 2026-11-01
+image: "/events/tangocat-amaradentro.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=891248630274654
 ---
 
 aMarAdentro, Ekim 30 - Kasım 1 2026 tarihleri arasında Italy, Santa Margherita Ligure konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Garda"
 eventStart: 2026-10-30
 eventEnd: 2026-11-01
+image: "/events/tangocat-festivalito-tango-e-relax-2026.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=3848700455265788
 ---
 
 Festivalito Tango e Relax 2026, Ekim 30 - Kasım 1 2026 tarihleri arasında Italy, Garda konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

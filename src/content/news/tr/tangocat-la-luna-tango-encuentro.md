@@ -17,6 +17,9 @@ country: "Vietnam"
 city: "Hanoi"
 eventStart: 2026-10-21
 eventEnd: 2026-10-25
+image: "/events/tangocat-la-luna-tango-encuentro.webp"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://static.xx.fbcdn.net/rsrc.php/yD/r/neYrqsILmPr.webp
 ---
 
 La Luna tango Encuentro, Ekim 21-25 2026 tarihleri arasında Vietnam, Hanoi konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

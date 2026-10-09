@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Kraków"
 eventStart: 2027-05-27
 eventEnd: 2027-05-31
+image: "/events/tangocat-krakus-aires-tango-festival.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://krakusaires.com/wp-content/uploads/2023/11/homepage-horizontal-wieliczka-1-edited.jpg
 ---
 
 Krakus Aires Tango Festival, Mayıs 27-31, 2027 tarihleri arasında Poland, Kraków konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

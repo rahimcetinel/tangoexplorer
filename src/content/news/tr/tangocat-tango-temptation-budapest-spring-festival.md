@@ -17,6 +17,9 @@ country: "Hungary"
 city: "Budapest"
 eventStart: 2027-04-22
 eventEnd: 2027-04-25
+image: "/events/tangocat-tango-temptation-budapest-spring-festival.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1821107815547542
 ---
 
 Tango Temptation Budapest Spring Festival, Nisan 22-25, 2027 tarihleri arasında Hungary, Budapest konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

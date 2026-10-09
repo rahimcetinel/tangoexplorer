@@ -17,6 +17,9 @@ country: "Fransa"
 city: "Rennes"
 eventStart: 2026-09-11
 eventEnd: 2026-09-12
+image: "/events/tangocat-milonga-de-rentree-a-braise-tango.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.braisetango.com/wp/wp-content/uploads/2024/09/019_16A-001-Grand.jpg
 ---
 
 Milonga de rentrée à Braise Tango is listed (September 11-12 2026) in France, Rennes. This is a date and place summary, not a copy of the source programme.

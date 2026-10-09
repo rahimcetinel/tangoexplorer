@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Warsaw"
 eventStart: 2027-03-04
 eventEnd: 2027-03-07
+image: "/events/tangocat-tango-weekend-4-tangos.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1007214348617793
 ---
 
 Tango Weekend 4 Tangos is listed (March 4-7, 2027) in Poland, Warsaw. This is a date and place summary, not a copy of the source programme.

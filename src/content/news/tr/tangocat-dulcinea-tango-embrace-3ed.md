@@ -17,6 +17,9 @@ country: "İspanya"
 city: "Ciudad Real"
 eventStart: 2026-10-01
 eventEnd: 2026-10-04
+image: "/events/tangocat-dulcinea-tango-embrace-3ed.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1418657209708417
 ---
 
 Dulcinea Tango Embrace 3ed, Ekim 1-4 2026 tarihleri arasında Spain, Ciudad Real konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

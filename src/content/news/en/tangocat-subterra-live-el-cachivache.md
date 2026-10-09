@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Kraków"
 eventStart: 2026-10-10
 eventEnd: 2026-10-11
+image: "/events/tangocat-subterra-live-el-cachivache.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1378500051121410
 ---
 
 Subterra Live El Cachivache is listed (October 10-11 2026) in Poland, Kraków. This is a date and place summary, not a copy of the source programme.

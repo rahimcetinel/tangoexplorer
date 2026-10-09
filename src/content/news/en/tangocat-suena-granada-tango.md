@@ -17,6 +17,9 @@ country: "İspanya"
 city: "Granada"
 eventStart: 2026-12-30
 eventEnd: 2027-01-03
+image: "/events/tangocat-suena-granada-tango.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://granadatango.com/wp-content/uploads/2026/01/Sobre-Mi-Granada-Tango-2026-1024x716.jpeg
 ---
 
 Sueña Granada Tango is listed (December 30 - January 3 , 2027) in Spain, Granada. This is a date and place summary, not a copy of the source programme.

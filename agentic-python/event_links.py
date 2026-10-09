@@ -51,10 +51,10 @@ def when_tr(text: str) -> str:
     return out
 
 
-def request(url: str, method: str = "GET", max_bytes: int | None = None) -> tuple[str, bytes, str]:
+def request(url: str, method: str = "GET", max_bytes: int | None = None, user_agent: str | None = None) -> tuple[str, bytes, str]:
     req = urllib.request.Request(
         url,
-        headers={"User-Agent": USER_AGENT, "Accept": "*/*"},
+        headers={"User-Agent": user_agent or USER_AGENT, "Accept": "*/*"},
         method=method,
     )
     with urllib.request.urlopen(req, timeout=25) as resp:
@@ -81,20 +81,94 @@ class PageParser(HTMLParser):
         super().__init__()
         self.hrefs: list[str] = []
         self.images: list[str] = []
-        self.og_image: str | None = None
+        self.meta_images: list[str] = []
+        self.jsonld: str = ""
+        self._in_jsonld = False
+
+    @property
+    def og_image(self) -> str | None:
+        return self.meta_images[0] if self.meta_images else None
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         d = {k: (v or "") for k, v in attrs}
         if tag == "a" and d.get("href"):
             self.hrefs.append(d["href"])
-        if tag == "img" and d.get("src"):
-            self.images.append(d["src"])
-        if tag == "link" and "icon" in d.get("rel", "").lower() and d.get("href"):
-            self.images.append(d["href"])
+        if tag == "img":
+            for key in ("src", "data-src", "data-lazy-src", "data-original"):
+                if d.get(key):
+                    self.images.append(d[key])
+            big = _largest_srcset(d.get("srcset", ""))
+            if big:
+                self.images.append(big)
+        if tag == "source":
+            big = _largest_srcset(d.get("srcset", ""))
+            if big:
+                self.images.append(big)
+        if tag == "link":
+            rel = d.get("rel", "").lower()
+            href = d.get("href", "")
+            if href and "icon" in rel:
+                self.images.append(href)
+            if href and "image_src" in rel:
+                self.meta_images.append(href)
         if tag == "meta":
             prop = (d.get("property") or d.get("name") or "").lower()
-            if prop in {"og:image", "twitter:image", "og:image:url"} and d.get("content"):
-                self.og_image = d["content"]
+            content = d.get("content") or ""
+            if (
+                prop
+                in {
+                    "og:image",
+                    "og:image:url",
+                    "og:image:secure_url",
+                    "twitter:image",
+                    "twitter:image:src",
+                }
+                and content
+            ):
+                self.meta_images.append(content)
+        if tag == "script" and "ld+json" in d.get("type", "").lower():
+            self._in_jsonld = True
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "script" and self._in_jsonld:
+            self._in_jsonld = False
+
+    def handle_data(self, data: str) -> None:
+        if self._in_jsonld:
+            self.jsonld += data
+
+
+def _largest_srcset(srcset: str) -> str:
+    best = ""
+    best_weight = -1.0
+    for part in srcset.split(","):
+        fields = part.strip().split()
+        if not fields:
+            continue
+        url = fields[0]
+        weight = 0.0
+        for flag in fields[1:]:
+            try:
+                if flag.endswith("w"):
+                    weight = float(flag[:-1])
+                elif flag.endswith("x"):
+                    weight = float(flag[:-1]) * 1000
+            except ValueError:
+                continue
+        if weight > best_weight:
+            best_weight = weight
+            best = url
+    return best
+
+
+JSONLD_IMAGE = re.compile(
+    r"https?://[^\"'\\\s<>]+?\.(?:png|jpe?g|webp|gif|avif)(?:\?[^\"'\\\s<>]*)?",
+    re.I,
+)
+
+
+def _jsonld_images(parser: PageParser) -> list[str]:
+    return JSONLD_IMAGE.findall(parser.jsonld) if parser.jsonld else []
 
 
 def _abs(base: str, href: str) -> str:
@@ -162,8 +236,8 @@ def pick_image_candidates(base: str, parser: PageParser) -> list[str]:
     origin = f"{parsed.scheme}://{parsed.netloc}"
     generic_host = any(hint in host for hint in GENERIC_HOSTS)
     candidates: list[str] = []
-    if parser.og_image:
-        candidates.append(parser.og_image)
+    candidates.extend(parser.meta_images)
+    candidates.extend(_jsonld_images(parser))
     for src in parser.images:
         if LOGO_HINT.search(src):
             candidates.append(src)
@@ -178,10 +252,12 @@ def pick_image_candidates(base: str, parser: PageParser) -> list[str]:
             candidates.append(origin + guess)
     same: list[str] = []
     other: list[str] = []
+    seen: set[str] = set()
     for src in candidates:
         abs_url = _abs(base, src)
-        if not abs_url.startswith("http") or abs_url.lower().endswith(".svg"):
+        if not abs_url.startswith("http") or abs_url.lower().endswith(".svg") or abs_url in seen:
             continue
+        seen.add(abs_url)
         src_host = urlparse(abs_url).netloc.lower().replace("www.", "")
         (same if src_host == host else other).append(abs_url)
     return same + other
@@ -252,8 +328,11 @@ def download_image(url: str, dest_dir: Path, slug: str) -> str | None:
     for existing in dest_dir.glob(f"{slug}.*"):
         if existing.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".avif", ".gif"}:
             return f"/events/{existing.name}"
+    # Facebook crawler media only serves bytes to crawler user agents.
+    host = urlparse(url).netloc.lower()
+    agent = "facebookexternalhit/1.1" if "fbsbx.com" in host else None
     try:
-        _final, data, ctype = request(url, max_bytes=MAX_IMAGE + 1)
+        _final, data, ctype = request(url, max_bytes=MAX_IMAGE + 1, user_agent=agent)
     except Exception:
         return None
     if not data or len(data) > MAX_IMAGE:

@@ -17,6 +17,9 @@ country: "Türkiye"
 city: "Serik"
 eventStart: 2026-10-29
 eventEnd: 2026-11-02
+image: "/events/tangocat-para-ti-tango-maraton.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://paratitangomarathon.com/img/logo.png
 ---
 
 Para Ti Tango Maraton, Ekim 29 - Kasım 2 2026 tarihleri arasında Türkiye, Serik konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

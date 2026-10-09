@@ -17,6 +17,9 @@ country: "Belgium"
 city: "Bruges"
 eventStart: 2027-02-04
 eventEnd: 2027-02-08
+image: "/events/tangocat-neo-tango-bruges-ntb-2027.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=936376119128263
 ---
 
 Neo Tango Bruges (NTB) 2027 is listed (February 4-8, 2027) in Belgium, Bruges. This is a date and place summary, not a copy of the source programme.

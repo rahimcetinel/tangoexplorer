@@ -17,6 +17,9 @@ country: "Almanya"
 city: "Berlin"
 eventStart: 2027-01-15
 eventEnd: 2027-01-17
+image: "/events/tangocat-neotango-marathon-berlin.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.neotango.berlin/wp-content/uploads/go-x/android-chrome-192x192.png?v=1783775338793
 ---
 
 Neotango Marathon Berlin, Ocak 15-17, 2027 tarihleri arasında Germany, Berlin konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

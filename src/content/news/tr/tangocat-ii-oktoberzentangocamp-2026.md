@@ -17,6 +17,9 @@ country: "Hungary"
 city: "Budapest"
 eventStart: 2026-10-02
 eventEnd: 2026-10-05
+image: "/events/tangocat-ii-oktoberzentangocamp-2026.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=4485828318368321
 ---
 
 II OktóberZenTangóCamp 2026, Ekim 2-5 2026 tarihleri arasında Hungary, Budapest konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

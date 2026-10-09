@@ -16,6 +16,9 @@ sourceKey: tangocat
 city: "Famagusta"
 eventStart: 2026-11-19
 eventEnd: 2026-11-22
+image: "/events/tangocat-othello-tango-camp.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://tangocyprus.online/img/tango-cyprus-logo.png
 ---
 
 Othello Tango Camp, Kasım 19-22 2026 tarihleri arasında Famagusta konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

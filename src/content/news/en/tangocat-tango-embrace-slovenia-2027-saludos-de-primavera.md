@@ -17,6 +17,9 @@ country: "Slovenia"
 city: "Rogaška Slatina"
 eventStart: 2027-03-11
 eventEnd: 2027-03-14
+image: "/events/tangocat-tango-embrace-slovenia-2027-saludos-de-primavera.webp"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://static.xx.fbcdn.net/rsrc.php/yd/r/LiSc0sYjn_n.webp
 ---
 
 Tango Embrace Slovenia 2027 “Saludos de Primavera” is listed (March 11-14, 2027) in Slovenia, Rogaška Slatina. This is a date and place summary, not a copy of the source programme.

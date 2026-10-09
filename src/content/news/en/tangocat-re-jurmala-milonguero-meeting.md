@@ -19,6 +19,9 @@ eventStart: 2026-11-13
 eventEnd: 2026-11-15
 registrationStart: 2026-03-25
 eventWebsite: https://www.rigaembrace.lv/information/
+image: "/events/tangocat-re-jurmala-milonguero-meeting.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.rigaembrace.lv/images/Christmas.jpg
 ---
 
 RE-Jurmala Milonguero Meeting is listed (November 13-15 2026) in Latvia, Jūrmala. This is a date and place summary, not a copy of the source programme.

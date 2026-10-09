@@ -17,6 +17,9 @@ country: "Austria"
 city: "Vienna"
 eventStart: 2026-09-10
 eventEnd: 2026-09-13
+image: "/events/tangocat-tangoloft-vienna-weekend.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=782187221514595
 ---
 
 Tangoloft Vienna Weekend, Eylül 10-13 2026 tarihleri arasında Austria, Vienna konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

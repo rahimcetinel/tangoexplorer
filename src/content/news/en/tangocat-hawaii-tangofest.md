@@ -17,6 +17,9 @@ country: "United States"
 city: "Honolulu"
 eventStart: 2026-11-05
 eventEnd: 2026-11-09
+image: "/events/tangocat-hawaii-tangofest.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://hawaiitango.com/wp-content/uploads/2026/05/website-banner-02-1.jpeg
 ---
 
 Hawaii TangoFest is listed (November 5-9 2026) in United States, Honolulu. This is a date and place summary, not a copy of the source programme.

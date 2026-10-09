@@ -17,6 +17,9 @@ country: "Fransa"
 city: "Boisseuil"
 eventStart: 2026-10-23
 eventEnd: 2026-10-25
+image: "/events/tangocat-limouzi-tango-week-end-8.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: http://www.limouzitangoweekend.com/images/france.png
 ---
 
 Limouzi Tango Week-End #8, Ekim 23-25 2026 tarihleri arasında France, Boisseuil konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

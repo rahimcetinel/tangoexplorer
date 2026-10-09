@@ -19,6 +19,9 @@ country: "Austria"
 city: "Vienna"
 eventStart: 2027-05-14
 eventEnd: 2027-05-16
+image: "/events/tmd-vienna-calling-tango-marathon-2027-spring-edition.png"
+imageCredit: "Event image (tangomarathons.com)"
+imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2017/04/TMD-Logo-e1483284195338.png
 ---
 
 Vienna Calling Tango Marathon 2027 Spring Edition, 14–16 Mayıs 2027 tarihlerinde Austria, Vienna konumunda planlanıyor. Bu metin kaynak sayfanın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

@@ -17,6 +17,9 @@ country: "Bulgaria"
 city: "Burgas"
 eventStart: 2027-05-07
 eventEnd: 2027-05-09
+image: "/events/tangocat-portenos-y-autenticos-international-tango-festival.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=836809902099366
 ---
 
 Porteños y Autènticos - International Tango Festival is listed (May 7-9, 2027) in Bulgaria, Burgas. This is a date and place summary, not a copy of the source programme.

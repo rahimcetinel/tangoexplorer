@@ -17,6 +17,9 @@ country: "French Polynesia"
 city: "Puna'auia"
 eventStart: 2027-02-06
 eventEnd: 2027-02-13
+image: "/events/tangocat-tahiti-tango-holidays.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1573256010574299
 ---
 
 Tahiti Tango Holidays, Şubat 6-13, 2027 tarihleri arasında French Polynesia, Puna'auia konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

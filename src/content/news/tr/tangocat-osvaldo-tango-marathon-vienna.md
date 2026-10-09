@@ -17,6 +17,9 @@ country: "Austria"
 city: "Vienna"
 eventStart: 2027-03-12
 eventEnd: 2027-03-14
+image: "/events/tangocat-osvaldo-tango-marathon-vienna.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://0501.nccdn.net/4_2/000/000/04c/a91/osvaldo_social_media.png
 ---
 
 OSVALDO Tango Marathon Vienna, Mart 12-14, 2027 tarihleri arasında Austria, Vienna konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

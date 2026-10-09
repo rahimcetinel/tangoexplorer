@@ -17,6 +17,9 @@ country: "Greece"
 city: "Greece"
 eventStart: 2027-05-12
 eventEnd: 2027-05-12
+image: "/events/tangocat-tango-week-marathon.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://static.wixstatic.com/media/cd2f0b_2d99496b1878447d9e6a989bceb59d1c~mv2.jpeg/v1/fill/w_1280,h_586,al_c/cd2f0b_2d99496b1878447d9e6a989bceb59d1c~mv2.jpeg
 ---
 
 Tango Week Marathon, Mayıs 12, 2027 - Kasım 21  tarihleri arasında Greece, Greece konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

@@ -20,6 +20,9 @@ country: "Turkey"
 city: "Diyarbakir"
 eventStart: 2026-09-16
 eventEnd: 2026-09-20
+image: "/events/tmd-turkey-mesopotamia-tango-marathon.jpg"
+imageCredit: "Event image (tangomarathons.com)"
+imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2026/05/MTM26-Poster-SON-252x315.jpg
 ---
 
 Turkey Mesopotamia Tango Marathon, 16–20 Eylül 2026 tarihlerinde Turkey, Diyarbakir konumunda planlanıyor. Bu metin kaynak sayfanın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

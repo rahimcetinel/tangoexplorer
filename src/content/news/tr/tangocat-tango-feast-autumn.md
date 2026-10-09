@@ -17,6 +17,9 @@ country: "United Kingdom"
 city: "Paignton"
 eventStart: 2026-10-08
 eventEnd: 2026-10-11
+image: "/events/tangocat-tango-feast-autumn.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://tangofeast.com/autumn/index_files/stacks-image-703d504-150x146.png
 ---
 
 Tango Feast Autumn, Ekim 8-11 2026 tarihleri arasında United Kingdom, Paignton konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

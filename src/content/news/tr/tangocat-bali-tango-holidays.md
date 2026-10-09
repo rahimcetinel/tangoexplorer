@@ -17,6 +17,9 @@ country: "Indonesia"
 city: "Ubud"
 eventStart: 2026-12-12
 eventEnd: 2026-12-19
+image: "/events/tangocat-bali-tango-holidays.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=983772874110270
 ---
 
 Bali Tango Holidays, Aralık 12-19 2026 tarihleri arasında Indonesia, Ubud konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

@@ -17,6 +17,9 @@ country: "Lithuania"
 city: "Kaunas"
 eventStart: 2026-10-24
 eventEnd: 2026-10-24
+image: "/events/tangocat-8th-anniversary-of-el-tango-club.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1036288366015186
 ---
 
 8th Anniversary of el Tango Club, Ekim 24 2026 tarihleri arasında Lithuania, Kaunas konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

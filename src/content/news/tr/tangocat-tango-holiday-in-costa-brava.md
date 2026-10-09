@@ -17,6 +17,9 @@ country: "İspanya"
 city: "Girona"
 eventStart: 2026-09-27
 eventEnd: 2026-10-04
+image: "/events/tangocat-tango-holiday-in-costa-brava.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=783945594426496
 ---
 
 Tango Holiday in Costa Brava, Eylül 27 - Ekim 4 2026 tarihleri arasında Spain, Girona konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

@@ -17,6 +17,9 @@ country: "Romania"
 city: "Hunedoara"
 eventStart: 2026-10-16
 eventEnd: 2026-10-18
+image: "/events/tangocat-tango-thica-a-ball-at-the-castle.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1022313623872313
 ---
 
 TanGo’thica - A Ball at the Castle is listed (October 16-18 2026) in Romania, Hunedoara. This is a date and place summary, not a copy of the source programme.

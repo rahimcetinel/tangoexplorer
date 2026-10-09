@@ -17,6 +17,9 @@ country: "Mexico"
 city: "Ajijic"
 eventStart: 2027-03-03
 eventEnd: 2027-03-08
+image: "/events/tangocat-viva-mexico-tango-festival.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://vivamexicotangofestival.com/wp-content/uploads/vivamxtango-logo.png
 ---
 
 Viva Mexico Tango Festival is listed (March 3-8, 2027) in Mexico, Ajijic. This is a date and place summary, not a copy of the source programme.

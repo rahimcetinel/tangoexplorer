@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Naples"
 eventStart: 2026-11-20
 eventEnd: 2026-11-22
+image: "/events/tangocat-tango-arte-e-cultura.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1717666536095848
 ---
 
 Tango Arte e Cultura, Kasım 20-22 2026 tarihleri arasında Italy, Naples konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

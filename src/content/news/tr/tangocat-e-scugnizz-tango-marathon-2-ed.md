@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Naples"
 eventStart: 2027-02-25
 eventEnd: 2027-02-28
+image: "/events/tangocat-e-scugnizz-tango-marathon-2-ed.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1343380941072072
 ---
 
 E SCUGNIZZ Tango Marathon 2° Ed., Şubat 25-28, 2027 tarihleri arasında Italy, Naples konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

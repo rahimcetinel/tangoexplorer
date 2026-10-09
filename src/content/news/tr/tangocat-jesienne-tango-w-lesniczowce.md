@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Kętrzyn"
 eventStart: 2026-11-26
 eventEnd: 2026-11-30
+image: "/events/tangocat-jesienne-tango-w-lesniczowce.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1502638585252924
 ---
 
 Jesienne Tango w Leśniczówce, Kasım 26-30 2026 tarihleri arasında Poland, Kętrzyn konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

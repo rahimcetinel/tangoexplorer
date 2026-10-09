@@ -17,6 +17,9 @@ country: "Greece"
 city: "Kalamata"
 eventStart: 2026-09-18
 eventEnd: 2026-09-20
+image: "/events/tangocat-summer-tango-escapada.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1588718595733231
 ---
 
 Summer Tango Escapada is listed (September 18-20 2026) in Greece, Kalamata. This is a date and place summary, not a copy of the source programme.

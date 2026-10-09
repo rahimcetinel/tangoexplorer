@@ -17,6 +17,9 @@ country: "Cuba"
 city: "Havana"
 eventStart: 2026-10-22
 eventEnd: 2026-10-29
+image: "/events/tangocat-tanguearte-2026-we-are-going-to-havana.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1451835129744715
 ---
 
 Tanguearte 2026 - We are going to Havana is listed (October 22-29 2026) in Cuba, Havana. This is a date and place summary, not a copy of the source programme.

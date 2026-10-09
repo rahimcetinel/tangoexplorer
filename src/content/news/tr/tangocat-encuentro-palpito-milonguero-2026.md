@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Bondeno"
 eventStart: 2026-09-18
 eventEnd: 2026-09-20
+image: "/events/tangocat-encuentro-palpito-milonguero-2026.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=956782170243101
 ---
 
 Encuentro Palpito Milonguero 2026, Eylül 18-20 2026 tarihleri arasında Italy, Bondeno konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

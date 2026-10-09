@@ -17,6 +17,9 @@ country: "İspanya"
 city: "Salobreña"
 eventStart: 2026-12-30
 eventEnd: 2027-01-03
+image: "/events/tangocat-xii-sol-de-invierno-internacional-tango-meeting.webp"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://static.xx.fbcdn.net/rsrc.php/yd/r/LiSc0sYjn_n.webp
 ---
 
 XII Sol de Invierno Internacional Tango Meeting, Aralık 30 - Ocak 3 , 2027 tarihleri arasında Spain, Salobreña konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

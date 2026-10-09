@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Szczyrk"
 eventStart: 2027-01-06
 eventEnd: 2027-01-10
+image: "/events/tangocat-beskid-tango-marathon.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=851146204684276
 ---
 
 Beskid Tango Marathon, Ocak 6-10, 2027 tarihleri arasında Poland, Szczyrk konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

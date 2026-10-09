@@ -17,6 +17,9 @@ country: "Serbia"
 city: "Veliko Gradište"
 eventStart: 2026-09-10
 eventEnd: 2026-09-14
+image: "/events/tangocat-mil-pasos-de-tango.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1289862862966973
 ---
 
 Mil Pasos De Tango is listed (September 10-14 2026) in Serbia, Veliko Gradište. This is a date and place summary, not a copy of the source programme.

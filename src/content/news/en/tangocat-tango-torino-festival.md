@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Turin"
 eventStart: 2027-03-25
 eventEnd: 2027-03-29
+image: "/events/tangocat-tango-torino-festival.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.marcelaystefano.com/tango-torino-festival/wp-content/uploads/sites/2/2017/05/Tango-Torino-Festival-Logo.png
 ---
 
 Tango Torino Festival is listed (March 25-29, 2027) in Italy, Turin. This is a date and place summary, not a copy of the source programme.

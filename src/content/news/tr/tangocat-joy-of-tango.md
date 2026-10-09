@@ -17,6 +17,9 @@ country: "Sweden"
 city: "Gothenburg"
 eventStart: 2026-11-20
 eventEnd: 2026-11-22
+image: "/events/tangocat-joy-of-tango.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://connectwithjoy.com/images/logo.png
 ---
 
 Joy of Tango, Kasım 20-22 2026 tarihleri arasında Sweden, Gothenburg konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

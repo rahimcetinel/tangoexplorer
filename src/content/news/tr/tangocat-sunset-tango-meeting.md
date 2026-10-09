@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Zielona Góra"
 eventStart: 2027-04-22
 eventEnd: 2027-04-25
+image: "/events/tangocat-sunset-tango-meeting.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1336165548616533
 ---
 
 Sunset Tango Meeting, Nisan 22-25, 2027 tarihleri arasında Poland, Zielona Góra konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

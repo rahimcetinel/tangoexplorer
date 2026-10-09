@@ -17,6 +17,9 @@ country: "Almanya"
 city: "Berlin"
 eventStart: 2027-04-09
 eventEnd: 2027-04-11
+image: "/events/tangocat-ntm-2027-neo-tango-marathon-berlin.webp"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://tangovida.de/wp-content/uploads/2026/08/neo-immersion-registration.webp
 ---
 
 NTM 2027 – Neo Tango Marathon Berlin is listed (April 9-11, 2027) in Germany, Berlin. This is a date and place summary, not a copy of the source programme.

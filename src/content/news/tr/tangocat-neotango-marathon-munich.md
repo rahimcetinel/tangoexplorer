@@ -17,6 +17,9 @@ country: "Almanya"
 city: "Munich"
 eventStart: 2026-11-13
 eventEnd: 2026-11-16
+image: "/events/tangocat-neotango-marathon-munich.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://neotangomarathonmunich.com/media/website/website-logo-munich.png
 ---
 
 Neotango Marathon Munich, Kasım 13-16 2026 tarihleri arasında Germany, Munich konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

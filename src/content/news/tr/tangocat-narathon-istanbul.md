@@ -17,6 +17,9 @@ country: "Türkiye"
 city: "İstanbul"
 eventStart: 2027-01-15
 eventEnd: 2027-01-17
+image: "/events/tangocat-narathon-istanbul.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.narathon.com/wp-content/uploads/2026/08/narathon-site-logo.png
 ---
 
 Narathon - Istanbul, Ocak 15-17, 2027 tarihleri arasında Türkiye, Istanbul konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

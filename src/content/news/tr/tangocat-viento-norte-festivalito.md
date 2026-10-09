@@ -17,6 +17,9 @@ country: "Almanya"
 city: "Hamburg"
 eventStart: 2027-01-29
 eventEnd: 2027-01-31
+image: "/events/tangocat-viento-norte-festivalito.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.maudeandrey.com/images/7/flyer-vn-2027-640-1.jpg
 ---
 
 Viento Norte Festivalito, Ocak 29-31, 2027 tarihleri arasında Germany, Hamburg konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

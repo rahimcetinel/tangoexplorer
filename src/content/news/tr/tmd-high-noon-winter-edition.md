@@ -9,7 +9,11 @@ summary: "High Noon Winter Edition, 22–24 Ocak 2027 tarihlerinde Germany, Berl
 eventName: "High Noon Winter Edition"
 eventWhen: "22–24 Ocak 2027"
 eventLocation: "Germany, Berlin"
-eventWebsite: https://www.tangomundo.de/high-noon-tangomarathon---winter-edition--
+eventWebsite: https://www.tangomundo.de/high-noon-tangomarathon
+image: "/events/tmd-high-noon-winter-edition.jpg"
+imageCredit: "Event image (tangomarathons.com)"
+imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2026/08/481081145_9419253551477221_5123445192871501365_n-472x315.jpg
+---winter-edition--
 image: "/events/tmd-high-noon-winter-edition.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2027-high-noon-winter-edition-edition-3/

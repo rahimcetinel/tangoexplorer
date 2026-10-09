@@ -17,6 +17,9 @@ country: "Czechia"
 city: "Prague"
 eventStart: 2026-10-23
 eventEnd: 2026-10-26
+image: "/events/tangocat-herencia-del-tango-prague-2026.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=961785273040690
 ---
 
 Herencia del Tango - Prague 2026 is listed (October 23-26 2026) in Czechia, Prague. This is a date and place summary, not a copy of the source programme.

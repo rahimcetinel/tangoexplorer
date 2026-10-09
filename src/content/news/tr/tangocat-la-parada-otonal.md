@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Quinto di Treviso"
 eventStart: 2026-10-23
 eventEnd: 2026-10-25
+image: "/events/tangocat-la-parada-otonal.webp"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://static.xx.fbcdn.net/rsrc.php/yd/r/LiSc0sYjn_n.webp
 ---
 
 La parada otoñal, Ekim 23-25 2026 tarihleri arasında Italy, Quinto di Treviso konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

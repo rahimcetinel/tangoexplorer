@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Międzybrodzie Bialskie"
 eventStart: 2027-04-15
 eventEnd: 2027-04-18
+image: "/events/tangocat-zar-tanga-2nd-edition.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1361763762632162
 ---
 
 Żar Tanga 2nd edition is listed (April 15-18, 2027) in Poland, Międzybrodzie Bialskie. This is a date and place summary, not a copy of the source programme.

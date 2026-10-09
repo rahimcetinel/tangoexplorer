@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Signa"
 eventStart: 2026-09-25
 eventEnd: 2026-09-27
+image: "/events/tangocat-neotango-marathon-firenze.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=818898371279323
 ---
 
 Neotango Marathon Firenze is listed (September 25-27 2026) in Italy, Signa. This is a date and place summary, not a copy of the source programme.

@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Trieste"
 eventStart: 2026-10-02
 eventEnd: 2026-10-04
+image: "/events/tangocat-miramare.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1405726714683880
 ---
 
 Miramare, Ekim 2-4 2026 tarihleri arasında Italy, Trieste konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

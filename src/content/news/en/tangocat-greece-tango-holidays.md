@@ -17,6 +17,9 @@ country: "Greece"
 city: "Lesbos"
 eventStart: 2027-06-05
 eventEnd: 2027-06-12
+image: "/events/tangocat-greece-tango-holidays.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1551212583362225
 ---
 
 Greece Tango Holidays is listed (June 5-12, 2027) in Greece, Lesbos. This is a date and place summary, not a copy of the source programme.

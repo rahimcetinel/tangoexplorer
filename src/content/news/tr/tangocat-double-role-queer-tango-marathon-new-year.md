@@ -17,6 +17,9 @@ country: "Greece"
 city: "Athens"
 eventStart: 2026-12-31
 eventEnd: 2027-01-03
+image: "/events/tangocat-double-role-queer-tango-marathon-new-year.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1668860111024043
 ---
 
 Double Role Queer Tango Marathon New Year, Aralık 31 - Ocak 3 , 2027 tarihleri arasında Greece, Athens konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

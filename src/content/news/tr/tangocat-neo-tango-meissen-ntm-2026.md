@@ -17,6 +17,9 @@ country: "Almanya"
 city: "Nossen"
 eventStart: 2026-12-04
 eventEnd: 2026-12-07
+image: "/events/tangocat-neo-tango-meissen-ntm-2026.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1218844676898241
 ---
 
 Neo Tango Meißen (NTM) 2026, Aralık 4-7 2026 tarihleri arasında Germany, Nossen konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

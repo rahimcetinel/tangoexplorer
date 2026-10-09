@@ -17,6 +17,9 @@ country: "Greece"
 city: "Larissa"
 eventStart: 2026-10-23
 eventEnd: 2026-10-25
+image: "/events/tangocat-tangolarissa-festivalito.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1040175255290259
 ---
 
 TangoLarissa Festivalito, Ekim 23-25 2026 tarihleri arasında Greece, Larissa konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

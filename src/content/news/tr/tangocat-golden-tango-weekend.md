@@ -17,6 +17,9 @@ country: "Estonia"
 city: "Tallinn"
 eventStart: 2026-10-16
 eventEnd: 2026-10-18
+image: "/events/tangocat-golden-tango-weekend.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=993179600283604
 ---
 
 Golden Tango Weekend, Ekim 16-18 2026 tarihleri arasında Estonia, Tallinn konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

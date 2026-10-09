@@ -17,6 +17,9 @@ country: "Serbia"
 city: "Kraljevo"
 eventStart: 2026-10-02
 eventEnd: 2026-10-04
+image: "/events/tangocat-king-s-town-tango-weekend-pepa-palazon-el-cachivache-quinteto.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=931642995979211
 ---
 
 King’s Town TANGO WEEKEND - PEPA PALAZÓN & EL CACHIVACHE QUINTETO, Ekim 2-4 2026 tarihleri arasında Serbia, Kraljevo konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

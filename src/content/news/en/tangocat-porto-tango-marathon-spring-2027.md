@@ -17,6 +17,9 @@ country: "Portekiz"
 city: "Porto"
 eventStart: 2027-03-18
 eventEnd: 2027-03-21
+image: "/events/tangocat-porto-tango-marathon-spring-2027.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://static.wixstatic.com/media/4d133b_7e0fda554b384f968e7deb6063408c95~mv2.png
 ---
 
 Porto Tango Marathon Spring 2027 is listed (March 18-21, 2027) in Portugal, Porto. This is a date and place summary, not a copy of the source programme.

@@ -17,6 +17,9 @@ country: "Sweden"
 city: "Malmö"
 eventStart: 2026-10-15
 eventEnd: 2026-10-18
+image: "/events/tangocat-homero-tango-marathon-10.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=880608784488468
 ---
 
 Homero Tango Marathon 10, Ekim 15-18 2026 tarihleri arasında Sweden, Malmö konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

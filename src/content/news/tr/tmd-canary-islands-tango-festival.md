@@ -20,6 +20,9 @@ country: "Spain"
 city: "Las Palmas de Gran Canaria"
 eventStart: 2027-03-08
 eventEnd: 2027-03-14
+image: "/events/tmd-canary-islands-tango-festival.jpg"
+imageCredit: "Event image (tangomarathons.com)"
+imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2026/08/CANARY-2027-CARA-A-21X15-441x315.jpg
 ---
 
 CANARY ISLANDS TANGO FESTIVAL, 8–14 Mart 2027 tarihlerinde Spain, Las Palmas de Gran Canaria konumunda planlanıyor. Bu metin kaynak sayfanın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

@@ -17,6 +17,9 @@ country: "Norway"
 city: "Oslo"
 eventStart: 2027-05-20
 eventEnd: 2027-05-23
+image: "/events/tangocat-kristiania-tango-festival.webp"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://images.squarespace-cdn.com/content/v1/662958c1f7337823735431b1/aca7ed4f-331e-46a8-8fa0-5a29c6f47c8d/OFFICIAL+26%3A27+KTF.jpg
 ---
 
 Kristiania Tango Festival is listed (May 20-23, 2027) in Norway, Oslo. This is a date and place summary, not a copy of the source programme.

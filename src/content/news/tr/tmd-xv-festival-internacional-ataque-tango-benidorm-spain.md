@@ -20,6 +20,9 @@ country: "Spain"
 city: "BENIDORM"
 eventStart: 2027-05-05
 eventEnd: 2027-05-09
+image: "/events/tmd-xv-festival-internacional-ataque-tango-benidorm-spain.jpg"
+imageCredit: "Event image (tangomarathons.com)"
+imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2026/07/BENIDORM-2027-446x315.jpg
 ---
 
 XV FESTIVAL INTERNACIONAL ATAQUE TANGO BENIDORM-SPAIN, 5–9 Mayıs 2027 tarihlerinde Spain, BENIDORM konumunda planlanıyor. Bu metin kaynak sayfanın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

@@ -17,6 +17,9 @@ country: "Romania"
 city: "Bucharest"
 eventStart: 2026-12-30
 eventEnd: 2027-01-03
+image: "/events/tangocat-tango-magico-marathon-nye-edition.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=3251123491885429
 ---
 
 Tango Mágico Marathon NYE Edition is listed (December 30 - January 3 , 2027) in Romania, Bucharest. This is a date and place summary, not a copy of the source programme.

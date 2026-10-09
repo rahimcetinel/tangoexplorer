@@ -17,6 +17,9 @@ country: "Fransa"
 city: "Paris"
 eventStart: 2026-11-20
 eventEnd: 2026-11-22
+image: "/events/tangocat-milonga-el-garron-reloaded-10-years-anniversary.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=26290670983959475
 ---
 
 Milonga El Garron reloaded: 10 years anniversary is listed (November 20-22 2026) in France, Paris. This is a date and place summary, not a copy of the source programme.

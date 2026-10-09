@@ -17,6 +17,9 @@ country: "Latvia"
 city: "Riga"
 eventStart: 2026-10-23
 eventEnd: 2026-10-25
+image: "/events/tangocat-unicornio-tango-weekend.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=2858745324495593
 ---
 
 Unicornio Tango Weekend, Ekim 23-25 2026 tarihleri arasında Latvia, Riga konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

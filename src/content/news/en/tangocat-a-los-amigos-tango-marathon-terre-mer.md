@@ -17,6 +17,9 @@ country: "Fransa"
 city: "Anglet"
 eventStart: 2026-11-06
 eventEnd: 2026-11-08
+image: "/events/tangocat-a-los-amigos-tango-marathon-terre-mer.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1252301876752063
 ---
 
 A Los Amigos 'Tango Marathon Terre & Mer is listed (November 6-8 2026) in France, Anglet. This is a date and place summary, not a copy of the source programme.

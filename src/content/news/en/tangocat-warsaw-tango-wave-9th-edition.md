@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Warsaw"
 eventStart: 2026-12-27
 eventEnd: 2027-01-04
+image: "/events/tangocat-warsaw-tango-wave-9th-edition.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=977919961601011
 ---
 
 Warsaw Tango Wave - 9th Edition is listed (December 27 - January 4 , 2027) in Poland, Warsaw. This is a date and place summary, not a copy of the source programme.

@@ -17,6 +17,9 @@ country: "India"
 city: "Goa"
 eventStart: 2026-10-30
 eventEnd: 2026-11-01
+image: "/events/tangocat-goa-international-tango-festival.webp"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://goatangofestival.com/wp-content/uploads/2026/07/Raquel-Makow-Sebastian-Jimenez-scaled.webp
 ---
 
 Goa International Tango Festival is listed (October 30 - November 1 2026) in India, Goa. This is a date and place summary, not a copy of the source programme.

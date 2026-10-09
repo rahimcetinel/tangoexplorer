@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Smolec"
 eventStart: 2026-10-02
 eventEnd: 2026-10-04
+image: "/events/tangocat-tango-milonguero-weekend-tango-de-mi-pueblo-2nd-edition.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=797777919794269
 ---
 
 Tango Milonguero Weekend „Tango de mi Pueblo” 2nd edition is listed (October 2-4 2026) in Poland, Smolec. This is a date and place summary, not a copy of the source programme.

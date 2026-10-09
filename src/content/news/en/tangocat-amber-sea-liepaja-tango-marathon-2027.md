@@ -17,6 +17,9 @@ country: "Latvia"
 city: "Liepāja"
 eventStart: 2027-07-22
 eventEnd: 2027-07-25
+image: "/events/tangocat-amber-sea-liepaja-tango-marathon-2027.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1062212226347945
 ---
 
 Amber Sea Liepaja Tango Marathon 2027 is listed (July 22-25, 2027) in Latvia, Liepāja. This is a date and place summary, not a copy of the source programme.

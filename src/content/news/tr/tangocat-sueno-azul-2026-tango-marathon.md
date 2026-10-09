@@ -17,6 +17,9 @@ country: "Fransa"
 city: "Ferney-Voltaire"
 eventStart: 2026-11-13
 eventEnd: 2026-11-15
+image: "/events/tangocat-sueno-azul-2026-tango-marathon.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=855488000984168
 ---
 
 Sueño Azul 2026 Tango Marathon, Kasım 13-15 2026 tarihleri arasında France, Ferney-Voltaire konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

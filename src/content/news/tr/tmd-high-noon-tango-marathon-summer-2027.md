@@ -9,7 +9,11 @@ summary: "High Noon Tango Marathon Summer 2027, 13–15 Ağustos 2027 tarihlerin
 eventName: "High Noon Tango Marathon Summer 2027"
 eventWhen: "13–15 Ağustos 2027"
 eventLocation: "Germany, Berlin"
-eventWebsite: https://www.tangomundo.de/high-noon-tangomarathon---summer-edition--
+eventWebsite: https://www.tangomundo.de/high-noon-tangomarathon
+image: "/events/tmd-high-noon-tango-marathon-summer-2027.jpg"
+imageCredit: "Event image (tangomarathons.com)"
+imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2026/08/564724021_24912716751704317_8255819622199632436_n-472x315.jpg
+---summer-edition--
 image: "/events/tmd-high-noon-tango-marathon-summer-2027.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2027-high-noon-tango-marathon-summer-2027-edition-13/

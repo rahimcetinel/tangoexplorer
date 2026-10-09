@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Gdynia"
 eventStart: 2026-11-11
 eventEnd: 2026-11-15
+image: "/events/tangocat-los-estibadores-gdynia.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1287816926518087
 ---
 
 Los Estibadores Gdynia, Kasım 11-15 2026 tarihleri arasında Poland, Gdynia konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

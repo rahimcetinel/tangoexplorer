@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Spoleto"
 eventStart: 2026-10-02
 eventEnd: 2026-10-04
+image: "/events/tangocat-umbria-tango-10-anniversary-years.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=986914283840476
 ---
 
 UMBRIA TANGO 10 Anniversary Years is listed (October 2-4 2026) in Italy, Spoleto. This is a date and place summary, not a copy of the source programme.

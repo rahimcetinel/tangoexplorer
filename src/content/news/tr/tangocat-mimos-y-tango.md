@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Riva del Garda"
 eventStart: 2027-04-02
 eventEnd: 2027-04-04
+image: "/events/tangocat-mimos-y-tango.png"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://mimosytangoblog.wordpress.com/wp-content/uploads/2026/05/cropped-gemini_generated_image_gpvh2qgpvh2qgpvh-1.png
 ---
 
 Mimos y Tango, Nisan 2-4, 2027 tarihleri arasında Italy, Riva del Garda konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

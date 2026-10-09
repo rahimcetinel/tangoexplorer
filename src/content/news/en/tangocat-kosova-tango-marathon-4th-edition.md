@@ -16,6 +16,9 @@ sourceKey: tangocat
 city: "Pristina"
 eventStart: 2026-12-17
 eventEnd: 2026-12-20
+image: "/events/tangocat-kosova-tango-marathon-4th-edition.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1567460064521699
 ---
 
 Kosova Tango Marathon (4th edition) is listed (December 17-20 2026) in Pristina. This is a date and place summary, not a copy of the source programme.
