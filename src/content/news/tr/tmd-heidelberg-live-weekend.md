@@ -22,6 +22,7 @@ country: "Germany"
 city: "Heidelberg"
 eventStart: 2027-05-14
 eventEnd: 2027-05-17
+registrationStart: 2026-10-18
 ---
 
 Heidelberg Live Weekend, 14–17 Mayıs 2027 tarihlerinde Germany, Heidelberg konumunda planlanıyor. Bu metin kaynak sayfanın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

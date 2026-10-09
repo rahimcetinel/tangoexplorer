@@ -13,6 +13,8 @@ eventWebsite: https://www.tangomundo.de/high-noon-tangomarathon
 image: "/events/tmd-high-noon-tango-marathon-summer-2027.jpg"
 imageCredit: "Event image (tangomarathons.com)"
 imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2026/08/564724021_24912716751704317_8255819622199632436_n-472x315.jpg
+edition: 13
+registrationStart: 2027-04-12
 ---summer-edition--
 image: "/events/tmd-high-noon-tango-marathon-summer-2027.jpg"
 imageCredit: "TMD"

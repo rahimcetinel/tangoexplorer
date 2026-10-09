@@ -13,6 +13,8 @@ eventWebsite: https://www.tangomundo.de/high-noon-tangomarathon
 image: "/events/tmd-high-noon-winter-edition.jpg"
 imageCredit: "Event image (tangomarathons.com)"
 imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2026/08/481081145_9419253551477221_5123445192871501365_n-472x315.jpg
+edition: 3
+registrationStart: 2026-10-12
 ---winter-edition--
 image: "/events/tmd-high-noon-winter-edition.jpg"
 imageCredit: "TMD"

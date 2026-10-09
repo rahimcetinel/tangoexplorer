@@ -21,7 +21,7 @@ image: "/events/tangocat-imperial-tango-marathon-annecy-2nd-edition.jpg"
 imageCredit: "Tangoverse"
 imageSourceUrl: https://tangoverse.net/events/imperial-tango-marathon-57a88a
 edition: 2
-registrationStart: 2026-05-01
+registrationStart: 2026-09-01
 eventWebsite: https://www.imperialtangomarathon.com/
 ---
 
