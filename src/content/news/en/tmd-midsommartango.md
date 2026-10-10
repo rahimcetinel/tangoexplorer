@@ -18,6 +18,9 @@ country: "Sweden"
 city: "Linköping"
 eventStart: 2027-06-25
 eventEnd: 2027-06-27
+image: "/events/tmd-midsommartango.png"
+imageCredit: "Event image (tangomarathons.com)"
+imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2017/04/TMD-Logo-e1483284195338.png
 ---
 
 MidsommarTango is listed for 25–27 June 2027 in Sweden, Linköping. This is a date and place summary, not a copy of the source listing.

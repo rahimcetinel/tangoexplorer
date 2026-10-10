@@ -20,6 +20,9 @@ country: "United States"
 city: "Austin"
 eventStart: 2027-09-03
 eventEnd: 2027-09-05
+image: "/events/tmd-austin-tango-marathon.png"
+imageCredit: "Event image (tangomarathons.com)"
+imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2025/04/Austin-Tango-Marathon_-More-Than-Dance-504x315.png
 ---
 
 Austin Tango Marathon is listed for 3–5 September 2027 in United States, Austin. This is a date and place summary, not a copy of the source listing.
