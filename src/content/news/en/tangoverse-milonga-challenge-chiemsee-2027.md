@@ -16,6 +16,9 @@ country: "Germany"
 city: "Prien am Chiemsee"
 eventStart: 2027-01-03
 eventEnd: 2027-01-07
+image: "/events/tangoverse-milonga-challenge-chiemsee-2027.jpg"
+imageCredit: "Event image (tangoverse.net)"
+imageSourceUrl: https://tangoverse.net/og-image.jpg?v=2
 ---
 
 Milonga Challenge – Tango Holiday at Lake Chiemsee is listed for 3–7 January 2027 in Germany, Prien am Chiemsee. This is a date and place summary, not a copy of the source listing.

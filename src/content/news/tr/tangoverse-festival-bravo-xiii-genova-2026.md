@@ -18,6 +18,9 @@ country: "Italy"
 city: "Genova"
 eventStart: 2026-12-04
 eventEnd: 2026-12-07
+image: "/events/tangoverse-festival-bravo-xiii-genova-2026.jpg"
+imageCredit: "Event image (tangoverse.net)"
+imageSourceUrl: https://tangoverse.net/og-image.jpg?v=2
 ---
 
 Festival Bravo XIII, 4–7 Aralık 2026 tarihlerinde Italy, Genova konumunda planlanıyor. Bu metin kaynak sayfanın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

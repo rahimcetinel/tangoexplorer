@@ -16,6 +16,9 @@ country: "Denmark"
 city: "Copenhagen"
 eventStart: 2026-11-27
 eventEnd: 2026-11-29
+image: "/events/tangoverse-seminars-copenhagen-ariadna-fernando-2026.jpg"
+imageCredit: "Event image (tangoverse.net)"
+imageSourceUrl: https://tangoverse.net/og-image.jpg?v=2
 ---
 
 Seminars in Copenhagen with Ariadna & Fernando is listed for 27–29 November 2026 in Denmark, Copenhagen. This is a date and place summary, not a copy of the source listing.

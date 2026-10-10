@@ -17,6 +17,9 @@ country: "United Kingdom"
 city: "London"
 eventStart: 2026-11-27
 eventEnd: 2026-11-29
+image: "/events/tangocat-tango2london.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.tangotolondon.com/assets/gallery/gallery1.jpeg
 ---
 
 Tango2London, Kasım 27-29 2026 tarihleri arasında United Kingdom, London konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

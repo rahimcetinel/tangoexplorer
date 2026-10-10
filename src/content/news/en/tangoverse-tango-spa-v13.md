@@ -16,6 +16,9 @@ country: "United Kingdom"
 city: "Leamington Spa"
 eventStart: 2026-10-23
 eventEnd: 2026-10-25
+image: "/events/tangoverse-tango-spa-v13.jpg"
+imageCredit: "Event image (tangoverse.net)"
+imageSourceUrl: https://tangoverse.net/og-image.jpg?v=2
 ---
 
 Tango Spa v13 is listed for 23–25 October 2026 in United Kingdom, Leamington Spa. This is a date and place summary, not a copy of the source listing.

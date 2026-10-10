@@ -17,6 +17,9 @@ country: "Romania"
 city: "Brașov"
 eventStart: 2027-07-29
 eventEnd: 2027-08-01
+image: "/events/tangocat-transylvania-tango-marathon.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1562382244968013
 ---
 
 Transylvania Tango Marathon, Temmuz 29 - Ağustos 1, 2027 tarihleri arasında Romania, Brașov konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

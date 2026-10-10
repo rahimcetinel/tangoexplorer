@@ -18,6 +18,9 @@ country: "Germany"
 city: "Braunschweig"
 eventStart: 2026-10-22
 eventEnd: 2026-10-25
+image: "/events/tangoverse-la-flor-del-tango-10-years-anniversary-festival.jpg"
+imageCredit: "Event image (tangoverse.net)"
+imageSourceUrl: https://tangoverse.net/og-image.jpg?v=2
 ---
 
 La Flor del Tango 10 Years Anniversary Festival is listed for 22–25 October 2026 in Germany, Braunschweig. This is a date and place summary, not a copy of the source listing.

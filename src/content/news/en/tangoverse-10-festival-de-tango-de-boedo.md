@@ -18,6 +18,9 @@ country: "Argentina"
 city: "Buenos Aires"
 eventStart: 2026-10-14
 eventEnd: 2026-11-01
+image: "/events/tangoverse-10-festival-de-tango-de-boedo.jpg"
+imageCredit: "Event image (tangoverse.net)"
+imageSourceUrl: https://tangoverse.net/og-image.jpg?v=2
 ---
 
 10° Festival de Tango de Boedo is listed for 14 October 2026 – 1 November 2026 in Argentina, Buenos Aires. This is a date and place summary, not a copy of the source listing.

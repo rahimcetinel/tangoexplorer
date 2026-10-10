@@ -16,6 +16,9 @@ country: "United Kingdom"
 city: "London"
 eventStart: 2026-10-09
 eventEnd: 2026-10-11
+image: "/events/tangoverse-seminar-el-nacimiento-london-2026.jpg"
+imageCredit: "Event image (tangoverse.net)"
+imageSourceUrl: https://tangoverse.net/og-image.jpg?v=2
 ---
 
 Seminar at El Nacimiento with Ariadna & Fernando, 9–11 Ekim 2026 tarihlerinde United Kingdom, London konumunda planlanıyor. Bu metin kaynak sayfanın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

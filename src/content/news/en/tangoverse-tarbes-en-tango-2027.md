@@ -18,6 +18,9 @@ country: "France"
 city: "Tarbes"
 eventStart: 2027-08-13
 eventEnd: 2027-08-22
+image: "/events/tangoverse-tarbes-en-tango-2027.jpg"
+imageCredit: "Event image (tangoverse.net)"
+imageSourceUrl: https://tangoverse.net/og-image.jpg?v=2
 ---
 
 Tarbes en Tango 2027 is listed for 13–22 August 2027 in France, Tarbes. This is a date and place summary, not a copy of the source listing.

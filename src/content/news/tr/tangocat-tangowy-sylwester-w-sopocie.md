@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Sopot"
 eventStart: 2026-12-31
 eventEnd: 2027-01-03
+image: "/events/tangocat-tangowy-sylwester-w-sopocie.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=2890299101356750
 ---
 
 Tangowy Sylwester w Sopocie, Aralık 31 - Ocak 3 , 2027 tarihleri arasında Poland, Sopot konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

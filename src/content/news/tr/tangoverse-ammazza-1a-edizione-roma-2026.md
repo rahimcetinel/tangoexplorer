@@ -16,6 +16,9 @@ country: "Italy"
 city: "Rome"
 eventStart: 2026-11-28
 eventEnd: 2026-11-30
+image: "/events/tangoverse-ammazza-1a-edizione-roma-2026.jpg"
+imageCredit: "Event image (tangoverse.net)"
+imageSourceUrl: https://tangoverse.net/og-image.jpg?v=2
 ---
 
 AMMAZZA!! 1ª Edizione – Seminar with Ariadna & Fernando, 28–30 Kasım 2026 tarihlerinde Italy, Rome konumunda planlanıyor. Bu metin kaynak sayfanın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

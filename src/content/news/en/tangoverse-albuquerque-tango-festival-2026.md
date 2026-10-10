@@ -18,6 +18,9 @@ country: "United States"
 city: "Albuquerque"
 eventStart: 2026-10-29
 eventEnd: 2026-11-02
+image: "/events/tangoverse-albuquerque-tango-festival-2026.jpg"
+imageCredit: "Event image (tangoverse.net)"
+imageSourceUrl: https://tangoverse.net/og-image.jpg?v=2
 ---
 
 Albuquerque Tango Festival 2026 is listed for 29 October 2026 – 2 November 2026 in United States, Albuquerque. This is a date and place summary, not a copy of the source listing.

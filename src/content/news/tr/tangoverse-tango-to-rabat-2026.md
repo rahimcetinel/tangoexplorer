@@ -18,6 +18,9 @@ country: "Morocco"
 city: "Rabat"
 eventStart: 2026-11-06
 eventEnd: 2026-11-08
+image: "/events/tangoverse-tango-to-rabat-2026.jpg"
+imageCredit: "Event image (tangoverse.net)"
+imageSourceUrl: https://tangoverse.net/og-image.jpg?v=2
 ---
 
 TanGO TO RABAT 2026, 6–8 Kasım 2026 tarihlerinde Morocco, Rabat konumunda planlanıyor. Bu metin kaynak sayfanın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

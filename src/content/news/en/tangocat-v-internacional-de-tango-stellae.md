@@ -17,6 +17,9 @@ country: "İspanya"
 city: "Santiago de Compostela"
 eventStart: 2026-12-05
 eventEnd: 2026-12-08
+image: "/events/tangocat-v-internacional-de-tango-stellae.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://amestango.com/wp-content/uploads/2026/08/flyers-tango-stellae-1.jpg
 ---
 
 V Internacional de Tango Stellae is listed (December 5-8 2026) in Spain, Santiago de Compostela. This is a date and place summary, not a copy of the source programme.

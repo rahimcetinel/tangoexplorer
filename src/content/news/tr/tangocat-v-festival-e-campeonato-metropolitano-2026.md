@@ -17,6 +17,9 @@ country: "Brazil"
 city: "São Paulo"
 eventStart: 2026-11-13
 eventEnd: 2026-11-15
+image: "/events/tangocat-v-festival-e-campeonato-metropolitano-2026.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://static.wixstatic.com/media/4c2984_37f802b98a804fc0861bc6401ec493a6~mv2.jpg/v1/fill/w_473,h_473,al_c/4c2984_37f802b98a804fc0861bc6401ec493a6~mv2.jpg
 ---
 
 V Festival e Campeonato Metropolitano 2026, Kasım 13-15 2026 tarihleri arasında Brazil, São Paulo konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.

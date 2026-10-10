@@ -17,6 +17,9 @@ country: "Polonya"
 city: "Wrocław"
 eventStart: 2027-06-11
 eventEnd: 2027-06-13
+image: "/events/tangocat-vratislavia-tango.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1661795272188379
 ---
 
 Vratislavia Tango is listed (June 11-13, 2027) in Poland, Wrocław. This is a date and place summary, not a copy of the source programme.

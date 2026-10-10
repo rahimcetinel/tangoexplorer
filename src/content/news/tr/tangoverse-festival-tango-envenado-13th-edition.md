@@ -18,6 +18,9 @@ country: "Argentina"
 city: "Venado Tuerto"
 eventStart: 2026-10-09
 eventEnd: 2026-10-13
+image: "/events/tangoverse-festival-tango-envenado-13th-edition.jpg"
+imageCredit: "Event image (tangoverse.net)"
+imageSourceUrl: https://tangoverse.net/og-image.jpg?v=2
 ---
 
 Festival Tango Envenado - 13th Edition, 9–13 Ekim 2026 tarihlerinde Argentina, Venado Tuerto konumunda planlanıyor. Bu metin kaynak sayfanın kopyası değil; yalnızca tarih, yer ve başlık özetidir.
