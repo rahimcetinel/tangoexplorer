@@ -22,6 +22,7 @@ imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://intango-weekend.de/wp-content/uploads/2026/09/tangofestivalheidelberg.jpg
 edition: 10
 eventWebsite: https://tangofestivalheidelberg.de
+registrationStart: 2026-12-06
 ---
 
 Tango Summer Festival Heidelberg, Eylül 7-13 2026 tarihleri arasında Germany, Heidelberg konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.
