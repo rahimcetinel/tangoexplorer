@@ -20,8 +20,8 @@ eventEnd: 2026-09-28
 image: "/events/tangocat-ephesus-tango-marathon.png"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://ephesustangomarathon.com/assets/images/banner/01-v2026.png?v=2026
-edition: 4
-registrationStart: 2026-05-01
+edition: 5
+registrationStart: 2027-04-15
 eventWebsite: https://www.ephesustangomarathon.com
 ---
 
