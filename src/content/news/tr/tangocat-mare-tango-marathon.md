@@ -17,6 +17,9 @@ country: "Almanya"
 city: "Kressbronn am Bodensee"
 eventStart: 2027-04-15
 eventEnd: 2027-04-18
+image: "/events/tangocat-mare-tango-marathon.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=2002265847069000
 ---
 
 Mare Tango Marathon, Nisan 15-18, 2027 tarihleri arasında Germany, Kressbronn am Bodensee konumunda listeleniyor. Bu metin kaynak sitedeki programın kopyası değil; yalnızca tarih, yer ve başlık özetidir.
