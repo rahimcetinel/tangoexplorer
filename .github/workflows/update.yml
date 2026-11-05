@@ -24,7 +24,9 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          # Astro >=7.4 requires Node >=22.23.4, and the "22" alias can resolve to
+          # an older runner patch; use the LTS major we also build with locally.
+          node-version: "24"
           cache: npm
 
       - uses: actions/cache@v4
