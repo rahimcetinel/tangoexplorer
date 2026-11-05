@@ -37,3 +37,7 @@ Thumbs.db
 /test-results/
 /playwright-report/
 /blob-report/
+
+# local tooling / caches
+.npm-cache/
+.tools/
