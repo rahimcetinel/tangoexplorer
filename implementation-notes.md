@@ -47,6 +47,7 @@
 - Yerel build: Node 24 + Vite 8.2.2’de `astro sync` `require is not defined` (picomatch 2 CJS, Vite module runner) hatası veriyor; CI Node 22 kullandığı için orada sorun yok. Build doğrulaması CI’da (veya Node 22 ile) yapılmalı.
 - Yerel build düzeltmesi: hata, `picomatch` (CJS) modülünün Vite SSR runner’ında ESM’e çevrilmeden inline edilmesinden geliyordu (Windows’a özgü). `astro.config.mjs` artık `picomatch` bare specifier’ını `picomatch-esm.mjs` sarmalayıcısına alias’lıyor (`createRequire` ile gerçek paketi yükler); `astro sync` ve content tipleri üretimi çalışıyor. Bu sandbox’ta tam `astro build` yine koşmaz: esbuild’i alt süreç olarak açamıyor (`spawn EPERM`); normal terminalde esbuild açılabildiği için build alınabilir.
 - 2026-11-05: `npm audit fix` sonrası astro 7.4.5, vite 8.3.6, zod 4.6.7, sharp 0.35.5; `npm audit` **0 açık**. Yerel Windows build doğrulandı: **940 sayfa**, `Complete!` (alias bu sürümlerle de çalışıyor).
+- Astro **7.4.0**'a sabitlendi (exact): 7.4.1+ `node >=22.23.4` istiyor, GitHub runner'ı `node-version: "22"` ile 22.23.3 verdiği için CI build'i kırıldı; 7.4.0 `>=22.22.0` kabul ediyor ve 7.3.2'deki güvenlik açığını da kapatıyor. Kalıcı çözüm CI'ı Node 24'e almak, ama bu `.github/workflows/update.yml` değişikliği PAT'te `workflow` scope'u gerektiriyor.
 - `tangoexplorer-cf-details.md` / `tangoexplorer-secrets.txt` `.gitignore`’a eklendi (sırlar repoya girmesin).
 
 ## Test suite
