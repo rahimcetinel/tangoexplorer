@@ -46,6 +46,7 @@
 - Milonga listesinde başlangıç/bitiş saati **iki satır** (`.app-mitem-time` flex column, bitiş %62 opaklık). Mobilde 56px kolona “20:00–01:00” sığmıyor, isim kolonuna taşıyordu.
 - Yerel build: Node 24 + Vite 8.2.2’de `astro sync` `require is not defined` (picomatch 2 CJS, Vite module runner) hatası veriyor; CI Node 22 kullandığı için orada sorun yok. Build doğrulaması CI’da (veya Node 22 ile) yapılmalı.
 - Yerel build düzeltmesi: hata, `picomatch` (CJS) modülünün Vite SSR runner’ında ESM’e çevrilmeden inline edilmesinden geliyordu (Windows’a özgü). `astro.config.mjs` artık `picomatch` bare specifier’ını `picomatch-esm.mjs` sarmalayıcısına alias’lıyor (`createRequire` ile gerçek paketi yükler); `astro sync` ve content tipleri üretimi çalışıyor. Bu sandbox’ta tam `astro build` yine koşmaz: esbuild’i alt süreç olarak açamıyor (`spawn EPERM`); normal terminalde esbuild açılabildiği için build alınabilir.
+- 2026-11-05: `npm audit fix` sonrası astro 7.4.5, vite 8.3.6, zod 4.6.7, sharp 0.35.5; `npm audit` **0 açık**. Yerel Windows build doğrulandı: **940 sayfa**, `Complete!` (alias bu sürümlerle de çalışıyor).
 - `tangoexplorer-cf-details.md` / `tangoexplorer-secrets.txt` `.gitignore`’a eklendi (sırlar repoya girmesin).
 
 ## Test suite
