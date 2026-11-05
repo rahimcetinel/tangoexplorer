@@ -41,3 +41,6 @@ Thumbs.db
 # local tooling / caches
 .npm-cache/
 .tools/
+
+# local launcher logs
+.logs/

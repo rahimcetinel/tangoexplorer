@@ -49,6 +49,7 @@
 - 2026-11-05: `npm audit fix` sonrası astro 7.4.5, vite 8.3.6, zod 4.6.7, sharp 0.35.5; `npm audit` **0 açık**. Yerel Windows build doğrulandı: **940 sayfa**, `Complete!` (alias bu sürümlerle de çalışıyor).
 - Astro **7.4.0**'a sabitlenmişti çünkü 7.4.1+ `node >=22.23.4` istiyor, GitHub runner'ı `node-version: "22"` ile 22.23.3 veriyordu. Kalıcı çözüm uygulandı: **CI artık Node 24** (`.github/workflows/update.yml`) ve astro `^7.4.5` (pin kalktı); `npm audit` 0 açık. Yerel build Node 24 ile doğrulandı.
 - `tangoexplorer-cf-details.md` / `tangoexplorer-secrets.txt` `.gitignore`’a eklendi (sırlar repoya girmesin).
+- Görsel doğrulama: `agentic-python/visual-check.mjs` (`npm run check:visual`) 5 sayfa × mobil/masaüstü ekran görüntüsü alır (`agentic-python/out/visual/`), yatay taşma ve milonga saat kolonu çakışmasını ölçer. Tarayıcı: `PW_WS_ENDPOINT`, yoksa `.logs/playwright-server.log`’daki adres, yoksa süreç içi Chromium (sandbox’ta tam erişim ister). DSH sandbox’ı tarayıcı alt süreci açamadığı için sunucu DSH dışında çalışmalı: `start-dsh.cmd` bunu tek komuta indirir (sunucu + dsh); sadece sunucu için `node_modules\.bin\playwright run-server > .logs\playwright-server.log 2>&1`.
 
 ## Test suite
 
