@@ -1625,10 +1625,21 @@ body.detail-open {
 }
 
 .app-mitem-time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
   font-size: 0.78rem;
   font-weight: 700;
+  line-height: 1.2;
   color: var(--color-burgundy);
   white-space: nowrap;
+}
+
+/* End time is secondary: same column, dimmed so the pair reads as start → end. */
+.app-mitem-time-end {
+  font-weight: 600;
+  opacity: 0.62;
 }
 
 .app-mitem-body {

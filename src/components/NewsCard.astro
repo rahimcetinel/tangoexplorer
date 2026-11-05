@@ -3,6 +3,7 @@ import { categoryLabels, formatNewsDate, type Locale } from '../lib/i18n';
 import { newsPath } from '../lib/i18n';
 import { newsSlug, type NewsEntry } from '../lib/news';
 import { isoDate } from '../lib/filters';
+import { countryId } from '../lib/countries';
 import EventImage from './EventImage.astro';
 
 interface Props {
@@ -19,7 +20,7 @@ const cardAttrs = {
   'data-card': '',
   'data-kinds': post.data.kinds.join(','),
   'data-format': post.data.format,
-  'data-country': post.data.country ?? '',
+  'data-country': countryId(post.data.country),
   'data-city': post.data.city ?? '',
   'data-source': post.data.sourceKey,
   'data-start': isoDate(post.data.eventStart),

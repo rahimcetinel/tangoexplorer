@@ -12,6 +12,7 @@ import {
 } from '../lib/i18n';
 import type { NewsEntry } from '../lib/news';
 import { uniqueSorted, citiesByCountry } from '../lib/filters';
+import { countryOptions } from '../lib/countries';
 import { DAYS_ORDER, HOY_REGIONS } from '../lib/hoy';
 import { countByRegion, regionLabels, regionPath, regions } from '../lib/regions';
 
@@ -29,10 +30,7 @@ const kinds = kindLabels[locale];
 const usedKinds = (['festival', 'marathon'] as const).filter((kind) =>
   posts.some((post) => post.data.kinds.includes(kind)),
 );
-const countries = uniqueSorted(
-  posts.map((post) => post.data.country),
-  locale,
-);
+const countries = countryOptions(posts, locale);
 const cities = uniqueSorted(
   posts.map((post) => post.data.city),
   locale,
@@ -180,7 +178,7 @@ function chipHref(value: string): string {
                   <select data-filter-select="country">
                     <option value="">{copy.filterAll}</option>
                     {countries.map((country) => (
-                      <option value={country}>{country}</option>
+                      <option value={country.id}>{country.label}</option>
                     ))}
                   </select>
                 </span>

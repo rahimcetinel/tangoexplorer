@@ -1,4 +1,6 @@
 import { initDetailPanel } from './detail-panel';
+import { countryId, countryLabelById } from '../lib/countries';
+import type { Locale } from '../lib/i18n';
 
 type DetailApi = { open: (url: string, push: boolean, focus?: boolean) => void } | null;
 
@@ -27,7 +29,8 @@ function readUrl(): Filters {
   const params = new URLSearchParams(window.location.search);
   return {
     kind: params.get('kind') ?? '',
-    country: params.get('country') ?? '',
+    // Older links used raw frontmatter values ("Almanya"); map them to canonical ids.
+    country: countryId(params.get('country')),
     city: params.get('city') ?? '',
     q: params.get('q') ?? '',
   };
@@ -314,7 +317,12 @@ function initFilters(detail: DetailApi) {
     if (!el) {
       return;
     }
-    const parts = [filters.kind, filters.country, filters.city, filters.q].filter(Boolean);
+    const parts = [
+      filters.kind,
+      countryLabelById(filters.country, locale as Locale),
+      filters.city,
+      filters.q,
+    ].filter(Boolean);
     el.innerHTML = parts.length
       ? parts.map((part) => `<span class="is-chip">${escapeHtml(part)}</span>`).join('')
       : '';

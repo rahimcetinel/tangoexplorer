@@ -1,5 +1,6 @@
 import { sourceKeys, type NewsEntry } from './news';
 import { kindLabels, formatLabels, monthLabels, monthShort, whenPresets, type Locale } from './i18n';
+import { countryId } from './countries';
 
 export { kindLabels, formatLabels, monthLabels, monthShort, whenPresets };
 export const sourceLabels: Record<(typeof sourceKeys)[number], string> = {
@@ -75,7 +76,7 @@ export function dateStripFrom(posts: NewsEntry[], from: Date = new Date()): Arra
 export function citiesByCountry(posts: NewsEntry[]): Record<string, string[]> {
   const map: Record<string, Set<string>> = {};
   for (const post of posts) {
-    const country = post.data.country;
+    const country = countryId(post.data.country);
     const city = post.data.city;
     if (!country || !city) {
       continue;

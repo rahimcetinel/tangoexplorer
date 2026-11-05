@@ -28,6 +28,22 @@ function distinctPalette(count: number): string[] {
   return colors;
 }
 
+/**
+ * Start and end on separate lines: on phones the two values used to sit in a
+ * 56px column as "20:00–01:00" and overflowed into the name.
+ */
+export function milongaTimeHtml(start?: string, end?: string): string {
+  if (!start) {
+    return `<span class="app-mitem-time">—</span>`;
+  }
+  const endHtml = end ? `<span class="app-mitem-time-end">${escapeHtml(end)}</span>` : '';
+  return (
+    `<span class="app-mitem-time">` +
+    `<span class="app-mitem-time-start">${escapeHtml(start)}</span>${endHtml}` +
+    `</span>`
+  );
+}
+
 export function initMilongas() {
   const shell = document.querySelector<HTMLElement>('[data-app-shell]');
   const listEl = document.querySelector<HTMLElement>('[data-milonga-list]');
@@ -160,12 +176,11 @@ export function initMilongas() {
   }
 
   function itemHtml(item: Milonga): string {
-    const time = item.start ? `${item.start}${item.end ? `–${item.end}` : ''}` : '—';
     const meta = item.venue || item.area;
     const typeLabel = item.type === 'practica' ? copy.milongaTypePractica : copy.milongaTypeMilonga;
     return (
       `<button type="button" class="app-mitem${selected === item.id ? ' is-selected' : ''}" data-milonga-id="${escapeHtml(item.id)}">` +
-      `<span class="app-mitem-time">${escapeHtml(time)}</span>` +
+      milongaTimeHtml(item.start, item.end) +
       `<span class="app-mitem-body">` +
       `<span class="app-mitem-name">${escapeHtml(item.name)}</span>` +
       (meta ? `<span class="app-mitem-meta">${escapeHtml(meta)}</span>` : '') +

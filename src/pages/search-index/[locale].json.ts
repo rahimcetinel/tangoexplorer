@@ -1,6 +1,7 @@
 import type { APIRoute, GetStaticPaths } from 'astro';
 import { getNews, newsSlug } from '../../lib/news';
 import { groupingDate, monthKey, monthLabel } from '../../lib/timeline';
+import { countryId, countryLabelById } from '../../lib/countries';
 import type { Locale } from '../../lib/i18n';
 
 export const getStaticPaths: GetStaticPaths = () => [
@@ -14,6 +15,11 @@ export const GET: APIRoute = async ({ params }) => {
   const payload = posts.map((post) => {
     const d = post.data;
     const date = groupingDate(post);
+    const country = countryId(d.country);
+    // Search both spellings ("Almanya" on the English site still finds Germany).
+    const countryWords = [...new Set([d.country, countryLabelById(country, 'en'), countryLabelById(country, 'tr')])]
+      .filter(Boolean)
+      .join(' ');
     return {
       s: newsSlug(post),
       t: d.title,
@@ -21,10 +27,10 @@ export const GET: APIRoute = async ({ params }) => {
       ml: monthLabel(date, locale),
       c: d.category,
       k: d.kinds.join(','),
-      co: d.country ?? '',
+      co: country,
       ci: d.city ?? '',
       w: d.eventLocation ?? [d.city, d.country].filter(Boolean).join(', '),
-      q: [d.title, d.summary, d.eventName, d.city, d.country, d.eventLocation]
+      q: [d.title, d.summary, d.eventName, d.city, countryWords, d.eventLocation]
         .filter(Boolean)
         .join(' ')
         .toLowerCase(),

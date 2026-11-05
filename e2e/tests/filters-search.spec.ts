@@ -61,6 +61,26 @@ test('country narrows cities and changing country drops the city', async ({ page
   await expect.poll(() => searchParams(page).get('city')).toBeNull();
 });
 
+test('country filter lists each country once', async ({ page }) => {
+  await page.goto('/');
+  await openFilters(page);
+  const labels = await page
+    .locator('[data-filter-select="country"] option')
+    .evaluateAll((nodes) =>
+      nodes.map((node) => (node as HTMLOptionElement).textContent?.trim() ?? '').filter(Boolean),
+    );
+  expect(labels.length).toBeGreaterThan(10);
+  const duplicates = labels.filter((label, index) => labels.indexOf(label) !== index);
+  expect(duplicates, `duplicate country options: ${duplicates.join(', ')}`).toEqual([]);
+});
+
+test('legacy raw country value in the URL maps to the canonical id', async ({ page }) => {
+  await page.goto('/?country=Almanya');
+  await expect.poll(() => searchParams(page).get('country')).toBe('germany');
+  await expect(page.locator('[data-filter-select="country"]')).toHaveValue('germany');
+  await expect(page.locator('[data-results]')).toBeVisible();
+});
+
 test('clear removes kind, country, city, and query', async ({ page }) => {
   await page.goto('/');
   await openFilters(page);
