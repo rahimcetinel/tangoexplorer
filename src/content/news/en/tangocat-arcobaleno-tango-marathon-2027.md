@@ -17,6 +17,9 @@ country: "İtalya"
 city: "Ascoli Piceno"
 eventStart: 2027-05-14
 eventEnd: 2027-05-16
+image: "/events/tangocat-arcobaleno-tango-marathon-2027.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.arcobalenotangomarathon.com/2027/img/locandina-2027.jpg
 ---
 
 Arcobaleno Tango Marathon 2027 is listed (May 14-16, 2027) in Italy, Ascoli Piceno. This is a date and place summary, not a copy of the source programme.
