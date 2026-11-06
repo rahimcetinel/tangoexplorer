@@ -83,10 +83,24 @@ jobs:
           sleep 10
           npm run check:visual
 
+      # Behaviour suite against the freshly deployed site. Runs even when the
+      # visual check fails so both signals are available in one run.
+      - name: E2E tests (live site)
+        if: always()
+        run: npm run test:e2e
+
       - name: Upload visual check screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: visual-check
           path: agentic-python/out/visual
+          if-no-files-found: warn
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
           if-no-files-found: warn
