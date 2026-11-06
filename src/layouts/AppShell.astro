@@ -9,7 +9,7 @@ interface Props {
   title: string;
   description?: string;
   locale: Locale;
-  mode?: 'home' | 'category' | 'milonga' | 'page';
+  mode?: 'home' | 'category' | 'milonga' | 'page' | 'search';
   posts: NewsEntry[];
   ogImage?: string;
   ogType?: OgType;
@@ -31,8 +31,8 @@ const {
   closePath,
 } = Astro.props;
 const copy = ui[locale];
-const isBoard = mode === 'home' || mode === 'category' || mode === 'milonga';
-const drawer = mode === 'home' || mode === 'category';
+const isBoard = mode === 'home' || mode === 'category' || mode === 'milonga' || mode === 'search';
+const drawer = mode === 'home' || mode === 'category' || mode === 'search';
 const resolvedClosePath = closePath ?? homePath(locale);
 ---
 

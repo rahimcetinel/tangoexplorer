@@ -41,6 +41,18 @@ test('a typo falls back to close matches', async ({ page }) => {
   await expect(page.locator('.app-search-result').first()).toBeVisible();
 });
 
+test('a result opens in the right-hand drawer and close returns to the query', async ({ page }) => {
+  await page.goto('/search?q=istanbul');
+  await page.locator('.app-search-result').first().click();
+  const panel = page.locator('[data-detail-panel]');
+  await expect(panel).toHaveClass(/is-open/);
+  await expect(page).toHaveURL(/\/news\//);
+  await expect(panel.locator('[data-article-frame]')).toContainText(/Istanbul/);
+  await page.locator('[data-detail-close]').click();
+  await expect(page).toHaveURL(/\/search\?q=istanbul/);
+  await expect(panel).not.toHaveClass(/is-open/);
+});
+
 test('a query with no matches shows the empty state', async ({ page }) => {
   await page.goto('/search?q=zzzz-no-such-tango-xyz');
   await expect(page.locator('.app-search-empty-title')).toHaveText('No matches');

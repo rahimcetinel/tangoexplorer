@@ -1221,6 +1221,15 @@ body:has(.app-shell) {
   min-width: 0;
 }
 
+/* The drawer reuses the article markup, but a drop cap reads as a bug at
+   panel width. */
+.app-detail .drop-cap::first-letter {
+  float: none;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+}
+
 .app-detail-eyebrow {
   font-size: 0.66rem;
   font-weight: 700;
@@ -2104,8 +2113,7 @@ body.detail-open {
 
 /* Search page (the pill-shaped .app-search belongs to the top bar, do not reuse it) */
 .search-page {
-  max-width: 960px;
-  margin: 0 auto;
+  max-width: 900px;
   width: 100%;
 }
 

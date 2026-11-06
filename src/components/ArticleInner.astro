@@ -90,7 +90,7 @@ const region = regionOf(d.country);
       </div>
     )
   }
-  <div class="app-article-body drop-cap">
+  <div class:list={['app-article-body', variant === 'page' && 'drop-cap']}>
     <Content />
   </div>
   <EventBox post={post} locale={locale} duration={duration} showImage={false} />

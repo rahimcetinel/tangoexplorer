@@ -1,6 +1,7 @@
 ---
 import AppShell from '../layouts/AppShell.astro';
 import Header from '../components/Header.astro';
+import DetailPanel from '../components/DetailPanel.astro';
 import { getNews } from '../lib/news';
 import { homePath, kindLabels, ui, whenPresets } from '../lib/i18n';
 
@@ -14,7 +15,8 @@ const kindOrder = ['festival', 'marathon', 'encuentro', 'workshop', 'pratik'] as
   title={`${copy.searchTitle} — ${copy.brand}`}
   description={copy.searchLead}
   locale="en"
-  mode="page"
+  mode="search"
+  closePath="/search"
   posts={posts}
 >
   <Fragment slot="center">
@@ -89,8 +91,13 @@ const kindOrder = ['festival', 'marathon', 'encuentro', 'workshop', 'pratik'] as
       </noscript>
     </main>
   </Fragment>
+  <Fragment slot="detail">
+    <DetailPanel locale="en" />
+  </Fragment>
 </AppShell>
 <script>
+  import { initAppShell } from '../scripts/app-shell';
   import { initSearchPage } from '../scripts/search-page';
+  initAppShell();
   initSearchPage();
 </script>

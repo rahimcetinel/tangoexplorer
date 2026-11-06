@@ -1,4 +1,4 @@
----
+﻿---
 import MenuPanel from './MenuPanel.astro';
 import { aboutPath, homePath, milongasPath, ui, type Locale } from '../lib/i18n';
 import type { NewsEntry } from '../lib/news';
@@ -6,7 +6,7 @@ import { countByRegion, regionLabels, regionPath, regions } from '../lib/regions
 
 interface Props {
   locale: Locale;
-  mode: 'home' | 'category' | 'milonga' | 'page';
+  mode: 'home' | 'category' | 'milonga' | 'page' | 'search';
   posts: NewsEntry[];
 }
 
@@ -117,3 +117,4 @@ const todayShort = new Intl.DateTimeFormat('en-GB', {
   import { initTopBar } from '../scripts/top-bar';
   initTopBar();
 </script>
+

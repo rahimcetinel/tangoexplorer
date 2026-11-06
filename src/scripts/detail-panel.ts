@@ -33,7 +33,7 @@ export function initDetailPanel() {
   const panel = document.querySelector<HTMLElement>('[data-detail-panel]');
   const frame = document.querySelector<HTMLElement>('[data-article-frame]');
   const backdrop = document.querySelector<HTMLElement>('[data-detail-backdrop]');
-  const boardMode = shell?.dataset.mode === 'home' || shell?.dataset.mode === 'category';
+  const boardMode = ['home', 'category', 'search'].includes(shell?.dataset.mode ?? '');
   if (!shell || !panel || !frame || !boardMode) {
     return null;
   }
@@ -100,7 +100,7 @@ export function initDetailPanel() {
       setOpen(true);
       setSelected(url);
       if (push) {
-        history.pushState({ detail: url }, '', url);
+        history.pushState({ detail: url, from: window.location.href }, '', url);
       }
       if (focus) {
         const focusTarget =
@@ -128,8 +128,9 @@ export function initDetailPanel() {
     setOpen(false);
     setSelected(null);
     if (push) {
-      const query = window.location.search;
-      const next = `${closePath}${query}`;
+      // Return to wherever the drawer was opened from (search keeps its query).
+      const state = window.history.state as { from?: string } | null;
+      const next = state?.from || `${closePath}${window.location.search}`;
       history.pushState({ detail: null }, '', next);
     }
     lastTrigger?.focus();
@@ -184,3 +185,4 @@ export function initDetailPanel() {
 
   return { open, close };
 }
+

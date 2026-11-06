@@ -262,7 +262,7 @@ export function initSearchPage(): void {
           group.items
             .map(
               (item) =>
-                `<li><a class="app-search-result" href="/news/${escapeHtml(item.s)}">` +
+                `<li data-card><a class="app-search-result" href="/news/${escapeHtml(item.s)}" data-detail-link>` +
                 `<span class="app-search-title">${escapeHtml(item.t)}</span>` +
                 `<span class="app-search-meta">` +
                 [item.kn, item.w].filter(Boolean).map((part) => escapeHtml(part)).join(' · ') +
