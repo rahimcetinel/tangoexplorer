@@ -7,6 +7,7 @@ import {
   kindLabels,
   milongasPath,
   weekdaysShort,
+  whenPresets,
   ui,
   type Locale,
 } from '../lib/i18n';
@@ -172,6 +173,18 @@ function chipHref(value: string): string {
                 </Chip>
               ))}
             </div>
+            <div class="app-acc-sub">{copy.filterWhen}</div>
+            <div class="app-chips" role="group" aria-label={copy.filterWhen}>
+              <button type="button" class="app-chip is-active" data-filter-when="" aria-pressed="true">
+                {copy.filterAll}
+              </button>
+              {whenPresets[locale].map((preset) => (
+                <button type="button" class="app-chip" data-filter-when={preset.id} aria-pressed="false">
+                  {preset.label}
+                </button>
+              ))}
+            </div>
+            <div class="app-rail-summary" data-menu-summary aria-live="polite"></div>
             <div class="app-rail-selects" data-city-map={JSON.stringify(cityMap)} data-i18n-all={copy.filterAll}>
               <label class="app-select-field">
                 <span class="app-select-label">{copy.filterCountry}</span>

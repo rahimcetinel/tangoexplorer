@@ -136,7 +136,7 @@ export const ui = {
     filterUpcoming: 'Upcoming',
     filterClear: 'Clear',
     filterEmpty: 'No stories match these filters.',
-    filterCount: (n: number) => (n === 1 ? '1 story' : `${n} stories`),
+    filterCount: (n: number) => (n === 1 ? '1 event' : `${n} events`),
     event: 'Event',
     date: 'Dates',
     place: 'Place',

@@ -1,3 +1,5 @@
+import { whenWindow } from '../lib/when';
+
 type SearchItem = {
   s: string;
   t: string;
@@ -16,7 +18,6 @@ type SearchItem = {
 };
 
 const PAGE_SIZE = 24;
-const DAY = 86_400_000;
 
 function escapeHtml(value: string): string {
   return value
@@ -35,32 +36,6 @@ function normalize(value: string): string {
     .replace(/ß/g, 'ss')
     .replace(/[’']/g, '')
     .toLowerCase();
-}
-
-function today(): number {
-  const now = new Date();
-  return Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
-}
-
-function iso(ms: number): string {
-  return new Date(ms).toISOString().slice(0, 10);
-}
-
-function windowFor(id: string): { from: string; to: string } | null {
-  const base = today();
-  const weekday = new Date(base).getUTCDay();
-  const mondayOffset = weekday === 0 ? -6 : 1 - weekday;
-  const monday = base + mondayOffset * DAY;
-  if (id === 'this-week') {
-    return { from: iso(monday), to: iso(monday + 6 * DAY) };
-  }
-  if (id === 'this-weekend') {
-    return { from: iso(monday + 4 * DAY), to: iso(monday + 6 * DAY) };
-  }
-  if (id === 'next-week') {
-    return { from: iso(monday + 7 * DAY), to: iso(monday + 13 * DAY) };
-  }
-  return null;
 }
 
 function scoreItem(item: SearchItem, terms: string[]): number {
@@ -188,7 +163,7 @@ export function initSearchPage(): void {
       return;
     }
     const terms = normalize(query).split(/\s+/).filter(Boolean);
-    const filterWindow = windowFor(when);
+    const filterWindow = whenWindow(when);
 
     if (!terms.length && !kind && !when) {
       summary.textContent = '';

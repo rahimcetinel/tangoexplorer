@@ -20,8 +20,12 @@ const copy = ui[locale];
     <span aria-hidden="true">·</span>
     <span class="is-accent"><b>{stats.today}</b> {copy.heroToday.toLowerCase()}</span>
     <span aria-hidden="true">·</span>
-    <span><b>{stats.thisWeekend}</b> {copy.heroThisWeekend.toLowerCase()}</span>
+    <button type="button" class="app-hero-filter" data-filter-when="this-weekend" aria-pressed="false">
+      <b>{stats.thisWeekend}</b> {copy.heroThisWeekend.toLowerCase()}
+    </button>
     <span aria-hidden="true">·</span>
-    <span><b>{stats.thisWeek}</b> {copy.heroThisWeek.toLowerCase()}</span>
+    <button type="button" class="app-hero-filter" data-filter-when="this-week" aria-pressed="false">
+      <b>{stats.thisWeek}</b> {copy.heroThisWeek.toLowerCase()}
+    </button>
   </p>
 </section>

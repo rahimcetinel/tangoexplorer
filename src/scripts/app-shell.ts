@@ -1,10 +1,11 @@
 import { initDetailPanel } from './detail-panel';
 import { countryId, countryLabelById } from '../lib/countries';
-import type { Locale } from '../lib/i18n';
+import { whenPresets, type Locale } from '../lib/i18n';
+import { overlapsWindow, whenWindow } from '../lib/when';
 
 type DetailApi = { open: (url: string, push: boolean, focus?: boolean) => void } | null;
 
-type Filters = { kind: string; country: string; city: string; q: string };
+type Filters = { kind: string; country: string; city: string; q: string; when: string };
 
 type IndexItem = {
   s: string;
@@ -16,13 +17,15 @@ type IndexItem = {
   co: string;
   ci: string;
   w: string;
+  st?: string;
+  en?: string;
   q: string;
 };
 
-const KEYS = ['kind', 'country', 'city', 'q'] as const;
+const KEYS = ['kind', 'country', 'city', 'q', 'when'] as const;
 
 function emptyFilters(): Filters {
-  return { kind: '', country: '', city: '', q: '' };
+  return { kind: '', country: '', city: '', q: '', when: '' };
 }
 
 function readUrl(): Filters {
@@ -33,6 +36,7 @@ function readUrl(): Filters {
     country: countryId(params.get('country')),
     city: params.get('city') ?? '',
     q: params.get('q') ?? '',
+    when: params.get('when') ?? '',
   };
 }
 
@@ -239,6 +243,7 @@ function initFilters(detail: DetailApi) {
   const emptyEl = document.querySelector<HTMLElement>('[data-filter-empty]');
   const searches = [...document.querySelectorAll<HTMLInputElement>('[data-search-input]')];
   const chips = [...document.querySelectorAll<HTMLElement>('[data-filter-chip]')];
+  const whenChips = [...document.querySelectorAll<HTMLElement>('[data-filter-when]')];
   const selects = [...document.querySelectorAll<HTMLSelectElement>('[data-filter-select]')];
   const cityMapEl = document.querySelector<HTMLElement>('[data-city-map]');
   const cityMap = cityMapEl ? (JSON.parse(cityMapEl.dataset.cityMap || '{}') as Record<string, string[]>) : {};
@@ -300,6 +305,12 @@ function initFilters(detail: DetailApi) {
         chip.setAttribute('aria-pressed', String(on));
       }
     });
+    whenChips.forEach((chip) => {
+      const value = chip.dataset.filterWhen || '';
+      const on = value ? filters.when === value : !filters.when;
+      chip.classList.toggle('is-active', on);
+      chip.setAttribute('aria-pressed', String(on));
+    });
     selects.forEach((select) => {
       const key = select.dataset.filterSelect as 'country' | 'city';
       if (key !== 'city') {
@@ -313,7 +324,11 @@ function initFilters(detail: DetailApi) {
   }
 
   function isActive(): boolean {
-    return Boolean(filters.kind || filters.country || filters.city || filters.q);
+    return Boolean(filters.kind || filters.country || filters.city || filters.q || filters.when);
+  }
+
+  function whenLabel(value: string): string {
+    return whenPresets.en.find((preset) => preset.id === value)?.label ?? value;
   }
 
   function renderSummary() {
@@ -325,6 +340,7 @@ function initFilters(detail: DetailApi) {
       filters.kind,
       countryLabelById(filters.country, locale as Locale),
       filters.city,
+      filters.when ? whenLabel(filters.when) : '',
       filters.q,
     ].filter(Boolean);
     el.innerHTML = parts.length
@@ -352,6 +368,7 @@ function initFilters(detail: DetailApi) {
       return [];
     }
     const query = filters.q.toLowerCase();
+    const window = whenWindow(filters.when);
     const items = index.filter((item) => {
       if (boardCategory && item.c !== boardCategory) {
         return false;
@@ -365,6 +382,9 @@ function initFilters(detail: DetailApi) {
       if (filters.city && item.ci !== filters.city) {
         return false;
       }
+      if (!overlapsWindow(item, window)) {
+        return false;
+      }
       if (query && !item.q.includes(query)) {
         return false;
       }
@@ -376,17 +396,32 @@ function initFilters(detail: DetailApi) {
     }
     const tpl = shell!.dataset.i18nCount || '{n}';
     const countLabel = tpl.replace('{n}', String(items.length));
+    const visible = items.slice(0, 80);
+    const groups = new Map<string, { label: string; items: IndexItem[] }>();
+    for (const item of visible) {
+      const group = groups.get(item.m);
+      if (group) {
+        group.items.push(item);
+      } else {
+        groups.set(item.m, { label: item.ml, items: [item] });
+      }
+    }
     results.innerHTML =
-      `<p class="app-results-count">${escapeHtml(countLabel)}</p>` +
-      items
-        .slice(0, 80)
+      `<p class="app-results-head"><span class="app-results-count">${escapeHtml(countLabel)}</span>` +
+      `<button type="button" class="app-results-clear" data-filter-clear>Clear</button></p>` +
+      [...groups.values()]
         .map(
-          (item) =>
-            `<button type="button" class="app-result" data-result data-month="${item.m}" data-href="${newsBase}${item.s}">` +
-            `<span class="app-result-month">${escapeHtml(item.ml)}</span>` +
-            `<span class="app-result-title">${escapeHtml(item.t)}</span>` +
-            (item.w ? `<span class="app-result-where">${escapeHtml(item.w)}</span>` : '') +
-            `</button>`,
+          (group) =>
+            `<p class="app-results-month">${escapeHtml(group.label)}</p>` +
+            group.items
+              .map(
+                (item) =>
+                  `<button type="button" class="app-result" data-result data-month="${item.m}" data-href="${newsBase}${item.s}">` +
+                  `<span class="app-result-title">${escapeHtml(item.t)}</span>` +
+                  (item.w ? `<span class="app-result-where">${escapeHtml(item.w)}</span>` : '') +
+                  `</button>`,
+              )
+              .join(''),
         )
         .join('');
     return items;
@@ -407,17 +442,8 @@ function initFilters(detail: DetailApi) {
     }
     await loadIndex();
     const items = renderResults();
-    if (options.preview && items.length && !window.matchMedia('(max-width: 1279px)').matches) {
+    if (options.preview && filters.q && items.length && !window.matchMedia('(max-width: 1279px)').matches) {
       detail?.open(`${newsBase}${items[0]!.s}`, false, false);
-    }
-  }
-
-  // On overlay layouts the open menu covers the results, so close it after a
-  // filter change so the filtered list is actually visible; on desktop the menu
-  // is a dropdown and can stay open for multi-select.
-  function closeMenuOnOverlay() {
-    if (window.matchMedia('(max-width: 1279px)').matches) {
-      closeMenu();
     }
   }
 
@@ -429,8 +455,8 @@ function initFilters(detail: DetailApi) {
     if (target.closest('[data-filter-clear]')) {
       event.preventDefault();
       filters = emptyFilters();
-      void apply({ preview: true });
-      closeMenuOnOverlay();
+      void apply();
+      closeMenu();
       return;
     }
     const result = target.closest<HTMLElement>('[data-result]');
@@ -445,6 +471,15 @@ function initFilters(detail: DetailApi) {
       }
       return;
     }
+    const whenChip = target.closest<HTMLElement>('[data-filter-when]');
+    if (whenChip) {
+      event.preventDefault();
+      const value = whenChip.dataset.filterWhen || '';
+      filters.when = filters.when === value ? '' : value;
+      void apply();
+      closeMenu();
+      return;
+    }
     const chip = target.closest<HTMLElement>('[data-filter-chip]');
     if (!chip) {
       return;
@@ -453,8 +488,8 @@ function initFilters(detail: DetailApi) {
     const key = chip.dataset.filterChip as 'kind' | 'country';
     const value = chip.dataset.value || '';
     filters[key] = filters[key] === value ? '' : value;
-    void apply({ preview: true });
-    closeMenuOnOverlay();
+    void apply();
+    closeMenu();
   });
 
   document.addEventListener('change', (event) => {
@@ -468,8 +503,8 @@ function initFilters(detail: DetailApi) {
       filters.city = '';
     }
     syncControls();
-    void apply({ preview: true });
-    closeMenuOnOverlay();
+    void apply();
+    closeMenu();
   });
 
   type Searcher = { input: HTMLInputElement; box: HTMLElement | null; items: IndexItem[]; active: number };
@@ -520,6 +555,7 @@ function initFilters(detail: DetailApi) {
         if (filters.kind && !item.k.split(',').includes(filters.kind)) return false;
         if (filters.country && item.co !== filters.country) return false;
         if (filters.city && item.ci !== filters.city) return false;
+        if (!overlapsWindow(item, whenWindow(filters.when))) return false;
         return item.q.includes(q);
       })
       .slice(0, limit);

@@ -102,6 +102,18 @@ test('a query with no hits shows the empty copy', async ({ page }) => {
   await expect(page.locator('.app-viewport')).toBeHidden();
 });
 
+test('the weekend chip filters the board by date and writes the URL', async ({ page }, testInfo) => {
+  await page.goto('/');
+  const chip = page.locator('.app-hero-filter[data-filter-when="this-weekend"]');
+  await expect(chip).toBeVisible();
+  await chip.click();
+  await expect.poll(() => searchParams(page).get('when')).toBe('this-weekend');
+  await expect(page.locator('[data-results]')).toBeVisible();
+  await expect(page.locator('.app-results-count')).toContainText(/event/);
+  await expect(chip).toHaveClass(/is-active/);
+  await expect(page.locator('[data-detail-panel]')).not.toHaveClass(/is-open/);
+});
+
 test('legacy filter params are ignored and stripped', async ({ page }) => {
   await page.goto('/?year=2026&month=10&format=etkinlik&source=tangocat&when=this-week');
   await expect.poll(() => searchParams(page).toString()).toBe('');

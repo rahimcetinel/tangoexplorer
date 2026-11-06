@@ -520,6 +520,25 @@ body:has(.app-shell) {
   min-height: 44px;
 }
 
+.app-rail-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 0;
+}
+
+.app-rail-summary:empty {
+  display: none;
+}
+
+.app-rail-summary .is-chip {
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  color: var(--color-ink);
+  font-size: 0.72rem;
+}
+
 .app-nav {
   display: flex;
   flex-direction: column;
@@ -917,6 +936,10 @@ body:has(.app-shell) {
   z-index: 50;
 }
 
+.app-results > * {
+  max-width: 900px;
+}
+
 .app-results-count {
   font-size: 0.72rem;
   font-weight: 700;
@@ -927,9 +950,9 @@ body:has(.app-shell) {
 }
 
 .app-result {
-  display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
-  gap: 2px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
   width: 100%;
   text-align: left;
   padding: 14px 10px;
@@ -970,9 +993,37 @@ body:has(.app-shell) {
 }
 
 .app-result-where {
-  grid-column: 2;
   font-size: 0.78rem;
   color: var(--color-ink-soft);
+}
+
+.app-results-month {
+  margin: 18px 0 4px;
+  padding: 0 10px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-burgundy);
+}
+
+.app-results-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.app-results-clear {
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-burgundy);
+  cursor: pointer;
 }
 
 .app-results-skeleton {
@@ -2088,6 +2139,30 @@ body.detail-open {
 
 .app-hero-meta .is-accent b {
   color: var(--color-orange);
+}
+
+.app-hero-filter {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border-bottom: 1px dotted var(--color-ink-soft);
+}
+
+.app-hero-filter:hover,
+.app-hero-filter.is-active {
+  color: var(--color-burgundy);
+  border-bottom-color: var(--color-burgundy);
+}
+
+.app-hero-filter b {
+  color: var(--color-ink);
+}
+
+.app-hero-filter.is-active b {
+  color: var(--color-burgundy);
 }
 
 @media (max-width: 859px) {
