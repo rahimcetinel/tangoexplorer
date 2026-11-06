@@ -294,7 +294,11 @@ function initFilters(detail: DetailApi) {
       const value = chip.dataset.value || '';
       const on = filters[key] === value && Boolean(value);
       chip.classList.toggle('is-active', on);
-      chip.setAttribute('aria-pressed', String(on));
+      if (chip.tagName === 'A') {
+        chip.setAttribute('aria-current', on ? 'true' : 'false');
+      } else {
+        chip.setAttribute('aria-pressed', String(on));
+      }
     });
     selects.forEach((select) => {
       const key = select.dataset.filterSelect as 'country' | 'city';
@@ -574,6 +578,14 @@ function initFilters(detail: DetailApi) {
     closeMenu();
     if (active) {
       active.blur();
+    }
+    if (filters.q) {
+      const params = new URLSearchParams({ q: filters.q });
+      if (filters.kind) {
+        params.set('kind', filters.kind);
+      }
+      window.location.assign(`/search?${params.toString()}`);
+      return;
     }
     await apply();
   }

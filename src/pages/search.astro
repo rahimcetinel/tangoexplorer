@@ -1,0 +1,96 @@
+---
+import AppShell from '../layouts/AppShell.astro';
+import Header from '../components/Header.astro';
+import { getNews } from '../lib/news';
+import { homePath, kindLabels, ui, whenPresets } from '../lib/i18n';
+
+const copy = ui.en;
+const posts = await getNews('en');
+const kinds = kindLabels.en;
+const kindOrder = ['festival', 'marathon', 'encuentro', 'workshop', 'pratik'] as const;
+---
+
+<AppShell
+  title={`${copy.searchTitle} — ${copy.brand}`}
+  description={copy.searchLead}
+  locale="en"
+  mode="page"
+  posts={posts}
+>
+  <Fragment slot="center">
+    <Header
+      locale="en"
+      crumbs={[
+        { label: copy.home, href: homePath('en') },
+        { label: copy.searchTitle },
+      ]}
+    />
+    <main
+      id="main"
+      class="app-page app-search"
+      data-search-page
+      data-i18n-empty-title={copy.searchEmptyTitle}
+      data-i18n-empty-lead={copy.searchEmptyLead}
+      data-i18n-hint={copy.searchHint}
+      data-i18n-results={copy.searchResults(0).replace('0', '{n}')}
+      data-i18n-more={copy.searchLoadMore}
+      data-i18n-close={copy.searchCloseMatches}
+    >
+      <h1 class="app-page-title">{copy.searchTitle}</h1>
+      <p class="app-prose">{copy.searchLead}</p>
+
+      <form class="app-search-form" action="/search" method="get" role="search" data-search-form>
+        <label class="sr-only" for="search-q">{copy.searchLabel}</label>
+        <input
+          id="search-q"
+          type="search"
+          name="q"
+          data-search-input
+          placeholder={copy.searchPlaceholder}
+          autocomplete="off"
+        />
+        <button class="app-btn app-btn-solid" type="submit">{copy.searchLabel}</button>
+      </form>
+
+      <div class="app-search-filters">
+        <div class="app-chips" role="group" aria-label={copy.filterKind} data-kind-chips>
+          <button type="button" class="app-chip is-active" data-search-kind="" aria-pressed="true">
+            {copy.searchAllKinds}
+          </button>
+          {
+            kindOrder.map((kind) => (
+              <button type="button" class="app-chip" data-search-kind={kind} aria-pressed="false">
+                {kinds[kind]}
+              </button>
+            ))
+          }
+        </div>
+        <div class="app-chips" role="group" aria-label={copy.filterWhen} data-when-chips>
+          <button type="button" class="app-chip is-active" data-search-when="" aria-pressed="true">
+            {copy.searchAnyTime}
+          </button>
+          {
+            whenPresets.en.map((preset) => (
+              <button type="button" class="app-chip" data-search-when={preset.id} aria-pressed="false">
+                {preset.label}
+              </button>
+            ))
+          }
+        </div>
+      </div>
+
+      <p class="app-search-summary" data-search-summary aria-live="polite"></p>
+      <div class="app-search-results" data-search-results></div>
+      <p class="app-search-more">
+        <button type="button" class="app-btn" data-search-more hidden>{copy.searchLoadMore}</button>
+      </p>
+      <noscript>
+        <p class="app-prose">{copy.searchNoJs}</p>
+      </noscript>
+    </main>
+  </Fragment>
+</AppShell>
+<script>
+  import { initSearchPage } from '../scripts/search-page';
+  initSearchPage();
+</script>

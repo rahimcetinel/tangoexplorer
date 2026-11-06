@@ -163,7 +163,7 @@ test('Escape closes suggestions before it closes the menu', async ({ page }, tes
   }
 });
 
-test('Enter submits a search and shows a count', async ({ page }, testInfo) => {
+test('Enter opens the search results page', async ({ page }, testInfo) => {
   const index = await loadIndex(page);
   const item = index.find((entry) => entry.ci);
   expect(item).toBeTruthy();
@@ -171,12 +171,9 @@ test('Enter submits a search and shows a count', async ({ page }, testInfo) => {
   const input = await focusSearch(page, testInfo);
   await input.fill(item!.ci);
   await input.press('Enter');
-  await expect.poll(() => searchParams(page).get('q')).toBe(item!.ci);
-  await expect(page.locator('.app-results-count')).toBeVisible();
-  await expect(page.locator('[data-result]').first()).toBeVisible();
-  if (isMobile(testInfo)) {
-    await expect(page.locator('#app-menu')).toBeHidden();
-  }
+  await expect(page).toHaveURL(/\/search\?q=/);
+  await expect(page.locator('[data-search-summary]')).toContainText(/result/);
+  await expect(page.locator('.app-search-result').first()).toBeVisible();
 });
 
 test('category board and its search stay inside that category', async ({ page }, testInfo) => {
@@ -192,14 +189,10 @@ test('category board and its search stay inside that category', async ({ page },
   expect(outside).toBeTruthy();
   const input = await focusSearch(page, testInfo);
   await input.fill(outside!.t);
-  await input.press('Enter');
+  await expect.poll(() => page.locator('[data-result]').count()).toBeGreaterThan(0);
   const titles = await page.locator('[data-result] .app-result-title').allTextContents();
   const festivalTitles = new Set(index.filter((entry) => entry.c === 'festival').map((entry) => entry.t));
-  if (titles.length === 0) {
-    await expect(page.locator('[data-results]')).toContainText('No stories match these filters.');
-  } else {
-    expect(titles.every((title) => festivalTitles.has(title))).toBeTruthy();
-  }
+  expect(titles.every((title) => festivalTitles.has(title))).toBeTruthy();
 });
 
 test('region board only lists that region', async ({ page }) => {

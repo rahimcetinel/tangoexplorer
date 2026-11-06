@@ -12,7 +12,7 @@ const classes = ['app-chip', pressed && 'is-active', className];
 
 {
   href ? (
-    <a class:list={classes} href={href} aria-pressed={String(pressed)} {...rest}>
+    <a class:list={classes} href={href} aria-current={pressed ? 'true' : undefined} {...rest}>
       <slot />
     </a>
   ) : (

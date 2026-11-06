@@ -7,9 +7,13 @@ export type IndexItem = {
   ml: string;
   c: string;
   k: string;
+  kn?: string;
   co: string;
+  cn?: string;
   ci: string;
   w: string;
+  st?: string;
+  en?: string;
   q: string;
 };
 

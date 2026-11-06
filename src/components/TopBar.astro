@@ -88,13 +88,19 @@ const todayShort = new Intl.DateTimeFormat('en-GB', {
     <div class="app-topbar-right">
       {
         showSearch && (
-          <div class="app-search">
+          <form class="app-search" action="/search" method="get" role="search">
             <label class="app-search-field">
               <span class="sr-only">{copy.searchLabel}</span>
-              <input type="search" data-search-input placeholder={copy.searchPlaceholder} autocomplete="off" />
+              <input
+                type="search"
+                name="q"
+                data-search-input
+                placeholder={copy.searchPlaceholder}
+                autocomplete="off"
+              />
             </label>
             <div class="app-suggest" data-suggest role="listbox" hidden />
-          </div>
+          </form>
         )
       }
     </div>
