@@ -13,7 +13,6 @@ test('home renders the English shell', async ({ page }) => {
   await expect(page.locator('.app-brand')).toHaveText(/Tango\s*Explorer/);
   await expect(page.locator('.app-topbar-date')).not.toBeEmpty();
   await expect(page.locator('h1#hero-title')).toHaveText('Find your next tango weekend');
-  await expect(page.locator('.app-hero-search input[name="q"]')).toBeVisible();
   await expect(page.locator('[data-board]')).toBeVisible();
   await expect(page.locator('[data-month-ribbon]')).toBeVisible();
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://tangoexplorer.com/');

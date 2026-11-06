@@ -155,8 +155,7 @@ export const ui = {
     skipToContent: 'Skip to content',
     heroKicker: 'Argentine tango · one calendar',
     heroTitle: 'Find your next tango weekend',
-    heroLede:
-      'Festivals, marathons, encuentros and milongas from around the world — every listing links to its original source.',
+    heroLede: 'Festivals, marathons and milongas worldwide — each listing links to its source.',
     heroSearchPlaceholder: 'City, festival or country',
     heroSearchCta: 'Search',
     heroStatEvents: 'upcoming events',

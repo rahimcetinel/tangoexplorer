@@ -1993,56 +1993,45 @@ body.detail-open {
   outline-color: var(--color-indigo);
 }
 
-/* Hero: what the site is, what is happening, and a way in. */
+/* Compact hero: one line of context, one search box, one line of numbers.
+   The board should start above the fold, so this stays around 110-140px. */
 .app-hero {
   flex: 0 0 auto;
-  padding: 30px 24px 24px;
-  background:
-    radial-gradient(120% 140% at 0% 0%, rgba(168, 50, 80, 0.08), transparent 55%),
-    var(--color-cream);
+  padding: 16px 24px 14px;
+  background: var(--color-cream);
   border-bottom: 1px solid var(--color-rule);
-}
-
-.app-hero-kicker {
-  margin: 0 0 10px;
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-burgundy);
 }
 
 .app-hero-title {
   margin: 0;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(1.9rem, 1.2rem + 2.6vw, 3.1rem);
-  line-height: 1.03;
-  letter-spacing: -0.015em;
+  font-size: clamp(1.4rem, 1.05rem + 1.1vw, 1.9rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
   color: var(--color-ink);
-  max-width: 18ch;
 }
 
 .app-hero-lede {
-  margin: 12px 0 0;
+  margin: 4px 0 0;
   max-width: 62ch;
-  font-size: var(--text-base);
-  line-height: 1.5;
+  font-size: var(--text-sm);
+  line-height: 1.4;
   color: var(--color-ink-soft);
 }
 
 .app-hero-search {
   display: flex;
+  flex: 1 1 320px;
   gap: 8px;
-  margin-top: 18px;
-  max-width: 560px;
+  max-width: 420px;
 }
 
 .app-hero-search input {
   flex: 1;
   min-width: 0;
-  padding: 11px 14px;
-  font-size: var(--text-base);
+  padding: 9px 13px;
+  font-size: var(--text-sm);
   color: var(--color-ink);
   background: var(--color-paper);
   border: 1px solid var(--color-rule);
@@ -2055,7 +2044,7 @@ body.detail-open {
 
 .app-hero-search button {
   flex: 0 0 auto;
-  padding: 11px 20px;
+  padding: 9px 16px;
   font-size: var(--text-sm);
   font-weight: 600;
   color: var(--color-paper);
@@ -2072,9 +2061,9 @@ body.detail-open {
 .app-hero-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 14px 0 0;
-  font-size: var(--text-sm);
+  gap: 4px 8px;
+  margin: 8px 0 0;
+  font-size: 0.78rem;
   color: var(--color-ink-soft);
 }
 
@@ -2082,46 +2071,22 @@ body.detail-open {
   color: var(--color-ink);
 }
 
-.app-hero-now {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 14px;
-  margin: 12px 0 0;
-  padding-top: 12px;
-  border-top: 1px dashed var(--color-rule);
-  font-size: var(--text-sm);
-  color: var(--color-ink-soft);
-}
-
-.app-hero-now-label {
-  font-weight: 600;
-  color: var(--color-ink);
-}
-
-.app-hero-now-item b {
-  color: var(--color-ink);
-}
-
-.app-hero-now-item.is-accent b {
+.app-hero-meta .is-accent b {
   color: var(--color-orange);
 }
 
 @media (max-width: 859px) {
   .app-hero {
-    padding: 22px 18px 18px;
+    padding: 14px 18px 12px;
   }
 
-  .app-hero-title {
-    max-width: none;
+  .app-hero-lede {
+    display: none;
   }
 
   .app-hero-search {
-    flex-direction: column;
-  }
-
-  .app-hero-search button {
-    width: 100%;
+    flex-basis: 100%;
+    max-width: none;
   }
 }
 
