@@ -1993,11 +1993,14 @@ body.detail-open {
   outline-color: var(--color-indigo);
 }
 
-/* Compact hero: one line of context, one search box, one line of numbers.
-   The board should start above the fold, so this stays around 110-140px. */
+/* Single-line masthead: the board starts right below it. */
 .app-hero {
   flex: 0 0 auto;
-  padding: 16px 24px 14px;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  padding: 12px 24px;
   background: var(--color-cream);
   border-bottom: 1px solid var(--color-rule);
 }
@@ -2006,18 +2009,15 @@ body.detail-open {
   margin: 0;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(1.4rem, 1.05rem + 1.1vw, 1.9rem);
-  line-height: 1.12;
+  font-size: clamp(1.25rem, 1rem + 0.9vw, 1.6rem);
+  line-height: 1.15;
   letter-spacing: -0.01em;
   color: var(--color-ink);
+  white-space: nowrap;
 }
 
 .app-hero-lede {
-  margin: 4px 0 0;
-  max-width: 62ch;
-  font-size: var(--text-sm);
-  line-height: 1.4;
-  color: var(--color-ink-soft);
+  display: none;
 }
 
 .app-hero-search {
@@ -2061,8 +2061,8 @@ body.detail-open {
 .app-hero-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 8px;
-  margin: 8px 0 0;
+  gap: 2px 8px;
+  margin: 0;
   font-size: 0.78rem;
   color: var(--color-ink-soft);
 }
@@ -2071,17 +2071,29 @@ body.detail-open {
   color: var(--color-ink);
 }
 
+@media (min-width: 860px) {
+  .app-hero-meta {
+    margin-left: auto;
+  }
+}
+
 .app-hero-meta .is-accent b {
   color: var(--color-orange);
 }
 
 @media (max-width: 859px) {
   .app-hero {
-    padding: 14px 18px 12px;
+    padding: 10px 18px;
+    gap: 2px 12px;
   }
 
-  .app-hero-lede {
-    display: none;
+  .app-hero-title {
+    white-space: normal;
+    font-size: 1.2rem;
+  }
+
+  .app-hero-meta {
+    font-size: 0.72rem;
   }
 
   .app-hero-search {
