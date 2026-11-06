@@ -225,9 +225,10 @@ export function initSearchPage(): void {
     }
 
     found = found.sort((a, b) => {
-      const diff = terms.length ? scoreItem(b, terms) - scoreItem(a, terms) : 0;
-      if (diff !== 0) return diff;
-      return (a.st || '9999').localeCompare(b.st || '9999') || a.t.localeCompare(b.t);
+      const byDate = (a.st || '9999').localeCompare(b.st || '9999');
+      if (byDate !== 0) return byDate;
+      const byScore = terms.length ? scoreItem(b, terms) - scoreItem(a, terms) : 0;
+      return byScore || a.t.localeCompare(b.t);
     });
 
     const countLabel = page!.dataset.i18nResults ?? '{n}';
