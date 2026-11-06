@@ -822,11 +822,27 @@ body:has(.app-shell) {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   padding: 11px 24px;
   background: var(--color-paper);
   border-bottom: 1px solid var(--color-rule);
+  min-width: 0;
+}
+
+.app-ribbon-controls {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.app-ribbon-scroll {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   overflow-x: auto;
+  min-width: 0;
 }
 
 .app-ribbon-label {
@@ -836,6 +852,38 @@ body:has(.app-shell) {
   text-transform: uppercase;
   color: var(--color-ink-soft);
   margin-right: 6px;
+  white-space: nowrap;
+}
+
+.app-mstep {
+  flex: 0 0 auto;
+  min-width: 32px;
+  min-height: 32px;
+  border: 1px solid var(--color-rule);
+  border-radius: 8px;
+  background: var(--color-paper);
+  color: var(--color-ink-soft);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.app-mstep:hover {
+  border-color: var(--color-indigo);
+  color: var(--color-indigo);
+}
+
+.app-mall {
+  flex: 0 0 auto;
+  padding: 6px 10px;
+  border: 0;
+  background: none;
+  color: var(--color-burgundy);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
   white-space: nowrap;
 }
 

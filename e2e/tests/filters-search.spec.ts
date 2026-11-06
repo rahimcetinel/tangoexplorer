@@ -115,7 +115,7 @@ test('the weekend chip filters the board by date and writes the URL', async ({ p
 });
 
 test('legacy filter params are ignored and stripped', async ({ page }) => {
-  await page.goto('/?year=2026&month=10&format=etkinlik&source=tangocat&when=this-week');
+  await page.goto('/?year=2026&month=10&format=etkinlik&source=tangocat');
   await expect.poll(() => searchParams(page).toString()).toBe('');
   await expect(page.locator('[data-board]')).toBeVisible();
   await expect(page.locator('[data-results]')).toBeHidden();

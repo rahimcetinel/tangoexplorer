@@ -47,6 +47,11 @@ function writeUrl(filters: Filters, basePath: string) {
       params.set(key, filters[key]);
     }
   }
+  // Keep the focused month when filters change; drop every other stale param.
+  const month = new URLSearchParams(window.location.search).get('month');
+  if (month) {
+    params.set('month', month);
+  }
   const query = params.toString();
   const next = query ? `${basePath}?${query}` : basePath;
   window.history.replaceState(history.state ?? {}, '', next);
@@ -172,6 +177,16 @@ function initJumpTo() {
   }
   let activeMonth = '';
 
+  function setMonthParam(key: string) {
+    const url = new URL(window.location.href);
+    if (key) {
+      url.searchParams.set('month', key);
+    } else {
+      url.searchParams.delete('month');
+    }
+    window.history.replaceState(history.state ?? {}, '', url);
+  }
+
   function setActive(key: string) {
     activeMonth = key;
     ribbon!.querySelectorAll<HTMLElement>('[data-month]').forEach((chip) => {
@@ -179,6 +194,10 @@ function initJumpTo() {
       chip.classList.toggle('is-active', on);
       chip.setAttribute('aria-pressed', String(on));
     });
+    const allButton = ribbon!.querySelector<HTMLElement>('[data-month-all]');
+    if (allButton) {
+      allButton.hidden = !key;
+    }
     board!.dataset.view = key ? 'single' : 'all';
     board!.querySelectorAll<HTMLElement>('[data-month-col]').forEach((col) => {
       col.classList.toggle('is-month-active', col.dataset.month === key);
@@ -186,19 +205,10 @@ function initJumpTo() {
     if (key) {
       board!.scrollTo({ top: 0 });
     }
+    setMonthParam(key);
   }
 
-  ribbon.addEventListener('click', (event) => {
-    const chip = (event.target as Element | null)?.closest<HTMLElement>('[data-month]');
-    if (!chip) {
-      return;
-    }
-    event.preventDefault();
-    const key = chip.dataset.month || '';
-    if (key === activeMonth) {
-      setActive('');
-      return;
-    }
+  function activate(key: string) {
     const col = document.getElementById(`col-${key}`);
     if (!col) {
       return;
@@ -208,6 +218,40 @@ function initJumpTo() {
       return;
     }
     setActive(key);
+  }
+
+  ribbon.addEventListener('click', (event) => {
+    const target = event.target as Element | null;
+    const step = target?.closest<HTMLElement>('[data-month-step]');
+    if (step) {
+      event.preventDefault();
+      const keys = [...ribbon.querySelectorAll<HTMLElement>('[data-month]')]
+        .map((chip) => chip.dataset.month || '')
+        .filter(Boolean);
+      if (!keys.length) {
+        return;
+      }
+      const current = keys.indexOf(activeMonth);
+      const nextIndex = Math.min(keys.length - 1, Math.max(0, current + Number(step.dataset.monthStep)));
+      activate(keys[nextIndex]!);
+      return;
+    }
+    if (target?.closest('[data-month-all]')) {
+      event.preventDefault();
+      setActive('');
+      return;
+    }
+    const chip = target?.closest<HTMLElement>('[data-month]');
+    if (!chip) {
+      return;
+    }
+    event.preventDefault();
+    const key = chip.dataset.month || '';
+    if (key === activeMonth) {
+      setActive('');
+      return;
+    }
+    activate(key);
   });
 
   board.addEventListener('keydown', (event) => {
@@ -221,11 +265,16 @@ function initJumpTo() {
     board.scrollBy({ top: event.key === 'ArrowDown' ? 320 : -320, behavior: 'smooth' });
   });
 
-  setActive('');
-  const nowKey = board.dataset.nowMonth;
-  const nowCol = nowKey ? document.getElementById(`col-${nowKey}`) : null;
-  if (nowCol) {
-    board.scrollTo({ top: nowCol.offsetTop - 8 });
+  const requested = new URLSearchParams(window.location.search).get('month') || '';
+  if (requested && document.getElementById(`col-${requested}`)) {
+    activate(requested);
+  } else {
+    setActive('');
+    const nowKey = board.dataset.nowMonth;
+    const nowCol = nowKey ? document.getElementById(`col-${nowKey}`) : null;
+    if (nowCol) {
+      board.scrollTo({ top: nowCol.offsetTop - 8 });
+    }
   }
 }
 

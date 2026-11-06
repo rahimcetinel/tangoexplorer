@@ -14,13 +14,23 @@ const upcoming = months.filter((month) => month.key >= nowKey).slice(0, 10);
 ---
 
 <nav class="app-ribbon" data-month-ribbon aria-label={copy.filterMonth}>
-  <span class="app-ribbon-label">{copy.filterMonth}</span>
-  {
-    upcoming.map((month) => (
-      <button type="button" class="app-mchip" data-month={month.key} aria-pressed="false">
-        {month.label}
-        <b data-month-count>{month.count}</b>
-      </button>
-    ))
-  }
+  <div class="app-ribbon-controls">
+    <button type="button" class="app-mstep" data-month-step="-1" aria-label="Previous month">‹</button>
+    <span class="app-ribbon-label">{copy.filterMonth}</span>
+    <button type="button" class="app-mstep" data-month-step="1" aria-label="Next month">›</button>
+    <button type="button" class="app-mall" data-month-all hidden>
+      {copy.filterAll}
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="app-ribbon-scroll">
+    {
+      upcoming.map((month) => (
+        <button type="button" class="app-mchip" data-month={month.key} aria-pressed="false">
+          {month.label}
+          <b data-month-count>{month.count}</b>
+        </button>
+      ))
+    }
+  </div>
 </nav>
