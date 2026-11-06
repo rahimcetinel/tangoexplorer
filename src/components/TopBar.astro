@@ -32,6 +32,11 @@ const today = new Intl.DateTimeFormat(locale === 'tr' ? 'tr-TR' : 'en-GB', {
   month: 'short',
   year: 'numeric',
 }).format(new Date());
+// Short form for phones: the long one is clipped next to the brand.
+const todayShort = new Intl.DateTimeFormat(locale === 'tr' ? 'tr-TR' : 'en-GB', {
+  day: 'numeric',
+  month: 'short',
+}).format(new Date());
 const nav: { href: string; label: string }[] = [
   { href: home, label: copy.home },
   ...regions.map((region) => ({ href: regionPath(locale, region), label: regionLabels[locale][region] })),
@@ -55,7 +60,10 @@ const nav: { href: string; label: string }[] = [
     <a class="app-brand" href={home}>
       {copy.brandLead}<em>{copy.brandAccent}</em>
     </a>
-    <span class="app-topbar-date">{today}</span>
+    <span class="app-topbar-date" title={today}>
+      <span class="is-wide">{today}</span>
+      <span class="is-narrow">{todayShort}</span>
+    </span>
     <nav class="app-topnav" aria-label={copy.browse}>
       {
         nav.map((item) => (

@@ -233,6 +233,22 @@ body:has(.app-shell) {
   text-overflow: ellipsis;
 }
 
+/* On phones the long date ("Fri, 6 Nov 2026") is clipped by the brand; show
+   "6 Nov" instead. */
+.app-topbar-date .is-narrow {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .app-topbar-date .is-wide {
+    display: none;
+  }
+
+  .app-topbar-date .is-narrow {
+    display: inline;
+  }
+}
+
 .app-menu-square {
   display: inline-flex;
   align-items: center;

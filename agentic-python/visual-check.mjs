@@ -93,7 +93,14 @@ for (const shot of SHOTS) {
 }
 
 await browser.close();
+
+const reportPath = path.join(OUT, 'report.json');
+await fs.writeFile(
+  reportPath,
+  JSON.stringify({ generatedAt: new Date().toISOString(), base: BASE, pages: report }, null, 2),
+);
 console.log(JSON.stringify(report, null, 2));
+console.log(`report: ${reportPath}`);
 
 const problems = report.filter((r) => r.overflowX || r.badRows > 0 || r.errors.length);
 if (problems.length) {
