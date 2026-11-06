@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Ischia"
 eventStart: 2027-04-30
 eventEnd: 2027-05-03

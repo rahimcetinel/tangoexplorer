@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Sencelles"
 eventStart: 2027-07-31
 eventEnd: 2027-08-07

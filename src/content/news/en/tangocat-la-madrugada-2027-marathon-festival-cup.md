@@ -8,7 +8,7 @@ locale: en
 summary: "La Madrugada 2027 · Marathon & Festival & Cup (September 29 - October 4, 2027) in Türkiye, Istanbul. Source: Tangocat."
 eventName: "La Madrugada 2027 · Marathon & Festival & Cup"
 eventWhen: "Eylül 29 - Ekim 4, 2027"
-eventLocation: "Türkiye, Istanbul"
+eventLocation: "Turkey, Istanbul"
 eventWebsite: https://www.tangolamadrugada.com
 eventInstagram: https://www.instagram.com/tangolamadrugada
 image: "/events/tangocat-la-madrugada-2027-marathon-festival-cup.jpg"
@@ -17,8 +17,8 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Türkiye"
-city: "İstanbul"
+country: "Turkey"
+city: "Istanbul"
 eventStart: 2027-09-29
 eventEnd: 2027-10-04
 ---

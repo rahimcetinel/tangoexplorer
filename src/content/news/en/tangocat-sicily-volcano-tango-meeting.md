@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Trecastagni"
 eventStart: 2027-04-23
 eventEnd: 2027-04-25

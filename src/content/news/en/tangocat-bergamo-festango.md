@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Bergamo"
 eventStart: 2027-02-26
 eventEnd: 2027-02-28

@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Osiecznica"
 eventStart: 2027-01-22
 eventEnd: 2027-01-24

@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Goch"
 eventStart: 2026-10-22
 eventEnd: 2026-10-25

@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Ravenna"
 eventStart: 2027-02-18
 eventEnd: 2027-02-21

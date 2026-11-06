@@ -13,7 +13,7 @@ kinds:
   - pratik
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "San Cristóbal de La Laguna"
 eventStart: 2027-01-22
 eventEnd: 2027-01-24

@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "La Orotava"
 eventStart: 2026-12-11
 eventEnd: 2026-12-14

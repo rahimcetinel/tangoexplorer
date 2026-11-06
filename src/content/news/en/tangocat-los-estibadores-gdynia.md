@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Gdynia"
 eventStart: 2026-11-11
 eventEnd: 2026-11-15

@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Crespin"
 eventStart: 2026-12-28
 eventEnd: 2027-01-02

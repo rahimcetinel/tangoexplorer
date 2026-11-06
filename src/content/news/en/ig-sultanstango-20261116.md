@@ -8,15 +8,15 @@ locale: en
 summary: "Sultans Tango Festival is listed for 16 November 2026. Source: Instagram @sultanstango."
 eventName: "Sultans Tango Festival"
 eventWhen: "16 November 2026"
-eventLocation: "Türkiye, İstanbul"
+eventLocation: "Turkey, Istanbul"
 eventInstagram: https://www.instagram.com/sultanstango
 kinds:
   - festival
   - workshop
 format: etkinlik
 sourceKey: instagram
-country: "Türkiye"
-city: "İstanbul"
+country: "Turkey"
+city: "Istanbul"
 eventStart: 2026-11-16
 eventEnd: 2026-11-16
 image: "/events/ig-sultanstango-20261116.jpg"

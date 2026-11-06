@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Marettimo"
 eventStart: 2027-07-29
 eventEnd: 2027-08-01

@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Paris"
 eventStart: 2027-06-11
 eventEnd: 2027-06-13

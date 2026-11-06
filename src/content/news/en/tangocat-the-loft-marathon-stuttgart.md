@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Stuttgart"
 eventStart: 2027-01-01
 eventEnd: 2027-01-03

@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Annecy"
 eventStart: 2026-10-23
 eventEnd: 2026-10-25

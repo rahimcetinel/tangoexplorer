@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Bad Ems"
 eventStart: 2027-04-16
 eventEnd: 2027-04-18

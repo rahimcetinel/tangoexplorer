@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Barcelona"
 eventStart: 2026-11-05
 eventEnd: 2026-11-08

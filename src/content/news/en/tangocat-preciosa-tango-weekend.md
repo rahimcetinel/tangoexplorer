@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Lublin"
 eventStart: 2027-09-04
 eventEnd: 2027-09-05

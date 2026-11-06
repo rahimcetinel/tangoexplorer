@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Erfurt"
 eventStart: 2026-12-04
 eventEnd: 2026-12-06

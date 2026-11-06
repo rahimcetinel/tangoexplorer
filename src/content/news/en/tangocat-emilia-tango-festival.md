@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Bologna"
 eventStart: 2026-11-06
 eventEnd: 2026-11-08

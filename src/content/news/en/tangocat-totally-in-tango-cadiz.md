@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Cádiz"
 eventStart: 2026-10-06
 eventEnd: 2026-10-12

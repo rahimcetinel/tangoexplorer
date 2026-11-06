@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Schnega"
 eventStart: 2026-12-11
 eventEnd: 2026-12-13

@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Bari"
 eventStart: 2026-10-29
 eventEnd: 2026-11-01

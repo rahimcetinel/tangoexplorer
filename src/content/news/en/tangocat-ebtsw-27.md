@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Eppelheim"
 eventStart: 2027-07-02
 eventEnd: 2027-07-04

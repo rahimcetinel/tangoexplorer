@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Zaragoza"
 eventStart: 2027-02-04
 eventEnd: 2027-02-07

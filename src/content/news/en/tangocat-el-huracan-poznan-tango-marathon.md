@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Poznań"
 eventStart: 2026-10-22
 eventEnd: 2026-10-25

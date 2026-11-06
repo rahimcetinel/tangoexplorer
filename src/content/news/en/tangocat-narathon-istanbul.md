@@ -8,13 +8,13 @@ locale: en
 summary: "Narathon - Istanbul (January 15-17, 2027) in Türkiye, Istanbul. Source: Tangocat."
 eventName: "Narathon - Istanbul"
 eventWhen: "January 15-17, 2027"
-eventLocation: "Türkiye, Istanbul"
+eventLocation: "Turkey, Istanbul"
 kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Türkiye"
-city: "İstanbul"
+country: "Turkey"
+city: "Istanbul"
 eventStart: 2027-01-15
 eventEnd: 2027-01-17
 image: "/events/tangocat-narathon-istanbul.png"

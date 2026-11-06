@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Véretz"
 eventStart: 2027-01-08
 eventEnd: 2027-01-10

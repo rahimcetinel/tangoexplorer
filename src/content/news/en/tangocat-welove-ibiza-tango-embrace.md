@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Ibiza"
 eventStart: 2026-10-14
 eventEnd: 2026-10-19

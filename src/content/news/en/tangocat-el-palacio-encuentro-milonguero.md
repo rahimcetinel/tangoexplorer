@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Perpignan"
 eventStart: 2027-03-12
 eventEnd: 2027-03-14

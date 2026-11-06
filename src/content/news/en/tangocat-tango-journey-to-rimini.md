@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Rimini"
 eventStart: 2026-09-06
 eventEnd: 2026-09-13

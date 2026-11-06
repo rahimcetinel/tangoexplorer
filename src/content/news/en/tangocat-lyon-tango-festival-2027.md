@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Lyon"
 eventStart: 2027-05-13
 eventEnd: 2027-05-17

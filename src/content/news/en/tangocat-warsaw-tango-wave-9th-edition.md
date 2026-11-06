@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Warsaw"
 eventStart: 2026-12-27
 eventEnd: 2027-01-04

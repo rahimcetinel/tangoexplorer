@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Arjantin"
+country: "Argentina"
 city: "San Juan"
 eventStart: 2026-10-23
 eventEnd: 2026-10-25

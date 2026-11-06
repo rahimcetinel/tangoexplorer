@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Kirchdorf an der Amper"
 eventStart: 2027-02-26
 eventEnd: 2027-02-28

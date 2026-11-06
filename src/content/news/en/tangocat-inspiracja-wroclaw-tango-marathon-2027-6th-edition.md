@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Wrocław"
 eventStart: 2027-09-17
 eventEnd: 2027-09-19

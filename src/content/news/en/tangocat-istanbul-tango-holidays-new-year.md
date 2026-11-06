@@ -8,15 +8,15 @@ locale: en
 summary: "Istanbul Tango Holidays New Year (December 30 - January 3 , 2027) in Türkiye, Istanbul. Source: Tangocat."
 eventName: "Istanbul Tango Holidays New Year"
 eventWhen: "Aralık 30 - Ocak 3 , 2027"
-eventLocation: "Türkiye, Istanbul"
+eventLocation: "Turkey, Istanbul"
 eventWebsite: https://www.facebook.com/events/s/istanbul-tango-holidays-new-ye/1017936841291002/?mibextid=wwXIfr&rdid=buuwZPDmvlaTw1u4&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BaF3QNUw5%2F%3Fmibextid%3DwwXIfr
 image: "/events/tangocat-istanbul-tango-holidays-new-year.jpg"
 kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Türkiye"
-city: "İstanbul"
+country: "Turkey"
+city: "Istanbul"
 eventStart: 2026-12-30
 eventEnd: 2027-01-03
 ---

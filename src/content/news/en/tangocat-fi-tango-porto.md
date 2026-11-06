@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Portekiz"
+country: "Portugal"
 city: "Porto"
 eventStart: 2027-04-22
 eventEnd: 2027-04-25

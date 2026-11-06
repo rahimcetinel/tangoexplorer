@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Luxeuil-les-Bains"
 eventStart: 2027-05-14
 eventEnd: 2027-05-16

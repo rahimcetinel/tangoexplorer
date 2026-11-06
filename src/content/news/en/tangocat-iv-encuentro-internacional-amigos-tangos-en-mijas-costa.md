@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Fuengirola"
 eventStart: 2026-10-08
 eventEnd: 2026-10-11

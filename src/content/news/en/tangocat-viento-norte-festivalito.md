@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Hamburg"
 eventStart: 2027-01-29
 eventEnd: 2027-01-31

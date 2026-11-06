@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Isla"
 eventStart: 2027-03-11
 eventEnd: 2027-03-14

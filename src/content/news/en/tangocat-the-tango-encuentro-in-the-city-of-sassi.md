@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Sassi"
 eventStart: 2027-03-05
 eventEnd: 2027-03-07

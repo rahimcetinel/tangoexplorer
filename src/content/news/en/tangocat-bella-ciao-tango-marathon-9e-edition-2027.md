@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Tours"
 eventStart: 2027-03-05
 eventEnd: 2027-03-07

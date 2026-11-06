@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Ravenna"
 eventStart: 2027-01-22
 eventEnd: 2027-01-24

@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Langen"
 eventStart: 2027-07-15
 eventEnd: 2027-07-18

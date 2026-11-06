@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Villeveyrac"
 eventStart: 2027-10-01
 eventEnd: 2027-10-03

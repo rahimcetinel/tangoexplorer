@@ -8,7 +8,7 @@ locale: en
 summary: "19th TanGO TO Istanbul — Red Edition (March 9-16, 2027) in Türkiye, Istanbul. Source: Tangocat."
 eventName: "19th TanGO TO Istanbul — Red Edition"
 eventWhen: "Mart 9-16, 2027"
-eventLocation: "Türkiye, Istanbul"
+eventLocation: "Turkey, Istanbul"
 eventWebsite: https://tangotoistanbul.com
 eventFacebook: https://www.facebook.com/tangotoistanbul
 eventInstagram: https://www.instagram.com/tangotoistanbul
@@ -17,8 +17,8 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Türkiye"
-city: "İstanbul"
+country: "Turkey"
+city: "Istanbul"
 eventStart: 2027-03-09
 eventEnd: 2027-03-16
 ---

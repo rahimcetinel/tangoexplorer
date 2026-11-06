@@ -8,12 +8,12 @@ locale: en
 summary: "Ankara Tango Fusion (October 9-11 2026) in Türkiye, Ankara. Source: Tangocat."
 eventName: "Ankara Tango Fusion"
 eventWhen: "October 9-11 2026"
-eventLocation: "Türkiye, Ankara"
+eventLocation: "Turkey, Ankara"
 kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Türkiye"
+country: "Turkey"
 city: "Ankara"
 eventStart: 2026-10-09
 eventEnd: 2026-10-11

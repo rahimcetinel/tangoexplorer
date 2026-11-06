@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Berrioplano–Berriobeiti"
 eventStart: 2026-11-26
 eventEnd: 2026-11-29

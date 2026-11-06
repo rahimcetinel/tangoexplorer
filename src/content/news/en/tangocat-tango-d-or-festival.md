@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Dijon"
 eventStart: 2026-10-02
 eventEnd: 2026-10-04

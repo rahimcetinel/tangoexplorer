@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Conversano"
 eventStart: 2026-10-02
 eventEnd: 2026-10-04

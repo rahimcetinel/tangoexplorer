@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Munich"
 eventStart: 2027-02-05
 eventEnd: 2027-02-07

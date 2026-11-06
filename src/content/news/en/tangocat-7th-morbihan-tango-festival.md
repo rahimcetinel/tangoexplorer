@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Saint-Gildas-de-Rhuys"
 eventStart: 2027-07-05
 eventEnd: 2027-07-11

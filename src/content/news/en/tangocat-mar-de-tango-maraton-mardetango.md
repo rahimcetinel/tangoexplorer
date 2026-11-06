@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Valencia"
 eventStart: 2027-01-28
 eventEnd: 2027-01-31

@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Anglet"
 eventStart: 2026-11-06
 eventEnd: 2026-11-08

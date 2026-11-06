@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Brescia"
 eventStart: 2027-02-11
 eventEnd: 2027-02-14

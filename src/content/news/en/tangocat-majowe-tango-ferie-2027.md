@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Nieznanice"
 eventStart: 2027-01-28
 eventEnd: 2027-01-31

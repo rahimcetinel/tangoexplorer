@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Berlin"
 eventStart: 2027-01-15
 eventEnd: 2027-01-17

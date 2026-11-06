@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Książ"
 eventStart: 2027-05-21
 eventEnd: 2027-05-23

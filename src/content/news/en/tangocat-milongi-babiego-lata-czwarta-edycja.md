@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Biała Podlaska"
 eventStart: 2026-09-11
 eventEnd: 2026-09-13

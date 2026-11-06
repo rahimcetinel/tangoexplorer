@@ -1,12 +1,12 @@
 ---
-title: "CANARY ISLANDS TANGO FESTIVAL"
+title: "Canary Islands Tango Festival"
 date: 2026-09-15
 category: dunya
 source: TMD
 sourceUrl: https://www.tangomarathons.com/events/2027-canary-islands-tango-festival-edition-12/
 locale: en
-summary: "CANARY ISLANDS TANGO FESTIVAL is listed for 8–14 March 2027 in Spain, Las Palmas de Gran Canaria. Source: TMD."
-eventName: "CANARY ISLANDS TANGO FESTIVAL"
+summary: "Canary Islands Tango Festival is listed for 8–14 March 2027 in Spain, Las Palmas de Gran Canaria. Source: TMD."
+eventName: "Canary Islands Tango Festival"
 eventWhen: "8–14 March 2027"
 eventLocation: "Spain, Las Palmas de Gran Canaria"
 eventWebsite: https://www.canaryislandstangofestival.com/
@@ -25,6 +25,6 @@ imageCredit: "Event image (tangomarathons.com)"
 imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2026/08/CANARY-2027-CARA-A-21X15-441x315.jpg
 ---
 
-CANARY ISLANDS TANGO FESTIVAL is listed for 8–14 March 2027 in Spain, Las Palmas de Gran Canaria. This is a date and place summary, not a copy of the source listing.
+Canary Islands Tango Festival is listed for 8–14 March 2027 in Spain, Las Palmas de Gran Canaria. This is a date and place summary, not a copy of the source listing.
 
 Programme and registration can change. Follow the TMD listing for current details.

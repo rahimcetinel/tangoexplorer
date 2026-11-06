@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Albi"
 eventStart: 2027-08-19
 eventEnd: 2027-08-22

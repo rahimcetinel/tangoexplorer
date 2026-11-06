@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Barcelona"
 eventStart: 2027-02-19
 eventEnd: 2027-02-21

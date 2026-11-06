@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Milazzo"
 eventStart: 2026-10-22
 eventEnd: 2026-10-25

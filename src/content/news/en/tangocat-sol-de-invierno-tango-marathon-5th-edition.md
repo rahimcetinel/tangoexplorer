@@ -8,12 +8,12 @@ locale: en
 summary: "Sol de Invierno Tango Marathon 5th Edition (November 5-10 2026) in Türkiye, Antalya. Source: Tangocat."
 eventName: "Sol de Invierno Tango Marathon 5th Edition"
 eventWhen: "November 5-10 2026"
-eventLocation: "Türkiye, Antalya"
+eventLocation: "Turkey, Antalya"
 kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Türkiye"
+country: "Turkey"
 city: "Antalya"
 eventStart: 2026-11-05
 eventEnd: 2026-11-10

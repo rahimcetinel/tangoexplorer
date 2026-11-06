@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Kraków"
 eventStart: 2026-11-06
 eventEnd: 2026-11-08

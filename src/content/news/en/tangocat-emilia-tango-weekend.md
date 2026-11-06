@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Sant'Ilario d'Enza"
 eventStart: 2026-10-03
 eventEnd: 2026-10-04

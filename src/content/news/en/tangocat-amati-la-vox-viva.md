@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Castel San Pietro Terme"
 eventStart: 2026-09-26
 eventEnd: 2026-09-26

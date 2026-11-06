@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Hamburg"
 eventStart: 2026-10-09
 eventEnd: 2026-10-11

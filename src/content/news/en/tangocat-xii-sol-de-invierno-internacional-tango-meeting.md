@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Salobreña"
 eventStart: 2026-12-30
 eventEnd: 2027-01-03

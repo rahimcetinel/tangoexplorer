@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Rennes"
 eventStart: 2026-12-05
 eventEnd: 2026-12-06

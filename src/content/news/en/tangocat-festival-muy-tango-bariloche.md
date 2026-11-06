@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Arjantin"
+country: "Argentina"
 city: "San Carlos de Bariloche"
 eventStart: 2026-11-13
 eventEnd: 2026-11-15

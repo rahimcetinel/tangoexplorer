@@ -8,12 +8,12 @@ locale: en
 summary: "LaPerla TangoFest (October 29 - November 2 2026) in Türkiye, Marmaris. Source: Tangocat."
 eventName: "LaPerla TangoFest"
 eventWhen: "October 29 - November 2 2026"
-eventLocation: "Türkiye, Marmaris"
+eventLocation: "Turkey, Marmaris"
 kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Türkiye"
+country: "Turkey"
 city: "Marmaris"
 eventStart: 2026-10-29
 eventEnd: 2026-11-02

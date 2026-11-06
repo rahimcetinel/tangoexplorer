@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Żagań"
 eventStart: 2027-07-29
 eventEnd: 2027-08-01

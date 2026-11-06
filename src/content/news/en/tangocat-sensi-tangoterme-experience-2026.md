@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Contursi Terme"
 eventStart: 2026-09-24
 eventEnd: 2026-09-27

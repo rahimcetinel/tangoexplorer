@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Riva del Garda"
 eventStart: 2027-04-02
 eventEnd: 2027-04-04

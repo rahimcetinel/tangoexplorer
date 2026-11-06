@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Zaragoza"
 eventStart: 2026-09-11
 eventEnd: 2026-09-13

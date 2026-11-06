@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Reggio Emilia"
 eventStart: 2027-03-13
 eventEnd: 2027-03-14

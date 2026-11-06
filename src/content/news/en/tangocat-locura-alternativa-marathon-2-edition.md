@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Pszów"
 eventStart: 2027-04-02
 eventEnd: 2027-04-04

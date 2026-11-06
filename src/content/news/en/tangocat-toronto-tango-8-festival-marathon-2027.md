@@ -14,7 +14,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Kanada"
+country: "Canada"
 city: "Toronto"
 eventStart: 2027-09-22
 eventEnd: 2027-09-26

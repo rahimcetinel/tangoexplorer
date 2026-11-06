@@ -1,12 +1,12 @@
 ---
-title: "XV FESTIVAL INTERNACIONAL ATAQUE TANGO BENIDORM-SPAIN"
+title: "XV Festival Internacional Ataque Tango Benidorm"
 date: 2026-09-15
 category: dunya
 source: TMD
 sourceUrl: https://www.tangomarathons.com/events/2027-xv-festival-internacional-ataque-tango-benidorm-spain-edition-15/
 locale: en
-summary: "XV FESTIVAL INTERNACIONAL ATAQUE TANGO BENIDORM-SPAIN is listed for 5–9 May 2027 in Spain, BENIDORM. Source: TMD."
-eventName: "XV FESTIVAL INTERNACIONAL ATAQUE TANGO BENIDORM-SPAIN"
+summary: "XV Festival Internacional Ataque Tango Benidorm is listed for 5–9 May 2027 in Spain, BENIDORM. Source: TMD."
+eventName: "XV Festival Internacional Ataque Tango Benidorm"
 eventWhen: "5–9 May 2027"
 eventLocation: "Spain, BENIDORM"
 eventWebsite: https://ataquetango.com/benidorm-festival
@@ -25,6 +25,6 @@ imageCredit: "Event image (tangomarathons.com)"
 imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2026/07/BENIDORM-2027-446x315.jpg
 ---
 
-XV FESTIVAL INTERNACIONAL ATAQUE TANGO BENIDORM-SPAIN is listed for 5–9 May 2027 in Spain, BENIDORM. This is a date and place summary, not a copy of the source listing.
+XV Festival Internacional Ataque Tango Benidorm is listed for 5–9 May 2027 in Spain, BENIDORM. This is a date and place summary, not a copy of the source listing.
 
 Programme and registration can change. Follow the TMD listing for current details.

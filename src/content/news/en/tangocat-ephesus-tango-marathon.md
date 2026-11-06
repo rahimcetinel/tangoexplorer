@@ -8,12 +8,12 @@ locale: en
 summary: "Ephesus Tango Marathon (September 24-28 2026) in Türkiye, Şirince. Source: Tangocat."
 eventName: "Ephesus Tango Marathon"
 eventWhen: "September 24-28 2026"
-eventLocation: "Türkiye, Şirince"
+eventLocation: "Turkey, Şirince"
 kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Türkiye"
+country: "Turkey"
 city: "Şirince"
 eventStart: 2026-09-24
 eventEnd: 2026-09-28

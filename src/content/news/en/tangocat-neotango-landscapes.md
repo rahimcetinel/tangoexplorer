@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Wuppertal"
 eventStart: 2026-11-20
 eventEnd: 2026-11-22

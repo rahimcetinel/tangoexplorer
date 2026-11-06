@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Wrocław"
 eventStart: 2027-06-11
 eventEnd: 2027-06-13

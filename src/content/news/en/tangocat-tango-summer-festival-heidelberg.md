@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Heidelberg"
 eventStart: 2026-09-07
 eventEnd: 2026-09-13

@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Milano Marittima"
 eventStart: 2026-10-30
 eventEnd: 2026-11-01

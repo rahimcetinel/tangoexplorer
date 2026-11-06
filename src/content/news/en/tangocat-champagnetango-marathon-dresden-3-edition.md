@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Dresden"
 eventStart: 2027-03-12
 eventEnd: 2027-03-14

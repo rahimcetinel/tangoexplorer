@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Castagnito"
 eventStart: 2026-12-04
 eventEnd: 2026-12-06

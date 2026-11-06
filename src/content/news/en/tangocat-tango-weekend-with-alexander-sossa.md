@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Strasbourg"
 eventStart: 2026-09-12
 eventEnd: 2026-09-13

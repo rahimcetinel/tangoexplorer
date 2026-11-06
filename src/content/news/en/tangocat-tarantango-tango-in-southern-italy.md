@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Castro Marina"
 eventStart: 2027-07-17
 eventEnd: 2027-07-31

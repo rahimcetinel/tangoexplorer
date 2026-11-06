@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Bondeno"
 eventStart: 2026-09-18
 eventEnd: 2026-09-20

@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Aschaffenburg"
 eventStart: 2027-02-12
 eventEnd: 2027-02-14

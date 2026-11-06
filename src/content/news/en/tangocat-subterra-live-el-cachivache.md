@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Kraków"
 eventStart: 2026-10-10
 eventEnd: 2026-10-11

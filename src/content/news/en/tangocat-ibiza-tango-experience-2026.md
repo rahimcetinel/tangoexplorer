@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Eivissa"
 eventStart: 2026-09-28
 eventEnd: 2026-10-05

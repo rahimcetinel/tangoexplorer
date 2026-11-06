@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Santander"
 eventStart: 2026-11-13
 eventEnd: 2026-11-15

@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Paris"
 eventStart: 2027-04-01
 eventEnd: 2027-04-04

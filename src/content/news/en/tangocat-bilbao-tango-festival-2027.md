@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Bilbao"
 eventStart: 2027-02-15
 eventEnd: 2027-02-21

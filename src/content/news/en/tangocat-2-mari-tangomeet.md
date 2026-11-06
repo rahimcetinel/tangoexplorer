@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Marzamemi"
 eventStart: 2027-05-28
 eventEnd: 2027-05-30

@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Mantua"
 eventStart: 2026-12-18
 eventEnd: 2026-12-20

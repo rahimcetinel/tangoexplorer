@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Naples"
 eventStart: 2027-03-18
 eventEnd: 2027-03-22

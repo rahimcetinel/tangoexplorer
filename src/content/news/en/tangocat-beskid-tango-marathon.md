@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Szczyrk"
 eventStart: 2027-01-06
 eventEnd: 2027-01-10

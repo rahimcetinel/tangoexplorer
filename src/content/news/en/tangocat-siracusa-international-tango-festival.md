@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Syracuse"
 eventStart: 2027-07-22
 eventEnd: 2027-07-25

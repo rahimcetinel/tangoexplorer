@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Brzeg"
 eventStart: 2027-05-27
 eventEnd: 2027-05-30

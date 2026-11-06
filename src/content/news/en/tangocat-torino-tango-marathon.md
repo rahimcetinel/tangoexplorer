@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Turin"
 eventStart: 2026-12-30
 eventEnd: 2027-01-03

@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Grenoble"
 eventStart: 2027-04-16
 eventEnd: 2027-04-18

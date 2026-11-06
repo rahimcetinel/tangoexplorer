@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Bolsena"
 eventStart: 2027-04-09
 eventEnd: 2027-04-11

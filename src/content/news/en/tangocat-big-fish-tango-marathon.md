@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Sète"
 eventStart: 2027-07-01
 eventEnd: 2027-07-04

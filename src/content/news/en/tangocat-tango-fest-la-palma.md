@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Los Llanos"
 eventStart: 2027-06-17
 eventEnd: 2027-06-20

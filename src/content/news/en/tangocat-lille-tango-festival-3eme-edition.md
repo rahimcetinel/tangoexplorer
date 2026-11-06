@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Lille"
 eventStart: 2026-09-18
 eventEnd: 2026-09-20

@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Salerno"
 eventStart: 2026-10-08
 eventEnd: 2026-10-11

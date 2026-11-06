@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Pomezia"
 eventStart: 2026-10-23
 eventEnd: 2026-10-25

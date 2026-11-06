@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Bayreuth"
 eventStart: 2026-09-18
 eventEnd: 2026-09-20

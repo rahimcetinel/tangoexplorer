@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Arjantin"
+country: "Argentina"
 city: "Córdoba"
 eventStart: 2026-11-02
 eventEnd: 2026-11-05

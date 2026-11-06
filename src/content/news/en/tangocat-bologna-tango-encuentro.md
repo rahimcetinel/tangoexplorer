@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Bologna"
 eventStart: 2026-12-30
 eventEnd: 2027-01-02

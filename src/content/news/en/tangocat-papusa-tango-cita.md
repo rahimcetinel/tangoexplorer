@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Berkheim"
 eventStart: 2026-10-09
 eventEnd: 2026-10-11

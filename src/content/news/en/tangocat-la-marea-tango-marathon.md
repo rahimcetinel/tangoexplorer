@@ -8,7 +8,7 @@ locale: en
 summary: "La Marea Tango Marathon (May 5-9, 2027) in Türkiye, Antalya. Source: Tangocat."
 eventName: "La Marea Tango Marathon"
 eventWhen: "Mayıs 5-9, 2027"
-eventLocation: "Türkiye, Antalya"
+eventLocation: "Turkey, Antalya"
 eventWebsite: https://www.lamareatango.com
 eventFacebook: https://www.facebook.com/lamareatango
 eventInstagram: https://www.instagram.com/lamareatango
@@ -17,7 +17,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Türkiye"
+country: "Turkey"
 city: "Antalya"
 eventStart: 2027-05-05
 eventEnd: 2027-05-09

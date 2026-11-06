@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Madrid"
 eventStart: 2026-12-04
 eventEnd: 2026-12-07

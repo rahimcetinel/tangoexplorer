@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Méounes-lès-Montrieux"
 eventStart: 2027-04-30
 eventEnd: 2027-05-02

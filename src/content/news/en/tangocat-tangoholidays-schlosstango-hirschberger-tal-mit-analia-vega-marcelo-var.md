@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Piechowice"
 eventStart: 2027-05-05
 eventEnd: 2027-05-09

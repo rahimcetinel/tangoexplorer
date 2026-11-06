@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Warsaw"
 eventStart: 2027-03-19
 eventEnd: 2027-03-21

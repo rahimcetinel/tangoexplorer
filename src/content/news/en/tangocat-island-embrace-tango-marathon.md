@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Kanada"
+country: "Canada"
 city: "Victoria"
 eventStart: 2027-04-09
 eventEnd: 2027-04-11

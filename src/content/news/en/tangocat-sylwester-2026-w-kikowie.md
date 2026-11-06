@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Solec-Zdrój"
 eventStart: 2026-12-30
 eventEnd: 2027-01-03

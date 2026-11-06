@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Oiartzun"
 eventStart: 2026-10-16
 eventEnd: 2026-10-18

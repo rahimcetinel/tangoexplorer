@@ -8,7 +8,7 @@ locale: en
 summary: "Othello Tango Camp (November 19-22 2026) in Famagusta. Source: Tangocat."
 eventName: "Othello Tango Camp"
 eventWhen: "November 19-22 2026"
-eventLocation: "Famagusta"
+eventLocation: "Cyprus, Famagusta"
 kinds:
   - workshop
 format: etkinlik
@@ -19,6 +19,7 @@ eventEnd: 2026-11-22
 image: "/events/tangocat-othello-tango-camp.png"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://tangocyprus.online/img/tango-cyprus-logo.png
+country: "Cyprus"
 ---
 
 Othello Tango Camp is listed (November 19-22 2026) in Famagusta. This is a date and place summary, not a copy of the source programme.

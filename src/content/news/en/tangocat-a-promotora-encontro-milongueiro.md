@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Portekiz"
+country: "Portugal"
 city: "Lisbon"
 eventStart: 2027-02-05
 eventEnd: 2027-02-09

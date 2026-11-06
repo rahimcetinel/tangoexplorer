@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Mattstedt"
 eventStart: 2027-05-26
 eventEnd: 2027-05-30

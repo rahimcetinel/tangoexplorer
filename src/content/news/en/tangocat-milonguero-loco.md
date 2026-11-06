@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Riedstadt"
 eventStart: 2027-03-19
 eventEnd: 2027-03-21

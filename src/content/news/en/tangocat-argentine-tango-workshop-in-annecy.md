@@ -13,7 +13,7 @@ kinds:
   - workshop
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Annecy"
 eventStart: 2026-09-14
 eventEnd: 2026-09-18

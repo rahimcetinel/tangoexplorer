@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Ciudad Real"
 eventStart: 2026-10-01
 eventEnd: 2026-10-04

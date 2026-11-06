@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Lignano Sabbiadoro"
 eventStart: 2026-11-12
 eventEnd: 2026-11-15

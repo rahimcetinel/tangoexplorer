@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Portekiz"
+country: "Portugal"
 city: "Funchal"
 eventStart: 2026-10-27
 eventEnd: 2026-11-01

@@ -8,14 +8,14 @@ locale: en
 summary: "Buenos Aires’in efsanevi salonlarında milonga is listed for 30 January 2027. Source: Instagram @istanbultango."
 eventName: "Buenos Aires’in efsanevi salonlarında milonga"
 eventWhen: "30 January 2027"
-eventLocation: "Türkiye, İstanbul"
+eventLocation: "Turkey, Istanbul"
 eventInstagram: https://www.instagram.com/istanbultango
 kinds:
   - pratik
 format: etkinlik
 sourceKey: instagram
-country: "Türkiye"
-city: "İstanbul"
+country: "Turkey"
+city: "Istanbul"
 eventStart: 2027-01-30
 eventEnd: 2027-01-30
 image: "/events/ig-istanbultango-20270130.jpg"

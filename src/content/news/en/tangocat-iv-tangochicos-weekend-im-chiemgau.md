@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Kolbermoor"
 eventStart: 2027-03-05
 eventEnd: 2027-03-07

@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Rome"
 eventStart: 2027-06-04
 eventEnd: 2027-06-06

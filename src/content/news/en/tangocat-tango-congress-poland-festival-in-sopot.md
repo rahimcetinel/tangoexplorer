@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Sopot"
 eventStart: 2026-10-15
 eventEnd: 2026-10-18

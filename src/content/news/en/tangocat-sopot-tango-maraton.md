@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Sopot"
 eventStart: 2027-05-06
 eventEnd: 2027-05-09

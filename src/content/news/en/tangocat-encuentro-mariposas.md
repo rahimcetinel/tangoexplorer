@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "Kanada"
+country: "Canada"
 city: "Québec City"
 eventStart: 2026-10-09
 eventEnd: 2026-10-12

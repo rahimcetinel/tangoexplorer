@@ -8,7 +8,7 @@ locale: en
 summary: "La Ventana Tango Festival (May 26-30, 2027) in Türkiye, Istanbul. Source: Tangocat."
 eventName: "La Ventana Tango Festival"
 eventWhen: "Mayıs 26-30, 2027"
-eventLocation: "Türkiye, Istanbul"
+eventLocation: "Turkey, Istanbul"
 eventWebsite: https://www.laventanatangofestival.com
 eventInstagram: https://www.instagram.com/laventanatangofestival
 image: "/events/tangocat-la-ventana-tango-festival.jpg"
@@ -16,8 +16,8 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Türkiye"
-city: "İstanbul"
+country: "Turkey"
+city: "Istanbul"
 eventStart: 2027-05-26
 eventEnd: 2027-05-30
 ---

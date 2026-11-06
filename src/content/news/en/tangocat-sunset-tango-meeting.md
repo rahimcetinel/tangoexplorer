@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Zielona Góra"
 eventStart: 2027-04-22
 eventEnd: 2027-04-25

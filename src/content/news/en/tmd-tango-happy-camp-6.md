@@ -1,12 +1,12 @@
 ---
-title: "TANGO HAPPY CAMP 6"
+title: "Tango Happy Camp 6"
 date: 2026-09-15
 category: dunya
 source: TMD
 sourceUrl: https://www.tangomarathons.com/events/2027-tango-happy-camp-6-edition-6/
 locale: en
-summary: "TANGO HAPPY CAMP 6 is listed for 2–4 July 2027 in France, Peymeinade. Source: TMD."
-eventName: "TANGO HAPPY CAMP 6"
+summary: "Tango Happy Camp 6 is listed for 2–4 July 2027 in France, Peymeinade. Source: TMD."
+eventName: "Tango Happy Camp 6"
 eventWhen: "2–4 July 2027"
 eventLocation: "France, Peymeinade"
 format: etkinlik
@@ -22,6 +22,6 @@ imageCredit: "Event image (tangomarathons.com)"
 imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2017/04/TMD-Logo-e1483284195338.png
 ---
 
-TANGO HAPPY CAMP 6 is listed for 2–4 July 2027 in France, Peymeinade. This is a date and place summary, not a copy of the source listing.
+Tango Happy Camp 6 is listed for 2–4 July 2027 in France, Peymeinade. This is a date and place summary, not a copy of the source listing.
 
 Programme and registration can change. Follow the TMD listing for current details.

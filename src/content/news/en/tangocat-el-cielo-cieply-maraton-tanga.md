@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Toruń"
 eventStart: 2026-12-03
 eventEnd: 2026-12-06

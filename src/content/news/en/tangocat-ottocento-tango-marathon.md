@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Ferrara"
 eventStart: 2026-10-15
 eventEnd: 2026-10-18

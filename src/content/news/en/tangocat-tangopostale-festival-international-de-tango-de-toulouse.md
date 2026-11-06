@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Toulouse"
 eventStart: 2027-09-20
 eventEnd: 2027-09-26

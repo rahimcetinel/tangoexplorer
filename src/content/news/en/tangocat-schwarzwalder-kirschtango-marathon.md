@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Kirchzarten"
 eventStart: 2026-10-01
 eventEnd: 2026-10-04

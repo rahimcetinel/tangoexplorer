@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Kanada"
+country: "Canada"
 city: "Montreal"
 eventStart: 2027-05-19
 eventEnd: 2027-05-24

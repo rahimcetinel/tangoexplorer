@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Kanada"
+country: "Canada"
 city: "Toronto"
 eventStart: 2027-04-08
 eventEnd: 2027-04-11

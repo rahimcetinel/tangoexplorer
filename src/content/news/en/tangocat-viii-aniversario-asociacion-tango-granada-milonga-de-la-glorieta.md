@@ -13,7 +13,7 @@ kinds:
   - pratik
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Granada"
 eventStart: 2026-11-20
 eventEnd: 2026-11-22

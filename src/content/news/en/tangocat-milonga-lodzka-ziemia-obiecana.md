@@ -13,7 +13,7 @@ kinds:
   - pratik
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Łódź"
 eventStart: 2026-11-27
 eventEnd: 2026-11-29

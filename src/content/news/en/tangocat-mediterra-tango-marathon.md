@@ -8,12 +8,12 @@ locale: en
 summary: "Mediterra Tango Marathon (October 14-19 2026) in Türkiye, Kemer. Source: Tangocat."
 eventName: "Mediterra Tango Marathon"
 eventWhen: "October 14-19 2026"
-eventLocation: "Türkiye, Kemer"
+eventLocation: "Turkey, Kemer"
 kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Türkiye"
+country: "Turkey"
 city: "Kemer"
 eventStart: 2026-10-14
 eventEnd: 2026-10-19

@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Moncalieri"
 eventStart: 2026-09-25
 eventEnd: 2026-09-27

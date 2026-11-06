@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Comiso"
 eventStart: 2026-09-11
 eventEnd: 2026-09-13

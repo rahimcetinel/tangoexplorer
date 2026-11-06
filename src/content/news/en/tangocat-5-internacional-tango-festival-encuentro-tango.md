@@ -14,7 +14,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "Portekiz"
+country: "Portugal"
 city: "Castelo Branco"
 eventStart: 2026-10-09
 eventEnd: 2026-10-11

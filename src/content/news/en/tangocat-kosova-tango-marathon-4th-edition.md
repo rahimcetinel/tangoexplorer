@@ -8,7 +8,7 @@ locale: en
 summary: "Kosova Tango Marathon (4th edition) (December 17-20 2026) in Pristina. Source: Tangocat."
 eventName: "Kosova Tango Marathon (4th edition)"
 eventWhen: "December 17-20 2026"
-eventLocation: "Pristina"
+eventLocation: "Kosovo, Pristina"
 kinds:
   - marathon
 format: etkinlik
@@ -19,6 +19,7 @@ eventEnd: 2026-12-20
 image: "/events/tangocat-kosova-tango-marathon-4th-edition.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1567460064521699
+country: "Kosovo"
 ---
 
 Kosova Tango Marathon (4th edition) is listed (December 17-20 2026) in Pristina. This is a date and place summary, not a copy of the source programme.

@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Arjantin"
+country: "Argentina"
 city: "Buenos Aires"
 eventStart: 2027-02-05
 eventEnd: 2027-02-09

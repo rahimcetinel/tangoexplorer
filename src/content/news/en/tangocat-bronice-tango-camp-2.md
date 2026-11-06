@@ -13,7 +13,7 @@ kinds:
   - workshop
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Nałęczów"
 eventStart: 2026-11-11
 eventEnd: 2026-11-15

@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Rome"
 eventStart: 2027-02-05
 eventEnd: 2027-02-07

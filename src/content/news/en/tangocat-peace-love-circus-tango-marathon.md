@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Noci"
 eventStart: 2027-08-06
 eventEnd: 2027-08-08

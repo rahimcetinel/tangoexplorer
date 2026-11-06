@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Toulouse"
 eventStart: 2026-12-29
 eventEnd: 2026-12-31

@@ -8,13 +8,13 @@ locale: en
 summary: "4th Angora Tango Marathon (November 26-29 2026) in Türkiye, Ankara. Source: Tangocat."
 eventName: "4th Angora Tango Marathon"
 eventWhen: "Kasım 26-29 2026"
-eventLocation: "Türkiye, Ankara"
+eventLocation: "Turkey, Ankara"
 eventWebsite: https://www.angoratangomarathon.com
 kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Türkiye"
+country: "Turkey"
 city: "Ankara"
 eventStart: 2026-11-26
 eventEnd: 2026-11-29

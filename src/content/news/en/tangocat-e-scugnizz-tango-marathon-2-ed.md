@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Naples"
 eventStart: 2027-02-25
 eventEnd: 2027-02-28

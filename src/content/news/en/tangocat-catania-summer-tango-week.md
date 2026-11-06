@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Catania"
 eventStart: 2027-06-24
 eventEnd: 2027-06-28

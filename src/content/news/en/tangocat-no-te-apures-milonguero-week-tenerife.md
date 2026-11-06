@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Puerto de la Cruz"
 eventStart: 2027-01-14
 eventEnd: 2027-01-21

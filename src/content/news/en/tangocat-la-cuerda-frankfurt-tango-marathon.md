@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Frankfurt am Main"
 eventStart: 2027-05-28
 eventEnd: 2027-05-30

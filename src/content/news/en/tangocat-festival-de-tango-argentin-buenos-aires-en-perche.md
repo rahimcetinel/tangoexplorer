@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Rémalard-en-Perche"
 eventStart: 2026-09-19
 eventEnd: 2026-09-20

@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Kressbronn am Bodensee"
 eventStart: 2027-04-15
 eventEnd: 2027-04-18

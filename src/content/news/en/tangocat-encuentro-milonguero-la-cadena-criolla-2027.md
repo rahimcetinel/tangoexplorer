@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Veckenstedt"
 eventStart: 2027-09-03
 eventEnd: 2027-09-05

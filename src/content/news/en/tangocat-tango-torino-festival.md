@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Turin"
 eventStart: 2027-03-25
 eventEnd: 2027-03-29

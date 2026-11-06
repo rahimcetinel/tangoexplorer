@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Castel San Pietro Terme"
 eventStart: 2026-11-14
 eventEnd: 2026-11-15

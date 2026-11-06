@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Arjantin"
+country: "Argentina"
 city: "Córdoba"
 eventStart: 2027-03-19
 eventEnd: 2027-03-21

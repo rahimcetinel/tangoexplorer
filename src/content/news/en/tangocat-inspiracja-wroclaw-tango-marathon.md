@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Polonya"
+country: "Poland"
 city: "Wrocław"
 eventStart: 2026-09-18
 eventEnd: 2026-09-20

@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Venice"
 eventStart: 2026-12-11
 eventEnd: 2026-12-13

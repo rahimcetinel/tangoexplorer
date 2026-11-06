@@ -8,15 +8,15 @@ locale: en
 summary: "Pasión Tango Marathon’s second edition is listed for 24–27 December 2026 at Tangoport, Istanbul."
 eventName: "Pasión Tango Marathon"
 eventWhen: "24–27 December 2026"
-eventLocation: "Türkiye, İstanbul"
+eventLocation: "Turkey, Istanbul"
 eventWebsite: https://www.pasiontangomarathon.com
 eventInstagram: https://www.instagram.com/pasiontangomarathon
 kinds:
   - marathon
 format: etkinlik
 sourceKey: instagram
-country: "Türkiye"
-city: "İstanbul"
+country: "Turkey"
+city: "Istanbul"
 eventStart: 2026-12-24
 eventEnd: 2026-12-27
 image: "/events/ig-pasiontangomarathon-20261227.jpg"

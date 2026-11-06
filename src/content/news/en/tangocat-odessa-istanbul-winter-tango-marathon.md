@@ -8,13 +8,13 @@ locale: en
 summary: "Odessa & Istanbul Winter Tango Marathon (February 10-15, 2027) in Türkiye, Istanbul. Source: Tangocat."
 eventName: "Odessa & Istanbul Winter Tango Marathon"
 eventWhen: "February 10-15, 2027"
-eventLocation: "Türkiye, Istanbul"
+eventLocation: "Turkey, Istanbul"
 kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Türkiye"
-city: "İstanbul"
+country: "Turkey"
+city: "Istanbul"
 eventStart: 2027-02-10
 eventEnd: 2027-02-15
 image: "/events/tangocat-odessa-istanbul-winter-tango-marathon.jpg"

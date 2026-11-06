@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Verona"
 eventStart: 2027-02-12
 eventEnd: 2027-02-14

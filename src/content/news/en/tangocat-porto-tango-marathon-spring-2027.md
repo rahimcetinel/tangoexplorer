@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Portekiz"
+country: "Portugal"
 city: "Porto"
 eventStart: 2027-03-18
 eventEnd: 2027-03-21

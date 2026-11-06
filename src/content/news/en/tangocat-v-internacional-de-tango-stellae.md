@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Santiago de Compostela"
 eventStart: 2026-12-05
 eventEnd: 2026-12-08

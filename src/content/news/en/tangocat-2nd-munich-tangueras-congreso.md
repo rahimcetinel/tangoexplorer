@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Munich"
 eventStart: 2026-10-17
 eventEnd: 2026-10-18

@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Munich"
 eventStart: 2026-11-13
 eventEnd: 2026-11-16

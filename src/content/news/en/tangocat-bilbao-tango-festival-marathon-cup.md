@@ -14,7 +14,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Santurtzi"
 eventStart: 2027-02-15
 eventEnd: 2027-02-22

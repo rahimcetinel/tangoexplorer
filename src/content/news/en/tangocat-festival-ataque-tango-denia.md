@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Dénia"
 eventStart: 2026-11-04
 eventEnd: 2026-11-08

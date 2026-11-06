@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Fivizzano"
 eventStart: 2026-10-01
 eventEnd: 2026-10-04

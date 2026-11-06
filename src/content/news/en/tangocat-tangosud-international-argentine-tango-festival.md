@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Montpellier"
 eventStart: 2027-04-30
 eventEnd: 2027-05-09

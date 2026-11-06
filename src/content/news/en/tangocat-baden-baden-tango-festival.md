@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Almanya"
+country: "Germany"
 city: "Baden-Baden"
 eventStart: 2026-11-26
 eventEnd: 2026-11-29

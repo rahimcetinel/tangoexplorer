@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Rende"
 eventStart: 2027-02-19
 eventEnd: 2027-02-21

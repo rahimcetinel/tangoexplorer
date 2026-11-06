@@ -13,7 +13,7 @@ kinds:
   - festival
 format: etkinlik
 sourceKey: tangocat
-country: "Kanada"
+country: "Canada"
 city: "Vancouver"
 eventStart: 2027-01-01
 eventEnd: 2027-01-03

@@ -8,14 +8,14 @@ locale: en
 summary: "Nocturno Vibes is listed for 31 December 2026. Source: Instagram @istanbultangonocturno."
 eventName: "Nocturno Vibes"
 eventWhen: "31 December 2026"
-eventLocation: "Türkiye, İstanbul"
+eventLocation: "Turkey, Istanbul"
 eventInstagram: https://www.instagram.com/istanbultangonocturno
 kinds:
   - festival
 format: etkinlik
 sourceKey: instagram
-country: "Türkiye"
-city: "İstanbul"
+country: "Turkey"
+city: "Istanbul"
 eventStart: 2026-12-31
 eventEnd: 2026-12-31
 image: "/events/ig-istanbultangonocturno-20261231.jpg"

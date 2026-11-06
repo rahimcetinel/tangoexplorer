@@ -13,7 +13,7 @@ kinds:
   - marathon
 format: etkinlik
 sourceKey: tangocat
-country: "Fransa"
+country: "France"
 city: "Montpellier"
 eventStart: 2026-09-11
 eventEnd: 2026-09-13

@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "İspanya"
+country: "Spain"
 city: "Seville"
 eventStart: 2027-01-07
 eventEnd: 2027-01-10

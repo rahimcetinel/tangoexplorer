@@ -13,7 +13,7 @@ kinds:
   - encuentro
 format: etkinlik
 sourceKey: tangocat
-country: "İtalya"
+country: "Italy"
 city: "Trieste"
 eventStart: 2027-01-29
 eventEnd: 2027-01-31
