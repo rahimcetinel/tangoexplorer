@@ -2,8 +2,6 @@
 import AppShell from '../layouts/AppShell.astro';
 import Header from './Header.astro';
 import ArticleInner from './ArticleInner.astro';
-import EventBox from './EventBox.astro';
-import EventActions from './EventActions.astro';
 import {
   categoryLabels,
   categoryPath,
@@ -13,7 +11,6 @@ import {
   type Locale,
 } from '../lib/i18n';
 import { getNews, newsSlug, type NewsEntry } from '../lib/news';
-import { eventDurationDays } from '../lib/calendar';
 import { getImage } from 'astro:assets';
 import { eventImage, OG_FALLBACK } from '../lib/images';
 import { articleGraph } from '../lib/seo';
@@ -28,7 +25,6 @@ const copy = ui[locale];
 const slug = newsSlug(post);
 const posts = await getNews(locale);
 const pageUrl = new URL(newsPath(locale, slug), Astro.site ?? 'https://tangoexplorer.com').href;
-const duration = post.data.eventStart ? eventDurationDays(post.data.eventStart, post.data.eventEnd) : null;
 const crumbs = [
   { label: copy.home, href: homePath(locale) },
   { label: categoryLabels[locale][post.data.category], href: categoryPath(locale, post.data.category) },
@@ -47,7 +43,6 @@ const jsonLd = [articleGraph(locale, post, pageUrl, new URL(ogImage, Astro.site 
   locale={locale}
   mode="page"
   posts={posts}
-  newsSlug={slug}
   ogImage={ogImage}
   ogType="article"
   jsonLd={jsonLd}
@@ -57,14 +52,6 @@ const jsonLd = [articleGraph(locale, post, pageUrl, new URL(ogImage, Astro.site 
     <main id="main" class="app-article">
       <ArticleInner locale={locale} post={post} variant="page" />
     </main>
-  </Fragment>
-  <Fragment slot="detail">
-    <div class="app-detail-inner">
-      <p class="app-detail-eyebrow">{copy.detailEyebrow}</p>
-      <h2 class="app-article-title">{post.data.eventName || post.data.title}</h2>
-      <EventBox post={post} locale={locale} duration={duration} />
-      <EventActions locale={locale} post={post} pageUrl={pageUrl} />
-    </div>
   </Fragment>
 </AppShell>
 <script>

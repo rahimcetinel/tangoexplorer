@@ -1,8 +1,9 @@
 ---
 import AppShell from '../layouts/AppShell.astro';
 import Header from './Header.astro';
-import { getNews } from '../lib/news';
-import { homePath, ui, type Locale } from '../lib/i18n';
+import { getNews, newsSlug } from '../lib/news';
+import { formatEventRange } from '../lib/timeline';
+import { homePath, newsPath, ui, type Locale } from '../lib/i18n';
 
 interface Props {
   locale: Locale;
@@ -12,6 +13,7 @@ const { locale } = Astro.props;
 const copy = ui[locale];
 const posts = await getNews(locale);
 const home = homePath(locale);
+const upcoming = posts.slice(0, 3);
 ---
 
 <AppShell
@@ -30,40 +32,41 @@ const home = homePath(locale);
       ]}
     />
     <main id="main" class="app-page">
-      <h1 class="app-page-title" data-i18n-en={ui.en.notFoundTitle} data-i18n-tr={ui.tr.notFoundTitle}>
-        {copy.notFoundTitle}
-      </h1>
-      <p class="app-prose" data-i18n-en={ui.en.notFoundLead} data-i18n-tr={ui.tr.notFoundLead}>
-        {copy.notFoundLead}
-      </p>
+      <h1 class="app-page-title">{copy.notFoundTitle}</h1>
+      <p class="app-prose">{copy.notFoundLead}</p>
+
+      <form class="app-hero-search" action="/" method="get" role="search">
+        <label class="sr-only" for="notfound-q">{copy.searchLabel}</label>
+        <input
+          id="notfound-q"
+          type="search"
+          name="q"
+          placeholder={copy.heroSearchPlaceholder}
+          autocomplete="off"
+        />
+        <button type="submit">{copy.heroSearchCta}</button>
+      </form>
+
+      <h2 class="app-facts-label mt-8">{copy.notFoundUpcoming}</h2>
+      <ul class="app-links">
+        {
+          upcoming.map((post) => {
+            const range = formatEventRange(post.data.eventStart, post.data.eventEnd);
+            return (
+              <li>
+                <a class="app-link" href={newsPath(locale, newsSlug(post))}>
+                  {post.data.title}
+                </a>
+                {range && <span class="text-ink-soft"> · {range}</span>}
+              </li>
+            );
+          })
+        }
+      </ul>
+
       <p class="mt-6">
-        <a class="app-btn app-btn-solid" href={home} data-404-home data-i18n-en={ui.en.notFoundHome} data-i18n-tr={ui.tr.notFoundHome}>
-          {copy.notFoundHome}
-        </a>
+        <a class="app-btn app-btn-solid" href={home} data-404-home>{copy.notFoundHome}</a>
       </p>
     </main>
-    {
-      locale === 'en' && (
-        <script is:inline>
-          (function () {
-            var path = location.pathname;
-            if (path !== '/tr' && path.indexOf('/tr/') !== 0) return;
-            document.documentElement.lang = 'tr';
-            document.querySelectorAll('[data-i18n-tr]').forEach(function (el) {
-              var text = el.getAttribute('data-i18n-tr');
-              if (text) el.textContent = text;
-            });
-            var homeLink = document.querySelector('[data-404-home]');
-            if (homeLink) homeLink.setAttribute('href', '/tr');
-          })();
-        </script>
-      )
-    }
-  </Fragment>
-  <Fragment slot="detail">
-    <div class="app-detail-inner">
-      <p class="app-detail-eyebrow">{copy.brand}</p>
-      <p class="text-sm text-ink-soft">{copy.footerBlurb}</p>
-    </div>
   </Fragment>
 </AppShell>

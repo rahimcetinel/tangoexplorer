@@ -1,13 +1,12 @@
 ---
-import { ui, type Locale } from '../lib/i18n';
+import type { Locale } from '../lib/i18n';
 
 interface Props {
   locale: Locale;
   crumbs?: Array<{ label: string; href?: string }>;
 }
 
-const { locale, crumbs } = Astro.props;
-const copy = ui[locale];
+const { crumbs } = Astro.props;
 ---
 
 {
@@ -21,7 +20,6 @@ const copy = ui[locale];
           </>
         ))}
       </nav>
-      <span class="app-crumbbar-kicker">{copy.kicker}</span>
     </div>
   )
 }

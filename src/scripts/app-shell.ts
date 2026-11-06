@@ -247,14 +247,14 @@ function initFilters(detail: DetailApi) {
   const locale = shell.dataset.locale || 'en';
   const boardCategory = board?.dataset.boardCategory || '';
   const emptyText = emptyEl?.textContent?.trim() || 'No results';
-  const newsBase = locale === 'tr' ? '/tr/haber/' : '/news/';
+  const newsBase = '/news/';
   let filters = readUrl();
   let index: IndexItem[] = [];
   let indexPromise: Promise<IndexItem[]> | null = null;
 
   function loadIndex(): Promise<IndexItem[]> {
     if (!indexPromise) {
-      indexPromise = fetch(`/search-index/${locale}.json`, {
+      indexPromise = fetch('/search-index.json', {
         headers: { Accept: 'application/json' },
         cache: 'no-store',
       })

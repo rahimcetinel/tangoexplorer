@@ -1,0 +1,50 @@
+---
+import { ui, type Locale } from '../lib/i18n';
+import type { BoardStats } from '../lib/stats';
+
+interface Props {
+  locale: Locale;
+  stats: BoardStats;
+}
+
+const { locale, stats } = Astro.props;
+const copy = ui[locale];
+const today = new Intl.DateTimeFormat('en-GB', {
+  weekday: 'long',
+  day: 'numeric',
+  month: 'long',
+}).format(new Date());
+---
+
+<section class="app-hero" aria-labelledby="hero-title">
+  <p class="app-hero-kicker">{copy.heroKicker}</p>
+  <h1 id="hero-title" class="app-hero-title">{copy.heroTitle}</h1>
+  <p class="app-hero-lede">{copy.heroLede}</p>
+
+  <form class="app-hero-search" action="/" method="get" role="search">
+    <label class="sr-only" for="hero-q">{copy.searchLabel}</label>
+    <input
+      id="hero-q"
+      type="search"
+      name="q"
+      placeholder={copy.heroSearchPlaceholder}
+      autocomplete="off"
+    />
+    <button type="submit">{copy.heroSearchCta}</button>
+  </form>
+
+  <p class="app-hero-meta">
+    <span><b>{stats.total}</b> {copy.heroStatEvents}</span>
+    <span aria-hidden="true">·</span>
+    <span><b>{stats.countries}</b> {copy.heroStatCountries}</span>
+    <span aria-hidden="true">·</span>
+    <span><b>{stats.cities}</b> {copy.heroStatCities}</span>
+  </p>
+
+  <p class="app-hero-now">
+    <span class="app-hero-now-label">{today}</span>
+    <span class="app-hero-now-item is-accent"><b>{stats.today}</b> {copy.heroToday.toLowerCase()}</span>
+    <span class="app-hero-now-item"><b>{stats.thisWeekend}</b> {copy.heroThisWeekend.toLowerCase()}</span>
+    <span class="app-hero-now-item"><b>{stats.thisWeek}</b> {copy.heroThisWeek.toLowerCase()}</span>
+  </p>
+</section>

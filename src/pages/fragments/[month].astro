@@ -1,0 +1,34 @@
+---
+import TimelineCard from '../../components/TimelineCard.astro';
+import { getNews } from '../../lib/news';
+import { groupByMonth } from '../../lib/timeline';
+import type { NewsEntry } from '../../lib/news';
+
+interface Props {
+  posts: NewsEntry[];
+}
+
+export async function getStaticPaths() {
+  const months = groupByMonth(await getNews('en'), 'en');
+  return months.map((month) => ({
+    params: { month: month.key },
+    props: { posts: month.posts },
+  }));
+}
+
+const { posts } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Timeline month</title>
+  </head>
+  <body>
+    <div data-month-cards>
+      {posts.map((post) => <TimelineCard post={post} locale="en" />)}
+    </div>
+  </body>
+</html>

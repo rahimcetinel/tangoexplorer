@@ -16,4 +16,4 @@ export function eventImage(path?: string): ImageMetadata | undefined {
   return entry?.[1].default;
 }
 
-export const OG_FALLBACK = '/og-default.svg';
+export const OG_FALLBACK = '/og-default.jpg';

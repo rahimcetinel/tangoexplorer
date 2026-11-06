@@ -39,6 +39,28 @@ export function dayLabel(start?: Date, end?: Date): string {
   return `${first}–${end.getUTCDate()}`;
 }
 
+// Human date range for cards and fact boxes: "10–16 Nov 2026",
+// "27 Oct – 1 Nov 2026", "31 Dec 2026 – 2 Jan 2027".
+export function formatEventRange(start?: Date, end?: Date, options: { year?: boolean } = {}): string {
+  if (!start) {
+    return '';
+  }
+  const withYear = options.year ?? true;
+  const last = end ?? start;
+  const months = monthShort.en;
+  const sameYear = start.getUTCFullYear() === last.getUTCFullYear();
+  const sameMonth = sameYear && start.getUTCMonth() === last.getUTCMonth();
+  const sameDay = sameMonth && start.getUTCDate() === last.getUTCDate();
+  const year = (value: Date) => (withYear ? ` ${value.getUTCFullYear()}` : '');
+  if (sameDay) {
+    return `${start.getUTCDate()} ${months[start.getUTCMonth()]}${year(start)}`;
+  }
+  if (sameMonth) {
+    return `${start.getUTCDate()}–${last.getUTCDate()} ${months[start.getUTCMonth()]}${year(start)}`;
+  }
+  return `${start.getUTCDate()} ${months[start.getUTCMonth()]}${year(start)} – ${last.getUTCDate()} ${months[last.getUTCMonth()]}${year(last)}`;
+}
+
 export function initials(title: string): string {
   const parts = title.split(/\s+/).filter((word) => /[\p{L}]/u.test(word[0] ?? ''));
   const letters = parts.slice(0, 2).map((word) => word[0]!.toUpperCase());

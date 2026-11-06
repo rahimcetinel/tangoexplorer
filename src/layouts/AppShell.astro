@@ -10,7 +10,6 @@ interface Props {
   description?: string;
   locale: Locale;
   mode?: 'home' | 'category' | 'milonga' | 'page';
-  newsSlug?: string;
   posts: NewsEntry[];
   ogImage?: string;
   ogType?: OgType;
@@ -24,7 +23,6 @@ const {
   description,
   locale,
   mode = 'page',
-  newsSlug,
   posts,
   ogImage,
   ogType,
@@ -44,7 +42,6 @@ const resolvedClosePath = closePath ?? homePath(locale);
   locale={locale}
   ogImage={ogImage}
   ogType={ogType}
-  newsSlug={newsSlug}
   robots={robots}
   jsonLd={jsonLd}
 >
@@ -56,9 +53,9 @@ const resolvedClosePath = closePath ?? homePath(locale);
     data-locale={locale}
     data-home-path={homePath(locale)}
     data-close-path={isBoard ? resolvedClosePath : undefined}
-    data-i18n-count={locale === 'tr' ? '{n} haber' : '{n} stories'}
+    data-i18n-count="{n} stories"
   >
-    <TopBar locale={locale} mode={mode} posts={posts} newsSlug={newsSlug} />
+    <TopBar locale={locale} mode={mode} posts={posts} />
     <div class="app-body">
       <div class="app-center">
         <slot name="center" />

@@ -1,48 +1,33 @@
 ---
 import MenuPanel from './MenuPanel.astro';
-import {
-  aboutPath,
-  homePath,
-  milongasPath,
-  otherLocale,
-  switchLocalePath,
-  ui,
-  type Locale,
-} from '../lib/i18n';
+import { aboutPath, homePath, milongasPath, ui, type Locale } from '../lib/i18n';
 import type { NewsEntry } from '../lib/news';
-import { regionLabels, regionPath, regions } from '../lib/regions';
+import { countByRegion, regionLabels, regionPath, regions } from '../lib/regions';
 
 interface Props {
   locale: Locale;
   mode: 'home' | 'category' | 'milonga' | 'page';
   posts: NewsEntry[];
-  newsSlug?: string;
 }
 
-const { locale, mode, posts, newsSlug } = Astro.props;
+const { locale, mode, posts } = Astro.props;
 const copy = ui[locale];
 const home = homePath(locale);
 const currentPath = Astro.url.pathname;
-const altHref = switchLocalePath(locale, currentPath, newsSlug);
-const alt = otherLocale(locale);
 const showSearch = mode === 'home' || mode === 'category' || mode === 'milonga';
-const today = new Intl.DateTimeFormat(locale === 'tr' ? 'tr-TR' : 'en-GB', {
+const counts = countByRegion(posts);
+const regionsActive = currentPath.startsWith('/region');
+const today = new Intl.DateTimeFormat('en-GB', {
   weekday: 'short',
   day: 'numeric',
   month: 'short',
   year: 'numeric',
 }).format(new Date());
 // Short form for phones: the long one is clipped next to the brand.
-const todayShort = new Intl.DateTimeFormat(locale === 'tr' ? 'tr-TR' : 'en-GB', {
+const todayShort = new Intl.DateTimeFormat('en-GB', {
   day: 'numeric',
   month: 'short',
 }).format(new Date());
-const nav: { href: string; label: string }[] = [
-  { href: home, label: copy.home },
-  ...regions.map((region) => ({ href: regionPath(locale, region), label: regionLabels[locale][region] })),
-  { href: milongasPath(locale), label: copy.milongas },
-  { href: aboutPath(locale), label: copy.about },
-];
 ---
 
 <div class="app-head" data-app-head>
@@ -65,20 +50,40 @@ const nav: { href: string; label: string }[] = [
       <span class="is-narrow">{todayShort}</span>
     </span>
     <nav class="app-topnav" aria-label={copy.browse}>
-      {
-        nav.map((item) => (
-          <a
-            href={item.href}
-            class:list={[
-              currentPath === item.href || (item.href !== home && currentPath.startsWith(item.href))
-                ? 'is-active'
-                : '',
-            ]}
-          >
-            {item.label}
-          </a>
-        ))
-      }
+      <a href={home} class:list={[currentPath === home && 'is-active']}>{copy.home}</a>
+      <a
+        href={regionPath(locale, 'turkiye')}
+        class:list={[currentPath === regionPath(locale, 'turkiye') && 'is-active']}
+      >
+        {regionLabels[locale].turkiye}
+      </a>
+      <details class="app-regions">
+        <summary class:list={[regionsActive && 'is-active']}>{copy.regions}</summary>
+        <div class="app-regions-panel">
+          {
+            regions
+              .filter((region) => region !== 'turkiye')
+              .map((region) => (
+              <a
+                href={regionPath(locale, region)}
+                class:list={[currentPath === regionPath(locale, region) && 'is-active']}
+              >
+                <span>{regionLabels[locale][region]}</span>
+                <b>{counts[region]}</b>
+              </a>
+            ))
+          }
+        </div>
+      </details>
+      <a
+        href={milongasPath(locale)}
+        class:list={[currentPath === milongasPath(locale) && 'is-active']}
+      >
+        {copy.milongas}
+      </a>
+      <a href={aboutPath(locale)} class:list={[currentPath === aboutPath(locale) && 'is-active']}>
+        {copy.about}
+      </a>
     </nav>
     <div class="app-topbar-right">
       {
@@ -92,25 +97,6 @@ const nav: { href: string; label: string }[] = [
           </div>
         )
       }
-      <nav class="app-lang" aria-label="Language">
-        <a
-          href={locale === 'en' ? currentPath : altHref}
-          class:list={[locale === 'en' && 'is-active']}
-          aria-current={locale === 'en' ? 'true' : undefined}
-        >
-          {copy.langEn}
-        </a>
-        <span aria-hidden="true"> / </span>
-        <a
-          href={locale === 'tr' ? currentPath : altHref}
-          class:list={[locale === 'tr' && 'is-active']}
-          hreflang={alt}
-          lang={alt}
-          aria-current={locale === 'tr' ? 'true' : undefined}
-        >
-          {copy.langTr}
-        </a>
-      </nav>
     </div>
   </header>
 </div>

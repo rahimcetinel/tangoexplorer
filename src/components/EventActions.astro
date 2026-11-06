@@ -17,10 +17,12 @@ const d = post.data;
 const slug = newsSlug(post);
 const start = d.eventStart;
 const place = d.eventLocation || [d.city, d.country].filter(Boolean).join(', ');
+const title = d.eventName || d.title;
+const website = d.eventWebsite;
 const ics = start
   ? buildIcs({
       uid: slug,
-      title: d.eventName || d.title,
+      title,
       description: d.summary,
       location: place,
       url: pageUrl,
@@ -30,27 +32,40 @@ const ics = start
   : '';
 const google = start
   ? googleCalendarUrl({
-      title: d.eventName || d.title,
+      title,
       details: d.summary,
       location: place,
       start,
       end: d.eventEnd,
     })
   : '';
+const whatsapp = `https://wa.me/?text=${encodeURIComponent(`${title} ${pageUrl}`)}`;
+const telegram = `https://t.me/share/url?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(title)}`;
 ---
 
-{
-  start && (
-    <div class="app-actions">
-      <Button variant="solid" href={icsHref(ics)} download={`${slug}.ics`}>
+<div class="app-actions">
+  {
+    website && (
+      <Button variant="solid" href={website} target="_blank" rel="noopener noreferrer">
+        {copy.eventWebsite}
+      </Button>
+    )
+  }
+  {
+    start && (
+      <Button variant={website ? 'ghost' : 'solid'} href={icsHref(ics)} download={`${slug}.ics`}>
         {copy.addToCalendar}
       </Button>
+    )
+  }
+  {
+    start && (
       <Button href={google} target="_blank" rel="noopener noreferrer">
         {copy.googleCalendar}
       </Button>
-    </div>
-  )
-}
+    )
+  }
+</div>
 <div class="app-actions">
   <Button
     data-share
@@ -61,6 +76,8 @@ const google = start
   >
     {copy.share}
   </Button>
+  <a class="app-btn" href={whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  <a class="app-btn" href={telegram} target="_blank" rel="noopener noreferrer">Telegram</a>
   {
     permalink && (
       <Button href={newsPath(locale, slug)}>{copy.openPage}</Button>

@@ -14,7 +14,7 @@ import {
 } from '../lib/i18n';
 import { getNews, newsSlug, type NewsEntry } from '../lib/news';
 import { eventDurationDays, whenBadge } from '../lib/calendar';
-import { groupingDate, monthLabel } from '../lib/timeline';
+import { formatEventRange, groupingDate, monthLabel } from '../lib/timeline';
 import { regionLabels, regionOf, regionPath } from '../lib/regions';
 
 interface Props {
@@ -36,10 +36,14 @@ const duration = d.eventStart ? eventDurationDays(d.eventStart, d.eventEnd) : nu
 const badge = whenBadge(d.eventStart);
 const badgeLabel =
   badge === 'today' ? copy.whenToday : badge === 'tomorrow' ? copy.whenTomorrow : badge === 'this-week' ? copy.whenThisWeek : null;
-const related = (await getNews(locale))
-  .filter((item) => item.id !== post.id && item.data.category === post.data.category)
-  .slice(0, 3);
+const nearby = (await getNews(locale)).filter((item) => item.id !== post.id);
+const sameCity = d.city ? nearby.filter((item) => item.data.city === d.city) : [];
+const sameCountry = nearby.filter(
+  (item) => item.data.country === d.country && !sameCity.some((cityItem) => cityItem.id === item.id),
+);
+const related = [...sameCity, ...sameCountry].slice(0, 3);
 const place = d.eventLocation || [d.city, d.country].filter(Boolean).join(', ');
+const dates = formatEventRange(d.eventStart, d.eventEnd) || d.eventWhen || '';
 const month = monthLabel(groupingDate(post), locale);
 const region = regionOf(d.country);
 ---
@@ -93,13 +97,13 @@ const region = regionOf(d.country);
   <EventActions locale={locale} post={post} pageUrl={pageUrl} permalink={variant === 'panel'} />
   <p class="app-timeline-pos">
     {copy.timelinePosition}: <b>{month}</b>
-    {d.eventWhen && <> · {d.eventWhen}</>}
-    <> · {formatNewsDate(d.date, locale)}</>
+    {dates && <> · {dates}</>}
+    <> · {copy.addedOn} {formatNewsDate(d.date, locale)}</>
   </p>
   {
     related.length > 0 && (
       <section class="app-related">
-        <h3 class="app-related-title">{copy.related}</h3>
+        <h3 class="app-related-title">{copy.relatedNearby}</h3>
         <ul>
           {related.map((item) => (
             <li>

@@ -4,7 +4,7 @@ import EventImage from './EventImage.astro';
 import { Picture } from 'astro:assets';
 import { categoryLabels, kindLabels, newsPath, type Locale } from '../lib/i18n';
 import { newsSlug, type NewsEntry } from '../lib/news';
-import { dayLabel } from '../lib/timeline';
+import { formatEventRange } from '../lib/timeline';
 import { eventImage } from '../lib/images';
 import { regionLabels, regionOf } from '../lib/regions';
 import { countryColor } from '../lib/country-color';
@@ -24,7 +24,8 @@ const kinds = kindLabels[locale];
 const kind = post.data.kinds[0];
 const region = regionOf(post.data.country);
 const regionLabel = region ? regionLabels[locale][region] : labels[post.data.category];
-const day = dayLabel(post.data.eventStart, post.data.eventEnd);
+const dateRange = formatEventRange(post.data.eventStart, post.data.eventEnd, { year: false });
+const altText = post.data.eventName || post.data.title;
 const place = post.data.eventLocation || [post.data.city, post.data.country].filter(Boolean).join(', ');
 const isSelected = selected === slug;
 const meta = eventImage(post.data.image);
@@ -40,20 +41,20 @@ const color = countryColor(post.data.country);
   <a href={href} data-detail-link>
     <div class="app-ev-ph">
       {meta ? (
-        <EventImage src={post.data.image} alt="" initialsFrom={post.data.title} sizes="252px" />
+        <EventImage src={post.data.image} alt={altText} initialsFrom={post.data.title} sizes="(min-width: 1100px) 252px, (min-width: 640px) 30vw, 44vw" />
       ) : (
         <Picture
           src={fallbackImage(slug)}
-          alt=""
+          alt={altText}
           formats={['avif', 'webp']}
           widths={[252, 408, 816]}
-          sizes="252px"
+          sizes="(min-width: 1100px) 252px, (min-width: 640px) 30vw, 44vw"
           loading="lazy"
           decoding="async"
           class:list={['event-image', 'app-ev-fallback']}
         />
       )}
-      {day && <span class="app-ev-day">{day}</span>}
+      {dateRange && <span class="app-ev-day" title={dateRange}>{dateRange}</span>}
     </div>
     <div class="app-ev-in">
       <p class="app-ev-cat">

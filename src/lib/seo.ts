@@ -1,4 +1,4 @@
-import { homePath, switchLocalePath, type Locale } from './i18n';
+import { homePath, type Locale } from './i18n';
 import { isoDate } from './filters';
 import type { NewsEntry } from './news';
 
@@ -7,12 +7,6 @@ export type OgType = 'website' | 'article';
 export function absUrl(site: URL, path: string): string {
   const clean = path !== '/' && path.endsWith('/') ? path.slice(0, -1) : path || '/';
   return new URL(clean, site).href;
-}
-
-export function alternateUrls(site: URL, locale: Locale, pathname: string, slug?: string): { en: string; tr: string } {
-  const enPath = locale === 'en' ? pathname : switchLocalePath(locale, pathname, slug);
-  const trPath = locale === 'tr' ? pathname : switchLocalePath(locale, pathname, slug);
-  return { en: absUrl(site, enPath), tr: absUrl(site, trPath) };
 }
 
 export function siteGraph(locale: Locale, site: URL): object[] {
@@ -30,7 +24,7 @@ export function siteGraph(locale: Locale, site: URL): object[] {
       '@id': `${home}#website`,
       name: 'TangoExplorer',
       url: home,
-      inLanguage: locale === 'tr' ? 'tr' : 'en',
+      inLanguage: 'en',
       publisher: { '@id': `${origin}/#organization` },
       potentialAction: {
         '@type': 'SearchAction',
@@ -46,7 +40,7 @@ export function siteGraph(locale: Locale, site: URL): object[] {
 
 export function articleGraph(locale: Locale, post: NewsEntry, pageHref: string, image: string, site: URL): object {
   const d = post.data;
-  const inLanguage = locale === 'tr' ? 'tr' : 'en';
+  const inLanguage = 'en';
   if (d.format === 'blog') {
     return {
       '@type': 'NewsArticle',
@@ -85,11 +79,6 @@ export function articleGraph(locale: Locale, post: NewsEntry, pageHref: string, 
           },
         }
       : undefined,
-    organizer: {
-      '@type': 'Organization',
-      name: d.source,
-      url: d.eventWebsite || d.sourceUrl,
-    },
   };
 }
 

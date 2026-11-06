@@ -216,6 +216,89 @@ body:has(.app-shell) {
   color: var(--color-paper);
 }
 
+/* Regions live in one dropdown instead of six top-level tabs. */
+.app-regions {
+  position: relative;
+}
+
+.app-regions summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+  white-space: nowrap;
+  cursor: pointer;
+  list-style: none;
+}
+
+.app-regions summary::-webkit-details-marker {
+  display: none;
+}
+
+.app-regions summary::after {
+  content: '▾';
+  font-size: 0.7em;
+  line-height: 1;
+}
+
+.app-regions summary:hover,
+.app-regions[open] summary {
+  background: var(--surface-muted);
+  color: var(--color-ink);
+}
+
+.app-regions summary.is-active {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.app-regions-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 60;
+  min-width: 250px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--color-paper);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.app-regions-panel a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.app-regions-panel a:hover {
+  background: var(--surface-muted);
+}
+
+.app-regions-panel a.is-active {
+  background: var(--surface-muted);
+  font-weight: 600;
+}
+
+.app-regions-panel b {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+
 .app-topbar-right {
   margin-left: auto;
   display: flex;
@@ -387,6 +470,22 @@ body:has(.app-shell) {
   min-height: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 408px;
+}
+
+.app-map-link {
+  margin: 8px 0 0;
+  font-size: var(--text-sm);
+}
+
+/* Page templates carry the story in the main column; the drawer column is for
+   the board's quick view only. */
+.app-shell[data-mode='page'] .app-body {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.app-shell[data-mode='page'] .app-detail,
+.app-shell[data-mode='page'] .app-detail-backdrop {
+  display: none;
 }
 
 .app-rail-label {
@@ -1893,3 +1992,136 @@ body.detail-open {
 .app-select-wrap select:focus-visible {
   outline-color: var(--color-indigo);
 }
+
+/* Hero: what the site is, what is happening, and a way in. */
+.app-hero {
+  flex: 0 0 auto;
+  padding: 30px 24px 24px;
+  background:
+    radial-gradient(120% 140% at 0% 0%, rgba(168, 50, 80, 0.08), transparent 55%),
+    var(--color-cream);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.app-hero-kicker {
+  margin: 0 0 10px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-burgundy);
+}
+
+.app-hero-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.9rem, 1.2rem + 2.6vw, 3.1rem);
+  line-height: 1.03;
+  letter-spacing: -0.015em;
+  color: var(--color-ink);
+  max-width: 18ch;
+}
+
+.app-hero-lede {
+  margin: 12px 0 0;
+  max-width: 62ch;
+  font-size: var(--text-base);
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+}
+
+.app-hero-search {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+  max-width: 560px;
+}
+
+.app-hero-search input {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 14px;
+  font-size: var(--text-base);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-pill);
+}
+
+.app-hero-search input::placeholder {
+  color: var(--color-ink-soft);
+}
+
+.app-hero-search button {
+  flex: 0 0 auto;
+  padding: 11px 20px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-paper);
+  background: var(--color-burgundy);
+  border: 1px solid var(--color-burgundy);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+}
+
+.app-hero-search button:hover {
+  background: var(--color-burgundy-dark);
+}
+
+.app-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 0;
+  font-size: var(--text-sm);
+  color: var(--color-ink-soft);
+}
+
+.app-hero-meta b {
+  color: var(--color-ink);
+}
+
+.app-hero-now {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin: 12px 0 0;
+  padding-top: 12px;
+  border-top: 1px dashed var(--color-rule);
+  font-size: var(--text-sm);
+  color: var(--color-ink-soft);
+}
+
+.app-hero-now-label {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.app-hero-now-item b {
+  color: var(--color-ink);
+}
+
+.app-hero-now-item.is-accent b {
+  color: var(--color-orange);
+}
+
+@media (max-width: 859px) {
+  .app-hero {
+    padding: 22px 18px 18px;
+  }
+
+  .app-hero-title {
+    max-width: none;
+  }
+
+  .app-hero-search {
+    flex-direction: column;
+  }
+
+  .app-hero-search button {
+    width: 100%;
+  }
+}
+

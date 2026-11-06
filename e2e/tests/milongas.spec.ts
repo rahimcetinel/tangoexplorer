@@ -116,18 +116,6 @@ test('day tabs filter the list', async ({ page }) => {
   await expect.poll(() => searchParams(page).get('day')).toBeNull();
 });
 
-test('Turkish milongas page uses Turkish labels', async ({ page }) => {
-  await page.goto('/tr/milongalar');
-  await expect(page.locator('html')).toHaveAttribute('lang', 'tr');
-  await expect(page.locator('[data-milonga-id]').first()).toBeVisible();
-  await openFilters(page);
-  await expect(page.locator('[data-milonga-type="practica"]')).toHaveText('Praktika');
-  await expect(page.locator('[data-milonga-region] option[value="athens"]')).toHaveText('Atina');
-  await expect(page.locator('[data-milonga-region] option[value="nordrhein-westfalen"]')).toHaveText('Almanya: NRW');
-  await page.locator('[data-milonga-region]').selectOption('nordrhein-westfalen');
-  await expect.poll(() => searchParams(page).get('region')).toBe('nordrhein-westfalen');
-});
-
 test('a failed milonga feed shows the empty state', async ({ page }) => {
   await page.route('**/hoy-milongas.json', (route) => route.abort());
   await page.goto('/milongas');

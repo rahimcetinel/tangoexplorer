@@ -57,20 +57,19 @@ export async function focusSearch(page: Page, testInfo: TestInfo) {
   return input;
 }
 
-export async function loadIndex(page: Page, locale: 'en' | 'tr'): Promise<IndexItem[]> {
-  const response = await page.request.get(`/search-index/${locale}.json`);
-  expect(response.ok(), `search index ${locale}`).toBeTruthy();
+export async function loadIndex(page: Page): Promise<IndexItem[]> {
+  const response = await page.request.get('/search-index.json');
+  expect(response.ok(), 'search index').toBeTruthy();
   const data = (await response.json()) as IndexItem[];
   expect(Array.isArray(data)).toBeTruthy();
   return data;
 }
 
 export async function sharedSlug(page: Page): Promise<string> {
-  const en = await loadIndex(page, 'en');
-  const tr = new Set((await loadIndex(page, 'tr')).map((item) => item.s));
-  const shared = en.find((item) => tr.has(item.s) && item.c !== 'topluluk');
-  expect(shared, 'a story published in both locales').toBeTruthy();
-  return shared!.s;
+  const index = await loadIndex(page);
+  const story = index.find((item) => item.c !== 'topluluk');
+  expect(story, 'a story in the index').toBeTruthy();
+  return story!.s;
 }
 
 export function searchParams(page: Page): URLSearchParams {

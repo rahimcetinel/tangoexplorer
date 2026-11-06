@@ -174,17 +174,6 @@ test('direct story URL is a full page with source, calendar, and share', async (
   await expect(share).toHaveText('Link copied');
 });
 
-test('story language switch stays on the same slug', async ({ page }) => {
-  const slug = await sharedSlug(page);
-  await page.goto(`/news/${slug}`);
-  await page.locator('.app-lang').getByRole('link', { name: 'TR', exact: true }).click();
-  await expect(page).toHaveURL(new RegExp(`/tr/haber/${slug}`));
-  await expect(page.locator('html')).toHaveAttribute('lang', 'tr');
-  await expect(page.locator('#main h1')).toBeVisible();
-  await page.locator('.app-lang').getByRole('link', { name: 'EN', exact: true }).click();
-  await expect(page).toHaveURL(new RegExp(`/news/${slug}`));
-});
-
 test('mobile drawer fills the screen and desktop drawer stays a side panel', async ({ page }, testInfo) => {
   await page.goto('/');
   await page.locator('[data-month-col][data-lazy="false"] [data-detail-link]').first().click();

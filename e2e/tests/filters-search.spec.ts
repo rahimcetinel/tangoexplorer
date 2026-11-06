@@ -102,12 +102,6 @@ test('a query with no hits shows the empty copy', async ({ page }) => {
   await expect(page.locator('.app-viewport')).toBeHidden();
 });
 
-test('Turkish empty search uses Turkish copy', async ({ page }) => {
-  await page.goto(`/tr?q=${NO_MATCH}`);
-  await expect(page.locator('[data-results]')).toContainText('Bu filtrelere uyan haber yok.');
-  await expect(page.locator('[data-app-shell]')).toHaveAttribute('data-i18n-count', '{n} haber');
-});
-
 test('legacy filter params are ignored and stripped', async ({ page }) => {
   await page.goto('/?year=2026&month=10&format=etkinlik&source=tangocat&when=this-week');
   await expect.poll(() => searchParams(page).toString()).toBe('');
@@ -126,7 +120,7 @@ test('deep link restores kind filter on load', async ({ page }, testInfo) => {
 });
 
 test('suggestions open the matching story from click and keyboard', async ({ page }, testInfo) => {
-  const index = await loadIndex(page, 'en');
+  const index = await loadIndex(page);
   const item = index.find((entry) => entry.t.length > 12);
   expect(item).toBeTruthy();
   await page.goto('/');
@@ -152,7 +146,7 @@ test('suggestions open the matching story from click and keyboard', async ({ pag
 });
 
 test('Escape closes suggestions before it closes the menu', async ({ page }, testInfo) => {
-  const index = await loadIndex(page, 'en');
+  const index = await loadIndex(page);
   const item = index[0];
   expect(item).toBeTruthy();
   await page.goto('/');
@@ -170,7 +164,7 @@ test('Escape closes suggestions before it closes the menu', async ({ page }, tes
 });
 
 test('Enter submits a search and shows a count', async ({ page }, testInfo) => {
-  const index = await loadIndex(page, 'en');
+  const index = await loadIndex(page);
   const item = index.find((entry) => entry.ci);
   expect(item).toBeTruthy();
   await page.goto('/');
@@ -186,7 +180,7 @@ test('Enter submits a search and shows a count', async ({ page }, testInfo) => {
 });
 
 test('category board and its search stay inside that category', async ({ page }, testInfo) => {
-  const index = await loadIndex(page, 'en');
+  const index = await loadIndex(page);
   await page.goto('/category/festival');
   await expect(page.locator('[data-board]')).toHaveAttribute('data-board-category', 'festival');
   const cards = page.locator('[data-month-col][data-lazy="false"] [data-card]');
@@ -224,3 +218,4 @@ test('both search fields stay in sync', async ({ page }, testInfo) => {
   await page.locator('.app-topbar [data-search-input]').fill('istanbul');
   await expect(page.locator('.app-menu-search [data-search-input]')).toHaveValue('istanbul');
 });
+

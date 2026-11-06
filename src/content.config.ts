@@ -12,7 +12,7 @@ const news = defineCollection({
     category: z.enum(categories),
     source: z.string(),
     sourceUrl: z.string().url(),
-    locale: z.enum(['tr', 'en']).default('tr'),
+    locale: z.enum(['tr', 'en']).default('en'),
     summary: z.string(),
     featured: z.boolean().optional().default(false),
     breaking: z.boolean().optional().default(false),

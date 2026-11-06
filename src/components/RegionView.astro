@@ -9,7 +9,7 @@ import EmptyState from './ui/EmptyState.astro';
 import { getNews, newsSlug } from '../lib/news';
 import { homePath, ui, type Locale } from '../lib/i18n';
 import { eagerMonthKeys, upcomingMonths } from '../lib/timeline';
-import { regionLabels, regionOf, regionPath, type Region } from '../lib/regions';
+import { regionLabels, inRegion, regionPath, type Region } from '../lib/regions';
 
 interface Props {
   locale: Locale;
@@ -20,7 +20,7 @@ const { locale, region } = Astro.props;
 const copy = ui[locale];
 const label = regionLabels[locale][region];
 const allPosts = await getNews(locale);
-const posts = allPosts.filter((post) => regionOf(post.data.country) === region);
+const posts = allPosts.filter((post) => inRegion(post.data.country, region));
 const months = upcomingMonths(posts, locale);
 const selected = posts[0];
 const selectedSlug = selected ? newsSlug(selected) : undefined;
@@ -38,7 +38,6 @@ const eagerMonths = eagerMonthKeys(selected);
   <Fragment slot="center">
     <Header
       locale={locale}
-      search
       crumbs={[
         { label: copy.home, href: homePath(locale) },
         { label },

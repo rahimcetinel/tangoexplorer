@@ -37,7 +37,7 @@ const eager = new Set(eagerMonths);
             data-month-col
             data-month={month.key}
             data-lazy={full ? 'false' : 'true'}
-            data-fragment={full ? undefined : `/fragments/${locale}/${month.key}`}
+            data-fragment={full ? undefined : `/fragments/${month.key}`}
           >
             <div class="app-month-grid" data-month-grid>
               {full

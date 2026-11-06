@@ -12,14 +12,11 @@ test('home renders the English shell', async ({ page }) => {
   await expect(page.locator('[data-app-shell]')).toHaveAttribute('data-locale', 'en');
   await expect(page.locator('.app-brand')).toHaveText(/Tango\s*Explorer/);
   await expect(page.locator('.app-topbar-date')).not.toBeEmpty();
-  await expect(page.locator('h1.sr-only')).toHaveText('TangoExplorer');
+  await expect(page.locator('h1#hero-title')).toHaveText('Find your next tango weekend');
+  await expect(page.locator('.app-hero-search input[name="q"]')).toBeVisible();
   await expect(page.locator('[data-board]')).toBeVisible();
   await expect(page.locator('[data-month-ribbon]')).toBeVisible();
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://tangoexplorer.com/');
-  await expect(page.locator('link[rel="alternate"][hreflang="tr"]')).toHaveAttribute(
-    'href',
-    'https://tangoexplorer.com/tr',
-  );
   await expect(page.locator('meta[property="og:site_name"]')).toHaveAttribute('content', 'TangoExplorer');
   const jsonLd = await page.locator('script[type="application/ld+json"]').first().textContent();
   expect(jsonLd).toContain('TangoExplorer');
@@ -60,37 +57,24 @@ test('desktop shows top nav and search; mobile hides them', async ({ page }, tes
     await expect(nav.getByRole('link', { name: 'Turkey' })).toHaveAttribute('href', '/region/turkiye');
     await expect(nav.getByRole('link', { name: 'Milongas' })).toHaveAttribute('href', '/milongas');
     await expect(nav.getByRole('link', { name: 'About' })).toHaveAttribute('href', '/about');
+    await expect(nav.locator('summary')).toHaveText(/Regions/);
   }
 });
 
-test('Turkish home uses Turkish chrome', async ({ page }) => {
-  await page.goto('/tr');
-  await expect(page.locator('html')).toHaveAttribute('lang', 'tr');
-  await expect(page).toHaveTitle(/Arjantin tangosu/);
-  await expect(page.locator('[data-app-shell]')).toHaveAttribute('data-locale', 'tr');
-  await expect(page.locator('.app-topbar [data-search-input], .app-menu-search [data-search-input]').first()).toHaveAttribute(
-    'placeholder',
-    'Etkinlik, şehir ara…',
+test('the regions menu groups the world into browseable clusters', async ({ page }, testInfo) => {
+  test.skip(isMobile(testInfo), 'the regions menu is desktop-only');
+  const nav = page.locator('.app-topnav');
+  await nav.locator('summary').click();
+  const links = nav.locator('.app-regions-panel a');
+  await expect(links).toHaveCount(6);
+  await expect(nav.locator('.app-regions-panel a', { hasText: 'Balkans' })).toHaveAttribute(
+    'href',
+    '/region/balkans',
   );
-  await expect(page.locator('[data-menu-toggle]')).toHaveAttribute('aria-label', 'Menü ve filtreler');
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://tangoexplorer.com/tr');
-});
-
-test('language switch keeps the same section', async ({ page }) => {
-  const cases: { from: string; control: string; to: RegExp }[] = [
-    { from: '/', control: 'TR', to: /\/tr\/?$/ },
-    { from: '/tr', control: 'EN', to: /tangoexplorer.com\/?$/ },
-    { from: '/about', control: 'TR', to: /\/tr\/hakkinda\/?$/ },
-    { from: '/tr/hakkinda', control: 'EN', to: /\/about\/?$/ },
-    { from: '/milongas', control: 'TR', to: /\/tr\/milongalar\/?$/ },
-    { from: '/region/europe', control: 'TR', to: /\/tr\/bolge\/europe\/?$/ },
-    { from: '/category/festival', control: 'TR', to: /\/tr\/kategori\/festival\/?$/ },
-  ];
-  for (const item of cases) {
-    await page.goto(item.from);
-    await page.locator('.app-lang').getByRole('link', { name: item.control, exact: true }).click();
-    await expect(page).toHaveURL(item.to);
-  }
+  await expect(nav.locator('.app-regions-panel a', { hasText: 'Middle East & Africa' })).toHaveAttribute(
+    'href',
+    '/region/middle-east',
+  );
 });
 
 test('active section is marked in the top nav', async ({ page }) => {
@@ -99,5 +83,5 @@ test('active section is marked in the top nav', async ({ page }) => {
   await page.goto('/about');
   await expect(page.locator('.app-topnav a', { hasText: /^About$/ })).toHaveClass(/is-active/);
   await page.goto('/region/europe');
-  await expect(page.locator('.app-topnav a', { hasText: /^Europe$/ })).toHaveClass(/is-active/);
+  await expect(page.locator('.app-topnav summary')).toHaveClass(/is-active/);
 });

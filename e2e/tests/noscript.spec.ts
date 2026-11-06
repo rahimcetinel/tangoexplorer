@@ -29,15 +29,8 @@ test('@noscript a story link is a normal navigation', async ({ page }) => {
   await expect(page.locator('[data-app-shell]')).toHaveAttribute('data-mode', 'page');
 });
 
-test('@noscript unknown Turkish paths stay on the English 404 shell', async ({ page }) => {
-  const response = await page.goto('/tr/bu-sayfa-yok-xyz');
-  expect(response?.status()).toBe(404);
-  await expect(page.locator('h1')).toHaveText('Page not found');
-  await expect(page.locator('[data-404-home]')).toHaveAttribute('href', '/');
-});
-
-test('@noscript the dedicated Turkish 404 is already Turkish', async ({ page }) => {
-  await page.goto('/tr/404');
-  await expect(page.locator('h1')).toHaveText('Sayfa bulunamadı');
-  await expect(page.locator('[data-404-home]')).toHaveAttribute('href', '/tr');
+test('@noscript retired Turkish paths land on the English home', async ({ page }) => {
+  await page.goto('/tr/bu-sayfa-yok-xyz');
+  await expect(page).toHaveURL(/tangoexplorer.com\/?$/);
+  await expect(page.locator('[data-board]')).toBeVisible();
 });
