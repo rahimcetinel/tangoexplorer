@@ -41,6 +41,7 @@ export function initDetailPanel() {
   const homePath = shell.dataset.homePath || '/';
   const closePath = shell.dataset.closePath || homePath;
   let lastTrigger: HTMLElement | null = null;
+  let openSeq = 0;
   panel.setAttribute('role', 'dialog');
 
   function setSelected(url: string | null) {
@@ -70,6 +71,9 @@ export function initDetailPanel() {
   const errorLink = panel.querySelector<HTMLAnchorElement>('[data-detail-error-link]');
 
   async function open(url: string, push: boolean, focus = true) {
+    // A close (Escape, backdrop, browser Back) can land while this fetch is in
+    // flight; without a token the stale response reopens the drawer afterwards.
+    const seq = ++openSeq;
     panel!.setAttribute('aria-busy', 'true');
     skeleton?.removeAttribute('hidden');
     errorBox?.setAttribute('hidden', '');
@@ -84,6 +88,9 @@ export function initDetailPanel() {
       const article = doc.querySelector('[data-article]');
       if (!article) {
         throw new Error('missing article');
+      }
+      if (seq !== openSeq) {
+        return;
       }
       const imported = document.importNode(article, true);
       demoteHeadings(imported);
@@ -102,6 +109,9 @@ export function initDetailPanel() {
         focusTarget?.focus();
       }
     } catch {
+      if (seq !== openSeq) {
+        return;
+      }
       skeleton?.setAttribute('hidden', '');
       if (errorLink) {
         errorLink.setAttribute('href', new URL(url, window.location.origin).pathname);
@@ -114,6 +124,7 @@ export function initDetailPanel() {
   }
 
   function close(push: boolean) {
+    openSeq += 1;
     setOpen(false);
     setSelected(null);
     if (push) {
