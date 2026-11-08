@@ -1,12 +1,12 @@
 ---
-title: "Sakura Tango Festival 2027 — 12th Edition"
+title: "Sakura Tango Festival 2027 — 12th Edition"
 date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sakura+Tango+Festival+2027+%E2%80%94+12th+Edition/11258
 locale: en
-summary: "Sakura Tango Festival 2027 — 12th Edition (April 1-4, 2027) in Japan, Fukuoka. Source: Tangocat."
-eventName: "Sakura Tango Festival 2027 — 12th Edition"
+summary: "Sakura Tango Festival 2027 — 12th Edition (April 1-4, 2027) in Japan, Fukuoka. Source: Tangocat."
+eventName: "Sakura Tango Festival 2027 — 12th Edition"
 eventWhen: "April 1-4, 2027"
 eventLocation: "Japan, Fukuoka"
 kinds:
@@ -22,6 +22,6 @@ imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://sakuratango.com/image/title-logo.png
 ---
 
-Sakura Tango Festival 2027 — 12th Edition is listed (April 1-4, 2027) in Japan, Fukuoka. This is a date and place summary, not a copy of the source programme.
+Sakura Tango Festival 2027 — 12th Edition is listed (April 1-4, 2027) in Japan, Fukuoka. This is a date and place summary, not a copy of the source programme.
 
 Registration, venue, and lineup can change. Follow the source link for the current notice.

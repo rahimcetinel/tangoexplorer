@@ -1,13 +1,13 @@
-﻿---
+---
 title: "Festival Bravo XIII"
 date: 2026-10-09
 category: dunya
 source: Tangoverse
 sourceUrl: https://tangoverse.net/events/festival-bravo-xiii-genova-2026
 locale: en
-summary: "Festival Bravo XIII is listed for 4â€“7 December 2026 in Italy, Genova. Source: Tangoverse."
+summary: "Festival Bravo XIII is listed for 4–7 December 2026 in Italy, Genova. Source: Tangoverse."
 eventName: "Festival Bravo XIII"
-eventWhen: "4â€“7 December 2026"
+eventWhen: "4–7 December 2026"
 eventLocation: "Italy, Genova"
 kinds:
   - festival
@@ -22,6 +22,6 @@ imageCredit: "Event image (tangoverse.net)"
 imageSourceUrl: https://tangoverse.net/og-image.jpg?v=2
 ---
 
-Festival Bravo XIII is listed for 4â€“7 December 2026 in Italy, Genova. This is a date and place summary, not a copy of the source listing.
+Festival Bravo XIII is listed for 4–7 December 2026 in Italy, Genova. This is a date and place summary, not a copy of the source listing.
 
 Programme and registration can change. Follow the Tangoverse listing for current details.

@@ -1,0 +1,10 @@
+﻿import { chromium } from "playwright";
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+await page.goto("https://tangoexplorer.com/news/tangocat-19th-tango-to-istanbul-red-edition", { waitUntil: "networkidle", timeout: 60000 });
+await page.waitForTimeout(800);
+const credit = await page.locator(".app-image-credit").textContent().catch(() => null);
+const src = await page.locator(".app-heroimg img").getAttribute("src").catch(() => null);
+await page.screenshot({ path: "agentic-python/prod-tango-to-istanbul.png" });
+console.log(JSON.stringify({ credit, src }));
+await browser.close();
