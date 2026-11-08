@@ -234,3 +234,33 @@ export function tonightCount(items: Milonga[], region: string, now: Date = new D
   const today = todaySlug(now);
   return items.filter((item) => item.region === region && item.days.includes(today)).length;
 }
+
+export function cityCounts(items: Milonga[], region: string): { city: string; count: number }[] {
+  const counts = new Map<string, number>();
+  for (const item of items) {
+    if (item.region !== region || !item.city) continue;
+    counts.set(item.city, (counts.get(item.city) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .map(([city, count]) => ({ city, count }))
+    .sort((a, b) => b.count - a.count || a.city.localeCompare(b.city, 'en'));
+}
+
+export function cityChipsHtml(
+  items: Milonga[],
+  filters: MilongaFilters,
+  copy: MilongaCopy,
+): string {
+  const cities = cityCounts(items, filters.region).slice(0, 12);
+  if (cities.length < 2) {
+    return '';
+  }
+  const all = `<button type="button" class="app-chip${filters.city ? '' : ' is-active'}" data-milonga-city-chip="" aria-pressed="${filters.city ? 'false' : 'true'}">${copy.filterAll}</button>`;
+  const rest = cities
+    .map(
+      (entry) =>
+        `<button type="button" class="app-chip${filters.city === entry.city ? ' is-active' : ''}" data-milonga-city-chip="${escapeHtml(entry.city)}" aria-pressed="${filters.city === entry.city ? 'true' : 'false'}">${escapeHtml(entry.city)} <b>${entry.count}</b></button>`,
+    )
+    .join('');
+  return all + rest;
+}

@@ -1781,6 +1781,45 @@ body.detail-open {
   color: var(--color-burgundy);
 }
 
+.app-milonga-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--color-rule);
+  background: var(--color-paper);
+  min-width: 0;
+}
+
+.app-milonga-region select {
+  padding: 7px 10px;
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  border: 1px solid var(--color-rule);
+  border-radius: 8px;
+}
+
+.app-milonga-cities {
+  display: flex;
+  flex: 1;
+  gap: 6px;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.app-milonga-cities .app-chip b {
+  margin-left: 4px;
+  font-size: 0.68rem;
+  color: var(--color-ink-soft);
+}
+
+.app-milonga-cities .app-chip.is-active b {
+  color: inherit;
+}
+
 .app-milonga-tabs {
   display: flex;
   gap: 6px;

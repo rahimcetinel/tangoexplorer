@@ -2,6 +2,7 @@ import { regionLabel, type HoyData, type Milonga } from '../lib/hoy';
 import { ui, weekdaysShort, type Locale } from '../lib/i18n';
 import {
   citiesForRegion,
+  cityChipsHtml,
   cityColorsFor,
   detailHtml,
   escapeHtml,
@@ -29,13 +30,14 @@ export function initMilongas() {
   const tabsEl = document.querySelector<HTMLElement>('[data-milonga-tabs]');
   const emptyEl = document.querySelector<HTMLElement>('[data-milonga-empty]');
   const detailEl = document.querySelector<HTMLElement>('[data-milonga-detail]');
-  const regionSel = document.querySelector<HTMLSelectElement>('[data-milonga-region]');
+  const regionSels = [...document.querySelectorAll<HTMLSelectElement>('[data-milonga-region], [data-milonga-region-top]')];
   const citySel = document.querySelector<HTMLSelectElement>('[data-milonga-city]');
+  const citiesEl = document.querySelector<HTMLElement>('[data-milonga-cities]');
   const dataEl = document.querySelector<HTMLScriptElement>('[data-milonga-data]');
   const searches = [...document.querySelectorAll<HTMLInputElement>('[data-search-input]')];
   const backdrop = document.querySelector<HTMLElement>('[data-detail-backdrop]');
   const panel = document.querySelector<HTMLElement>('.app-detail');
-  if (!shell || !listEl || !regionSel || !citySel) {
+  if (!shell || !listEl || !regionSels.length || !citySel) {
     return;
   }
   const locale = (shell.dataset.locale as Locale) || 'en';
@@ -90,7 +92,9 @@ export function initMilongas() {
   }
 
   function renderCounts() {
-    const total = items.filter((item) => item.region === filters.region).length;
+    const regionItems = items.filter((item) => item.region === filters.region);
+    const filtered = Boolean(filters.city || filters.day || filters.type || filters.q);
+    const total = filtered ? regionItems.filter((item) => matchesMilonga(item, filters)).length : regionItems.length;
     const tonight = tonightCount(items, filters.region);
     const totalEl = document.querySelector<HTMLElement>('[data-milonga-total]');
     const tonightEl = document.querySelector<HTMLElement>('[data-milonga-tonight-count]');
@@ -108,7 +112,9 @@ export function initMilongas() {
   }
 
   function syncRail() {
-    regionSel!.value = filters.region;
+    regionSels.forEach((select) => {
+      select.value = filters.region;
+    });
     document.querySelectorAll<HTMLElement>('[data-milonga-day]').forEach((chip) => {
       const on = (chip.dataset.milongaDay || '') === filters.day;
       chip.classList.toggle('is-active', on);
@@ -131,6 +137,7 @@ export function initMilongas() {
   function renderList() {
     cityColors = cityColorsFor(items, filters.region);
     listEl!.innerHTML = listHtml(items, filters, locale, copy, cityColors, selected);
+    if (citiesEl) citiesEl.innerHTML = cityChipsHtml(items, filters, copy);
     if (emptyEl) emptyEl.hidden = items.some((item) => matchesMilonga(item, filters));
   }
 
@@ -167,16 +174,24 @@ export function initMilongas() {
     writeUrl();
   }
 
-  regionSel.addEventListener('change', () => {
-    filters.region = regionSel.value;
-    filters.city = '';
-    fullRender();
+  regionSels.forEach((select) => {
+    select.addEventListener('change', () => {
+      filters.region = select.value;
+      filters.city = '';
+      fullRender();
+    });
   });
   citySel.addEventListener('change', () => {
     filters.city = citySel.value;
     renderTabs();
     renderList();
     writeUrl();
+  });
+  citiesEl?.addEventListener('click', (event) => {
+    const chip = (event.target as Element | null)?.closest<HTMLElement>('[data-milonga-city-chip]');
+    if (!chip) return;
+    filters.city = chip.dataset.milongaCityChip || '';
+    fullRender();
   });
 
   listEl.addEventListener('click', (event) => {

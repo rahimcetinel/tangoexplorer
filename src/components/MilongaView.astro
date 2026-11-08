@@ -5,7 +5,9 @@ import milongaData from '../data/hoy-milongas.json';
 import { getNews } from '../lib/news';
 import { milongasPath, ui, type Locale } from '../lib/i18n';
 import type { HoyData, Milonga } from '../lib/hoy';
+import { HOY_REGIONS, regionLabel } from '../lib/hoy';
 import {
+  cityChipsHtml,
   cityColorsFor,
   defaultFilters,
   detailHtml,
@@ -47,6 +49,21 @@ const tonight = tonightCount(items, filters.region);
           <b data-milonga-tonight-count>{tonight}</b> {copy.milongaTonight}
         </button>
       </p>
+      <div class="app-milonga-toolbar">
+        <label class="app-milonga-region">
+          <span class="sr-only">{copy.milongaRegion}</span>
+          <select data-milonga-region-top>
+            {
+              HOY_REGIONS.map((region) => (
+                <option value={region.id} selected={region.id === filters.region}>
+                  {regionLabel(region.id, 'en')}
+                </option>
+              ))
+            }
+          </select>
+        </label>
+        <div class="app-milonga-cities" data-milonga-cities set:html={cityChipsHtml(items, filters, copy)} />
+      </div>
       <div class="app-milonga-tabs" data-milonga-tabs set:html={tabsHtml(items, filters, locale, copy)} />
       <div
         class="app-milonga-list"

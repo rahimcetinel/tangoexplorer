@@ -19,6 +19,20 @@ test('milonga JSON is public and the page lists Türkiye by default', async ({ p
   await expect(page.locator('[data-milonga-tabs] [data-day=""]')).toHaveClass(/is-active/);
 });
 
+test('the toolbar surfaces other cities and regions', async ({ page }) => {
+  await page.goto('/milongas');
+  const izmir = page.locator('[data-milonga-city-chip="İzmir"]');
+  await expect(izmir).toBeVisible();
+  await izmir.click();
+  await expect.poll(() => searchParams(page).get('city')).toBe('İzmir');
+  await expect(page.locator('.app-mitem-city').first()).toHaveText('İzmir');
+  await expect(page.locator('[data-milonga-total]')).toHaveText('4');
+
+  await page.locator('[data-milonga-region-top]').selectOption('berlin');
+  await expect.poll(() => searchParams(page).get('region')).toBe('berlin');
+  await expect(page.locator('[data-milonga-total]')).toHaveText('48');
+});
+
 test('region, city, day, and type filters rewrite the URL', async ({ page }) => {
   await page.goto('/milongas');
   await expect(page.locator('[data-milonga-id]').first()).toBeVisible();
