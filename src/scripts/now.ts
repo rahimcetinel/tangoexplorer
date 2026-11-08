@@ -1,34 +1,11 @@
-type NowEvent = { t: string; slug: string; ci: string; co: string; dates: string; w: string };
-type NowMilonga = { n: string; c: string; s: string; e: string; v: string; ty: string };
-type Coord = [string, number, number];
-
-const RADIUS_KM = 150;
-const STORAGE_KEY = 'te-city';
-
-const TIMEZONE_CITY: Record<string, string> = {
-  'Europe/Istanbul': 'Istanbul',
-  'Europe/Berlin': 'Berlin',
-  'Europe/Vienna': 'Vienna',
-  'Europe/Zurich': 'Zürich',
-  'Europe/Athens': 'Athens',
-  'Europe/Madrid': 'Madrid',
-  'Europe/Paris': 'Paris',
-  'Europe/Rome': 'Rome',
-  'Europe/London': 'London',
-  'Europe/Warsaw': 'Warsaw',
-  'Europe/Lisbon': 'Lisbon',
-  'Europe/Amsterdam': 'Amsterdam',
-  'Europe/Brussels': 'Brussels',
-  'Europe/Copenhagen': 'Copenhagen',
-  'Europe/Stockholm': 'Stockholm',
-  'Europe/Helsinki': 'Helsinki',
-  'America/Argentina/Buenos_Aires': 'Buenos Aires',
-  'America/Sao_Paulo': 'São Paulo',
-  'America/New_York': 'New York',
-  'America/Chicago': 'Chicago',
-  'America/Los_Angeles': 'Los Angeles',
-  'America/Mexico_City': 'Mexico City',
-};
+import {
+  distanceKm,
+  guessCity,
+  nearbyCitySet,
+  normalizeCity,
+  rememberCity,
+} from '../lib/now-core';
+import type { NowCoord, NowEvent, NowMilonga } from '../lib/now-data';
 
 function escapeHtml(value: string): string {
   return value
@@ -36,15 +13,6 @@ function escapeHtml(value: string): string {
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;');
-}
-
-function normalize(value: string): string {
-  return value
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/ı/g, 'i')
-    .toLowerCase()
-    .trim();
 }
 
 function readJson<T>(selector: string): T[] {
@@ -55,16 +23,6 @@ function readJson<T>(selector: string): T[] {
   } catch {
     return [];
   }
-}
-
-function distanceKm(a: [number, number], b: [number, number]): number {
-  const toRad = (value: number) => (value * Math.PI) / 180;
-  const dLat = toRad(b[0] - a[0]);
-  const dLng = toRad(b[1] - a[1]);
-  const lat1 = toRad(a[0]);
-  const lat2 = toRad(b[0]);
-  const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
-  return 2 * 6371 * Math.asin(Math.sqrt(h));
 }
 
 export function initNow(): void {
@@ -78,8 +36,7 @@ export function initNow(): void {
 
   const events = readJson<NowEvent>('[data-now-events]');
   const milongas = readJson<NowMilonga>('[data-now-milongas]');
-  const coordList = readJson<Coord>('[data-now-coords]');
-  const coords = new Map(coordList.map(([city, lat, lng]) => [normalize(city), { city, lat, lng }]));
+  const coordList = readJson<NowCoord>('[data-now-coords]');
 
   const knownCities = [...new Set([
     ...events.map((event) => event.ci),
@@ -93,25 +50,8 @@ export function initNow(): void {
   }
 
   const params = new URLSearchParams(window.location.search);
-  let city = params.get('city') ?? localStorage.getItem(STORAGE_KEY) ?? '';
-
-  if (!city) {
-    const zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    city = TIMEZONE_CITY[zone] ?? '';
-  }
+  let city = params.get('city') ?? guessCity();
   input.value = city;
-
-  function nearbyCities(): Set<string> {
-    const origin = coords.get(normalize(city));
-    const set = new Set<string>([normalize(city)]);
-    if (!origin) return set;
-    for (const entry of coords.values()) {
-      if (distanceKm([origin.lat, origin.lng], [entry.lat, entry.lng]) <= RADIUS_KM) {
-        set.add(normalize(entry.city));
-      }
-    }
-    return set;
-  }
 
   function syncUrl(): void {
     const next = new URLSearchParams();
@@ -126,13 +66,15 @@ export function initNow(): void {
       syncUrl();
       return;
     }
-    localStorage.setItem(STORAGE_KEY, city);
-    const scope = nearbyCities();
-    const match = (value: string) => scope.has(normalize(value));
+    rememberCity(city);
+    const scope = nearbyCitySet(city, coordList);
+    const match = (value: string) => scope.has(normalizeCity(value));
 
     const localEvents = events.filter((event) => match(event.ci) || match(event.co));
     const localMilongas = milongas.filter((item) => match(item.c));
-    const nearbyCount = coordList.filter(([name]) => scope.has(normalize(name)) && normalize(name) !== normalize(city)).length;
+    const nearbyCount = coordList.filter(
+      ([name]) => scope.has(normalizeCity(name)) && normalizeCity(name) !== normalizeCity(city),
+    ).length;
 
     status.textContent = `Showing ${city}${nearbyCount > 0 ? ` and ${nearbyCount} nearby ${nearbyCount === 1 ? 'city' : 'cities'}` : ''}.`;
 

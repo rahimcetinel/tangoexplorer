@@ -1,0 +1,22 @@
+---
+import milongaData from '../data/hoy-milongas.json';
+import { getNews } from '../lib/news';
+import type { HoyData, Milonga } from '../lib/hoy';
+import { buildNowData } from '../lib/now-data';
+
+const posts = await getNews('en');
+const milongas = ((milongaData as HoyData).items ?? []) as Milonga[];
+const { events, milongas: tonightMilongas, coords } = buildNowData(posts, milongas);
+---
+
+<section class="app-now-strip" data-now-strip hidden aria-label="Happening now">
+  <p class="app-now-strip-text" data-now-strip-text></p>
+  <a class="app-now-strip-link" data-now-strip-link href="/now">See what's on →</a>
+  <script type="application/json" data-now-events set:html={JSON.stringify(events)} />
+  <script type="application/json" data-now-milongas set:html={JSON.stringify(tonightMilongas)} />
+  <script type="application/json" data-now-coords set:html={JSON.stringify(coords)} />
+</section>
+<script>
+  import { initNowStrip } from '../scripts/now-strip';
+  initNowStrip();
+</script>

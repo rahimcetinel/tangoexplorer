@@ -50,6 +50,9 @@ const eagerMonths = eagerMonthKeys(selected);
         </main>
       ) : (
         <>
+          <p class="app-cal-link">
+            <a href={`/cal/${region}.ics`}>Subscribe to the {label} calendar (.ics)</a>
+          </p>
           <MonthRibbon locale={locale} months={months} />
           <main id="main" class="app-main-board">
             <TimelineBoard
