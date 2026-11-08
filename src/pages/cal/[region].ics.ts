@@ -19,7 +19,7 @@ export const GET: APIRoute = async ({ params }) => {
     .map((post) => ({
       uid: newsSlug(post),
       title: post.data.eventName || post.data.title,
-      description: `${post.data.summary} Source: ${post.data.source}.`,
+      description: post.data.summary,
       location: post.data.eventLocation ?? [post.data.city, post.data.country].filter(Boolean).join(', '),
       url: `https://tangoexplorer.com/news/${newsSlug(post)}`,
       start: post.data.eventStart!,
