@@ -2,6 +2,7 @@
 import ExternalLink from './ExternalLink.astro';
 import EventImage from './EventImage.astro';
 import type { NewsEntry } from '../lib/news';
+import { healthFor, relativeCheck } from '../lib/link-health';
 import { formatNewsDate, kindLabels, ui, type Locale } from '../lib/i18n';
 import { formatEventRange } from '../lib/timeline';
 
@@ -28,6 +29,7 @@ const dates = formatEventRange(d.eventStart, d.eventEnd) || d.eventWhen || '';
 const registrationOpen = Boolean(d.registrationStart && d.registrationStart <= new Date());
 const hasEvent = Boolean(dates || place || d.eventWebsite || d.eventFacebook || d.eventInstagram || d.image || duration || kind || d.edition != null || d.registrationStart);
 const webDistinct = d.eventWebsite && d.eventWebsite.replace(/\/$/, '') !== d.sourceUrl.replace(/\/$/, '');
+const sourceHealth = healthFor(d.sourceUrl, d.eventWebsite);
 const hasLinks = Boolean(webDistinct || d.eventFacebook || d.eventInstagram);
 const mapHref = place
   ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place)}`
@@ -160,7 +162,13 @@ function hostOf(url: string): string {
               <ExternalLink class="app-link" href={d.sourceUrl}>
                 {hostOf(d.sourceUrl)}
               </ExternalLink>
+              {sourceHealth?.status === 'ok' && (
+                <span class="app-source-check"> · checked {relativeCheck(sourceHealth.checkedAt)}</span>
+              )}
             </p>
+            {sourceHealth?.status === 'dead' && (
+              <p class="app-source-warn">This source link looks broken; use the organiser link above.</p>
+            )}
           </div>
         </div>
       </div>

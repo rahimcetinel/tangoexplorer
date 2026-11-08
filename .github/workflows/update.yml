@@ -67,7 +67,7 @@ jobs:
 
       - name: Check outbound links
         if: always()
-        run: python agentic-python/check_links.py --timeout 12 | tee -a "$GITHUB_STEP_SUMMARY"
+        run: python agentic-python/check_links.py --timeout 12 --write | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Upload link report
         if: always()
@@ -76,6 +76,16 @@ jobs:
           name: link-check
           path: agentic-python/out/link-check.json
           if-no-files-found: warn
+
+      - name: Persist link health
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/link-health.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update link health [skip ci]"
+            git push
+          fi
 
       - name: Persist collected images
         run: |

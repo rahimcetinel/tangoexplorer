@@ -86,6 +86,7 @@ def main() -> int:
     parser.add_argument("--timeout", type=float, default=10.0)
     parser.add_argument("--strict", action="store_true", help="exit 1 when a dead link is found")
     parser.add_argument("--all", action="store_true", help="also check events that already ended")
+    parser.add_argument("--write", action="store_true", help="write src/data/link-health.json")
     args = parser.parse_args()
 
     today = date.today()
@@ -121,6 +122,16 @@ def main() -> int:
         json.dumps({"checked": len(results), "dead": dead, "unreachable": unreachable, "blocked": blocked}, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+
+    if args.write:
+        today = date.today().isoformat()
+        payload = {
+            "generatedAt": today,
+            "links": {item["url"]: {"status": item["state"], "checkedAt": today} for item in results},
+        }
+        target = ROOT / "src" / "data" / "link-health.json"
+        target.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"wrote {target.relative_to(ROOT)}")
 
     print(
         f"checked {len(results)} unique links from upcoming events "
