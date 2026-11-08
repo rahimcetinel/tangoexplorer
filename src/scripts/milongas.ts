@@ -1,48 +1,26 @@
-import { DAYS_ORDER, regionLabel, type HoyData, type Milonga } from '../lib/hoy';
-import { ui, weekdaysLong, weekdaysShort, type Locale } from '../lib/i18n';
+import { regionLabel, type HoyData, type Milonga } from '../lib/hoy';
+import { ui, weekdaysShort, type Locale } from '../lib/i18n';
+import {
+  citiesForRegion,
+  cityColorsFor,
+  detailHtml,
+  escapeHtml,
+  listHtml,
+  matchesMilonga,
+  tabsHtml,
+  tonightCount,
+  type MilongaFilters,
+} from '../lib/milonga-html';
 
-type Filters = { region: string; city: string; day: string; type: string; q: string };
-
-const DAY_INDEX: Record<string, number> = Object.fromEntries(DAYS_ORDER.map((day, index) => [day, index]));
-
-const todayIndex = (new Date().getDay() + 6) % 7;
-const TODAY_SLUG = DAYS_ORDER[todayIndex];
-const ORDERED_DAYS: string[] = [...DAYS_ORDER.slice(todayIndex), ...DAYS_ORDER.slice(0, todayIndex)];
-
-function escapeHtml(value: string): string {
-  return value
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;');
-}
-
-// Evenly spaced hues so every city in a region gets a maximally distinct tone.
-function distinctPalette(count: number): string[] {
-  const colors: string[] = [];
-  const step = 360 / Math.max(count, 1);
-  for (let index = 0; index < count; index += 1) {
-    const hue = Math.round((index * step + 40) % 360);
-    colors.push(`hsl(${hue}, 62%, 38%)`);
-  }
-  return colors;
-}
-
-/**
- * Start and end on separate lines: on phones the two values used to sit in a
- * 56px column as "20:00–01:00" and overflowed into the name.
- */
-export function milongaTimeHtml(start?: string, end?: string): string {
-  if (!start) {
-    return `<span class="app-mitem-time">—</span>`;
-  }
-  const endHtml = end ? `<span class="app-mitem-time-end">${escapeHtml(end)}</span>` : '';
-  return (
-    `<span class="app-mitem-time">` +
-    `<span class="app-mitem-time-start">${escapeHtml(start)}</span>${endHtml}` +
-    `</span>`
-  );
-}
+const DAY_INDEX: Record<string, number> = {
+  monday: 0,
+  tuesday: 1,
+  wednesday: 2,
+  thursday: 3,
+  friday: 4,
+  saturday: 5,
+  sunday: 6,
+};
 
 export function initMilongas() {
   const shell = document.querySelector<HTMLElement>('[data-app-shell]');
@@ -52,6 +30,7 @@ export function initMilongas() {
   const detailEl = document.querySelector<HTMLElement>('[data-milonga-detail]');
   const regionSel = document.querySelector<HTMLSelectElement>('[data-milonga-region]');
   const citySel = document.querySelector<HTMLSelectElement>('[data-milonga-city]');
+  const dataEl = document.querySelector<HTMLScriptElement>('[data-milonga-data]');
   const searches = [...document.querySelectorAll<HTMLInputElement>('[data-search-input]')];
   const backdrop = document.querySelector<HTMLElement>('[data-detail-backdrop]');
   const panel = document.querySelector<HTMLElement>('.app-detail');
@@ -62,11 +41,16 @@ export function initMilongas() {
   const copy = ui[locale];
 
   let items: Milonga[] = [];
+  try {
+    items = dataEl?.textContent ? ((JSON.parse(dataEl.textContent) as Milonga[]) ?? []) : [];
+  } catch {
+    items = [];
+  }
   let selected: string | null = null;
   let filters = readUrl();
   let cityColors = new Map<string, string>();
 
-  function readUrl(): Filters {
+  function readUrl(): MilongaFilters {
     const params = new URLSearchParams(window.location.search);
     return {
       region: params.get('region') || 'turkiye',
@@ -95,7 +79,7 @@ export function initMilongas() {
     const parts = [
       regionLabel(filters.region, locale),
       filters.city,
-      filters.day ? weekdaysShort[locale][DAY_INDEX[filters.day]] : '',
+      filters.day ? weekdaysShort[locale][DAY_INDEX[filters.day]!] : '',
       filters.type ? (filters.type === 'practica' ? copy.milongaTypePractica : copy.milongaTypeMilonga) : '',
       filters.q,
     ].filter(Boolean);
@@ -104,37 +88,22 @@ export function initMilongas() {
       : '';
   }
 
-  function citiesForRegion(): string[] {
-    const set = new Set<string>();
-    for (const item of items) {
-      if (item.region === filters.region && item.city) set.add(item.city);
-    }
-    return [...set].sort((a, b) => a.localeCompare(b, locale));
+  function renderCounts() {
+    const total = items.filter((item) => item.region === filters.region).length;
+    const tonight = tonightCount(items, filters.region);
+    const totalEl = document.querySelector<HTMLElement>('[data-milonga-total]');
+    const tonightEl = document.querySelector<HTMLElement>('[data-milonga-tonight]');
+    if (totalEl) totalEl.textContent = String(total);
+    if (tonightEl) tonightEl.textContent = String(tonight);
   }
 
   function fillCities() {
-    const cities = citiesForRegion();
+    const cities = citiesForRegion(items, filters.region);
     if (filters.city && !cities.includes(filters.city)) filters.city = '';
     citySel!.innerHTML =
       `<option value="">${copy.filterAll}</option>` +
       cities.map((city) => `<option value="${escapeHtml(city)}">${escapeHtml(city)}</option>`).join('');
     citySel!.value = filters.city;
-  }
-
-  function matches(item: Milonga): boolean {
-    if (item.region !== filters.region) return false;
-    if (filters.city && item.city !== filters.city) return false;
-    if (filters.type && item.type !== filters.type) return false;
-    if (filters.day && !item.days.includes(filters.day)) return false;
-    if (filters.q) {
-      const hay = `${item.name} ${item.venue} ${item.area} ${item.city} ${item.country}`.toLowerCase();
-      if (!hay.includes(filters.q.toLowerCase())) return false;
-    }
-    return true;
-  }
-
-  function byTime(a: Milonga, b: Milonga): number {
-    return (a.start || '99').localeCompare(b.start || '99') || a.name.localeCompare(b.name);
   }
 
   function syncRail() {
@@ -155,117 +124,19 @@ export function initMilongas() {
   }
 
   function renderTabs() {
-    if (!tabsEl) return;
-    const present = ORDERED_DAYS.filter((day) =>
-      items.some(
-        (item) =>
-          item.region === filters.region &&
-          item.days.includes(day) &&
-          (!filters.type || item.type === filters.type) &&
-          (!filters.city || item.city === filters.city),
-      ),
-    );
-    tabsEl.innerHTML =
-      `<button type="button" class="app-mtab${filters.day ? '' : ' is-active'}" data-day="">${copy.milongaAllDays}</button>` +
-      present
-        .map(
-          (day) =>
-            `<button type="button" class="app-mtab${filters.day === day ? ' is-active' : ''}${day === TODAY_SLUG ? ' is-today' : ''}" data-day="${day}">${weekdaysShort[locale][DAY_INDEX[day]]}</button>`,
-        )
-        .join('');
-  }
-
-  function itemHtml(item: Milonga): string {
-    const meta = item.venue || item.area;
-    const typeLabel = item.type === 'practica' ? copy.milongaTypePractica : copy.milongaTypeMilonga;
-    return (
-      `<button type="button" class="app-mitem${selected === item.id ? ' is-selected' : ''}" data-milonga-id="${escapeHtml(item.id)}">` +
-      milongaTimeHtml(item.start, item.end) +
-      `<span class="app-mitem-body">` +
-      `<span class="app-mitem-name">${escapeHtml(item.name)}</span>` +
-      (meta ? `<span class="app-mitem-meta">${escapeHtml(meta)}</span>` : '') +
-      `</span>` +
-      `<span class="app-mitem-tags">` +
-      (item.city
-        ? `<span class="app-mitem-city" style="--cc:${cityColors.get(item.city) || ''}">${escapeHtml(item.city)}</span>`
-        : '') +
-      `<span class="app-mitem-type is-${item.type}">${typeLabel}</span>` +
-      (item.price ? `<span class="app-mitem-price">${escapeHtml(item.price)}</span>` : '') +
-      `</span>` +
-      `</button>`
-    );
+    if (tabsEl) tabsEl.innerHTML = tabsHtml(items, filters, locale, copy);
   }
 
   function renderList() {
-    const filtered = items.filter(matches);
-    const regionCities = citiesForRegion();
-    const palette = distinctPalette(regionCities.length);
-    cityColors = new Map(regionCities.map((city, index) => [city, palette[index]!]));
-    if (emptyEl) emptyEl.hidden = filtered.length > 0;
-    const groups: { day: string; rows: Milonga[] }[] = [];
-    if (filters.day) {
-      const rows = filtered.slice().sort(byTime);
-      if (rows.length) groups.push({ day: filters.day, rows });
-    } else {
-      for (const day of ORDERED_DAYS) {
-        const rows = filtered.filter((item) => item.days.includes(day)).sort(byTime);
-        if (rows.length) groups.push({ day, rows });
-      }
-      const undated = filtered.filter((item) => !item.days.length).sort(byTime);
-      if (undated.length) groups.push({ day: '', rows: undated });
-    }
-    listEl!.innerHTML = groups
-      .map(
-        (group) =>
-          `<section class="app-mgroup">` +
-          `<h2 class="app-mgroup-head${group.day === TODAY_SLUG ? ' is-today' : ''}">` +
-          `${group.day ? weekdaysLong[locale][DAY_INDEX[group.day]] : copy.milongaAllDays}` +
-          (group.day === TODAY_SLUG ? `<em>${copy.whenToday}</em>` : '') +
-          `<span>${group.rows.length}</span></h2>` +
-          group.rows.map(itemHtml).join('') +
-          `</section>`,
-      )
-      .join('');
+    cityColors = cityColorsFor(items, filters.region);
+    listEl!.innerHTML = listHtml(items, filters, locale, copy, cityColors, selected);
+    if (emptyEl) emptyEl.hidden = items.some((item) => matchesMilonga(item, filters));
   }
 
   function renderDetail() {
     if (!detailEl) return;
-    const item = items.find((row) => row.id === selected);
-    const head =
-      `<div class="app-detail-eyebrow"><span>${copy.milongas}</span>` +
-      `<button type="button" class="app-detail-close" data-milonga-close aria-label="${copy.closeDetail}">×</button></div>`;
-    if (!item) {
-      detailEl.innerHTML = head + `<p class="app-empty">${copy.milongaPick}</p>`;
-      return;
-    }
-    const typeLabel = item.type === 'practica' ? copy.milongaTypePractica : copy.milongaTypeMilonga;
-    const dayLabels = item.days.map((day) => weekdaysLong[locale][DAY_INDEX[day]]).join(', ');
-    const time = item.start ? `${item.start}${item.end ? `–${item.end}` : ''}` : '';
-    const rows: string[] = [];
-    if (dayLabels) rows.push(`<div><dt>${copy.milongaDay}</dt><dd>${dayLabels}</dd></div>`);
-    if (time) rows.push(`<div><dt>${copy.milongaTime}</dt><dd>${escapeHtml(time)}</dd></div>`);
-    if (item.venue) rows.push(`<div><dt>${copy.milongaVenue}</dt><dd>${escapeHtml(item.venue)}</dd></div>`);
-    if (item.address) rows.push(`<div><dt>${copy.milongaAddress}</dt><dd>${escapeHtml(item.address)}</dd></div>`);
-    if (item.city) rows.push(`<div><dt>${copy.filterCity}</dt><dd>${escapeHtml(item.city)}</dd></div>`);
-    if (item.price) rows.push(`<div><dt>${copy.milongaPrice}</dt><dd>${escapeHtml(item.price)}</dd></div>`);
-    if (item.organizers) rows.push(`<div><dt>${copy.milongaOrganizers}</dt><dd>${escapeHtml(item.organizers)}</dd></div>`);
-    const links: string[] = [];
-    if (item.mapUrl) links.push(`<a class="app-link" href="${escapeHtml(item.mapUrl)}" target="_blank" rel="noopener">${copy.milongaMap}</a>`);
-    if (item.website) links.push(`<a class="app-link" href="${escapeHtml(item.website)}" target="_blank" rel="noopener">Website</a>`);
-    if (item.instagram) links.push(`<a class="app-link" href="${escapeHtml(item.instagram)}" target="_blank" rel="noopener">Instagram</a>`);
-    if (item.facebook) links.push(`<a class="app-link" href="${escapeHtml(item.facebook)}" target="_blank" rel="noopener">Facebook</a>`);
-    if (item.phone) links.push(`<span class="app-link">${escapeHtml(item.phone)}</span>`);
-    detailEl.innerHTML =
-      head +
-      `<h2 class="app-article-title">${escapeHtml(item.name)}</h2>` +
-      `<p class="app-kicker">${typeLabel} · ${regionLabel(item.region, locale)}</p>` +
-      `<dl class="app-facts-dl">${rows.join('')}</dl>` +
-      `<div class="app-actions">` +
-      (item.mapUrl ? `<a class="app-btn" href="${escapeHtml(item.mapUrl)}" target="_blank" rel="noopener">${copy.milongaMap}</a>` : '') +
-      (item.detailUrl ? `<a class="app-btn app-btn-solid" href="${escapeHtml(item.detailUrl)}" target="_blank" rel="noopener">${copy.milongaOpenSource}</a>` : '') +
-      `</div>` +
-      (links.length ? `<p class="app-links">${links.join(' · ')}</p>` : '') +
-      (item.verified ? `<p class="app-source">${copy.milongaVerified}: ${escapeHtml(item.verified)}</p>` : '');
+    const item = items.find((row) => row.id === selected) ?? null;
+    detailEl.innerHTML = detailHtml(item, locale, copy);
   }
 
   function openDetail() {
@@ -291,6 +162,7 @@ export function initMilongas() {
     renderTabs();
     renderList();
     renderDetail();
+    renderCounts();
     writeUrl();
   }
 
@@ -373,21 +245,5 @@ export function initMilongas() {
     });
   });
 
-  async function load() {
-    listEl!.innerHTML =
-      '<div class="app-results-skeleton"><div class="app-card-skeleton"></div><div class="app-card-skeleton"></div><div class="app-card-skeleton"></div></div>';
-    try {
-      const response = await fetch('/hoy-milongas.json', {
-        headers: { Accept: 'application/json' },
-        cache: 'no-store',
-      });
-      const data = (await response.json()) as HoyData;
-      items = data.items || [];
-    } catch {
-      items = [];
-    }
-    fullRender();
-  }
-
-  void load();
+  fullRender();
 }

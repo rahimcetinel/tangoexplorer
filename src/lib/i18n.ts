@@ -205,6 +205,8 @@ export const ui = {
     milongaIntro: 'Weekly milonga and practica listings by city, day and time.',
     milongaPick: 'Pick a milonga to see its details.',
     milongaEmpty: 'No milongas match these filters.',
+    milongaCount: 'milongas',
+    milongaTonight: 'tonight',
     milongaRegion: 'Region',
     milongaCity: 'City',
     milongaDay: 'Day',

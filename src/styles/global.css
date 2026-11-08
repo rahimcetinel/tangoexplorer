@@ -1729,6 +1729,22 @@ body.detail-open {
   min-height: 0;
 }
 
+.app-milonga-summary {
+  margin: 0;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--color-rule);
+  font-size: 0.8rem;
+  color: var(--color-ink-soft);
+}
+
+.app-milonga-summary b {
+  color: var(--color-ink);
+}
+
+.app-milonga-summary span {
+  margin: 0 4px;
+}
+
 .app-milonga-tabs {
   display: flex;
   gap: 6px;

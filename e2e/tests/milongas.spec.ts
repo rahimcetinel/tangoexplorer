@@ -116,11 +116,11 @@ test('day tabs filter the list', async ({ page }) => {
   await expect.poll(() => searchParams(page).get('day')).toBeNull();
 });
 
-test('a failed milonga feed shows the empty state', async ({ page }) => {
-  await page.route('**/hoy-milongas.json', (route) => route.abort());
-  await page.goto('/milongas');
-  await expect(page.locator('[data-milonga-empty]')).toBeVisible();
-  await expect(page.locator('[data-milonga-id]')).toHaveCount(0);
+test('the milonga list is server-rendered before JavaScript runs', async ({ request }) => {
+  const html = await (await request.get('/milongas')).text();
+  expect(html).toContain('data-milonga-id');
+  expect(html).toContain('app-mgroup-head');
+  expect(html).toContain('data-milonga-data');
 });
 
 test('deep link restores region and type', async ({ page }) => {

@@ -25,6 +25,7 @@ const eager = new Set(eagerMonths);
     data-board-category={category}
     data-board-region={region}
     tabindex="0"
+    role="region"
     aria-label="Timeline"
   >
     {
@@ -39,6 +40,7 @@ const eager = new Set(eagerMonths);
             data-lazy={full ? 'false' : 'true'}
             data-fragment={full ? undefined : `/fragments/${month.key}`}
           >
+            <h2 class="sr-only">{month.label}</h2>
             <div class="app-month-grid" data-month-grid>
               {full
                 ? month.posts.map((post) => (
