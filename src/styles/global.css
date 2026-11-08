@@ -2603,11 +2603,6 @@ body.detail-open {
     align-items: stretch;
   }
 }
-.app-source-check {
-  font-size: 0.72rem;
-  color: var(--color-ink-soft);
-}
-
 .app-source-warn {
   margin: 2px 0 0;
   font-size: 0.74rem;

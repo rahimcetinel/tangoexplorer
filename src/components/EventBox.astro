@@ -2,7 +2,7 @@
 import ExternalLink from './ExternalLink.astro';
 import EventImage from './EventImage.astro';
 import type { NewsEntry } from '../lib/news';
-import { healthFor, relativeCheck } from '../lib/link-health';
+import { healthFor } from '../lib/link-health';
 import { formatNewsDate, kindLabels, ui, type Locale } from '../lib/i18n';
 import { formatEventRange } from '../lib/timeline';
 
@@ -162,9 +162,6 @@ function hostOf(url: string): string {
               <ExternalLink class="app-link" href={d.sourceUrl}>
                 {hostOf(d.sourceUrl)}
               </ExternalLink>
-              {sourceHealth?.status === 'ok' && (
-                <span class="app-source-check"> · checked {relativeCheck(sourceHealth.checkedAt)}</span>
-              )}
             </p>
             {sourceHealth?.status === 'dead' && (
               <p class="app-source-warn">This source link looks broken; use the organiser link above.</p>
