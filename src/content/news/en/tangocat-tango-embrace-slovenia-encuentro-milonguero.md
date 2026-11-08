@@ -18,6 +18,9 @@ country: "Slovenia"
 city: "Rogaška Slatina"
 eventStart: 2027-03-12
 eventEnd: 2027-03-14
+image: "/events/tangocat-tango-embrace-slovenia-encuentro-milonguero.jpg"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://www.facebook.com/images/login/QrCodeLoginPizza.jpg
 ---
 
 Tango Embrace Slovenia Encuentro Milonguero is listed (March 12-14, 2027) in Slovenia, Rogaška Slatina. This is a date and place summary, not a copy of the source programme.
