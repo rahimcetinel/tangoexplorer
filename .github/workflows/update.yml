@@ -65,6 +65,18 @@ jobs:
           path: agentic-python/out/data-audit.json
           if-no-files-found: warn
 
+      - name: Check outbound links
+        if: always()
+        run: python agentic-python/check_links.py --timeout 12 | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload link report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check
+          path: agentic-python/out/link-check.json
+          if-no-files-found: warn
+
       - name: Persist collected images
         run: |
           git config user.name "github-actions[bot]"
