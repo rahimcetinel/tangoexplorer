@@ -87,6 +87,9 @@ jobs:
             git push
           fi
 
+      - name: Drop the removed Turkish locale
+        run: rm -rf src/content/news/tr
+
       - name: Persist collected images
         run: |
           git config user.name "github-actions[bot]"
