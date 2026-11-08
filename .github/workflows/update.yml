@@ -53,6 +53,18 @@ jobs:
           python agentic-python/publish_instagram.py || true
           python agentic-python/collect_images.py --limit 60 || true
 
+      - name: Audit data quality
+        if: always()
+        run: python agentic-python/audit_data.py | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload data audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-audit
+          path: agentic-python/out/data-audit.json
+          if-no-files-found: warn
+
       - name: Persist collected images
         run: |
           git config user.name "github-actions[bot]"
