@@ -2541,6 +2541,37 @@ body.detail-open {
   color: var(--color-ink-soft);
 }
 
+.app-now-scopes {
+  display: inline-flex;
+  gap: 4px;
+  margin: 0 0 10px;
+  padding: 3px;
+  border: 1px solid var(--color-rule);
+  border-radius: 999px;
+  background: var(--color-paper);
+}
+
+.app-now-scopes button {
+  padding: 6px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: var(--color-ink-soft);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.app-now-scopes button:hover {
+  color: var(--color-ink);
+}
+
+.app-now-scopes button[aria-pressed='true'] {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
 .app-now-status {
   min-height: 1.2em;
   margin: 6px 0 16px;

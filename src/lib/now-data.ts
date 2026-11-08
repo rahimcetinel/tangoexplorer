@@ -25,6 +25,28 @@ export type NowMilonga = {
 
 export type NowCoord = [string, number, number];
 
+export type NowAllEvent = {
+  t: string;
+  slug: string;
+  ci: string;
+  co: string;
+  st: string;
+  en: string;
+  dates: string;
+  w: string;
+};
+
+export type NowAllMilonga = {
+  n: string;
+  c: string;
+  co: string;
+  days: string[];
+  s: string;
+  e: string;
+  v: string;
+  ty: string;
+};
+
 export type NowData = {
   today: string;
   events: NowEvent[];
@@ -32,6 +54,8 @@ export type NowData = {
   coords: NowCoord[];
   cities: string[];
   countries: string[];
+  allEvents: NowAllEvent[];
+  allMilongas: NowAllMilonga[];
 };
 
 function dayStart(value: Date): number {
@@ -98,5 +122,43 @@ export function buildNowData(posts: NewsEntry[], milongas: Milonga[], now: Date 
     ]),
   ].sort((a, b) => a.localeCompare(b, 'en'));
 
-  return { today: tonight, events, milongas: tonightMilongas, coords, cities, countries };
+  const allEvents: NowAllEvent[] = posts
+    .filter((post) => post.data.eventStart)
+    .map((post) => {
+      const start = post.data.eventStart!;
+      const end = post.data.eventEnd ?? start;
+      return {
+        t: post.data.title,
+        slug: newsSlug(post),
+        ci: post.data.city ?? '',
+        co: post.data.country ?? '',
+        st: start.toISOString().slice(0, 10),
+        en: end.toISOString().slice(0, 10),
+        dates: formatEventRange(start, end),
+        w: post.data.eventLocation ?? [post.data.city, post.data.country].filter(Boolean).join(', '),
+      };
+    })
+    .sort((a, b) => a.st.localeCompare(b.st));
+
+  const allMilongas: NowAllMilonga[] = milongas.map((item) => ({
+    n: item.name,
+    c: item.city,
+    co: item.country,
+    days: item.days,
+    s: item.start,
+    e: item.end,
+    v: item.venue,
+    ty: item.type,
+  }));
+
+  return {
+    today: tonight,
+    events,
+    milongas: tonightMilongas,
+    coords,
+    cities,
+    countries,
+    allEvents,
+    allMilongas,
+  };
 }

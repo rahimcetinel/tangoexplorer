@@ -1,7 +1,19 @@
 import { distanceKm, guessCity, nearbyCitySet, normalizeCity, rememberCity } from '../lib/now-core';
-import type { NowCoord, NowEvent, NowMilonga } from '../lib/now-data';
+import type { NowAllEvent, NowAllMilonga, NowCoord } from '../lib/now-data';
 
 type Picked = { kind: 'city' | 'country' | 'none'; label: string };
+type Scope = 'today' | 'week' | 'month';
+
+const WEEKDAYS = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+const DAY_SHORT: Record<string, string> = {
+  sunday: 'Sun',
+  monday: 'Mon',
+  tuesday: 'Tue',
+  wednesday: 'Wed',
+  thursday: 'Thu',
+  friday: 'Fri',
+  saturday: 'Sat',
+};
 
 function escapeHtml(value: string): string {
   return value
@@ -25,6 +37,40 @@ function uniqueSorted(values: string[]): string[] {
   return [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b, 'en'));
 }
 
+function ymd(date: Date): string {
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${date.getFullYear()}-${month}-${day}`;
+}
+
+type Window = { start: string; end: string; days: string[]; label: string };
+
+function windowFor(scope: Scope, now: Date): Window {
+  const start = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  if (scope === 'today') {
+    return { start: ymd(start), end: ymd(start), days: [WEEKDAYS[start.getDay()]!], label: 'today' };
+  }
+  if (scope === 'week') {
+    // Upcoming seven days rather than the Monday-to-Sunday block: on a Sunday
+    // the ISO week is already over, which made the view look empty.
+    const end = new Date(start);
+    end.setDate(start.getDate() + 6);
+    return {
+      start: ymd(start),
+      end: ymd(end),
+      days: [...WEEKDAYS],
+      label: 'this week',
+    };
+  }
+  const last = new Date(start.getFullYear(), start.getMonth() + 1, 0);
+  return {
+    start: ymd(start),
+    end: ymd(last),
+    days: [...WEEKDAYS],
+    label: 'this month',
+  };
+}
+
 export function initNow(): void {
   const page = document.querySelector<HTMLElement>('[data-now-page]');
   if (!page) return;
@@ -33,35 +79,31 @@ export function initNow(): void {
   const status = page.querySelector<HTMLElement>('[data-now-status]');
   const results = page.querySelector<HTMLElement>('[data-now-results]');
   const locate = page.querySelector<HTMLButtonElement>('[data-now-locate]');
+  const scopeButtons = [...page.querySelectorAll<HTMLButtonElement>('[data-now-when]')];
   if (!input || !status || !results) return;
 
-  const events = readJson<NowEvent>('[data-now-events]');
-  const milongas = readJson<NowMilonga>('[data-now-milongas]');
   const coordList = readJson<NowCoord>('[data-now-coords]');
   const knownCities = readJson<string>('[data-now-cities]');
   const knownCountries = readJson<string>('[data-now-countries]');
+  const allEvents = readJson<NowAllEvent>('[data-now-all-events]');
+  const allMilongas = readJson<NowAllMilonga>('[data-now-all-milongas]');
 
-  // The place picker knows every city and country in the collection, even when
-  // nothing is happening there tonight; the result lists stay scoped to today.
-  const cityNames = knownCities.length
-    ? uniqueSorted(knownCities)
-    : uniqueSorted([
-        ...events.map((event) => event.ci),
-        ...milongas.map((item) => item.c),
-        ...coordList.map(([city]) => city),
-      ]);
-  const countryNames = knownCountries.length
-    ? uniqueSorted(knownCountries)
-    : uniqueSorted([...events.map((event) => event.co), ...milongas.map((item) => item.co)]);
+  const cityNames = uniqueSorted(
+    knownCities.length
+      ? knownCities
+      : [...allEvents.map((event) => event.ci), ...allMilongas.map((item) => item.c), ...coordList.map(([city]) => city)],
+  );
+  const countryNames = uniqueSorted(
+    knownCountries.length
+      ? knownCountries
+      : [...allEvents.map((event) => event.co), ...allMilongas.map((item) => item.co)],
+  );
 
   const params = new URLSearchParams(window.location.search);
   let place = params.get('city') ?? guessCity();
+  let scope: Scope = params.get('when') === 'week' ? 'week' : params.get('when') === 'month' ? 'month' : 'today';
   input.value = place;
 
-  // A city wins when the query matches one; otherwise the query is treated as a
-  // country. Partial matches are accepted so "istan" and "germ" work. When two
-  // spellings normalise to the same place (Istanbul / İstanbul), prefer the
-  // plain ASCII one so the English site stays consistent.
   function asciiCount(value: string): number {
     return [...value].filter((char) => (char.codePointAt(0) ?? 0) < 128).length;
   }
@@ -99,20 +141,28 @@ export function initNow(): void {
     return { kind: 'none', label: '' };
   }
 
-  function syncUrl(label: string): void {
+  function syncUrl(label: string, selected: Scope): void {
     const next = new URLSearchParams();
     if (label) next.set('city', label);
+    if (selected !== 'today') next.set('when', selected);
     window.history.replaceState({}, '', next.toString() ? `/now?${next}` : '/now');
   }
 
+  function syncScopeButtons(): void {
+    scopeButtons.forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.nowWhen === scope));
+    });
+  }
+
   function render(): void {
+    syncScopeButtons();
     const picked = pick(place);
     if (picked.kind === 'none') {
       status.textContent = place
         ? `No city or country matches “${place}”. Try a larger place nearby.`
         : 'Type a city or country, or let us use your location.';
       results.innerHTML = '';
-      syncUrl(place);
+      syncUrl(place, scope);
       return;
     }
 
@@ -121,42 +171,49 @@ export function initNow(): void {
     input.value = label;
     rememberCity(label);
     const needle = normalizeCity(label);
+    const window = windowFor(scope, new Date());
 
-    let scope: Set<string>;
+    let scopeSet: Set<string>;
     let country = '';
     if (picked.kind === 'city') {
-      scope = nearbyCitySet(label, coordList);
+      scopeSet = nearbyCitySet(label, coordList);
     } else {
       country = needle;
-      scope = new Set<string>([country]);
-      for (const event of events) {
-        if (normalizeCity(event.co) === country) scope.add(normalizeCity(event.ci));
+      scopeSet = new Set<string>([country]);
+      for (const event of allEvents) {
+        if (normalizeCity(event.co) === country) scopeSet.add(normalizeCity(event.ci));
       }
-      for (const item of milongas) {
-        if (normalizeCity(item.co) === country) scope.add(normalizeCity(item.c));
+      for (const item of allMilongas) {
+        if (normalizeCity(item.co) === country) scopeSet.add(normalizeCity(item.c));
       }
     }
 
     const matchCountry = (value: string) => Boolean(country) && normalizeCity(value) === country;
-    const matchPlace = (value: string) => scope.has(normalizeCity(value));
+    const matchPlace = (value: string) => scopeSet.has(normalizeCity(value));
 
-    const localEvents = events.filter(
-      (event) => matchPlace(event.ci) || matchCountry(event.co) || matchCountry(event.ci),
-    );
-    const localMilongas = milongas.filter(
-      (item) => matchPlace(item.c) || matchCountry(item.co),
-    );
+    const localEvents = allEvents
+      .filter((event) => (matchPlace(event.ci) || matchCountry(event.co)) && event.st <= window.end && event.en >= window.start)
+      .sort((a, b) => a.st.localeCompare(b.st));
+
+    const daySet = new Set(window.days);
+    const localMilongas = allMilongas
+      .filter((item) => (matchPlace(item.c) || matchCountry(item.co)) && item.days.some((day) => daySet.has(day)))
+      .sort((a, b) => (a.s || '99').localeCompare(b.s || '99') || a.n.localeCompare(b.n));
 
     const nearbyCount = coordList.filter(
-      ([name]) => scope.has(normalizeCity(name)) && normalizeCity(name) !== needle,
+      ([name]) => scopeSet.has(normalizeCity(name)) && normalizeCity(name) !== needle,
     ).length;
 
-    if (picked.kind === 'country') {
-      const cities = [...scope].filter((name) => name !== country).length;
-      status.textContent = `Showing ${label}${cities ? ` — ${cities} ${cities === 1 ? 'city' : 'cities'}` : ''}.`;
-    } else {
-      status.textContent = `Showing ${label}${nearbyCount > 0 ? ` and ${nearbyCount} nearby ${nearbyCount === 1 ? 'city' : 'cities'}` : ''}.`;
-    }
+    const placeNote =
+      picked.kind === 'country'
+        ? (() => {
+            const cities = [...scopeSet].filter((name) => name !== country).length;
+            return cities ? ` — ${cities} ${cities === 1 ? 'city' : 'cities'}` : '';
+          })()
+        : nearbyCount > 0
+          ? ` and ${nearbyCount} nearby ${nearbyCount === 1 ? 'city' : 'cities'}`
+          : '';
+    status.textContent = `Showing ${label}${placeNote} · ${window.label}.`;
 
     const eventsHtml = localEvents.length
       ? `<ul class="app-now-list">${localEvents
@@ -169,21 +226,26 @@ export function initNow(): void {
               `</span></a></li>`,
           )
           .join('')}</ul>`
-      : `<p class="app-now-empty">Nothing running in ${escapeHtml(label)} right now.</p>`;
+      : `<p class="app-now-empty">No events in ${escapeHtml(label)} ${window.label}.</p>`;
 
     const milongasHtml = localMilongas.length
       ? `<ul class="app-now-list">${localMilongas
-          .map(
-            (item) =>
+          .map((item) => {
+            const days = item.days
+              .filter((day) => daySet.has(day))
+              .map((day) => DAY_SHORT[day] ?? day)
+              .join(', ');
+            return (
               `<li><div class="app-now-item">` +
               `<span class="app-now-item-title">${escapeHtml(item.n)}</span>` +
-              `<span class="app-now-item-meta">${escapeHtml(item.s)}${item.e ? `–${escapeHtml(item.e)}` : ''}` +
+              `<span class="app-now-item-meta">${escapeHtml(days)} · ${escapeHtml(item.s)}${item.e ? `–${escapeHtml(item.e)}` : ''}` +
               (item.v ? ` · ${escapeHtml(item.v)}` : '') +
               (item.c ? ` · ${escapeHtml(item.c)}` : '') +
-              `</span></div></li>`,
-          )
+              `</span></div></li>`
+            );
+          })
           .join('')}</ul>`
-      : `<p class="app-now-empty">No milongas listed tonight.</p>`;
+      : `<p class="app-now-empty">No milongas listed ${window.label}.</p>`;
 
     const milongasHref =
       picked.kind === 'city'
@@ -191,10 +253,10 @@ export function initNow(): void {
         : '/milongas';
 
     results.innerHTML =
-      `<section class="app-now-section"><h2 class="app-now-heading">Events on now <span>${localEvents.length}</span></h2>${eventsHtml}</section>` +
-      `<section class="app-now-section"><h2 class="app-now-heading">Milongas tonight <span>${localMilongas.length}</span></h2>${milongasHtml}` +
+      `<section class="app-now-section"><h2 class="app-now-heading">Events <span>${localEvents.length}</span></h2>${eventsHtml}</section>` +
+      `<section class="app-now-section"><h2 class="app-now-heading">Milongas <span>${localMilongas.length}</span></h2>${milongasHtml}` +
       `<a class="app-link" href="${milongasHref}">All milongas in ${escapeHtml(label)}</a></section>`;
-    syncUrl(label);
+    syncUrl(label, scope);
   }
 
   function applyInput(): void {
@@ -208,6 +270,13 @@ export function initNow(): void {
   });
 
   input.addEventListener('change', applyInput);
+
+  scopeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      scope = button.dataset.nowWhen === 'week' ? 'week' : button.dataset.nowWhen === 'month' ? 'month' : 'today';
+      render();
+    });
+  });
 
   locate?.addEventListener('click', () => {
     if (!navigator.geolocation) {

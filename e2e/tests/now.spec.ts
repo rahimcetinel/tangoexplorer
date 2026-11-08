@@ -4,7 +4,7 @@ test('happening now scopes the page to the chosen city', async ({ page }) => {
   await page.goto('/now?city=Istanbul');
   await expect(page.locator('[data-now-status]')).toContainText('Istanbul');
   await expect(page.locator('[data-now-city]')).toHaveValue('Istanbul');
-  await expect(page.locator('.app-now-heading').first()).toContainText('Events on now');
+  await expect(page.locator('.app-now-heading').first()).toContainText('Events');
 
   await page.goto('/now?city=K%C3%B6ln');
   await expect(page.locator('[data-now-status]')).toContainText('Köln');
@@ -28,6 +28,18 @@ test('the place field is a plain search box that also accepts a country', async 
 
   await page.goto('/now?city=zzz');
   await expect(page.locator('[data-now-status]')).toContainText('No city or country matches');
+});
+
+test('the time scopes change the result window', async ({ page }) => {
+  await page.goto('/now?city=Istanbul&when=week');
+  await expect(page.locator('[data-now-status]')).toContainText('this week');
+  await expect(page.locator('[data-now-when="week"]')).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('.app-now-section').first().locator('.app-now-item-title').first()).toBeVisible();
+
+  await page.locator('[data-now-when="month"]').click();
+  await expect(page).toHaveURL(/when=month/);
+  await expect(page.locator('[data-now-status]')).toContainText('this month');
+  expect(await page.locator('.app-now-section').first().locator('.app-now-item-title').count()).toBeGreaterThan(0);
 });
 
 test('the home page shows a happening-now strip for the saved city', async ({ page }) => {

@@ -10,7 +10,13 @@ import { buildNowData } from '../lib/now-data';
 const copy = ui.en;
 const posts = await getNews('en');
 const milongas = ((milongaData as HoyData).items ?? []) as Milonga[];
-const { events, milongas: tonightMilongas, coords: cityCoords, cities, countries } = buildNowData(posts, milongas);
+const {
+  coords: cityCoords,
+  cities,
+  countries,
+  allEvents,
+  allMilongas,
+} = buildNowData(posts, milongas);
 ---
 
 <AppShell
@@ -31,8 +37,8 @@ const { events, milongas: tonightMilongas, coords: cityCoords, cities, countries
     <main id="main" class="app-page now-page" data-now-page>
       <h1 class="app-page-title">Happening now</h1>
       <p class="app-prose">
-        Events running today and milongas playing tonight. Pick your city once; we remember it and include
-        nearby towns within about 150 km.
+        Events and milongas near you — today, this week or this month. Pick your city once; we remember it and
+        include nearby towns within about 150 km.
       </p>
 
       <form class="app-now-controls" role="search" data-now-form>
@@ -58,17 +64,23 @@ const { events, milongas: tonightMilongas, coords: cityCoords, cities, countries
         Type a city, or a country to see everything happening there.
       </p>
 
+      <div class="app-now-scopes" role="group" aria-label="Time range">
+        <button type="button" data-now-when="today" aria-pressed="true">Today</button>
+        <button type="button" data-now-when="week" aria-pressed="false">This week</button>
+        <button type="button" data-now-when="month" aria-pressed="false">This month</button>
+      </div>
+
       <p class="app-now-status" data-now-status aria-live="polite"></p>
       <div class="app-now-results" data-now-results></div>
       <noscript>
         <p class="app-prose">This page needs JavaScript to use your city. The milongas page lists tonight's options by city.</p>
       </noscript>
 
-      <script type="application/json" data-now-events set:html={JSON.stringify(events)} />
-      <script type="application/json" data-now-milongas set:html={JSON.stringify(tonightMilongas)} />
       <script type="application/json" data-now-coords set:html={JSON.stringify(cityCoords)} />
       <script type="application/json" data-now-cities set:html={JSON.stringify(cities)} />
       <script type="application/json" data-now-countries set:html={JSON.stringify(countries)} />
+      <script type="application/json" data-now-all-events set:html={JSON.stringify(allEvents)} />
+      <script type="application/json" data-now-all-milongas set:html={JSON.stringify(allMilongas)} />
     </main>
   </Fragment>
 </AppShell>
