@@ -106,6 +106,7 @@ export const ui = {
     breaking: 'Breaking',
     browse: 'Browse',
     regions: 'Regions',
+    plan: 'Plan',
     menu: 'Menu & filters',
     filters: 'Filters',
     jumpTo: 'Jump to',

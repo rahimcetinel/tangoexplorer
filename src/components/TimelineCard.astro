@@ -67,6 +67,9 @@ const color = countryColor(post.data.country);
           {place}
         </p>
       )}
+      {post.data.registrationStart && post.data.registrationStart <= new Date() && (
+        <span class="app-ev-open">Registration open</span>
+      )}
     </div>
   </a>
 </Card>

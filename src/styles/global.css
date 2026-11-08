@@ -2446,3 +2446,153 @@ body.detail-open {
   }
 }
 
+/* Weekend planner */
+.plan-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.app-ev-open {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #e7f2ee;
+  color: #0f6b5f;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}.app-plan-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px;
+  margin: 18px 0 10px;
+}
+
+.app-plan-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: var(--color-ink-soft);
+}
+
+.app-plan-field input,
+.app-plan-field select {
+  min-width: 240px;
+  padding: 9px 12px;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  border: 1px solid var(--color-rule);
+  border-radius: 8px;
+}
+
+.app-plan-field select {
+  min-width: 200px;
+}
+
+.app-plan-form .app-btn {
+  flex: 0 0 auto;
+  padding-inline: 24px;
+}
+
+.app-plan-summary {
+  min-height: 1.2em;
+  margin: 10px 0 14px;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+.app-plan-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.app-plan-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+.app-plan-heading span {
+  color: var(--color-burgundy);
+}
+
+.app-plan-list {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  border-top: 1px solid var(--color-rule);
+}
+
+.app-plan-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--color-rule);
+  color: var(--color-ink);
+}
+
+.app-plan-item-title {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.app-plan-item-meta {
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+}
+
+.app-plan-empty {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+.app-plan-day {
+  margin: 14px 0 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-burgundy);
+}
+
+.app-plan-hint {
+  color: var(--color-ink-soft);
+}
+
+.app-plan-example {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--color-burgundy);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .app-plan-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .app-plan-field input,
+  .app-plan-field select {
+    min-width: 0;
+    width: 100%;
+  }
+}
+

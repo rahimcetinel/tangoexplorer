@@ -1,4 +1,4 @@
-﻿---
+---
 import MenuPanel from './MenuPanel.astro';
 import { aboutPath, homePath, milongasPath, ui, type Locale } from '../lib/i18n';
 import type { NewsEntry } from '../lib/news';
@@ -76,6 +76,7 @@ const todayShort = new Intl.DateTimeFormat('en-GB', {
         </div>
       </details>
       <a href="/search" class:list={[currentPath === '/search' && 'is-active']}>{copy.searchTitle}</a>
+      <a href="/plan" class:list={[currentPath === '/plan' && 'is-active']}>{copy.plan}</a>
       <a
         href={milongasPath(locale)}
         class:list={[currentPath === milongasPath(locale) && 'is-active']}
