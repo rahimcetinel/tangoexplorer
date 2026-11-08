@@ -18,6 +18,9 @@ country: "Greece"
 city: "Xanthi"
 eventStart: 2026-11-26
 eventEnd: 2026-11-29
+image: "/events/tangocat-5th-tangoaires-marathon.png"
+imageCredit: "Event image (tangoaires.gr)"
+imageSourceUrl: https://tangoaires.gr/wp-content/uploads/2026/06/9-1024x1024.png
 ---
 
 5th Tangoaires Marathon is listed (November 26-29 2026) in Greece, Xanthi. This is a date and place summary, not a copy of the source programme.

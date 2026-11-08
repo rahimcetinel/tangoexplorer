@@ -18,6 +18,9 @@ country: "İspanya"
 city: "La Orotava"
 eventStart: 2026-12-11
 eventEnd: 2026-12-14
+image: "/events/tangocat-tenerife-tango-marathon.png"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/tenerife-tango-maraton-4-edicion-039a79
 ---
 
 Tenerife Tango Marathon is listed (December 11-14 2026) in Spain, La Orotava. This is a date and place summary, not a copy of the source programme.

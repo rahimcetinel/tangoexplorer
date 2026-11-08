@@ -15,6 +15,9 @@ format: etkinlik
 sourceKey: instagram
 eventStart: 2026-11-18
 eventEnd: 2026-11-18
+image: "/events/ig-tangotorome-20261118.jpg"
+imageCredit: "Event image (instagram.com)"
+imageSourceUrl: https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/801882123_18341636941271977_4727477396060661077_n.jpg?stp=c256.0.768.768a_dst-jpg_e35_s640x640_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=reJ8tFxu4JkQ7kNvwHAF_1d&_nc_oc=AdpYx_UqPoKDe_xy3_9gCf7F3ohCgz1Uvdul9kVjFlSJWvtAoqWcPKVDL3DXnXUTNe8&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_gid=vYBEENzrNy31mIWNY8wA_w&_nc_ss=7b60f&oh=00_AQTV2xVOVZtVoS2z58jABou0ljd_bW7tHkfW2SugMsIHUg&oe=6AF67391
 ---
 
 OPENING NIGHT — TANGO TO ROME appears on Instagram for 18 November 2026. This is a date and place summary, not a copy of the original post.
