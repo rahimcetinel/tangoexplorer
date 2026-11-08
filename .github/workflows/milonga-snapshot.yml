@@ -1,0 +1,39 @@
+name: Refresh milonga data
+
+on:
+  schedule:
+    # 03:15 UTC daily, between the six-hourly site updates.
+    - cron: "15 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: milonga-snapshot
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch Hoy Milonga listings
+        run: python agentic-python/ingest_hoy.py
+
+      - name: Commit the snapshot when it changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/hoy-milongas.json
+          if git diff --cached --quiet; then
+            echo "No milonga changes"
+          else
+            git commit -m "chore: refresh milonga data [skip ci]"
+            git push
+          fi

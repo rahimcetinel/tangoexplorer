@@ -216,6 +216,7 @@ export const ui = {
     milongaEmpty: 'No milongas match these filters.',
     milongaCount: 'milongas',
     milongaTonight: 'tonight',
+    milongaUpdatedOn: 'Listings updated',
     milongaRegion: 'Region',
     milongaCity: 'City',
     milongaDay: 'Day',

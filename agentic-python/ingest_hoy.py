@@ -33,6 +33,15 @@ REGIONS = [
     ("miami", "Miami", "Miami"),
 ]
 
+# Listings that closed but are still published on Hoy Milonga. Matched on the
+# normalised (name, venue) pair so a changed source id does not resurrect them.
+IGNORED = {
+    ("milonga allegra", "dance order"),
+}
+
+# Source ids are the stable fallback when the name changes.
+IGNORED_IDS = {"turkiye-484939"}
+
 DAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
 
@@ -200,6 +209,14 @@ def main() -> int:
             continue
         normalized = [row for row in (normalize(e, slug) for e in events) if row]
         normalized = dedupe_rows(normalized)
+        kept = [
+            row
+            for row in normalized
+            if row["id"] not in IGNORED_IDS
+            and (row["name"].lower(), row["venue"].lower()) not in IGNORED
+        ]
+        skipped = len(normalized) - len(kept)
+        normalized = kept
         items.extend(normalized)
         region_meta.append(
             {
@@ -209,7 +226,7 @@ def main() -> int:
                 "count": len(normalized),
             }
         )
-        print(f"{slug}: {len(events)} fetched, {len(normalized)} kept")
+        print(f"{slug}: {len(events)} fetched, {len(normalized)} kept" + (f", {skipped} ignored" if skipped else ""))
 
     payload = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),

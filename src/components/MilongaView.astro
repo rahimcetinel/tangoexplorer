@@ -3,7 +3,7 @@ import AppShell from '../layouts/AppShell.astro';
 import Header from './Header.astro';
 import milongaData from '../data/hoy-milongas.json';
 import { getNews } from '../lib/news';
-import { milongasPath, ui, type Locale } from '../lib/i18n';
+import { milongasPath, monthShort, ui, type Locale } from '../lib/i18n';
 import type { HoyData, Milonga } from '../lib/hoy';
 import { HOY_REGIONS, regionLabel } from '../lib/hoy';
 import {
@@ -28,6 +28,8 @@ const filters = defaultFilters(items);
 const cityColors = cityColorsFor(items, filters.region);
 const total = items.filter((item) => item.region === filters.region).length;
 const tonight = tonightCount(items, filters.region);
+const generated = new Date((milongaData as HoyData).generatedAt);
+const updatedAt = `${generated.getUTCDate()} ${monthShort.en[generated.getUTCMonth()]} ${generated.getUTCFullYear()}`;
 ---
 
 <AppShell
@@ -48,6 +50,7 @@ const tonight = tonightCount(items, filters.region);
         <button type="button" class="app-milonga-tonight" data-milonga-tonight>
           <b data-milonga-tonight-count>{tonight}</b> {copy.milongaTonight}
         </button>
+        <span class="app-milonga-updated">{copy.milongaUpdatedOn} {updatedAt}</span>
       </p>
       <div class="app-milonga-toolbar">
         <label class="app-milonga-region">
