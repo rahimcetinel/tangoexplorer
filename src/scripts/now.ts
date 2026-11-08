@@ -38,13 +38,21 @@ export function initNow(): void {
   const events = readJson<NowEvent>('[data-now-events]');
   const milongas = readJson<NowMilonga>('[data-now-milongas]');
   const coordList = readJson<NowCoord>('[data-now-coords]');
+  const knownCities = readJson<string>('[data-now-cities]');
+  const knownCountries = readJson<string>('[data-now-countries]');
 
-  const cityNames = uniqueSorted([
-    ...events.map((event) => event.ci),
-    ...milongas.map((item) => item.c),
-    ...coordList.map(([city]) => city),
-  ]);
-  const countryNames = uniqueSorted([...events.map((event) => event.co), ...milongas.map((item) => item.co)]);
+  // The place picker knows every city and country in the collection, even when
+  // nothing is happening there tonight; the result lists stay scoped to today.
+  const cityNames = knownCities.length
+    ? uniqueSorted(knownCities)
+    : uniqueSorted([
+        ...events.map((event) => event.ci),
+        ...milongas.map((item) => item.c),
+        ...coordList.map(([city]) => city),
+      ]);
+  const countryNames = knownCountries.length
+    ? uniqueSorted(knownCountries)
+    : uniqueSorted([...events.map((event) => event.co), ...milongas.map((item) => item.co)]);
 
   const params = new URLSearchParams(window.location.search);
   let place = params.get('city') ?? guessCity();

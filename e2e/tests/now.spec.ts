@@ -23,6 +23,9 @@ test('the place field is a plain search box that also accepts a country', async 
   await expect(page.locator('[data-now-status]')).toContainText('Germany');
   await expect(input).toHaveValue('Germany');
 
+  await page.goto('/now?city=Romania');
+  await expect(page.locator('[data-now-status]')).toContainText('Romania');
+
   await page.goto('/now?city=zzz');
   await expect(page.locator('[data-now-status]')).toContainText('No city or country matches');
 });

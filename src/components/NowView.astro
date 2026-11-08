@@ -10,7 +10,7 @@ import { buildNowData } from '../lib/now-data';
 const copy = ui.en;
 const posts = await getNews('en');
 const milongas = ((milongaData as HoyData).items ?? []) as Milonga[];
-const { events, milongas: tonightMilongas, coords: cityCoords } = buildNowData(posts, milongas);
+const { events, milongas: tonightMilongas, coords: cityCoords, cities, countries } = buildNowData(posts, milongas);
 ---
 
 <AppShell
@@ -67,6 +67,8 @@ const { events, milongas: tonightMilongas, coords: cityCoords } = buildNowData(p
       <script type="application/json" data-now-events set:html={JSON.stringify(events)} />
       <script type="application/json" data-now-milongas set:html={JSON.stringify(tonightMilongas)} />
       <script type="application/json" data-now-coords set:html={JSON.stringify(cityCoords)} />
+      <script type="application/json" data-now-cities set:html={JSON.stringify(cities)} />
+      <script type="application/json" data-now-countries set:html={JSON.stringify(countries)} />
     </main>
   </Fragment>
 </AppShell>

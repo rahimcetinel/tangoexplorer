@@ -30,6 +30,8 @@ export type NowData = {
   events: NowEvent[];
   milongas: NowMilonga[];
   coords: NowCoord[];
+  cities: string[];
+  countries: string[];
 };
 
 function dayStart(value: Date): number {
@@ -82,5 +84,19 @@ export function buildNowData(posts: NewsEntry[], milongas: Milonga[], now: Date 
     Number((value.lng / value.count).toFixed(4)),
   ]);
 
-  return { today: tonight, events, milongas: tonightMilongas, coords };
+  const cities = [
+    ...new Set([
+      ...posts.map((post) => post.data.city).filter((city): city is string => Boolean(city)),
+      ...milongas.map((item) => item.city).filter(Boolean),
+    ]),
+  ].sort((a, b) => a.localeCompare(b, 'en'));
+
+  const countries = [
+    ...new Set([
+      ...posts.map((post) => post.data.country).filter((country): country is string => Boolean(country)),
+      ...milongas.map((item) => item.country).filter(Boolean),
+    ]),
+  ].sort((a, b) => a.localeCompare(b, 'en'));
+
+  return { today: tonight, events, milongas: tonightMilongas, coords, cities, countries };
 }
