@@ -2462,8 +2462,8 @@ body.detail-open {
 
 /* Happening now */
 .now-page {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 1180px;
+  margin: 0;
   width: 100%;
 }
 

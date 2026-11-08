@@ -124,7 +124,8 @@ test('Escape, backdrop, and browser back close the drawer', async ({ page }, tes
 test('modified click opens the full story in a new tab', async ({ page, context }) => {
   await page.goto('/');
   const card = page.locator('[data-month-col][data-lazy="false"] [data-detail-link]').first();
-  const popupPromise = context.waitForEvent('page');
+  await expect(card).toBeVisible();
+  const popupPromise = context.waitForEvent('page', { timeout: 30_000 });
   await card.click({ modifiers: ['ControlOrMeta'] });
   const popup = await popupPromise;
   await expect(popup).toHaveURL(/\/news\//);

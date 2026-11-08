@@ -1,6 +1,7 @@
 ---
 import AppShell from '../layouts/AppShell.astro';
 import Header from '../components/Header.astro';
+import DetailPanel from '../components/DetailPanel.astro';
 import milongaData from '../data/hoy-milongas.json';
 import { getNews } from '../lib/news';
 import { homePath, ui } from '../lib/i18n';
@@ -23,7 +24,8 @@ const {
   title={`Happening now — ${copy.brand}`}
   description="Tango events running today and milongas playing tonight, near your city."
   locale="en"
-  mode="page"
+  mode="search"
+  closePath="/now"
   posts={posts}
 >
   <Fragment slot="center">
@@ -83,8 +85,13 @@ const {
       <script type="application/json" data-now-all-milongas set:html={JSON.stringify(allMilongas)} />
     </main>
   </Fragment>
+  <Fragment slot="detail">
+    <DetailPanel locale="en" />
+  </Fragment>
 </AppShell>
 <script>
+  import { initAppShell } from '../scripts/app-shell';
   import { initNow } from '../scripts/now';
+  initAppShell();
   initNow();
 </script>

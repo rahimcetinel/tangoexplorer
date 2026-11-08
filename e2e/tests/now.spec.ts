@@ -48,6 +48,17 @@ test('the time scopes change the result window', async ({ page }) => {
   );
 });
 
+test('an event opens in the right panel and close returns to the filters', async ({ page }) => {
+  await page.goto('/now?city=Istanbul&when=month');
+  await page.locator('.app-now-section').first().locator('a[data-detail-link]').first().click();
+  const panel = page.locator('[data-detail-panel]');
+  await expect(panel).toHaveClass(/is-open/);
+  await expect(page).toHaveURL(/\/news\//);
+  await page.locator('[data-detail-close]').click();
+  await expect(panel).not.toHaveClass(/is-open/);
+  await expect(page).toHaveURL(/\/now\?city=Istanbul&when=month/);
+});
+
 test('the home page shows a happening-now strip for the saved city', async ({ page }) => {
   await page.addInitScript(() => {
     try {

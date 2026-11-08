@@ -219,7 +219,7 @@ export function initNow(): void {
       ? `<ul class="app-now-list">${localEvents
           .map(
             (event) =>
-              `<li><a class="app-now-item" href="/news/${escapeHtml(event.slug)}">` +
+              `<li><a class="app-now-item" data-detail-link href="/news/${escapeHtml(event.slug)}">` +
               `<span class="app-now-tag app-now-tag-event">${escapeHtml(event.k || 'Event')}</span>` +
               `<span class="app-now-item-title">${escapeHtml(event.t)}</span>` +
               `<span class="app-now-item-meta">${escapeHtml(event.dates)}` +
