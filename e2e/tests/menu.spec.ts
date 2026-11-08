@@ -77,6 +77,7 @@ test('menu browse links reach region, milongas, and about', async ({ page }, tes
     await page.locator('#app-menu [data-acc-head]').filter({ hasText: 'Browse' }).click();
   }
   await page.locator('#app-menu .app-nav-link', { hasText: /^Milongas$/ }).click();
-  await expect(page).toHaveURL(/\/milongas\/?$/);
+  // The edge preselects the visitor's country, so the URL may carry ?region=…
+  await expect(page).toHaveURL(/\/milongas\/?(\?.*)?$/);
   await expect(page.locator('[data-app-shell]')).toHaveAttribute('data-mode', 'milonga');
 });

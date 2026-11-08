@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { NO_MATCH, focusSearch, isMobile, openFilters, searchParams } from '../support/site';
 
-test('milonga JSON is public and the page lists Türkiye by default', async ({ page, request }) => {
+test('milonga JSON is public and the page opens on a country', async ({ page, request }) => {
   const response = await request.get('/hoy-milongas.json');
   expect(response.ok()).toBeTruthy();
   const data = (await response.json()) as {
@@ -15,7 +15,9 @@ test('milonga JSON is public and the page lists Türkiye by default', async ({ p
   await expect(page.locator('[data-app-shell]')).toHaveAttribute('data-mode', 'milonga');
   await expect(page.locator('h1, .app-page-title, [data-milonga-list]').first()).toBeAttached();
   await expect(page.locator('[data-milonga-id]').first()).toBeVisible();
-  await expect.poll(() => searchParams(page).get('region')).toBeNull();
+  // The edge preselects the visitor's country, so a ?region=… parameter is
+  // expected on Cloudflare; locally the page falls back to the Türkiye default.
+  await expect(page.locator('[data-milonga-region-top]')).not.toHaveValue('');
   await expect(page.locator('[data-milonga-tabs] [data-day=""]')).toHaveClass(/is-active/);
 });
 
