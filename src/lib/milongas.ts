@@ -10,6 +10,7 @@ import ldnJson from '../data/milongas-uk-london.json';
 import nlJson from '../data/milongas-nl.json';
 import noJson from '../data/milongas-no.json';
 import plJson from '../data/milongas-pl.json';
+import roJson from '../data/milongas-ro.json';
 import seJson from '../data/milongas-se.json';
 import { COUNTRIES, DAYS_ORDER, resolveCountry, type HoyData, type Milonga } from './hoy';
 
@@ -32,6 +33,7 @@ const nl = (nlJson as unknown as SourceFile).items ?? [];
 const fr = (frJson as unknown as SourceFile).items ?? [];
 const cz = (czJson as unknown as SourceFile).items ?? [];
 const pl = (plJson as unknown as SourceFile).items ?? [];
+const ro = (roJson as unknown as SourceFile).items ?? [];
 
 /** Next calendar date (YYYY-MM-DD) that falls on one of the given weekdays. */
 export function nextDateForDays(days: string[], now: Date = new Date()): string {
@@ -74,6 +76,7 @@ export const MILONGAS: Milonga[] = [
   ...fr.map((item) => normalize(item, 'tangoargentin')),
   ...cz.map((item) => normalize(item, 'tangoprague')),
   ...pl.map((item) => normalize(item, 'krakow')),
+  ...ro.map((item) => normalize(item, 'milongaro')),
 ];
 
 const SOURCE_FILES = [
@@ -90,6 +93,7 @@ const SOURCE_FILES = [
   frJson,
   czJson,
   plJson,
+  roJson,
 ];
 
 /** Latest generatedAt across every source file. */

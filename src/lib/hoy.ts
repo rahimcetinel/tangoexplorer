@@ -75,6 +75,7 @@ export const COUNTRIES: { id: string; en: string; tr: string }[] = [
   { id: 'france', en: 'France', tr: 'Fransa' },
   { id: 'poland', en: 'Poland', tr: 'Polonya' },
   { id: 'czechia', en: 'Czechia', tr: 'Çekya' },
+  { id: 'romania', en: 'Romania', tr: 'Romanya' },
 ];
 
 /**
@@ -115,6 +116,7 @@ export const MILONGA_SOURCES: Record<string, string> = {
   tangoargentin: 'tango-argentin.fr',
   tangoprague: 'tango-prague.info',
   krakow: 'milongi.krakow.pl',
+  milongaro: 'Milonga.ro',
 };
 
 export function sourceLabel(key?: string): string {

@@ -10,16 +10,16 @@ Tarih: 2026-11-08 · Durum: **araştırma / plan** (kod yok, ingest yok)
 > `ingest_milongas_ch.py` (18), `ingest_oslo.py` (9), `ingest_vienna.py` (21),
 > `ingest_italy.py` (81), `ingest_spain.py` (183), `ingest_london.py` (37),
 > `ingest_netherlands.py` (42 → 39 NL + 3 DE), `ingest_france.py` (37),
-> `ingest_czechia.py` (9), `ingest_poland.py` (11);
-> `src/lib/milongas.ts` birleşik veri (**895 kayıt, 17 ülke**), ülke seçici
+> `ingest_czechia.py` (9), `ingest_poland.py` (11), `ingest_romania.py` (4);
+> `src/lib/milongas.ts` birleşik veri (**899 kayıt, 18 ülke**), ülke seçici
 > (Argentina 208 · Spain 183 · Germany 116 · Italy 81 · Türkiye 46 ·
 > United Kingdom 44 · Netherlands 39 · **France 37** · Sweden 31 · Greece 25 ·
 > Austria 21 · Switzerland 18 · **Poland 11** · **Czechia 9** · Norway 9 ·
-> US 9 · Brazil 8), metro normalizasyonu
+> US 9 · Brazil 8 · **Romania 4**), metro normalizasyonu
 > (BA/Atina/Miami), eski `?region=` alias’ları, `/milongas.json` uç noktası,
 > kaynak atfı ve `schedule` alanı, tarayıcı + **Cloudflare IP**
-> (`request.cf.country`) ile varsayılan ülke. Sıradaki: Romanya (kaynak aranıyor),
-> Kanada (Toronto), tangoevents.au, Brüksel/Belçika.
+> (`request.cf.country`) ile varsayılan ülke. Sıradaki: Kanada (Toronto),
+> tangoevents.au, Brüksel/Belçika.
 
 Bailaspot'tan veri almayı erteliyoruz. Bu belge, Bailaspot'un kendi yayınladığı
 `sourceUrl` alanından çıkarılan **üst kaynakların** listesini, teknik
@@ -213,30 +213,25 @@ kalır**, yeni kaynak yalnız boş alanları (fiyat, koordinat, adres) doldurur.
 
 ---
 
-## 10. Fransa · Çekya · Polonya eklendi (2026-11-08)
+## 10. Fransa · Çekya · Polonya · Romanya eklendi (2026-11-08)
 
 | Ülke | Kaynak | Teknik | Sonuç |
 |---|---|---|---|
 | Fransa | **tango-argentin.fr** (`/paris`) | Sunucu-render ajanda, 4 ay; `<h6>` gün başlığı, satırda saat/isim/adres/`de 19h00 à 02h00`/ücret/DJ | 573 occurrence → **37 seri** (31 haftalık, 2 iki haftada bir, 4 aylık) |
 | Çekya | **tango-prague.info** (Google Calendar ICS) | UTC damga → CET/CEST; `RRULE` haftalık/aylık 150 gün pencerede genişletilir | 113 occurrence → **9 seri** (5 haftalık, 2 iki haftada bir, 2 aylık) |
 | Polonya | **milongi.krakow.pl** (`/kalendarz?m=`) | Aylık takvim; `details.calendar-event.confirmed` + `.predicted` (kaynağın tahmini) | 120 occurrence → **11 seri** (9 haftalık, 2 iki haftada bir), Kraków |
+| Romanya | **milonga.ro** (`/category/milonga/`) | WordPress; REST 401 (firewall), arşiv + post sayfaları HTML; başlıkta gün “(Sat)”, gövdede `Ora:` / `Locație:` / `Participare:` | **4 seri** (Bükreş: Cum 21:00, Cmt 21:00, Sal 20:00, Paz 20:00) |
 
-Ortak noktalar: üçü de `milonga_series.py` (occurrence → seri kümeleme) kullanıyor,
-`src/data/milongas-{fr,cz,pl}.json` yazıyor ve `update.yml`'de `--publish` ile
-koşuyor. Ülke kimlikleri `france`, `czechia`, `poland`; `functions/lib/country.ts`
-(FR/PL/CZ) ve `src/lib/geo.ts` (Europe/Paris, Europe/Warsaw, Europe/Prague +
-fr-FR/pl-PL/cs-CZ) güncellendi.
+Ortak noktalar: dördü de `milonga_series.py` (occurrence → seri kümeleme) kullanıyor,
+`src/data/milongas-{fr,cz,pl,ro}.json` yazıyor ve `update.yml`'de `--publish` ile
+koşuyor. Ülke kimlikleri `france`, `czechia`, `poland`, `romania`; `functions/lib/country.ts`
+(FR/PL/CZ/RO) ve `src/lib/geo.ts` (Europe/Paris, Europe/Warsaw, Europe/Prague,
+Europe/Bucharest + fr-FR/pl-PL/cs-CZ/ro-RO) güncellendi.
 
-**Romanya — kaynak bulunamadı (2026-11-08).** Denenenler: `tangohub.ro`,
-`milongaro.ro`, `tangobucuresti.ro` (DNS yok), `milonga.ro` (yanıt yok),
-`tangopasion.ro` (Cloudflare challenge), `tangocluj.ro` (stüdyo oda rezervasyonu,
-`/api/rooms`), `milongas-in.com` (ülke dizini var ama kayıtlar 2012–2017
-düzenlenmiş), `bailaspot.com/romania/*` (güncel görünüyor; etkinlik sayfalarında
-Event JSON-LD yok, tarih HTML'den ayıklanmalı). Seçenekler:
-
-1. **Bailaspot adapter'ı** (Bükreş + Cluj + Timişoara): güncel veri, ama toplayıcı
-   ve HTML tarih ayrıştırma kırılgan; atıf “Bailaspot” olur.
-2. **Manuel çekirdek liste**: yerel okul/organizatör Facebook gruplarından
-   (Tangopasion, Casa de Tango, Tango Cluj) ~15–20 seri; `source: manual`,
-   çeyrekte bir gözden geçirme.
-3. Romanya'yı şimdilik atlayıp Kanada/Toronto ve tangoevents.au'ya geçmek.
+**Romanya notları.** `milonga.ro` yavaş (istek başına 20–40 sn; `timeout=120`) ve
+REST API kapalı, bu yüzden 1 arşiv + 4 post sayfası çekiliyor. “Evenimente” sayfası
+2023’te kalmış; milonga postları Ağustos 2026’da güncellenmiş — yeni milonga
+eklenirse arşiv otomatik büyür, ama tazelik `audit_data.py` eşiğiyle izlenmeli.
+Kullanılmayan adaylar: `tangohub.ro` / `milongaro.ro` / `tangobucuresti.ro` (DNS
+yok), `tangopasion.ro` (Cloudflare), `tangocluj.ro` (stüdyo oda rezervasyonu),
+`milongas-in.com` (2012–2017 kayıtları), Bailaspot (toplayıcı, Event JSON-LD yok).
