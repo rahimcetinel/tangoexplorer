@@ -179,3 +179,21 @@ jobs:
           name: playwright-report
           path: playwright-report
           if-no-files-found: warn
+
+      # Ingest adımları `|| true` ile koşuyor; bozuk bir kaynak (ölü ICS, değişen
+      # HTML, süresi geçmiş IG token'ı) sessizce eski veriyi bırakır. Bu adım
+      # sonucu kontrol eder ve gerçek bir sorunda koşuyu kırmızıya çevirir.
+      - name: Source health
+        if: always()
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+        run: python agentic-python/source_health.py | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload source health report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-health
+          path: agentic-python/out/source-health.json
+          if-no-files-found: warn
