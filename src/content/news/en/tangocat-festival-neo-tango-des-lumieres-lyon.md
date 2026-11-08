@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Festival+Neo+Tango+des+Lumi%C3%A8res+Lyon/11099
+eventWebsite: https://www.festivaltangodeslumieres.com/programme-du-festival/
 locale: en
 summary: "Festival Neo Tango des Lumières Lyon (November 20-22 2026) in France, Lyon. Source: Tangocat."
 eventName: "Festival Neo Tango des Lumières Lyon"

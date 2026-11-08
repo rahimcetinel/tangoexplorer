@@ -118,7 +118,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/10th+Caliente+Tango+Marathon+Antalya/10910": {
-      "status": "ok",
+      "status": "gone",
       "checkedAt": "2026-11-08"
     },
     "https://www.facebook.com/calientetangomarathon": {
@@ -138,19 +138,19 @@
       "checkedAt": "2026-11-08"
     },
     "https://viennacallingtangomarathon.com/": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/17th+Vienna+Calling+Tango+Marathon+2026+Winter+Edition/10030": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangotoistanbul.com": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/19th+TanGO+TO+Istanbul+%E2%80%94+Red+Edition/11177": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://www.instagram.com/tangotoistanbul": {
@@ -209,8 +209,12 @@
       "status": "ok",
       "checkedAt": "2026-11-08"
     },
+    "https://tangoaires.gr/en/5th-tango-aires-marathon-in-xanthi-greece/": {
+      "status": "ok",
+      "checkedAt": "2026-11-08"
+    },
     "https://tangocat.net/go/5th+Tangoaires+Marathon/10955": {
-      "status": "error",
+      "status": "dead",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/7th+Morbihan+Tango+Festival/10871": {
@@ -306,7 +310,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Arcobaleno+Tango+Marathon+2027/11273": {
-      "status": "unreachable",
+      "status": "ok",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Artetango/11281": {
@@ -318,7 +322,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/ATUSA+Tango+Festival+%26+Championship/11146": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Autumn+Embrace+%22Close+Embrace+Encuentro+Milonguero%22/11279": {
@@ -326,7 +330,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Baden-Baden+Tango+Festival/10516": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Bailongo+Montr%C3%A9al+2027/11233": {
@@ -338,11 +342,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Bali+Tango+Marathon+La+Isla+Bonita/11271": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Bali+Tango+Marathon/11028": {
-      "status": "ok",
+      "status": "gone",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/BASH+2026+Tango+Weekend/11102": {
@@ -350,7 +354,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Bay+Tango+Festival+%26+Marathon+(BTFM)/10088": {
-      "status": "ok",
+      "status": "dead",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Baztango/10408": {
@@ -426,7 +430,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Bratislava+Tango+Party/10352": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Brazil+Tango+Marathon+2027/10619": {
@@ -526,7 +530,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Copenhagen+Tango+Intermezzo/10777": {
-      "status": "ok",
+      "status": "gone",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Coqueta+Invierno+Weekend/11217": {
@@ -550,7 +554,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Discover+Vietnam+%26+Cambodia+Culture+And+Tango+Marathon/10851": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Dos+Corazones+-+Open+Role+in+a+Close+Embrace/10613": {
@@ -598,7 +602,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/El+Pasito+Immersion/11187": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Embraces+of+Harmony+New+Year+Tango+Holidays/10977": {
@@ -666,7 +670,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Festival+Muy+Tango+Bariloche/11095": {
-      "status": "ok",
+      "status": "gone",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Festival+Neo+Tango+des+Lumi%C3%A8res+Lyon/11099": {
@@ -682,7 +686,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Festivalito+Rural/11007": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Fi+Tango+Porto/10627": {
@@ -722,7 +726,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Giriamo+Tango+Fest/10766": {
-      "status": "ok",
+      "status": "gone",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Gothenburg+Tango+Festival+2027/10909": {
@@ -742,15 +746,15 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.tangomundo.de/high-noon-tangomarathon": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/High+Noon+TangoMarathon+-+Summer+Edition+-+Berlin/11242": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/High+Noon+TangoMarathon+-+Winter+Edition+-+Berlin/11249": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Homero+Tango+Marathon/11274": {
@@ -782,7 +786,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Island+Embrace+Tango+Marathon/11224": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://www.facebook.com/events/s/istanbul-tango-holidays-new-ye/1017936841291002/?mibextid=wwXIfr&rdid=buuwZPDmvlaTw1u4&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BaF3QNUw5%2F%3Fmibextid%3DwwXIfr": {
@@ -870,7 +874,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/La+Magnifika+Tango+Marathon/11057": {
-      "status": "ok",
+      "status": "gone",
       "checkedAt": "2026-11-08"
     },
     "https://www.lamareatango.com": {
@@ -938,7 +942,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Ladies+Tango+%26+Yoga+Retreat/10975": {
-      "status": "ok",
+      "status": "gone",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Le+Bal+d%C3%A9pareill%C3%A9.e/11211": {
@@ -950,11 +954,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://asierymarion.com/milongas-de-gala-reveillon/": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Le+R%C3%A9veillon+5+Biarritz+Tango+New+Year%E2%80%99s+Event/11266": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Lisboa+Menina+Encuentro+Milonguero/10875": {
@@ -1050,7 +1054,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Marettimo+in+Tango+%E2%80%93+11th+Edition/11183": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Mascarada+Encuentro+Milonguero/11228": {
@@ -1098,7 +1102,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Mimos+y+Tango/10621": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Moonlight+Tango+2027/11130": {
@@ -1110,7 +1114,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/More+Than+Tango+(Marathon+%26+Festival+%26+Cup)/10208": {
-      "status": "error",
+      "status": "ok",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Mucho+Tango+Festival/11089": {
@@ -1126,7 +1130,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Neo+Immersion+Sep+2027+%E2%80%93+2.+Edition/11119": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Neo+Tango+Bruges+(NTB)+2027/10886": {
@@ -1158,7 +1162,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/New+Zealand+Tango+Festival/11125": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/No+Te+Apures+Milonguero+Week+Tenerife/11231": {
@@ -1170,7 +1174,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Noches+De+Ronda/10850": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/North+Greece+Tango+Marathon/10768": {
@@ -1178,11 +1182,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Nostos+Tango+Marathon+2027/10956": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/NTM+2027+%E2%80%93+Neo+Tango+Marathon+Berlin/10601": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Nuevos+Aires+Nuevo+Tango+Festival/11062": {
@@ -1206,7 +1210,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Othello+Tango+Camp/10278": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://otraluna.paris": {
@@ -1234,15 +1238,15 @@
       "checkedAt": "2026-11-08"
     },
     "https://tango-space.com/paris-no-duerme": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Paris+No+Duerme+-+Autumn+Tango+Marathon/10928": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Pavo+Real+Tango+Rhodes/10872": {
-      "status": "ok",
+      "status": "gone",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Peace+%26+Love+Circus+Tango+Marathon/11133": {
@@ -1286,7 +1290,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Quarnero+Tango+Weekend+%E2%80%94+Winter+Edition/11166": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Queen+City+Tango+Marathon+2027/11169": {
@@ -1298,15 +1302,15 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.rigaembrace.lv/information/": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/RE-Christmas/11033": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/RE-Jurmala+Milonguero+Meeting/10618": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Retraite+Tango+Emilie+%26+Pablo+Tegli/10960": {
@@ -1314,11 +1318,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.rigaembrace.lv/RE-Raduno/": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Riga+Embrace+-+Easter+Edition/11050": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Riga+Winter+Tango+Marathon+El+Gordo/11172": {
@@ -1406,7 +1410,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Sue%C3%B1a+Granada+Tango/10860": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Sue%C3%B1o+Azul+2026+Tango+Marathon/10733": {
@@ -1414,7 +1418,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Sue%C3%B1os+de+Invierno+Tango+Marathon/10150": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Summer+tango+camp/11144": {
@@ -1442,7 +1446,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Taiwan+Tango+Marathon/11004": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://www.tangomarathonkarlsruhe.com/de/": {
@@ -1474,11 +1478,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Tango+Embrace+Slovenia+2027+%E2%80%9CSaludos+de+Primavera%E2%80%9D/10487": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Tango+Embrace+Slovenia+Encuentro+Milonguero/9866": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Tango+Encuentro+Jeju+summ+milonga/11112": {
@@ -1490,7 +1494,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Tango+Fest+La+Palma/10771": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Tango+Focus+Del+Alma/11071": {
@@ -1526,7 +1530,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Tango+Marathon+Entre+Arcos+Before+Spring/11134": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Tango+Maya+Fest/10904": {
@@ -1554,7 +1558,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Tango+To+Rome+2026/10563": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Tango+Torino+Festival/10764": {
@@ -1586,7 +1590,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/TangoFemme+Retreat/10976": {
-      "status": "ok",
+      "status": "gone",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Tangofestival+Rhein-Ruhr/11128": {
@@ -1598,11 +1602,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/TanGone+Marathon/10323": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Tangopostale+%E2%80%94+Festival+International+de+Tango+de+Toulouse/11282": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/TangOsud+International+Argentine+Tango+festival/11034": {
@@ -1618,7 +1622,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Tbilisi+Tango+Marathon/10266": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tenerifetangomarathon.com/index.php/en/tenerife-tango-marathon/": {
@@ -1634,7 +1638,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Teodora+tango+marathon/10686": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://www.facebook.com/share/1CaQNR8gfk/?mibextid=wwXIfr": {
@@ -1642,7 +1646,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/The+Living+Tango+Marathon/10640": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/The+Loft+Marathon+Stuttgart/10769": {
@@ -1654,7 +1658,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/The+Tango+Encuentro+in+the+City+of+Sassi/10833": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/The+Valmagne+Tango+Marathon/11284": {
@@ -1670,11 +1674,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Tormenta+Tango+Marathon+Opatija/10628": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Toronto+Spring+Tango+Marathon+2027/11139": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Toronto+Tango+8+Festival+%26+Marathon+2027/11245": {
@@ -1682,7 +1686,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Toronto+Tango+Experience+Marathon/10654": {
-      "status": "ok",
+      "status": "gone",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Transylvania+Tango+Marathon/11012": {
@@ -1714,7 +1718,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/V+Internacional+de+Tango+Stellae/10849": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Vancouver+Tango+Milonguero/10840": {
@@ -1722,7 +1726,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Vienna+Vibes+Tango+Marathon/11011": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Viento+Norte+Festivalito/10564": {
@@ -1730,7 +1734,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Vietnam+Tango+Marathon+2027/10566": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/VII+Tangochicos+Weekend+im+Wendland/11015": {
@@ -1742,11 +1746,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Vilnius+Tango+Weekend+2027/11287": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Vinilo+Budapest+Encuentro+Milonguero/11056": {
-      "status": "ok",
+      "status": "gone",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/VIVA+LA+PEPA+tango+%22weekend%22+en+Praga!/10078": {
@@ -1790,11 +1794,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/XII+Sol+de+Invierno+Internacional+Tango+Meeting/10836": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Xmas+in+Embrace/10261": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/%C5%BBar+Tanga+2nd+edition/10716": {
@@ -1802,11 +1806,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://Zaragozatangomaraton.com": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Zaragoza+Tango+Maraton/10401": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://ariadnayfernando.com/index.php/gira-esp/eventos-futuros/amazza-special-seminar": {
@@ -1842,7 +1846,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://berlintangomarathon.com": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangoverse.net/events/corazon-berlin-tango-marathon-cf96fb": {
@@ -1854,6 +1858,10 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangoverse.net/events/etonathon-0b2900": {
+      "status": "ok",
+      "checkedAt": "2026-11-08"
+    },
+    "https://tangoverse.net/events/festival-bravo-xiii-genova-2026": {
       "status": "ok",
       "checkedAt": "2026-11-08"
     },
@@ -1906,7 +1914,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangoadentro.gr": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangoverse.net/events/tango-adentro-festival-2027-thessaloniki": {
@@ -1914,7 +1922,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.facebook.com/groups/1301116590704961/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangoverse.net/events/tango-celebration-in-belgium-30cd5c": {
@@ -1922,7 +1930,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.tangoaires.org": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://tangoverse.net/events/tango-competition-festival-portugal-2026": {
@@ -1946,7 +1954,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.tarbesentango.fr": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangoverse.net/events/tarbes-en-tango-2027": {
@@ -1962,7 +1970,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tugatango.com": {
-      "status": "dead",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://tangoverse.net/events/tuga-tango-lisbon-tango-marathon-5c391c": {
@@ -1978,7 +1986,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://urbantangonights.com/welsh-international-tango-festival/": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://tangoverse.net/events/welsh-international-tango-festival-9e827b": {
@@ -1986,7 +1994,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://alondratango.wordpress.com/?fbclid=IwY2xjawUFIARwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMHZhd3JKRG1KZnpkS1JsN0RzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEe4lHhhCR4-SM4DfAJ6cYYbvm06b0HkxsLyb29h3F8LkVXM2_N5fnhXrQn-k8_aem_L9Nvv9rg-7zIlayzdM-0rA": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-08"
     },
     "https://www.tangomarathons.com/events/2027-alondra-tango-marathon-in-provence-edition-2-2/": {
@@ -2062,7 +2070,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.facebook.com/groups/3703502026634699": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://www.tangomarathons.com/events/2026-dias-de-garufa-edition-3/": {
@@ -2086,7 +2094,7 @@
       "checkedAt": "2026-11-08"
     },
     "http://www.happytango.es": {
-      "status": "unreachable",
+      "status": "ok",
       "checkedAt": "2026-11-08"
     },
     "https://www.tangomarathons.com/events/2026-happytango-edition-10/": {
@@ -2110,7 +2118,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://asierymarion.com/envolees-tanguera/": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://www.tangomarathons.com/events/2027-les-envolees-tangueras-12-biarritz-tango-marathon-edition-12/": {
@@ -2126,7 +2134,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tango-space.com/london-no-duerme/": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://www.tangomarathons.com/events/2027-london-no-duerme-summer-tango-vibes-central-london-edition-3/": {

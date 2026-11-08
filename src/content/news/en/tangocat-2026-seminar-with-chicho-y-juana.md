@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/2026+Seminar+with+Chicho+y+Juana/11001
+eventWebsite: https://www.ealloratango.it/2022/seminari.asp?id=Chicho&lingua=english
 locale: en
 summary: "2026 Seminar with Chicho y Juana (December 18-20 2026) in Italy, Mantua. Source: Tangocat."
 eventName: "2026 Seminar with Chicho y Juana"

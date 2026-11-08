@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Gavito+Tango+Festival+2026/10217
+eventWebsite: https://gavitotangofestival.com/
 locale: en
 summary: "Gavito Tango Festival 2026 (October 1-4 2026) in United States, Los Angeles. Source: Tangocat."
 eventName: "Gavito Tango Festival 2026"

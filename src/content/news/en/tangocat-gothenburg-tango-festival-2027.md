@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Gothenburg+Tango+Festival+2027/10909
+eventWebsite: https://www.andravaningen.com/gothenburg-tango-festival-2027
 locale: en
 summary: "Gothenburg Tango Festival 2027 (August 6-8, 2027) in Sweden, Gothenburg. Source: Tangocat."
 eventName: "Gothenburg Tango Festival 2027"

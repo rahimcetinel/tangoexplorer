@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Funko+Tango/10776
+eventWebsite: https://www.facebook.com/funkotango
 locale: en
 summary: "Funko Tango (May 14-16, 2027) in Romania, Bucharest. Source: Tangocat."
 eventName: "Funko Tango"

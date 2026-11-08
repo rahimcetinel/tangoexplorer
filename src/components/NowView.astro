@@ -2,15 +2,15 @@
 import AppShell from '../layouts/AppShell.astro';
 import Header from '../components/Header.astro';
 import DetailPanel from '../components/DetailPanel.astro';
-import milongaData from '../data/hoy-milongas.json';
+import { MILONGAS } from '../lib/milongas';
 import { getNews } from '../lib/news';
 import { homePath, ui } from '../lib/i18n';
-import type { HoyData, Milonga } from '../lib/hoy';
+import type { Milonga } from '../lib/hoy';
 import { buildNowData } from '../lib/now-data';
 
 const copy = ui.en;
 const posts = await getNews('en');
-const milongas = ((milongaData as HoyData).items ?? []) as Milonga[];
+const milongas = MILONGAS as Milonga[];
 const {
   coords: cityCoords,
   cities,

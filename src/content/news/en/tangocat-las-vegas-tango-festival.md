@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Las+Vegas+Tango+Festival/10899
+eventWebsite: https://www.lasvegastangofestival.com
 locale: en
 summary: "Las Vegas Tango Festival (September 24-27 2026) in United States, Las Vegas. Source: Tangocat."
 eventName: "Las Vegas Tango Festival"

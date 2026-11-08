@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Bohemia+Tango+Fiesta+-+A%C3%B1o+Nuevo/10921
+eventWebsite: https://facebook.com/events/s/bohemia-tango-fiesta-ano-nuevo/1319121886436409/
 locale: en
 summary: "Bohemia Tango Fiesta - Año Nuevo (December 31 - January 3 , 2027) in Spain, Málaga. Source: Tangocat."
 eventName: "Bohemia Tango Fiesta - Año Nuevo"

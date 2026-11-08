@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Vilnius+Tango+Weekend/10767
+eventWebsite: https://www.facebook.com/groups/381942907767760
 locale: en
 summary: "Vilnius Tango Weekend (October 16-18 2026) in Lithuania, Vilnius. Source: Tangocat."
 eventName: "Vilnius Tango Weekend"

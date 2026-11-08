@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/SENSI+Tangoterme+Experience++2026/10133
+eventWebsite: https://www.facebook.com/profile.php?id=61560950884686
 locale: en
 summary: "SENSI Tangoterme Experience 2026 (September 24-27 2026) in Italy, Contursi Terme. Source: Tangocat."
 eventName: "SENSI Tangoterme Experience 2026"

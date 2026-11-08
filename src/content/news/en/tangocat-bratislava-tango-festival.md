@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Bratislava+Tango+Festival/10545
+eventWebsite: https://www.bratislavatangofestival.com/program/
 locale: en
 summary: "Bratislava Tango Festival (September 24-27 2026) in Slovakia, Bratislava. Source: Tangocat."
 eventName: "Bratislava Tango Festival"

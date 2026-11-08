@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Maya+Fest/10904
+eventWebsite: https://en.tangomayafest.com/
 locale: en
 summary: "Tango Maya Fest (January 16-31, 2027) in Mexico, Playa del Carmen. Source: Tangocat."
 eventName: "Tango Maya Fest"

@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Almaviva+Tango/10919
+eventWebsite: https://www.almavivatango.com/en
 locale: en
 summary: "Almaviva Tango (May 14-16, 2027) in France, Luxeuil-les-Bains. Source: Tangocat."
 eventName: "Almaviva Tango"

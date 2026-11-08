@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Emilia+Tango+Festival/10428
+eventWebsite: https://www.facebook.com/profile.php?id=61576606010736
 locale: en
 summary: "Emilia Tango Festival (November 6-8 2026) in Italy, Bologna. Source: Tangocat."
 eventName: "Emilia Tango Festival"

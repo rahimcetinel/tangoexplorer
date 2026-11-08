@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Nomads+Karpenisi/11059
+eventWebsite: https://tangonomads.gr/event9
 locale: en
 summary: "Tango Nomads Karpenisi (February 5-7, 2027) in Greece, Lefkada. Source: Tangocat."
 eventName: "Tango Nomads Karpenisi"

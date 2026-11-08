@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Luna+Negra+Tango+Festival+2026/11079
+eventWebsite: https://facebook.com/events/s/luna-negra-tango-festival-2026/1333626107858277/
 locale: en
 summary: "Luna Negra Tango Festival 2026 (November 27-29 2026) in Switzerland, Bern. Source: Tangocat."
 eventName: "Luna Negra Tango Festival 2026"

@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Torino+Festival/10764
+eventWebsite: https://www.marcelaystefano.com/tango-torino-festival/
 locale: en
 summary: "Tango Torino Festival (March 25-29, 2027) in Italy, Turin. Source: Tangocat."
 eventName: "Tango Torino Festival"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Marathon+Tang'Auch/10553
+eventWebsite: https://www.facebook.com/profile.php?id=100084745915164
 locale: en
 summary: "Marathon Tang’Auch (November 20-22 2026) in France, Auch. Source: Tangocat."
 eventName: "Marathon Tang’Auch"

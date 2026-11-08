@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Festival+Groningen+2026/10502
+eventWebsite: https://www.tango-festival-groningen.nl/
 locale: en
 summary: "Tango Festival Groningen 2026 (October 15-18 2026) in Netherlands, Groningen. Source: Tangocat."
 eventName: "Tango Festival Groningen 2026"

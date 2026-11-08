@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Baztango/10408
+eventWebsite: https://www.facebook.com/groups/408746555836612/
 locale: en
 summary: "Baztango (November 26-29 2026) in Spain, Berrioplano–Berriobeiti. Source: Tangocat."
 eventName: "Baztango"

@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Retraite+Tango+Emilie+%26+Pablo+Tegli/10960
+eventWebsite: https://www.facebook.com/share/1HfoA1zXjH/?mibextid=wwXIfr
 locale: en
 summary: "Retraite Tango Emilie & Pablo Tegli (August 22-28, 2027) in France, Crespin. Source: Tangocat."
 eventName: "Retraite Tango Emilie & Pablo Tegli"

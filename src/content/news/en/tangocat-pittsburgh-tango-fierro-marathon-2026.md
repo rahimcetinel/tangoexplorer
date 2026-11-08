@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Pittsburgh+Tango+Fierro+Marathon+2026/11135
+eventWebsite: https://www.facebook.com/events/2761020897613928/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D
 locale: en
 summary: "Pittsburgh Tango Fierro Marathon 2026 (November 6-8 2026) in United States, Pittsburgh. Source: Tangocat."
 eventName: "Pittsburgh Tango Fierro Marathon 2026"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Neotango+Marathon+Berlin/10759
+eventWebsite: https://www.neotango.berlin/
 locale: en
 summary: "Neotango Marathon Berlin (January 15-17, 2027) in Germany, Berlin. Source: Tangocat."
 eventName: "Neotango Marathon Berlin"

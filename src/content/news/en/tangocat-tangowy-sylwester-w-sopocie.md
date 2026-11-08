@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tangowy+Sylwester+w+Sopocie/11084
+eventWebsite: https://facebook.com/events/s/tangowy-sylwester-w-sopocie-3-/2890299101356750/
 locale: en
 summary: "Tangowy Sylwester w Sopocie (December 31 - January 3 , 2027) in Poland, Sopot. Source: Tangocat."
 eventName: "Tangowy Sylwester w Sopocie"

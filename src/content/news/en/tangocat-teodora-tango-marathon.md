@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Teodora+tango+marathon/10686
+eventWebsite: https://teodoratangomarathon.com/
 locale: en
 summary: "Teodora tango marathon (February 18-21, 2027) in Italy, Ravenna. Source: Tangocat."
 eventName: "Teodora tango marathon"

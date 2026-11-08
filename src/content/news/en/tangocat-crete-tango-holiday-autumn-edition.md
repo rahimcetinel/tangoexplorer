@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Crete+Tango+Holiday+Autumn+Edition/10551
+eventWebsite: https://www.sutango.com
 locale: en
 summary: "Crete Tango Holiday Autumn Edition (October 24 - November 7 2026) in Greece, Myrthianos Plakias. Source: Tangocat."
 eventName: "Crete Tango Holiday Autumn Edition"

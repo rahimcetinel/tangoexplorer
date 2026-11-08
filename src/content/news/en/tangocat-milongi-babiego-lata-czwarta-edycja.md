@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Milongi+Babiego+Lata+-+czwarta+edycja/10106
+eventWebsite: https://www.facebook.com/events/1172268111762076/
 locale: en
 summary: "Milongi Babiego Lata - czwarta edycja (September 11-13 2026) in Poland, Biała Podlaska. Source: Tangocat."
 eventName: "Milongi Babiego Lata - czwarta edycja"

@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango.2+-+Una+Emoci%C3%B3n+-+anniversary+edition/11179
+eventWebsite: https://facebook.com/events/s/%F0%9D%90%93a%F0%9D%90%A7g%F0%9D%90%A8%F0%9D%9F%90-%F0%9D%90%94n%F0%9D%90%9A-%F0%9D%90%84m%F0%9D%90%A8c%F0%9D%90%A2o%F0%9D%90%A7-%F0%9D%90%9An%F0%9D%90%A7i%F0%9D%90%AFe%F0%9D%90%ABs%F0%9D%90%9Ar%F0%9D%90%B2/1075042842063741/
 locale: en
 summary: "Tango.2 - Una Emoción - anniversary edition (July 15-18, 2027) in Germany, Langen. Source: Tangocat."
 eventName: "Tango.2 - Una Emoción - anniversary edition"

@@ -2,6 +2,8 @@
 // Drops common exploit/scanner traffic before it reaches static assets.
 // The site is fully static, so PHP/WordPress/admin probes are always bogus.
 
+import { countryRedirect } from './lib/country';
+
 const BLOCKED_PATHS: RegExp[] = [
   /^\/wp-(admin|login|content|includes|json|sitemap|config|activate|cron)/i,
   /\/(xmlrpc|phpinfo|install|setup|shell|webshell|adminer|filemanager|backup|db)\.php/i,
@@ -44,6 +46,17 @@ export const onRequest: PagesFunction = async (context) => {
   const userAgent = request.headers.get('user-agent') || '';
   if (BLOCKED_UA.test(userAgent)) {
     return new Response('Forbidden', { status: 403, headers: { 'x-edge-block': 'ua' } });
+  }
+
+  // Country default for the milonga directory: a visitor in Germany lands on
+  // /milongas?region=germany instead of the Türkiye default. Skipped for
+  // crawlers so search engines keep one canonical URL, and skipped when the
+  // visitor already chose a country.
+  const cf = (request as Request & { cf?: { country?: string } }).cf;
+  const country = countryRedirect(pathname, url.searchParams.has('region'), userAgent, cf?.country);
+  if (country) {
+    url.searchParams.set('region', country);
+    return Response.redirect(url.toString(), 302);
   }
 
   return next();

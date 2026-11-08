@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/TANGO+FEAST+%E2%80%9CFrom+the+depths+to+the+surface%E2%80%9D/10949
+eventWebsite: https://fb.me/e/6rmax8bnP
 locale: en
 summary: "TANGO FEAST “From the depths to the surface” (October 3-4 2026) in Norway, Oslo. Source: Tangocat."
 eventName: "TANGO FEAST “From the depths to the surface”"

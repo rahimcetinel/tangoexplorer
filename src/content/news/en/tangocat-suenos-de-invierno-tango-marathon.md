@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sue%C3%B1os+de+Invierno+Tango+Marathon/10150
+eventWebsite: https://www.facebook.com/groups/495964747861277/
 locale: en
 summary: "Sueños de Invierno Tango Marathon (January 7-11, 2027) in Greece, Athens. Source: Tangocat."
 eventName: "Sueños de Invierno Tango Marathon"

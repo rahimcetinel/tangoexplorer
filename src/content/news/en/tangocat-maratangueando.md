@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Maratangueando/10610
+eventWebsite: https://facebook.com/events/s/maratangueando-oiartzun-pais-v/1642467357042496/
 locale: en
 summary: "Maratangueando (October 16-18 2026) in Spain, Oiartzun. Source: Tangocat."
 eventName: "Maratangueando"

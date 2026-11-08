@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/No+Te+Apures+Milonguero+Week+Tenerife/11231
+eventWebsite: https://noteapures.net/?utm_source=chatgpt.com
 locale: en
 summary: "No Te Apures Milonguero Week Tenerife (January 14-21, 2027) in Spain, Puerto de la Cruz. Source: Tangocat."
 eventName: "No Te Apures Milonguero Week Tenerife"

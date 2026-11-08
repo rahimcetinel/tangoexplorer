@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Milonguero+Weekend+%E2%80%9ETango+de+mi+Pueblo%E2%80%9D+2nd+edition/10522
+eventWebsite: https://facebook.com/events/s/tango-milonguero-weekend-tango/797777919794269/
 locale: en
 summary: "Tango Milonguero Weekend „Tango de mi Pueblo” 2nd edition (October 2-4 2026) in Poland, Smolec. Source: Tangocat."
 eventName: "Tango Milonguero Weekend „Tango de mi Pueblo” 2nd edition"

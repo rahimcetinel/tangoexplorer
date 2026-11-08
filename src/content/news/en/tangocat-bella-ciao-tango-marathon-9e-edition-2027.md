@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Bella+Ciao+Tango+Marathon+%E2%80%94+9e+%C3%A9dition+2027/11080
+eventWebsite: http://www.bellaciaotangoevents.com
 locale: en
 summary: "Bella Ciao Tango Marathon — 9e édition 2027 (March 5-7, 2027) in France, Tours. Source: Tangocat."
 eventName: "Bella Ciao Tango Marathon — 9e édition 2027"

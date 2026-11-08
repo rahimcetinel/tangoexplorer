@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Mirada+Tango+Marathon/10531
+eventWebsite: http://www.gotangoevents.fr
 locale: en
 summary: "La Mirada Tango Marathon (September 25-27 2026) in France, Grenoble. Source: Tangocat."
 eventName: "La Mirada Tango Marathon"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/2%E2%81%BF%E1%B5%88+D%C3%ADas+de+Luz+y+Sonrisas+Encuentro+Milonguero/10454
+eventWebsite: https://tango-elements.com/en/dias-de-luz-y-sonrisas-milonguero-weekend/
 locale: en
 summary: "2ⁿᵈ Días de Luz y Sonrisas Encuentro Milonguero (December 17-20 2026) in Hungary, Röjtökmuzsaj. Source: Tangocat."
 eventName: "2ⁿᵈ Días de Luz y Sonrisas Encuentro Milonguero"

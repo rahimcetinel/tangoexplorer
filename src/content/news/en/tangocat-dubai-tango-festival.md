@@ -4,6 +4,7 @@ date: 2026-11-03
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Dubai+Tango+Festival/11263
+eventWebsite: http://www.dubaitangofest.com
 locale: en
 summary: "Dubai Tango Festival (May 20-23, 2027) in United Arab Emirates, Dubai. Source: Tangocat."
 eventName: "Dubai Tango Festival"

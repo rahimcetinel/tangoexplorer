@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Flor+de+Tango+-+Ksi%C4%85%C5%BC+Castle+Marathon/11040
+eventWebsite: https://facebook.com/events/s/-flor-de-tango-ksiaz-maj-2027/1583691956890704/
 locale: en
 summary: "Flor de Tango - Książ Castle Marathon (May 21-23, 2027) in Poland, Książ. Source: Tangocat."
 eventName: "Flor de Tango - Książ Castle Marathon"

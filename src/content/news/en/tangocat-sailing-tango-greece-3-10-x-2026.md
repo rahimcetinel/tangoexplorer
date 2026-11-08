@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sailing+%26+Tango%2C+Greece+3-10.X.2026/10723
+eventWebsite: https://facebook.com/events/s/sailing-tango-greece-3-10x2026/1244659464260559/
 locale: en
 summary: "Sailing & Tango, Greece 3–10.X.2026 (October 3-10 2026) in Greece, Lefkada. Source: Tangocat."
 eventName: "Sailing & Tango, Greece 3–10.X.2026"

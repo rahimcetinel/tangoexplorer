@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Salzburg+Milonguera+im+Schloss+Mondsee/11236
+eventWebsite: https://www.facebook.com/groups/1129132061810554?utm_source=chatgpt.com
 locale: en
 summary: "Salzburg Milonguera im Schloss Mondsee (February 25-28, 2027) in Austria, Mondsee. Source: Tangocat."
 eventName: "Salzburg Milonguera im Schloss Mondsee"

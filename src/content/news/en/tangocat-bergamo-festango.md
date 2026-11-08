@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Bergamo+Festango/10440
+eventWebsite: http://www.bergamofestango.com
 locale: en
 summary: "Bergamo Festango (February 26-28, 2027) in Italy, Bergamo. Source: Tangocat."
 eventName: "Bergamo Festango"

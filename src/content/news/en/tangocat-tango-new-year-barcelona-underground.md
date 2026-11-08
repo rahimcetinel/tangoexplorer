@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/TANGO+NEW+YEAR+Barcelona+Underground/11226
+eventWebsite: https://web.pointsoftango.app/event/29122026_TNYBUA111
 locale: en
 summary: "TANGO NEW YEAR Barcelona Underground (December 29 - January 4 , 2027) in Spain, Barcelona. Source: Tangocat."
 eventName: "TANGO NEW YEAR Barcelona Underground"

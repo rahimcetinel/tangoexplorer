@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Joy+of+Tango/10938
+eventWebsite: https://connectwithjoy.com/joy-of-tango-5268ffc8
 locale: en
 summary: "Joy of Tango (November 20-22 2026) in Sweden, Gothenburg. Source: Tangocat."
 eventName: "Joy of Tango"

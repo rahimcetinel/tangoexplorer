@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sydfyn+Embrace/10770
+eventWebsite: https://www.sydfynembrace.dk/
 locale: en
 summary: "Sydfyn Embrace (June 3-6, 2027) in Denmark, Svendborg. Source: Tangocat."
 eventName: "Sydfyn Embrace"

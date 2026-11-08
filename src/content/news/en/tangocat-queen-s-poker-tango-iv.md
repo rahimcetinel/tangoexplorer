@@ -4,6 +4,7 @@ date: 2026-10-24
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Queen's+Poker+Tango+IV/11197
+eventWebsite: https://www.facebook.com/groups/888794392275015
 locale: en
 summary: "Queen’s Poker Tango IV (December 4-6 2026) in Italy, Castagnito. Source: Tangocat."
 eventName: "Queen’s Poker Tango IV"

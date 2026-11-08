@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Brescia+Tango+Marathon/11025
+eventWebsite: https://www.facebook.com/bresciatangomarathon
 locale: en
 summary: "Brescia Tango Marathon (February 11-14, 2027) in Italy, Brescia. Source: Tangocat."
 eventName: "Brescia Tango Marathon"

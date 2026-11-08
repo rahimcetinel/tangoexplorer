@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/OSVALDO+Tango+Marathon+Vienna/10925
+eventWebsite: https://osvaldotangomarathon.at/
 locale: en
 summary: "OSVALDO Tango Marathon Vienna (March 12-14, 2027) in Austria, Vienna. Source: Tangocat."
 eventName: "OSVALDO Tango Marathon Vienna"

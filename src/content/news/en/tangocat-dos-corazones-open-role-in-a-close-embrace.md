@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Dos+Corazones+-+Open+Role+in+a+Close+Embrace/10613
+eventWebsite: https://www.tangokombinat.de/doscorazones
 locale: en
 summary: "Dos Corazones - Open Role in a Close Embrace (December 4-6 2026) in Germany, Saarbrücken. Source: Tangocat."
 eventName: "Dos Corazones - Open Role in a Close Embrace"

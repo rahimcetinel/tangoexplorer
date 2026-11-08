@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/NTM+2027+%E2%80%93+Neo+Tango+Marathon+Berlin/10601
+eventWebsite: https://tangovida.de/neo-tango-marathon-berlin/
 locale: en
 summary: "NTM 2027 – Neo Tango Marathon Berlin (April 9-11, 2027) in Germany, Berlin. Source: Tangocat."
 eventName: "NTM 2027 – Neo Tango Marathon Berlin"

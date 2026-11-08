@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Parisiana+D'Azur+Week-End+Tango/10895
+eventWebsite: https://facebook.com/events/s/la-parisiana-dazur-week-end-ta/1340916451480170/
 locale: en
 summary: "La Parisiana D’Azur Week-End Tango (October 2-4 2026) in France, Grimaud. Source: Tangocat."
 eventName: "La Parisiana D’Azur Week-End Tango"

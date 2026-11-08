@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Encuentro+Milonguero+Luz+del+Norte/11002
+eventWebsite: https://www.facebook.com/groups/631498378683688/
 locale: en
 summary: "Encuentro Milonguero Luz del Norte (July 9-11, 2027) in Sweden, Stockholm. Source: Tangocat."
 eventName: "Encuentro Milonguero Luz del Norte"

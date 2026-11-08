@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Adagio+Tango+Festival/11155
+eventWebsite: https://www.adagiotangofestival.com/
 locale: en
 summary: "Adagio Tango Festival (March 19-21, 2027) in Mexico, Mexico City. Source: Tangocat."
 eventName: "Adagio Tango Festival"

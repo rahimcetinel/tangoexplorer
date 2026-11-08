@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Brazil+Tango+Marathon+2027/10619
+eventWebsite: https://www.facebook.com/photo?fbid=10162559527786951&set=gm.1302299538710512&idorvanity=386280350312440
 locale: en
 summary: "Brazil Tango Marathon 2027 (March 19-21, 2027) in Bolivia, Fortaleza. Source: Tangocat."
 eventName: "Brazil Tango Marathon 2027"

@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Festivalito+Rural/11007
+eventWebsite: https://milonguero.si/index.php?page=en
 locale: en
 summary: "Festivalito Rural (August 19-22, 2027) in Slovenia, Veržej. Source: Tangocat."
 eventName: "Festivalito Rural"

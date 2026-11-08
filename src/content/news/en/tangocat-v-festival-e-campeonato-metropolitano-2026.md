@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/V+Festival+e+Campeonato+Metropolitano+2026/11094
+eventWebsite: https://www.lamaquinatanguera.com.br/
 locale: en
 summary: "V Festival e Campeonato Metropolitano 2026 (November 13-15 2026) in Brazil, São Paulo. Source: Tangocat."
 eventName: "V Festival e Campeonato Metropolitano 2026"

@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Rococo+Tango+Festival/11032
+eventWebsite: https://www.rococofestival.com/about
 locale: en
 summary: "Rococo Tango Festival (July 29 - August 1, 2027) in Poland, Żagań. Source: Tangocat."
 eventName: "Rococo Tango Festival"

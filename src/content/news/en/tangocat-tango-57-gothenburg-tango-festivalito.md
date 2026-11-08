@@ -4,6 +4,7 @@ date: 2026-11-07
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+57%C2%B0+-+Gothenburg+Tango+Festivalito/11294
+eventWebsite: https://www.flowtangoandmore.com/tango-57-tango-festivalito
 locale: en
 summary: "Tango 57° - Gothenburg Tango Festivalito (February 25-28, 2027) in Sweden, Gothenburg. Source: Tangocat."
 eventName: "Tango 57° - Gothenburg Tango Festivalito"

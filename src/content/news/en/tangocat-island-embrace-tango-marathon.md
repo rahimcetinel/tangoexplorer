@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Island+Embrace+Tango+Marathon/11224
+eventWebsite: https://islandembrace.ca/
 locale: en
 summary: "Island Embrace Tango Marathon (April 9-11, 2027) in Canada, Victoria. Source: Tangocat."
 eventName: "Island Embrace Tango Marathon"

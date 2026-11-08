@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/El+Contrapunto+%E2%80%93+Queer+%26+Open+Role+Tango+Marathon/11030
+eventWebsite: https://www.contrapunto-tango.de/home/marathon/
 locale: en
 summary: "El Contrapunto – Queer & Open Role Tango Marathon (May 20-23, 2027) in Germany, Berlin. Source: Tangocat."
 eventName: "El Contrapunto – Queer & Open Role Tango Marathon"

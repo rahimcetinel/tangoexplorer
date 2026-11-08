@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Embraces+of+Harmony+New+Year+Tango+Holidays/10977
+eventWebsite: https://www.domaineharmonie.fr/en/newyear-tangoholidays
 locale: en
 summary: "Embraces of Harmony New Year Tango Holidays (December 28 - January 2 , 2027) in France, Crespin. Source: Tangocat."
 eventName: "Embraces of Harmony New Year Tango Holidays"

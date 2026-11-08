@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/New+Year's+Encuentro+Abrazos+del+Alma/10199
+eventWebsite: https://www.facebook.com/groups/1158034765807650
 locale: en
 summary: "New Year’s Encuentro Abrazos del Alma (December 31 - January 3 , 2027) in Slovenia, Ljubljana. Source: Tangocat."
 eventName: "New Year’s Encuentro Abrazos del Alma"

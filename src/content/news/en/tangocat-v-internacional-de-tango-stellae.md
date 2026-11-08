@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/V+Internacional+de+Tango+Stellae/10849
+eventWebsite: https://amestango.com
 locale: en
 summary: "V Internacional de Tango Stellae (December 5-8 2026) in Spain, Santiago de Compostela. Source: Tangocat."
 eventName: "V Internacional de Tango Stellae"

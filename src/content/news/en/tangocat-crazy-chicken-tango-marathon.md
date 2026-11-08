@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Crazy+Chicken+Tango+Marathon/10923
+eventWebsite: https://www.crazychicken.no/
 locale: en
 summary: "Crazy Chicken Tango Marathon (March 24-29, 2027) in Norway, Oslo. Source: Tangocat."
 eventName: "Crazy Chicken Tango Marathon"

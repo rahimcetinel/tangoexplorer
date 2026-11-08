@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Summer+Tango+Escapada/10460
+eventWebsite: https://facebook.com/events/s/summer-tango-escapada/1588718595733231/
 locale: en
 summary: "Summer Tango Escapada (September 18-20 2026) in Greece, Kalamata. Source: Tangocat."
 eventName: "Summer Tango Escapada"

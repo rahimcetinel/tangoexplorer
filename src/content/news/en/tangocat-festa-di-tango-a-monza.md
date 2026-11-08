@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Festa+di+Tango+a+Monza/10629
+eventWebsite: https://www.facebook.com/groups/1503706084497780
 locale: en
 summary: "Festa di Tango a Monza (March 5-7, 2027) in Italy, Monza. Source: Tangocat."
 eventName: "Festa di Tango a Monza"

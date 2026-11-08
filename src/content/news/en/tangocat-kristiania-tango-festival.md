@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Kristiania+Tango+Festival/10635
+eventWebsite: http://www.kristianiatangofestival.com
 locale: en
 summary: "Kristiania Tango Festival (May 20-23, 2027) in Norway, Oslo. Source: Tangocat."
 eventName: "Kristiania Tango Festival"

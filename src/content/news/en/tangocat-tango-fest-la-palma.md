@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Fest+La+Palma/10771
+eventWebsite: https://www.facebook.com/photo?fbid=2529979197437937&set=gm.10165245933676255&idorvanity=56894111254
 locale: en
 summary: "Tango Fest La Palma (June 17-20, 2027) in Spain, Los Llanos. Source: Tangocat."
 eventName: "Tango Fest La Palma"

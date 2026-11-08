@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Reuni%C3%B2n+Milonguera/10778
+eventWebsite: https://www.facebook.com/groups/1386297641629844/
 locale: en
 summary: "La Reuniòn Milonguera (December 11-13 2026) in Italy, Venice. Source: Tangocat."
 eventName: "La Reuniòn Milonguera"

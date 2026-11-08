@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Encuentro+Sous+le+Ciel+de+Paris/11145
+eventWebsite: https://www.facebook.com/groups/1539036833927582/
 locale: en
 summary: "Encuentro Sous le Ciel de Paris (June 11-13, 2027) in France, Paris. Source: Tangocat."
 eventName: "Encuentro Sous le Ciel de Paris"

@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Selys+Milonguero+2027/10962
+eventWebsite: https://selysmilonguero.be/
 locale: en
 summary: "Selys Milonguero 2027 (March 5-7, 2027) in Belgium, Liège. Source: Tangocat."
 eventName: "Selys Milonguero 2027"

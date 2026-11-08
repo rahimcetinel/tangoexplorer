@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Busan+Tango+Marathon/10876
+eventWebsite: https://www.facebook.com/moses.park.461311
 locale: en
 summary: "Busan Tango Marathon (June 23-28, 2027) in South Korea, Busan. Source: Tangocat."
 eventName: "Busan Tango Marathon"

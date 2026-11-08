@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Infinity+3.0/10425
+eventWebsite: https://facebook.com/events/s/tango-infinity-30-festival-in-/804412662249577/
 locale: en
 summary: "Tango Infinity 3.0 (March 4-7, 2027) in Poland, Zakopane. Source: Tangocat."
 eventName: "Tango Infinity 3.0"

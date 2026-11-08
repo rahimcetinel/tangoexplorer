@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Festival+formianum+Tango+Argentino/10728
+eventWebsite: https://facebook.com/events/s/festival-formianum-tango-argen/833601879790722/
 locale: en
 summary: "Festival formianum Tango Argentino (September 25-27 2026) in Italy, Formia. Source: Tangocat."
 eventName: "Festival formianum Tango Argentino"

@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Nuevos+Aires+Nuevo+Tango+Festival/11062
+eventWebsite: https://www.facebook.com/photo/?fbid=4429405690634969&set=gm.1416452060628592&idorvanity=386280350312440
 locale: en
 summary: "Nuevos Aires Nuevo Tango Festival (April 16-18, 2027) in United States, New York. Source: Tangocat."
 eventName: "Nuevos Aires Nuevo Tango Festival"

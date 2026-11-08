@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Taboe+Tango+Camp%3A+Dance+Into+The+New+Year/10994
+eventWebsite: https://tangoatelier.com/
 locale: en
 summary: "Taboe Tango Camp: Dance Into The New Year (December 29 - January 3 , 2027) in Netherlands, Austerlitz. Source: Tangocat."
 eventName: "Taboe Tango Camp: Dance Into The New Year"

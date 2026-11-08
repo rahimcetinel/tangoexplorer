@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+d'Or+festival/10755
+eventWebsite: https://tangodijon.wixsite.com/tangodor/festival-2026
 locale: en
 summary: "Tango d’Or festival (October 2-4 2026) in France, Dijon. Source: Tangocat."
 eventName: "Tango d’Or festival"

@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/The+Tango+Encuentro+in+the+City+of+Sassi/10833
+eventWebsite: https://sassilonga.com/en/home2/
 locale: en
 summary: "The Tango Encuentro in the City of Sassi (March 5-7, 2027) in Italy, Sassi. Source: Tangocat."
 eventName: "The Tango Encuentro in the City of Sassi"

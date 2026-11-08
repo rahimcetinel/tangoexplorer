@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Reading+Tango+Festival/11088
+eventWebsite: https://www.readingtango.com/festival
 locale: en
 summary: "Reading Tango Festival (October 30 - November 1 2026) in United Kingdom, Reading. Source: Tangocat."
 eventName: "Reading Tango Festival"

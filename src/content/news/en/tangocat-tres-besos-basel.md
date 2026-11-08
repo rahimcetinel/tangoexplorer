@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tres+Besos+Basel/10145
+eventWebsite: https://www.tres-besos.ch/
 locale: en
 summary: "Tres Besos Basel (November 5-8 2026) in Switzerland, Basel. Source: Tangocat."
 eventName: "Tres Besos Basel"

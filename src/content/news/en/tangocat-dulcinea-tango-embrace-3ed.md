@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Dulcinea+Tango+Embrace+3ed/10272
+eventWebsite: https://www.facebook.com/events/1418657209708417/
 locale: en
 summary: "Dulcinea Tango Embrace 3ed (October 1-4 2026) in Spain, Ciudad Real. Source: Tangocat."
 eventName: "Dulcinea Tango Embrace 3ed"

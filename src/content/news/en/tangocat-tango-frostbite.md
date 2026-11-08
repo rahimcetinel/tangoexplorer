@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Frostbite/11063
+eventWebsite: https://www.facebook.com/events/4591811184372868/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D
 locale: en
 summary: "Tango Frostbite (February 25-28, 2027) in Finland, Helsinki. Source: Tangocat."
 eventName: "Tango Frostbite"

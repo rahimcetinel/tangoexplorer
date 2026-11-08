@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Bay+Tango+Festival+%26+Marathon+(BTFM)/10088
+eventWebsite: https://baytango.com
 locale: en
 summary: "Bay Tango Festival & Marathon (BTFM) (November 13-15 2026) in United States, Berkeley. Source: Tangocat."
 eventName: "Bay Tango Festival & Marathon (BTFM)"

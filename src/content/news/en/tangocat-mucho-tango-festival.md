@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Mucho+Tango+Festival/11089
+eventWebsite: https://tangoclubrivenord.com/mucho-tango-festival-canada/
 locale: en
 summary: "Mucho Tango Festival (November 5-8 2026) in Canada, Montreal. Source: Tangocat."
 eventName: "Mucho Tango Festival"

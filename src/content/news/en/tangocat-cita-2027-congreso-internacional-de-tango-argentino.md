@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/CITA+2027+%E2%80%94+Congreso+Internacional+de+Tango+Argentino/11173
+eventWebsite: https://cita.dance/
 locale: en
 summary: "CITA 2027 — Congreso Internacional de Tango Argentino (March 8-13, 2027) in Argentina, Buenos Aires. Source: Tangocat."
 eventName: "CITA 2027 — Congreso Internacional de Tango Argentino"

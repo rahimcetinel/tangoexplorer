@@ -4,6 +4,7 @@ date: 2026-09-10
 category: turkiye
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Ankara+Tango+Fusion/10558
+eventWebsite: https://facebook.com/events/s/ankara-tango-fusion-9-11-octob/1239378624669658/
 locale: en
 summary: "Ankara Tango Fusion (October 9-11 2026) in Türkiye, Ankara. Source: Tangocat."
 eventName: "Ankara Tango Fusion"

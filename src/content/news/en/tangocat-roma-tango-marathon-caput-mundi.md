@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Roma+Tango+Marathon+Caput+Mundi/9935
+eventWebsite: https://www.facebook.com/groups/682388480706967/
 locale: en
 summary: "Roma Tango Marathon Caput Mundi (September 18-20 2026) in Italy, Rome. Source: Tangocat."
 eventName: "Roma Tango Marathon Caput Mundi"

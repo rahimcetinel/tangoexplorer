@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Los+Estibadores+Gdynia/10190
+eventWebsite: https://fb.me/e/4mNLyKJoS
 locale: en
 summary: "Los Estibadores Gdynia (November 11-15 2026) in Poland, Gdynia. Source: Tangocat."
 eventName: "Los Estibadores Gdynia"

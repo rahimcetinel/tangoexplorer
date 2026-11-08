@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Ischia+Tango+Party/9809
+eventWebsite: https://www.tangoallegria.it/ischia-tango-party-terme-e-tango
 locale: en
 summary: "Ischia Tango Party (April 30 - May 3, 2027) in Italy, Ischia. Source: Tangocat."
 eventName: "Ischia Tango Party"

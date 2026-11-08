@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/PocoLoco+Marathonito/10745
+eventWebsite: https://www.djtazman.cz/PocoLoco-Marathonito
 locale: en
 summary: "PocoLoco Marathonito (January 29-31, 2027) in Czechia, Prague. Source: Tangocat."
 eventName: "PocoLoco Marathonito"

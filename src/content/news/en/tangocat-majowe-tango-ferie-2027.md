@@ -4,6 +4,7 @@ date: 2026-11-05
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Majowe+Tango+Ferie+2027/11269
+eventWebsite: https://facebook.com/events/s/majowe-tango-ferie-2027-maja-k/1496984299151126/
 locale: en
 summary: "Majowe Tango Ferie 2027 (January 28-31, 2027) in Poland, Nieznanice. Source: Tangocat."
 eventName: "Majowe Tango Ferie 2027"

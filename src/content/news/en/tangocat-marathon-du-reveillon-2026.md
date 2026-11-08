@@ -4,6 +4,7 @@ date: 2026-10-11
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Marathon+du+R%C3%A9veillon+2026/11110
+eventWebsite: https://tangueando.fr/marathon-du-reveillon-2026/
 locale: en
 summary: "Marathon du Réveillon 2026 (December 29-31 2026) in France, Toulouse. Source: Tangocat."
 eventName: "Marathon du Réveillon 2026"

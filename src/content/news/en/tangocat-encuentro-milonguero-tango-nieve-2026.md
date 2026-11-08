@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Encuentro+Milonguero+Tango+Nieve+2026/10453
+eventWebsite: https://2matango.wixsite.com/tangonieve2026?
 locale: en
 summary: "Encuentro Milonguero Tango Nieve 2026 (October 16-18 2026) in Slovenia, Maribor. Source: Tangocat."
 eventName: "Encuentro Milonguero Tango Nieve 2026"

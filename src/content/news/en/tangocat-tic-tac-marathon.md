@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tic+Tac+Marathon/10258
+eventWebsite: https://www.facebook.com/groups/173949516412255/
 locale: en
 summary: "Tic Tac Marathon (September 25-27 2026) in Switzerland, Geneva. Source: Tangocat."
 eventName: "Tic Tac Marathon"

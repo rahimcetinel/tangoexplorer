@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Romance+Tango+Marathon+Vienna/9951
+eventWebsite: https://www.facebook.com/profile.php?id=61583635540329
 locale: en
 summary: "Romance Tango Marathon Vienna (September 11-14 2026) in Austria, Vienna. Source: Tangocat."
 eventName: "Romance Tango Marathon Vienna"

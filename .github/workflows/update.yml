@@ -46,6 +46,16 @@ jobs:
           python agentic-python/ingest.py || true
           python agentic-python/publish.py || true
           python agentic-python/ingest_hoy.py || true
+          python agentic-python/ingest_tango_de.py --publish || true
+          python agentic-python/ingest_sweden.py --publish || true
+          python agentic-python/ingest_milongas_ch.py --publish || true
+          python agentic-python/ingest_oslo.py --publish || true
+          python agentic-python/ingest_vienna.py --publish || true
+          python agentic-python/ingest_italy.py --publish || true
+          python agentic-python/ingest_spain.py --publish || true
+          python agentic-python/ingest_london.py --publish || true
+          python agentic-python/ingest_netherlands.py --publish || true
+          python agentic-python/enrich_event_websites.py --apply || true
           python agentic-python/ingest_tangoverse.py --images || true
           python agentic-python/ingest_tangoverse.py --publish || true
           python agentic-python/ingest_tmd.py || true

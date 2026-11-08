@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Retreat+im+Schlo%C3%9F/11018
+eventWebsite: https://www.facebook.com/events/28672982852304909/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22group%22%7D]%7D
 locale: en
 summary: "Tango Retreat im Schloß (October 23-25 2026) in France, Dammartin-en-Goële. Source: Tangocat."
 eventName: "Tango Retreat im Schloß"

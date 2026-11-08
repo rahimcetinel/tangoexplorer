@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Mi+Noche+Milonguera+2026/11229
+eventWebsite: https://www.cosasdetango.com/en/
 locale: en
 summary: "Mi Noche Milonguera 2026 (November 6-8 2026) in Italy, Milan. Source: Tangocat."
 eventName: "Mi Noche Milonguera 2026"

@@ -4,6 +4,7 @@ date: 2026-10-14
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Dale+Folklore+%E2%80%93+Stockholm/11122
+eventWebsite: https://facebook.com/events/s/-dale-folklore-stockholm-/1360953089192531/
 locale: en
 summary: "Dale Folklore – Stockholm (November 27-29 2026) in Sweden, Stockholm. Source: Tangocat."
 eventName: "Dale Folklore – Stockholm"

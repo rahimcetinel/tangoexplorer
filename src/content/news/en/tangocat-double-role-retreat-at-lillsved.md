@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Double+role+retreat+at+Lillsved/10435
+eventWebsite: https://tangoqueerer.se/kurser/dubbelrollshelg-lillsved/
 locale: en
 summary: "Double role retreat at Lillsved (October 2-4 2026) in Sweden, Lillsved. Source: Tangocat."
 eventName: "Double role retreat at Lillsved"

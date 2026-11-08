@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Limouzi+Tango+Week-End+%238/10970
+eventWebsite: http://www.limouzitangoweekend.com
 locale: en
 summary: "Limouzi Tango Week-End #8 (October 23-25 2026) in France, Boisseuil. Source: Tangocat."
 eventName: "Limouzi Tango Week-End #8"

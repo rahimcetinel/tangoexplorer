@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Fuego+de+Georgia+Tango+Marathon/10622
+eventWebsite: https://www.facebook.com/groups/1467217978149399/
 locale: en
 summary: "Fuego de Georgia Tango Marathon (April 16-18, 2027) in Georgia, Tskaltubo. Source: Tangocat."
 eventName: "Fuego de Georgia Tango Marathon"

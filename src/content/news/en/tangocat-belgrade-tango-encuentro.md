@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Belgrade+Tango+Encuentro/10765
+eventWebsite: https://www.facebook.com/belencuentro
 locale: en
 summary: "Belgrade Tango Encuentro (June 9-14, 2027) in Serbia, Belgrade. Source: Tangocat."
 eventName: "Belgrade Tango Encuentro"

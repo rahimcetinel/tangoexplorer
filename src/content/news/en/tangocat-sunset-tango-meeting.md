@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sunset+Tango+Meeting/10711
+eventWebsite: https://facebook.com/events/s/sunset-tango-meeting-22-250420/1336165548616533/
 locale: en
 summary: "Sunset Tango Meeting (April 22-25, 2027) in Poland, Zielona Góra. Source: Tangocat."
 eventName: "Sunset Tango Meeting"

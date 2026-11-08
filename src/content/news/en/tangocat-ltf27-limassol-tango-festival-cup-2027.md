@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/LTF27+-+Limassol+Tango+Festival+%26+Cup+2027/11129
+eventWebsite: https://limassoltango.com
 locale: en
 summary: "LTF27 - Limassol Tango Festival & Cup 2027 (March 26-29, 2027) in Cyprus, Limassol. Source: Tangocat."
 eventName: "LTF27 - Limassol Tango Festival & Cup 2027"

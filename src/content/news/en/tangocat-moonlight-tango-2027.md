@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Moonlight+Tango+2027/11130
+eventWebsite: https://www.facebook.com/moonlighttangoorg
 locale: en
 summary: "Moonlight Tango 2027 (September 9-12, 2027) in Australia, Brisbane. Source: Tangocat."
 eventName: "Moonlight Tango 2027"

@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tabarka+in+Tango/10985
+eventWebsite: https://www.facebook.com/share/g/19TtgZAfmM/
 locale: en
 summary: "Tabarka in Tango (October 7-11 2026) in Italy, Carloforte. Source: Tangocat."
 eventName: "Tabarka in Tango"

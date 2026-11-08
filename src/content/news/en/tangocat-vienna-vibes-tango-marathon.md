@@ -4,6 +4,7 @@ date: 2026-11-01
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Vienna+Vibes+Tango+Marathon/11011
+eventWebsite: https://www.facebook.com/groups/1462693474932199/
 locale: en
 summary: "Vienna Vibes Tango Marathon (October 2-3, 2027) in Austria, Vienna. Source: Tangocat."
 eventName: "Vienna Vibes Tango Marathon"

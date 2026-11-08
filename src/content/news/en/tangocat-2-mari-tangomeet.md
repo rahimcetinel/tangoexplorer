@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/2+Mari+Tangomeet/11044
+eventWebsite: https://www.facebook.com/profile.php?id=61583728563422
 locale: en
 summary: "2 Mari Tangomeet (May 28-30, 2027) in Italy, Marzamemi. Source: Tangocat."
 eventName: "2 Mari Tangomeet"

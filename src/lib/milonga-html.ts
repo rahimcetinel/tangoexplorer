@@ -1,6 +1,7 @@
 import {
   DAYS_ORDER,
   regionLabel,
+  sourceLabel,
   type Milonga,
   type MilongaType,
 } from './hoy';
@@ -46,7 +47,7 @@ export function matchesMilonga(item: Milonga, filters: MilongaFilters): boolean 
   if (filters.type && item.type !== filters.type) return false;
   if (filters.day && !item.days.includes(filters.day)) return false;
   if (filters.q) {
-    const hay = `${item.name} ${item.venue} ${item.area} ${item.city} ${item.country}`.toLowerCase();
+    const hay = `${item.name} ${item.venue} ${item.area} ${item.locality ?? ''} ${item.city} ${item.country}`.toLowerCase();
     if (!hay.includes(filters.q.toLowerCase())) return false;
   }
   return true;
@@ -129,12 +130,13 @@ function itemHtml(
 ): string {
   const meta = item.venue || item.area;
   const typeLabel = item.type === 'practica' ? copy.milongaTypePractica : copy.milongaTypeMilonga;
+  const schedule = item.schedule && item.schedule !== 'weekly' ? ` · ${scheduleLabel(item.schedule, copy)}` : '';
   return (
     `<button type="button" class="app-mitem${selected === item.id ? ' is-selected' : ''}" data-milonga-id="${escapeHtml(item.id)}">` +
     milongaTimeHtml(item.start, item.end) +
     `<span class="app-mitem-body">` +
     `<span class="app-mitem-name">${escapeHtml(item.name)}</span>` +
-    (meta ? `<span class="app-mitem-meta">${escapeHtml(meta)}</span>` : '') +
+    (meta ? `<span class="app-mitem-meta">${escapeHtml(meta)}${schedule}</span>` : '') +
     `</span>` +
     `<span class="app-mitem-tags">` +
     (item.city
@@ -145,6 +147,12 @@ function itemHtml(
     `</span>` +
     `</button>`
   );
+}
+
+export function scheduleLabel(schedule: string, copy: MilongaCopy): string {
+  if (schedule === 'monthly') return copy.milongaMonthly;
+  if (schedule === 'biweekly') return copy.milongaBiweekly;
+  return copy.milongaWeekly;
 }
 
 export function listHtml(
@@ -201,10 +209,16 @@ export function detailHtml(
   const calendarHref = milongaIcsHref(item);
   const rows: string[] = [];
   if (dayLabels) rows.push(`<div><dt>${copy.milongaDay}</dt><dd>${dayLabels}</dd></div>`);
+  if (item.schedule && item.schedule !== 'weekly') {
+    rows.push(`<div><dt>${copy.milongaFrequency}</dt><dd>${escapeHtml(scheduleLabel(item.schedule, copy))}</dd></div>`);
+  }
   if (time) rows.push(`<div><dt>${copy.milongaTime}</dt><dd>${escapeHtml(time)}</dd></div>`);
   if (item.venue) rows.push(`<div><dt>${copy.milongaVenue}</dt><dd>${escapeHtml(item.venue)}</dd></div>`);
   if (item.address) rows.push(`<div><dt>${copy.milongaAddress}</dt><dd>${escapeHtml(item.address)}</dd></div>`);
   if (item.city) rows.push(`<div><dt>${copy.filterCity}</dt><dd>${escapeHtml(item.city)}</dd></div>`);
+  if (item.locality && item.locality !== item.city) {
+    rows.push(`<div><dt>${copy.milongaArea}</dt><dd>${escapeHtml(item.locality)}</dd></div>`);
+  }
   if (item.price) rows.push(`<div><dt>${copy.milongaPrice}</dt><dd>${escapeHtml(item.price)}</dd></div>`);
   if (item.organizers) rows.push(`<div><dt>${copy.milongaOrganizers}</dt><dd>${escapeHtml(item.organizers)}</dd></div>`);
   const links: string[] = [];
@@ -226,13 +240,25 @@ export function detailHtml(
       ? `<div class="app-actions"><a class="app-btn" href="${escapeHtml(calendarHref)}" download="milonga-${escapeHtml(item.id)}.ics">${copy.addToCalendar}</a></div>`
       : '') +
     (links.length ? `<p class="app-links">${links.join(' · ')}</p>` : '') +
+    (item.sourceUrl
+      ? `<p class="app-source">${copy.milongaSource}: <a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(sourceLabel(item.source))}</a></p>`
+      : '') +
     (item.verified ? `<p class="app-source">${copy.milongaVerified}: ${escapeHtml(item.verified)}</p>` : '')
   );
 }
 
 export function tonightCount(items: Milonga[], region: string, now: Date = new Date()): number {
   const today = todaySlug(now);
-  return items.filter((item) => item.region === region && item.days.includes(today)).length;
+  const iso = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+  return items.filter((item) => {
+    if (item.region !== region) return false;
+    // Dated sources know the exact next date, so a biweekly or monthly series
+    // is not counted on its off weeks. Weekly series stay day-based so the
+    // client can roll the answer forward without a rebuild.
+    const dated = item.schedule && item.schedule !== 'weekly' ? item.next : '';
+    if (dated) return dated === iso;
+    return item.days.includes(today);
+  }).length;
 }
 
 export function cityCounts(items: Milonga[], region: string): { city: string; count: number }[] {

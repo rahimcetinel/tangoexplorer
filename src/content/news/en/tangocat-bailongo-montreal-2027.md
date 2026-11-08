@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Bailongo+Montr%C3%A9al+2027/11233
+eventWebsite: https://www.bailongomontreal.com/index?utm_source=chatgpt.com
 locale: en
 summary: "Bailongo Montréal 2027 (May 19-24, 2027) in Canada, Montreal. Source: Tangocat."
 eventName: "Bailongo Montréal 2027"

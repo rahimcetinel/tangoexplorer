@@ -4,6 +4,7 @@ date: 2026-11-03
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/2027+Gunsan+Sunset+Tango+Marathon/11264
+eventWebsite: http://www.gstm.co.kr
 locale: en
 summary: "2027 Gunsan Sunset Tango Marathon (May 21-23, 2027) in South Korea, Gunsan-si. Source: Tangocat."
 eventName: "2027 Gunsan Sunset Tango Marathon"

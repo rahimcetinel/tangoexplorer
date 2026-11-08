@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/3+Brilloso+Big+Tango+Festival/10832
+eventWebsite: http://brillosotangofest.com
 locale: en
 summary: "3 Brilloso Big Tango Festival (June 11-13, 2027) in Spain, Barcelona. Source: Tangocat."
 eventName: "3 Brilloso Big Tango Festival"

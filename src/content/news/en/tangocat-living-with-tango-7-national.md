@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Living+With+Tango-7+Na%C8%9Bional/11042
+eventWebsite: https://facebook.com/events/s/living-with-tango-7-national/4703570276595950/
 locale: en
 summary: "Living With Tango-7 Național (November 27 - December 1 2026) in Romania, Oradea. Source: Tangocat."
 eventName: "Living With Tango-7 Național"

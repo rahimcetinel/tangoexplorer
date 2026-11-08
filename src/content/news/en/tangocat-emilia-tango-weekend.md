@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Emilia+Tango+Weekend/10557
+eventWebsite: https://vogliaditango.it/page_etweek.html
 locale: en
 summary: "Emilia Tango Weekend (October 3-4 2026) in Italy, Sant'Ilario d'Enza. Source: Tangocat."
 eventName: "Emilia Tango Weekend"

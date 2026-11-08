@@ -28,9 +28,9 @@ const showCityCountry = Boolean(cityCountry && cityCountry !== place && !cityAlr
 const dates = formatEventRange(d.eventStart, d.eventEnd) || d.eventWhen || '';
 const registrationOpen = Boolean(d.registrationStart && d.registrationStart <= new Date());
 const hasEvent = Boolean(dates || place || d.eventWebsite || d.eventFacebook || d.eventInstagram || d.image || duration || kind || d.edition != null || d.registrationStart);
-const webDistinct = d.eventWebsite && d.eventWebsite.replace(/\/$/, '') !== d.sourceUrl.replace(/\/$/, '');
+const eventPage = d.eventWebsite && d.eventWebsite.replace(/\/$/, '') !== d.sourceUrl.replace(/\/$/, '') ? d.eventWebsite : '';
 const sourceHealth = healthFor(d.sourceUrl, d.eventWebsite);
-const hasLinks = Boolean(webDistinct || d.eventFacebook || d.eventInstagram);
+const hasLinks = Boolean(d.eventFacebook || d.eventInstagram);
 const mapHref = place
   ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place)}`
   : '';
@@ -128,14 +128,6 @@ function hostOf(url: string): string {
             <>
               <h2 class="app-facts-label">{copy.links}</h2>
               <ul class="app-links">
-                {webDistinct && (
-                  <li>
-                    {copy.web}:
-                    <ExternalLink class="app-link" href={d.eventWebsite!}>
-                      {hostOf(d.eventWebsite!)}
-                    </ExternalLink>
-                  </li>
-                )}
                 {d.eventInstagram && (
                   <li>
                     Instagram:
@@ -163,8 +155,16 @@ function hostOf(url: string): string {
                 {hostOf(d.sourceUrl)}
               </ExternalLink>
             </p>
+            {eventPage && (
+              <p class="app-source-event">
+                {copy.eventPage}:{' '}
+                <ExternalLink class="app-link" href={eventPage}>
+                  {hostOf(eventPage)}
+                </ExternalLink>
+              </p>
+            )}
             {sourceHealth?.status === 'dead' && (
-              <p class="app-source-warn">This source link looks broken; use the organiser link above.</p>
+              <p class="app-source-warn">This source link looks broken; use the event website above.</p>
             )}
           </div>
         </div>

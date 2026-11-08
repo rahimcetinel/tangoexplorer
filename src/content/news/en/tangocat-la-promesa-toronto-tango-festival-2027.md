@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Promesa+%E2%80%94+Toronto+Tango+Festival+2027/11240
+eventWebsite: https://lapromesatangofestival.com/
 locale: en
 summary: "La Promesa — Toronto Tango Festival 2027 (July 29 - August 2, 2027) in Canada, Toronto. Source: Tangocat."
 eventName: "La Promesa — Toronto Tango Festival 2027"

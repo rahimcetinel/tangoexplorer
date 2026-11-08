@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Warsaw+Tango+Meeting+2027/10929
+eventWebsite: https://facebook.com/events/s/wtm-2027-jonathan-saavedra-and/1635773671301121/
 locale: en
 summary: "Warsaw Tango Meeting 2027 (January 22-24, 2027) in Poland, Warsaw. Source: Tangocat."
 eventName: "Warsaw Tango Meeting 2027"

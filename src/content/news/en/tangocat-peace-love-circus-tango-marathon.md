@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Peace+%26+Love+Circus+Tango+Marathon/11133
+eventWebsite: https://www.facebook.com/groups/1449794228583342/
 locale: en
 summary: "Peace & Love Circus Tango Marathon (August 6-8, 2027) in Italy, Noci. Source: Tangocat."
 eventName: "Peace & Love Circus Tango Marathon"

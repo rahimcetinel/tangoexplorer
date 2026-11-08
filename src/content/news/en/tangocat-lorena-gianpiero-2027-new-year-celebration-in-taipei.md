@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Lorena+%26+Gianpiero+2027+New+Year+Celebration+in+Taipei/11060
+eventWebsite: https://www.facebook.com/events/1629238272239472/
 locale: en
 summary: "Lorena & Gianpiero 2027 New Year Celebration in Taipei (January 6-10, 2027) in Taiwan, Taipei. Source: Tangocat."
 eventName: "Lorena & Gianpiero 2027 New Year Celebration in Taipei"

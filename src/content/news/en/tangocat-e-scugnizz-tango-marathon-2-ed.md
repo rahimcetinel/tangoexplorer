@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/E+SCUGNIZZ+Tango+Marathon+2%C2%B0+Ed./10946
+eventWebsite: https://facebook.com/events/s/e-scugnizz-tango-marathon-2-ed/1343380941072072/
 locale: en
 summary: "E SCUGNIZZ Tango Marathon 2° Ed. (February 25-28, 2027) in Italy, Naples. Source: Tangocat."
 eventName: "E SCUGNIZZ Tango Marathon 2° Ed."

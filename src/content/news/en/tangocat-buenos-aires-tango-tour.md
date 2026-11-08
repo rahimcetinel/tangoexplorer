@@ -4,6 +4,7 @@ date: 2026-10-21
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Buenos+Aires+Tango+Tour/11194
+eventWebsite: https://www.tangoallegria.it/en/buenos-aires-tango-tour
 locale: en
 summary: "Buenos Aires Tango Tour (January 3-15, 2027) in Argentina, Buenos Aires. Source: Tangocat."
 eventName: "Buenos Aires Tango Tour"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Congress+Poland+-+Festival+in+Sopot/10481
+eventWebsite: https://www.facebook.com/events/1653155239358250/
 locale: en
 summary: "Tango Congress Poland - Festival in Sopot (October 15-18 2026) in Poland, Sopot. Source: Tangocat."
 eventName: "Tango Congress Poland - Festival in Sopot"

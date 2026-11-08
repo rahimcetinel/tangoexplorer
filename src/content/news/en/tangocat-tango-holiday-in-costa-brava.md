@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Holiday+in+Costa+Brava/10022
+eventWebsite: https://www.facebook.com/events/783945594426496/
 locale: en
 summary: "Tango Holiday in Costa Brava (September 27 - October 4 2026) in Spain, Girona. Source: Tangocat."
 eventName: "Tango Holiday in Costa Brava"

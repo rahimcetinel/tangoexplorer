@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Holidays+in+the+South+of+France/10978
+eventWebsite: https://www.domaineharmonie.fr/en/tango-vakantieweken
 locale: en
 summary: "Tango Holidays in the South of France (July 11-17, 2027) in France, Crespin. Source: Tangocat."
 eventName: "Tango Holidays in the South of France"

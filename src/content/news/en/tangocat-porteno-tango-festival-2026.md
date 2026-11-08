@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Porte%C3%B1o+Tango+Festival+2026/10645
+eventWebsite: https://portenotangofestival.gr/
 locale: en
 summary: "Porteño Tango Festival 2026 (December 11-13 2026) in Greece, Thessaloniki. Source: Tangocat."
 eventName: "Porteño Tango Festival 2026"

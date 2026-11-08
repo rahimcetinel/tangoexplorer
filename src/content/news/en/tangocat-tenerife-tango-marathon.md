@@ -4,6 +4,7 @@ date: 2026-11-08
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tenerife+Tango+Marathon/10209
+eventWebsite: https://tenerifetango.com/
 locale: en
 summary: "Tenerife Tango Marathon (December 11-14 2026) in Spain, La Orotava. Source: Tangocat."
 eventName: "Tenerife Tango Marathon"

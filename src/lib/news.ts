@@ -1,6 +1,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { eventKinds, contentFormats, sourceKeys } from '../content.config';
 import { type Category, type Locale } from './i18n';
+import { healthFor } from './link-health';
 
 export type NewsEntry = CollectionEntry<'news'>;
 export type { Category };
@@ -72,7 +73,13 @@ export async function getNews(locale: Locale): Promise<NewsEntry[]> {
   let cached = newsCache.get(locale);
   if (!cached) {
     cached = getCollection('news', (entry) => entry.data.locale === locale).then((posts) =>
-      posts.filter((post) => hasNotEnded(post)).sort((a, b) => compareByEventDate(a, b)),
+      posts
+        // The link checker marks entries the source has withdrawn (Tangocat
+        // answers 302 → /en/festivals). They stay reachable as pages, but they
+        // no longer belong on the board, in search or in the feed.
+        .filter((post) => healthFor(post.data.sourceUrl)?.status !== 'gone')
+        .filter((post) => hasNotEnded(post))
+        .sort((a, b) => compareByEventDate(a, b)),
     );
     newsCache.set(locale, cached);
   }

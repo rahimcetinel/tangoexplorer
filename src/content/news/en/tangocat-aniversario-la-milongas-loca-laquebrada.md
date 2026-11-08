@@ -4,6 +4,7 @@ date: 2026-10-21
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Aniversario+La+Milongas+Loca+Laquebrada/11186
+eventWebsite: https://casinodelalaguna.org
 locale: en
 summary: "Aniversario La Milongas Loca Laquebrada (January 22-24, 2027) in Spain, San Cristóbal de La Laguna. Source: Tangocat."
 eventName: "Aniversario La Milongas Loca Laquebrada"

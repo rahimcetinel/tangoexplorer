@@ -19,18 +19,31 @@ test('milonga JSON is public and the page lists Türkiye by default', async ({ p
   await expect(page.locator('[data-milonga-tabs] [data-day=""]')).toHaveClass(/is-active/);
 });
 
-test('the toolbar surfaces other cities and regions', async ({ page }) => {
-  await page.goto('/milongas');
-  const izmir = page.locator('[data-milonga-city-chip="İzmir"]');
-  await expect(izmir).toBeVisible();
-  await izmir.click();
-  await expect.poll(() => searchParams(page).get('city')).toBe('İzmir');
-  await expect(page.locator('.app-mitem-city').first()).toHaveText('İzmir');
-  await expect(page.locator('[data-milonga-total]')).toHaveText('4');
+test('the toolbar surfaces cities and the country switch', async ({ page }) => {
+  await page.goto('/milongas?region=germany');
+  const berlin = page.locator('[data-milonga-city-chip="Berlin"]');
+  await expect(berlin).toBeVisible();
+  await berlin.click();
+  await expect.poll(() => searchParams(page).get('city')).toBe('Berlin');
+  await expect(page.locator('.app-mitem-city').first()).toHaveText('Berlin');
+  await expect(page.locator('[data-milonga-total]')).toHaveText(/^\d+$/);
 
-  await page.locator('[data-milonga-region-top]').selectOption('berlin');
-  await expect.poll(() => searchParams(page).get('region')).toBe('berlin');
-  await expect(page.locator('[data-milonga-total]')).toHaveText('48');
+  await page.locator('[data-milonga-region-top]').selectOption('turkiye');
+  await expect.poll(() => searchParams(page).get('region')).toBeNull();
+  await expect(page.locator('[data-milonga-id]').first()).toBeVisible();
+});
+
+test('the German source fills Frankfurt and names its source', async ({ page }) => {
+  await page.goto('/milongas?region=germany&city=Frankfurt');
+  const item = page.locator('[data-milonga-id]', { hasText: 'Noche Azul' });
+  await expect(item).toBeVisible();
+  await expect(page.locator('[data-milonga-region]')).toHaveValue('germany');
+
+  await item.click();
+  await expect(page.locator('[data-milonga-detail] .app-source a')).toHaveAttribute(
+    'href',
+    /tango-calendar\.de/,
+  );
 });
 
 test('region, city, day, and type filters rewrite the URL', async ({ page }) => {
@@ -38,8 +51,8 @@ test('region, city, day, and type filters rewrite the URL', async ({ page }) => 
   await expect(page.locator('[data-milonga-id]').first()).toBeVisible();
   await openFilters(page);
 
-  await page.locator('[data-milonga-region]').selectOption('berlin');
-  await expect.poll(() => searchParams(page).get('region')).toBe('berlin');
+  await page.locator('[data-milonga-region]').selectOption('germany');
+  await expect.poll(() => searchParams(page).get('region')).toBe('germany');
   await expect(page.locator('[data-milonga-id]').first()).toBeVisible();
 
   const city = page.locator('[data-milonga-city]');
@@ -67,12 +80,12 @@ test('region, city, day, and type filters rewrite the URL', async ({ page }) => 
   }
 });
 
-test('clear drops day, type, city, and query but keeps the region', async ({ page }) => {
-  await page.goto('/milongas?region=athens&day=friday&type=milonga');
+test('clear drops day, type, city, and query but keeps the country', async ({ page }) => {
+  await page.goto('/milongas?region=greece&day=friday&type=milonga');
   await expect(page.locator('[data-milonga-id], [data-milonga-empty]').first()).toBeVisible();
   await openFilters(page);
   await page.locator('[data-milonga-clear]').click();
-  await expect.poll(() => searchParams(page).get('region')).toBe('athens');
+  await expect.poll(() => searchParams(page).get('region')).toBe('greece');
   await expect.poll(() => searchParams(page).get('day')).toBeNull();
   await expect.poll(() => searchParams(page).get('type')).toBeNull();
   await expect.poll(() => searchParams(page).get('city')).toBeNull();
@@ -98,7 +111,7 @@ test('picking a milonga opens details and close or Escape dismisses them', async
   await item.click();
   await expect(page.locator('[data-milonga-detail] h2')).toHaveText(name);
   await expect(page.locator('.app-detail')).toHaveClass(/is-open/);
-  const source = page.locator('[data-milonga-detail] a', { hasText: 'Open on Hoy Milonga' });
+  const source = page.locator('[data-milonga-detail] a', { hasText: 'Open source page' });
   if ((await source.count()) > 0) {
     await expect(source).toHaveAttribute('target', '_blank');
     await expect(source).toHaveAttribute('rel', /noopener/);
@@ -137,12 +150,31 @@ test('the milonga list is server-rendered before JavaScript runs', async ({ requ
   expect(html).toContain('data-milonga-data');
 });
 
-test('deep link restores region and type', async ({ page }) => {
-  await page.goto('/milongas?region=miami&type=practica');
+test('deep link restores country and type', async ({ page }) => {
+  await page.goto('/milongas?region=united-states&type=practica');
   await expect(page.locator('[data-milonga-id], [data-milonga-empty]').first()).toBeVisible();
-  await expect.poll(() => searchParams(page).get('region')).toBe('miami');
+  await expect.poll(() => searchParams(page).get('region')).toBe('united-states');
   await expect.poll(() => searchParams(page).get('type')).toBe('practica');
   await openFilters(page);
-  await expect(page.locator('[data-milonga-region]')).toHaveValue('miami');
+  await expect(page.locator('[data-milonga-region]')).toHaveValue('united-states');
   await expect(page.locator('[data-milonga-type="practica"]')).toHaveClass(/is-active/);
+});
+
+test('legacy region links still resolve to a country', async ({ page }) => {
+  await page.goto('/milongas?region=berlin');
+  await expect.poll(() => searchParams(page).get('region')).toBe('germany');
+  await expect(page.locator('[data-milonga-region]')).toHaveValue('germany');
+  await expect(page.locator('[data-milonga-id]').first()).toBeVisible();
+});
+
+test('the Swedish source fills Stockholm and names its source', async ({ page }) => {
+  await page.goto('/milongas?region=sweden');
+  const item = page.locator('[data-milonga-id]').first();
+  await expect(item).toBeVisible();
+  await expect(page.locator('[data-milonga-region]')).toHaveValue('sweden');
+  await item.click();
+  await expect(page.locator('[data-milonga-detail] .app-source a')).toHaveAttribute(
+    'href',
+    /tangokalendern\.se/,
+  );
 });

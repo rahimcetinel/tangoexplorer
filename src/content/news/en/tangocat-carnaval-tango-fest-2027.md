@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Carnaval+Tango+Fest+2027/11171
+eventWebsite: https://carnavalfest.com/
 locale: en
 summary: "Carnaval Tango Fest 2027 (February 5-9, 2027) in Argentina, Buenos Aires. Source: Tangocat."
 eventName: "Carnaval Tango Fest 2027"

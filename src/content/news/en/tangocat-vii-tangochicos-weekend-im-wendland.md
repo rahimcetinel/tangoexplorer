@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/VII+Tangochicos+Weekend+im+Wendland/11015
+eventWebsite: https://www.facebook.com/events/1587639503144225/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22group%22%7D]%7D
 locale: en
 summary: "VII Tangochicos Weekend im Wendland (December 11-13 2026) in Germany, Schnega. Source: Tangocat."
 eventName: "VII Tangochicos Weekend im Wendland"

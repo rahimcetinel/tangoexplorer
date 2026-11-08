@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Casablanca+Tango+Cup+%26+Festival+2027/11161
+eventWebsite: https://www.tangomorocco.com/en/event-details/casablanca-event-23
 locale: en
 summary: "Casablanca Tango Cup & Festival 2027 (April 29 - May 2, 2027) in Morocco, Casablanca. Source: Tangocat."
 eventName: "Casablanca Tango Cup & Festival 2027"

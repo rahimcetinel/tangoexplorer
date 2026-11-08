@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/4th+Beijing+Select+Tango+Weekend/11158
+eventWebsite: http://tangoweekend.org
 locale: en
 summary: "4th Beijing Select Tango Weekend (June 18-22, 2027) in China, Beijing. Source: Tangocat."
 eventName: "4th Beijing Select Tango Weekend"

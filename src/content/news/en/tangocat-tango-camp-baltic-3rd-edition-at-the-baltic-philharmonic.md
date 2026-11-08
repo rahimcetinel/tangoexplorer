@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Camp+Baltic+3rd+Edition+at+the+Baltic+Philharmonic/10452
+eventWebsite: https://facebook.com/events/s/tango-camp-baltic-3-cia-edycja/868560985803813/
 locale: en
 summary: "Tango Camp Baltic 3rd Edition at the Baltic Philharmonic (September 10-13 2026) in Poland, Gdańsk. Source: Tangocat."
 eventName: "Tango Camp Baltic 3rd Edition at the Baltic Philharmonic"

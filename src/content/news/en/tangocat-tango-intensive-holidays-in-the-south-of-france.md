@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Intensive+holidays+in+the+South+of+France/10983
+eventWebsite: https://www.domaineharmonie.fr/en/tango-vakantieweken
 locale: en
 summary: "Tango Intensive holidays in the South of France (August 15-21, 2027) in France, Crespin. Source: Tangocat."
 eventName: "Tango Intensive holidays in the South of France"

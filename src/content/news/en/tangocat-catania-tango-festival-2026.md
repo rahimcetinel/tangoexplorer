@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Catania+Tango+Festival+2026/11065
+eventWebsite: https://www.cataniatangofestival.com/en/
 locale: en
 summary: "Catania Tango Festival 2026 (August 4-8, 2027) in Italy, Catania. Source: Tangocat."
 eventName: "Catania Tango Festival 2026"

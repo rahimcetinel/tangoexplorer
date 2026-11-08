@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Happy+Tango+Encuentro+de+Tango/10893
+eventWebsite: https://www.happytango.es/en-gb
 locale: en
 summary: "Happy Tango Encuentro de Tango (December 30 - January 3 , 2027) in Spain, Calp. Source: Tangocat."
 eventName: "Happy Tango Encuentro de Tango"

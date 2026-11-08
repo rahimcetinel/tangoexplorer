@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/BASH+2026+Tango+Weekend/11102
+eventWebsite: https://events.humanitix.com/bash-2026-tango-weekend
 locale: en
 summary: "BASH 2026 Tango Weekend (November 27-29 2026) in Australia, Bundanoon. Source: Tangocat."
 eventName: "BASH 2026 Tango Weekend"

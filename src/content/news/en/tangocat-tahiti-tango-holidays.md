@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tahiti+Tango+Holidays/10548
+eventWebsite: https://www.facebook.com/share/18Q6MgTKJ8/?mibextid=wwXIfr
 locale: en
 summary: "Tahiti Tango Holidays (February 6-13, 2027) in French Polynesia, Puna'auia. Source: Tangocat."
 eventName: "Tahiti Tango Holidays"

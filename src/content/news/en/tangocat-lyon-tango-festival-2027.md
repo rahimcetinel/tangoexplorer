@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Lyon+Tango+Festival+2027/10787
+eventWebsite: https://facebook.com/events/s/lyon-tango-festival-2027/1884420942606021/
 locale: en
 summary: "Lyon Tango Festival 2027 (May 13-17, 2027) in France, Lyon. Source: Tangocat."
 eventName: "Lyon Tango Festival 2027"

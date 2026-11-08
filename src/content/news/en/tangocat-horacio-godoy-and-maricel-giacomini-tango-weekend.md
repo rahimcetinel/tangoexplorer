@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Horacio+Godoy+and+Maricel+Giacomini+Tango+Weekend/10595
+eventWebsite: https://antonvolkovtango.com/events
 locale: en
 summary: "Horacio Godoy and Maricel Giacomini Tango Weekend (October 1-4 2026) in Slovenia, Ljubljana. Source: Tangocat."
 eventName: "Horacio Godoy and Maricel Giacomini Tango Weekend"

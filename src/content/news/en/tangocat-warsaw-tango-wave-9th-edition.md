@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Warsaw+Tango+Wave+-+9th+Edition/10598
+eventWebsite: https://facebook.com/events/s/warsaw-tango-wave-9th-edition/977919961601011/
 locale: en
 summary: "Warsaw Tango Wave - 9th Edition (December 27 - January 4 , 2027) in Poland, Warsaw. Source: Tangocat."
 eventName: "Warsaw Tango Wave - 9th Edition"

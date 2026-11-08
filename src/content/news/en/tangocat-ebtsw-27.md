@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/EBTSW+27/11013
+eventWebsite: https://www.facebook.com/events/757448957423119/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22group%22%7D]%7D
 locale: en
 summary: "EBTSW 27 (July 2-4, 2027) in Germany, Eppelheim. Source: Tangocat."
 eventName: "EBTSW 27"

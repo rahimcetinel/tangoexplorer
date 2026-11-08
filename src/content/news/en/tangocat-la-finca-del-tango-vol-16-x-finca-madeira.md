@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Finca+del+Tango+Vol.16+x+Finca+Madeira/10138
+eventWebsite: https://linktr.ee/lafincadeltango
 locale: en
 summary: "La Finca del Tango Vol.16 x Finca Madeira (October 27 - November 1 2026) in Portugal, Funchal. Source: Tangocat."
 eventName: "La Finca del Tango Vol.16 x Finca Madeira"

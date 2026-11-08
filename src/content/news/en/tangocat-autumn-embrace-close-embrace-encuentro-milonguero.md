@@ -4,6 +4,7 @@ date: 2026-11-05
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Autumn+Embrace+%22Close+Embrace+Encuentro+Milonguero%22/11279
+eventWebsite: https://www.facebook.com/groups/1973220142898481/
 locale: en
 summary: "Autumn Embrace \"Close Embrace Encuentro Milonguero\" (October 1-3, 2027) in Belgium, Antwerp. Source: Tangocat."
 eventName: "Autumn Embrace \"Close Embrace Encuentro Milonguero\""

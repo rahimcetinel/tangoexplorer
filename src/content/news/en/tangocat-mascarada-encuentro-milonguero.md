@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Mascarada+Encuentro+Milonguero/11228
+eventWebsite: https://mascarada.hu/
 locale: en
 summary: "Mascarada Encuentro Milonguero (November 6-8 2026) in Hungary, Székesfehérvár. Source: Tangocat."
 eventName: "Mascarada Encuentro Milonguero"

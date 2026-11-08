@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/International+Argentine+Tango+Festival+in+Harrogate/11098
+eventWebsite: https://www.tangomelodia.com/intranational-festival-harrogate
 locale: en
 summary: "International Argentine Tango Festival in Harrogate (November 20-22 2026) in United Kingdom, Harrogate. Source: Tangocat."
 eventName: "International Argentine Tango Festival in Harrogate"

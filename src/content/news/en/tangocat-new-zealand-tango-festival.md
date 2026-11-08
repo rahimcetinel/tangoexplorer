@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/New+Zealand+Tango+Festival/11125
+eventWebsite: https://nztangofestival.co.nz/
 locale: en
 summary: "New Zealand Tango Festival (June 23-29, 2027) in New Zealand, Wellington. Source: Tangocat."
 eventName: "New Zealand Tango Festival"

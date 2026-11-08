@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Lisboa+Menina+Encuentro+Milonguero/10875
+eventWebsite: https://www.facebook.com/groups/1708542870454649
 locale: en
 summary: "Lisboa Menina Encuentro Milonguero (April 2-4, 2027) in Portugal, Lisbon. Source: Tangocat."
 eventName: "Lisboa Menina Encuentro Milonguero"

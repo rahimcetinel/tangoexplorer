@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Cape+Tango+Summer+Tango+Festival/11259
+eventWebsite: https://facebook.com/events/s/cape-tango-summer-tango-festiv/2203100483945781/
 locale: en
 summary: "Cape Tango Summer Tango Festival (February 18-22, 2027) in South Africa, Cape Town. Source: Tangocat."
 eventName: "Cape Tango Summer Tango Festival"

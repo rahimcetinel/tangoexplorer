@@ -4,6 +4,7 @@ date: 2026-11-03
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Torino+Tango+Marathon/11265
+eventWebsite: https://ttm.torinotango.it/en_GB
 locale: en
 summary: "Torino Tango Marathon (December 30 - January 3 , 2027) in Italy, Turin. Source: Tangocat."
 eventName: "Torino Tango Marathon"

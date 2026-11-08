@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/El+Olivo+Tango+Rave+2026/10744
+eventWebsite: https://facebook.com/events/s/el-olivo-tango-rave-2026/902268609351432/
 locale: en
 summary: "El Olivo Tango Rave 2026 (October 2-4 2026) in Spain, Barcelona. Source: Tangocat."
 eventName: "El Olivo Tango Rave 2026"

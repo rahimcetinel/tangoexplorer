@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Salerno+Tango+Fest+2026/10594
+eventWebsite: https://www.salernotangofest.com/it/
 locale: en
 summary: "Salerno Tango Fest 2026 (October 8-11 2026) in Italy, Salerno. Source: Tangocat."
 eventName: "Salerno Tango Fest 2026"

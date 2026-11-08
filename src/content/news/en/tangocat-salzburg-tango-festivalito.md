@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Salzburg+Tango+Festivalito/10063
+eventWebsite: https://www.salzburg-tango.com/aktuelle-events/
 locale: en
 summary: "Salzburg Tango Festivalito (October 9-11 2026) in Austria, Salzburg. Source: Tangocat."
 eventName: "Salzburg Tango Festivalito"

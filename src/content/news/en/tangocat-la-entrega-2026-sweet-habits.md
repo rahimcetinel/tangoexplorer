@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Entrega+2026+-+Sweet+Habits/10509
+eventWebsite: https://facebook.com/events/s/la-entrega-2026-sweet-habits/1267181051578852/
 locale: en
 summary: "La Entrega 2026 - Sweet Habits (October 9-12 2026) in United States, Newark. Source: Tangocat."
 eventName: "La Entrega 2026 - Sweet Habits"

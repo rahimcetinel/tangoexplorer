@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sunny+Beach+Tango+Festival/10821
+eventWebsite: http://www.sunnybeach-tango.com
 locale: en
 summary: "Sunny Beach Tango Festival (September 11-13 2026) in Bulgaria, Sunny Beach. Source: Tangocat."
 eventName: "Sunny Beach Tango Festival"

@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Greece+Tango+Holidays/10959
+eventWebsite: https://www.facebook.com/share/1T3qyEaszc/?mibextid=wwXIfr
 locale: en
 summary: "Greece Tango Holidays (June 5-12, 2027) in Greece, Lesbos. Source: Tangocat."
 eventName: "Greece Tango Holidays"

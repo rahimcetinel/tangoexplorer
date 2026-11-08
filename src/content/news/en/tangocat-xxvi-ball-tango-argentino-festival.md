@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/XXVI+Ball+Tango+Argentino+%26+Festival/8986
+eventWebsite: http://www.tango-tango.de
 locale: en
 summary: "XXVI Ball Tango Argentino & Festival (September 27 2026) in Germany, Wuppertal. Source: Tangocat."
 eventName: "XXVI Ball Tango Argentino & Festival"

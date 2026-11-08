@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/5th+Tangoaires+Marathon/10955
+eventWebsite: https://tangoaires.gr/en/5th-tango-aires-marathon-in-xanthi-greece/
 locale: en
 summary: "5th Tangoaires Marathon (November 26-29 2026) in Greece, Xanthi. Source: Tangocat."
 eventName: "5th Tangoaires Marathon"

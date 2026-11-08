@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/8th+Anniversary+of+el+Tango+Club/10827
+eventWebsite: https://fb.me/e/4NDQtS5vQ
 locale: en
 summary: "8th Anniversary of el Tango Club (October 24 2026) in Lithuania, Kaunas. Source: Tangocat."
 eventName: "8th Anniversary of el Tango Club"

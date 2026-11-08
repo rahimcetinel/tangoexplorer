@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Paisley+International+Tango+Festival/11142
+eventWebsite: https://paisley-tango.pplx.app/
 locale: en
 summary: "Paisley International Tango Festival (September 24-26, 2027) in United Kingdom, Paisley. Source: Tangocat."
 eventName: "Paisley International Tango Festival"

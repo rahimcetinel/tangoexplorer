@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Meta+Fierro+%E2%80%94+Encuentro+Milonguero/11251
+eventWebsite: https://www.yuyoverde.de/meta-fierro?utm_source=chatgpt.com
 locale: en
 summary: "Meta Fierro — Encuentro Milonguero (April 16-18, 2027) in Germany, Bad Ems. Source: Tangocat."
 eventName: "Meta Fierro — Encuentro Milonguero"

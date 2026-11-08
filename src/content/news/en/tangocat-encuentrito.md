@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Encuentrito/11075
+eventWebsite: https://encuentrito.net/
 locale: en
 summary: "Encuentrito (May 13-18, 2027) in France, Roquebrune-sur-Argens. Source: Tangocat."
 eventName: "Encuentrito"

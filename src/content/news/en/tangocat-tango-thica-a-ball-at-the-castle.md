@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/TanGo'thica+-+A+Ball+at+the+Castle/10917
+eventWebsite: https://facebook.com/events/s/tangothica-a-ball-at-the-castl/1022313623872313/
 locale: en
 summary: "TanGo’thica - A Ball at the Castle (October 16-18 2026) in Romania, Hunedoara. Source: Tangocat."
 eventName: "TanGo’thica - A Ball at the Castle"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Brilloso+Tango+Marathon/10782
+eventWebsite: http://brillosotangomarathon.com
 locale: en
 summary: "Brilloso Tango Marathon (February 19-21, 2027) in Spain, Barcelona. Source: Tangocat."
 eventName: "Brilloso Tango Marathon"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/XII+Compostela+Tango+Festival/10889
+eventWebsite: http://www.compostelatangoclub.es
 locale: en
 summary: "XII Compostela Tango Festival (February 12-14, 2027) in Spain, Santiago de Compostela. Source: Tangocat."
 eventName: "XII Compostela Tango Festival"

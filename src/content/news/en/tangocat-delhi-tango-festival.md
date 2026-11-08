@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Delhi+Tango+Festival/10585
+eventWebsite: https://delhitangofestival.in
 locale: en
 summary: "Delhi Tango Festival (September 24-27 2026) in India, New Delhi. Source: Tangocat."
 eventName: "Delhi Tango Festival"

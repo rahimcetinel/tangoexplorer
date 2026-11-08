@@ -14,7 +14,8 @@ import {
 import type { NewsEntry } from '../lib/news';
 import { uniqueSorted, citiesByCountry } from '../lib/filters';
 import { countryOptions } from '../lib/countries';
-import { DAYS_ORDER, HOY_REGIONS } from '../lib/hoy';
+import { DAYS_ORDER } from '../lib/hoy';
+import { countriesWithCounts } from '../lib/milongas';
 import { countByRegion, regionLabels, regionPath, regions } from '../lib/regions';
 
 interface Props {
@@ -116,8 +117,8 @@ function chipHref(value: string): string {
               <span class="app-select-label">{copy.milongaRegion}</span>
               <span class="app-select-wrap">
                 <select data-milonga-region>
-                  {HOY_REGIONS.map((region) => (
-                    <option value={region.id}>{locale === 'tr' ? region.tr : region.en}</option>
+                  {countriesWithCounts().map((region) => (
+                    <option value={region.id}>{locale === 'tr' ? region.tr : region.en} ({region.count})</option>
                   ))}
                 </select>
               </span>

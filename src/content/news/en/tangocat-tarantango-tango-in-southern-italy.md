@@ -4,6 +4,7 @@ date: 2026-10-21
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/TaRAnTaNGo+Tango+in+Southern+Italy/11191
+eventWebsite: https://www.tangoallegria.it/en/tarantango-tango-in-southern-italy
 locale: en
 summary: "TaRAnTaNGo Tango in Southern Italy (July 17-31, 2027) in Italy, Castro Marina. Source: Tangocat."
 eventName: "TaRAnTaNGo Tango in Southern Italy"

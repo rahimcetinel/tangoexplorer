@@ -4,6 +4,7 @@ date: 2026-10-21
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Roma+Tango+Festival+2026+%E2%80%93+Dancing+the+Magic+of+Rome/11195
+eventWebsite: https://facebook.com/events/s/roma-tango-festival-2026-danci/1765105748270414/
 locale: en
 summary: "Roma Tango Festival 2026 – Dancing the Magic of Rome (December 10-14 2026) in Italy, Rome. Source: Tangocat."
 eventName: "Roma Tango Festival 2026 – Dancing the Magic of Rome"

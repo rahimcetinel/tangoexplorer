@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/EL+HURAC%C3%81N+Pozna%C5%84+Tango+Marathon/9743
+eventWebsite: https://www.facebook.com/groups/389684463785199/
 locale: en
 summary: "EL HURACÁN Poznań Tango Marathon (October 22-25 2026) in Poland, Poznań. Source: Tangocat."
 eventName: "EL HURACÁN Poznań Tango Marathon"

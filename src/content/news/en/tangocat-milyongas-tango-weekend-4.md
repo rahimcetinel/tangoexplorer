@@ -4,6 +4,7 @@ date: 2026-10-26
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/MiLYONgas+Tango+Weekend+%234/11212
+eventWebsite: https://facebook.com/events/s/milyongas-tango-weekend-4/1807699370675230/
 locale: en
 summary: "MiLYONgas Tango Weekend #4 (November 13-16 2026) in France, Lyon. Source: Tangocat."
 eventName: "MiLYONgas Tango Weekend #4"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/El+Huracan+Tango+Marathon/10294
+eventWebsite: https://www.elhuracantangomarathon.com/
 locale: en
 summary: "El Huracan Tango Marathon (September 11-13 2026) in France, Montpellier. Source: Tangocat."
 eventName: "El Huracan Tango Marathon"

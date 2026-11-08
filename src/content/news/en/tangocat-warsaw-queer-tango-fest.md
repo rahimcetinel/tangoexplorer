@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Warsaw+Queer+Tango+Fest/10603
+eventWebsite: https://julzabowskx.hotglue.me/warsawqueertangofest
 locale: en
 summary: "Warsaw Queer Tango Fest (September 23-25 2026) in Poland, Warsaw. Source: Tangocat."
 eventName: "Warsaw Queer Tango Fest"

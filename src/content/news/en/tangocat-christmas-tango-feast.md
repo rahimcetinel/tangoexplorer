@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Christmas+Tango+Feast/10149
+eventWebsite: https://tangofeast.com/christmas/
 locale: en
 summary: "Christmas Tango Feast (December 3-6 2026) in United Kingdom, Paignton. Source: Tangocat."
 eventName: "Christmas Tango Feast"

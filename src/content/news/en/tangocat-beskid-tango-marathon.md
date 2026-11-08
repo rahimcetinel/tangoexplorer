@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Beskid+Tango+Marathon/10173
+eventWebsite: https://www.facebook.com/events/851146204684276/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D
 locale: en
 summary: "Beskid Tango Marathon (January 6-10, 2027) in Poland, Szczyrk. Source: Tangocat."
 eventName: "Beskid Tango Marathon"

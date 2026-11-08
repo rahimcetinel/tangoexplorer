@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Brilloso+Tango+Festivalito+4/10608
+eventWebsite: http://brillosotangoclub.com
 locale: en
 summary: "Brilloso Tango Festivalito 4 (October 2-4 2026) in Spain, Barcelona. Source: Tangocat."
 eventName: "Brilloso Tango Festivalito 4"

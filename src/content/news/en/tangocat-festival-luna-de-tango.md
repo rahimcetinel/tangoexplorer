@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Festival+Luna+de+Tango/10290
+eventWebsite: https://www.facebook.com/profile.php?id=100091885793699
 locale: en
 summary: "Festival Luna de Tango (November 2-5 2026) in Argentina, Córdoba. Source: Tangocat."
 eventName: "Festival Luna de Tango"

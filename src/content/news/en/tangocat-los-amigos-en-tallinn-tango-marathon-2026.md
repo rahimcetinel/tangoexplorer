@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Los+Amigos+en+Tallinn+Tango+Marathon+2026/10697
+eventWebsite: https://www.facebook.com/share/18utZ5LYRd/?mibextid=wwXIfr
 locale: en
 summary: "Los Amigos en Tallinn Tango Marathon 2026 (September 10-14 2026) in Estonia, Tallinn. Source: Tangocat."
 eventName: "Los Amigos en Tallinn Tango Marathon 2026"

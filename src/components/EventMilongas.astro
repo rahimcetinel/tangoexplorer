@@ -1,6 +1,6 @@
 ---
-import milongaData from '../data/hoy-milongas.json';
-import type { HoyData, Milonga } from '../lib/hoy';
+import { MILONGAS } from '../lib/milongas';
+import type { Milonga } from '../lib/hoy';
 import { milongasDuring } from '../lib/event-milongas';
 import type { NewsEntry } from '../lib/news';
 
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const milongas = ((milongaData as HoyData).items ?? []) as Milonga[];
+const milongas = MILONGAS as Milonga[];
 const city = post.data.city ?? '';
 const groups = milongasDuring(milongas, city, post.data.eventStart, post.data.eventEnd);
 const total = groups.reduce((sum, group) => sum + group.items.length, 0);
@@ -25,7 +25,7 @@ const cityHref = `/milongas?city=${encodeURIComponent(city)}`;
       </h2>
       <p class="app-ev-milongas-lead">
         {total} weekly {total === 1 ? 'milonga runs' : 'milongas run'} in {city} on the event days. Times and
-        venues come from Hoy Milonga; check before travelling.
+        venues come from the linked source pages; check before travelling.
       </p>
       {groups.map((group) => (
         <div class="app-ev-milonga-day">

@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Mare+Tango+Marathon/11006
+eventWebsite: https://www.facebook.com/events/2002265847069000/
 locale: en
 summary: "Mare Tango Marathon (April 15-18, 2027) in Germany, Kressbronn am Bodensee. Source: Tangocat."
 eventName: "Mare Tango Marathon"

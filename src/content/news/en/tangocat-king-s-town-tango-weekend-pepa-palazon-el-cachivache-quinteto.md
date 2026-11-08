@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/King's+Town+TANGO+WEEKEND+-+PEPA+PALAZ%C3%93N+%26+EL+CACHIVACHE+QUINTETO/10303
+eventWebsite: https://tinyurl.com/ms2afn5w
 locale: en
 summary: "King’s Town TANGO WEEKEND - PEPA PALAZÓN & EL CACHIVACHE QUINTETO (October 2-4 2026) in Serbia, Kraljevo. Source: Tangocat."
 eventName: "King’s Town TANGO WEEKEND - PEPA PALAZÓN & EL CACHIVACHE QUINTETO"

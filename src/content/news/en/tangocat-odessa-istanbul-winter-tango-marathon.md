@@ -4,6 +4,7 @@ date: 2026-09-10
 category: turkiye
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Odessa+%26+Istanbul+Winter+Tango+Marathon/10620
+eventWebsite: https://www.odessaistanbultango.com/
 locale: en
 summary: "Odessa & Istanbul Winter Tango Marathon (February 10-15, 2027) in Türkiye, Istanbul. Source: Tangocat."
 eventName: "Odessa & Istanbul Winter Tango Marathon"

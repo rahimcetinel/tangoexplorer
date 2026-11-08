@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Week+Mallorca+2027/10855
+eventWebsite: https://www.tangobuehne.com/tangoreisen/mallorca/
 locale: en
 summary: "Tango Week Mallorca 2027 (July 31 - August 7, 2027) in Spain, Sencelles. Source: Tangocat."
 eventName: "Tango Week Mallorca 2027"

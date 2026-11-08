@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Berlin+Encuentro+Milonguero/10856
+eventWebsite: http://www.berlinencuentromilonguero.com
 locale: en
 summary: "Berlin Encuentro Milonguero (November 12-15 2026) in Germany, Berlin. Source: Tangocat."
 eventName: "Berlin Encuentro Milonguero"

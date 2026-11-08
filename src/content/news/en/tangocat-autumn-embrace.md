@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Autumn+Embrace/10076
+eventWebsite: https://www.facebook.com/groups/1973220142898481
 locale: en
 summary: "Autumn Embrace (September 25-27 2026) in Belgium, Antwerp. Source: Tangocat."
 eventName: "Autumn Embrace"

@@ -4,6 +4,7 @@ date: 2026-11-05
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/TUTU+Tango+Weekend/11275
+eventWebsite: https://www.facebook.com/profile.php?id=61564607917174
 locale: en
 summary: "TUTU Tango Weekend (January 8-10, 2027) in Hong Kong, Hong Kong. Source: Tangocat."
 eventName: "TUTU Tango Weekend"

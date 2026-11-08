@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Natalia+%26+Agustin+3-Day+Intensive%3A+%22From+Emotion+to+Motion%22/10903
+eventWebsite: https://ronda-elmijra.dance/nya-2026/
 locale: en
 summary: "Natalia & Agustin 3-Day Intensive: \"From Emotion to Motion\" (September 30 - October 2 2026) in Germany, Goch. Source: Tangocat."
 eventName: "Natalia & Agustin 3-Day Intensive: \"From Emotion to Motion\""

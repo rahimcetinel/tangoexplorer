@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Xmas+in+Embrace/10261
+eventWebsite: https://www.facebook.com/groups/761303068713370/
 locale: en
 summary: "Xmas in Embrace (December 26-28 2026) in Belgium, Nivelles. Source: Tangocat."
 eventName: "Xmas in Embrace"

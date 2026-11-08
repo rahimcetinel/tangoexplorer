@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Osito+Milonguero+Encuentro+Milonguero/10874
+eventWebsite: https://www.facebook.com/groups/472492073818558/
 locale: en
 summary: "Osito Milonguero Encuentro Milonguero (May 14-16, 2027) in Germany, Berlin. Source: Tangocat."
 eventName: "Osito Milonguero Encuentro Milonguero"

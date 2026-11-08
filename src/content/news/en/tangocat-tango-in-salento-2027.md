@@ -4,6 +4,7 @@ date: 2026-10-21
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+in+Salento+2027/11189
+eventWebsite: https://www.tangoallegria.it/en/tango-in-salento--tango-in-september
 locale: en
 summary: "Tango in Salento 2027 (August 30 - September 5, 2027) in Italy, Castro Marina. Source: Tangocat."
 eventName: "Tango in Salento 2027"

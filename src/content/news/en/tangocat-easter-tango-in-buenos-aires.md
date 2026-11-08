@@ -4,6 +4,7 @@ date: 2026-10-21
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Easter+Tango+in+Buenos+Aires/11193
+eventWebsite: https://www.tangoallegria.it/en/easter-tango-in-buenos-aires
 locale: en
 summary: "Easter Tango in Buenos Aires (March 21-31, 2027) in Argentina, Buenos Aires. Source: Tangocat."
 eventName: "Easter Tango in Buenos Aires"

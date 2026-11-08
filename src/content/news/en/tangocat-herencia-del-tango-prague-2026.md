@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Herencia+del+Tango+-+Prague+2026/10383
+eventWebsite: https://facebook.com/events/s/herencia-del-tango-prague-2026/961785273040690/
 locale: en
 summary: "Herencia del Tango - Prague 2026 (October 23-26 2026) in Czechia, Prague. Source: Tangocat."
 eventName: "Herencia del Tango - Prague 2026"

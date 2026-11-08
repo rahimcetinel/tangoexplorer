@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Summer+tango+camp/11144
+eventWebsite: https://summertangocamp.com/
 locale: en
 summary: "Summer tango camp (July 6-24, 2027) in Montenegro, Kolasin. Source: Tangocat."
 eventName: "Summer tango camp"

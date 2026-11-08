@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Subterra+Live+El+Cachivache/10951
+eventWebsite: https://facebook.com/events/s/subterra-live-el-cachivache-kr/1378500051121410/
 locale: en
 summary: "Subterra Live El Cachivache (October 10-11 2026) in Poland, Kraków. Source: Tangocat."
 eventName: "Subterra Live El Cachivache"

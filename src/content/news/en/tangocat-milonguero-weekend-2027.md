@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Milonguero+Weekend+2027/10376
+eventWebsite: https://leonardoycarinatangorojo.com/milonguero-weekend/
 locale: en
 summary: "Milonguero Weekend 2027 (February 12-14, 2027) in Germany, Aschaffenburg. Source: Tangocat."
 eventName: "Milonguero Weekend 2027"

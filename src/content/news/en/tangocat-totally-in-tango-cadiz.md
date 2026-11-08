@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Totally+in+Tango+Cadiz/10615
+eventWebsite: https://www.totallyintango.com/cadiz
 locale: en
 summary: "Totally in Tango Cadiz (October 6-12 2026) in Spain, Cádiz. Source: Tangocat."
 eventName: "Totally in Tango Cadiz"

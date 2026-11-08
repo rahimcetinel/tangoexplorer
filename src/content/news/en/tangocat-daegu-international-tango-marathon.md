@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Daegu+International+Tango+Marathon/10616
+eventWebsite: https://www.facebook.com/groups/189637475426197/
 locale: en
 summary: "Daegu International Tango Marathon (April 28 - May 2, 2027) in South Korea, Daegu. Source: Tangocat."
 eventName: "Daegu International Tango Marathon"

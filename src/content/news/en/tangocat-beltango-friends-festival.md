@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Beltango+%26+Friends+Festival/10843
+eventWebsite: http://www.beltango.com/festival/2026
 locale: en
 summary: "Beltango & Friends Festival (September 16-20 2026) in Serbia, Belgrade. Source: Tangocat."
 eventName: "Beltango & Friends Festival"

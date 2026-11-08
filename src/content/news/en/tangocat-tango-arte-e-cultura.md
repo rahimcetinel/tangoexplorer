@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Arte+e+Cultura/10649
+eventWebsite: https://facebook.com/events/s/tango-arte-e-cultura/1717666536095848/
 locale: en
 summary: "Tango Arte e Cultura (November 20-22 2026) in Italy, Naples. Source: Tangocat."
 eventName: "Tango Arte e Cultura"

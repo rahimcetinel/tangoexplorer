@@ -19,6 +19,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 from pathlib import Path
+from urllib.parse import urlsplit, urljoin
 
 ROOT = Path(__file__).resolve().parents[1]
 NEWS_DIR = ROOT / "src" / "content" / "news" / "en"
@@ -31,7 +32,20 @@ USER_AGENT = (
 DEAD = {404, 410, 451}
 BLOCKED = {401, 403, 405, 429}
 
+# Tangocat answers 302 -> /en/festivals for events it no longer lists. That is
+# not a broken URL, but the listing is gone, so the page must say so instead of
+# pretending the source still exists.
+GONE_MARKERS = ("/en/festivals",)
+
 FIELDS = ("eventWebsite", "sourceUrl", "eventInstagram", "eventFacebook")
+
+
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):  # noqa: ANN001
+        return None
+
+
+OPENER = urllib.request.build_opener(_NoRedirect)
 
 
 def frontmatter(path: Path) -> dict[str, str]:
@@ -47,17 +61,20 @@ def frontmatter(path: Path) -> dict[str, str]:
     return fields
 
 
-def request(url: str, method: str, timeout: float) -> dict:
+def request(url: str, method: str, timeout: float, hops: int = 0) -> dict:
     req = urllib.request.Request(
         url,
         method=method,
         headers={"User-Agent": USER_AGENT, "Accept": "text/html,application/xhtml+xml,*/*;q=0.8"},
     )
     context = ssl.create_default_context()
+    opener = urllib.request.build_opener(_NoRedirect, urllib.request.HTTPSHandler(context=context))
     try:
-        with urllib.request.urlopen(req, timeout=timeout, context=context) as response:
+        with opener.open(req, timeout=timeout) as response:
             return {"url": url, "status": response.status, "state": "ok"}
     except urllib.error.HTTPError as error:
+        if 300 <= error.code < 400:
+            return _redirect_result(url, error, method, timeout, hops)
         if error.code in BLOCKED:
             return {"url": url, "status": error.code, "state": "blocked"}
         if error.code in DEAD:
@@ -67,6 +84,26 @@ def request(url: str, method: str, timeout: float) -> dict:
         return {"url": url, "status": 0, "state": "unreachable", "reason": str(error.reason)}
     except Exception as error:  # noqa: BLE001 - network stack raises many types
         return {"url": url, "status": 0, "state": "error", "reason": str(error)}
+
+
+def _redirect_result(url: str, error: urllib.error.HTTPError, method: str, timeout: float, hops: int) -> dict:
+    location = error.headers.get("Location") or ""
+    parts = urlsplit(location)
+    # "Xhttps://…" and friends: the scheme is not a web scheme, so no browser
+    # can follow it. Treat it as dead rather than a transient error.
+    if parts.scheme and parts.scheme.lower() not in {"http", "https"}:
+        return {"url": url, "status": error.code, "state": "dead", "reason": f"bad redirect: {location[:120]}"}
+    target = urljoin(url, location)
+    if any(marker in urlsplit(target).path for marker in GONE_MARKERS):
+        return {"url": url, "status": error.code, "state": "gone", "target": target}
+    if hops >= 3:
+        return {"url": url, "status": error.code, "state": "error", "reason": "redirect loop"}
+    result = request(target, method, timeout, hops + 1)
+    # Keep the checked URL as the key; the landing page is reported alongside so
+    # main() can still map the result back to the content file.
+    result["url"] = url
+    result.setdefault("target", target)
+    return result
 
 
 def check(url: str, timeout: float) -> dict:

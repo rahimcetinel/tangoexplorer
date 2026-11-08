@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Milonga+%C5%82%C3%B3dzka+%22Ziemia+obiecana%22/10197
+eventWebsite: https://www.facebook.com/groups/268638895993470/
 locale: en
 summary: "Milonga łódzka \"Ziemia obiecana\" (November 27-29 2026) in Poland, Łódź. Source: Tangocat."
 eventName: "Milonga łódzka \"Ziemia obiecana\""

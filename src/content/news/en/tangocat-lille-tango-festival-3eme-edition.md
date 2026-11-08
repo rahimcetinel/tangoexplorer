@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Lille+Tango+Festival+3eme+Edition/10673
+eventWebsite: https://facebook.com/events/s/-lille-tango-festival-3eme-edi/2089045054984805/
 locale: en
 summary: "Lille Tango Festival 3eme Edition (September 18-20 2026) in France, Lille. Source: Tangocat."
 eventName: "Lille Tango Festival 3eme Edition"

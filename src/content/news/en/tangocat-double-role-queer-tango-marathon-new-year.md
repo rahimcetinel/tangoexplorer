@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Double+Role+Queer+Tango+Marathon+New+Year/10864
+eventWebsite: https://facebook.com/events/s/double-rolequeer-tango-maratho/1668860111024043/
 locale: en
 summary: "Double Role Queer Tango Marathon New Year (December 31 - January 3 , 2027) in Greece, Athens. Source: Tangocat."
 eventName: "Double Role Queer Tango Marathon New Year"

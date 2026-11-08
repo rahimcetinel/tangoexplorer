@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango-Marathon+goes+Engadin+2026/10535
+eventWebsite: https://facebook.com/events/s/tango-marathon-goes-engadin-20/978969251195297/
 locale: en
 summary: "Tango-Marathon goes Engadin 2026 (September 18-20 2026) in Switzerland, Scuol. Source: Tangocat."
 eventName: "Tango-Marathon goes Engadin 2026"

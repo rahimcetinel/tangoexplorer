@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Unicornio+Tango+Weekend/10737
+eventWebsite: https://facebook.com/events/s/unicornio-tango-weekend/2858745324495593/
 locale: en
 summary: "Unicornio Tango Weekend (October 23-25 2026) in Latvia, Riga. Source: Tangocat."
 eventName: "Unicornio Tango Weekend"

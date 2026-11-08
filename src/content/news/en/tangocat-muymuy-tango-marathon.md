@@ -4,6 +4,7 @@ date: 2026-10-26
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/MuyMuy+Tango+Marathon/11215
+eventWebsite: https://facebook.com/events/s/muymuy-tango-marathon-1-4-avri/905748435802171/
 locale: en
 summary: "MuyMuy Tango Marathon (April 1-4, 2027) in France, Paris. Source: Tangocat."
 eventName: "MuyMuy Tango Marathon"

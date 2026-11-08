@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/XII+Sol+de+Invierno+Internacional+Tango+Meeting/10836
+eventWebsite: https://facebook.com/events/s/xii-sol-de-invierno-internacio/1190278679940130/
 locale: en
 summary: "XII Sol de Invierno Internacional Tango Meeting (December 30 - January 3 , 2027) in Spain, Salobreña. Source: Tangocat."
 eventName: "XII Sol de Invierno Internacional Tango Meeting"

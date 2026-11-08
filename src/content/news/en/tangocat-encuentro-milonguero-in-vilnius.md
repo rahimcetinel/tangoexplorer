@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Encuentro+Milonguero+in+Vilnius/11067
+eventWebsite: http://www.metai.eu
 locale: en
 summary: "Encuentro Milonguero in Vilnius (April 29 - May 2, 2027) in Lithuania, Vilnius. Source: Tangocat."
 eventName: "Encuentro Milonguero in Vilnius"

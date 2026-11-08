@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Neo+Tango+Bruges+(NTB)+2027/10886
+eventWebsite: https://www.facebook.com/events/936376119128263/
 locale: en
 summary: "Neo Tango Bruges (NTB) 2027 (February 4-8, 2027) in Belgium, Bruges. Source: Tangocat."
 eventName: "Neo Tango Bruges (NTB) 2027"

@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Festival+Tango+Mango+Vienna/10945
+eventWebsite: https://festival.tangomango.at/
 locale: en
 summary: "Festival Tango Mango Vienna (April 22-25, 2027) in Austria, Vienna. Source: Tangocat."
 eventName: "Festival Tango Mango Vienna"

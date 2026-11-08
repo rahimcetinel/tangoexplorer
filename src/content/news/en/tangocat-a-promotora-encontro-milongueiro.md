@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/A+Promotora-+Encontro+Milongueiro/10404
+eventWebsite: https://www.facebook.com/groups/184646101691916/
 locale: en
 summary: "A Promotora- Encontro Milongueiro (February 5-9, 2027) in Portugal, Lisbon. Source: Tangocat."
 eventName: "A Promotora- Encontro Milongueiro"

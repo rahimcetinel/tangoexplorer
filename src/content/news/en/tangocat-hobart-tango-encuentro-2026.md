@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Hobart+Tango+Encuentro+2026/10625
+eventWebsite: https://www.trybooking.com/events/landing/1574872
 locale: en
 summary: "Hobart Tango Encuentro 2026 (October 30 - November 1 2026) in Australia, Hobart. Source: Tangocat."
 eventName: "Hobart Tango Encuentro 2026"

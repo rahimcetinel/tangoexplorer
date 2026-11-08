@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Catania+Tango+Context+-+Los+Campeones/11108
+eventWebsite: https://www.caminitotango.com/stage-ed-eventi/catania-tango-context-los-campeones-maggio-2027.html
 locale: en
 summary: "Catania Tango Context - Los Campeones (May 19-23, 2027) in Italy, Catania. Source: Tangocat."
 eventName: "Catania Tango Context - Los Campeones"

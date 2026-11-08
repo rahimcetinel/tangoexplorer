@@ -4,6 +4,7 @@ date: 2026-10-13
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/INSPIRACJA+Wroc%C5%82aw+Tango+Marathon+2027%2C+6th+edition/11120
+eventWebsite: https://facebook.com/events/s/inspiracja-wroc%C5%82aw-tango-marat/1745144477193875/
 locale: en
 summary: "INSPIRACJA Wrocław Tango Marathon 2027, 6th edition (September 17-19, 2027) in Poland, Wrocław. Source: Tangocat."
 eventName: "INSPIRACJA Wrocław Tango Marathon 2027, 6th edition"

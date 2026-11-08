@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/3rd+Tango+Invierno+Encuentro/10954
+eventWebsite: https://tangoinvierno.com/
 locale: en
 summary: "3rd Tango Invierno Encuentro (February 4-7, 2027) in Greece, Kavala. Source: Tangocat."
 eventName: "3rd Tango Invierno Encuentro"

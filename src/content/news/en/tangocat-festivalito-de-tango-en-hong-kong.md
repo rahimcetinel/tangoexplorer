@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Festivalito+de+Tango+en+Hong+Kong/11150
+eventWebsite: https://www.facebook.com/groups/360784544312953/
 locale: en
 summary: "Festivalito de Tango en Hong Kong (March 11-15, 2027) in Hong Kong, Hong Kong. Source: Tangocat."
 eventName: "Festivalito de Tango en Hong Kong"

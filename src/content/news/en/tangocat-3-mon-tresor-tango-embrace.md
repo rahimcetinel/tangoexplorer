@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/3*+Mon+Tresor+-+Tango+Embrace/11232
+eventWebsite: https://stayhappening.com/e/3-mon-tresor-tango-embrace-E2ISYP21QD2?utm_source=chatgpt.com
 locale: en
 summary: "3* Mon Tresor - Tango Embrace (March 13-14, 2027) in Italy, Reggio Emilia. Source: Tangocat."
 eventName: "3* Mon Tresor - Tango Embrace"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Bali+Tango+Holidays/10547
+eventWebsite: https://www.facebook.com/share/18kCt5KipC/?mibextid=wwXIfr
 locale: en
 summary: "Bali Tango Holidays (December 12-19 2026) in Indonesia, Ubud. Source: Tangocat."
 eventName: "Bali Tango Holidays"

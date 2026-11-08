@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Neotango+Marathon+M%C3%BCnchen/10591
+eventWebsite: http://www.neotangomarathonmunich.com
 locale: en
 summary: "Neotango Marathon Munich (November 13-16 2026) in Germany, Munich. Source: Tangocat."
 eventName: "Neotango Marathon Munich"

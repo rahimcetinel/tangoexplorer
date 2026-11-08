@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Krakow+Vinyl+Tango+Marathon+De+Oro+2026/10624
+eventWebsite: https://www.facebook.com/events/1633162574655186/
 locale: en
 summary: "Krakow Vinyl Tango Marathon De Oro 2026 (November 6-8 2026) in Poland, Kraków. Source: Tangocat."
 eventName: "Krakow Vinyl Tango Marathon De Oro 2026"

@@ -59,10 +59,35 @@ function nextOccurrence(days: string[], now: Date): Date | null {
   return null;
 }
 
+function parseIsoDate(value?: string): Date | null {
+  if (!value) return null;
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+  if (!match) return null;
+  return new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+}
+
+function cadence(item: Milonga): string {
+  if (item.schedule === 'monthly') return 'Monthly';
+  if (item.schedule === 'biweekly') return 'Every other week';
+  return 'Weekly';
+}
+
+function recurringRule(item: Milonga, start: Date): string {
+  const byday = item.days.map((day) => BYDAY[day]).filter(Boolean).join(',');
+  if (item.schedule === 'monthly') {
+    const nth = Math.ceil(start.getDate() / 7);
+    return `FREQ=MONTHLY;BYDAY=${nth}${byday}`;
+  }
+  if (item.schedule === 'biweekly') {
+    return `FREQ=WEEKLY;INTERVAL=2;BYDAY=${byday}`;
+  }
+  return `FREQ=WEEKLY;BYDAY=${byday}`;
+}
+
 // Floating local times: milongas are listed in venue-local time and we do not
 // carry a timezone per city, so the calendar treats them as device-local.
 export function milongaIcsHref(item: Milonga, now: Date = new Date()): string {
-  const start = nextOccurrence(item.days, now);
+  const start = parseIsoDate(item.next) ?? nextOccurrence(item.days, now);
   if (!start) {
     return '';
   }
@@ -89,8 +114,8 @@ export function milongaIcsHref(item: Milonga, now: Date = new Date()): string {
     `DTEND:${stamp(ends)}`,
     `SUMMARY:${escape(item.name)}`,
     `LOCATION:${escape(place)}`,
-    `DESCRIPTION:${escape(`Weekly ${item.type} in ${item.city}. Listed on TangoExplorer.`)}`,
-    `RRULE:FREQ=WEEKLY;BYDAY=${item.days.map((day) => BYDAY[day]).filter(Boolean).join(',')}`,
+    `DESCRIPTION:${escape(`${cadence(item)} ${item.type} in ${item.city}. Listed on TangoExplorer.`)}`,
+    `RRULE:${recurringRule(item, start)}`,
     item.detailUrl ? `URL:${item.detailUrl}` : '',
     'END:VEVENT',
     'END:VCALENDAR',

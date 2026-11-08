@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Amati+La+Vox+Viva/10721
+eventWebsite: https://www.serendipityart.it/wp/amatilavozviva/
 locale: en
 summary: "Amati La Vox Viva (September 26 2026) in Italy, Castel San Pietro Terme. Source: Tangocat."
 eventName: "Amati La Vox Viva"

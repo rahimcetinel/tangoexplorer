@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Festival+de+Tango+Argentin+Buenos+Aires+en+Perche/10857
+eventWebsite: https://www.buenosairesenperche.com/project/edition7-2026/
 locale: en
 summary: "Festival de Tango Argentin Buenos Aires en Perche (September 19-20 2026) in France, Rémalard-en-Perche. Source: Tangocat."
 eventName: "Festival de Tango Argentin Buenos Aires en Perche"

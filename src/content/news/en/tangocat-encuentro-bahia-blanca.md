@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Encuentro+Bah%C3%ADa+Blanca/10109
+eventWebsite: https://www.facebook.com/groups/361948803351486/
 locale: en
 summary: "Encuentro Bahía Blanca (November 13-15 2026) in Spain, Santander. Source: Tangocat."
 eventName: "Encuentro Bahía Blanca"

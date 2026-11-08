@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Flor+de+Tango+Golden+Vinyl+Edition/10931
+eventWebsite: http://www.flor-de-tango.ch
 locale: en
 summary: "Flor de Tango Golden Vinyl Edition (April 10-11, 2027) in Switzerland, Zürich. Source: Tangocat."
 eventName: "Flor de Tango Golden Vinyl Edition"

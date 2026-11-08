@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Banjaluka+Tango+Festival+2026+%C2%B7+The+Meeting+Point/10779
+eventWebsite: https://www.banjalukatangofestival.com/en
 locale: en
 summary: "Banjaluka Tango Festival 2026 · The Meeting Point (October 29 - November 1 2026) in Bosnia and Herzegovina, Banja Luka. Source: Tangocat."
 eventName: "Banjaluka Tango Festival 2026 · The Meeting Point"

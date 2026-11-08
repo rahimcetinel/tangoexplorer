@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/VIVA+LA+PEPA+tango+%22weekend%22+en+Praga!/10078
+eventWebsite: https://www.facebook.com/events/2076449216426580/
 locale: en
 summary: "VIVA LA PEPA tango \"weekend\" en Praga! (November 6-8 2026) in Czechia, Prague. Source: Tangocat."
 eventName: "VIVA LA PEPA tango \"weekend\" en Praga!"

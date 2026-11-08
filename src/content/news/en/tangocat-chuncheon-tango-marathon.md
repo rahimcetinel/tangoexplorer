@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/ChunCheon+Tango+Marathon/9889
+eventWebsite: https://www.facebook.com/groups/413601948060266
 locale: en
 summary: "ChunCheon Tango Marathon (October 2-5 2026) in South Korea, Chuncheon-si. Source: Tangocat."
 eventName: "ChunCheon Tango Marathon"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Al+comp%C3%A1s+de+un+tango/10430
+eventWebsite: https://www.alcompas-deuntango.com/
 locale: en
 summary: "Al compás de un tango (October 3-4 2026) in Czechia, Prague. Source: Tangocat."
 eventName: "Al compás de un tango"

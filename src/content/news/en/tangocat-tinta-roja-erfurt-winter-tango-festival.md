@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tinta+Roja+%E2%80%93+Erfurt+Winter+Tango+Festival/11000
+eventWebsite: http://tinta-roja.com
 locale: en
 summary: "Tinta Roja – Erfurt Winter Tango Festival (December 4-6 2026) in Germany, Erfurt. Source: Tangocat."
 eventName: "Tinta Roja – Erfurt Winter Tango Festival"

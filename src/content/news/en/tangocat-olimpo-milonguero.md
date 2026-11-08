@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Olimpo+Milonguero/10411
+eventWebsite: https://www.olimpotango.com/
 locale: en
 summary: "Olimpo Milonguero (March 11-14, 2027) in Spain, Isla. Source: Tangocat."
 eventName: "Olimpo Milonguero"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Neo+Tango+Mei%C3%9Fen+(NTM)+2026/10884
+eventWebsite: https://www.facebook.com/events/1218844676898241/
 locale: en
 summary: "Neo Tango Meißen (NTM) 2026 (December 4-7 2026) in Germany, Nossen. Source: Tangocat."
 eventName: "Neo Tango Meißen (NTM) 2026"

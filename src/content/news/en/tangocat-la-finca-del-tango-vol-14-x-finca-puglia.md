@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Finca+del+Tango+Vol.14+x+Finca+Puglia/10083
+eventWebsite: https://linktr.ee/lafincadeltango
 locale: en
 summary: "La Finca del Tango Vol.14 x Finca Puglia (October 2-7 2026) in Italy, Lecce. Source: Tangocat."
 eventName: "La Finca del Tango Vol.14 x Finca Puglia"

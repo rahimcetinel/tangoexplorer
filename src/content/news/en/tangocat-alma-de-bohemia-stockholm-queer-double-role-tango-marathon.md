@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Alma+de+Bohemia+%E2%80%94+Stockholm+Queer+%26+Double+Role+Tango+Marathon/11239
+eventWebsite: https://www.almadebohemia.se/
 locale: en
 summary: "Alma de Bohemia — Stockholm Queer & Double Role Tango Marathon (June 11-13, 2027) in Sweden, Stockholm. Source: Tangocat."
 eventName: "Alma de Bohemia — Stockholm Queer & Double Role Tango Marathon"

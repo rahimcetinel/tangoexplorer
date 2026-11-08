@@ -21,17 +21,28 @@ DATA_DIR = ROOT / "src" / "data"
 DATA_PATH = DATA_DIR / "hoy-milongas.json"
 USER_AGENT = "TangoNews/0.1 (+https://tangoexplorer.com)"
 
-# (slug, label_en, label_tr)
+# (hoy slug, country id, label_en, label_tr)
+# Hoy's regions are editorial: some are countries, some states, some cities.
+# The site filters by country, so each fetch keeps its own slug for the URL but
+# lands in a single country bucket.
 REGIONS = [
-    ("turkiye", "Türkiye", "Türkiye"),
-    ("buenos-aires", "Buenos Aires", "Buenos Aires"),
-    ("berlin", "Berlin", "Berlin"),
-    ("nordrhein-westfalen", "Germany: NRW", "Almanya: NRW"),
-    ("athens", "Athens", "Atina"),
-    ("sao-paulo", "São Paulo", "São Paulo"),
-    ("england", "England", "İngiltere"),
-    ("miami", "Miami", "Miami"),
+    ("turkiye", "turkiye", "Türkiye", "Türkiye"),
+    ("buenos-aires", "argentina", "Argentina", "Arjantin"),
+    ("berlin", "germany", "Germany", "Almanya"),
+    ("nordrhein-westfalen", "germany", "Germany", "Almanya"),
+    ("athens", "greece", "Greece", "Yunanistan"),
+    ("sao-paulo", "brazil", "Brazil", "Brezilya"),
+    ("england", "united-kingdom", "United Kingdom", "Birleşik Krallık"),
+    ("miami", "united-states", "United States", "ABD"),
 ]
+
+# Hoy region that is really one metro area: every listing belongs to that city,
+# the source's own locality is kept as `locality` (shown in the detail panel).
+METRO = {
+    "buenos-aires": "Buenos Aires",
+    "athens": "Athens",
+    "miami": "Miami",
+}
 
 # Listings that closed but are still published on Hoy Milonga. Matched on the
 # normalised (name, venue) pair so a changed source id does not resurrect them.
@@ -138,7 +149,7 @@ def dedupe_rows(rows: list[dict]) -> list[dict]:
     return list(merged.values())
 
 
-def normalize(event: dict, region: str) -> dict | None:
+def normalize(event: dict, region: str, country: str, metro: str = "") -> dict | None:
     if event.get("eventCancelledFlag") or event.get("inactiveFlag") or event.get("hasEnded"):
         return None
     if event.get("waitingForPublishingFlag") or event.get("deletedFrmThreadFlag"):
@@ -160,11 +171,18 @@ def normalize(event: dict, region: str) -> dict | None:
     detail = clean(event.get("detailURL"))
     if detail.startswith("/"):
         detail = "https://www.hoy-milonga.com" + detail
+    city = clean(event.get("city"))
+    locality = city if metro and city and city.lower() != metro.lower() else ""
+    # The city itself sometimes arrives as a synonym (CABA, Athina…); only keep
+    # a locality when it really names a different part of the metro.
+    if locality and locality.lower() in {"caba", "capital federal", "athina", "athens", "miami", "buenos aires"}:
+        locality = ""
     return {
         "id": f"{region}-{event.get('id')}",
-        "region": region,
+        "region": country,
         "name": name,
-        "city": clean(event.get("city")),
+        "city": metro or city,
+        "locality": locality,
         "country": clean(event.get("country")),
         "type": etype,
         "days": days,
@@ -197,9 +215,9 @@ def main() -> int:
     regions = [r for r in REGIONS if not args.region or r[0] in args.region]
     items: list[dict] = []
     errors: list[str] = []
-    region_meta: list[dict] = []
+    country_meta: dict[str, dict] = {}
 
-    for slug, label_en, label_tr in regions:
+    for slug, country, label_en, label_tr in regions:
         try:
             html = fetch(f"https://www.hoy-milonga.com/{slug}/en/milongas")
             match = re.search(r"appProps\.events = (\[.*?\]);", html, re.S)
@@ -207,7 +225,7 @@ def main() -> int:
         except (urllib.error.URLError, ValueError, json.JSONDecodeError) as exc:  # noqa: BLE001
             errors.append(f"{slug}: {exc}")
             continue
-        normalized = [row for row in (normalize(e, slug) for e in events) if row]
+        normalized = [row for row in (normalize(e, slug, country, METRO.get(slug, "")) for e in events) if row]
         normalized = dedupe_rows(normalized)
         kept = [
             row
@@ -218,19 +236,16 @@ def main() -> int:
         skipped = len(normalized) - len(kept)
         normalized = kept
         items.extend(normalized)
-        region_meta.append(
-            {
-                "id": slug,
-                "labelEn": label_en,
-                "labelTr": label_tr,
-                "count": len(normalized),
-            }
+        meta = country_meta.setdefault(
+            country,
+            {"id": country, "labelEn": label_en, "labelTr": label_tr, "count": 0},
         )
-        print(f"{slug}: {len(events)} fetched, {len(normalized)} kept" + (f", {skipped} ignored" if skipped else ""))
+        meta["count"] += len(normalized)
+        print(f"{slug} -> {country}: {len(events)} fetched, {len(normalized)} kept" + (f", {skipped} ignored" if skipped else ""))
 
     payload = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
-        "regions": region_meta,
+        "regions": list(country_meta.values()),
         "items": items,
         "errors": errors,
     }

@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/9th+Tango+Escape+to+Lake+Plastiras/10969
+eventWebsite: https://fb.me/e/cRzvBTBe9
 locale: en
 summary: "9th Tango Escape to Lake Plastiras (December 4-6 2026) in Greece, Neochori. Source: Tangocat."
 eventName: "9th Tango Escape to Lake Plastiras"

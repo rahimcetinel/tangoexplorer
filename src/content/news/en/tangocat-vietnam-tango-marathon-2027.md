@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Vietnam+Tango+Marathon+2027/10566
+eventWebsite: https://www.facebook.com/groups/205452512918008/
 locale: en
 summary: "Vietnam Tango Marathon 2027 (April 1-5, 2027) in Vietnam, Da Nang. Source: Tangocat."
 eventName: "Vietnam Tango Marathon 2027"

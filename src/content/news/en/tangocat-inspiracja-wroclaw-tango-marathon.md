@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Inspiracja+Wroc%C5%82aw+Tango+Marathon/9874
+eventWebsite: https://www.facebook.com/profile.php?id=100080981756895
 locale: en
 summary: "Inspiracja Wrocław Tango Marathon (September 18-20 2026) in Poland, Wrocław. Source: Tangocat."
 eventName: "Inspiracja Wrocław Tango Marathon"

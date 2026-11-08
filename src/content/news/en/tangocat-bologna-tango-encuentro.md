@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Bologna+Tango+Encuentro/10722
+eventWebsite: https://www.serendipityart.it/wp/bte2027/
 locale: en
 summary: "Bologna Tango Encuentro (December 30 - January 2 , 2027) in Italy, Bologna. Source: Tangocat."
 eventName: "Bologna Tango Encuentro"

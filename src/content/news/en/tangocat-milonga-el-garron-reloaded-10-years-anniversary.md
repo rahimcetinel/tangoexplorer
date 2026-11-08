@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Milonga+El+Garron+reloaded%3A+10+years+anniversary/10788
+eventWebsite: https://facebook.com/events/s/milonga-el-garron-reloaded-10-/26290670983959475/
 locale: en
 summary: "Milonga El Garron reloaded: 10 years anniversary (November 20-22 2026) in France, Paris. Source: Tangocat."
 eventName: "Milonga El Garron reloaded: 10 years anniversary"

@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Encuentro+milonguero+Varsovia+%C2%ABAl+Compas+del+Corazon%C2%BB/11064
+eventWebsite: https://www.facebook.com/groups/324030241054480/
 locale: en
 summary: "Encuentro milonguero Varsovia «Al Compas del Corazon» (April 2-4, 2027) in Poland, Warsaw. Source: Tangocat."
 eventName: "Encuentro milonguero Varsovia «Al Compas del Corazon»"

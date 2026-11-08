@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/7th+Tangozauber+Festival+Bayreuth/10672
+eventWebsite: https://tangozauber.de/
 locale: en
 summary: "7th Tangozauber Festival Bayreuth (September 18-20 2026) in Germany, Bayreuth. Source: Tangocat."
 eventName: "7th Tangozauber Festival Bayreuth"

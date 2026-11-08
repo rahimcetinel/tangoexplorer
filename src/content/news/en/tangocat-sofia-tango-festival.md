@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sofia+Tango+Festival/10602
+eventWebsite: https://sofiatangofestival.com/
 locale: en
 summary: "Sofia Tango Festival (September 17-20 2026) in Bulgaria, Sofia. Source: Tangocat."
 eventName: "Sofia Tango Festival"

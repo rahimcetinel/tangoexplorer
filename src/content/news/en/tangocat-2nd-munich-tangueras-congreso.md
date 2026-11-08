@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/2nd+Munich+Tangueras+Congreso/10941
+eventWebsite: https://www.tangogenial.de/events/
 locale: en
 summary: "2nd Munich Tangueras Congreso (October 17-18 2026) in Germany, Munich. Source: Tangocat."
 eventName: "2nd Munich Tangueras Congreso"

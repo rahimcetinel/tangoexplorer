@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Fuente+del+Amor+%E2%80%94+Encuentro+Milonguero/11163
+eventWebsite: https://facebook.com/events/s/la-fuente-del-amor-4th-edition/773606942062386/
 locale: en
 summary: "La Fuente del Amor — Encuentro Milonguero (October 30 - November 1 2026) in Serbia, Vrnjačka Banja. Source: Tangocat."
 eventName: "La Fuente del Amor — Encuentro Milonguero"

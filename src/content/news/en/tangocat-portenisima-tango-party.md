@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Porte%C3%B1%C3%ADsima+Tango+Party/10016
+eventWebsite: https://www.facebook.com/profile.php?id=61579035603782
 locale: en
 summary: "Porteñísima Tango Party (October 2-4 2026) in Portugal, Porto. Source: Tangocat."
 eventName: "Porteñísima Tango Party"

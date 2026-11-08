@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/TangOsud+International+Argentine+Tango+festival/11034
+eventWebsite: https://www.tangosud-montpellier.com/
 locale: en
 summary: "TangOsud International Argentine Tango festival (April 30 - May 9, 2027) in France, Montpellier. Source: Tangocat."
 eventName: "TangOsud International Argentine Tango festival"

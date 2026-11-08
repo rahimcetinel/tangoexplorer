@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Sabauda/11022
+eventWebsite: https://www.facebook.com/groups/669366859873564/
 locale: en
 summary: "La Sabauda (April 23-25, 2027) in Italy, Sabaudia. Source: Tangocat."
 eventName: "La Sabauda"

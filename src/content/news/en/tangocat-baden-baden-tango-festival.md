@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Baden-Baden+Tango+Festival/10516
+eventWebsite: https://badenbadentangofestival.com/en/
 locale: en
 summary: "Baden-Baden Tango Festival (November 26-29 2026) in Germany, Baden-Baden. Source: Tangocat."
 eventName: "Baden-Baden Tango Festival"

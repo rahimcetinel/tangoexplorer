@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Miami+Tango+Role+Switch+%E2%80%94+Championship+%26+Festival+2026/11091
+eventWebsite: https://miamitangoroleswitch.com/
 locale: en
 summary: "Miami Tango Role Switch — Championship & Festival 2026 (November 6-8 2026) in United States, Miami. Source: Tangocat."
 eventName: "Miami Tango Role Switch — Championship & Festival 2026"

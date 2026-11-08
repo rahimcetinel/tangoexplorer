@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Queertangomarathon+Hamburg/9870
+eventWebsite: https://www.facebook.com/groups/2391709797727714/
 locale: en
 summary: "Queertangomarathon Hamburg (October 9-11 2026) in Germany, Hamburg. Source: Tangocat."
 eventName: "Queertangomarathon Hamburg"

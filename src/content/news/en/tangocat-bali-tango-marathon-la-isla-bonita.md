@@ -4,6 +4,7 @@ date: 2026-11-05
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Bali+Tango+Marathon+La+Isla+Bonita/11271
+eventWebsite: https://balitangomarathon.com/
 locale: en
 summary: "Bali Tango Marathon La Isla Bonita (April 23-25, 2027) in Indonesia, Bali. Source: Tangocat."
 eventName: "Bali Tango Marathon La Isla Bonita"

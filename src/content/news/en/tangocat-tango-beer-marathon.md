@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Beer+Marathon/10479
+eventWebsite: https://www.facebook.com/groups/220591183848772/
 locale: en
 summary: "Tango Beer Marathon (October 30 - November 1 2026) in Italy, Como. Source: Tangocat."
 eventName: "Tango Beer Marathon"

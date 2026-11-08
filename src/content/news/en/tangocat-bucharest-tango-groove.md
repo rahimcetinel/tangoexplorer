@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Bucharest+Tango+Groove/11003
+eventWebsite: https://www.facebook.com/profile.php?id=61566270642789
 locale: en
 summary: "Bucharest Tango Groove (April 9-11, 2027) in Romania, Bucharest. Source: Tangocat."
 eventName: "Bucharest Tango Groove"

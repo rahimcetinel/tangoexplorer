@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tangoholidays+Schlosstango+Hirschberger+Tal+mit+Analia+Vega+%26+Marcelo+Varela/10642
+eventWebsite: https://facebook.com/events/s/tangoholidays-schlosstango-hir/1029163819776993/
 locale: en
 summary: "Tangoholidays Schlosstango Hirschberger Tal mit Analia Vega & Marcelo Varela (May 5-9, 2027) in Poland, Piechowice. Source: Tangocat."
 eventName: "Tangoholidays Schlosstango Hirschberger Tal mit Analia Vega & Marcelo Varela"

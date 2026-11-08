@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/A+Los+Amigos+'Tango+Marathon+Terre+%26+Mer/10486
+eventWebsite: https://www.facebook.com/events/1252301876752063/
 locale: en
 summary: "A Los Amigos 'Tango Marathon Terre & Mer (November 6-8 2026) in France, Anglet. Source: Tangocat."
 eventName: "A Los Amigos 'Tango Marathon Terre & Mer"

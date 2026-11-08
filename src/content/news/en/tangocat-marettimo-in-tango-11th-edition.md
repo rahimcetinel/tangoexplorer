@@ -4,6 +4,7 @@ date: 2026-10-21
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Marettimo+in+Tango+%E2%80%93+11th+Edition/11183
+eventWebsite: https://tangotequieromas.it/
 locale: en
 summary: "Marettimo in Tango – 11th Edition (July 29 - August 1, 2027) in Italy, Marettimo. Source: Tangocat."
 eventName: "Marettimo in Tango – 11th Edition"

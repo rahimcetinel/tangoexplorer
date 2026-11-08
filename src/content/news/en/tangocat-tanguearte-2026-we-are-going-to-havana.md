@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tanguearte+2026+-+We+are+going+to+Havana/10791
+eventWebsite: https://facebook.com/events/s/tanguearte-2026-we-are-going-t/1451835129744715/
 locale: en
 summary: "Tanguearte 2026 - We are going to Havana (October 22-29 2026) in Cuba, Havana. Source: Tangocat."
 eventName: "Tanguearte 2026 - We are going to Havana"

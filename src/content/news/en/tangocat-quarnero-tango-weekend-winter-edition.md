@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Quarnero+Tango+Weekend+%E2%80%94+Winter+Edition/11166
+eventWebsite: https://tangorijeka.com/
 locale: en
 summary: "Quarnero Tango Weekend — Winter Edition (December 4-6 2026) in Croatia, Rijeka. Source: Tangocat."
 eventName: "Quarnero Tango Weekend — Winter Edition"

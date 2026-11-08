@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Saigon+Tango+Marathon/10061
+eventWebsite: https://www.facebook.com/profile.php?id=61584939929630
 locale: en
 summary: "Saigon Tango Marathon (October 1-5 2026) in Vietnam, Ho Chi Minh City. Source: Tangocat."
 eventName: "Saigon Tango Marathon"

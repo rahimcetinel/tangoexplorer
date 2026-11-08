@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+in+The+Tropics/10724
+eventWebsite: https://www.verokruta.com/tangointhetropics
 locale: en
 summary: "Tango in The Tropics (January 11-17, 2027) in Dominican Republic, Las Terrenas. Source: Tangocat."
 eventName: "Tango in The Tropics"

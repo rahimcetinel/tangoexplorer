@@ -4,6 +4,7 @@ date: 2026-10-13
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Altafulla+Tango+Marathon/11118
+eventWebsite: https://m.facebook.com/groups/3756840067794538/?ref=share
 locale: en
 summary: "Altafulla Tango Marathon (May 28-30, 2027) in Spain, Altafulla. Source: Tangocat."
 eventName: "Altafulla Tango Marathon"

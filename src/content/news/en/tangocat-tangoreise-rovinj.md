@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tangoreise+Rovinj/10761
+eventWebsite: https://www.studiolibertango.de/tangoreisen-1
 locale: en
 summary: "Tangoreise Rovinj (October 11-18 2026) in Croatia, Rovinj. Source: Tangocat."
 eventName: "Tangoreise Rovinj"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Bratislava+Tango+Party/10352
+eventWebsite: https://bratislavatangoparty.com/
 locale: en
 summary: "Bratislava Tango Party (January 29-31, 2027) in Slovakia, Bratislava. Source: Tangocat."
 eventName: "Bratislava Tango Party"

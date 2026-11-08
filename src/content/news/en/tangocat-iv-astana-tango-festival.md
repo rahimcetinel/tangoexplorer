@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/IV+Astana+Tango+Festival/9959
+eventWebsite: https://www.instagram.com/astanatangofestival?igsh=NW5tMWV6bnZqcWNh&utm_source=qr
 locale: en
 summary: "IV Astana Tango Festival (October 22-26 2026) in Kazakhstan, Astana. Source: Tangocat."
 eventName: "IV Astana Tango Festival"

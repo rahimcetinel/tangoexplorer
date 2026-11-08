@@ -4,6 +4,7 @@ date: 2026-11-05
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Vilnius+Tango+Weekend+2027/11287
+eventWebsite: https://www.facebook.com/groups/381942907767760/
 locale: en
 summary: "Vilnius Tango Weekend 2027 (October 15-17, 2027) in Lithuania, Vilnius. Source: Tangocat."
 eventName: "Vilnius Tango Weekend 2027"

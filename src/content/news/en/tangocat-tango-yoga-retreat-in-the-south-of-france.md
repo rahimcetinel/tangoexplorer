@@ -4,6 +4,7 @@ date: 2026-10-13
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+%26+Yoga+Retreat+in+the+South+of+France/11114
+eventWebsite: https://www.domaineharmonie.fr/en/ladies-tango-retreat
 locale: en
 summary: "Tango & Yoga Retreat in the South of France (September 13-18, 2027) in France, Crespin. Source: Tangocat."
 eventName: "Tango & Yoga Retreat in the South of France"

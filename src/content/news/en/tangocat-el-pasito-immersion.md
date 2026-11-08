@@ -4,6 +4,7 @@ date: 2026-10-21
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/El+Pasito+Immersion/11187
+eventWebsite: http://elpasito-immersion.com
 locale: en
 summary: "El Pasito Immersion (May 7-9, 2027) in Germany, Karlsruhe. Source: Tangocat."
 eventName: "El Pasito Immersion"

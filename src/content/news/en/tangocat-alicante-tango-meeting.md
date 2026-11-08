@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Alicante+Tango+Meeting/10421
+eventWebsite: http://www.alicantetangomeeting.com
 locale: en
 summary: "Alicante Tango Meeting (November 20-22 2026) in Spain, Alicante. Source: Tangocat."
 eventName: "Alicante Tango Meeting"

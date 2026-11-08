@@ -4,6 +4,7 @@ date: 2026-11-05
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Artetango/11281
+eventWebsite: https://artetango-festival.com/accueil-festival-2/
 locale: en
 summary: "Artetango (August 19-22, 2027) in France, Albi. Source: Tangocat."
 eventName: "Artetango"

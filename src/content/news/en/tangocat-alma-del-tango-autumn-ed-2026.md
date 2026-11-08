@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Alma+del+Tango+Autumn+Ed+2026/10556
+eventWebsite: https://www.almatango.eu/
 locale: en
 summary: "Alma del Tango Autumn Ed 2026 (September 24-28 2026) in Czechia, Prague. Source: Tangocat."
 eventName: "Alma del Tango Autumn Ed 2026"

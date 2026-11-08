@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sakura+Tango+Festival+2027+%E2%80%94+12th+Edition/11258
+eventWebsite: https://sakuratango.com/en/?utm_source=chatgpt.com
 locale: en
 summary: "Sakura Tango Festival 2027 — 12th Edition (April 1-4, 2027) in Japan, Fukuoka. Source: Tangocat."
 eventName: "Sakura Tango Festival 2027 — 12th Edition"

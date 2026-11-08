@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tangofestival+Wuppertal+2026/10661
+eventWebsite: https://tangofestival-wuppertal.de/
 locale: en
 summary: "Tangofestival Wuppertal 2026 (September 18-20 2026) in Germany, Wuppertal. Source: Tangocat."
 eventName: "Tangofestival Wuppertal 2026"

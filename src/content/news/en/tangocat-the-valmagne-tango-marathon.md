@@ -4,6 +4,7 @@ date: 2026-11-05
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/The+Valmagne+Tango+Marathon/11284
+eventWebsite: https://www.facebook.com/profile.php?id=100083339448084
 locale: en
 summary: "The Valmagne Tango Marathon (October 1-3, 2027) in France, Villeveyrac. Source: Tangocat."
 eventName: "The Valmagne Tango Marathon"

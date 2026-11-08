@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/GIOIA+MIA+-+Spring+Encuentro/10869
+eventWebsite: https://www.facebook.com/groups/1699162553615737/
 locale: en
 summary: "GIOIA MIA - Spring Encuentro (April 9-11, 2027) in Italy, Bolsena. Source: Tangocat."
 eventName: "GIOIA MIA - Spring Encuentro"

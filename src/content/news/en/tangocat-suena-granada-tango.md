@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sue%C3%B1a+Granada+Tango/10860
+eventWebsite: http://www.granadatango.com
 locale: en
 summary: "Sueña Granada Tango (December 30 - January 3 , 2027) in Spain, Granada. Source: Tangocat."
 eventName: "Sueña Granada Tango"

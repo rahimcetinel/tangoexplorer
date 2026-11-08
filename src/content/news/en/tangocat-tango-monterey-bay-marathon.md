@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Monterey+Bay+Marathon/11243
+eventWebsite: https://www.montereytangomarathon.com/
 locale: en
 summary: "Tango Monterey Bay Marathon (August 19-22, 2027) in United States, Monterey. Source: Tangocat."
 eventName: "Tango Monterey Bay Marathon"

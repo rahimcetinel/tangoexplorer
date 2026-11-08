@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Week-end+La+Belle+%C3%89chapp%C3%A9e/10953
+eventWebsite: https://facebook.com/events/s/-tango-week-end-la-belle-echap/4466167463631388/
 locale: en
 summary: "Tango Week-end La Belle Échappée (October 30 - November 1 2026) in France, Paris. Source: Tangocat."
 eventName: "Tango Week-end La Belle Échappée"

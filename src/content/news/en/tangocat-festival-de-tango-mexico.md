@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Festival+de+Tango+M%C3%A9xico/11152
+eventWebsite: https://festivaldetangomexico.com/
 locale: en
 summary: "Festival de Tango México (October 20-25 2026) in Mexico, Mexico City. Source: Tangocat."
 eventName: "Festival de Tango México"

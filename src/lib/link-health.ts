@@ -1,6 +1,6 @@
 import health from '../data/link-health.json';
 
-export type LinkStatus = 'ok' | 'dead' | 'blocked' | 'unreachable' | 'error';
+export type LinkStatus = 'ok' | 'dead' | 'gone' | 'blocked' | 'unreachable' | 'error';
 
 type Entry = { status: LinkStatus; checkedAt: string };
 

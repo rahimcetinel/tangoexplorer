@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Toronto+Spring+Tango+Marathon+2027/11139
+eventWebsite: http://www.TorontoSpringTangoMarathon.com
 locale: en
 summary: "Toronto Spring Tango Marathon 2027 (April 8-11, 2027) in Canada, Toronto. Source: Tangocat."
 eventName: "Toronto Spring Tango Marathon 2027"

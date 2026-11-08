@@ -4,6 +4,7 @@ date: 2026-10-26
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+du+Futur.e+%235/11210
+eventWebsite: https://facebook.com/events/s/tango-du-future-5/2601581560294681/
 locale: en
 summary: "Tango du Futur.e #5 (April 16-18, 2027) in France, Grenoble. Source: Tangocat."
 eventName: "Tango du Futur.e #5"

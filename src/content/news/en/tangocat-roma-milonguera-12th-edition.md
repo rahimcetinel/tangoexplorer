@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Roma+Milonguera+12th+edition/10410
+eventWebsite: https://www.facebook.com/groups/657057487706931/
 locale: en
 summary: "Roma Milonguera 12th edition (November 20-22 2026) in Italy, Tragliata. Source: Tangocat."
 eventName: "Roma Milonguera 12th edition"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Viento+Norte+Festivalito/10564
+eventWebsite: https://www.maudeandrey.com/viento-norte-festivalito-english.html
 locale: en
 summary: "Viento Norte Festivalito (January 29-31, 2027) in Germany, Hamburg. Source: Tangocat."
 eventName: "Viento Norte Festivalito"

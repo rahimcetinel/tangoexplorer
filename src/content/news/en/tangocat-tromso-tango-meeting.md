@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Troms%C3%B8+Tango+Meeting/10226
+eventWebsite: https://www.tromsotangomeeting.com/
 locale: en
 summary: "Tromsø Tango Meeting (September 18-20 2026) in Norway, Tromsø. Source: Tangocat."
 eventName: "Tromsø Tango Meeting"

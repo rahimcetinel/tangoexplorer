@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Luna+tango+Encuentro/10437
+eventWebsite: https://www.facebook.com/groups/448838755191343/user/61556107648034/
 locale: en
 summary: "La Luna tango Encuentro (October 21-25 2026) in Vietnam, Hanoi. Source: Tangocat."
 eventName: "La Luna tango Encuentro"

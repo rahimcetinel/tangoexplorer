@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Macarena+Milonguero+Encuentro+2027+5th+Edition/10668
+eventWebsite: https://facebook.com/events/s/la-macarena-5th-edition-7-to-1/969597469391636/
 locale: en
 summary: "La Macarena Milonguero Encuentro 2027 5th Edition (January 7-10, 2027) in Spain, Seville. Source: Tangocat."
 eventName: "La Macarena Milonguero Encuentro 2027 5th Edition"

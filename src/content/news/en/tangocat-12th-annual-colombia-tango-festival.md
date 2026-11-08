@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/12th+Annual+Colombia+Tango+Festival/10726
+eventWebsite: http://www.colombiatangofestival.com
 locale: en
 summary: "12th Annual Colombia Tango Festival (October 26 - November 2 2026) in Colombia, Medellín. Source: Tangocat."
 eventName: "12th Annual Colombia Tango Festival"

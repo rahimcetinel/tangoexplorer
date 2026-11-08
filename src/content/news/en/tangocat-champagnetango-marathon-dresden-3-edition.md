@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Champagnetango+Marathon+Dresden+3.+Edition/10662
+eventWebsite: http://www.champagnetango.de
 locale: en
 summary: "Champagnetango Marathon Dresden 3. Edition (March 12-14, 2027) in Germany, Dresden. Source: Tangocat."
 eventName: "Champagnetango Marathon Dresden 3. Edition"

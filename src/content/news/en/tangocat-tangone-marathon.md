@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/TanGone+Marathon/10323
+eventWebsite: https://www.facebook.com/groups/959331825253489/
 locale: en
 summary: "TanGone Marathon (November 6-8 2026) in France, Lyon. Source: Tangocat."
 eventName: "TanGone Marathon"

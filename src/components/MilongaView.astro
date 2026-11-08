@@ -1,11 +1,11 @@
 ---
 import AppShell from '../layouts/AppShell.astro';
 import Header from './Header.astro';
-import milongaData from '../data/hoy-milongas.json';
+import { MILONGAS, MILONGA_UPDATED_AT, countriesWithCounts } from '../lib/milongas';
 import { getBoardNews } from '../lib/news';
 import { milongasPath, monthShort, ui, type Locale } from '../lib/i18n';
-import type { HoyData, Milonga } from '../lib/hoy';
-import { HOY_REGIONS, regionLabel } from '../lib/hoy';
+import type { Milonga } from '../lib/hoy';
+import { regionLabel } from '../lib/hoy';
 import {
   cityChipsHtml,
   cityColorsFor,
@@ -23,12 +23,13 @@ interface Props {
 const { locale } = Astro.props;
 const copy = ui[locale];
 const posts = await getBoardNews(locale);
-const items = ((milongaData as HoyData).items ?? []) as Milonga[];
+const items = MILONGAS as Milonga[];
+const regions = countriesWithCounts(items);
 const filters = defaultFilters(items);
 const cityColors = cityColorsFor(items, filters.region);
 const total = items.filter((item) => item.region === filters.region).length;
 const tonight = tonightCount(items, filters.region);
-const generated = new Date((milongaData as HoyData).generatedAt);
+const generated = new Date(MILONGA_UPDATED_AT);
 const updatedAt = `${generated.getUTCDate()} ${monthShort.en[generated.getUTCMonth()]} ${generated.getUTCFullYear()}`;
 ---
 
@@ -57,9 +58,9 @@ const updatedAt = `${generated.getUTCDate()} ${monthShort.en[generated.getUTCMon
           <span class="sr-only">{copy.milongaRegion}</span>
           <select data-milonga-region-top>
             {
-              HOY_REGIONS.map((region) => (
+              regions.map((region) => (
                 <option value={region.id} selected={region.id === filters.region}>
-                  {regionLabel(region.id, 'en')}
+                  {regionLabel(region.id, 'en')} ({region.count})
                 </option>
               ))
             }

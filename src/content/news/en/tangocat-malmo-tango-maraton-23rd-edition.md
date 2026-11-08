@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Malm%C3%B6+Tango+Maraton+23rd+edition/11066
+eventWebsite: https://www.facebook.com/events/1047504474959230/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D
 locale: en
 summary: "Malmö Tango Maraton 23rd edition (January 15-17, 2027) in Sweden, Malmö. Source: Tangocat."
 eventName: "Malmö Tango Maraton 23rd edition"

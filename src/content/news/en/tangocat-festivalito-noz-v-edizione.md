@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Festivalito+NOZ+V+edizione/10680
+eventWebsite: https://facebook.com/events/s/festivalito-noz-v-edizione/2070440977018232/
 locale: en
 summary: "Festivalito NOZ V edizione (September 25-27 2026) in Italy, Palermo. Source: Tangocat."
 eventName: "Festivalito NOZ V edizione"

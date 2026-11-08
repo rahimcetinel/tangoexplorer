@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/2%C2%B0+Tango+Libre+Festival/10688
+eventWebsite: https://www.facebook.com/profile.php?id=61588753335808
 locale: en
 summary: "2° Tango Libre Festival (September 25-27 2026) in Italy, Moncalieri. Source: Tangocat."
 eventName: "2° Tango Libre Festival"

@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/LA+Summer+Tango+Marathon/11238
+eventWebsite: https://www.latangomarathon.com/
 locale: en
 summary: "LA Summer Tango Marathon (May 27-31, 2027) in United States, Los Angeles. Source: Tangocat."
 eventName: "LA Summer Tango Marathon"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Hawaii+TangoFest/10725
+eventWebsite: http://Www.hawaiitango.com
 locale: en
 summary: "Hawaii TangoFest (November 5-9 2026) in United States, Honolulu. Source: Tangocat."
 eventName: "Hawaii TangoFest"

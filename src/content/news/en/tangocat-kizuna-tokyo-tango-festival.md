@@ -4,6 +4,7 @@ date: 2026-11-05
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Kizuna+Tokyo+Tango+Festival/11285
+eventWebsite: https://www.facebook.com/profile.php?id=61577419894922
 locale: en
 summary: "Kizuna Tokyo Tango Festival (July 16-18, 2027) in Japan, Tokyo. Source: Tangocat."
 eventName: "Kizuna Tokyo Tango Festival"

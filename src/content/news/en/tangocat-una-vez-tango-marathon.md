@@ -4,6 +4,7 @@ date: 2026-10-26
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Una+Vez+Tango+Marathon/11203
+eventWebsite: https://unavez.tamdance.org/
 locale: en
 summary: "Una Vez Tango Marathon (November 13-15 2026) in Moldova, Chișinău. Source: Tangocat."
 eventName: "Una Vez Tango Marathon"

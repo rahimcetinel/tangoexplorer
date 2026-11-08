@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/5+Internacional+Tango+Festival+Encuentro+Tango/10655
+eventWebsite: https://encuentrotangocb.home.blog
 locale: en
 summary: "5 Internacional Tango Festival Encuentro Tango (October 9-11 2026) in Portugal, Castelo Branco. Source: Tangocat."
 eventName: "5 Internacional Tango Festival Encuentro Tango"

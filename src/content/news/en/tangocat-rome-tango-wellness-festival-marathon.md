@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Rome+Tango+Wellness+Festival+%26+Marathon/10090
+eventWebsite: https://www.facebook.com/groups/232658262604947/
 locale: en
 summary: "Rome Tango Wellness Festival & Marathon (October 8-11 2026) in Italy, Rome. Source: Tangocat."
 eventName: "Rome Tango Wellness Festival & Marathon"

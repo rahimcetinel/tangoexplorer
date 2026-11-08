@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Jesienne+Tango+w+Le%C5%9Bnicz%C3%B3wce/10922
+eventWebsite: https://facebook.com/events/s/jesienne-tango-w-lesniczowce/1502638585252924/
 locale: en
 summary: "Jesienne Tango w Leśniczówce (November 26-30 2026) in Poland, Kętrzyn. Source: Tangocat."
 eventName: "Jesienne Tango w Leśniczówce"

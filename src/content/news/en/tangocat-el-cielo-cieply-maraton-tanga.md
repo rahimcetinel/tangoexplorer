@@ -4,6 +4,7 @@ date: 2026-10-21
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/El+Cielo+-+ciep%C5%82y+maraton+tanga/11188
+eventWebsite: https://www.elcielo.pl/
 locale: en
 summary: "El Cielo - ciepły maraton tanga (December 3-6 2026) in Poland, Toruń. Source: Tangocat."
 eventName: "El Cielo - ciepły maraton tanga"

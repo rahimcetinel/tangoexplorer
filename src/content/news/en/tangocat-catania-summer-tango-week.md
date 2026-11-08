@@ -4,6 +4,7 @@ date: 2026-11-03
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Catania+Summer+Tango+Week/11268
+eventWebsite: https://www.rinoygraziella.com/
 locale: en
 summary: "Catania Summer Tango Week (June 24-28, 2027) in Italy, Catania. Source: Tangocat."
 eventName: "Catania Summer Tango Week"

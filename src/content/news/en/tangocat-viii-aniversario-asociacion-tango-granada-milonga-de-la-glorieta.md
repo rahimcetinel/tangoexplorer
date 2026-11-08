@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/VIII++Aniversario++Asociaci%C3%B3n++Tango++Granada+Milonga++de++la++Glorieta/11138
+eventWebsite: https://sites.google.com/view/viiianiversario/inicio
 locale: en
 summary: "VIII Aniversario Asociación Tango Granada Milonga de la Glorieta (November 20-22 2026) in Spain, Granada. Source: Tangocat."
 eventName: "VIII Aniversario Asociación Tango Granada Milonga de la Glorieta"

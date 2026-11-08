@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Empathic+Tango/10873
+eventWebsite: https://www.empathictango.it/IT/marzo-2027/
 locale: en
 summary: "Empathic Tango (March 5-7, 2027) in Italy, Monza. Source: Tangocat."
 eventName: "Empathic Tango"

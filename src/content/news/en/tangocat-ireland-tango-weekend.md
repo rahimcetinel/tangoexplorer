@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Ireland+Tango+Weekend/10160
+eventWebsite: https://irelandtangoweekend.com/
 locale: en
 summary: "Ireland Tango Weekend (October 8-11 2026) in Ireland, Dublin. Source: Tangocat."
 eventName: "Ireland Tango Weekend"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Le+Rendez-vous+Milonguero/10441
+eventWebsite: https://www.facebook.com/groups/479205355504568/
 locale: en
 summary: "Le Rendez-vous Milonguero (February 12-14, 2027) in Italy, Bologna. Source: Tangocat."
 eventName: "Le Rendez-vous Milonguero"

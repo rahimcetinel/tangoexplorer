@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tbilisi+Tango+Marathon/10266
+eventWebsite: https://www.facebook.com/groups/728580404013102/
 locale: en
 summary: "Tbilisi Tango Marathon (January 22-24, 2027) in Georgia, Tbilisi. Source: Tangocat."
 eventName: "Tbilisi Tango Marathon"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Quiero+Verte+Tango+Festival/10131
+eventWebsite: https://www.quieroverte.com.pl/en
 locale: en
 summary: "Quiero Verte Tango Festival (September 10-15 2026) in Poland, Kraków. Source: Tangocat."
 eventName: "Quiero Verte Tango Festival"

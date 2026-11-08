@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Do+Tango+Party/10027
+eventWebsite: https://www.facebook.com/groups/www.facebook.dotangoparty.group/
 locale: en
 summary: "Do Tango Party (October 16-18 2026) in Greece, Athens. Source: Tangocat."
 eventName: "Do Tango Party"

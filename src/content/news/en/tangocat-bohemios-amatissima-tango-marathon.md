@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Bohemios+Amatissima+Tango+Marathon/10720
+eventWebsite: https://www.serendipityart.it/wp/bohemios26/
 locale: en
 summary: "Bohemios Amatissima Tango Marathon (November 14-15 2026) in Italy, Castel San Pietro Terme. Source: Tangocat."
 eventName: "Bohemios Amatissima Tango Marathon"

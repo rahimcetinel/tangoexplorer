@@ -1,14 +1,14 @@
 ---
 import AppShell from '../layouts/AppShell.astro';
 import Header from '../components/Header.astro';
-import milongaData from '../data/hoy-milongas.json';
+import { MILONGAS } from '../lib/milongas';
 import { getNews, newsSlug } from '../lib/news';
 import { homePath, kindLabels, monthShort, ui } from '../lib/i18n';
-import type { HoyData, Milonga } from '../lib/hoy';
+import type { Milonga } from '../lib/hoy';
 
 const copy = ui.en;
 const posts = await getNews('en');
-const milongas = ((milongaData as HoyData).items ?? []) as Milonga[];
+const milongas = MILONGAS as Milonga[];
 
 const events = posts.map((post) => ({
   s: newsSlug(post),

@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sicily+Volcano+Tango+Meeting/11021
+eventWebsite: https://www.facebook.com/groups/1293873687357998/
 locale: en
 summary: "Sicily Volcano Tango Meeting (April 23-25, 2027) in Italy, Trecastagni. Source: Tangocat."
 eventName: "Sicily Volcano Tango Meeting"

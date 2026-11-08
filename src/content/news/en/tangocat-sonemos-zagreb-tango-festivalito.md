@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/So%C3%B1emos+Zagreb+Tango+Festivalito/10878
+eventWebsite: https://www.facebook.com/groups/2037959513070402/
 locale: en
 summary: "Soñemos Zagreb Tango Festivalito (March 19-21, 2027) in Croatia, Zagreb. Source: Tangocat."
 eventName: "Soñemos Zagreb Tango Festivalito"

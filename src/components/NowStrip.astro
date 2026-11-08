@@ -1,11 +1,11 @@
 ---
-import milongaData from '../data/hoy-milongas.json';
+import { MILONGAS } from '../lib/milongas';
 import { getNews } from '../lib/news';
-import type { HoyData, Milonga } from '../lib/hoy';
+import type { Milonga } from '../lib/hoy';
 import { buildNowData } from '../lib/now-data';
 
 const posts = await getNews('en');
-const milongas = ((milongaData as HoyData).items ?? []) as Milonga[];
+const milongas = MILONGAS as Milonga[];
 const { events, milongas: tonightMilongas, coords } = buildNowData(posts, milongas);
 ---
 

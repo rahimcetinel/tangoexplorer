@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Abrazos+Tango+Festival+2026/10639
+eventWebsite: https://www.dancetangonyc.com/atf-2026
 locale: en
 summary: "Abrazos Tango Festival 2026 (November 13-15 2026) in United States, New York. Source: Tangocat."
 eventName: "Abrazos Tango Festival 2026"

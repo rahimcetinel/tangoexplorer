@@ -4,6 +4,7 @@ date: 2026-10-13
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Encuentro+Jeju+summ+milonga/11112
+eventWebsite: http://www.jejusummmilonga.com
 locale: en
 summary: "Tango Encuentro Jeju summ milonga (August 27-29, 2027) in South Korea, Jeju-si. Source: Tangocat."
 eventName: "Tango Encuentro Jeju summ milonga"

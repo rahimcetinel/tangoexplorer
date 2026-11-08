@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Ibiza+Tango+Experience+2026/10498
+eventWebsite: https://docs.google.com/forms/d/e/1FAIpQLSfguSsH9FuvbDVHzvded8CVaNTiy4_F39mCTnAXjZ7BlhS0wQ/viewform
 locale: en
 summary: "Ibiza Tango Experience 2026 (September 28 - October 5 2026) in Spain, Eivissa. Source: Tangocat."
 eventName: "Ibiza Tango Experience 2026"

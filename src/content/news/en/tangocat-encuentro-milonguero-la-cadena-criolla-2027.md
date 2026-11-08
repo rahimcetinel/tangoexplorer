@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Encuentro+Milonguero+La+Cadena+Criolla+2027/11244
+eventWebsite: https://lacadenacriolla.com/?utm_source=chatgpt.com
 locale: en
 summary: "Encuentro Milonguero La Cadena Criolla 2027 (September 3-5, 2027) in Germany, Veckenstedt. Source: Tangocat."
 eventName: "Encuentro Milonguero La Cadena Criolla 2027"

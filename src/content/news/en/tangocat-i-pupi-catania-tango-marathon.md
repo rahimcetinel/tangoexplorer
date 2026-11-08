@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/I+Pupi+Catania+Tango+Marathon/10687
+eventWebsite: https://www.facebook.com/groups/434607340325863/
 locale: en
 summary: "I Pupi Catania Tango Marathon (January 29-31, 2027) in Italy, Catania. Source: Tangocat."
 eventName: "I Pupi Catania Tango Marathon"

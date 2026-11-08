@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/International+Encuentro+Milonguero+en+Calabria/10562
+eventWebsite: https://www.tangomalia.com/encuentro.asp
 locale: en
 summary: "International Encuentro Milonguero en Calabria (October 15-18 2026) in Italy, Contrada Difesa I. Source: Tangocat."
 eventName: "International Encuentro Milonguero en Calabria"

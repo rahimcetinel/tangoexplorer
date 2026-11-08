@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tan+Queer+Barcelona/11090
+eventWebsite: https://www.tanqueerbarcelona.com/
 locale: en
 summary: "Tan Queer Barcelona (November 5-8 2026) in Spain, Barcelona. Source: Tangocat."
 eventName: "Tan Queer Barcelona"

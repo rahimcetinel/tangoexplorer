@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Rosas+de+Oto%C3%B1o+%E2%80%94+Imperial+Edition/11234
+eventWebsite: https://www.facebook.com/groups/rosasdeotono?utm_source=chatgpt.com
 locale: en
 summary: "Rosas de Otoño — Imperial Edition (November 26-29 2026) in Croatia, Opatija. Source: Tangocat."
 eventName: "Rosas de Otoño — Imperial Edition"

@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Temptation+Budapest+Spring+Festival/10950
+eventWebsite: https://www.facebook.com/events/1821107815547542
 locale: en
 summary: "Tango Temptation Budapest Spring Festival (April 22-25, 2027) in Hungary, Budapest. Source: Tangocat."
 eventName: "Tango Temptation Budapest Spring Festival"

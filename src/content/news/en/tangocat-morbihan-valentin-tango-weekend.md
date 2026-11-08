@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Morbihan+Valentin+Tango+Weekend/11180
+eventWebsite: https://facebook.com/events/s/morbihan-valentin-tango-weeken/1796987898167923/
 locale: en
 summary: "Morbihan Valentin Tango Weekend (February 12-14, 2027) in France, Sarzeau. Source: Tangocat."
 eventName: "Morbihan Valentin Tango Weekend"

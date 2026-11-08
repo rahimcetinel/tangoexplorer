@@ -4,6 +4,7 @@ date: 2026-10-21
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Ischia+Tango+Meeting/11190
+eventWebsite: https://www.tangoallegria.it/en/ischia-tango-meeting-tango-in-italy
 locale: en
 summary: "Ischia Tango Meeting (August 4-8, 2027) in Italy, Ischia. Source: Tangocat."
 eventName: "Ischia Tango Meeting"

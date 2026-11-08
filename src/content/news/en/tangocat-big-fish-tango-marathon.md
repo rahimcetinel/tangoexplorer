@@ -4,6 +4,7 @@ date: 2026-11-05
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/BIG+FISH+Tango+Marathon/11278
+eventWebsite: https://www.facebook.com/groups/293182577057686/
 locale: en
 summary: "BIG FISH Tango Marathon (July 1-4, 2027) in France, Sète. Source: Tangocat."
 eventName: "BIG FISH Tango Marathon"

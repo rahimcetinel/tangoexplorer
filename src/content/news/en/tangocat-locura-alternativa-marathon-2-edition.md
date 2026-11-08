@@ -4,6 +4,7 @@ date: 2026-10-26
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Locura+Alternativa+Marathon+2+edition/11207
+eventWebsite: http://alternativa.locuratanguera.pl/
 locale: en
 summary: "Locura Alternativa Marathon 2 edition (April 2-4, 2027) in Poland, Pszów. Source: Tangocat."
 eventName: "Locura Alternativa Marathon 2 edition"

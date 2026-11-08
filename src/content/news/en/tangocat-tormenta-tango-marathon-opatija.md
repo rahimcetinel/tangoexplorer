@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tormenta+Tango+Marathon+Opatija/10628
+eventWebsite: https://www.facebook.com/groups/916603932696464/
 locale: en
 summary: "Tormenta Tango Marathon Opatija (February 25-28, 2027) in Croatia, Opatija. Source: Tangocat."
 eventName: "Tormenta Tango Marathon Opatija"

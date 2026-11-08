@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Abrazo+de+Invierno+Slovenia/10249
+eventWebsite: https://www.facebook.com/groups/1939562250136010/
 locale: en
 summary: "Abrazo de Invierno Slovenia (December 4-6 2026) in Slovenia, Laško. Source: Tangocat."
 eventName: "Abrazo de Invierno Slovenia"

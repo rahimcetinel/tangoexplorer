@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Romeo+and+Juliet+Tango+Marathon/10858
+eventWebsite: https://romeoandjulietango.wixsite.com/info
 locale: en
 summary: "Romeo and Juliet Tango Marathon (January 22-26, 2027) in Italy, Verona. Source: Tangocat."
 eventName: "Romeo and Juliet Tango Marathon"

@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Los+Angeles+Encuentro+Milonguero+2027/11054
+eventWebsite: https://www.losangelesencuentromilonguero.com/
 locale: en
 summary: "Los Angeles Encuentro Milonguero 2027 (February 26-28, 2027) in United States, Los Angeles. Source: Tangocat."
 eventName: "Los Angeles Encuentro Milonguero 2027"

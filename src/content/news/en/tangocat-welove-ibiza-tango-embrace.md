@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/WeLove+-+Ibiza+Tango+Embrace/10530
+eventWebsite: https://ibizatangoembrace.com
 locale: en
 summary: "WeLove - Ibiza Tango Embrace (October 14-19 2026) in Spain, Ibiza. Source: Tangocat."
 eventName: "WeLove - Ibiza Tango Embrace"

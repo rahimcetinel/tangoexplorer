@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Milonguero+loco/10774
+eventWebsite: https://www.facebook.com/groups/206371726506095/
 locale: en
 summary: "Milonguero loco (March 19-21, 2027) in Germany, Riedstadt. Source: Tangocat."
 eventName: "Milonguero loco"

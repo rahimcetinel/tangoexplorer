@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Idilio+Tanguero+Marat%C3%B3n/11167
+eventWebsite: https://www.idiliotanguero.com/about-3
 locale: en
 summary: "Idilio Tanguero Maratón (December 11-13 2026) in Mexico, Guadalajara. Source: Tangocat."
 eventName: "Idilio Tanguero Maratón"

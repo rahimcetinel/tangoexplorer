@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/20th+Ljubljana+International+Tango+Festival/10611
+eventWebsite: https://tangofestival.si/EN
 locale: en
 summary: "20th Ljubljana International Tango Festival (April 1-4, 2027) in Slovenia, Ljubljana. Source: Tangocat."
 eventName: "20th Ljubljana International Tango Festival"

@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Pioneer+Encuentro+2027/11175
+eventWebsite: https://pioneerencuentro.com/
 locale: en
 summary: "Pioneer Encuentro 2027 (March 19-21, 2027) in United States, Salt Lake City. Source: Tangocat."
 eventName: "Pioneer Encuentro 2027"

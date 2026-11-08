@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Belgrade+Summer+Tango+Marathon/11140
+eventWebsite: https://www.facebook.com/groups/799115400249948/user/100089560996978/
 locale: en
 summary: "Belgrade Summer Tango Marathon (August 27-29, 2027) in Serbia, Belgrade. Source: Tangocat."
 eventName: "Belgrade Summer Tango Marathon"

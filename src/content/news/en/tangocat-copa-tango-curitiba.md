@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Copa+Tango+Curitiba/11096
+eventWebsite: https://copatango.com.br/
 locale: en
 summary: "Copa Tango Curitiba (November 19-22 2026) in Brazil, Curitiba. Source: Tangocat."
 eventName: "Copa Tango Curitiba"

@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/El+Palacio+Encuentro+Milonguero/10406
+eventWebsite: https://www.facebook.com/groups/1437230420087388/
 locale: en
 summary: "El Palacio Encuentro Milonguero (March 12-14, 2027) in France, Perpignan. Source: Tangocat."
 eventName: "El Palacio Encuentro Milonguero"

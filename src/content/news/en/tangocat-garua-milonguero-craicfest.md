@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Gar%C3%BAa+-+Milonguero+Cra%C3%ADcfest/11058
+eventWebsite: https://www.facebook.com/groups/643738126140318/
 locale: en
 summary: "Garúa - Milonguero Craícfest (June 24-28, 2027) in Ireland, Kildare. Source: Tangocat."
 eventName: "Garúa - Milonguero Craícfest"

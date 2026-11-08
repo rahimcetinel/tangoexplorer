@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Siracusa+International+Tango+Festival/10775
+eventWebsite: https://siracusatangofestival.com/
 locale: en
 summary: "Siracusa International Tango Festival (July 22-25, 2027) in Italy, Syracuse. Source: Tangocat."
 eventName: "Siracusa International Tango Festival"

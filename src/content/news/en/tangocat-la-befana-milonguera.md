@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Befana+Milonguera/11031
+eventWebsite: https://www.facebook.com/groups/169363763708355/
 locale: en
 summary: "La Befana Milonguera (June 4-6, 2027) in Italy, Rome. Source: Tangocat."
 eventName: "La Befana Milonguera"

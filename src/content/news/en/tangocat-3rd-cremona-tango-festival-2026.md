@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/3rd+Cremona+Tango+Festival+2026/10457
+eventWebsite: https://palladinotango.com/
 locale: en
 summary: "3rd Cremona Tango Festival 2026 (October 30 - November 1 2026) in Italy, Cremona. Source: Tangocat."
 eventName: "3rd Cremona Tango Festival 2026"

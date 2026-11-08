@@ -4,6 +4,7 @@ date: 2026-09-10
 category: turkiye
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Narathon+-+Istanbul/10859
+eventWebsite: http://www.narathon.com
 locale: en
 summary: "Narathon - Istanbul (January 15-17, 2027) in Türkiye, Istanbul. Source: Tangocat."
 eventName: "Narathon - Istanbul"

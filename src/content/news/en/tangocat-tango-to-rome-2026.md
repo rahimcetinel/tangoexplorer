@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+To+Rome+2026/10563
+eventWebsite: https://www.facebook.com/tanGOTORome
 locale: en
 summary: "Tango To Rome 2026 (November 18-22 2026) in Italy, Rome. Source: Tangocat."
 eventName: "Tango To Rome 2026"

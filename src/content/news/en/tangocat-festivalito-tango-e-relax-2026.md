@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Festivalito+Tango+e+Relax+2026/10674
+eventWebsite: https://facebook.com/events/s/festivalito-tango-e-relax-2026/3848700455265788/
 locale: en
 summary: "Festivalito Tango e Relax 2026 (October 30 - November 1 2026) in Italy, Garda. Source: Tangocat."
 eventName: "Festivalito Tango e Relax 2026"

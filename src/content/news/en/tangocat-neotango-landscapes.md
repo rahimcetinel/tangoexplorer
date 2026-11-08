@@ -4,6 +4,7 @@ date: 2026-10-13
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Neotango+Landscapes/11113
+eventWebsite: https://www.neotango-landscapes.com/
 locale: en
 summary: "Neotango Landscapes (November 20-22 2026) in Germany, Wuppertal. Source: Tangocat."
 eventName: "Neotango Landscapes"

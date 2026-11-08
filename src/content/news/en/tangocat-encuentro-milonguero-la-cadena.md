@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Encuentro+Milonguero+La+Cadena/11250
+eventWebsite: https://encuentrolacadena.nl/?utm_source=chatgpt.com
 locale: en
 summary: "Encuentro Milonguero La Cadena (April 23-25, 2027) in Netherlands, Nijmegen. Source: Tangocat."
 eventName: "Encuentro Milonguero La Cadena"

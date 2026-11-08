@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Week+Marathon/10879
+eventWebsite: https://www.tangoweekmarathon.com/
 locale: en
 summary: "Tango Week Marathon (May 12, 2027 - November 21 ) in Greece, Greece. Source: Tangocat."
 eventName: "Tango Week Marathon"

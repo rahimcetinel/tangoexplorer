@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/II+Okt%C3%B3berZenTang%C3%B3Camp+2026/10882
+eventWebsite: https://www.facebook.com/events/4485828318368321/
 locale: en
 summary: "II OktóberZenTangóCamp 2026 (October 2-5 2026) in Hungary, Budapest. Source: Tangocat."
 eventName: "II OktóberZenTangóCamp 2026"

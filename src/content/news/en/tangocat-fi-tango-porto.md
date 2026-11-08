@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Fi+Tango+Porto/10627
+eventWebsite: https://www.facebook.com/FiTangoPorto
 locale: en
 summary: "Fi Tango Porto (April 22-25, 2027) in Portugal, Porto. Source: Tangocat."
 eventName: "Fi Tango Porto"

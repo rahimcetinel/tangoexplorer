@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Journey+to+Rimini/9964
+eventWebsite: https://siempre-tango.de/en/Tango-Holidays/Rimini/
 locale: en
 summary: "Tango Journey to Rimini (September 6-13 2026) in Italy, Rimini. Source: Tangocat."
 eventName: "Tango Journey to Rimini"

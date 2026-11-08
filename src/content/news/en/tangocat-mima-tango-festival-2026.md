@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/MiMa+Tango+Festival+2026/11087
+eventWebsite: https://www.elementotango.it/informazioni/informazioni-mima-tango-festival-2026.html
 locale: en
 summary: "MiMa Tango Festival 2026 (October 30 - November 1 2026) in Italy, Milano Marittima. Source: Tangocat."
 eventName: "MiMa Tango Festival 2026"

@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Che+Tango+Traslasierra/11024
+eventWebsite: https://www.facebook.com/fp.Viviana.barrandeguy/
 locale: en
 summary: "Che Tango Traslasierra (March 19-21, 2027) in Argentina, Córdoba. Source: Tangocat."
 eventName: "Che Tango Traslasierra"

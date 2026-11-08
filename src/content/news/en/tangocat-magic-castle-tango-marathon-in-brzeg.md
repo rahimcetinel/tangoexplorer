@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Magic+Castle+Tango+Marathon+in+Brzeg/11227
+eventWebsite: https://facebook.com/events/s/magic-castle-tango-marathon-in/1098729316376498/
 locale: en
 summary: "Magic Castle Tango Marathon in Brzeg (May 27-30, 2027) in Poland, Brzeg. Source: Tangocat."
 eventName: "Magic Castle Tango Marathon in Brzeg"

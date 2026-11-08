@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Argentine+Tango+workshop+in+Annecy/10657
+eventWebsite: https://www.vacances-tango.com/argentinian-tango-workshop-and-tango-holidays-in-annecy-france-from-14-to-18-september2026/
 locale: en
 summary: "Argentine Tango workshop in Annecy (September 14-18 2026) in France, Annecy. Source: Tangocat."
 eventName: "Argentine Tango workshop in Annecy"

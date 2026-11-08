@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Porto+Tango+Marathon+Spring+2027/10717
+eventWebsite: https://www.portango.net/
 locale: en
 summary: "Porto Tango Marathon Spring 2027 (March 18-21, 2027) in Portugal, Porto. Source: Tangocat."
 eventName: "Porto Tango Marathon Spring 2027"

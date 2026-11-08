@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Amber+Sea+Liepaja+Tango+Marathon+2027/10870
+eventWebsite: https://www.facebook.com/events/1062212226347945/
 locale: en
 summary: "Amber Sea Liepaja Tango Marathon 2027 (July 22-25, 2027) in Latvia, Liepāja. Source: Tangocat."
 eventName: "Amber Sea Liepaja Tango Marathon 2027"

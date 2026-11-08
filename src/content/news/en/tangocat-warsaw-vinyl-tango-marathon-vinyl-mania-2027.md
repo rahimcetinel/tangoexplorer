@@ -4,6 +4,7 @@ date: 2026-10-21
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Warsaw+Vinyl+Tango+Marathon+Vinyl+Mania+2027/11185
+eventWebsite: https://facebook.com/events/s/warsaw-vinyl-tango-marathon-vi/2319231825504985/
 locale: en
 summary: "Warsaw Vinyl Tango Marathon Vinyl Mania 2027 (March 19-21, 2027) in Poland, Warsaw. Source: Tangocat."
 eventName: "Warsaw Vinyl Tango Marathon Vinyl Mania 2027"

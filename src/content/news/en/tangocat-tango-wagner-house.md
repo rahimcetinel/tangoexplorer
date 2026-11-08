@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Wagner+House/11023
+eventWebsite: https://tangowagnerhouse.lv/
 locale: en
 summary: "Tango Wagner House (May 21-23, 2027) in Latvia, Riga. Source: Tangocat."
 eventName: "Tango Wagner House"

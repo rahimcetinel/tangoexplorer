@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Encuentro+Palpito+Milonguero+2026/10493
+eventWebsite: https://facebook.com/events/s/encuentro-palpito-milonguero-2/956782170243101/
 locale: en
 summary: "Encuentro Palpito Milonguero 2026 (September 18-20 2026) in Italy, Bondeno. Source: Tangocat."
 eventName: "Encuentro Palpito Milonguero 2026"

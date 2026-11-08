@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Focus+Del+Alma/11071
+eventWebsite: https://www.facebook.com/events/1505087847778533
 locale: en
 summary: "Tango Focus Del Alma (May 20-23, 2027) in Romania, Timișoara. Source: Tangocat."
 eventName: "Tango Focus Del Alma"

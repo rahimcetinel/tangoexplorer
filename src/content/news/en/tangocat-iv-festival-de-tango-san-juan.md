@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/IV+Festival+de+Tango+San+Juan/11162
+eventWebsite: https://www.facebook.com/profile.php?id=61551818025692
 locale: en
 summary: "IV Festival de Tango San Juan (October 23-25 2026) in Argentina, San Juan. Source: Tangocat."
 eventName: "IV Festival de Tango San Juan"

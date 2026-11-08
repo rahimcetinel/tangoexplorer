@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Alondra+Tango+Marathon+in+Provence+%E2%80%94+Spring+Edition/11254
+eventWebsite: https://alondratango.fr/
 locale: en
 summary: "Alondra Tango Marathon in Provence — Spring Edition (April 30 - May 2, 2027) in France, Méounes-lès-Montrieux. Source: Tangocat."
 eventName: "Alondra Tango Marathon in Provence — Spring Edition"

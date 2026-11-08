@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+M%C3%A1gico+Marathon+NYE+Edition/10834
+eventWebsite: https://facebook.com/events/s/tango-magico-marathon-nye-edit/3251123491885429/
 locale: en
 summary: "Tango Mágico Marathon NYE Edition (December 30 - January 3 , 2027) in Romania, Bucharest. Source: Tangocat."
 eventName: "Tango Mágico Marathon NYE Edition"

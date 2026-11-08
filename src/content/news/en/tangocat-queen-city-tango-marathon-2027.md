@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Queen+City+Tango+Marathon+2027/11169
+eventWebsite: https://queencitytangomarathon.com/
 locale: en
 summary: "Queen City Tango Marathon 2027 (January 14-18, 2027) in United States, Charlotte. Source: Tangocat."
 eventName: "Queen City Tango Marathon 2027"

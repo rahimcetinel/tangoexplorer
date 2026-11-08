@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Desde+el+Alma/10772
+eventWebsite: https://desdeelalma.eu/
 locale: en
 summary: "Desde el Alma (May 7-9, 2027) in Czechia, Prague. Source: Tangocat."
 eventName: "Desde el Alma"

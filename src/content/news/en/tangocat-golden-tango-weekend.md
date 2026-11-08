@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Golden+Tango+Weekend/10927
+eventWebsite: https://facebook.com/events/s/golden-tango-weekend-october-1/993179600283604/
 locale: en
 summary: "Golden Tango Weekend (October 16-18 2026) in Estonia, Tallinn. Source: Tangocat."
 eventName: "Golden Tango Weekend"

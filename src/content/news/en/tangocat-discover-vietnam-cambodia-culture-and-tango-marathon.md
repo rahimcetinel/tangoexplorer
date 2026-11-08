@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Discover+Vietnam+%26+Cambodia+Culture+And+Tango+Marathon/10851
+eventWebsite: https://tangoinvietnam.wordpress.com/about/
 locale: en
 summary: "Discover Vietnam & Cambodia Culture And Tango Marathon (March 21 - April 12, 2027) in Vietnam, Hanoi. Source: Tangocat."
 eventName: "Discover Vietnam & Cambodia Culture And Tango Marathon"

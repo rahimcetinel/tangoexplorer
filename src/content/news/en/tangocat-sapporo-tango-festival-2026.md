@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sapporo+Tango+Festival+2026/10632
+eventWebsite: https://www.facebook.com/events/%E6%9C%AD%E5%B9%8C%E5%B8%82/sapporo-tango-festival-2026/978854984640108/
 locale: en
 summary: "Sapporo Tango Festival 2026 (October 22-25 2026) in Japan, Sapporo. Source: Tangocat."
 eventName: "Sapporo Tango Festival 2026"

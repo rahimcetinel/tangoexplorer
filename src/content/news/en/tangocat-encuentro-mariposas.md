@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Encuentro+Mariposas/10741
+eventWebsite: https://www.mariposas-tango.com/encuentro-mariposas-2026-an.html
 locale: en
 summary: "Encuentro Mariposas (October 9-12 2026) in Canada, Québec City. Source: Tangocat."
 eventName: "Encuentro Mariposas"

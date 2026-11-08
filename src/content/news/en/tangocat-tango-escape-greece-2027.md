@@ -4,6 +4,7 @@ date: 2026-11-07
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Escape+Greece+2027/11295
+eventWebsite: http://www.tangoescapegreece.net
 locale: en
 summary: "Tango Escape Greece 2027 (August 27 - September 4, 2027) in Greece, Lesbos. Source: Tangocat."
 eventName: "Tango Escape Greece 2027"

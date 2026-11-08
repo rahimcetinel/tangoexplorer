@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/TangoLarissa+Festivalito/10968
+eventWebsite: https://fb.me/e/24PWBdhmqY
 locale: en
 summary: "TangoLarissa Festivalito (October 23-25 2026) in Greece, Larissa. Source: Tangocat."
 eventName: "TangoLarissa Festivalito"

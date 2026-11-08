@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/%C5%BBar+Tanga+2nd+edition/10716
+eventWebsite: https://facebook.com/events/s/zar-tanga-2nd-edition/1361763762632162/
 locale: en
 summary: "Żar Tanga 2nd edition (April 15-18, 2027) in Poland, Międzybrodzie Bialskie. Source: Tangocat."
 eventName: "Żar Tanga 2nd edition"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Vancouver+Tango+Milonguero/10840
+eventWebsite: https://www.vancouvertango.com/
 locale: en
 summary: "Vancouver Tango Milonguero (January 1-3, 2027) in Canada, Vancouver. Source: Tangocat."
 eventName: "Vancouver Tango Milonguero"

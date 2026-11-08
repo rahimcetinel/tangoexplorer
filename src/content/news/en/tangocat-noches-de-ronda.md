@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Noches+De+Ronda/10850
+eventWebsite: https://siempre-tango.de/en/Noches-de-Ronda/
 locale: en
 summary: "Noches De Ronda (January 28-31, 2027) in Germany, Karlsruhe. Source: Tangocat."
 eventName: "Noches De Ronda"

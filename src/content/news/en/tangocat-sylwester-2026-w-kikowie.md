@@ -4,6 +4,7 @@ date: 2026-10-26
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sylwester+2026+w+Kikowie/11208
+eventWebsite: https://facebook.com/events/s/sylwester-2026-w-kikowie/1105076395714908/
 locale: en
 summary: "Sylwester 2026 w Kikowie (December 30 - January 3 , 2027) in Poland, Solec-Zdrój. Source: Tangocat."
 eventName: "Sylwester 2026 w Kikowie"

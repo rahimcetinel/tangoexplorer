@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Porte%C3%B1os+y+Aut%C3%A8nticos+-+International+Tango+Festival/10675
+eventWebsite: https://facebook.com/events/s/portenos-y-autenticos-internat/836809902099366/
 locale: en
 summary: "Porteños y Autènticos - International Tango Festival (May 7-9, 2027) in Bulgaria, Burgas. Source: Tangocat."
 eventName: "Porteños y Autènticos - International Tango Festival"

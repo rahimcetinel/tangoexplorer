@@ -4,6 +4,7 @@ date: 2026-10-26
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Encuentro+Milonguero+%22Locura+Milonguera%22/11206
+eventWebsite: http://milonguera.locuratanguera.pl
 locale: en
 summary: "Encuentro Milonguero \"Locura Milonguera\" (May 6-9, 2027) in Sweden, Malmö. Source: Tangocat."
 eventName: "Encuentro Milonguero \"Locura Milonguera\""

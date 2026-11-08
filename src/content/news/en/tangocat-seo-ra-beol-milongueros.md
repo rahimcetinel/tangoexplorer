@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Seo-Ra-Beol+Milongueros/11027
+eventWebsite: https://www.facebook.com/groups/851172223063610/
 locale: en
 summary: "Seo-Ra-Beol Milongueros (April 9-11, 2027) in South Korea, Gyeongju-si. Source: Tangocat."
 eventName: "Seo-Ra-Beol Milongueros"

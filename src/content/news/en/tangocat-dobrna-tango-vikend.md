@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Dobrna+Tango+Vikend/10636
+eventWebsite: https://facebook.com/events/s/dobrna-tango-vikend/2063645787842035/
 locale: en
 summary: "Dobrna Tango Vikend (October 23-25 2026) in Slovenia, Ljubljana. Source: Tangocat."
 eventName: "Dobrna Tango Vikend"

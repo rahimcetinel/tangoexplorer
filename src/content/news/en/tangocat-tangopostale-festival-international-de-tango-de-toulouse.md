@@ -4,6 +4,7 @@ date: 2026-11-05
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tangopostale+%E2%80%94+Festival+International+de+Tango+de+Toulouse/11282
+eventWebsite: https://tangopostale.com/
 locale: en
 summary: "Tangopostale — Festival International de Tango de Toulouse (September 20-26, 2027) in France, Toulouse. Source: Tangocat."
 eventName: "Tangopostale — Festival International de Tango de Toulouse"

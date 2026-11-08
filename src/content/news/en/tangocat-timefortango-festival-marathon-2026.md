@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/TimeforTango+Festival%26Marathon+2026/10446
+eventWebsite: http://www.timefortangofestival.com
 locale: en
 summary: "TimeforTango Festival&Marathon 2026 (October 2-4 2026) in Italy, Lignano Sabbiadoro. Source: Tangocat."
 eventName: "TimeforTango Festival&Marathon 2026"

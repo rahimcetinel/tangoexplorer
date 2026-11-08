@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Nochero+soy/10773
+eventWebsite: https://nocherosoy.eu/2027-home/
 locale: en
 summary: "Nochero soy (May 7-9, 2027) in Czechia, Prague. Source: Tangocat."
 eventName: "Nochero soy"

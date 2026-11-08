@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Ojos+negros+-+Tangoweekend/10103
+eventWebsite: https://www.facebook.com/groups/2057242177864358/
 locale: en
 summary: "Ojos negros - Tangoweekend (October 2-6 2026) in Georgia, Stepantsminda. Source: Tangocat."
 eventName: "Ojos negros - Tangoweekend"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/PocoLoco+Campo/10746
+eventWebsite: https://www.djtazman.cz/PocoLoco-campo-otono
 locale: en
 summary: "PocoLoco Campo (September 25-27 2026) in Czechia, Domazlice. Source: Tangocat."
 eventName: "PocoLoco Campo"

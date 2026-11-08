@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/More+Than+Tango+(Marathon+%26+Festival+%26+Cup)/10208
+eventWebsite: https://www.facebook.com/photo?fbid=10163563453974380&set=a.476328494379
 locale: en
 summary: "More Than Tango (Marathon & Festival & Cup) (November 19-22 2026) in China, Shanghai. Source: Tangocat."
 eventName: "More Than Tango (Marathon & Festival & Cup)"

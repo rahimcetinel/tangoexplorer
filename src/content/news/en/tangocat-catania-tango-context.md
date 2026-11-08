@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Catania+Tango+Context/11106
+eventWebsite: https://www.caminitotango.com/stage-ed-eventi/catania-tango-context-novembre-2026-walter-cardozo-margarita-klurfan.html
 locale: en
 summary: "Catania Tango Context (November 13-15 2026) in Italy, Catania. Source: Tangocat."
 eventName: "Catania Tango Context"

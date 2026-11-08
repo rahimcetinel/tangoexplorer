@@ -4,6 +4,7 @@ date: 2026-11-05
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Cuerda+Frankfurt+Tango+Marathon/11286
+eventWebsite: https://www.facebook.com/profile.php?id=100091272394131
 locale: en
 summary: "La Cuerda Frankfurt Tango Marathon (May 28-30, 2027) in Germany, Frankfurt am Main. Source: Tangocat."
 eventName: "La Cuerda Frankfurt Tango Marathon"

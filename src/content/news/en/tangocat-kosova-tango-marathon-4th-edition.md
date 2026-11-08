@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Kosova+Tango+Marathon+(4th+edition)/10559
+eventWebsite: https://www.facebook.com/events/1567460064521699/
 locale: en
 summary: "Kosova Tango Marathon (4th edition) (December 17-20 2026) in Pristina. Source: Tangocat."
 eventName: "Kosova Tango Marathon (4th edition)"

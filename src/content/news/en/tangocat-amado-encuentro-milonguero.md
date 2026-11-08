@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Amado+encuentro+milonguero/11008
+eventWebsite: https://www.facebook.com/groups/1070284960186637/
 locale: en
 summary: "Amado encuentro milonguero (July 15-18, 2027) in Austria, Baden bei Wien. Source: Tangocat."
 eventName: "Amado encuentro milonguero"

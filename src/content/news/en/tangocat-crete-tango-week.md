@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Crete+tango+Week/9975
+eventWebsite: https://www.tangoweekmarathon.com/
 locale: en
 summary: "Crete tango Week (October 28 - November 4 2026) in Greece, Crete. Source: Tangocat."
 eventName: "Crete tango Week"

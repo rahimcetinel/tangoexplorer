@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango2London/11103
+eventWebsite: https://www.tangotolondon.com/
 locale: en
 summary: "Tango2London (November 27-29 2026) in United Kingdom, London. Source: Tangocat."
 eventName: "Tango2London"

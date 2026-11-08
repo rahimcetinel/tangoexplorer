@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Baku+Tango+Marathon/10826
+eventWebsite: http://www.bakutangomarathon.com
 locale: en
 summary: "Baku Tango Marathon (October 9-11 2026) in Azerbaijan, Baku. Source: Tangocat."
 eventName: "Baku Tango Marathon"

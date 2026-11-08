@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/The+Loft+Marathon+Stuttgart/10769
+eventWebsite: https://www.tangostuttgart.de/events/the-loft-marathon.html
 locale: en
 summary: "The Loft Marathon Stuttgart (January 1-3, 2027) in Germany, Stuttgart. Source: Tangocat."
 eventName: "The Loft Marathon Stuttgart"

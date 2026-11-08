@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Sincopa+New+Year+Embrace/10911
+eventWebsite: https://www.facebook.com/events/1046415491647608
 locale: en
 summary: "La Sincopa New Year Embrace (December 31 - January 2 , 2027) in France, Paris. Source: Tangocat."
 eventName: "La Sincopa New Year Embrace"

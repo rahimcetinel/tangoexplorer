@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Eterno+%E2%80%93+Argentine+Tango+Show+(Antwerp)/11076
+eventWebsite: https://tango-eterno.com/antwerpen-2026
 locale: en
 summary: "Tango Eterno – Argentine Tango Show (Antwerp) (October 24 2026) in Belgium, Antwerp. Source: Tangocat."
 eventName: "Tango Eterno – Argentine Tango Show (Antwerp)"

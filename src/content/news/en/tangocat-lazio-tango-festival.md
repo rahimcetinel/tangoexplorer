@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Lazio+Tango+Festival/10891
+eventWebsite: http://LazioTangoFestival.com
 locale: en
 summary: "Lazio Tango Festival (October 23-25 2026) in Italy, Pomezia. Source: Tangocat."
 eventName: "Lazio Tango Festival"

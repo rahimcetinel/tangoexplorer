@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sonidos+de+Vilnius+2027/10987
+eventWebsite: https://www.metai.eu/
 locale: en
 summary: "Sonidos de Vilnius 2027 (April 29 - May 2, 2027) in Lithuania, Vilnius. Source: Tangocat."
 eventName: "Sonidos de Vilnius 2027"

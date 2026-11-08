@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Neotango+Marathon+Firenze/10588
+eventWebsite: https://facebook.com/events/s/neotango-marathon-firenze/818898371279323/
 locale: en
 summary: "Neotango Marathon Firenze (September 25-27 2026) in Italy, Signa. Source: Tangocat."
 eventName: "Neotango Marathon Firenze"

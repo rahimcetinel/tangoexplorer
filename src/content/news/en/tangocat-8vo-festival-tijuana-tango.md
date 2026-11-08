@@ -4,6 +4,7 @@ date: 2026-11-07
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/8vo+Festival+Tijuana+Tango/11291
+eventWebsite: https://facebook.com/events/s/8vo-festival-tijuana-tango/1457077898692251/
 locale: en
 summary: "8vo Festival Tijuana Tango (November 20-22 2026) in Mexico, Tijuana. Source: Tangocat."
 eventName: "8vo Festival Tijuana Tango"

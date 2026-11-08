@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/EMPATHIC+TANGO+Marathon+Verona/10288
+eventWebsite: https://www.facebook.com/empathictango
 locale: en
 summary: "EMPATHIC TANGO Marathon Verona (February 12-14, 2027) in Italy, Verona. Source: Tangocat."
 eventName: "EMPATHIC TANGO Marathon Verona"

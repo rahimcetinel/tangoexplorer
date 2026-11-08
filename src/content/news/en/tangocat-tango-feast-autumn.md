@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Feast+Autumn/10148
+eventWebsite: https://tangofeast.com/autumn/
 locale: en
 summary: "Tango Feast Autumn (October 8-11 2026) in United Kingdom, Paignton. Source: Tangocat."
 eventName: "Tango Feast Autumn"

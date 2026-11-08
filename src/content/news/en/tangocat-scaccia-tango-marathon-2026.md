@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Scaccia+Tango+Marathon+2026/10223
+eventWebsite: https://www.facebook.com/groups/619717159228756/
 locale: en
 summary: "Scaccia Tango Marathon 2026 (September 11-13 2026) in Italy, Comiso. Source: Tangocat."
 eventName: "Scaccia Tango Marathon 2026"

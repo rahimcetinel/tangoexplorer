@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Mimos+y+Tango/10621
+eventWebsite: https://mimosytangoblog.wordpress.com/
 locale: en
 summary: "Mimos y Tango (April 2-4, 2027) in Italy, Riva del Garda. Source: Tangocat."
 eventName: "Mimos y Tango"

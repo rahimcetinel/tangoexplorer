@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Miramare/10492
+eventWebsite: https://facebook.com/events/s/miramare-new-dates/1405726714683880/
 locale: en
 summary: "Miramare (October 2-4 2026) in Italy, Trieste. Source: Tangocat."
 eventName: "Miramare"

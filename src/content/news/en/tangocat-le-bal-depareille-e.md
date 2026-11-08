@@ -4,6 +4,7 @@ date: 2026-10-26
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Le+Bal+d%C3%A9pareill%C3%A9.e/11211
+eventWebsite: https://facebook.com/events/s/le-bal-depareillee/28956506307370497/
 locale: en
 summary: "Le Bal dépareillé.e (December 5-6 2026) in France, Rennes. Source: Tangocat."
 eventName: "Le Bal dépareillé.e"

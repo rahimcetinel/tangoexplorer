@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Nortes+Ny%C3%A5rsfest+2026%2F2027/11085
+eventWebsite: https://facebook.com/events/s/save-the-date-tango-nortes-nya/947616931268591/
 locale: en
 summary: "Tango Nortes Nyårsfest 2026/2027 (December 30 - January 1 , 2027) in Sweden, Stockholm. Source: Tangocat."
 eventName: "Tango Nortes Nyårsfest 2026/2027"

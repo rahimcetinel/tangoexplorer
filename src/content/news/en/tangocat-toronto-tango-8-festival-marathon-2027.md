@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Toronto+Tango+8+Festival+%26+Marathon+2027/11245
+eventWebsite: https://tango8fest.com/
 locale: en
 summary: "Toronto Tango 8 Festival & Marathon 2027 (September 22-26, 2027) in Canada, Toronto. Source: Tangocat."
 eventName: "Toronto Tango 8 Festival & Marathon 2027"

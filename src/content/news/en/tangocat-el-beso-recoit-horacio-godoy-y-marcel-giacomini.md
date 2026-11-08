@@ -4,6 +4,7 @@ date: 2026-10-26
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/El+Beso+re%C3%A7oit+Horacio+Godoy+y+Marcel+Giacomini/11213
+eventWebsite: https://facebook.com/events/s/el-beso-recoit-horacio-godoy-y/1588516952903413/
 locale: en
 summary: "El Beso reçoit Horacio Godoy y Marcel Giacomini (March 25-29, 2027) in France, Sanary-sur-Mer. Source: Tangocat."
 eventName: "El Beso reçoit Horacio Godoy y Marcel Giacomini"

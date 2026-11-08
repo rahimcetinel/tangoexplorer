@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Seoul+Tango+Festival/10614
+eventWebsite: https://www.facebook.com/groups/56364475307/
 locale: en
 summary: "Seoul Tango Festival (April 29 - May 3, 2027) in South Korea, Seoul. Source: Tangocat."
 eventName: "Seoul Tango Festival"

@@ -4,6 +4,7 @@ date: 2026-10-13
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Kosova+Tango+Marathon/11121
+eventWebsite: http://www.kosovatango.org
 locale: en
 summary: "Kosova Tango Marathon (January 14-17, 2027) in Pristina. Source: Tangocat."
 eventName: "Kosova Tango Marathon"

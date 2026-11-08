@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/2nd+Baltic+Neo+Tango+Festival+2026/10714
+eventWebsite: https://www.facebook.com/p/Baltic-Neotango-Festival-61578115060393/
 locale: en
 summary: "2nd Baltic Neo Tango Festival 2026 (September 25-27 2026) in Estonia, Tallinn. Source: Tangocat."
 eventName: "2nd Baltic Neo Tango Festival 2026"

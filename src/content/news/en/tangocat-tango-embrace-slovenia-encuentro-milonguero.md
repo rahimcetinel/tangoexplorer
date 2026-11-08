@@ -4,6 +4,7 @@ date: 2026-11-08
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Embrace+Slovenia+Encuentro+Milonguero/9866
+eventWebsite: https://www.facebook.com/groups/672772513835957/
 locale: en
 summary: "Tango Embrace Slovenia Encuentro Milonguero (March 12-14, 2027) in Slovenia, Rogaška Slatina. Source: Tangocat."
 eventName: "Tango Embrace Slovenia Encuentro Milonguero"

@@ -1,4 +1,5 @@
-import { regionLabel, type HoyData, type Milonga } from '../lib/hoy';
+import { regionLabel, resolveCountry, type Milonga } from '../lib/hoy';
+import { detectCountry } from '../lib/geo';
 import { ui, weekdaysShort, type Locale } from '../lib/i18n';
 import {
   citiesForRegion,
@@ -51,12 +52,19 @@ export function initMilongas() {
   }
   let selected: string | null = null;
   let filters = readUrl();
+  if (!filters.region) {
+    // "Show my country first": the browser time zone is the best signal a static
+    // page has; language is the fallback; Türkiye is the house default.
+    const available = [...new Set(items.map((item) => item.region))];
+    filters.region = detectCountry(available) || 'turkiye';
+  }
   let cityColors = new Map<string, string>();
 
   function readUrl(): MilongaFilters {
     const params = new URLSearchParams(window.location.search);
+    const region = params.get('region') || '';
     return {
-      region: params.get('region') || 'turkiye',
+      region: region ? resolveCountry(region) : '',
       city: params.get('city') || '',
       day: params.get('day') || '',
       type: params.get('type') || '',

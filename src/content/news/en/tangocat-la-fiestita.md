@@ -4,6 +4,7 @@ date: 2026-11-05
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+FIestita/11277
+eventWebsite: https://www.facebook.com/groups/26265849106420354/
 locale: en
 summary: "La FIestita (October 8-10, 2027) in Switzerland, Lausanne. Source: Tangocat."
 eventName: "La FIestita"

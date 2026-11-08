@@ -4,6 +4,7 @@ date: 2026-11-05
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Arcobaleno+Tango+Marathon+2027/11273
+eventWebsite: https://www.arcobalenotangomarathon.com/2027/
 locale: en
 summary: "Arcobaleno Tango Marathon 2027 (May 14-16, 2027) in Italy, Ascoli Piceno. Source: Tangocat."
 eventName: "Arcobaleno Tango Marathon 2027"

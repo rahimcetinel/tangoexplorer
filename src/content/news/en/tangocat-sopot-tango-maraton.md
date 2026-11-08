@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sopot+Tango+Maraton/11010
+eventWebsite: https://sopottango.pl/
 locale: en
 summary: "Sopot Tango Maraton (May 6-9, 2027) in Poland, Sopot. Source: Tangocat."
 eventName: "Sopot Tango Maraton"

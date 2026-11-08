@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+weekend+with+Alexander+Sossa/10926
+eventWebsite: https://fb.me/e/kJf5pNgRV
 locale: en
 summary: "Tango weekend with Alexander Sossa (September 12-13 2026) in France, Strasbourg. Source: Tangocat."
 eventName: "Tango weekend with Alexander Sossa"

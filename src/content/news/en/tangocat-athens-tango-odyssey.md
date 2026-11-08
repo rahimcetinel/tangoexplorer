@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Athens+Tango+Odyssey/10573
+eventWebsite: https://www.tangart.gr/athenstangomarathon?lang=en
 locale: en
 summary: "Athens Tango Odyssey (December 4-6 2026) in Greece, Athens. Source: Tangocat."
 eventName: "Athens Tango Odyssey"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Sue%C3%B1o+Azul+2026+Tango+Marathon/10733
+eventWebsite: https://facebook.com/events/s/sueno-azul-2026-tango-marathon/855488000984168/
 locale: en
 summary: "Sueño Azul 2026 Tango Marathon (November 13-15 2026) in France, Ferney-Voltaire. Source: Tangocat."
 eventName: "Sueño Azul 2026 Tango Marathon"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Moonlight+Tango+Festival+2026/10056
+eventWebsite: http://www.moonlighttango.org
 locale: en
 summary: "Moonlight Tango Festival 2026 (September 15-20 2026) in Australia, Brisbane. Source: Tangocat."
 eventName: "Moonlight Tango Festival 2026"

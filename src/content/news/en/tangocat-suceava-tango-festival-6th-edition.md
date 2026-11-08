@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/SUCEAVA+Tango+Festival+6th+Edition/11041
+eventWebsite: https://facebook.com/events/s/suceava-tango-festival-6th-edi/1513650509807546/
 locale: en
 summary: "SUCEAVA Tango Festival 6th Edition (February 26-28, 2027) in Romania, Șcheia. Source: Tangocat."
 eventName: "SUCEAVA Tango Festival 6th Edition"

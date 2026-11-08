@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Zaragoza+Milonguera/10174
+eventWebsite: https://zgzmilonguera.my.canva.site/
 locale: en
 summary: "Zaragoza Milonguera (September 11-13 2026) in Spain, Zaragoza. Source: Tangocat."
 eventName: "Zaragoza Milonguera"

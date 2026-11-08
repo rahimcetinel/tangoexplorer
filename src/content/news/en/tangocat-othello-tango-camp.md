@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Othello+Tango+Camp/10278
+eventWebsite: http://tangocyprus.online
 locale: en
 summary: "Othello Tango Camp (November 19-22 2026) in Famagusta. Source: Tangocat."
 eventName: "Othello Tango Camp"

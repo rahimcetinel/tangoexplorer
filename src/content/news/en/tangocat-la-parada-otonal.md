@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+parada+oto%C3%B1al/10399
+eventWebsite: https://www.facebook.com/events/2701424893576017/
 locale: en
 summary: "La parada otoñal (October 23-25 2026) in Italy, Quinto di Treviso. Source: Tangocat."
 eventName: "La parada otoñal"

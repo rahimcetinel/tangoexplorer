@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Agua+dulce+%E2%80%93+encuentro+milonguero+de+enero+2027/10798
+eventWebsite: https://www.luoghiditango.net/eventi/agua-dulce/agua-dulce-encuentro-milonguero-emilia-romagna-ravenna-2027/
 locale: en
 summary: "Agua dulce – encuentro milonguero de enero 2027 (January 22-24, 2027) in Italy, Ravenna. Source: Tangocat."
 eventName: "Agua dulce – encuentro milonguero de enero 2027"

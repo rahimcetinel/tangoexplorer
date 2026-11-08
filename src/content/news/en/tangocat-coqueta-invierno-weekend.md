@@ -4,6 +4,7 @@ date: 2026-10-26
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Coqueta+Invierno+Weekend/11217
+eventWebsite: https://facebook.com/events/s/coqueta-invierno-weekend-von-s/1687332186294230/
 locale: en
 summary: "Coqueta Invierno Weekend (January 16-17, 2027) in Switzerland, Muri bei Bern. Source: Tangocat."
 eventName: "Coqueta Invierno Weekend"

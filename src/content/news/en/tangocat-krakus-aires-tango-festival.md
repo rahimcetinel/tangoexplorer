@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Krakus+Aires+Tango+Festival/10947
+eventWebsite: https://krakusaires.com/
 locale: en
 summary: "Krakus Aires Tango Festival (May 27-31, 2027) in Poland, Kraków. Source: Tangocat."
 eventName: "Krakus Aires Tango Festival"

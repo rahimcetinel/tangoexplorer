@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+%26+Wine+Festival/10155
+eventWebsite: https://www.facebook.com/TangoWineFestival
 locale: en
 summary: "Tango & Wine Festival (October 2-4 2026) in Moldova, Chișinău. Source: Tangocat."
 eventName: "Tango & Wine Festival"

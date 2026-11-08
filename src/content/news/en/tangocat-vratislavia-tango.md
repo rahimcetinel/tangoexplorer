@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Vratislavia+Tango/10986
+eventWebsite: https://facebook.com/events/s/vratislavia-tango-wroclaw-pola/1661795272188379/
 locale: en
 summary: "Vratislavia Tango (June 11-13, 2027) in Poland, Wrocław. Source: Tangocat."
 eventName: "Vratislavia Tango"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: turkiye
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Para+Ti+Tango+Maraton/10567
+eventWebsite: https://paratitangomarathon.com/
 locale: en
 summary: "Para Ti Tango Maraton (October 29 - November 2 2026) in Türkiye, Serik. Source: Tangocat."
 eventName: "Para Ti Tango Maraton"

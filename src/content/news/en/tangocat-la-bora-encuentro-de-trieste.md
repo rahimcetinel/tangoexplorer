@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Bora+Encuentro+de+Trieste/10574
+eventWebsite: https://www.facebook.com/groups/1418710595940478/
 locale: en
 summary: "La Bora Encuentro de Trieste (January 29-31, 2027) in Italy, Trieste. Source: Tangocat."
 eventName: "La Bora Encuentro de Trieste"

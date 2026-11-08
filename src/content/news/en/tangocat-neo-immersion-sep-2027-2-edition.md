@@ -4,6 +4,7 @@ date: 2026-10-13
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Neo+Immersion+Sep+2027+%E2%80%93+2.+Edition/11119
+eventWebsite: https://tangovida.de/neo-tango-marathon-berlin-april-2027/
 locale: en
 summary: "Neo Immersion Sep 2027 – 2. Edition (September 10-12, 2027) in Germany, Berlin. Source: Tangocat."
 eventName: "Neo Immersion Sep 2027 – 2. Edition"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/(Pam)Papusa+Tango+Marathon/10897
+eventWebsite: https://www.papusa.de/kopie-von-papusa-tango-marathon-munich
 locale: en
 summary: "(Pam)Papusa Tango Marathon (February 26-28, 2027) in Germany, Kirchdorf an der Amper. Source: Tangocat."
 eventName: "(Pam)Papusa Tango Marathon"

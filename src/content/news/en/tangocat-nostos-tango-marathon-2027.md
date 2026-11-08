@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Nostos+Tango+Marathon+2027/10956
+eventWebsite: https://greecetangoevents.gr/
 locale: en
 summary: "Nostos Tango Marathon 2027 (March 25-28, 2027) in Greece, Alexandroupoli. Source: Tangocat."
 eventName: "Nostos Tango Marathon 2027"

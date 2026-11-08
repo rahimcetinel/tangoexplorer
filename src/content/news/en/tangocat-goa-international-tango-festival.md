@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Goa+International+Tango+Festival/10802
+eventWebsite: https://goatangofestival.com
 locale: en
 summary: "Goa International Tango Festival (October 30 - November 1 2026) in India, Goa. Source: Tangocat."
 eventName: "Goa International Tango Festival"

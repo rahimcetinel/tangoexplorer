@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Taiwan+Tango+Marathon/11004
+eventWebsite: https://www.facebook.com/groups/1494663620822173/
 locale: en
 summary: "Taiwan Tango Marathon (December 4-6 2026) in Taiwan, Doulan Village. Source: Tangocat."
 eventName: "Taiwan Tango Marathon"

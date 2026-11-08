@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Riga+Winter+Tango+Marathon+El+Gordo/11172
+eventWebsite: https://argtango.eu/rwtm/
 locale: en
 summary: "Riga Winter Tango Marathon El Gordo (February 25 - March 1, 2027) in Latvia, Riga. Source: Tangocat."
 eventName: "Riga Winter Tango Marathon El Gordo"

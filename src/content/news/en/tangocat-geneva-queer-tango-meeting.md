@@ -4,6 +4,7 @@ date: 2026-10-26
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Geneva+Queer+Tango+Meeting/11209
+eventWebsite: https://gvaqtm.ch/
 locale: en
 summary: "Geneva Queer Tango Meeting (January 22-24, 2027) in Switzerland, Geneva. Source: Tangocat."
 eventName: "Geneva Queer Tango Meeting"

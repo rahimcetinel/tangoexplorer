@@ -4,6 +4,7 @@ date: 2026-11-01
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Brnos+Aires+Tango+Marathon+2027/11199
+eventWebsite: https://facebook.com/events/s/brnos-aires-tango-marathon-202/1870411777654096/
 locale: en
 summary: "Brnos Aires Tango Marathon 2027 (October 15-17, 2027) in Czechia, Brno. Source: Tangocat."
 eventName: "Brnos Aires Tango Marathon 2027"

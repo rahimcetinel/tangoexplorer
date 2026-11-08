@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Ottocento+Tango+Marathon/10265
+eventWebsite: https://www.facebook.com/photo/?fbid=10214965615530211&set=pcb.1611583986708969
 locale: en
 summary: "Ottocento Tango Marathon (October 15-18 2026) in Italy, Ferrara. Source: Tangocat."
 eventName: "Ottocento Tango Marathon"

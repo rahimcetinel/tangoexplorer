@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tangofestival+Rhein-Ruhr/11128
+eventWebsite: https://www.tangofestival-rheinruhr.de/
 locale: en
 summary: "Tangofestival Rhein-Ruhr (March 19-21, 2027) in Germany, Witten. Source: Tangocat."
 eventName: "Tangofestival Rhein-Ruhr"

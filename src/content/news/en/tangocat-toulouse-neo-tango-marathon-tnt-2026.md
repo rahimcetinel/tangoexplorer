@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Toulouse+Neo+Tango+Marathon+TNT+2026/10809
+eventWebsite: https://facebook.com/events/s/toulouse-neo-tango-marathon-tn/1271727451763867/
 locale: en
 summary: "Toulouse Neo Tango Marathon TNT 2026 (October 23-26 2026) in France, Toulouse. Source: Tangocat."
 eventName: "Toulouse Neo Tango Marathon TNT 2026"

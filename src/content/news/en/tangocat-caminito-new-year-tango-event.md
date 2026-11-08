@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Caminito+New+Year+Tango+Event/10449
+eventWebsite: https://www.caminito.lt/
 locale: en
 summary: "Caminito New Year Tango Event (December 31 - January 2 , 2027) in Lithuania, Vilnius. Source: Tangocat."
 eventName: "Caminito New Year Tango Event"

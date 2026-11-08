@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Bari+Tango+Congress/10575
+eventWebsite: http://www.baritangocongress.com
 locale: en
 summary: "Bari Tango Congress (October 29 - November 1 2026) in Italy, Bari. Source: Tangocat."
 eventName: "Bari Tango Congress"

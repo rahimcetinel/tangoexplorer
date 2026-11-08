@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Preciosa+Tango+Weekend/11132
+eventWebsite: https://facebook.com/events/s/preciosa-tango-weekend/1551315957022570/
 locale: en
 summary: "Preciosa Tango Weekend (September 4-5, 2027) in Poland, Lublin. Source: Tangocat."
 eventName: "Preciosa Tango Weekend"

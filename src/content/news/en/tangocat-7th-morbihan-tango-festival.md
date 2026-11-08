@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/7th+Morbihan+Tango+Festival/10871
+eventWebsite: https://www.facebook.com/photo/?fbid=2860604414302027&set=g.332019104537787
 locale: en
 summary: "7th Morbihan Tango Festival (July 5-11, 2027) in France, Saint-Gildas-de-Rhuys. Source: Tangocat."
 eventName: "7th Morbihan Tango Festival"

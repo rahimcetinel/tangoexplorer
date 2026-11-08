@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Marathon+Entre+Arcos+Before+Spring/11134
+eventWebsite: https://www.facebook.com/groups/770509519985304/
 locale: en
 summary: "Tango Marathon Entre Arcos Before Spring (February 26-28, 2027) in Czechia, Novy Jicin. Source: Tangocat."
 eventName: "Tango Marathon Entre Arcos Before Spring"

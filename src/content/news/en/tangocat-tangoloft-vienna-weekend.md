@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tangoloft+Vienna+Weekend/10789
+eventWebsite: https://facebook.com/events/s/1-tangoloft-vienna-weekend/782187221514595/
 locale: en
 summary: "Tangoloft Vienna Weekend (September 10-13 2026) in Austria, Vienna. Source: Tangocat."
 eventName: "Tangoloft Vienna Weekend"

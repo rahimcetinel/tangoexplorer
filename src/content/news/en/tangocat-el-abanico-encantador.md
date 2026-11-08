@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/el+Abanico+Encantador/10407
+eventWebsite: https://www.facebook.com/groups/958800094732591/
 locale: en
 summary: "El Abanico Encantador (February 26-28, 2027) in Italy, Rome. Source: Tangocat."
 eventName: "El Abanico Encantador"

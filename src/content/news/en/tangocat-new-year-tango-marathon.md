@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/New+Year+Tango+Marathon/10443
+eventWebsite: https://www.facebook.com/groups/777271373614115/
 locale: en
 summary: "New Year Tango Marathon (December 30 - January 3 , 2027) in Hungary, Budapest. Source: Tangocat."
 eventName: "New Year Tango Marathon"

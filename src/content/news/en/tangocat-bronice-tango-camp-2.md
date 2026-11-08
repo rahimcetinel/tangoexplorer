@@ -4,6 +4,7 @@ date: 2026-10-18
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Bronice+Tango+Camp+2/11157
+eventWebsite: https://facebook.com/events/s/bronice-tango-camp-2/1729295821674525/
 locale: en
 summary: "Bronice Tango Camp 2 (November 11-15 2026) in Poland, Nałęczów. Source: Tangocat."
 eventName: "Bronice Tango Camp 2"

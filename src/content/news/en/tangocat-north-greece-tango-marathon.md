@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/North+Greece+Tango+Marathon/10768
+eventWebsite: https://www.facebook.com/groups/1456271901341735/
 locale: en
 summary: "North Greece Tango Marathon (March 5-7, 2027) in Greece, Thessaloniki. Source: Tangocat."
 eventName: "North Greece Tango Marathon"

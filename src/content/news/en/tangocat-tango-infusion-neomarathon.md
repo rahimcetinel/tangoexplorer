@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Infusion+Neomarathon/10797
+eventWebsite: https://tangoinfusion.hu/
 locale: en
 summary: "Tango Infusion Neomarathon (October 16-18 2026) in Hungary, Budapest. Source: Tangocat."
 eventName: "Tango Infusion Neomarathon"

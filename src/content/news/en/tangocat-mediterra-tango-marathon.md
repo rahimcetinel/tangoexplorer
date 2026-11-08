@@ -4,6 +4,7 @@ date: 2026-09-10
 category: turkiye
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Mediterra+Tango+Marathon/10830
+eventWebsite: https://mediterratangomarathon.com
 locale: en
 summary: "Mediterra Tango Marathon (October 14-19 2026) in Türkiye, Kemer. Source: Tangocat."
 eventName: "Mediterra Tango Marathon"

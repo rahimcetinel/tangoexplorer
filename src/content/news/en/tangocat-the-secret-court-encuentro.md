@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/The+Secret+Court+-+Encuentro/11126
+eventWebsite: https://facebook.com/events/s/the-secret-court-encuentro/4574936626118536/
 locale: en
 summary: "The Secret Court - Encuentro (January 22-24, 2027) in Poland, Osiecznica. Source: Tangocat."
 eventName: "The Secret Court - Encuentro"

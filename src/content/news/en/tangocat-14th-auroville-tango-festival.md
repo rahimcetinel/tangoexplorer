@@ -4,6 +4,7 @@ date: 2026-10-30
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/14th+Auroville+Tango+Festival/11237
+eventWebsite: https://www.aurovilletango.org/festival/?utm_source=chatgpt.com
 locale: en
 summary: "14th Auroville Tango Festival (March 17-21, 2027) in India, Auroville. Source: Tangocat."
 eventName: "14th Auroville Tango Festival"

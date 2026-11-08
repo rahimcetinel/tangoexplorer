@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Tango+Embrace+Slovenia/10248
+eventWebsite: https://www.facebook.com/groups/672772513835957/
 locale: en
 summary: "Tango Embrace Slovenia (September 11-13 2026) in Slovenia, Rogaška Slatina. Source: Tangocat."
 eventName: "Tango Embrace Slovenia"

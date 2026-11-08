@@ -4,6 +4,7 @@ date: 2026-10-16
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/ATUSA+Tango+Festival+%26+Championship/11146
+eventWebsite: http://www.tangousachampionship.com
 locale: en
 summary: "ATUSA Tango Festival & Championship (May 27-31, 2027) in United States, San Francisco. Source: Tangocat."
 eventName: "ATUSA Tango Festival & Championship"

@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Winter+Tango+Napoli+Festival+10%C2%B0ed/10751
+eventWebsite: https://www.wintertangonapoli.it/
 locale: en
 summary: "Winter Tango Napoli Festival 10°ed (December 10-13 2026) in Italy, Naples. Source: Tangocat."
 eventName: "Winter Tango Napoli Festival 10°ed"

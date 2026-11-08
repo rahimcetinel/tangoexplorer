@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Homero+Tango+Marathon+10/10600
+eventWebsite: https://facebook.com/events/s/homero-tango-marathon-10-15-18/880608784488468/
 locale: en
 summary: "Homero Tango Marathon 10 (October 15-18 2026) in Sweden, Malmö. Source: Tangocat."
 eventName: "Homero Tango Marathon 10"

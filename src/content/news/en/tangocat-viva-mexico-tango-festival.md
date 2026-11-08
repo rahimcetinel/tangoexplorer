@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Viva+Mexico+Tango+Festival/10739
+eventWebsite: http://www.vivamexicotangofestival.com
 locale: en
 summary: "Viva Mexico Tango Festival (March 3-8, 2027) in Mexico, Ajijic. Source: Tangocat."
 eventName: "Viva Mexico Tango Festival"

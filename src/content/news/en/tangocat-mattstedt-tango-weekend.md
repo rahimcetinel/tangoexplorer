@@ -4,6 +4,7 @@ date: 2026-09-15
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Mattstedt+Tango+Weekend/10939
+eventWebsite: https://de.muehlenhofmattstedt.de/tango-weekend
 locale: en
 summary: "Mattstedt Tango Weekend (May 26-30, 2027) in Germany, Mattstedt. Source: Tangocat."
 eventName: "Mattstedt Tango Weekend"

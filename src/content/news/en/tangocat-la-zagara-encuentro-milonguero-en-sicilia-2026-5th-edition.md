@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/La+Zagara+Encuentro+Milonguero+en+Sicilia+2026+(5th+edition)/10387
+eventWebsite: https://facebook.com/events/s/la-zagara-encuentro-milonguero/2707619956288252/
 locale: en
 summary: "La Zagara Encuentro Milonguero en Sicilia 2026 (5th edition) (October 22-25 2026) in Italy, Milazzo. Source: Tangocat."
 eventName: "La Zagara Encuentro Milonguero en Sicilia 2026 (5th edition)"

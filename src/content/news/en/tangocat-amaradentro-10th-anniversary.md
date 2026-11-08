@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/aMarAdentro+10th+Anniversary/10489
+eventWebsite: https://facebook.com/events/s/amaradentro/891248630274654/
 locale: en
 summary: "aMarAdentro 10th Anniversary (October 30 - November 1 2026) in Italy, Santa Margherita Ligure. Source: Tangocat."
 eventName: "aMarAdentro 10th Anniversary"

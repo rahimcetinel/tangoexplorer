@@ -4,6 +4,7 @@ date: 2026-09-10
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/8th+Singapore+International+Tango+Festival/10781
+eventWebsite: https://sitf.sg/
 locale: en
 summary: "8th Singapore International Tango Festival (October 1-4 2026) in Singapore, Singapore. Source: Tangocat."
 eventName: "8th Singapore International Tango Festival"

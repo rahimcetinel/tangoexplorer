@@ -4,6 +4,7 @@ date: 2026-10-09
 category: dunya
 source: Tangocat
 sourceUrl: https://tangocat.net/go/Mar+de+Tango+Maraton+-+MardeTango/10971
+eventWebsite: http://mardetango.com
 locale: en
 summary: "Mar de Tango Maraton - MardeTango (January 28-31, 2027) in Spain, València. Source: Tangocat."
 eventName: "Mar de Tango Maraton - MardeTango"
