@@ -13,7 +13,7 @@ interface Props {
 const { locale, mode, posts } = Astro.props;
 const copy = ui[locale];
 const home = homePath(locale);
-const currentPath = Astro.url.pathname;
+const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
 const showSearch = mode === 'home' || mode === 'category' || mode === 'milonga';
 const counts = countByRegion(posts);
 const regionsActive = currentPath.startsWith('/region');

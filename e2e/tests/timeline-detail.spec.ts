@@ -22,7 +22,7 @@ test('month columns are chronological and eager months have real cards', async (
     await expect(lazy.first().locator('[data-card]')).toHaveCount(0);
     await expect(lazy.first().locator('.app-card-skeleton').first()).toBeAttached();
     const fragment = await lazy.first().getAttribute('data-fragment');
-    expect(fragment).toMatch(/^\/fragments\/en\/\d{4}-\d{2}$/);
+    expect(fragment).toMatch(/^\/fragments\/\d{4}-\d{2}$/);
   }
 });
 

@@ -9,22 +9,13 @@ test('the RSS feed lists upcoming events', async ({ request }) => {
   expect(xml).toContain('/news/');
 });
 
-test('about explains how to submit and correct listings', async ({ page }) => {
+test('the About page offers the feeds and no off-site submission links', async ({ page }) => {
   await page.goto('/about#contribute');
   await expect(page.locator('#contribute')).toBeVisible();
-  await expect(page.locator('#contribute ~ ul a', { hasText: 'Submit an event' })).toHaveAttribute(
+  await expect(page.locator('#contribute ~ ul a', { hasText: 'RSS feed' })).toHaveAttribute('href', '/feed.xml');
+  await expect(page.locator('#contribute ~ ul a', { hasText: 'Calendar feed' })).toHaveAttribute(
     'href',
-    /github\.com\/rahimcetinel\/tangoexplorer\/issues\/new/,
+    '/cal/all.ics',
   );
-});
-
-test('event pages offer a prefilled correction link', async ({ page }) => {
-  const feed = await page.request.get('/search-index.json');
-  const items = (await feed.json()) as { s: string }[];
-  await page.goto(`/news/${items[0]!.s}`);
-  const report = page.locator('.app-report a');
-  await expect(report).toBeVisible();
-  const href = await report.getAttribute('href');
-  expect(href).toContain('issues/new?template=correction.yml');
-  expect(href).toContain('Correction');
+  await expect(page.locator('a[href*="github.com"]')).toHaveCount(0);
 });

@@ -18,6 +18,7 @@ test('query renders grouped results and a count', async ({ page }) => {
 
 test('kind chip narrows the result set and updates the URL', async ({ page }) => {
   await page.goto('/search?q=istanbul');
+  await expect(page.locator('.app-search-result').first()).toBeVisible();
   const before = await page.locator('.app-search-result').count();
   await page.locator('[data-search-kind="festival"]').click();
   await expect(page).toHaveURL(/kind=festival/);
@@ -49,7 +50,7 @@ test('a result opens in the right-hand drawer and close returns to the query', a
   await expect(page).toHaveURL(/\/news\//);
   await expect(panel.locator('[data-article-frame]')).toContainText(/Istanbul/);
   await page.locator('[data-detail-close]').click();
-  await expect(page).toHaveURL(/\/search\?q=istanbul/);
+  await expect(page).toHaveURL(/\/search\/?\?q=istanbul/);
   await expect(panel).not.toHaveClass(/is-open/);
 });
 

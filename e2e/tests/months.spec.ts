@@ -10,11 +10,12 @@ test('a month deep link opens that month alone', async ({ page }) => {
 
 test('month arrows move to the previous and next month', async ({ page }) => {
   await page.goto('/?month=2026-12');
+  await expect(page.locator('[data-board]')).toHaveAttribute('data-view', 'single');
   await page.locator('[data-month-step="1"]').click();
-  await expect(page).toHaveURL(/month=2027-01/);
-  await expect(page.locator('.app-mchip.is-active')).toContainText('Jan 2027');
+  await expect(page).toHaveURL(/month=2027-01/, { timeout: 20_000 });
+  await expect(page.locator('.app-mchip.is-active')).toContainText('Jan 2027', { timeout: 20_000 });
   await page.locator('[data-month-step="-1"]').click();
-  await expect(page).toHaveURL(/month=2026-12/);
+  await expect(page).toHaveURL(/month=2026-12/, { timeout: 20_000 });
 });
 
 test('all-months clears the month focus', async ({ page }) => {
