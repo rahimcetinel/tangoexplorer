@@ -1,0 +1,24 @@
+name: Correction
+description: Report a wrong date, city, venue or link on an event page.
+title: "Correction: "
+labels: ["correction"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Event page URL
+      placeholder: https://tangoexplorer.com/news/...
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong
+      description: The date, city, venue or link that needs fixing.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Correct details
+      description: If you have a source (organiser page, Instagram post), paste it here.

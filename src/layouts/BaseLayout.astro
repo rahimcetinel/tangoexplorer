@@ -44,6 +44,12 @@ const graph = [...siteGraph(locale, site), ...jsonLd];
     <meta name="description" content={description} />
     {robots && <meta name="robots" content={robots} />}
     <link rel="canonical" href={canonical} />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="TangoExplorer — upcoming tango events"
+      href="/feed.xml"
+    />
     <meta property="og:site_name" content={copy.brand} />
     <meta property="og:type" content={ogType} />
     <meta property="og:locale" content="en_US" />

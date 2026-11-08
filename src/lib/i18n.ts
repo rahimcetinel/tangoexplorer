@@ -150,6 +150,7 @@ export const ui = {
     edition: 'Edition',
     registrationOpens: 'Registration opens',
     registrationOpen: 'Registration open',
+    registrationOpenNow: 'Open now',
     eventWebsite: 'Event website',
     openInMaps: 'Open in Maps',
     addedOn: 'Added',
@@ -193,9 +194,17 @@ export const ui = {
     aboutP2:
       'We do not copy source pages verbatim. Each story has a date, a short summary, and a link back to the original.',
     aboutSources: 'Sources',
+    aboutContribute: 'Contribute',
+    aboutContributeP:
+      'Found a wrong date, a missing city or an event we have not listed? Open an issue — corrections are reviewed and folded into the next daily rebuild.',
+    aboutSubmitEvent: 'Submit an event',
+    aboutReportCorrection: 'Report a correction',
+    aboutFeed: 'RSS feed',
+    aboutFeedback: 'Feedback & corrections',
+    reportOutdated: 'Report outdated info',
     aboutTangocat: 'world festival and marathon calendar',
     aboutHoy: 'milonga and class listings',
-    aboutSocial: 'Instagram and Facebook — for now, notes dropped by hand into',
+    aboutSocial: 'Instagram and Facebook — for scenes and organisers the calendars miss',
     aboutEventLinks:
       'Event stories keep the Tangocat listing as the source. If the event has its own website, Instagram, or Facebook, those open in a new tab.',
     aboutFilters:

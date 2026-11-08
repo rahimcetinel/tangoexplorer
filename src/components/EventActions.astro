@@ -3,6 +3,7 @@ import Button from './ui/Button.astro';
 import { newsPath, ui, type Locale } from '../lib/i18n';
 import { newsSlug, type NewsEntry } from '../lib/news';
 import { buildIcs, googleCalendarUrl, icsHref } from '../lib/calendar';
+import { reportEventUrl } from '../lib/site';
 
 interface Props {
   locale: Locale;
@@ -84,3 +85,8 @@ const telegram = `https://t.me/share/url?url=${encodeURIComponent(pageUrl)}&text
     )
   }
 </div>
+<p class="app-report">
+  <a href={reportEventUrl(title, pageUrl)} target="_blank" rel="noopener noreferrer">
+    {copy.reportOutdated}
+  </a>
+</p>

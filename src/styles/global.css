@@ -676,6 +676,24 @@ body:has(.app-shell) {
   text-decoration: underline;
 }
 
+.app-foot-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin-top: 8px;
+}
+
+.app-report {
+  margin: 10px 0 0;
+  font-size: 0.78rem;
+}
+
+.app-report a {
+  color: var(--color-ink-soft);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .app-center {
   display: flex;
   flex-direction: column;

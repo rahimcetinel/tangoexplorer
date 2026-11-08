@@ -1,0 +1,34 @@
+name: Event submission
+description: Suggest a tango event that is missing from the calendar.
+title: "Event submission: "
+labels: ["submission"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Event name
+    validations:
+      required: true
+  - type: input
+    id: dates
+    attributes:
+      label: Dates
+      placeholder: 12–14 March 2027
+    validations:
+      required: true
+  - type: input
+    id: place
+    attributes:
+      label: City and country
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Website, Instagram or Facebook
+      placeholder: https://
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Venue, registration window, price, or the source where you saw it.

@@ -3,6 +3,7 @@ import AppShell from '../layouts/AppShell.astro';
 import Header from './Header.astro';
 import { getNews } from '../lib/news';
 import { homePath, ui, type Locale } from '../lib/i18n';
+import { FEED_PATH, GITHUB_URL, SUBMIT_EVENT_URL } from '../lib/site';
 
 interface Props {
   locale: Locale;
@@ -11,9 +12,11 @@ interface Props {
 const { locale } = Astro.props;
 const copy = ui[locale];
 const posts = await getNews(locale);
+const description =
+  'What TangoExplorer covers, where the events come from, and how to submit or correct a listing.';
 ---
 
-<AppShell title={`${copy.aboutTitle} — ${copy.brand}`} description={copy.aboutTitle} locale={locale} posts={posts}>
+<AppShell title={`${copy.aboutTitle} — ${copy.brand}`} description={description} locale={locale} posts={posts}>
   <Fragment slot="center">
     <Header
       locale={locale}
@@ -35,14 +38,27 @@ const posts = await getNews(locale);
           </li>
           <li>
             <a href="https://hoy-milonga.com/turkiye/tr" target="_blank" rel="noopener noreferrer">Hoy Milonga Türkiye</a>
-            — {copy.aboutHoy}
+            {' — '}{copy.aboutHoy}
           </li>
-          <li>
-            {copy.aboutSocial} <code>sources/inbox/</code>
-          </li>
+          <li>{copy.aboutSocial}</li>
         </ul>
         <p>{copy.aboutEventLinks}</p>
-        <p>{copy.aboutFilters}</p>
+
+        <h2 id="contribute">{copy.aboutContribute}</h2>
+        <p>{copy.aboutContributeP}</p>
+        <ul>
+          <li>
+            <a href={SUBMIT_EVENT_URL} target="_blank" rel="noopener noreferrer">{copy.aboutSubmitEvent}</a>
+          </li>
+          <li>
+            <a href={`${GITHUB_URL}/issues/new?template=correction.yml`} target="_blank" rel="noopener noreferrer">
+              {copy.aboutReportCorrection}
+            </a>
+          </li>
+          <li>
+            <a href={FEED_PATH}>{copy.aboutFeed}</a>
+          </li>
+        </ul>
       </div>
     </main>
   </Fragment>

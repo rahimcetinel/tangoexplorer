@@ -1,5 +1,6 @@
 ---
 import { ui, type Locale } from '../lib/i18n';
+import { FEED_PATH, GITHUB_URL, SUBMIT_EVENT_URL } from '../lib/site';
 
 interface Props {
   locale: Locale;
@@ -15,4 +16,10 @@ const copy = ui[Astro.props.locale];
     <a href="https://tangocat.net/" target="_blank" rel="noopener noreferrer">Tangocat</a>,{' '}
     <a href="https://hoy-milonga.com/turkiye/tr" target="_blank" rel="noopener noreferrer">Hoy Milonga</a>
   </p>
+  <nav class="app-foot-links" aria-label={copy.aboutFeedback}>
+    <a href="/about#contribute">{copy.aboutFeedback}</a>
+    <a href={SUBMIT_EVENT_URL} target="_blank" rel="noopener noreferrer">{copy.aboutSubmitEvent}</a>
+    <a href={FEED_PATH}>{copy.aboutFeed}</a>
+    <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">GitHub</a>
+  </nav>
 </footer>

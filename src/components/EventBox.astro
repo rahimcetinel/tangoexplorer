@@ -108,7 +108,7 @@ function hostOf(url: string): string {
               {d.registrationStart && (
                 <div>
                   <dt>{registrationOpen ? copy.registrationOpen : copy.registrationOpens}</dt>
-                  <dd>{registrationOpen ? '✓' : formatNewsDate(d.registrationStart, locale)}</dd>
+                  <dd>{registrationOpen ? copy.registrationOpenNow : formatNewsDate(d.registrationStart, locale)}</dd>
                 </div>
               )}
             </dl>
