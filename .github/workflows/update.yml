@@ -1,15 +1,25 @@
 name: Update site
 
+# İçerik toplama hattı: kaynaklardan veri çeker, görselleri toplar, build eder,
+# deploy eder ve (schedule'da) canlı siteyi görsel + E2E ile doğrular.
+# Kod değişikliğini hızlıca yayına almak için bunu değil "Deploy" hattını
+# kullanın; push zaten Deploy'u tetikler.
 on:
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
+    inputs:
+      checks:
+        description: "Deploy sonrası görsel kontrol + E2E testlerini çalıştır"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
 
+# deploy.yml ile aynı grup: sıraya girer, üst üste binmez.
 concurrency:
-  group: update-site
+  group: site-deploy
   cancel-in-progress: false
 
 jobs:
@@ -38,6 +48,16 @@ jobs:
 
       - run: npm ci
 
+      # Astro'nun optimize görsel cache'i (node_modules/.astro) `npm ci` ile
+      # siliniyor; geri yüklemek build süresini ~10 dk'dan birkaç dakikaya indirir.
+      - name: Restore Astro image cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.astro/assets
+          key: astro-images-${{ runner.os }}-${{ hashFiles('src/assets/**', 'package-lock.json') }}
+          restore-keys: |
+            astro-images-${{ runner.os }}-
+
       - name: Ingest and publish
         env:
           META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
@@ -62,6 +82,9 @@ jobs:
           python agentic-python/ingest_instagram.py || true
           python agentic-python/publish_instagram.py || true
           python agentic-python/collect_images.py --limit 60 || true
+          # PNG olarak inen kapakları JPEG'e çevirir (build/deploy boyutu ve
+          # `<Picture>` fallback'i için); frontmatter referanslarını da günceller.
+          node agentic-python/normalize-event-images.mjs || true
 
       - name: Audit data quality
         if: always()
@@ -119,13 +142,14 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: npx wrangler pages deploy dist --project-name tango-news --commit-dirty=true
 
-      # Post-deploy smoke check against the live site (mobile + desktop layout,
-      # country filter). Fails the run if the layout regresses; screenshots are
-      # kept as an artifact either way.
+      # Deploy sonrası canlı site kontrolü. Schedule'da her zaman, manuel
+      # tetiklemede yalnızca `checks` işaretliyse çalışır (hızlı deploy ~3 dk kazanır).
       - name: Install Chromium for the visual check
+        if: github.event_name == 'schedule' || inputs.checks
         run: npx playwright install --with-deps chromium
 
       - name: Visual check (live site)
+        if: github.event_name == 'schedule' || inputs.checks
         run: |
           sleep 10
           npm run check:visual
@@ -133,11 +157,11 @@ jobs:
       # Behaviour suite against the freshly deployed site. Runs even when the
       # visual check fails so both signals are available in one run.
       - name: E2E tests (live site)
-        if: always()
+        if: always() && (github.event_name == 'schedule' || inputs.checks)
         run: npm run test:e2e
 
       - name: Upload visual check screenshots
-        if: always()
+        if: always() && (github.event_name == 'schedule' || inputs.checks)
         uses: actions/upload-artifact@v4
         with:
           name: visual-check
@@ -145,7 +169,7 @@ jobs:
           if-no-files-found: warn
 
       - name: Upload Playwright report
-        if: always()
+        if: always() && (github.event_name == 'schedule' || inputs.checks)
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report

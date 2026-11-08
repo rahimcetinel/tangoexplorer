@@ -1,5 +1,8 @@
 name: Deploy
 
+# Hızlı yol: main'i build edip Cloudflare Pages'e basar. İçerik toplama işi
+# "Update site" (update.yml) hattında; kod değişikliğini yayına almak için
+# onu elle tetiklemeye gerek yok.
 on:
   push:
     branches: [main]
@@ -8,9 +11,11 @@ on:
 permissions:
   contents: read
 
+# update.yml ile aynı grup: iki hat aynı commit'i aynı anda build edip
+# deploy etmesin. Sıraya girerler, birbirini iptal etmezler.
 concurrency:
-  group: deploy-site
-  cancel-in-progress: true
+  group: site-deploy
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -24,6 +29,17 @@ jobs:
           cache: npm
 
       - run: npm ci
+
+      # Astro optimize görselleri node_modules/.astro içinde tutar; `npm ci`
+      # bu dizini siler. Kurulumdan sonra geri yüklemek, içerik değişmediği
+      # koşularda ~4.6k sharp dönüşümünü tekrar yapmayı önler.
+      - name: Restore Astro image cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.astro/assets
+          key: astro-images-${{ runner.os }}-${{ hashFiles('src/assets/**', 'package-lock.json') }}
+          restore-keys: |
+            astro-images-${{ runner.os }}-
 
       - name: Build
         run: npm run build

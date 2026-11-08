@@ -66,6 +66,14 @@
 - **Kırık kaynak linkleri** (2026-11-08): `check_links.py` artık yönlendirmeleri kendisi izliyor (no-redirect opener). Web dışı şema (`Xhttps://…`) → `dead`; Tangocat’ın kaldırdığı etkinliklerde 302 → `/en/festivals` → yeni **`gone`** durumu. `gone` kayıtlar sayfa olarak kalır (“The source no longer lists this event.” uyarısıyla) ama board, arama ve RSS’ten düşer (`getNews` filtresi); `news/[slug].astro` artık `getCollection` + `hasNotEnded` ile üretiliyor ki bu sayfalar 404 olmasın. İlk taramada 11 kayıt `gone`, 2 kayıt `dead` çıktı. Örnek: **5th Tangoaires Marathon** — Tangocat’ın `/go/` yönlendirmesi bozuk (`Xhttps://tangoaires.gr/…`), etkinlik tangoaires.gr’de yaşıyor; kayda çalışan `eventWebsite` eklendi.
 - Üst bar tarihi mobilde kısalıyor: `≤640px`’de `6 Kas` / `6 Nov`, üstünde `Fri, 6 Nov 2026`. Uzun tarih 390px’te marka yüzünden kırpılıyordu (`FRI, 6 N…`).
 
+## Deploy hattı (CI)
+
+- **İki workflow, tek concurrency grubu** (`site-deploy`, `cancel-in-progress: false`): üst üste binmezler, sıraya girerler. Önceden `deploy-site` / `update-site` diye ayrıydılar; aynı commit iki kez build edilip iki kez deploy edilebiliyordu (2026-11-08'de 19:46'da tam olarak bu oldu).
+- **Deploy** (`deploy.yml`): `push: main` + **`workflow_dispatch`**. Yalnız `npm ci → build → wrangler pages deploy`. Kod değişikliğini yayına almanın hızlı yolu budur; push sonrası ayrıca `Update site` tetiklemeye gerek yok.
+- **Update site** (`update.yml`): `schedule` (6 saatte bir) + `workflow_dispatch` (boolean `checks`). İçerik toplar, link sağlığını ve görselleri commit eder, build + deploy eder. Deploy sonrası görsel kontrol + E2E yalnız **schedule**'da ya da manuel tetiklemede `checks` işaretliyse koşar; hızlı manuel deploy ~3 dk kazanır. 19:27 koşusundaki 18 dk 24 sn'nin dökümü: ingest 3:24, link check 0:53, build 10:56, deploy 0:11, Chromium+görsel+E2E 2:33.
+- **Astro görsel cache'i**: optimize görseller `node_modules/.astro/assets` içinde; `npm ci` dizini sildiği için her koşu 4.648 sharp dönüşümünü sıfırdan yapıyordu. İki hatta da `actions/cache` ile (`astro-images-<os>-<assets+lock hash>`) `npm ci`'den **sonra** geri yükleniyor. Yalnız `assets/` alt dizini cache'leniyor (`.astro` içindeki üretilen tipler/dosya listeleri bayatlamasın). Anahtar görsel içeriğiyle değişir; eski girdiler GitHub tarafından LRU ile atılır.
+- **Görsel çıktısı**: `<Picture>` kullanımlarında `fallbackFormat="jpg"` (Astro varsayılanı `png`; 260 kB kaynaktan 4 MB PNG üretiyordu → `dist` 339 MB, 111 MB'ı PNG). Toplanan kapaklar `agentic-python/normalize-event-images.mjs` ile JPEG'e çevriliyor (149 PNG → 36 MB tasarruf, frontmatter referansları da güncellenir); `--check` kalan PNG'leri raporlar, `--dry-run` sadece listeler. Update hattı bu scripti ingest'ten sonra çalıştırır.
+
 ## Test suite
 
 - Vitrin Playwright testleri `e2e/` altında. Varsayılan hedef `https://tangoexplorer.com`; yerel için `BASE_URL`. `npm run test:e2e`. 2026-10-06'da yazıldı, çalıştırılmadı.
