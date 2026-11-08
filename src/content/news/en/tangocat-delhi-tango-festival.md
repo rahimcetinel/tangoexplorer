@@ -18,7 +18,7 @@ country: "India"
 city: "New Delhi"
 eventStart: 2026-09-24
 eventEnd: 2026-09-27
-image: "/events/tangocat-delhi-tango-festival.png"
+image: "/events/tangocat-delhi-tango-festival.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://delhitangofestival.in/img/tangologo.png
 ---

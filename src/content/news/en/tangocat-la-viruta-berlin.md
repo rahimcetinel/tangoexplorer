@@ -19,7 +19,7 @@ eventStart: 2026-11-05
 eventEnd: 2026-11-08
 registrationStart: 2026-05-15
 eventWebsite: https://www.lavirutaberlin.com
-image: "/events/tangocat-la-viruta-berlin.png"
+image: "/events/tangocat-la-viruta-berlin.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2026-la-viruta-berlin/
 ---

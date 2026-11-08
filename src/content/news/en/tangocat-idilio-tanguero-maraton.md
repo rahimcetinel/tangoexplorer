@@ -18,7 +18,7 @@ country: "Mexico"
 city: "Guadalajara"
 eventStart: 2026-12-11
 eventEnd: 2026-12-13
-image: "/events/tangocat-idilio-tanguero-maraton.png"
+image: "/events/tangocat-idilio-tanguero-maraton.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/23fd2a2be53141ed810f4d3dcdcd01fa.png/v1/fill/w_20,h_20,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/23fd2a2be53141ed810f4d3dcdcd01fa.png
 ---

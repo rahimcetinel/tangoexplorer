@@ -18,7 +18,7 @@ country: "Latvia"
 city: "Riga"
 eventStart: 2027-02-25
 eventEnd: 2027-03-01
-image: "/events/tangocat-riga-winter-tango-marathon-el-gordo.png"
+image: "/events/tangocat-riga-winter-tango-marathon-el-gordo.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://argtango.eu/wp-content/uploads/2015/02/Background-sliced2.png
 ---

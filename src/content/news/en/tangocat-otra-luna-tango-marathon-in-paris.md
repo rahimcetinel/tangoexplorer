@@ -17,7 +17,7 @@ country: "France"
 city: "Paris"
 eventStart: 2027-02-12
 eventEnd: 2027-02-14
-image: "/events/tangocat-otra-luna-tango-marathon-in-paris.png"
+image: "/events/tangocat-otra-luna-tango-marathon-in-paris.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://tango-marathon.otraluna.paris/assets/img/og-banner.png
 edition: 8

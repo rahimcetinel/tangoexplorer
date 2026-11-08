@@ -18,7 +18,7 @@ country: "France"
 city: "Boisseuil"
 eventStart: 2026-10-23
 eventEnd: 2026-10-25
-image: "/events/tangocat-limouzi-tango-week-end-8.png"
+image: "/events/tangocat-limouzi-tango-week-end-8.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: http://www.limouzitangoweekend.com/images/france.png
 ---

@@ -10,7 +10,7 @@ eventName: "LunaRossa tango challenge"
 eventWhen: "22 January 2027 – 24 September 2026"
 eventLocation: "Italy, naples"
 eventWebsite: https://www.lunarossatangochallenge.com/home/
-image: "/events/tmd-lunarossa-tango-challenge.png"
+image: "/events/tmd-lunarossa-tango-challenge.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2027-lunarossa-tango-challenge-edition-1/
 format: etkinlik

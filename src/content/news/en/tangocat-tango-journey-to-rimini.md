@@ -18,7 +18,7 @@ country: "Italy"
 city: "Rimini"
 eventStart: 2026-09-06
 eventEnd: 2026-09-13
-image: "/events/tangocat-tango-journey-to-rimini.png"
+image: "/events/tangocat-tango-journey-to-rimini.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://siempre-tango.de/media/61/5b/0d/1669989360/logo-dunkel-web.png
 ---

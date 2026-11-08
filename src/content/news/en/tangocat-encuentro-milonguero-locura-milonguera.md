@@ -18,7 +18,7 @@ country: "Sweden"
 city: "Malmö"
 eventStart: 2027-05-06
 eventEnd: 2027-05-09
-image: "/events/tangocat-encuentro-milonguero-locura-milonguera.png"
+image: "/events/tangocat-encuentro-milonguero-locura-milonguera.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: http://milonguera.locuratanguera.pl/wp-content/uploads/2025/08/cropped-Namnlost22-32x32.png
 ---

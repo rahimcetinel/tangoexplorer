@@ -17,7 +17,7 @@ country: "Switzerland"
 city: "Basel"
 eventStart: 2026-10-01
 eventEnd: 2026-10-04
-image: "/events/tangocat-maracuentro-2026-the-28th-edition.png"
+image: "/events/tangocat-maracuentro-2026-the-28th-edition.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://impro.usercontent.one/appid/oneComWsb/domain/maracuentro.com/media/maracuentro.com/onewebmedia/Fotos/Hintergrund/20250303_Maracuentro-Mariposas_Farbig_PNG-8.png?etag=%223fae8-67c5cb55%22&sourceContentType=image%2Fpng&quality=85
 edition: 28

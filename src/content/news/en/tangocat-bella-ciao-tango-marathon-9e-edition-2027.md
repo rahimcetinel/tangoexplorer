@@ -18,7 +18,7 @@ country: "France"
 city: "Tours"
 eventStart: 2027-03-05
 eventEnd: 2027-03-07
-image: "/events/tangocat-bella-ciao-tango-marathon-9e-edition-2027.png"
+image: "/events/tangocat-bella-ciao-tango-marathon-9e-edition-2027.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: http://www.bellaciaotangoevents.com/assets/poster-main.png
 ---

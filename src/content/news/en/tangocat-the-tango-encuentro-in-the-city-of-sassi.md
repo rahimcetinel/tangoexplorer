@@ -18,7 +18,7 @@ country: "Italy"
 city: "Sassi"
 eventStart: 2027-03-05
 eventEnd: 2027-03-07
-image: "/events/tangocat-the-tango-encuentro-in-the-city-of-sassi.png"
+image: "/events/tangocat-the-tango-encuentro-in-the-city-of-sassi.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://sassilonga.com/wp-content/uploads/2024/10/Progetto-senza-titolo-150x100.png
 ---

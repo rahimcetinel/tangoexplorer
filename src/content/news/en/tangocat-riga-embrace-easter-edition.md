@@ -19,7 +19,7 @@ eventStart: 2027-03-26
 eventEnd: 2027-03-28
 registrationStart: 2026-09-30
 eventWebsite: https://www.rigaembrace.lv/RE-Raduno/
-image: "/events/tangocat-riga-embrace-easter-edition.png"
+image: "/events/tangocat-riga-embrace-easter-edition.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2027-riga-embrace-easter-edition/
 ---

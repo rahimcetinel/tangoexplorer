@@ -18,7 +18,7 @@ country: "Spain"
 city: "Barcelona"
 eventStart: 2026-12-29
 eventEnd: 2027-01-04
-image: "/events/tangocat-tango-new-year-barcelona-underground.png"
+image: "/events/tangocat-tango-new-year-barcelona-underground.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://web.pointsoftango.app/pots_logo_64.png
 ---

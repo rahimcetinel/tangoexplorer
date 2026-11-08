@@ -17,7 +17,7 @@ country: "Spain"
 city: "Bilbao"
 eventStart: 2027-02-15
 eventEnd: 2027-02-21
-image: "/events/tangocat-bilbao-tango-festival-2027.png"
+image: "/events/tangocat-bilbao-tango-festival-2027.jpg"
 imageCredit: "Tangoverse"
 imageSourceUrl: https://tangoverse.net/events/bilbao-tango-festival-cup-2027-santurtzi-7422fe
 edition: 2

@@ -18,7 +18,7 @@ country: "Italy"
 city: "Ravenna"
 eventStart: 2027-02-18
 eventEnd: 2027-02-21
-image: "/events/tangocat-teodora-tango-marathon.png"
+image: "/events/tangocat-teodora-tango-marathon.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://teodoratangomarathon.com/wp-content/uploads/2019/08/Teodora-Sticky-Menu2x.png
 ---

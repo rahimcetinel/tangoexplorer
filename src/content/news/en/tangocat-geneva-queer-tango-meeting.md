@@ -18,7 +18,7 @@ country: "Switzerland"
 city: "Geneva"
 eventStart: 2027-01-22
 eventEnd: 2027-01-24
-image: "/events/tangocat-geneva-queer-tango-meeting.png"
+image: "/events/tangocat-geneva-queer-tango-meeting.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://gvaqtm.ch/wp-content/uploads/2026/09/cropped-GVAQTM-logo-carre-32x32.png
 ---

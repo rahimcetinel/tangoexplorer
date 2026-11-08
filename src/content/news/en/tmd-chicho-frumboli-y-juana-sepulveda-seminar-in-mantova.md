@@ -17,7 +17,7 @@ country: "Italy"
 city: "Mantova"
 eventStart: 2026-12-18
 eventEnd: 2026-09-20
-image: "/events/tmd-chicho-frumboli-y-juana-sepulveda-seminar-in-mantova.png"
+image: "/events/tmd-chicho-frumboli-y-juana-sepulveda-seminar-in-mantova.jpg"
 imageCredit: "Event image (tangomarathons.com)"
 imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2016/01/cropped-TMD-Logo-150x150.png
 ---

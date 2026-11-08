@@ -18,7 +18,7 @@ country: "Greece"
 city: "Xanthi"
 eventStart: 2026-11-26
 eventEnd: 2026-11-29
-image: "/events/tangocat-5th-tangoaires-marathon.png"
+image: "/events/tangocat-5th-tangoaires-marathon.jpg"
 imageCredit: "Event image (tangoaires.gr)"
 imageSourceUrl: https://tangoaires.gr/wp-content/uploads/2026/06/9-1024x1024.png
 ---

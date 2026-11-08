@@ -10,7 +10,7 @@ eventName: "Quiés q’andemos 3nd edition // June 27"
 eventWhen: "11–13 June 2027"
 eventLocation: "Spain, Salamanca"
 eventWebsite: https://quiesqandemos.es/
-image: "/events/tmd-quies-q-andemos-3nd-edition-june-27.png"
+image: "/events/tmd-quies-q-andemos-3nd-edition-june-27.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2027-qui%c3%a9s-qandemos-3nd-edition-june-27-edition-3/
 kinds:

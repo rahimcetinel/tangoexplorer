@@ -18,7 +18,7 @@ country: "İspanya"
 city: "La Orotava"
 eventStart: 2026-12-11
 eventEnd: 2026-12-14
-image: "/events/tangocat-tenerife-tango-marathon.png"
+image: "/events/tangocat-tenerife-tango-marathon.jpg"
 imageCredit: "Tangoverse"
 imageSourceUrl: https://tangoverse.net/events/tenerife-tango-maraton-4-edicion-039a79
 ---

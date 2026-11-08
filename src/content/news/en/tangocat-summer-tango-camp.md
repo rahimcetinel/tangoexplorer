@@ -18,7 +18,7 @@ country: "Montenegro"
 city: "Kolasin"
 eventStart: 2027-07-06
 eventEnd: 2027-07-24
-image: "/events/tangocat-summer-tango-camp.png"
+image: "/events/tangocat-summer-tango-camp.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://summertangocamp.com/wp-content/uploads/2024/03/home_main_image_new_smaller.png
 ---

@@ -18,7 +18,7 @@ country: "Ireland"
 city: "Dublin"
 eventStart: 2026-10-08
 eventEnd: 2026-10-11
-image: "/events/tangocat-ireland-tango-weekend.png"
+image: "/events/tangocat-ireland-tango-weekend.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://irelandtangoweekend.com/wp-content/uploads/2026/08/Screenshot-2026-08-25-at-11.41.50-AM.png
 ---

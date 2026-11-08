@@ -20,7 +20,7 @@ country: "United States"
 city: "Austin"
 eventStart: 2027-09-03
 eventEnd: 2027-09-05
-image: "/events/tmd-austin-tango-marathon.png"
+image: "/events/tmd-austin-tango-marathon.jpg"
 imageCredit: "Event image (tangomarathons.com)"
 imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2025/04/Austin-Tango-Marathon_-More-Than-Dance-504x315.png
 ---

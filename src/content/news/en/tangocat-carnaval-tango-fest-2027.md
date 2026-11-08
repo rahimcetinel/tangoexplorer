@@ -18,7 +18,7 @@ country: "Argentina"
 city: "Buenos Aires"
 eventStart: 2027-02-05
 eventEnd: 2027-02-09
-image: "/events/tangocat-carnaval-tango-fest-2027.png"
+image: "/events/tangocat-carnaval-tango-fest-2027.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://carnavalfest.com/wp-content/uploads/2022/02/FSM-Logo-6-copia.png
 ---

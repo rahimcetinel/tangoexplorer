@@ -18,7 +18,7 @@ country: "France"
 city: "Montpellier"
 eventStart: 2027-04-30
 eventEnd: 2027-05-09
-image: "/events/tangocat-tangosud-international-argentine-tango-festival.png"
+image: "/events/tangocat-tangosud-international-argentine-tango-festival.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.tangosud-montpellier.com/wp-content/uploads/2017/09/festival-international-tango-tangosud-montpellier.png
 ---

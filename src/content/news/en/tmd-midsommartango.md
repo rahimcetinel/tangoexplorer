@@ -18,7 +18,7 @@ country: "Sweden"
 city: "Linköping"
 eventStart: 2027-06-25
 eventEnd: 2027-06-27
-image: "/events/tmd-midsommartango.png"
+image: "/events/tmd-midsommartango.jpg"
 imageCredit: "Event image (tangomarathons.com)"
 imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2017/04/TMD-Logo-e1483284195338.png
 ---

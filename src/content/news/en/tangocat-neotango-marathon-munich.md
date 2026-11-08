@@ -18,7 +18,7 @@ country: "Germany"
 city: "Munich"
 eventStart: 2026-11-13
 eventEnd: 2026-11-16
-image: "/events/tangocat-neotango-marathon-munich.png"
+image: "/events/tangocat-neotango-marathon-munich.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://neotangomarathonmunich.com/media/website/website-logo-munich.png
 ---

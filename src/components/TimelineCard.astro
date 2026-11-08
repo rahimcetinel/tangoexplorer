@@ -47,6 +47,7 @@ const color = countryColor(post.data.country);
           src={fallbackImage(slug)}
           alt={altText}
           formats={['avif', 'webp']}
+          fallbackFormat="jpg"
           widths={[252, 408, 816]}
           sizes="(min-width: 1100px) 252px, (min-width: 640px) 30vw, 44vw"
           loading="lazy"

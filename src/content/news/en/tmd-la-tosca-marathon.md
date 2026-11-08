@@ -10,7 +10,7 @@ eventName: "La Tosca marathon"
 eventWhen: "5–7 March 2027"
 eventLocation: "Italy, Signa"
 eventWebsite: https://www.latoscamarathon.com
-image: "/events/tmd-la-tosca-marathon.png"
+image: "/events/tmd-la-tosca-marathon.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2027-la-tosca-marathon-edition-17/
 kinds:

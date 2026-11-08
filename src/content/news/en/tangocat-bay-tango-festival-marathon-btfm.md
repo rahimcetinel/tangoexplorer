@@ -19,7 +19,7 @@ country: "United States"
 city: "Berkeley"
 eventStart: 2026-11-13
 eventEnd: 2026-11-15
-image: "/events/tangocat-bay-tango-festival-marathon-btfm.png"
+image: "/events/tangocat-bay-tango-festival-marathon-btfm.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://festival.baytango.com/thumbnail/2026?_=1788762189680
 ---

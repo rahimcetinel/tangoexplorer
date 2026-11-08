@@ -18,7 +18,7 @@ country: "Sweden"
 city: "Gothenburg"
 eventStart: 2027-02-25
 eventEnd: 2027-02-28
-image: "/events/tangocat-tango-57-gothenburg-tango-festivalito.png"
+image: "/events/tangocat-tango-57-gothenburg-tango-festivalito.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72uoqGKMjUpIKhO4Iw-K8HfYzb-YK1ITlwNDvdJF-1mgiQYQaLDJjKsjN9bu90_YD-AY0-sQSUPtG3rOLeBnfbvND5P9E3ujJ4WgWkp_m0cxiQ-amTg8wSdd6p2mspM7cc7oXftPsJR9W2PaThw44zOWOTuJZ9vE8_jR_8vr_8R2L1ik78PxrY6_DtgM6fQ=w16383
 ---

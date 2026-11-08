@@ -18,7 +18,7 @@ country: "Italy"
 city: "Syracuse"
 eventStart: 2027-07-22
 eventEnd: 2027-07-25
-image: "/events/tangocat-siracusa-international-tango-festival.png"
+image: "/events/tangocat-siracusa-international-tango-festival.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://media.base44.com/images/public/6a26d1fafe3108a5875e7a47/4fb93927c_logoSITF2027trasparente.png
 ---

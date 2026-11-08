@@ -19,7 +19,7 @@ eventStart: 2026-10-29
 eventEnd: 2026-11-01
 edition: 9
 eventWebsite: https://www.facebook.com/events/1063632192830530/?active_tab=discussion
-image: "/events/tangocat-paris-tango-weekend-autumn-ember.png"
+image: "/events/tangocat-paris-tango-weekend-autumn-ember.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2026-paris-tango-week-end-autumn-ember/
 ---

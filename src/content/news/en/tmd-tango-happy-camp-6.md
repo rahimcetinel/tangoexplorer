@@ -17,7 +17,7 @@ country: "France"
 city: "Peymeinade"
 eventStart: 2027-07-02
 eventEnd: 2027-07-04
-image: "/events/tmd-tango-happy-camp-6.png"
+image: "/events/tmd-tango-happy-camp-6.jpg"
 imageCredit: "Event image (tangomarathons.com)"
 imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2017/04/TMD-Logo-e1483284195338.png
 ---

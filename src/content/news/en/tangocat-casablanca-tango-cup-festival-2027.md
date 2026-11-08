@@ -18,7 +18,7 @@ country: "Morocco"
 city: "Casablanca"
 eventStart: 2027-04-29
 eventEnd: 2027-05-02
-image: "/events/tangocat-casablanca-tango-cup-festival-2027.png"
+image: "/events/tangocat-casablanca-tango-cup-festival-2027.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/122c9b_b07e6e14c0624ee895a9aec1e2f5b3e0~mv2.png/v1/fill/w_1920,h_1080,al_c/122c9b_b07e6e14c0624ee895a9aec1e2f5b3e0~mv2.png
 ---

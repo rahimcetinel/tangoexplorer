@@ -18,7 +18,7 @@ country: "Lithuania"
 city: "Vilnius"
 eventStart: 2026-12-31
 eventEnd: 2027-01-02
-image: "/events/tangocat-caminito-new-year-tango-event.png"
+image: "/events/tangocat-caminito-new-year-tango-event.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e316f544f9094143b9eac01f1f19e697.png
 ---

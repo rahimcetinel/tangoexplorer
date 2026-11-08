@@ -18,7 +18,7 @@ country: "Poland"
 city: "Sopot"
 eventStart: 2027-05-06
 eventEnd: 2027-05-09
-image: "/events/tangocat-sopot-tango-maraton.png"
+image: "/events/tangocat-sopot-tango-maraton.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://sopottango.pl/_assets/images/2d0b56e7e51cf11036ad8734bdb67e2d.png
 ---

@@ -18,7 +18,7 @@ country: "Serbia"
 city: "Belgrade"
 eventStart: 2026-09-16
 eventEnd: 2026-09-20
-image: "/events/tangocat-beltango-friends-festival.png"
+image: "/events/tangocat-beltango-friends-festival.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.beltango.com/images/beltango-logo-150.png
 ---

@@ -18,7 +18,7 @@ country: "France"
 city: "Rémalard-en-Perche"
 eventStart: 2026-09-19
 eventEnd: 2026-09-20
-image: "/events/tangocat-festival-de-tango-argentin-buenos-aires-en-perche.png"
+image: "/events/tangocat-festival-de-tango-argentin-buenos-aires-en-perche.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.buenosairesenperche.com/wp-content/uploads/2022/06/LogoBAP_Header_05.png
 ---

@@ -18,7 +18,7 @@ country: "Austria"
 city: "Vienna"
 eventStart: 2027-03-12
 eventEnd: 2027-03-14
-image: "/events/tangocat-osvaldo-tango-marathon-vienna.png"
+image: "/events/tangocat-osvaldo-tango-marathon-vienna.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://0501.nccdn.net/4_2/000/000/04c/a91/osvaldo_social_media.png
 ---

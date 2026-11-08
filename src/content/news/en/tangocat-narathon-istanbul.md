@@ -18,7 +18,7 @@ country: "Turkey"
 city: "Istanbul"
 eventStart: 2027-01-15
 eventEnd: 2027-01-17
-image: "/events/tangocat-narathon-istanbul.png"
+image: "/events/tangocat-narathon-istanbul.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.narathon.com/wp-content/uploads/2026/08/narathon-site-logo.png
 ---

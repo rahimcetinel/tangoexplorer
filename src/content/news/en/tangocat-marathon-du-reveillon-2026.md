@@ -18,7 +18,7 @@ country: "France"
 city: "Toulouse"
 eventStart: 2026-12-29
 eventEnd: 2026-12-31
-image: "/events/tangocat-marathon-du-reveillon-2026.png"
+image: "/events/tangocat-marathon-du-reveillon-2026.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: http://tangueando.fr/wp-content/uploads/2015/08/logo-TANGUEANDO-e1439545995405.png
 ---

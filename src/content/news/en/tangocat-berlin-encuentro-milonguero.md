@@ -18,7 +18,7 @@ country: "Germany"
 city: "Berlin"
 eventStart: 2026-11-12
 eventEnd: 2026-11-15
-image: "/events/tangocat-berlin-encuentro-milonguero.png"
+image: "/events/tangocat-berlin-encuentro-milonguero.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://berlinencuentromilonguero.com/wp-content/uploads/2026/05/BEM-Logo.png
 ---

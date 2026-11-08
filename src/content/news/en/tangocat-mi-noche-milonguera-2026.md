@@ -18,7 +18,7 @@ country: "Italy"
 city: "Milan"
 eventStart: 2026-11-06
 eventEnd: 2026-11-08
-image: "/events/tangocat-mi-noche-milonguera-2026.png"
+image: "/events/tangocat-mi-noche-milonguera-2026.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.cosasdetango.com/cdt/wp-content/uploads/2018/05/logo-cdt-black.png
 ---

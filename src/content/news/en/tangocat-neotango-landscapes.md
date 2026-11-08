@@ -18,7 +18,7 @@ country: "Germany"
 city: "Wuppertal"
 eventStart: 2026-11-20
 eventEnd: 2026-11-22
-image: "/events/tangocat-neotango-landscapes.png"
+image: "/events/tangocat-neotango-landscapes.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/b271c1_1efc25d1ba5a43e385b4d5ef3542e2f1~mv2.png/v1/crop/x_43,y_0,w_994,h_1080/fill/w_404,h_366,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_pina_wb.png
 ---

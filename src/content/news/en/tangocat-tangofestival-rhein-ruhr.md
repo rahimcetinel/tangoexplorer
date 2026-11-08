@@ -18,7 +18,7 @@ country: "Germany"
 city: "Witten"
 eventStart: 2027-03-19
 eventEnd: 2027-03-21
-image: "/events/tangocat-tangofestival-rhein-ruhr.png"
+image: "/events/tangocat-tangofestival-rhein-ruhr.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/b271c1_6c8909311788405ab583e5d4006014c0~mv2.png
 ---

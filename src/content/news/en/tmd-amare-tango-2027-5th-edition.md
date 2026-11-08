@@ -10,7 +10,7 @@ eventName: "AMARE TANGO 2027 (5th edition)"
 eventWhen: "12–14 February 2027"
 eventLocation: "Italy, Riccione"
 eventWebsite: https://www.arte-tango.it/amare-tango/
-image: "/events/tmd-amare-tango-2027-5th-edition.png"
+image: "/events/tmd-amare-tango-2027-5th-edition.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2027-amare-tango-2027-5th-edition-edition-5/
 kinds:

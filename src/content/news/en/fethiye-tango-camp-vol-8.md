@@ -10,7 +10,7 @@ eventName: "Fethiye Tango Camp Vol 8"
 eventWhen: "17–21 September"
 eventLocation: "Turkey, Fethiye"
 eventWebsite: https://www.fethiyetangocamp.com
-image: "/events/fethiye-tango-camp-vol-8.png"
+image: "/events/fethiye-tango-camp-vol-8.jpg"
 kinds:
   - workshop
 format: etkinlik

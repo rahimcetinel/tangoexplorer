@@ -18,7 +18,7 @@ country: "United States"
 city: "Charlotte"
 eventStart: 2027-01-14
 eventEnd: 2027-01-18
-image: "/events/tangocat-queen-city-tango-marathon-2027.png"
+image: "/events/tangocat-queen-city-tango-marathon-2027.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://queencitytangomarathon.com/wp-content/uploads/2024/11/cropped-Logo-32x32.png
 ---

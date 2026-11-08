@@ -18,7 +18,7 @@ country: "United States"
 city: "San Francisco"
 eventStart: 2027-05-27
 eventEnd: 2027-05-31
-image: "/events/tangocat-atusa-tango-festival-championship.png"
+image: "/events/tangocat-atusa-tango-festival-championship.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://tangousachampionship.com/home/images/logo2025.png
 ---

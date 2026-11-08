@@ -18,7 +18,7 @@ country: "Italy"
 city: "Catania"
 eventStart: 2027-08-04
 eventEnd: 2027-08-08
-image: "/events/tangocat-catania-tango-festival-2026.png"
+image: "/events/tangocat-catania-tango-festival-2026.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.cataniatangofestival.com/images/template/logo/favion.png
 ---

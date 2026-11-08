@@ -18,7 +18,7 @@ country: "Croatia"
 city: "Rovinj"
 eventStart: 2026-10-11
 eventEnd: 2026-10-18
-image: "/events/tangocat-tangoreise-rovinj.png"
+image: "/events/tangocat-tangoreise-rovinj.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.studiolibertango.de/fileadmin/templates/images/studio-libertango.png
 ---

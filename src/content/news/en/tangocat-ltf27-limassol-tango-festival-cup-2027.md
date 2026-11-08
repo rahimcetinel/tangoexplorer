@@ -18,7 +18,7 @@ country: "Cyprus"
 city: "Limassol"
 eventStart: 2027-03-26
 eventEnd: 2027-03-29
-image: "/events/tangocat-ltf27-limassol-tango-festival-cup-2027.png"
+image: "/events/tangocat-ltf27-limassol-tango-festival-cup-2027.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://cdn.b3web.xyz/web/limassol-tango-v2/optimizedltf27.png1790753867.png
 ---

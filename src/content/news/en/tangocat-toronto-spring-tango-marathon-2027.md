@@ -18,7 +18,7 @@ country: "Canada"
 city: "Toronto"
 eventStart: 2027-04-08
 eventEnd: 2027-04-11
-image: "/events/tangocat-toronto-spring-tango-marathon-2027.png"
+image: "/events/tangocat-toronto-spring-tango-marathon-2027.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://torontospringtangomarathon.com/wp-content/uploads/2023/12/TSTM_Logo-1.png
 ---

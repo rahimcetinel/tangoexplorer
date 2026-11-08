@@ -18,7 +18,7 @@ country: "Italy"
 city: "Marettimo"
 eventStart: 2027-07-29
 eventEnd: 2027-08-01
-image: "/events/tangocat-marettimo-in-tango-11th-edition.png"
+image: "/events/tangocat-marettimo-in-tango-11th-edition.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://tangotequieromas.it/wp-content/uploads/2023/03/cropped-logotangotequieromas_-32x32.png
 ---

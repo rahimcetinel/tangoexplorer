@@ -18,7 +18,7 @@ country: "Italy"
 city: "Bari"
 eventStart: 2026-10-29
 eventEnd: 2026-11-01
-image: "/events/tangocat-bari-tango-congress.png"
+image: "/events/tangocat-bari-tango-congress.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://www.baritangocongress.com/bata2026/uploads/metadata/images/Logo_BATA_2026.png
 ---

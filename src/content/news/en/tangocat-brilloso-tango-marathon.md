@@ -18,7 +18,7 @@ country: "Spain"
 city: "Barcelona"
 eventStart: 2027-02-19
 eventEnd: 2027-02-21
-image: "/events/tangocat-brilloso-tango-marathon.png"
+image: "/events/tangocat-brilloso-tango-marathon.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://thb.tildacdn.com/tild6463-3735-4630-b363-306165303431/-/empty/logo_Brilloso_Tango_.png
 ---

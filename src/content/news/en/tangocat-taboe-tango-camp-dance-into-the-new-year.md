@@ -18,7 +18,7 @@ country: "Netherlands"
 city: "Austerlitz"
 eventStart: 2026-12-29
 eventEnd: 2027-01-03
-image: "/events/tangocat-taboe-tango-camp-dance-into-the-new-year.png"
+image: "/events/tangocat-taboe-tango-camp-dance-into-the-new-year.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://tangoatelier.com/wp-content/uploads/2026/06/Hele-logo-tango-atelier.png
 edition: 35

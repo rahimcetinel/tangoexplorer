@@ -14,7 +14,7 @@ eventLocation: "Turkey, Antalya"
 eventWebsite: https://chillouttangomarathon.com
 eventFacebook: https://www.facebook.com/chillout.tangomarathon.9
 eventInstagram: https://www.instagram.com/chillouttangomarathon
-image: "/events/chillout-tango-marathon-antalya.png"
+image: "/events/chillout-tango-marathon-antalya.jpg"
 kinds:
   - marathon
 format: etkinlik

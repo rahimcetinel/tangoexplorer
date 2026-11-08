@@ -9,7 +9,7 @@ summary: "Naples HNY27 is listed for 31 December 2026 – 2 January 2027 in Ital
 eventName: "Naples HNY27"
 eventWhen: "31 December 2026 – 2 January 2027"
 eventLocation: "Italy, naples"
-image: "/events/tmd-naples-hny27.png"
+image: "/events/tmd-naples-hny27.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2026-naples-hny27-edition-2/
 format: etkinlik

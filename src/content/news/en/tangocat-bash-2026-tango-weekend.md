@@ -18,7 +18,7 @@ country: "Australia"
 city: "Bundanoon"
 eventStart: 2026-11-27
 eventEnd: 2026-11-29
-image: "/events/tangocat-bash-2026-tango-weekend.png"
+image: "/events/tangocat-bash-2026-tango-weekend.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://events.humanitix.com/_app/immutable/assets/acnc.CHSPTMVl.png
 ---

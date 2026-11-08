@@ -18,7 +18,7 @@ country: "Spain"
 city: "Barcelona"
 eventStart: 2026-10-02
 eventEnd: 2026-10-04
-image: "/events/tangocat-brilloso-tango-festivalito-4.png"
+image: "/events/tangocat-brilloso-tango-festivalito-4.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://static.tildacdn.com/tild3164-6666-4265-b031-316436346330/Brilloso_Tango_Fest_.png
 ---

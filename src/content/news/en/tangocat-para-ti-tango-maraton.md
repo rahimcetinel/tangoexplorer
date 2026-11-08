@@ -18,7 +18,7 @@ country: "Turkey"
 city: "Serik"
 eventStart: 2026-10-29
 eventEnd: 2026-11-02
-image: "/events/tangocat-para-ti-tango-maraton.png"
+image: "/events/tangocat-para-ti-tango-maraton.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://paratitangomarathon.com/img/logo.png
 ---

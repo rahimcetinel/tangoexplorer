@@ -18,7 +18,7 @@ country: "Germany"
 city: "Erfurt"
 eventStart: 2026-12-04
 eventEnd: 2026-12-06
-image: "/events/tangocat-tinta-roja-erfurt-winter-tango-festival.png"
+image: "/events/tangocat-tinta-roja-erfurt-winter-tango-festival.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://tinta-roja.com/og/de.png
 ---

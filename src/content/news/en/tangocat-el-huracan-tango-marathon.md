@@ -18,7 +18,7 @@ country: "France"
 city: "Montpellier"
 eventStart: 2026-09-11
 eventEnd: 2026-09-13
-image: "/events/tangocat-el-huracan-tango-marathon.png"
+image: "/events/tangocat-el-huracan-tango-marathon.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/208938_2ae29b3c9d5f40d9a40618c3fefa2c58%7Emv2.png/v1/fit/w_2500,h_1330,al_c/208938_2ae29b3c9d5f40d9a40618c3fefa2c58%7Emv2.png
 ---

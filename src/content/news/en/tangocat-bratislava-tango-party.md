@@ -18,7 +18,7 @@ country: "Slovakia"
 city: "Bratislava"
 eventStart: 2027-01-29
 eventEnd: 2027-01-31
-image: "/events/tangocat-bratislava-tango-party.png"
+image: "/events/tangocat-bratislava-tango-party.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://bratislavatangoparty.com/wp-content/uploads/2024/05/logoI-1.png
 ---

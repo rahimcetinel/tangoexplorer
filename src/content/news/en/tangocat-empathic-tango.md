@@ -18,7 +18,7 @@ country: "Italy"
 city: "Monza"
 eventStart: 2027-03-05
 eventEnd: 2027-03-07
-image: "/events/tangocat-empathic-tango.png"
+image: "/events/tangocat-empathic-tango.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.empathictango.it/IT/wp-content/uploads/2021/09/cropped-LogoEmpathicTango.png
 ---

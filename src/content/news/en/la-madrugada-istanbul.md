@@ -10,7 +10,7 @@ eventName: "La Madrugada Tango Marathon&Festival&Cup"
 eventWhen: "30 September – 4 October"
 eventLocation: "Turkey, Istanbul"
 eventWebsite: https://www.tangolamadrugada.com
-image: "/events/la-madrugada-istanbul.png"
+image: "/events/la-madrugada-istanbul.jpg"
 kinds:
   - marathon
   - festival

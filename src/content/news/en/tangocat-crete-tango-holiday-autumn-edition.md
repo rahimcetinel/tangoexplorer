@@ -18,7 +18,7 @@ country: "Greece"
 city: "Myrthianos Plakias"
 eventStart: 2026-10-24
 eventEnd: 2026-11-07
-image: "/events/tangocat-crete-tango-holiday-autumn-edition.png"
+image: "/events/tangocat-crete-tango-holiday-autumn-edition.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://sutango.com/wp-content/uploads/cropped-SuTango_Logo_frei_2-removebg-preview.png
 ---

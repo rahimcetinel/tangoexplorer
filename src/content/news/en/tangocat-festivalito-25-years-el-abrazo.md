@@ -18,7 +18,7 @@ country: "Germany"
 city: "Hamburg"
 eventStart: 2026-10-30
 eventEnd: 2026-11-01
-image: "/events/tangocat-festivalito-25-years-el-abrazo.png"
+image: "/events/tangocat-festivalito-25-years-el-abrazo.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.elabrazo-tangohamburg.de/wp-content/uploads/2018/01/elabrazo-logo.png
 ---

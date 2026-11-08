@@ -18,7 +18,7 @@ country: "Montenegro"
 city: "Kotor"
 eventStart: 2026-10-16
 eventEnd: 2026-10-19
-image: "/events/tangocat-misterio-montenegro-tango-marathon.png"
+image: "/events/tangocat-misterio-montenegro-tango-marathon.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/c317de_f2f762d1a0ae492b908115b8ce91bee3~mv2.png
 ---

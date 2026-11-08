@@ -18,7 +18,7 @@ country: "France"
 city: "Villeveyrac"
 eventStart: 2026-10-02
 eventEnd: 2026-10-04
-image: "/events/tangocat-tango-marathon-de-valmagne.png"
+image: "/events/tangocat-tango-marathon-de-valmagne.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.tangomarathonvalmagne.com/wp-content/uploads/2026/07/Capture-decran-2026-07-09-a-14.48.36.png
 ---

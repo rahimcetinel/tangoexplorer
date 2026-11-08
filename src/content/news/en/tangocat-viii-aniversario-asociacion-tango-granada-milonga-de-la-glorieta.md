@@ -18,7 +18,7 @@ country: "Spain"
 city: "Granada"
 eventStart: 2026-11-20
 eventEnd: 2026-11-22
-image: "/events/tangocat-viii-aniversario-asociacion-tango-granada-milonga-de-la-glorieta.png"
+image: "/events/tangocat-viii-aniversario-asociacion-tango-granada-milonga-de-la-glorieta.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://sites.google.com/sitesv-images-rt/AMxu72thiCD15y2IdNE5AptLuIFFxJsQ041qyu-x7bjbxnhFaO4n1MGYnrzJOUc7yi-GTB6zL-97kec4yRGluJXEPsCrLxSjlZqSOyuoaFgpBB4vE0B2db4Px1TF0CgcQwILIOILmHixxCCGbFJPWcIdXLGctKUwxei2Hc-KIZxjenF_9EMIn4_jvTTCmOE4PTs=w16383
 ---

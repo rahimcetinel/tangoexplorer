@@ -18,7 +18,7 @@ country: "Spain"
 city: "Santurtzi"
 eventStart: 2027-02-15
 eventEnd: 2027-02-22
-image: "/events/tangocat-bilbao-tango-festival-marathon-cup.png"
+image: "/events/tangocat-bilbao-tango-festival-marathon-cup.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/af3ee1_7b2342aaf17940e79f4a9bd75b88dca7~mv2.png/v1/fill/w_1200,h_628,al_c/af3ee1_7b2342aaf17940e79f4a9bd75b88dca7~mv2.png
 edition: 2

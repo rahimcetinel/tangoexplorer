@@ -18,7 +18,7 @@ country: "Spain"
 city: "Santiago de Compostela"
 eventStart: 2027-02-12
 eventEnd: 2027-02-14
-image: "/events/tangocat-xii-compostela-tango-festival.png"
+image: "/events/tangocat-xii-compostela-tango-festival.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://compostelatangoclub.es/wp-content/uploads/elementor/thumbs/ctc-logo-qup4b708trqfr5pus2g4mp6rbjwidyhf5wjqlnypds.png
 ---

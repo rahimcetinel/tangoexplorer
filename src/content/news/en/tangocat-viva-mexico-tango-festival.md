@@ -18,7 +18,7 @@ country: "Mexico"
 city: "Ajijic"
 eventStart: 2027-03-03
 eventEnd: 2027-03-08
-image: "/events/tangocat-viva-mexico-tango-festival.png"
+image: "/events/tangocat-viva-mexico-tango-festival.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://vivamexicotangofestival.com/wp-content/uploads/vivamxtango-logo.png
 ---

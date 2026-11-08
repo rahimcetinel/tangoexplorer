@@ -18,7 +18,7 @@ country: "Colombia"
 city: "Medellín"
 eventStart: 2026-10-26
 eventEnd: 2026-11-02
-image: "/events/tangocat-12th-annual-colombia-tango-festival.png"
+image: "/events/tangocat-12th-annual-colombia-tango-festival.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.colombiatangofestival.com/images/Logo.png
 ---

@@ -18,7 +18,7 @@ country: "Sweden"
 city: "Gothenburg"
 eventStart: 2026-11-20
 eventEnd: 2026-11-22
-image: "/events/tangocat-joy-of-tango.png"
+image: "/events/tangocat-joy-of-tango.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://connectwithjoy.com/images/logo.png
 ---

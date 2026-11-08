@@ -20,7 +20,7 @@ eventEnd: 2027-02-21
 edition: 11
 registrationStart: 2026-10-15
 eventWebsite: https://brutiatangofest27.pepertango.com/
-image: "/events/tangocat-brutia-tango-fest-2027.png"
+image: "/events/tangocat-brutia-tango-fest-2027.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2027-brutia-tango-fest-2027-edition-11/
 ---

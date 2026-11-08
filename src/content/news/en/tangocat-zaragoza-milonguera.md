@@ -18,7 +18,7 @@ country: "Spain"
 city: "Zaragoza"
 eventStart: 2026-09-11
 eventEnd: 2026-09-13
-image: "/events/tangocat-zaragoza-milonguera.png"
+image: "/events/tangocat-zaragoza-milonguera.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://zgzmilonguera.my.canva.site/_assets/images/2d0b56e7e51cf11036ad8734bdb67e2d.png
 ---

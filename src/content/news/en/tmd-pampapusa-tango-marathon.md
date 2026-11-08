@@ -10,7 +10,7 @@ eventName: "Pampapusa Tango Marathon"
 eventWhen: "26–28 February 2027"
 eventLocation: "Germany, Kirchdorf a. d. Amper (Munich)"
 eventWebsite: https://www.papusa.de/kopie-von-papusa-tango-marathon-munich
-image: "/events/tmd-pampapusa-tango-marathon.png"
+image: "/events/tmd-pampapusa-tango-marathon.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2027-pampapusa-tango-marathon-edition-7/
 kinds:

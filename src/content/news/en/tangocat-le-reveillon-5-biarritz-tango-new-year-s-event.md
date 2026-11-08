@@ -20,7 +20,7 @@ eventEnd: 2027-01-01
 edition: 5
 registrationStart: 2026-09-28
 eventWebsite: https://asierymarion.com/milongas-de-gala-reveillon/
-image: "/events/tangocat-le-reveillon-5-biarritz-tango-new-year-s-event.png"
+image: "/events/tangocat-le-reveillon-5-biarritz-tango-new-year-s-event.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2026-le-reveillon-5-biarritz-new-year-event-edition-5/
 ---

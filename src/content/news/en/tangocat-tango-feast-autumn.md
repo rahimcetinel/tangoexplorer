@@ -18,7 +18,7 @@ country: "United Kingdom"
 city: "Paignton"
 eventStart: 2026-10-08
 eventEnd: 2026-10-11
-image: "/events/tangocat-tango-feast-autumn.png"
+image: "/events/tangocat-tango-feast-autumn.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://tangofeast.com/autumn/index_files/stacks-image-703d504-150x146.png
 ---

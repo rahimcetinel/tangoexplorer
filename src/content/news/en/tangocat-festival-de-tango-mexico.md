@@ -18,7 +18,7 @@ country: "Mexico"
 city: "Mexico City"
 eventStart: 2026-10-20
 eventEnd: 2026-10-25
-image: "/events/tangocat-festival-de-tango-mexico.png"
+image: "/events/tangocat-festival-de-tango-mexico.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://festivaldetangomexico.com/wp-content/uploads/2026/09/ftm-logo_negativo-scaled.png
 ---

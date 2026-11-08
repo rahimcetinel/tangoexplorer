@@ -18,7 +18,7 @@ country: "Japan"
 city: "Fukuoka"
 eventStart: 2027-04-01
 eventEnd: 2027-04-04
-image: "/events/tangocat-sakura-tango-festival-2027-12th-edition.png"
+image: "/events/tangocat-sakura-tango-festival-2027-12th-edition.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://sakuratango.com/image/title-logo.png
 ---

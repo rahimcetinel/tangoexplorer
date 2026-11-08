@@ -18,7 +18,7 @@ country: "Sweden"
 city: "Stockholm"
 eventStart: 2027-06-11
 eventEnd: 2027-06-13
-image: "/events/tangocat-alma-de-bohemia-stockholm-queer-double-role-tango-marathon.png"
+image: "/events/tangocat-alma-de-bohemia-stockholm-queer-double-role-tango-marathon.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.almadebohemia.se/wp-content/uploads/2026/09/cropped-Logga-2027-Alma.png
 ---

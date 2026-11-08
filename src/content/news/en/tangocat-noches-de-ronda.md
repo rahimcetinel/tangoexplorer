@@ -18,7 +18,7 @@ country: "Germany"
 city: "Karlsruhe"
 eventStart: 2027-01-28
 eventEnd: 2027-01-31
-image: "/events/tangocat-noches-de-ronda.png"
+image: "/events/tangocat-noches-de-ronda.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://siempre-tango.de/media/61/5b/0d/1669989360/logo-dunkel-web.png
 ---

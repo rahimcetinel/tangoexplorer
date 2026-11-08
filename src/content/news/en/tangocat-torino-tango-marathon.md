@@ -18,7 +18,7 @@ country: "Italy"
 city: "Turin"
 eventStart: 2026-12-30
 eventEnd: 2027-01-03
-image: "/events/tangocat-torino-tango-marathon.png"
+image: "/events/tangocat-torino-tango-marathon.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://ttm.torinotango.it/web/image/website/5/logo
 ---

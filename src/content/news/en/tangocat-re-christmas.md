@@ -19,7 +19,7 @@ eventStart: 2026-12-25
 eventEnd: 2026-12-27
 registrationStart: 2026-09-09
 eventWebsite: https://www.rigaembrace.lv/information/
-image: "/events/tangocat-re-christmas.png"
+image: "/events/tangocat-re-christmas.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2026-riga-embrace-christmas-tango-weekend/
 ---

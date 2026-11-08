@@ -10,7 +10,7 @@ eventName: "13 Sultans of Istanbul Tango Marathon Festival Cup 2026"
 eventWhen: "10–16 November"
 eventLocation: "Turkey, Istanbul"
 eventWebsite: https://sultanstango.com
-image: "/events/tangocat-13-sultans-of-istanbul-tango-marathon-festival-cup-2026.png"
+image: "/events/tangocat-13-sultans-of-istanbul-tango-marathon-festival-cup-2026.jpg"
 kinds:
   - marathon
   - festival

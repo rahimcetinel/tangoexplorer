@@ -17,7 +17,7 @@ country: "Turkey"
 city: "Şirince"
 eventStart: 2026-09-24
 eventEnd: 2026-09-28
-image: "/events/tangocat-ephesus-tango-marathon.png"
+image: "/events/tangocat-ephesus-tango-marathon.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://ephesustangomarathon.com/assets/images/banner/01-v2026.png?v=2026
 edition: 5

@@ -18,7 +18,7 @@ country: "Italy"
 city: "Castel San Pietro Terme"
 eventStart: 2026-09-26
 eventEnd: 2026-09-26
-image: "/events/tangocat-amati-la-vox-viva.png"
+image: "/events/tangocat-amati-la-vox-viva.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.serendipityart.it/wp/wp-content/uploads/2015/08/serendipity_ico.png
 ---

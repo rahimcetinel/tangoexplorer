@@ -18,7 +18,7 @@ country: "Mexico"
 city: "Mexico City"
 eventStart: 2027-03-19
 eventEnd: 2027-03-21
-image: "/events/tangocat-adagio-tango-festival.png"
+image: "/events/tangocat-adagio-tango-festival.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/916895_5485709dcbc543ff8ddece03681ab7e2~mv2.png/v1/fill/w_2500,h_1352,al_c/916895_5485709dcbc543ff8ddece03681ab7e2~mv2.png
 ---

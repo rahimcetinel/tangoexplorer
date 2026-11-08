@@ -90,6 +90,7 @@ const region = regionOf(d.country);
           src={fallbackImage(slug)}
           alt={d.eventName || d.title}
           formats={['avif', 'webp']}
+          fallbackFormat="jpg"
           widths={[480, 720, 1080]}
           sizes="(min-width: 860px) 720px, 100vw"
           loading={variant === 'page' ? 'eager' : 'lazy'}

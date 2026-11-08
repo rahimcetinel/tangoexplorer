@@ -18,7 +18,7 @@ country: "Slovenia"
 city: "Veržej"
 eventStart: 2027-08-19
 eventEnd: 2027-08-22
-image: "/events/tangocat-festivalito-rural.png"
+image: "/events/tangocat-festivalito-rural.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://milonguero.si/uploads/images/logo_milonguero_CRB.png
 ---

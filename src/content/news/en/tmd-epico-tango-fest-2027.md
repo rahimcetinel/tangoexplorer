@@ -10,7 +10,7 @@ eventName: "Epico Tango Fest 2027"
 eventWhen: "1–4 April 2027"
 eventLocation: "Italy, Mirandola"
 eventWebsite: https://www.epicotangofest.com/en/epico-tango-fest/
-image: "/events/tmd-epico-tango-fest-2027.png"
+image: "/events/tmd-epico-tango-fest-2027.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2027-epico-tango-fest-2027-edition-3/
 kinds:

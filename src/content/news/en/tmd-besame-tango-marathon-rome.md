@@ -10,7 +10,7 @@ eventName: "Bésame Tango Marathon Rome"
 eventWhen: "12–14 March 2027"
 eventLocation: "Italy, Rome"
 eventWebsite: https://www.besametangomarathon.com/
-image: "/events/tmd-besame-tango-marathon-rome.png"
+image: "/events/tmd-besame-tango-marathon-rome.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2027-b%c3%a9same-tango-marathon-rome/
 kinds:

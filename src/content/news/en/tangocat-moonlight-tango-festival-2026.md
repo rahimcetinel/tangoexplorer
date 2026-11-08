@@ -18,7 +18,7 @@ country: "Australia"
 city: "Brisbane"
 eventStart: 2026-09-15
 eventEnd: 2026-09-20
-image: "/events/tangocat-moonlight-tango-festival-2026.png"
+image: "/events/tangocat-moonlight-tango-festival-2026.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/035d2f_0971442d20024eacb3f135059f074e4c~mv2.png/v1/fill/w_700,h_700,al_c/035d2f_0971442d20024eacb3f135059f074e4c~mv2.png
 ---

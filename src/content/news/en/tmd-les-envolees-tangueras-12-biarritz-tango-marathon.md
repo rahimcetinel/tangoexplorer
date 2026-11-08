@@ -10,7 +10,7 @@ eventName: "LES ENVOLEES TANGUERAS 12/ Biarritz Tango Marathon"
 eventWhen: "19–21 March 2027"
 eventLocation: "France, Biarritz"
 eventWebsite: https://asierymarion.com/envolees-tanguera/
-image: "/events/tmd-les-envolees-tangueras-12-biarritz-tango-marathon.png"
+image: "/events/tmd-les-envolees-tangueras-12-biarritz-tango-marathon.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2027-les-envolees-tangueras-12-biarritz-tango-marathon-edition-12/
 kinds:

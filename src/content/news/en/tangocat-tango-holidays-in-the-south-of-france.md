@@ -18,7 +18,7 @@ country: "France"
 city: "Crespin"
 eventStart: 2027-07-11
 eventEnd: 2027-07-17
-image: "/events/tangocat-tango-holidays-in-the-south-of-france.png"
+image: "/events/tangocat-tango-holidays-in-the-south-of-france.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/0fdef751204647a3bbd7eaa2827ed4f9.png/v1/fill/w_31,h_31,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0fdef751204647a3bbd7eaa2827ed4f9.png
 ---

@@ -18,7 +18,7 @@ country: "Czechia"
 city: "Prague"
 eventStart: 2027-01-29
 eventEnd: 2027-01-31
-image: "/events/tangocat-pocoloco-marathonito.png"
+image: "/events/tangocat-pocoloco-marathonito.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://www.djtazman.cz/logo.png
 ---

@@ -18,7 +18,7 @@ country: "Canada"
 city: "Toronto"
 eventStart: 2027-07-29
 eventEnd: 2027-08-02
-image: "/events/tangocat-la-promesa-toronto-tango-festival-2027.png"
+image: "/events/tangocat-la-promesa-toronto-tango-festival-2027.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://lapromesatangofestival.com/images/logo/profile-picture.png
 ---

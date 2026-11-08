@@ -18,7 +18,7 @@ country: "Italy"
 city: "Bologna"
 eventStart: 2026-12-30
 eventEnd: 2027-01-02
-image: "/events/tangocat-bologna-tango-encuentro.png"
+image: "/events/tangocat-bologna-tango-encuentro.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.serendipityart.it/wp/wp-content/uploads/2015/08/serendipity_ico.png
 ---

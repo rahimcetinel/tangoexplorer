@@ -17,7 +17,7 @@ country: "Greece"
 city: "Patras"
 eventStart: 2026-12-18
 eventEnd: 2026-12-20
-image: "/events/tangocat-7th-tango-marathon-patras.png"
+image: "/events/tangocat-7th-tango-marathon-patras.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://lh3.googleusercontent.com/sitesv/AG8ngQUh7N3vzD30TfMQDG9pUpILatS9xA_t1Qdzs09gPbE3FHAzu3eI7kptwtcbqAPwghX8wi3MPJB-pbfeD24lE9xr6fr2MtX9F5oIKQZ2Zjv4v1zFazR3nhzugEC1XA0O54LCXBlxMfgyfV2XN_4Rmt6aDtKc6PQ3YTkeFmO0Ceyq7Mq2ekEnLWK_dXE7aVk=w16383
 edition: 7

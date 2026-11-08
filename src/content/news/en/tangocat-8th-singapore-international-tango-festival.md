@@ -18,7 +18,7 @@ country: "Singapore"
 city: "Singapore"
 eventStart: 2026-10-01
 eventEnd: 2026-10-04
-image: "/events/tangocat-8th-singapore-international-tango-festival.png"
+image: "/events/tangocat-8th-singapore-international-tango-festival.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://sitf.sg/wp-content/uploads/2023/03/SITF-FULL-LOGO.png
 ---

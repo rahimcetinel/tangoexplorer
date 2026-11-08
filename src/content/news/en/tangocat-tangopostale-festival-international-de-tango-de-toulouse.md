@@ -18,7 +18,7 @@ country: "France"
 city: "Toulouse"
 eventStart: 2027-09-20
 eventEnd: 2027-09-26
-image: "/events/tangocat-tangopostale-festival-international-de-tango-de-toulouse.png"
+image: "/events/tangocat-tangopostale-festival-international-de-tango-de-toulouse.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://tangopostale.com/wp-content/uploads/2025/02/OC-1706-instit-logo-carre-quadri-150x150-300dpi.png
 ---

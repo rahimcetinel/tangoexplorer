@@ -17,7 +17,7 @@ sourceKey: tangocat
 city: "Famagusta"
 eventStart: 2026-11-19
 eventEnd: 2026-11-22
-image: "/events/tangocat-othello-tango-camp.png"
+image: "/events/tangocat-othello-tango-camp.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://tangocyprus.online/img/tango-cyprus-logo.png
 country: "Cyprus"

@@ -18,7 +18,7 @@ country: "Italy"
 city: "Cremona"
 eventStart: 2026-10-30
 eventEnd: 2026-11-01
-image: "/events/tangocat-3rd-cremona-tango-festival-2026.png"
+image: "/events/tangocat-3rd-cremona-tango-festival-2026.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://palladinotango.com/wp-content/uploads/2025/09/Marco-Palladino-Lara-Carminati-top.png
 ---

@@ -23,6 +23,7 @@ const letters = initials(initialsFrom);
       src={meta}
       alt={alt}
       formats={['avif', 'webp']}
+      fallbackFormat="jpg"
       widths={[252, 408, 816, 1200]}
       sizes={sizes}
       loading={eager ? 'eager' : 'lazy'}

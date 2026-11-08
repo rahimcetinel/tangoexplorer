@@ -18,7 +18,7 @@ country: "Germany"
 city: "Munich"
 eventStart: 2026-10-17
 eventEnd: 2026-10-18
-image: "/events/tangocat-2nd-munich-tangueras-congreso.png"
+image: "/events/tangocat-2nd-munich-tangueras-congreso.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://image.jimcdn.com/app/cms/image/transf/none/path/s407a41809fcb9262/image/i6866fb5893beb88f/version/1785516733/image.png
 ---

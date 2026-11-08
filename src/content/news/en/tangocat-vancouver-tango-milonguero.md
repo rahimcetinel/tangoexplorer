@@ -18,7 +18,7 @@ country: "Canada"
 city: "Vancouver"
 eventStart: 2027-01-01
 eventEnd: 2027-01-03
-image: "/events/tangocat-vancouver-tango-milonguero.png"
+image: "/events/tangocat-vancouver-tango-milonguero.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://www.vancouvertango.com/uploads/2/1/7/9/21797272/1375832900.png
 ---

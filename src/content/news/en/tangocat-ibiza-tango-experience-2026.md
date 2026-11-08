@@ -18,7 +18,7 @@ country: "Spain"
 city: "Eivissa"
 eventStart: 2026-09-28
 eventEnd: 2026-10-05
-image: "/events/tangocat-ibiza-tango-experience-2026.png"
+image: "/events/tangocat-ibiza-tango-experience-2026.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://lh6.googleusercontent.com/LbZocabgNdDnTEHVpC9OvpmmQIuoZIzV_G9iGWmBDbuAdY6hB2JkXHLGV4moWOFBCWCAoaSi1yDX3BA=w1200-h630-p
 ---

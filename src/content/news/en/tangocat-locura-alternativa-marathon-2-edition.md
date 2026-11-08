@@ -18,7 +18,7 @@ country: "Poland"
 city: "Pszów"
 eventStart: 2027-04-02
 eventEnd: 2027-04-04
-image: "/events/tangocat-locura-alternativa-marathon-2-edition.png"
+image: "/events/tangocat-locura-alternativa-marathon-2-edition.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: http://alternativa.locuratanguera.pl/wp-content/uploads/2026/09/02-150x150.png
 ---

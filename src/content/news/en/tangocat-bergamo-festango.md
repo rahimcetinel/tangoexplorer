@@ -18,7 +18,7 @@ country: "Italy"
 city: "Bergamo"
 eventStart: 2027-02-26
 eventEnd: 2027-02-28
-image: "/events/tangocat-bergamo-festango.png"
+image: "/events/tangocat-bergamo-festango.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://bergamofestango.com/wp-content/uploads/2020/02/logo-bergamofestango-white.png
 ---

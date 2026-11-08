@@ -10,7 +10,7 @@ eventName: "London No Duerme – Summer Tango Vibes (Central London)"
 eventWhen: "27–29 August 2027"
 eventLocation: "United Kingdom, London"
 eventWebsite: https://tango-space.com/london-no-duerme/
-image: "/events/tmd-london-no-duerme-summer-tango-vibes-central-london.png"
+image: "/events/tmd-london-no-duerme-summer-tango-vibes-central-london.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2027-london-no-duerme-summer-tango-vibes-central-london-edition-3/
 kinds:

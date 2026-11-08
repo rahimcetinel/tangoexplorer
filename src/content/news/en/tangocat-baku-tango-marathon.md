@@ -18,7 +18,7 @@ country: "Azerbaijan"
 city: "Baku"
 eventStart: 2026-10-09
 eventEnd: 2026-10-11
-image: "/events/tangocat-baku-tango-marathon.png"
+image: "/events/tangocat-baku-tango-marathon.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.bakutangomarathon.com/api/images/section/logo_image
 ---

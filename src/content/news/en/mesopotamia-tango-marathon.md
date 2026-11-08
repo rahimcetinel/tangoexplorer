@@ -12,7 +12,7 @@ eventLocation: "Turkey, Diyarbakır"
 eventWebsite: https://www.mesopotamiatangomarathon.com
 eventFacebook: https://www.facebook.com/mesopotamiatangomarathon
 eventInstagram: https://www.instagram.com/mesopotamia_tangomarathon
-image: "/events/mesopotamia-tango-marathon.png"
+image: "/events/mesopotamia-tango-marathon.jpg"
 kinds:
   - marathon
 format: etkinlik

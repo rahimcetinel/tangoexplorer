@@ -18,7 +18,7 @@ country: "Italy"
 city: "Turin"
 eventStart: 2027-03-25
 eventEnd: 2027-03-29
-image: "/events/tangocat-tango-torino-festival.png"
+image: "/events/tangocat-tango-torino-festival.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.marcelaystefano.com/tango-torino-festival/wp-content/uploads/sites/2/2017/05/Tango-Torino-Festival-Logo.png
 ---

@@ -19,7 +19,7 @@ country: "Austria"
 city: "Vienna"
 eventStart: 2027-05-14
 eventEnd: 2027-05-16
-image: "/events/tmd-vienna-calling-tango-marathon-2027-spring-edition.png"
+image: "/events/tmd-vienna-calling-tango-marathon-2027-spring-edition.jpg"
 imageCredit: "Event image (tangomarathons.com)"
 imageSourceUrl: https://www.tangomarathons.com/wp-content/uploads/2017/04/TMD-Logo-e1483284195338.png
 ---

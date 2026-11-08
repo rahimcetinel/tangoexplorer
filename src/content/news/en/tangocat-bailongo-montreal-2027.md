@@ -18,7 +18,7 @@ country: "Canada"
 city: "Montreal"
 eventStart: 2027-05-19
 eventEnd: 2027-05-24
-image: "/events/tangocat-bailongo-montreal-2027.png"
+image: "/events/tangocat-bailongo-montreal-2027.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: http://static1.squarespace.com/static/53151019e4b06a95ceb873c5/t/5324829ee4b0e5a942ec82fe/1394901675126/logo.png?format=1500w
 ---

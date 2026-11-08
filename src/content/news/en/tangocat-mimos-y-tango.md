@@ -18,7 +18,7 @@ country: "Italy"
 city: "Riva del Garda"
 eventStart: 2027-04-02
 eventEnd: 2027-04-04
-image: "/events/tangocat-mimos-y-tango.png"
+image: "/events/tangocat-mimos-y-tango.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://mimosytangoblog.wordpress.com/wp-content/uploads/2026/05/cropped-gemini_generated_image_gpvh2qgpvh2qgpvh-1.png
 ---

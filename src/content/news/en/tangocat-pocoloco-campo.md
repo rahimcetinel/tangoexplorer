@@ -18,7 +18,7 @@ country: "Czechia"
 city: "Domazlice"
 eventStart: 2026-09-25
 eventEnd: 2026-09-27
-image: "/events/tangocat-pocoloco-campo.png"
+image: "/events/tangocat-pocoloco-campo.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://www.djtazman.cz/logo.png
 ---

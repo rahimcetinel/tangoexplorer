@@ -18,7 +18,7 @@ country: "Turkey"
 city: "Ankara"
 eventStart: 2026-11-26
 eventEnd: 2026-11-29
-image: "/events/tangocat-4th-angora-tango-marathon.png"
+image: "/events/tangocat-4th-angora-tango-marathon.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/cb05c0_0ae45e1eb39a459aaa613673fd599986%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/cb05c0_0ae45e1eb39a459aaa613673fd599986%7Emv2.png
 ---

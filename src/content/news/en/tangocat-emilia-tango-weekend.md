@@ -18,7 +18,7 @@ country: "Italy"
 city: "Sant'Ilario d'Enza"
 eventStart: 2026-10-03
 eventEnd: 2026-10-04
-image: "/events/tangocat-emilia-tango-weekend.png"
+image: "/events/tangocat-emilia-tango-weekend.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://vogliaditango.it/image/logoW.png
 ---

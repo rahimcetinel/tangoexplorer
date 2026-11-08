@@ -18,7 +18,7 @@ country: "Czechia"
 city: "Prague"
 eventStart: 2026-09-24
 eventEnd: 2026-09-28
-image: "/events/tangocat-alma-del-tango-autumn-ed-2026.png"
+image: "/events/tangocat-alma-del-tango-autumn-ed-2026.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/52ab00_d42cb0fa769c4447bb25a0170e9e3aee%7Emv2.png/v1/fit/w_2500,h_1330,al_c/52ab00_d42cb0fa769c4447bb25a0170e9e3aee%7Emv2.png
 ---

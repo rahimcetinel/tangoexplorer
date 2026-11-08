@@ -19,7 +19,7 @@ country: "Canada"
 city: "Toronto"
 eventStart: 2027-09-22
 eventEnd: 2027-09-26
-image: "/events/tangocat-toronto-tango-8-festival-marathon-2027.png"
+image: "/events/tangocat-toronto-tango-8-festival-marathon-2027.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://tango8fest.com/toronto_tango_8_festival_marathon_2026.png
 ---

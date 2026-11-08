@@ -18,7 +18,7 @@ country: "Germany"
 city: "Berlin"
 eventStart: 2027-05-20
 eventEnd: 2027-05-23
-image: "/events/tangocat-el-contrapunto-queer-open-role-tango-marathon.png"
+image: "/events/tangocat-el-contrapunto-queer-open-role-tango-marathon.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.contrapunto-tango.de/wp-content/uploads/2023/04/logo-mond-klein-transparent-909x1024.png
 ---

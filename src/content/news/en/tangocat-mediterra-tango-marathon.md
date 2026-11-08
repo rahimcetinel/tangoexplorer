@@ -18,7 +18,7 @@ country: "Turkey"
 city: "Kemer"
 eventStart: 2026-10-14
 eventEnd: 2026-10-19
-image: "/events/tangocat-mediterra-tango-marathon.png"
+image: "/events/tangocat-mediterra-tango-marathon.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://mediterratangomarathon.com/assets/img/mtmlogow.png
 ---

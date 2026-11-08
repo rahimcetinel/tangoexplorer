@@ -18,7 +18,7 @@ country: "Italy"
 city: "Catania"
 eventStart: 2027-06-24
 eventEnd: 2027-06-28
-image: "/events/tangocat-catania-summer-tango-week.png"
+image: "/events/tangocat-catania-summer-tango-week.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/d7285a_e01eed9675124d85a13340ce36ea5bed~mv2.png/v1/fill/w_1080,h_837,al_c/d7285a_e01eed9675124d85a13340ce36ea5bed~mv2.png
 ---

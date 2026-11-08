@@ -11,7 +11,7 @@ eventName: "Oriente Tango Marathon"
 eventWhen: "17–20 September"
 eventLocation: "Turkey, Istanbul"
 eventWebsite: https://www.orientetm.com
-image: "/events/oriente-tango-marathon-istanbul.png"
+image: "/events/oriente-tango-marathon-istanbul.jpg"
 kinds:
   - marathon
 format: etkinlik

@@ -18,7 +18,7 @@ country: "United States"
 city: "Missoula"
 eventStart: 2026-09-24
 eventEnd: 2026-09-27
-image: "/events/tangocat-montana-tango-festival.png"
+image: "/events/tangocat-montana-tango-festival.jpg"
 imageCredit: "Open Graph image (tangocat.net)"
 imageSourceUrl: https://static.wixstatic.com/media/c50304_92494325f66d4cd793da3b920a311da8%7Emv2.png/v1/fit/w_2500,h_1330,al_c/c50304_92494325f66d4cd793da3b920a311da8%7Emv2.png
 ---

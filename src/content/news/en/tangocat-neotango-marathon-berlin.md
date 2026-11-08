@@ -18,7 +18,7 @@ country: "Germany"
 city: "Berlin"
 eventStart: 2027-01-15
 eventEnd: 2027-01-17
-image: "/events/tangocat-neotango-marathon-berlin.png"
+image: "/events/tangocat-neotango-marathon-berlin.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://www.neotango.berlin/wp-content/uploads/go-x/android-chrome-192x192.png?v=1783775338793
 ---

@@ -10,7 +10,7 @@ eventName: "Tango2Paris – Festival & Championship"
 eventWhen: "3 December 2026 – 7 August 2026"
 eventLocation: "France, Paris"
 eventWebsite: https://www.tangotoparis.com/?fbclid=IwY2xjawT-ZdhwZG9mAWV4dG4DYWVtAjEwAHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6EMF-7eWqWwtP4Zf5ANXBy45fJxfD-B1CO3M43_U8JJ7BOn2WUokw4jJSlOw_aem_C-z9tOgKbkbUi6eFVGHL9A
-image: "/events/tmd-tango2paris-festival-championship.png"
+image: "/events/tmd-tango2paris-festival-championship.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2026-tango2paris-festival-championship-edition-2/
 kinds:
