@@ -418,11 +418,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.arcobalenotangomarathon.com/2027/": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Arcobaleno+Tango+Marathon+2027/11273": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-08"
     },
     "https://artetango-festival.com/accueil-festival-2/": {
@@ -570,7 +570,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/BIG+FISH+Tango+Marathon/11278": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://www.queridotangobilbao.com/festival": {
@@ -1386,11 +1386,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.facebook.com/groups/169363763708355/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/La+Befana+Milonguera/11031": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://www.bohemientangomarathon.it": {
@@ -1402,11 +1402,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.facebook.com/groups/1418710595940478/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/La+Bora+Encuentro+de+Trieste/10574": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://www.facebook.com/profile.php?id=100091272394131": {
@@ -1418,19 +1418,19 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.facebook.com/groups/26265849106420354/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/La+FIestita/11277": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://facebook.com/events/s/la-macarena-5th-edition-7-to-1/969597469391636/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/La+Macarena+Milonguero+Encuentro+2027+5th+Edition/10668": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://www.tangolamadrugada.com": {
@@ -1462,7 +1462,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.facebook.com/lamareatango": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://lapromesatangofestival.com/": {
@@ -1474,11 +1474,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.facebook.com/groups/1386297641629844/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/La+Reuni%C3%B2n+Milonguera/10778": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://www.tangograncanaria.com": {
@@ -1490,11 +1490,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.facebook.com/groups/669366859873564/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/La+Sabauda/11022": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://www.facebook.com/events/1046415491647608": {
@@ -1546,7 +1546,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://www.facebook.com/groups/479205355504568/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Le+Rendez-vous+Milonguero/10441": {
@@ -2218,11 +2218,11 @@
       "checkedAt": "2026-11-08"
     },
     "https://argtango.eu/rwtm/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangocat.net/go/Riga+Winter+Tango+Marathon+El+Gordo/11172": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://www.rococofestival.com/about": {
@@ -3278,7 +3278,7 @@
       "checkedAt": "2026-11-08"
     },
     "https://argtango.eu/winter-tango-maraton/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-08"
     },
     "https://tangoverse.net/events/vilnius-winter-tango-marathon-2026-574466": {
