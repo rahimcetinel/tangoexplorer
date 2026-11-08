@@ -68,6 +68,10 @@ const telegram = `https://t.me/share/url?url=${encodeURIComponent(pageUrl)}&text
   }
 </div>
 <div class="app-actions">
+  <button type="button" class="app-btn app-save" data-save={slug} aria-pressed="false">
+    <span data-save-icon aria-hidden="true">☆</span>
+    <span data-save-label>Save</span>
+  </button>
   <Button
     data-share
     data-share-url={pageUrl}

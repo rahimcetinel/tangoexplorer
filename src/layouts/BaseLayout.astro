@@ -95,5 +95,9 @@ const graph = [...siteGraph(locale, site), ...jsonLd];
   <body class="min-h-screen">
     <a class="skip-link" href="#main">{copy.skipToContent}</a>
     <slot />
+    <script>
+      import { initSaved } from '../scripts/saved';
+      initSaved();
+    </script>
   </body>
 </html>

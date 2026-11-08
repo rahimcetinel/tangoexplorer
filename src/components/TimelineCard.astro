@@ -72,4 +72,13 @@ const color = countryColor(post.data.country);
       )}
     </div>
   </a>
+  <button
+    type="button"
+    class="app-save app-ev-save"
+    data-save={slug}
+    aria-pressed="false"
+    aria-label="Save this event"
+  >
+    <span data-save-icon aria-hidden="true">☆</span>
+  </button>
 </Card>

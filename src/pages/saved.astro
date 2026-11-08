@@ -1,0 +1,49 @@
+---
+import AppShell from '../layouts/AppShell.astro';
+import Header from '../components/Header.astro';
+import { getBoardNews } from '../lib/news';
+import { homePath, ui } from '../lib/i18n';
+
+const copy = ui.en;
+const posts = await getBoardNews('en');
+---
+
+<AppShell
+  title={`Saved events — ${copy.brand}`}
+  description="Events you saved in this browser, ready for your next tango weekend."
+  locale="en"
+  mode="page"
+  posts={posts}
+>
+  <Fragment slot="center">
+    <Header
+      locale="en"
+      crumbs={[
+        { label: copy.home, href: homePath('en') },
+        { label: 'Saved' },
+      ]}
+    />
+    <main id="main" class="app-page saved-page" data-saved-page>
+      <h1 class="app-page-title">Saved events</h1>
+      <p class="app-prose">
+        Events you saved in this browser. No account needed — the list stays on this device.
+      </p>
+      <p class="app-saved-summary">
+        <b data-saved-total>0</b> saved
+        <span aria-hidden="true">·</span>
+        <a data-saved-ics hidden download="tangoexplorer-saved.ics">Download calendar (.ics)</a>
+      </p>
+      <ul class="app-saved-list" data-saved-list></ul>
+      <p class="app-saved-empty" data-saved-empty>
+        Nothing saved yet. Use the star on any event card or the Save button on an event page.
+      </p>
+      <noscript>
+        <p class="app-prose">Saved events are stored in your browser, so this page needs JavaScript.</p>
+      </noscript>
+    </main>
+  </Fragment>
+</AppShell>
+<script>
+  import { initSavedPage } from '../scripts/saved';
+  initSavedPage();
+</script>
