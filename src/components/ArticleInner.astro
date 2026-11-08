@@ -1,9 +1,11 @@
 ---
 import { render } from 'astro:content';
+import { Picture } from 'astro:assets';
 import EventBox from './EventBox.astro';
 import EventActions from './EventActions.astro';
 import EventMilongas from './EventMilongas.astro';
 import EventImage from './EventImage.astro';
+import { fallbackImage } from '../lib/fallback';
 import {
   categoryLabels,
   categoryPath,
@@ -73,9 +75,9 @@ const region = regionOf(d.country);
     )
   }
   <p class="app-lede">{d.summary}</p>
-  {
-    d.image && (
-      <div class="app-heroimg">
+  <div class="app-heroimg">
+    {
+      d.image ? (
         <EventImage
           src={d.image}
           alt={d.eventName || d.title}
@@ -83,14 +85,23 @@ const region = regionOf(d.country);
           eager={variant === 'page'}
           sizes="(min-width: 860px) 720px, 100vw"
         />
-        {d.imageCredit && (
-          <p class="app-image-credit">
-            {copy.imageCredit}: {d.imageCredit}
-          </p>
-        )}
-      </div>
-    )
-  }
+      ) : (
+        <Picture
+          src={fallbackImage(slug)}
+          alt={d.eventName || d.title}
+          formats={['avif', 'webp']}
+          widths={[480, 720, 1080]}
+          sizes="(min-width: 860px) 720px, 100vw"
+          loading={variant === 'page' ? 'eager' : 'lazy'}
+          decoding="async"
+          class="event-image"
+        />
+      )
+    }
+    <p class="app-image-credit">
+      {d.image && d.imageCredit ? `${copy.imageCredit}: ${d.imageCredit}` : 'Illustration'}
+    </p>
+  </div>
   <div class:list={['app-article-body', variant === 'page' && 'drop-cap']}>
     <Content />
   </div>
