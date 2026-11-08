@@ -8,6 +8,7 @@ import {
   listHtml,
   matchesMilonga,
   tabsHtml,
+  todaySlug,
   tonightCount,
   type MilongaFilters,
 } from '../lib/milonga-html';
@@ -92,7 +93,7 @@ export function initMilongas() {
     const total = items.filter((item) => item.region === filters.region).length;
     const tonight = tonightCount(items, filters.region);
     const totalEl = document.querySelector<HTMLElement>('[data-milonga-total]');
-    const tonightEl = document.querySelector<HTMLElement>('[data-milonga-tonight]');
+    const tonightEl = document.querySelector<HTMLElement>('[data-milonga-tonight-count]');
     if (totalEl) totalEl.textContent = String(total);
     if (tonightEl) tonightEl.textContent = String(tonight);
   }
@@ -198,6 +199,11 @@ export function initMilongas() {
 
   document.addEventListener('click', (event) => {
     const target = event.target as Element | null;
+    if (target?.closest('[data-milonga-tonight]')) {
+      filters.day = todaySlug();
+      fullRender();
+      return;
+    }
     const dayChip = target?.closest<HTMLElement>('[data-milonga-day]');
     if (dayChip) {
       filters.day = dayChip.dataset.milongaDay || '';

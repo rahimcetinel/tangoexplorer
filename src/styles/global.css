@@ -1763,6 +1763,24 @@ body.detail-open {
   margin: 0 4px;
 }
 
+.app-milonga-tonight {
+  padding: 0;
+  border: 0;
+  border-bottom: 1px dotted var(--color-ink-soft);
+  background: none;
+  font: inherit;
+  color: var(--color-burgundy);
+  cursor: pointer;
+}
+
+.app-milonga-tonight:hover {
+  border-bottom-color: var(--color-burgundy);
+}
+
+.app-milonga-tonight b {
+  color: var(--color-burgundy);
+}
+
 .app-milonga-tabs {
   display: flex;
   gap: 6px;

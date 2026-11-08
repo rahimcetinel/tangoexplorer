@@ -42,7 +42,9 @@ const tonight = tonightCount(items, filters.region);
       <p class="app-milonga-summary" data-milonga-summary>
         <b data-milonga-total>{total}</b> {copy.milongaCount}
         <span aria-hidden="true">·</span>
-        <b data-milonga-tonight>{tonight}</b> {copy.milongaTonight}
+        <button type="button" class="app-milonga-tonight" data-milonga-tonight>
+          <b data-milonga-tonight-count>{tonight}</b> {copy.milongaTonight}
+        </button>
       </p>
       <div class="app-milonga-tabs" data-milonga-tabs set:html={tabsHtml(items, filters, locale, copy)} />
       <div

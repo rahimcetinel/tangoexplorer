@@ -5,6 +5,7 @@ import {
   type MilongaType,
 } from './hoy';
 import { ui, weekdaysLong, weekdaysShort, type Locale } from './i18n';
+import { milongaIcsHref } from './milonga-ics';
 
 export type MilongaFilters = { region: string; city: string; day: string; type: string; q: string };
 export type MilongaCopy = typeof ui.en;
@@ -197,6 +198,7 @@ export function detailHtml(
   const typeLabel = item.type === 'practica' ? copy.milongaTypePractica : copy.milongaTypeMilonga;
   const dayLabels = item.days.map((day) => weekdaysLong[locale][DAY_INDEX[day]]).join(', ');
   const time = item.start ? `${item.start}${item.end ? `–${item.end}` : ''}` : '';
+  const calendarHref = milongaIcsHref(item);
   const rows: string[] = [];
   if (dayLabels) rows.push(`<div><dt>${copy.milongaDay}</dt><dd>${dayLabels}</dd></div>`);
   if (time) rows.push(`<div><dt>${copy.milongaTime}</dt><dd>${escapeHtml(time)}</dd></div>`);
@@ -220,6 +222,9 @@ export function detailHtml(
     (item.mapUrl ? `<a class="app-btn" href="${escapeHtml(item.mapUrl)}" target="_blank" rel="noopener">${copy.milongaMap}</a>` : '') +
     (item.detailUrl ? `<a class="app-btn app-btn-solid" href="${escapeHtml(item.detailUrl)}" target="_blank" rel="noopener">${copy.milongaOpenSource}</a>` : '') +
     `</div>` +
+    (calendarHref
+      ? `<div class="app-actions"><a class="app-btn" href="${escapeHtml(calendarHref)}" download="milonga-${escapeHtml(item.id)}.ics">${copy.addToCalendar}</a></div>`
+      : '') +
     (links.length ? `<p class="app-links">${links.join(' · ')}</p>` : '') +
     (item.verified ? `<p class="app-source">${copy.milongaVerified}: ${escapeHtml(item.verified)}</p>` : '')
   );
