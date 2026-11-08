@@ -17,6 +17,9 @@ export const COUNTRY_BY_CODE: Record<string, string> = {
   IT: 'italy',
   ES: 'spain',
   NL: 'netherlands',
+  FR: 'france',
+  PL: 'poland',
+  CZ: 'czechia',
 };
 
 /** Map a Cloudflare country code to our country id, or '' when we don't cover it. */

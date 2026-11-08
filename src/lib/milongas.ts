@@ -1,12 +1,15 @@
 import atJson from '../data/milongas-at.json';
 import chJson from '../data/milongas-ch.json';
+import czJson from '../data/milongas-cz.json';
 import deJson from '../data/milongas-de.json';
 import esJson from '../data/milongas-es.json';
+import frJson from '../data/milongas-fr.json';
 import hoyJson from '../data/hoy-milongas.json';
 import itJson from '../data/milongas-it.json';
 import ldnJson from '../data/milongas-uk-london.json';
 import nlJson from '../data/milongas-nl.json';
 import noJson from '../data/milongas-no.json';
+import plJson from '../data/milongas-pl.json';
 import seJson from '../data/milongas-se.json';
 import { COUNTRIES, DAYS_ORDER, resolveCountry, type HoyData, type Milonga } from './hoy';
 
@@ -26,6 +29,9 @@ const it = (itJson as unknown as SourceFile).items ?? [];
 const es = (esJson as unknown as SourceFile).items ?? [];
 const ldn = (ldnJson as unknown as SourceFile).items ?? [];
 const nl = (nlJson as unknown as SourceFile).items ?? [];
+const fr = (frJson as unknown as SourceFile).items ?? [];
+const cz = (czJson as unknown as SourceFile).items ?? [];
+const pl = (plJson as unknown as SourceFile).items ?? [];
 
 /** Next calendar date (YYYY-MM-DD) that falls on one of the given weekdays. */
 export function nextDateForDays(days: string[], now: Date = new Date()): string {
@@ -65,9 +71,26 @@ export const MILONGAS: Milonga[] = [
   ...es.map((item) => normalize(item, 'spain')),
   ...ldn.map((item) => normalize(item, 'london')),
   ...nl.map((item) => normalize(item, 'netherlands')),
+  ...fr.map((item) => normalize(item, 'tangoargentin')),
+  ...cz.map((item) => normalize(item, 'tangoprague')),
+  ...pl.map((item) => normalize(item, 'krakow')),
 ];
 
-const SOURCE_FILES = [hoyJson, deJson, seJson, chJson, noJson, atJson, itJson, esJson, ldnJson, nlJson];
+const SOURCE_FILES = [
+  hoyJson,
+  deJson,
+  seJson,
+  chJson,
+  noJson,
+  atJson,
+  itJson,
+  esJson,
+  ldnJson,
+  nlJson,
+  frJson,
+  czJson,
+  plJson,
+];
 
 /** Latest generatedAt across every source file. */
 export const MILONGA_UPDATED_AT: string = SOURCE_FILES

@@ -18,6 +18,9 @@ const TIME_ZONES: [RegExp, string][] = [
   [/^Europe\/Rome$/, 'italy'],
   [/^Europe\/Madrid$/, 'spain'],
   [/^Europe\/Amsterdam$/, 'netherlands'],
+  [/^Europe\/Paris$/, 'france'],
+  [/^Europe\/Warsaw$/, 'poland'],
+  [/^Europe\/Prague$/, 'czechia'],
   [/^America\/Argentina\//, 'argentina'],
   [/^America\/(Sao_Paulo|Bahia|Fortaleza|Recife|Belem|Cuiaba|Campo_Grande|Porto_Velho|Rio_Branco|Boa_Vista|Manaus|Santarem|Araguaina|Maceio|Noronha)$/, 'brazil'],
   [/^America\/(New_York|Chicago|Denver|Los_Angeles|Phoenix|Anchorage|Detroit|Boise|Indiana|Kentucky|North_Dakota|Juneau|Sitka|Menominee|Adak|Nome|Sitka)$/, 'united-states'],
@@ -42,6 +45,9 @@ const LANGUAGES: Record<string, string> = {
   'de-CH': 'switzerland',
   'fr-CH': 'switzerland',
   'it-CH': 'switzerland',
+  'fr-FR': 'france',
+  'pl-PL': 'poland',
+  'cs-CZ': 'czechia',
 };
 
 const LANGUAGE_FALLBACK: Record<string, string> = {
@@ -56,6 +62,9 @@ const LANGUAGE_FALLBACK: Record<string, string> = {
   no: 'norway',
   it: 'italy',
   nl: 'netherlands',
+  fr: 'france',
+  pl: 'poland',
+  cs: 'czechia',
 };
 
 export function detectCountry(

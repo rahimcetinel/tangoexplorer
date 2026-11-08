@@ -72,6 +72,9 @@ export const COUNTRIES: { id: string; en: string; tr: string }[] = [
   { id: 'italy', en: 'Italy', tr: 'İtalya' },
   { id: 'spain', en: 'Spain', tr: 'İspanya' },
   { id: 'netherlands', en: 'Netherlands', tr: 'Hollanda' },
+  { id: 'france', en: 'France', tr: 'Fransa' },
+  { id: 'poland', en: 'Poland', tr: 'Polonya' },
+  { id: 'czechia', en: 'Czechia', tr: 'Çekya' },
 ];
 
 /**
@@ -109,6 +112,9 @@ export const MILONGA_SOURCES: Record<string, string> = {
   spain: 'Agenda del Tango',
   london: 'London Milongas',
   netherlands: 'tangokalender.nl',
+  tangoargentin: 'tango-argentin.fr',
+  tangoprague: 'tango-prague.info',
+  krakow: 'milongi.krakow.pl',
 };
 
 export function sourceLabel(key?: string): string {

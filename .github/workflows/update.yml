@@ -75,6 +75,9 @@ jobs:
           python agentic-python/ingest_spain.py --publish || true
           python agentic-python/ingest_london.py --publish || true
           python agentic-python/ingest_netherlands.py --publish || true
+          python agentic-python/ingest_france.py --publish || true
+          python agentic-python/ingest_czechia.py --publish || true
+          python agentic-python/ingest_poland.py --publish || true
           python agentic-python/enrich_event_websites.py --apply || true
           python agentic-python/ingest_tangoverse.py --images || true
           python agentic-python/ingest_tangoverse.py --publish || true
