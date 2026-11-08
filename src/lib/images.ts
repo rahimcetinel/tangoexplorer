@@ -13,7 +13,14 @@ export function eventImage(path?: string): ImageMetadata | undefined {
     return undefined;
   }
   const entry = Object.entries(modules).find(([file]) => file.endsWith(`/${name}`));
-  return entry?.[1].default;
+  const meta = entry?.[1].default;
+  // Some ingests pick up a site favicon or icon instead of the event artwork.
+  // Anything that small is not usable as a card or hero image, so fall back to
+  // the deterministic illustration instead.
+  if (!meta || meta.width < 400 || meta.height < 250) {
+    return undefined;
+  }
+  return meta;
 }
 
 export const OG_FALLBACK = '/og-default.jpg';
