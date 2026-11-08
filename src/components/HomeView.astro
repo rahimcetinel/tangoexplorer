@@ -6,7 +6,7 @@ import TimelineBoard from './TimelineBoard.astro';
 import DetailPanel from './DetailPanel.astro';
 import ArticleInner from './ArticleInner.astro';
 import EmptyState from './ui/EmptyState.astro';
-import { getNews, newsSlug } from '../lib/news';
+import { getBoardNews, newsSlug } from '../lib/news';
 import { ui, type Locale } from '../lib/i18n';
 import { eagerMonthKeys, upcomingMonths } from '../lib/timeline';
 import { boardStats } from '../lib/stats';
@@ -17,7 +17,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const copy = ui[locale];
-const posts = await getNews(locale);
+const posts = await getBoardNews(locale);
 const months = upcomingMonths(posts, locale);
 const selected = posts[0];
 const selectedSlug = selected ? newsSlug(selected) : undefined;

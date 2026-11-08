@@ -6,7 +6,7 @@ import TimelineBoard from './TimelineBoard.astro';
 import DetailPanel from './DetailPanel.astro';
 import ArticleInner from './ArticleInner.astro';
 import EmptyState from './ui/EmptyState.astro';
-import { getNews, newsSlug } from '../lib/news';
+import { getBoardNews, newsSlug } from '../lib/news';
 import {
   categoryLabels,
   categoryPath,
@@ -25,7 +25,7 @@ interface Props {
 const { locale, category } = Astro.props;
 const copy = ui[locale];
 const label = categoryLabels[locale][category];
-const allPosts = await getNews(locale);
+const allPosts = await getBoardNews(locale);
 const posts = allPosts.filter((post) => post.data.category === category);
 const months = upcomingMonths(posts, locale);
 const selected = posts[0];

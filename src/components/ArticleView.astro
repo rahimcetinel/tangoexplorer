@@ -10,7 +10,7 @@ import {
   ui,
   type Locale,
 } from '../lib/i18n';
-import { getNews, newsSlug, type NewsEntry } from '../lib/news';
+import { getBoardNews, newsSlug, type NewsEntry } from '../lib/news';
 import { getImage } from 'astro:assets';
 import { eventImage, OG_FALLBACK } from '../lib/images';
 import { articleGraph } from '../lib/seo';
@@ -23,7 +23,7 @@ interface Props {
 const { locale, post } = Astro.props;
 const copy = ui[locale];
 const slug = newsSlug(post);
-const posts = await getNews(locale);
+const posts = await getBoardNews(locale);
 const pageUrl = new URL(newsPath(locale, slug), Astro.site ?? 'https://tangoexplorer.com').href;
 const crumbs = [
   { label: copy.home, href: homePath(locale) },

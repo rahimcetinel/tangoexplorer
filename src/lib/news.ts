@@ -24,9 +24,19 @@ function eventEndMs(post: NewsEntry): number | null {
   return end ? startOfUtcDay(end) : null;
 }
 
-export function isUpcoming(post: NewsEntry, now: Date = new Date()): boolean {
+// The feed, search and planner keep events that are already running, so a
+// festival that started yesterday is still findable while it lasts.
+export function hasNotEnded(post: NewsEntry, now: Date = new Date()): boolean {
+  const end = eventEndMs(post);
+  return end === null || end >= startOfUtcDay(now);
+}
+
+// Listing pages only show events that have not started yet: a festival running
+// 10-14 November leaves the board on the 10th, while search, the planner and the
+// feed keep showing it for people already there.
+export function hasNotStarted(post: NewsEntry, now: Date = new Date()): boolean {
   const start = eventStartMs(post);
-  return start === null || start >= startOfUtcDay(now);
+  return start === null || start > startOfUtcDay(now);
 }
 
 export function compareByEventDate(a: NewsEntry, b: NewsEntry, today: Date = new Date()): number {
@@ -56,14 +66,24 @@ export function compareByEventDate(a: NewsEntry, b: NewsEntry, today: Date = new
 }
 
 const newsCache = new Map<Locale, Promise<NewsEntry[]>>();
+const boardCache = new Map<Locale, Promise<NewsEntry[]>>();
 
 export async function getNews(locale: Locale): Promise<NewsEntry[]> {
   let cached = newsCache.get(locale);
   if (!cached) {
     cached = getCollection('news', (entry) => entry.data.locale === locale).then((posts) =>
-      posts.filter((post) => isUpcoming(post)).sort((a, b) => compareByEventDate(a, b)),
+      posts.filter((post) => hasNotEnded(post)).sort((a, b) => compareByEventDate(a, b)),
     );
     newsCache.set(locale, cached);
+  }
+  return cached;
+}
+
+export async function getBoardNews(locale: Locale): Promise<NewsEntry[]> {
+  let cached = boardCache.get(locale);
+  if (!cached) {
+    cached = getNews(locale).then((posts) => posts.filter((post) => hasNotStarted(post)));
+    boardCache.set(locale, cached);
   }
   return cached;
 }

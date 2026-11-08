@@ -1,7 +1,7 @@
 ---
 import AppShell from '../layouts/AppShell.astro';
 import Header from './Header.astro';
-import { getNews, newsSlug } from '../lib/news';
+import { getBoardNews, newsSlug } from '../lib/news';
 import { formatEventRange } from '../lib/timeline';
 import { homePath, newsPath, ui, type Locale } from '../lib/i18n';
 
@@ -11,7 +11,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const copy = ui[locale];
-const posts = await getNews(locale);
+const posts = await getBoardNews(locale);
 const home = homePath(locale);
 const upcoming = posts.slice(0, 3);
 ---

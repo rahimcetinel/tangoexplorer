@@ -2,7 +2,7 @@
 import AppShell from '../layouts/AppShell.astro';
 import Header from './Header.astro';
 import milongaData from '../data/hoy-milongas.json';
-import { getNews } from '../lib/news';
+import { getBoardNews } from '../lib/news';
 import { milongasPath, monthShort, ui, type Locale } from '../lib/i18n';
 import type { HoyData, Milonga } from '../lib/hoy';
 import { HOY_REGIONS, regionLabel } from '../lib/hoy';
@@ -22,7 +22,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const copy = ui[locale];
-const posts = await getNews(locale);
+const posts = await getBoardNews(locale);
 const items = ((milongaData as HoyData).items ?? []) as Milonga[];
 const filters = defaultFilters(items);
 const cityColors = cityColorsFor(items, filters.region);
