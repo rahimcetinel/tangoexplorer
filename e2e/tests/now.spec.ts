@@ -40,6 +40,12 @@ test('the time scopes change the result window', async ({ page }) => {
   await expect(page).toHaveURL(/when=month/);
   await expect(page.locator('[data-now-status]')).toContainText('this month');
   expect(await page.locator('.app-now-section').first().locator('.app-now-item-title').count()).toBeGreaterThan(0);
+  await expect(page.locator('.app-now-section').first().locator('.app-now-tag').first()).toHaveText(
+    /Festival|Marathon|Encuentro|Workshop|Practica/,
+  );
+  await expect(page.locator('.app-now-section').nth(1).locator('.app-now-tag').first()).toHaveText(
+    /Milonga|Practica/,
+  );
 });
 
 test('the home page shows a happening-now strip for the saved city', async ({ page }) => {

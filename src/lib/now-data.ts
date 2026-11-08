@@ -3,6 +3,7 @@ import { newsSlug } from './news';
 import type { Milonga } from './hoy';
 import { formatEventRange } from './timeline';
 import { todaySlug } from './milonga-html';
+import { kindLabels } from './i18n';
 
 export type NowEvent = {
   t: string;
@@ -34,6 +35,7 @@ export type NowAllEvent = {
   en: string;
   dates: string;
   w: string;
+  k: string;
 };
 
 export type NowAllMilonga = {
@@ -136,6 +138,7 @@ export function buildNowData(posts: NewsEntry[], milongas: Milonga[], now: Date 
         en: end.toISOString().slice(0, 10),
         dates: formatEventRange(start, end),
         w: post.data.eventLocation ?? [post.data.city, post.data.country].filter(Boolean).join(', '),
+        k: post.data.kinds[0] ? (kindLabels.en[post.data.kinds[0]] ?? '') : '',
       };
     })
     .sort((a, b) => a.st.localeCompare(b.st));

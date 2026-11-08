@@ -220,6 +220,7 @@ export function initNow(): void {
           .map(
             (event) =>
               `<li><a class="app-now-item" href="/news/${escapeHtml(event.slug)}">` +
+              `<span class="app-now-tag app-now-tag-event">${escapeHtml(event.k || 'Event')}</span>` +
               `<span class="app-now-item-title">${escapeHtml(event.t)}</span>` +
               `<span class="app-now-item-meta">${escapeHtml(event.dates)}` +
               (event.w ? ` · ${escapeHtml(event.w)}` : '') +
@@ -235,8 +236,10 @@ export function initNow(): void {
               .filter((day) => daySet.has(day))
               .map((day) => DAY_SHORT[day] ?? day)
               .join(', ');
+            const type = item.ty === 'practica' ? 'Practica' : 'Milonga';
             return (
               `<li><div class="app-now-item">` +
+              `<span class="app-now-tag app-now-tag-milonga">${type}</span>` +
               `<span class="app-now-item-title">${escapeHtml(item.n)}</span>` +
               `<span class="app-now-item-meta">${escapeHtml(days)} · ${escapeHtml(item.s)}${item.e ? `–${escapeHtml(item.e)}` : ''}` +
               (item.v ? ` · ${escapeHtml(item.v)}` : '') +
@@ -253,8 +256,10 @@ export function initNow(): void {
         : '/milongas';
 
     results.innerHTML =
-      `<section class="app-now-section"><h2 class="app-now-heading">Events <span>${localEvents.length}</span></h2>${eventsHtml}</section>` +
-      `<section class="app-now-section"><h2 class="app-now-heading">Milongas <span>${localMilongas.length}</span></h2>${milongasHtml}` +
+      `<section class="app-now-section"><h2 class="app-now-heading">Events <span>${localEvents.length}</span></h2>` +
+      `<p class="app-now-note">Festivals, marathons and encuentros you can travel to.</p>${eventsHtml}</section>` +
+      `<section class="app-now-section"><h2 class="app-now-heading">Milongas <span>${localMilongas.length}</span></h2>` +
+      `<p class="app-now-note">Weekly parties and practicas in town.</p>${milongasHtml}` +
       `<a class="app-link" href="${milongasHref}">All milongas in ${escapeHtml(label)}</a></section>`;
     syncUrl(label, scope);
   }
