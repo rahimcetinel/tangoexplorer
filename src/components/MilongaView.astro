@@ -39,6 +39,7 @@ const tonight = tonightCount(items, filters.region);
   <Fragment slot="center">
     <Header locale={locale} />
     <main id="main" class="app-main-board app-milonga">
+      <h1 class="sr-only">{copy.milongaTitle}</h1>
       <p class="app-milonga-summary" data-milonga-summary>
         <b data-milonga-total>{total}</b> {copy.milongaCount}
         <span aria-hidden="true">·</span>
