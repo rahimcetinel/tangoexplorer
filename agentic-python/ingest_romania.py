@@ -213,7 +213,7 @@ def main() -> int:
                 source="milongaro",
                 region="romania",
                 country="Romania",
-                source_url=PAGE,
+                source_url="",
             )
             if item:
                 item["schedule"] = "weekly"
