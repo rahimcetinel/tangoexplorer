@@ -2699,6 +2699,93 @@ body.detail-open {
   color: var(--color-ink-soft);
 }
 
+/* Event page: local milongas during the event */
+.app-ev-milongas {
+  margin: 26px 0 0;
+  padding: 18px 20px;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-md);
+  background: var(--color-cream);
+}
+
+.app-ev-milongas-title {
+  margin: 0 0 4px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.app-ev-milongas-lead {
+  margin: 0 0 12px;
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+}
+
+.app-ev-milonga-day {
+  margin: 0 0 12px;
+}
+
+.app-ev-milonga-day-title {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-burgundy);
+}
+
+.app-ev-milonga-day-title span {
+  color: var(--color-ink-soft);
+}
+
+.app-ev-milonga-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.app-ev-milonga-list li {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 1px 10px;
+  padding: 6px 0;
+  border-top: 1px solid var(--color-rule);
+}
+
+.app-ev-milonga-time {
+  grid-row: 1 / span 2;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-indigo);
+}
+
+.app-ev-milonga-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.app-ev-milonga-meta {
+  font-size: 0.75rem;
+  color: var(--color-ink-soft);
+}
+
+.app-ev-milonga-more,
+.app-ev-milongas-all {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--color-burgundy);
+  text-decoration: underline;
+}
+
+.app-ev-milongas-all {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
 .plan-page {
   max-width: 1000px;
   margin: 0 auto;

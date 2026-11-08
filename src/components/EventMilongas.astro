@@ -1,0 +1,61 @@
+---
+import milongaData from '../data/hoy-milongas.json';
+import type { HoyData, Milonga } from '../lib/hoy';
+import { milongasDuring } from '../lib/event-milongas';
+import type { NewsEntry } from '../lib/news';
+
+interface Props {
+  post: NewsEntry;
+  locale: 'en';
+}
+
+const { post } = Astro.props;
+const milongas = ((milongaData as HoyData).items ?? []) as Milonga[];
+const city = post.data.city ?? '';
+const groups = milongasDuring(milongas, city, post.data.eventStart, post.data.eventEnd);
+const total = groups.reduce((sum, group) => sum + group.items.length, 0);
+const cityHref = `/milongas?city=${encodeURIComponent(city)}`;
+---
+
+{
+  groups.length > 0 && (
+    <section class="app-ev-milongas" aria-labelledby="event-milongas-title">
+      <h2 class="app-ev-milongas-title" id="event-milongas-title">
+        Milongas in {city} during this event
+      </h2>
+      <p class="app-ev-milongas-lead">
+        {total} weekly {total === 1 ? 'milonga runs' : 'milongas run'} in {city} on the event days. Times and
+        venues come from Hoy Milonga; check before travelling.
+      </p>
+      {groups.map((group) => (
+        <div class="app-ev-milonga-day">
+          <h3 class="app-ev-milonga-day-title">
+            {group.label} <span>{group.items.length}</span>
+          </h3>
+          <ul class="app-ev-milonga-list">
+            {group.items.slice(0, 6).map((item) => (
+              <li>
+                <span class="app-ev-milonga-time">
+                  {item.start}
+                  {item.end ? `–${item.end}` : ''}
+                </span>
+                <span class="app-ev-milonga-name">{item.name}</span>
+                <span class="app-ev-milonga-meta">
+                  {item.venue} · {item.type === 'practica' ? 'Practica' : 'Milonga'}
+                </span>
+              </li>
+            ))}
+          </ul>
+          {group.items.length > 6 && (
+            <a class="app-ev-milonga-more" href={`${cityHref}&day=${group.slug}`}>
+              See all {group.items.length}
+            </a>
+          )}
+        </div>
+      ))}
+      <a class="app-ev-milongas-all" href={cityHref}>
+        All milongas in {city} →
+      </a>
+    </section>
+  )
+}

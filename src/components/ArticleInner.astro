@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import EventBox from './EventBox.astro';
 import EventActions from './EventActions.astro';
+import EventMilongas from './EventMilongas.astro';
 import EventImage from './EventImage.astro';
 import {
   categoryLabels,
@@ -95,6 +96,7 @@ const region = regionOf(d.country);
   </div>
   <EventBox post={post} locale={locale} duration={duration} showImage={false} />
   <EventActions locale={locale} post={post} pageUrl={pageUrl} permalink={variant === 'panel'} />
+  {variant === 'page' && <EventMilongas post={post} locale={locale} />}
   <p class="app-timeline-pos">
     {copy.timelinePosition}: <b>{month}</b>
     {dates && <> · {dates}</>}
