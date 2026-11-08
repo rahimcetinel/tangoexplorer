@@ -16,6 +16,7 @@ export type NowEvent = {
 export type NowMilonga = {
   n: string;
   c: string;
+  co: string;
   s: string;
   e: string;
   v: string;
@@ -59,6 +60,7 @@ export function buildNowData(posts: NewsEntry[], milongas: Milonga[], now: Date 
     .map((item) => ({
       n: item.name,
       c: item.city,
+      co: item.country,
       s: item.start,
       e: item.end,
       v: item.venue,

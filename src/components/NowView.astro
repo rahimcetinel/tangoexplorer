@@ -11,13 +11,6 @@ const copy = ui.en;
 const posts = await getNews('en');
 const milongas = ((milongaData as HoyData).items ?? []) as Milonga[];
 const { events, milongas: tonightMilongas, coords: cityCoords } = buildNowData(posts, milongas);
-
-const cities = [
-  ...new Set([
-    ...events.map((event) => event.ci),
-    ...tonightMilongas.map((item) => item.c),
-  ].filter(Boolean)),
-].sort((a, b) => a.localeCompare(b, 'en'));
 ---
 
 <AppShell
@@ -42,16 +35,28 @@ const cities = [
         nearby towns within about 150 km.
       </p>
 
-      <div class="app-now-controls">
+      <form class="app-now-controls" role="search" data-now-form>
         <label class="app-now-field">
-          <span>Your city</span>
-          <input type="text" list="now-cities" data-now-city autocomplete="off" placeholder="Istanbul, Köln…" />
+          <span>City or country</span>
+          <input
+            type="search"
+            name="place"
+            data-now-city
+            autocomplete="off"
+            autocapitalize="words"
+            spellcheck="false"
+            data-1p-ignore="true"
+            data-lpignore="true"
+            placeholder="Istanbul, Köln, Germany…"
+            aria-describedby="now-hint"
+          />
         </label>
+        <button type="submit" class="app-btn app-btn-solid">Show</button>
         <button type="button" class="app-btn" data-now-locate>Use my location</button>
-      </div>
-      <datalist id="now-cities">
-        {cities.map((city) => <option value={city} />)}
-      </datalist>
+      </form>
+      <p class="app-now-hint" id="now-hint">
+        Type a city, or a country to see everything happening there.
+      </p>
 
       <p class="app-now-status" data-now-status aria-live="polite"></p>
       <div class="app-now-results" data-now-results></div>

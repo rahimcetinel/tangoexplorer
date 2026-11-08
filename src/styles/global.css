@@ -2535,6 +2535,12 @@ body.detail-open {
   padding-inline: 20px;
 }
 
+.app-now-hint {
+  margin: -2px 0 12px;
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+}
+
 .app-now-status {
   min-height: 1.2em;
   margin: 6px 0 16px;

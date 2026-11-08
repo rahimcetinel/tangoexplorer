@@ -18,7 +18,7 @@ kinds:
 format: etkinlik
 sourceKey: tangocat
 country: "Türkiye"
-city: "İstanbul"
+city: "Istanbul"
 eventStart: 2027-06-30
 eventEnd: 2027-07-04
 ---

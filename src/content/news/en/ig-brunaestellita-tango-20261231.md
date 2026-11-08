@@ -15,7 +15,7 @@ kinds:
 format: etkinlik
 sourceKey: instagram
 country: "Türkiye"
-city: "İstanbul"
+city: "Istanbul"
 eventStart: 2026-12-31
 eventEnd: 2026-12-31
 ---
