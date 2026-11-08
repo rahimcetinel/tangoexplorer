@@ -2446,7 +2446,113 @@ body.detail-open {
   }
 }
 
-/* Weekend planner */
+/* Happening now */
+.now-page {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.app-now-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px;
+  margin: 18px 0 8px;
+}
+
+.app-now-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: var(--color-ink-soft);
+}
+
+.app-now-field input {
+  min-width: 260px;
+  padding: 9px 12px;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  border: 1px solid var(--color-rule);
+  border-radius: 8px;
+}
+
+.app-now-controls .app-btn {
+  flex: 0 0 auto;
+  padding-inline: 20px;
+}
+
+.app-now-status {
+  min-height: 1.2em;
+  margin: 6px 0 16px;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+.app-now-section {
+  margin: 0 0 26px;
+}
+
+.app-now-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+.app-now-heading span {
+  color: var(--color-burgundy);
+}
+
+.app-now-list {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  border-top: 1px solid var(--color-rule);
+}
+
+.app-now-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--color-rule);
+  color: var(--color-ink);
+}
+
+.app-now-item-title {
+  font-weight: 600;
+}
+
+.app-now-item-meta {
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+}
+
+.app-now-empty {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+@media (max-width: 640px) {
+  .app-now-field input {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .app-now-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
 .plan-page {
   max-width: 1000px;
   margin: 0 auto;

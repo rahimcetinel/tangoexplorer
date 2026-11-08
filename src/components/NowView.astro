@@ -1,0 +1,118 @@
+---
+import AppShell from '../layouts/AppShell.astro';
+import Header from '../components/Header.astro';
+import milongaData from '../data/hoy-milongas.json';
+import { getNews, newsSlug } from '../lib/news';
+import { formatEventRange } from '../lib/timeline';
+import { homePath, ui } from '../lib/i18n';
+import type { HoyData, Milonga } from '../lib/hoy';
+import { todaySlug } from '../lib/milonga-html';
+
+const copy = ui.en;
+const posts = await getNews('en');
+const milongas = ((milongaData as HoyData).items ?? []) as Milonga[];
+const today = new Date();
+const startOfToday = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+
+const ongoing = posts.filter((post) => {
+  const start = post.data.eventStart;
+  if (!start) return false;
+  const end = post.data.eventEnd ?? start;
+  const startMs = Date.UTC(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate());
+  const endMs = Date.UTC(end.getUTCFullYear(), end.getUTCMonth(), end.getUTCDate());
+  return startMs <= startOfToday && endMs >= startOfToday;
+});
+
+const events = ongoing.map((post) => ({
+  t: post.data.title,
+  slug: newsSlug(post),
+  ci: post.data.city ?? '',
+  co: post.data.country ?? '',
+  dates: formatEventRange(post.data.eventStart, post.data.eventEnd),
+  w: post.data.eventLocation ?? [post.data.city, post.data.country].filter(Boolean).join(', '),
+}));
+
+const tonight = todaySlug();
+const tonightMilongas = milongas
+  .filter((item) => item.days.includes(tonight))
+  .map((item) => ({
+    n: item.name,
+    c: item.city,
+    s: item.start,
+    e: item.end,
+    v: item.venue,
+    ty: item.type,
+  }));
+
+const coords = new Map<string, { lat: number; lng: number; count: number }>();
+for (const item of milongas) {
+  if (typeof item.lat !== 'number' || typeof item.lng !== 'number' || !item.city) continue;
+  const current = coords.get(item.city) ?? { lat: 0, lng: 0, count: 0 };
+  current.lat += item.lat;
+  current.lng += item.lng;
+  current.count += 1;
+  coords.set(item.city, current);
+}
+const cityCoords = [...coords.entries()].map(([city, value]) => [
+  city,
+  Number((value.lat / value.count).toFixed(4)),
+  Number((value.lng / value.count).toFixed(4)),
+]);
+
+const cities = [
+  ...new Set([
+    ...events.map((event) => event.ci),
+    ...tonightMilongas.map((item) => item.c),
+  ].filter(Boolean)),
+].sort((a, b) => a.localeCompare(b, 'en'));
+---
+
+<AppShell
+  title={`Happening now — ${copy.brand}`}
+  description="Tango events running today and milongas playing tonight, near your city."
+  locale="en"
+  mode="page"
+  posts={posts}
+>
+  <Fragment slot="center">
+    <Header
+      locale="en"
+      crumbs={[
+        { label: copy.home, href: homePath('en') },
+        { label: 'Happening now' },
+      ]}
+    />
+    <main id="main" class="app-page now-page" data-now-page data-i18n-today={tonight}>
+      <h1 class="app-page-title">Happening now</h1>
+      <p class="app-prose">
+        Events running today and milongas playing tonight. Pick your city once; we remember it and include
+        nearby towns within about 150 km.
+      </p>
+
+      <div class="app-now-controls">
+        <label class="app-now-field">
+          <span>Your city</span>
+          <input type="text" list="now-cities" data-now-city autocomplete="off" placeholder="Istanbul, Köln…" />
+        </label>
+        <button type="button" class="app-btn" data-now-locate>Use my location</button>
+      </div>
+      <datalist id="now-cities">
+        {cities.map((city) => <option value={city} />)}
+      </datalist>
+
+      <p class="app-now-status" data-now-status aria-live="polite"></p>
+      <div class="app-now-results" data-now-results></div>
+      <noscript>
+        <p class="app-prose">This page needs JavaScript to use your city. The milongas page lists tonight's options by city.</p>
+      </noscript>
+
+      <script type="application/json" data-now-events set:html={JSON.stringify(events)} />
+      <script type="application/json" data-now-milongas set:html={JSON.stringify(tonightMilongas)} />
+      <script type="application/json" data-now-coords set:html={JSON.stringify(cityCoords)} />
+    </main>
+  </Fragment>
+</AppShell>
+<script>
+  import { initNow } from '../scripts/now';
+  initNow();
+</script>
