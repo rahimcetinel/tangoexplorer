@@ -44,3 +44,7 @@ Thumbs.db
 
 # local launcher logs
 .logs/
+
+# local noise / generated mockups
+debug.log
+docs/palette-mockup-*.html
