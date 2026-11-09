@@ -445,7 +445,13 @@ body:has(.app-shell) {
 }
 
 .app-acc-chev {
+  display: inline-flex;
+  align-items: center;
   transition: transform 0.2s;
+}
+
+.app-acc-chev svg {
+  display: block;
 }
 
 .app-acc.is-open .app-acc-chev {
@@ -944,15 +950,20 @@ body:has(.app-shell) {
   padding: 1px 7px;
 }
 
-.app-mchip:hover,
-.app-mchip.is-active {
+.app-mchip:hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
 }
 
-.app-mchip.is-active b {
+.app-mchip.is-active {
   background: var(--color-accent);
+  border-color: var(--color-accent);
   color: var(--color-paper);
+}
+
+.app-mchip.is-active b {
+  background: var(--color-paper);
+  color: var(--color-accent);
 }
 
 .app-main-board {
@@ -1608,13 +1619,14 @@ body.detail-open {
 }
 
 .app-btn-solid {
-  background: var(--color-ink);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
   color: var(--color-paper);
 }
 
 .app-btn-solid:hover {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
+  background: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
 }
 
 .app-timeline-pos {
