@@ -410,11 +410,11 @@
       "checkedAt": "2026-11-09"
     },
     "https://www.arcobalenotangomarathon.com/2027/": {
-      "status": "unreachable",
+      "status": "ok",
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/Arcobaleno+Tango+Marathon+2027/11273": {
-      "status": "unreachable",
+      "status": "ok",
       "checkedAt": "2026-11-09"
     },
     "https://artetango-festival.com/accueil-festival-2/": {
@@ -910,7 +910,7 @@
       "checkedAt": "2026-11-09"
     },
     "https://www.facebook.com/groups/958800094732591/": {
-      "status": "error",
+      "status": "ok",
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/el+Abanico+Encantador/10407": {
@@ -1354,19 +1354,19 @@
       "checkedAt": "2026-11-09"
     },
     "https://www.facebook.com/groups/169363763708355/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/La+Befana+Milonguera/11031": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://www.facebook.com/groups/1418710595940478/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/La+Bora+Encuentro+de+Trieste/10574": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://www.facebook.com/profile.php?id=100091272394131": {
@@ -1378,7 +1378,7 @@
       "checkedAt": "2026-11-09"
     },
     "https://www.facebook.com/groups/26265849106420354/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/La+FIestita/11277": {
@@ -1386,7 +1386,7 @@
       "checkedAt": "2026-11-09"
     },
     "https://facebook.com/events/s/la-macarena-5th-edition-7-to-1/969597469391636/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/La+Macarena+Milonguero+Encuentro+2027+5th+Edition/10668": {
@@ -1774,6 +1774,14 @@
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/More+Than+Tango+(Marathon+%26+Festival+%26+Cup)/10208": {
+      "status": "ok",
+      "checkedAt": "2026-11-09"
+    },
+    "https://tangovivomarseille.wixsite.com/xxxx": {
+      "status": "ok",
+      "checkedAt": "2026-11-09"
+    },
+    "https://tangocat.net/go/MTV+Tango+Party/11296": {
       "status": "ok",
       "checkedAt": "2026-11-09"
     },
@@ -2714,11 +2722,11 @@
       "checkedAt": "2026-11-09"
     },
     "https://sassilonga.com/en/home2/": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/The+Tango+Encuentro+in+the+City+of+Sassi/10833": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-09"
     },
     "https://www.facebook.com/profile.php?id=100083339448084": {
@@ -2750,7 +2758,7 @@
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/Tormenta+Tango+Marathon+Opatija/10628": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "http://www.TorontoSpringTangoMarathon.com": {
@@ -2830,11 +2838,11 @@
       "checkedAt": "2026-11-09"
     },
     "https://www.facebook.com/groups/1462693474932199/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/Vienna+Vibes+Tango+Marathon/11011": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://www.maudeandrey.com/viento-norte-festivalito-english.html": {
@@ -2846,11 +2854,11 @@
       "checkedAt": "2026-11-09"
     },
     "https://www.facebook.com/groups/205452512918008/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/Vietnam+Tango+Marathon+2027/10566": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://www.facebook.com/events/1587639503144225/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22group%22%7D]%7D": {
@@ -2870,11 +2878,11 @@
       "checkedAt": "2026-11-09"
     },
     "https://www.facebook.com/groups/381942907767760/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/Vilnius+Tango+Weekend+2027/11287": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/Vinilo+Budapest+Encuentro+Milonguero/11056": {
@@ -2946,19 +2954,19 @@
       "checkedAt": "2026-11-09"
     },
     "https://facebook.com/events/s/xii-sol-de-invierno-internacio/1190278679940130/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/XII+Sol+de+Invierno+Internacional+Tango+Meeting/10836": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://www.facebook.com/groups/761303068713370/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://tangocat.net/go/Xmas+in+Embrace/10261": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://facebook.com/events/s/zar-tanga-2nd-edition/1361763762632162/": {
@@ -3086,7 +3094,7 @@
       "checkedAt": "2026-11-09"
     },
     "https://www.facebook.com/groups/1301116590704961/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://tangoverse.net/events/tango-celebration-in-belgium-30cd5c": {
@@ -3234,7 +3242,7 @@
       "checkedAt": "2026-11-09"
     },
     "https://www.facebook.com/groups/3703502026634699": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-09"
     },
     "https://www.tangomarathons.com/events/2026-dias-de-garufa-edition-3/": {
@@ -3314,7 +3322,7 @@
       "checkedAt": "2026-11-09"
     },
     "https://midsommartango.se/en_gb/": {
-      "status": "unreachable",
+      "status": "ok",
       "checkedAt": "2026-11-09"
     },
     "https://www.tangomarathons.com/events/2027-midsommartango-edition-14/": {
