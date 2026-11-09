@@ -45,6 +45,25 @@ test('the city field suggests a short list, not the whole dictionary', async ({ 
   await expect(page.locator('[data-plan-suggest]')).toBeHidden();
 });
 
+test('changing a date after the results are shown re-renders them', async ({ page }) => {
+  const start = nextFriday();
+  await page.goto(`/plan?city=Berlin&start=${start}&end=${plusDays(start, 2)}`);
+  const summary = page.locator('[data-plan-summary]');
+  await expect(summary).toContainText('in Berlin');
+  const before = (await summary.textContent()) ?? '';
+  await page.locator('[data-plan-end]').fill(plusDays(start, 6));
+  await expect(summary).not.toHaveText(before);
+  await expect(page.locator('[data-plan-end]')).toHaveValue(plusDays(start, 6));
+});
+
+test('an end date before the start clamps to the start', async ({ page }) => {
+  const start = nextFriday();
+  await page.goto(`/plan?city=Berlin&start=${start}&end=${plusDays(start, 2)}`);
+  await page.locator('[data-plan-end]').fill(plusDays(start, -3));
+  await expect(page.locator('[data-plan-end]')).toHaveValue(start);
+  await expect(page.locator('[data-plan-start]')).toHaveValue(start);
+});
+
 test('the planner asks for a city first', async ({ page }) => {
   await page.goto('/plan');
   await expect(page.locator('.app-plan-hint')).toContainText('Istanbul');

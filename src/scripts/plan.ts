@@ -121,20 +121,23 @@ export function initPlan(): void {
   startInput.value = start;
   endInput.value = end;
 
-  function keepRangeSane(changed: 'start' | 'end'): void {
+  const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+
+  // Normalise the pair. The start never moves on its own: an end that lands
+  // before the start clamps forward to the start (and the native picker greys
+  // those days out via `min`), and anything past the cap clamps to the cap.
+  function keepRangeSane(): void {
     const fallback = parseIsoDate(start) ?? new Date();
-    let from = parseIsoDate(startInput.value) ?? fallback;
+    const from = parseIsoDate(startInput.value) ?? fallback;
     let to = parseIsoDate(endInput.value) ?? from;
-    if (to < from) {
-      if (changed === 'start') to = from;
-      else from = to;
-    }
+    if (to < from) to = from;
     const capped = addDays(from, MAX_DAYS - 1);
     if (to > capped) to = capped;
     start = iso(from);
     end = iso(to);
-    startInput.value = start;
-    endInput.value = end;
+    if (startInput.value !== start) startInput.value = start;
+    if (endInput.value !== end) endInput.value = end;
+    endInput.min = start;
   }
 
   function syncUrl(): void {
@@ -312,7 +315,7 @@ export function initPlan(): void {
     event.preventDefault();
     city = cityInput.value.trim();
     hideSuggest();
-    keepRangeSane('start');
+    keepRangeSane();
     render();
   });
 
@@ -369,15 +372,20 @@ export function initPlan(): void {
     render();
   });
 
-  startInput.addEventListener('change', () => {
-    keepRangeSane('start');
+  // Native date inputs are inconsistent: picking from the calendar fires both
+  // `input` and `change`, typing the segments fires `input` per keystroke and
+  // `change` only on blur. Listen to both, and ignore half-typed values so the
+  // normaliser does not fight the user mid-edit.
+  function onDateChange(): void {
+    if (!ISO_DATE.test(startInput.value) || !ISO_DATE.test(endInput.value)) return;
+    keepRangeSane();
     render();
-  });
+  }
 
-  endInput.addEventListener('change', () => {
-    keepRangeSane('end');
-    render();
-  });
+  startInput.addEventListener('input', onDateChange);
+  startInput.addEventListener('change', onDateChange);
+  endInput.addEventListener('input', onDateChange);
+  endInput.addEventListener('change', onDateChange);
 
   results.addEventListener('click', (event) => {
     const example = (event.target as Element | null)?.closest<HTMLElement>('[data-plan-example]');
@@ -388,7 +396,7 @@ export function initPlan(): void {
     render();
   });
 
-  keepRangeSane('start');
+  keepRangeSane();
   render();
   syncUrl();
 }
