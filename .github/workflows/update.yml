@@ -164,6 +164,22 @@ jobs:
         if: always() && (github.event_name == 'schedule' || inputs.checks)
         run: npm run test:e2e
 
+      # Canlı sayfalarda ölçülen kontrast (11 sayfa + drawer + makale, iki
+      # viewport). Chromium bir üst adımda kuruldu. Şimdilik rapor edici:
+      # ilk temiz koşudan sonra `continue-on-error` kaldırılıp gerçek kapı olur.
+      - name: Palette audit (live site)
+        if: always() && (github.event_name == 'schedule' || inputs.checks)
+        continue-on-error: true
+        run: npm run check:palette:live
+
+      - name: Upload palette audit
+        if: always() && (github.event_name == 'schedule' || inputs.checks)
+        uses: actions/upload-artifact@v4
+        with:
+          name: palette-audit
+          path: agentic-python/out/palette/palette-report.json
+          if-no-files-found: warn
+
       - name: Upload visual check screenshots
         if: always() && (github.event_name == 'schedule' || inputs.checks)
         uses: actions/upload-artifact@v4

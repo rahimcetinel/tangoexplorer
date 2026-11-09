@@ -30,6 +30,12 @@ jobs:
 
       - run: npm ci
 
+      # Tarayıcısız palet/tip kapısı: token sözlüğü, 15 satırlık kontrast
+      # matrisi, 11 px tabanı, kaldırılan renklerin kalıntıları. Kırmızıysa
+      # Build/Deploy hiç çalışmaz — bozuk palet canlıya çıkmaz.
+      - name: Palette gate
+        run: npm run check:palette
+
       # Astro optimize görselleri node_modules/.astro içinde tutar; `npm ci`
       # bu dizini siler. Kurulumdan sonra geri yüklemek, içerik değişmediği
       # koşularda ~4.6k sharp dönüşümünü tekrar yapmayı önler.
