@@ -42,14 +42,13 @@
   --color-cream: #faf6f2;
   --color-paper: #ffffff;
   --color-ink: #1e1a17;
-  --color-ink-soft: #6b5e54;
-  --color-burgundy: #a83250;
-  --color-burgundy-dark: #8a2640;
-  --color-rule: #e4d8cc;
-  --color-gold: #9a7230;
-  --color-teal: #1a8a7a;
-  --color-orange: #d15a28;
-  --color-indigo: #5a2d82;
+  --color-ink-soft: #5c5048;
+  --color-accent: #5a2d82;
+  --color-accent-dark: #4a2569;
+  --color-rule: #d9c7b4;
+  --color-rule-strong: #8f7a63;
+  --color-teal: #0f6b5f;
+  --color-orange: #b4471c;
 }
 
 :root {
@@ -68,7 +67,7 @@
   --radius-sm: 7px;
   --radius-md: 12px;
   --radius-pill: 999px;
-  --shadow-card: 0 10px 24px rgba(90, 45, 130, 0.14);
+  --shadow-card: 0 10px 24px rgba(60, 40, 25, 0.10);
   --shadow-panel: -12px 0 32px rgba(30, 26, 23, 0.2);
   --surface: var(--color-paper);
   --surface-muted: #f0e8de;
@@ -102,7 +101,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-burgundy);
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
 
@@ -140,7 +139,7 @@ body {
   line-height: 0.85;
   padding-right: 0.45rem;
   padding-top: 0.2rem;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 /* App shell — top bar + 2-column body (list + detail). */
@@ -185,7 +184,7 @@ body:has(.app-shell) {
 }
 
 .app-brand em {
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   font-style: normal;
 }
 
@@ -212,7 +211,7 @@ body:has(.app-shell) {
 }
 
 .app-topnav a.is-active {
-  background: var(--color-ink);
+  background: var(--color-accent);
   color: var(--color-paper);
 }
 
@@ -252,7 +251,7 @@ body:has(.app-shell) {
 }
 
 .app-regions summary.is-active {
-  background: var(--color-ink);
+  background: var(--color-accent);
   color: var(--color-paper);
 }
 
@@ -358,7 +357,7 @@ body:has(.app-shell) {
 
 .app-menu-search input {
   width: 100%;
-  border: 1px solid var(--color-rule);
+  border: 1px solid var(--color-rule-strong);
   background: var(--color-cream);
   border-radius: 999px;
   padding: 11px 16px;
@@ -511,7 +510,7 @@ body:has(.app-shell) {
 .app-rail-reset {
   border: 0;
   background: transparent;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   font-size: 0.7rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -563,7 +562,7 @@ body:has(.app-shell) {
 }
 
 .app-nav-link.is-active {
-  background: var(--color-ink);
+  background: var(--color-accent);
   color: var(--color-paper);
 }
 
@@ -617,7 +616,7 @@ body:has(.app-shell) {
 .app-select-wrap select {
   appearance: none;
   width: 100%;
-  border: 1px solid var(--color-rule);
+  border: 1px solid var(--color-rule-strong);
   background: var(--color-paper);
   color: var(--color-ink);
   border-radius: 9px;
@@ -629,11 +628,11 @@ body:has(.app-shell) {
 }
 
 .app-select-wrap select:hover {
-  border-color: var(--color-burgundy);
+  border-color: var(--color-accent);
 }
 
 .app-select-wrap select:focus-visible {
-  outline: 2px solid var(--color-burgundy);
+  outline: 2px solid var(--color-accent);
   outline-offset: 1px;
 }
 
@@ -652,12 +651,12 @@ body:has(.app-shell) {
 
 .app-chip:hover,
 .app-chip.is-active {
-  border-color: var(--color-burgundy);
-  color: var(--color-burgundy);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .app-chip.is-active {
-  background: var(--color-burgundy);
+  background: var(--color-accent);
   color: var(--color-paper);
 }
 
@@ -671,7 +670,7 @@ body:has(.app-shell) {
 }
 
 .app-foot a {
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   font-weight: 600;
   text-decoration: underline;
 }
@@ -717,7 +716,7 @@ body:has(.app-shell) {
   font-size: 0.66rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-ink-soft);
   white-space: nowrap;
 }
 
@@ -734,7 +733,7 @@ body:has(.app-shell) {
 }
 
 .app-crumb a:hover {
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 .app-crumb b {
@@ -846,7 +845,7 @@ body:has(.app-shell) {
 }
 
 .app-cal-link a {
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   font-weight: 600;
   text-decoration: underline;
 }
@@ -901,8 +900,8 @@ body:has(.app-shell) {
 }
 
 .app-mstep:hover {
-  border-color: var(--color-indigo);
-  color: var(--color-indigo);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .app-mall {
@@ -910,7 +909,7 @@ body:has(.app-shell) {
   padding: 6px 10px;
   border: 0;
   background: none;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -938,7 +937,7 @@ body:has(.app-shell) {
 
 .app-mchip b {
   background: var(--surface-muted);
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   font-size: 0.68rem;
   border-radius: 999px;
   padding: 1px 7px;
@@ -946,12 +945,12 @@ body:has(.app-shell) {
 
 .app-mchip:hover,
 .app-mchip.is-active {
-  border-color: var(--color-burgundy);
-  color: var(--color-burgundy);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .app-mchip.is-active b {
-  background: var(--color-burgundy);
+  background: var(--color-accent);
   color: var(--color-paper);
 }
 
@@ -981,12 +980,9 @@ body:has(.app-shell) {
   margin-bottom: 18px;
   padding: 12px 14px 16px;
   border-radius: 14px;
-  background: color-mix(in srgb, var(--color-indigo) 5%, var(--color-cream));
+  background: var(--surface-muted);
 }
 
-.app-month:nth-child(even) {
-  background: color-mix(in srgb, var(--color-teal) 7%, var(--color-cream));
-}
 
 .app-month-grid {
   display: grid;
@@ -1051,11 +1047,11 @@ body:has(.app-shell) {
 }
 
 .app-result.is-active .app-result-title {
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 .app-result:hover .app-result-title {
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 .app-result-month {
@@ -1063,7 +1059,7 @@ body:has(.app-shell) {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 .app-result-title {
@@ -1084,7 +1080,7 @@ body:has(.app-shell) {
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 .app-results-head {
@@ -1102,7 +1098,7 @@ body:has(.app-shell) {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   cursor: pointer;
 }
 
@@ -1127,7 +1123,7 @@ body:has(.app-shell) {
 
 .app-ev:hover,
 .app-ev.is-selected {
-  border-color: var(--color-burgundy);
+  border-color: var(--color-accent);
 }
 
 .app-ev:hover {
@@ -1136,7 +1132,7 @@ body:has(.app-shell) {
 }
 
 .app-ev.is-selected {
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-burgundy) 30%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-accent) 30%, transparent);
 }
 
 .app-ev a {
@@ -1192,8 +1188,8 @@ body:has(.app-shell) {
   display: grid;
   place-items: center;
   height: 100%;
-  background: linear-gradient(135deg, var(--color-burgundy), var(--color-gold));
-  color: var(--color-paper);
+  background: var(--surface-muted);
+  color: var(--color-ink-soft);
   font-family: var(--font-display);
   font-size: 2.4rem;
 }
@@ -1271,8 +1267,8 @@ body:has(.app-shell) {
 .app-ev-ph.noimg {
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, var(--color-burgundy), var(--color-gold));
-  color: var(--color-paper);
+  background: var(--surface-muted);
+  color: var(--color-ink-soft);
   font-family: var(--font-display);
   font-size: 1.8rem;
 }
@@ -1286,7 +1282,7 @@ body:has(.app-shell) {
   padding: 2px 6px;
   font-size: 0.58rem;
   font-weight: 800;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   letter-spacing: 0.03em;
 }
 
@@ -1308,7 +1304,7 @@ body:has(.app-shell) {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-ink-soft);
   margin: 0;
 }
 
@@ -1366,7 +1362,7 @@ body:has(.app-shell) {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1437,7 +1433,7 @@ body.detail-open {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 .app-kicker a:hover {
@@ -1447,7 +1443,7 @@ body.detail-open {
 .app-when-badge {
   display: inline-block;
   margin-left: 8px;
-  background: var(--color-burgundy);
+  background: var(--color-orange);
   color: var(--color-paper);
   border-radius: 999px;
   padding: 2px 8px;
@@ -1572,7 +1568,7 @@ body.detail-open {
 }
 
 .app-link {
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   font-weight: 600;
   margin-left: 0.25rem;
   text-decoration: underline;
@@ -1620,8 +1616,8 @@ body.detail-open {
 }
 
 .app-btn-solid:hover {
-  background: var(--color-burgundy);
-  border-color: var(--color-burgundy);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 .app-timeline-pos {
@@ -1634,7 +1630,7 @@ body.detail-open {
 }
 
 .app-timeline-pos b {
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 .app-related {
@@ -1648,7 +1644,7 @@ body.detail-open {
 }
 
 .app-related a {
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   font-weight: 600;
 }
 
@@ -1701,7 +1697,7 @@ body.detail-open {
 }
 
 .app-prose a {
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   text-decoration: underline;
 }
 
@@ -1788,16 +1784,16 @@ body.detail-open {
   border-bottom: 1px dotted var(--color-ink-soft);
   background: none;
   font: inherit;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   cursor: pointer;
 }
 
 .app-milonga-tonight:hover {
-  border-bottom-color: var(--color-burgundy);
+  border-bottom-color: var(--color-accent);
 }
 
 .app-milonga-tonight b {
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 .app-milonga-toolbar {
@@ -1817,7 +1813,7 @@ body.detail-open {
   font-size: 0.8rem;
   color: var(--color-ink);
   background: var(--color-paper);
-  border: 1px solid var(--color-rule);
+  border: 1px solid var(--color-rule-strong);
   border-radius: 8px;
 }
 
@@ -1863,13 +1859,13 @@ body.detail-open {
 }
 
 .app-mtab:hover {
-  border-color: var(--color-burgundy);
-  color: var(--color-burgundy);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .app-mtab.is-active {
-  background: var(--color-ink);
-  border-color: var(--color-ink);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
   color: var(--color-on-ink, var(--color-paper));
 }
 
@@ -1879,8 +1875,8 @@ body.detail-open {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: currentColor;
-  opacity: 0.7;
+  background: var(--color-orange);
+  opacity: 1;
   margin-left: 6px;
   vertical-align: middle;
 }
@@ -1924,7 +1920,7 @@ body.detail-open {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #fff;
-  background: var(--color-burgundy);
+  background: var(--color-orange);
   border-radius: 999px;
   padding: 2px 7px;
   margin-left: 8px;
@@ -1954,7 +1950,7 @@ body.detail-open {
 
 .app-mitem.is-selected {
   background: var(--surface-muted);
-  box-shadow: inset 3px 0 0 var(--color-burgundy);
+  box-shadow: inset 3px 0 0 var(--color-accent);
 }
 
 .app-mitem-time {
@@ -1965,7 +1961,7 @@ body.detail-open {
   font-size: 0.78rem;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   white-space: nowrap;
 }
 
@@ -2032,9 +2028,9 @@ body.detail-open {
   border-radius: 999px;
   padding: 2px 9px;
   white-space: nowrap;
-  background: var(--cc, var(--color-indigo));
+  background: var(--cc, var(--color-accent));
   color: #fff;
-  border: 1px solid var(--cc, var(--color-indigo));
+  border: 1px solid var(--cc, var(--color-accent));
 }
 
 .app-mitem-price {
@@ -2130,87 +2126,6 @@ body.detail-open {
   }
 }
 
-/* --- Vivid accent layer --- */
-.app-brand em,
-.app-kicker,
-.app-ev-cat,
-.app-detail-eyebrow,
-.app-crumb a:hover,
-.app-link,
-.app-related a,
-.app-source a,
-.app-foot a,
-.app-prose a,
-.app-article-body a,
-.app-rail-reset,
-.app-mitem-time,
-.app-ev-day,
-.app-mchip b {
-  color: var(--color-indigo);
-}
-
-.app-nav-link.is-active,
-.app-topnav a.is-active,
-.app-chip.is-active,
-.app-mchip.is-active,
-.app-mtab.is-active {
-  background: var(--color-indigo);
-  border-color: var(--color-indigo);
-  color: #fff;
-}
-
-.app-mchip.is-active b {
-  background: #fff;
-  color: var(--color-indigo);
-}
-
-.app-btn-solid {
-  background: var(--color-indigo);
-  border-color: var(--color-indigo);
-}
-
-.app-btn-solid:hover {
-  background: var(--color-teal);
-  border-color: var(--color-teal);
-}
-
-.app-chip:not(.is-active):hover,
-.app-select-wrap select:hover,
-.app-mchip:not(.is-active):hover,
-.app-mtab:not(.is-active):hover {
-  border-color: var(--color-indigo);
-  color: var(--color-indigo);
-}
-
-.app-ev:hover,
-.app-ev.is-selected {
-  border-color: var(--color-indigo);
-}
-
-.app-ev.is-selected {
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-indigo) 30%, transparent);
-}
-
-.app-mitem.is-selected {
-  background: var(--surface-muted);
-  box-shadow: inset 3px 0 0 var(--color-indigo);
-}
-
-.app-when-badge,
-.app-mgroup-head.is-today em {
-  background: var(--color-orange);
-}
-
-.app-mtab.is-today::after {
-  background: var(--color-orange);
-  opacity: 1;
-}
-
-:focus-visible,
-.app-select-wrap select:focus-visible {
-  outline-color: var(--color-indigo);
-}
-
 /* Single-line masthead: the board starts right below it. */
 .app-hero {
   flex: 0 0 auto;
@@ -2252,7 +2167,7 @@ body.detail-open {
   font-size: var(--text-sm);
   color: var(--color-ink);
   background: var(--color-paper);
-  border: 1px solid var(--color-rule);
+  border: 1px solid var(--color-rule-strong);
   border-radius: var(--radius-pill);
 }
 
@@ -2266,14 +2181,14 @@ body.detail-open {
   font-size: var(--text-sm);
   font-weight: 600;
   color: var(--color-paper);
-  background: var(--color-burgundy);
-  border: 1px solid var(--color-burgundy);
+  background: var(--color-accent);
+  border: 1px solid var(--color-accent);
   border-radius: var(--radius-pill);
   cursor: pointer;
 }
 
 .app-hero-search button:hover {
-  background: var(--color-burgundy-dark);
+  background: var(--color-accent-dark);
 }
 
 .app-hero-meta {
@@ -2311,8 +2226,8 @@ body.detail-open {
 
 .app-hero-filter:hover,
 .app-hero-filter.is-active {
-  color: var(--color-burgundy);
-  border-bottom-color: var(--color-burgundy);
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
 }
 
 .app-hero-filter b {
@@ -2320,7 +2235,7 @@ body.detail-open {
 }
 
 .app-hero-filter.is-active b {
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 @media (max-width: 859px) {
@@ -2369,7 +2284,7 @@ body.detail-open {
   font-size: 0.95rem;
   color: var(--color-ink);
   background: var(--color-paper);
-  border: 1px solid var(--color-rule);
+  border: 1px solid var(--color-rule-strong);
   border-radius: var(--radius-pill);
 }
 
@@ -2498,7 +2413,7 @@ body.detail-open {
 .app-now-strip-link {
   margin-left: auto;
   font-weight: 600;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   text-decoration: underline;
   white-space: nowrap;
 }
@@ -2526,7 +2441,7 @@ body.detail-open {
   font-size: 0.9rem;
   color: var(--color-ink);
   background: var(--color-paper);
-  border: 1px solid var(--color-rule);
+  border: 1px solid var(--color-rule-strong);
   border-radius: 8px;
 }
 
@@ -2591,13 +2506,13 @@ body.detail-open {
 }
 
 .app-now-tag-event {
-  background: #f3e7ec;
-  color: var(--color-burgundy);
+  background: color-mix(in srgb, var(--color-accent) 8%, var(--color-cream));
+  color: var(--color-accent);
 }
 
 .app-now-tag-milonga {
-  background: #e7f2ee;
-  color: #0f6b5f;
+  background: color-mix(in srgb, var(--color-teal) 10%, var(--color-cream));
+  color: var(--color-teal);
 }
 
 .app-now-status {
@@ -2624,7 +2539,7 @@ body.detail-open {
 }
 
 .app-now-heading span {
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 .app-now-list {
@@ -2671,7 +2586,7 @@ body.detail-open {
 .app-source-warn {
   margin: 2px 0 0;
   font-size: 0.74rem;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 /* Saved events */
@@ -2688,19 +2603,19 @@ body.detail-open {
   border: 1px solid var(--color-rule);
   border-radius: 50%;
   background: var(--color-paper);
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   font-size: 0.95rem;
   line-height: 1;
   cursor: pointer;
 }
 
 .app-ev-save:hover {
-  border-color: var(--color-burgundy);
+  border-color: var(--color-accent);
 }
 
 .app-ev-save.is-saved {
-  background: var(--color-burgundy);
-  border-color: var(--color-burgundy);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
   color: var(--color-paper);
 }
 
@@ -2757,7 +2672,7 @@ body.detail-open {
   padding: 0;
   border: 0;
   background: none;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -2805,7 +2720,7 @@ body.detail-open {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 .app-ev-milonga-day-title span {
@@ -2830,7 +2745,7 @@ body.detail-open {
   grid-row: 1 / span 2;
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--color-indigo);
+  color: var(--color-accent);
 }
 
 .app-ev-milonga-name {
@@ -2848,7 +2763,7 @@ body.detail-open {
   display: inline-block;
   margin-top: 4px;
   font-size: 0.8rem;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   text-decoration: underline;
 }
 
@@ -2867,8 +2782,8 @@ body.detail-open {
   margin-top: 6px;
   padding: 2px 8px;
   border-radius: 999px;
-  background: #e7f2ee;
-  color: #0f6b5f;
+  background: color-mix(in srgb, var(--color-teal) 10%, var(--color-cream));
+  color: var(--color-teal);
   font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -2906,7 +2821,7 @@ body.detail-open {
   font-size: 0.9rem;
   color: var(--color-ink);
   background: var(--color-paper);
-  border: 1px solid var(--color-rule);
+  border: 1px solid var(--color-rule-strong);
   border-radius: 8px;
 }
 
@@ -2941,7 +2856,7 @@ body.detail-open {
 }
 
 .app-plan-heading span {
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 .app-plan-list {
@@ -2981,7 +2896,7 @@ body.detail-open {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
 }
 
 .app-plan-hint {
@@ -2993,7 +2908,7 @@ body.detail-open {
   border: 0;
   background: none;
   font: inherit;
-  color: var(--color-burgundy);
+  color: var(--color-accent);
   text-decoration: underline;
   cursor: pointer;
 }

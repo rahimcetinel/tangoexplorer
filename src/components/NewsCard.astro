@@ -38,10 +38,10 @@ const cardAttrs = {
           </div>
         )}
         <div class={post.data.image ? 'lg:col-span-8' : 'lg:col-span-12'}>
-          <p class="text-xs font-bold tracking-widest text-burgundy uppercase">
+          <p class="text-xs font-bold tracking-widest text-accent uppercase">
             {labels[post.data.category]} · {formatNewsDate(post.data.date, locale)}
           </p>
-          <h2 class="font-display mt-3 text-4xl leading-tight font-bold group-hover:text-burgundy sm:text-5xl">
+          <h2 class="font-display mt-3 text-4xl leading-tight font-bold group-hover:text-accent sm:text-5xl">
             {post.data.title}
           </h2>
           <p class="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">{post.data.summary}</p>
@@ -55,10 +55,10 @@ const cardAttrs = {
         {post.data.image && (
           <EventImage src={post.data.image} alt="" initialsFrom={post.data.title} sizes="(min-width: 768px) 50vw, 100vw" class="mb-3 h-40 w-full border border-rule object-cover" />
         )}
-        <p class="text-xs font-bold tracking-widest text-burgundy uppercase">
+        <p class="text-xs font-bold tracking-widest text-accent uppercase">
           {labels[post.data.category]} · {formatNewsDate(post.data.date, locale)}
         </p>
-        <h3 class="font-display mt-1.5 text-xl leading-snug font-bold group-hover:text-burgundy">
+        <h3 class="font-display mt-1.5 text-xl leading-snug font-bold group-hover:text-accent">
           {post.data.title}
         </h3>
         <p class="mt-2 text-ink-soft">{post.data.summary}</p>

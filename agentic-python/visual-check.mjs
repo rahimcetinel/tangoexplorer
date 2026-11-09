@@ -27,7 +27,8 @@ async function externalEndpoint() {
 const SHOTS = [
   { name: 'home-mobile', path: '/', viewport: { width: 390, height: 844 } },
   { name: 'milongas-mobile', path: '/milongas/', viewport: { width: 390, height: 844 } },
-  { name: 'milongas-tr-mobile', path: '/tr/milongalar/', viewport: { width: 390, height: 844 } },
+  // 360px is the narrowest common phone; İtalya filtresi uzun şehir adlarını getirir.
+  { name: 'milongas-italy-360', path: '/milongas/?region=italy', viewport: { width: 360, height: 780 } },
   { name: 'home-desktop', path: '/', viewport: { width: 1440, height: 900 } },
   { name: 'milongas-desktop', path: '/milongas/', viewport: { width: 1440, height: 900 } },
 ];

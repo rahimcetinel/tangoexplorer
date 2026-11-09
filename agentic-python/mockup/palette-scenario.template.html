@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TangoExplorer — Palet mockup · {{TITLE_TAG}}</title>
+<style>
+  @font-face { font-family: "Fraunces"; font-weight: 500 700; font-display: swap; src: url({{FRAUNCES}}) format("woff2"); }
+  @font-face { font-family: "Inter"; font-weight: 400 700; font-display: swap; src: url({{INTER}}) format("woff2"); }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #efe9e3; color: #1e1a17; font: 14px/1.5 "Inter", system-ui, sans-serif; }
+
+  /* ---------- mockup chrome (not part of the design) ---------- */
+  .doc { max-width: 1280px; margin: 0 auto; padding: 28px 24px 80px; }
+  .doc-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 18px; margin-bottom: 6px; }
+  .doc-head h1 { font-family: "Fraunces", Georgia, serif; font-size: 30px; font-weight: 700; letter-spacing: -.01em; margin: 0; }
+  .doc-head .meta { font-size: 12.5px; color: #6b5e54; }
+  .decisions { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 30px; }
+  .decision {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid #d9c7b4; background: #faf6f2; border-radius: 999px;
+    padding: 6px 14px; font-size: 12.5px; font-weight: 600;
+  }
+  .decision i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .sec { margin: 46px 0 0; }
+  .sec > h2 {
+    font-family: "Fraunces", Georgia, serif; font-size: 20px; font-weight: 700;
+    margin: 0 0 4px; letter-spacing: -.01em;
+  }
+  .sec > p { margin: 0 0 16px; color: #5c5048; font-size: 13px; max-width: 78ch; }
+  .sec > h2 + p b { color: #1e1a17; }
+
+  .pair { display: grid; gap: 14px; }
+  .panel { border: 1px solid #d9c7b4; border-radius: 12px; overflow: hidden; background: var(--cream); position: relative; }
+  .panel-tag {
+    display: block; text-align: right;
+    font: 600 10.5px/1 "Inter", sans-serif; letter-spacing: .1em; text-transform: uppercase;
+    padding: 7px 12px;
+  }
+  .p-old .panel-tag { background: #5a2d82; color: #fff; }
+  .p-new .panel-tag { background: {{TAG_BG}}; color: #fff; }
+
+  /* ---------- token scopes: this is the whole change ---------- */
+  .p-old {
+    --cream: #faf6f2; --paper: #ffffff; --ink: #1e1a17; --muted: #f0e8de;
+    --ink-soft: #6b5e54; --accent: #a83250; --accent-dark: #8a2640;
+    --nav-active: #5a2d82; --cat: #5a2d82; --day: #5a2d82; --time: #5a2d82;
+    --btn: #5a2d82; --btn-hover: #1a8a7a; --focus: #5a2d82;
+    --rule: #e4d8cc; --rule-strong: #e4d8cc;
+    --shadow: 0 10px 24px rgba(90, 45, 130, .14);
+    --today: #d15a28; --teal: #1a8a7a;
+    --cat-size: 8.8px; --cat-ls: .12em; --day-size: 9.3px; --pill-size: 9.6px; --city-size: 10.6px;
+    --loc-size: 10.9px; --chip-count: #5a2d82; --chip-size: 10.9px;
+    --selected-bar: #5a2d82; --card-hover: #5a2d82;
+    --time-end-opacity: .62; --time-end-color: currentColor;
+    --mgroup-today-size: 9.6px;
+  }
+  .p-new {
+{{NEW_VARS}}
+  }
+
+  /* ---------- app chrome ---------- */
+  .topbar { display: flex; align-items: center; gap: 18px; padding: 12px 22px; background: var(--paper); border-bottom: 1px solid var(--rule); }
+  .menu-square { width: 34px; height: 34px; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper); display: grid; place-items: center; flex: 0 0 auto; }
+  .burger, .burger::before, .burger::after { display: block; width: 15px; height: 1.6px; background: var(--ink); position: relative; content: ""; }
+  .burger::before { position: absolute; top: -5px; }
+  .burger::after { position: absolute; top: 5px; }
+  .brand { font-family: "Fraunces", Georgia, serif; font-weight: 700; font-size: 24px; letter-spacing: -.02em; margin-left: 6px; white-space: nowrap; }
+  .brand em { color: var(--accent); font-style: normal; }
+  .topdate { font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-soft); white-space: nowrap; }
+  .topnav { display: flex; gap: 2px; margin-left: 6px; flex-wrap: wrap; }
+  .topnav a { padding: 7px 12px; border-radius: 8px; font-size: 13.6px; font-weight: 600; color: var(--ink-soft); text-decoration: none; white-space: nowrap; }
+  .topnav a.is-active { background: var(--nav-active); color: #fff; }
+  .search { margin-left: auto; flex: 0 1 320px; display: flex; }
+  .search input { width: 100%; padding: 9px 14px; border: 1px solid var(--rule); border-radius: 999px; background: var(--paper); color: var(--ink); font: 13px "Inter", sans-serif; }
+  .search input::placeholder { color: var(--ink-soft); }
+
+  .hero { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 18px; padding: 12px 24px; background: var(--cream); border-bottom: 1px solid var(--rule); }
+  .hero h2 { margin: 0; font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 25.6px; line-height: 1.15; letter-spacing: -.01em; white-space: nowrap; }
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 2px 8px; margin: 0 0 0 auto; font-size: 12.5px; color: var(--ink-soft); }
+  .hero-meta b { color: var(--ink); }
+  .hero-meta .is-accent b { color: var(--today); }
+  .hero-meta .filter { color: inherit; border-bottom: 1px dotted var(--ink-soft); text-decoration: none; }
+
+  .ribbon { display: flex; gap: 8px; padding: 12px 22px; background: var(--cream); border-bottom: 1px solid var(--rule); overflow: hidden; }
+  .mchip { border: 1px solid var(--rule); background: var(--paper); border-radius: 999px; padding: 6px 13px; font-size: 12.5px; font-weight: 600; color: var(--ink-soft); display: inline-flex; gap: 8px; align-items: center; white-space: nowrap; }
+  .mchip b { background: var(--muted); color: var(--chip-count); font-size: var(--chip-size); border-radius: 999px; padding: 1px 7px; }
+  .mchip.is-active { background: var(--nav-active); border-color: var(--nav-active); color: #fff; }
+  .mchip.is-active b { background: #fff; color: var(--nav-active); }
+
+  /* ---------- event card ---------- */
+  .board { padding: 16px 22px 22px; background: var(--cream); }
+  .month { display: flex; align-items: baseline; gap: 8px; margin: 0 0 12px; font-family: "Fraunces", Georgia, serif; font-size: 16px; font-weight: 700; }
+  .month span { font-family: "Inter", sans-serif; font-size: 11.5px; font-weight: 600; color: var(--ink-soft); }
+  .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+
+  .card { position: relative; background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
+  .card.is-hover { box-shadow: var(--shadow); border-color: var(--card-hover); transform: translateY(-2px); }
+  .card a { color: inherit; text-decoration: none; display: flex; flex-direction: column; height: 100%; }
+  .card-ph { position: relative; aspect-ratio: 3 / 2; background: var(--muted); overflow: hidden; }
+  .card-ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .badge-day { position: absolute; top: 7px; left: 7px; background: var(--paper); border-radius: 6px; padding: 2px 6px; font-size: var(--day-size); font-weight: 800; color: var(--day); letter-spacing: .03em; }
+  .star { position: absolute; top: 7px; right: 7px; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--rule); background: var(--paper); color: var(--accent); display: grid; place-items: center; font-size: 15px; line-height: 1; padding: 0; }
+  .card-in { padding: 10px 11px 12px; min-height: 122px; display: flex; flex-direction: column; }
+  .cat { margin: 0; font-size: var(--cat-size); font-weight: 700; letter-spacing: var(--cat-ls); text-transform: uppercase; color: var(--cat); }
+  .card-in h3 {
+    font-family: "Fraunces", Georgia, serif; font-size: 13.6px; line-height: 1.2; margin: 5px 0; font-weight: 700;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .card-in .loc { margin: auto 0 0; align-self: flex-start; }
+  .ev-open {
+    align-self: flex-start; margin-top: 6px; padding: 2px 8px; border-radius: 999px;
+    background: #e7f2ee; color: #0f6b5f;
+    font-size: 9.9px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  }
+  .p-new .ev-open { background: color-mix(in srgb, var(--teal) 10%, var(--cream)); color: var(--teal); font-size: 11px; letter-spacing: .05em; }
+
+  /* ---------- badges ---------- */
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 999px;
+    font-size: var(--city-size); font-weight: 700; white-space: nowrap; border: 1px solid transparent;
+  }
+  .badge[data-kind="country"] { font-size: var(--loc-size); }
+  .p-old .badge[data-kind="country"] { color: var(--cc); background: color-mix(in srgb, var(--cc) 12%, #fff); border-color: color-mix(in srgb, var(--cc) 40%, transparent); }
+  .p-old .badge[data-kind="city"] { color: #fff; background: var(--cc); border-color: var(--cc); font-weight: 800; padding: 2px 9px; }
+  .p-new .badge { color: var(--ink); background: var(--muted); border: 1px solid var(--rule); font-weight: 700; }
+
+  /* ---------- milongas ---------- */
+  .mtoolbar { display: flex; gap: 10px; padding: 12px 22px 0; background: var(--cream); }
+  .mtoolbar select { border: 1px solid var(--rule-strong); border-radius: 999px; padding: 8px 12px; background: var(--paper); color: var(--ink); font: 12.5px "Inter", sans-serif; }
+  .tabs { display: flex; gap: 6px; padding: 10px 20px; background: var(--paper); border-bottom: 1px solid var(--rule); }
+  .mtab { border: 1px solid var(--rule); background: var(--paper); color: var(--ink-soft); border-radius: 999px; padding: 6px 14px; font-size: 12.8px; font-weight: 600; min-height: 36px; display: inline-flex; align-items: center; gap: 6px; }
+  .mtab.is-active { background: var(--nav-active); border-color: var(--nav-active); color: #fff; }
+  .mtab.is-today::after { content: ""; width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: .7; }
+
+  .mlist { padding: 8px 22px 22px; background: var(--cream); }
+  .mgroup-head { margin: 14px 0 6px; padding: 8px 0; font-family: "Fraunces", Georgia, serif; font-size: 16.8px; font-weight: 700; background: var(--cream); }
+  .mgroup-head span { margin-left: 8px; font-family: "Inter", sans-serif; font-size: 11.5px; color: var(--ink-soft); }
+  .mgroup-head em {
+    font-family: "Inter", sans-serif; font-style: normal; font-size: var(--mgroup-today-size);
+    font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #fff;
+    background: var(--today); border-radius: 999px; padding: 2px 7px; margin-left: 8px; vertical-align: middle;
+  }
+  .mitem {
+    display: grid; grid-template-columns: 88px minmax(0, 1fr) auto; gap: 12px; align-items: center;
+    width: 100%; text-align: left; border: 0; border-bottom: 1px solid var(--rule);
+    background: transparent; color: var(--ink); padding: 12px 10px; border-radius: 8px; font: inherit;
+  }
+  .mitem.is-selected { background: var(--muted); box-shadow: inset 3px 0 0 var(--selected-bar); }
+  .mitem-time { display: flex; flex-direction: column; gap: 1px; font-size: 12.5px; font-weight: 700; line-height: 1.2; color: var(--time); white-space: nowrap; }
+  .mitem-time .end { font-weight: 600; opacity: var(--time-end-opacity); color: var(--time-end-color); }
+  .mitem-name { display: block; font-family: "Fraunces", Georgia, serif; font-size: 16px; font-weight: 700; line-height: 1.2; }
+  .mitem-meta { display: block; font-size: 12.5px; color: var(--ink-soft); }
+  .mitem-tags { display: flex; gap: 6px; align-items: center; }
+  .pill { font-size: var(--pill-size); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; border-radius: 999px; padding: 2px 8px; border: 1px solid var(--rule); color: var(--ink-soft); white-space: nowrap; }
+  .p-old .pill.is-milonga { color: var(--teal); border-color: color-mix(in srgb, var(--teal) 30%, transparent); }
+  .p-old .pill.is-practica { color: var(--today); border-color: color-mix(in srgb, var(--today) 30%, transparent); }
+  .mitem-price { font-size: 12.5px; font-weight: 600; color: var(--ink-soft); white-space: nowrap; }
+
+  /* ---------- drawer / buttons / focus ---------- */
+  .drawer { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--paper); }
+  .drawer-main { padding: 22px 24px 26px; }
+  .eyebrow {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 10.6px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--cat); margin: 0 0 10px;
+  }
+  .eyebrow .x { font-size: 22px; color: var(--ink-soft); line-height: 1; }
+  .drawer h3 { font-family: "Fraunces", Georgia, serif; font-size: 27px; line-height: 1.08; margin: 0 0 10px; font-weight: 700; }
+  .drawer p.lede { margin: 0; color: var(--ink-soft); line-height: 1.6; font-size: 15px; }
+  .facts { padding: 22px 24px; background: var(--cream); border-left: 1px solid var(--rule); }
+  .facts dl { display: grid; grid-template-columns: auto 1fr; gap: 8px 12px; margin: 0; font-size: 13px; }
+  .facts dt { color: var(--ink-soft); }
+  .facts dd { margin: 0; font-weight: 600; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 8px; border: 1px solid var(--btn); background: var(--btn); color: #fff; font-size: 13px; font-weight: 600; }
+  .btn:hover { background: var(--btn-hover); border-color: var(--btn-hover); color: #fff; }
+  .btn.ghost { background: var(--paper); color: var(--accent); border-color: var(--accent); }
+  .is-focus { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+  /* ---------- tables ---------- */
+  table.tok { width: 100%; border-collapse: collapse; font-size: 12.5px; background: #faf6f2; border: 1px solid #d9c7b4; }
+  table.tok th, table.tok td { padding: 7px 10px; border-bottom: 1px solid #e6dccf; text-align: left; vertical-align: middle; }
+  table.tok th { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #5c5048; background: #f2ebe4; }
+  table.tok td.mono, .mono { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 12px; }
+  .sw { display: inline-flex; align-items: center; gap: 6px; }
+  .sw i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; border: 1px solid rgba(0,0,0,.12); }
+  .ok { color: #15803d; font-weight: 700; }
+  .bad { color: #b91c1c; font-weight: 700; }
+  .none { color: #8f7a63; font-style: italic; }
+
+  .legend-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .legend-card { border: 1px solid #d9c7b4; border-radius: 10px; padding: 14px 16px; background: #fff; }
+  .legend-card .bar { height: 6px; border-radius: 3px; margin-bottom: 10px; }
+  .legend-card b { display: block; font-size: 13px; margin-bottom: 2px; }
+  .legend-card span { font-size: 12.5px; color: #5c5048; }
+
+  .device-wrap { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  .device { width: 390px; border: 1px solid #d9c7b4; border-radius: 16px; overflow: hidden; background: #faf6f2; }
+  .device .mitem { grid-template-columns: 56px minmax(0, 1fr) auto; }
+  .device .mitem-tags { flex-direction: column; align-items: flex-end; }
+  .device .mitem-price { display: none; }
+  .device .panel-tag { text-align: right; }
+
+  .notes { font-size: 12.5px; color: #5c5048; }
+  .notes li { margin-bottom: 6px; }
+  .notes b { color: #1e1a17; }
+</style>
+</head>
+<body>
+<div class="doc">
+
+  <div class="doc-head">
+    <h1>TangoExplorer — Palet mockup</h1>
+    <span class="meta">{{TITLE_TAG}} · 9 Kasım 2026 · statik önizleme (canlı siteye uygulanmadı)</span>
+  </div>
+  <div class="decisions">
+    {{CHIPS}}
+  </div>
+
+  <p class="sec" style="margin-top:0;color:#5c5048;max-width:78ch">
+    {{INTRO}}
+  </p>
+
+  <!-- ================= 1. üst bar + hero ================= -->
+  <section class="sec">
+    <h2>1 · Üst bar ve manşet</h2>
+    <p>Aktif sekme bugün <b>mor</b> (<span class="mono">#5a2d82</span>), marka ise <b>bordo</b>
+       (<span class="mono">#a83250</span>): aynı satırda iki "birincil" renk. {{SEC1_TAIL}}</p>
+    <div class="pair">
+      <div class="panel p-old">
+        <span class="panel-tag">Şu an</span>
+        {{TOPBAR_OLD}}
+      </div>
+      <div class="panel p-new">
+        <span class="panel-tag">{{TAG_NEW}}</span>
+        {{TOPBAR_NEW}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2. kartlar ================= -->
+  <section class="sec">
+    <h2>2 · Etkinlik kartı</h2>
+    <p>Afişler zaten tam renkli. Arayüzde kalan üç renk katmanı — renkli kategori etiketi (8.8 px),
+       renkli yer rozeti, mor gölge — afişle yarışıyor. Yeni panelde kategori <b>nötr mürekkep</b> ve 11 px,
+       yer rozeti nötr krem, gölge sıcak nötr. {{SEC2_TAIL}}</p>
+    <div class="pair">
+      <div class="panel p-old">
+        <span class="panel-tag">Şu an</span>
+        {{CARDS_OLD}}
+      </div>
+      <div class="panel p-new">
+        <span class="panel-tag">{{TAG_NEW}}</span>
+        {{CARDS_NEW}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3. milongalar ================= -->
+  <section class="sec">
+    <h2>3 · Milongalar listesi</h2>
+    <p>Bugün bitiş saati <span class="mono">opacity:.62</span> ile soluk (3.45:1) ve şehir rozeti beyaz metinle
+       kendi renginde (İstanbul <span class="bad">4.20:1</span>; İtalya'da Bologna <span class="bad">2.93:1</span>).
+       Yeni panelde bitiş saati <span class="mono">ink-soft</span> (7.24:1), rozet ve tür etiketi nötr, etiketler 11 px.
+       {{SEC3_TAIL}} <b>Vurgulanan satır</b> seçili durumu gösteriyor.</p>
+    <div class="pair">
+      <div class="panel p-old">
+        <span class="panel-tag">Şu an</span>
+        {{MILONGAS_OLD}}
+      </div>
+      <div class="panel p-new">
+        <span class="panel-tag">{{TAG_NEW}}</span>
+        {{MILONGAS_NEW}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. rozet anatomisi ================= -->
+  <section class="sec">
+    <h2>4 · Rozet anatomisi (bulgu 3.2 / 3.3 / 3.4)</h2>
+    <p>Solda bugünkü üretim: ülke rozetleri <b>hash</b> ile 16 renkten, şehir rozetleri <b>eşit aralıklı HSL</b> ile
+       (İtalya'da 48 şehir → 7.5°'lik adımlar). Sağda tek nötr rozet. Kutu içindeki sayı, metnin kendi
+       zeminine göre kontrastı; 4.5:1 altı işaretli.</p>
+
+    <div class="pair">
+      <div class="panel p-old">
+        <span class="panel-tag">Şu an</span>
+        <div style="padding:6px 20px 20px">
+        <h4 style="font:700 12px/1 'Inter';letter-spacing:.1em;text-transform:uppercase;color:#5a2d82;margin:4px 0 10px">Ülke rozeti · hash paleti</h4>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          {{COUNTRY_BADGES}}
+        </div>
+        <h4 style="font:700 12px/1 'Inter';letter-spacing:.1em;text-transform:uppercase;color:#5a2d82;margin:20px 0 10px">Şehir rozeti · eşit aralıklı HSL (İtalya'dan 8 örnek)</h4>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          {{CITY_BADGES}}
+        </div>
+        <p style="font-size:12px;color:#5c5048;margin:18px 0 0;max-width:80ch">
+          Aynı şehir iki sayfada iki renk: ana sayfada <b>Istanbul</b> kahverengi tint
+          (<span class="mono">#78350f</span>, 7.43:1), milongalar listesinde hardal üzerine beyaz
+          (<span class="mono">#9d7525</span>, <span class="bad">4.20:1</span>). Ölçülen 202 şehir kombinasyonunun
+          <b>98'i</b> 4.5:1 altında.
+        </p>
+        </div>
+      </div>
+      <div class="panel p-new">
+        <span class="panel-tag">{{TAG_NEW}}</span>
+        <div style="padding:6px 20px 20px">
+        <h4 style="font:700 12px/1 'Inter';letter-spacing:.1em;text-transform:uppercase;color:#8f7a63;margin:4px 0 10px">Nötr rozet · renk kodlaması yok</h4>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          {{NEUTRAL_BADGES}}
+        </div>
+        <p style="font-size:12px;color:#5c5048;margin:18px 0 0;max-width:80ch">
+          Tüm rozetler: krem zemin <span class="mono">#f0e8de</span>, mürekkep metin
+          <span class="mono">#1e1a17</span> (<b>14.24:1</b>), hairline <span class="mono">#d9c7b4</span>.
+          Ülke/şehir bilgisi metinde kalıyor ("Turkey, Istanbul") ve kart zaten bölge etiketi taşıyor
+          ("EUROPE"). Renk artık bilgi taşımadığı için süs de üretmiyor.
+        </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5. token tablosu ================= -->
+  <section class="sec">
+    <h2>5 · Token değişimi ve ölçülen kontrast</h2>
+    <p>Kontrastlar WCAG 2.1 bağıl parlaklık formülüyle yeniden hesaplandı; krem <span class="mono">#faf6f2</span> zemin,
+       normal metin eşiği 4.5:1.</p>
+    {{TOKEN_TABLE}}
+  </section>
+
+  <!-- ================= 6. anlam haritası ================= -->
+  <section class="sec">
+    <h2>6 · Renk–anlam haritası (bulgu 3.8)</h2>
+    <p>Bugün aynı renk 3–4 anlama geliyor. Yeni panelde her rengin tek işi var; aksan sayısı 4'ten 3'e iniyor.</p>
+    <div class="legend-grid">
+      {{LEGEND}}
+    </div>
+  </section>
+
+  <!-- ================= 7. odak + drawer ================= -->
+  <section class="sec">
+    <h2>7 · Odak halkası ve detay çekmecesi</h2>
+    <p>{{SEC7_TAIL}}</p>
+    <div class="pair">
+      <div class="panel p-old">
+        <span class="panel-tag">Şu an</span>
+        {{DRAWER_OLD}}
+      </div>
+      <div class="panel p-new">
+        <span class="panel-tag">{{TAG_NEW}}</span>
+        {{DRAWER_NEW}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 8. mobil ================= -->
+  <section class="sec">
+    <h2>8 · Telefon (390 px)</h2>
+    <p>Aynı liste, dar kolon: 56 px saat kolonu + etiket kolonu. Etiketler 11 px'e çıkınca taşma olmaması için
+       <span class="mono">.app-ev-in</span> sabit yüksekliği <span class="mono">min-height</span>'a çevrilecek (P3).</p>
+    <div class="device-wrap">
+      <div class="device p-old">
+        <span class="panel-tag">Şu an</span>
+        {{MOBILE_OLD}}
+      </div>
+      <div class="device p-new">
+        <span class="panel-tag">{{TAG_NEW}}</span>
+        {{MOBILE_NEW}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 9. notlar ================= -->
+  <section class="sec">
+    <h2>9 · Bu mockup'ta olmayanlar</h2>
+    <ul class="notes">
+      <li><b>Karanlık mod (P6).</b> Bu turda kapsam dışı; token'lar hazır olduktan sonra ayrı PR.</li>
+      <li><b>Tipografi değişmiyor.</b> Fraunces + Inter aynı; sadece mikro etiketler 8.8–10.6 px → ≥11 px.</li>
+      <li><b>Haber sayfası ve arama</b> aynı token'ları kullandığı için otomatik takip ediyor; ayrı tasarım yok.</li>
+      <li><b>Gerçek görseller:</b> etkinlik afişleri <span class="mono">src/assets/events/</span> içinden, kâğıt oranında kırpıldı.</li>
+      <li><b>Hover/seçili/odak</b> durumları statik olarak işaretlendi (<span class="mono">.is-hover</span>,
+          <span class="mono">.is-selected</span>, <span class="mono">.is-focus</span>).</li>
+    </ul>
+  </section>
+</div>
+</body>
+</html>
