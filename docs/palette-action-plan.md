@@ -207,7 +207,7 @@ Yapılanlar ve sapmalar:
 - Kapı artık **hata** veriyor: `palette-tokens.mjs` her kuralı tarayıp 11 px altı `font-size` görürse kırmızı. Kalan tek uyarı P4'ün `--cc` kancası.
 
 
-### P4 — Rozetleri nötrleştir (2–3 saat)
+### P4 — Rozetleri nötrleştir — ✅ uygulandı (9 Kas 2026)
 
 1. `country-color.ts` **silinir** (dosya), `TimelineCard.astro:10,32` importu ve `--cc` inline stili kalkar.
 2. `milonga-html.ts`: `distinctPalette`, `cityColorsFor` kaldırılır; `itemHtml`/`listHtml` imzalarından `cityColors` parametresi çıkar; `<span class="app-mitem-city" style="--cc:…">` → stil yok.
@@ -216,6 +216,13 @@ Yapılanlar ve sapmalar:
 5. Ülke ayrımı metinde zaten var ("Turkey, Istanbul") + `.app-ev-cat` bölge etiketi ("EUROPE"). Renk dışı ek işaret gerekmiyorsa **ekleme**.
 
 **Kabul:** ekranda ülke/şehir için üretilen renk sayısı **0** (bugün 13 ülke + 202 şehir kombinasyonu); rozet kontrastı ≥ 4.5:1; aynı şehir iki sayfada aynı görünüm.
+
+#### Uygulama notu
+
+- `src/lib/country-color.ts` silindi; `distinctPalette` / `cityColorsFor` ve `listHtml`/`itemHtml` imzalarındaki `cityColors` parametresi kaldırıldı (3 dosya).
+- `.app-ev-loc` artık kartın içinde nötr pill (krem zemin + mürekkep metin + hairline, 14.24:1); `.app-ev-loc.is-country` kuralı silindi, `is-country` sınıfı markup'tan çıktı.
+- `.app-mitem-city` nötr pill; renk `--cc` üzerinden hiç gelmiyor.
+- Kapı sertleşti: `--cc`, `countryColor`, `distinctPalette`, `cityColorsFor` artık **hata**; `npm run check:palette` bunları `src/` genelinde arıyor.
 
 ### P5 — Anlam haritasını sabitle ve belgele (1 saat)
 

@@ -98,13 +98,30 @@ const leftovers = [
   ['--color-burgundy', /--color-burgundy/, 'error'],
   ['hardcoded burgundy', /#a83250|#8a2640/i, 'error'],
   ['hardcoded teal pair', /#e7f2ee|#0f6b5f/i, 'warn'],
-  ['--cc badge hook (P4)', /var\(--cc/, 'warn'],
+  ['--cc badge hook (P4)', /var\(--cc/, 'error'],
 ];
 const leftoverHits = leftovers.map(([name, re, level]) => {
   const hits = [...cssBody.matchAll(new RegExp(re, 'g'))].length;
   if (hits > 0) (level === 'error' ? errors : warnings).push(`${name}: ${hits} eşleşme`);
   return { name, hits, level, ok: hits === 0 };
 });
+
+/* 3b. the badge colour producers must stay gone (P4) */
+const srcFiles = fs
+  .readdirSync('src', { recursive: true })
+  .map((f) => path.join('src', String(f)))
+  .filter((f) => /\.(ts|astro|css)$/.test(f));
+const srcText = srcFiles.map((f) => fs.readFileSync(f, 'utf8')).join('\n');
+for (const [name, re] of [
+  ['countryColor (hash palette)', /countryColor/],
+  ['distinctPalette (HSL city hues)', /distinctPalette/],
+  ['cityColorsFor', /cityColorsFor/],
+  ['--cc in markup', /--cc/],
+]) {
+  const hits = [...srcText.matchAll(new RegExp(re, 'g'))].length;
+  if (hits > 0) errors.push(`${name}: ${hits} eşleşme (P4 kalıntısı)`);
+  leftoverHits.push({ name, hits, level: 'error', ok: hits === 0 });
+}
 
 /* 4. type floor: nothing below 11px (P3 — enforced) */
 const small = [];

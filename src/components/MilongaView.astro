@@ -8,7 +8,6 @@ import type { Milonga } from '../lib/hoy';
 import { regionLabel } from '../lib/hoy';
 import {
   cityChipsHtml,
-  cityColorsFor,
   defaultFilters,
   detailHtml,
   listHtml,
@@ -26,7 +25,6 @@ const posts = await getBoardNews(locale);
 const items = MILONGAS as Milonga[];
 const regions = countriesWithCounts(items);
 const filters = defaultFilters(items);
-const cityColors = cityColorsFor(items, filters.region);
 const total = items.filter((item) => item.region === filters.region).length;
 const tonight = tonightCount(items, filters.region);
 const generated = new Date(MILONGA_UPDATED_AT);
@@ -72,7 +70,7 @@ const updatedAt = `${generated.getUTCDate()} ${monthShort.en[generated.getUTCMon
       <div
         class="app-milonga-list"
         data-milonga-list
-        set:html={listHtml(items, filters, locale, copy, cityColors, null)}
+        set:html={listHtml(items, filters, locale, copy, null)}
       />
       <p class="app-empty" data-milonga-empty hidden>{copy.milongaEmpty}</p>
     </main>

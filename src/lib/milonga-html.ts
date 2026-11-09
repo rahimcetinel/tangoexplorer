@@ -65,23 +65,6 @@ export function citiesForRegion(items: Milonga[], region: string): string[] {
   return [...set].sort((a, b) => a.localeCompare(b, 'en'));
 }
 
-// Evenly spaced hues so every city in a region gets a maximally distinct tone.
-export function distinctPalette(count: number): string[] {
-  const colors: string[] = [];
-  const step = 360 / Math.max(count, 1);
-  for (let index = 0; index < count; index += 1) {
-    const hue = Math.round((index * step + 40) % 360);
-    colors.push(`hsl(${hue}, 62%, 38%)`);
-  }
-  return colors;
-}
-
-export function cityColorsFor(items: Milonga[], region: string): Map<string, string> {
-  const cities = citiesForRegion(items, region);
-  const palette = distinctPalette(cities.length);
-  return new Map(cities.map((city, index) => [city, palette[index]!]));
-}
-
 export function milongaTimeHtml(start?: string, end?: string): string {
   if (!start) {
     return `<span class="app-mitem-time">—</span>`;
@@ -125,7 +108,6 @@ export function tabsHtml(
 function itemHtml(
   item: Milonga,
   copy: MilongaCopy,
-  cityColors: Map<string, string>,
   selected: string | null,
 ): string {
   const meta = item.venue || item.area;
@@ -140,7 +122,7 @@ function itemHtml(
     `</span>` +
     `<span class="app-mitem-tags">` +
     (item.city
-      ? `<span class="app-mitem-city" style="--cc:${cityColors.get(item.city) || ''}">${escapeHtml(item.city)}</span>`
+      ? `<span class="app-mitem-city">${escapeHtml(item.city)}</span>`
       : '') +
     `<span class="app-mitem-type is-${item.type}">${typeLabel}</span>` +
     (item.price ? `<span class="app-mitem-price">${escapeHtml(item.price)}</span>` : '') +
@@ -160,7 +142,6 @@ export function listHtml(
   filters: MilongaFilters,
   locale: Locale,
   copy: MilongaCopy,
-  cityColors: Map<string, string>,
   selected: string | null = null,
   now: Date = new Date(),
 ): string {
@@ -186,7 +167,7 @@ export function listHtml(
         `${group.day ? weekdaysLong[locale][DAY_INDEX[group.day]] : copy.milongaAllDays}` +
         (group.day === today ? `<em>${copy.whenToday}</em>` : '') +
         `<span>${group.rows.length}</span></h2>` +
-        group.rows.map((item) => itemHtml(item, copy, cityColors, selected)).join('') +
+        group.rows.map((item) => itemHtml(item, copy, selected)).join('') +
         `</section>`,
     )
     .join('');

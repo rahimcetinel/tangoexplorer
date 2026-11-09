@@ -1321,21 +1321,17 @@ body:has(.app-shell) {
 }
 
 .app-ev-loc {
-  font-size: var(--text-mini);
-  color: var(--color-ink-soft);
-  margin: 0;
-  margin-top: auto;
-  align-self: flex-start;
-}
-
-.app-ev-loc.is-country {
   display: inline-block;
   padding: 2px 8px;
   border-radius: 999px;
+  font-size: var(--text-mini);
   font-weight: 700;
-  color: var(--cc);
-  background: color-mix(in srgb, var(--cc) 12%, transparent);
-  border: 1px solid color-mix(in srgb, var(--cc) 40%, transparent);
+  color: var(--color-ink);
+  background: var(--surface-muted);
+  border: 1px solid var(--color-rule);
+  margin: 0;
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .app-detail {
@@ -2025,13 +2021,13 @@ body.detail-open {
 
 .app-mitem-city {
   font-size: var(--text-mini);
-  font-weight: 800;
+  font-weight: 700;
   border-radius: 999px;
   padding: 2px 9px;
   white-space: nowrap;
-  background: var(--cc, var(--color-accent));
-  color: #fff;
-  border: 1px solid var(--cc, var(--color-accent));
+  background: var(--surface-muted);
+  color: var(--color-ink);
+  border: 1px solid var(--color-rule);
 }
 
 .app-mitem-price {

@@ -4,7 +4,6 @@ import { ui, weekdaysShort, type Locale } from '../lib/i18n';
 import {
   citiesForRegion,
   cityChipsHtml,
-  cityColorsFor,
   detailHtml,
   escapeHtml,
   listHtml,
@@ -58,7 +57,6 @@ export function initMilongas() {
     const available = [...new Set(items.map((item) => item.region))];
     filters.region = detectCountry(available) || 'turkiye';
   }
-  let cityColors = new Map<string, string>();
 
   function readUrl(): MilongaFilters {
     const params = new URLSearchParams(window.location.search);
@@ -143,8 +141,7 @@ export function initMilongas() {
   }
 
   function renderList() {
-    cityColors = cityColorsFor(items, filters.region);
-    listEl!.innerHTML = listHtml(items, filters, locale, copy, cityColors, selected);
+    listEl!.innerHTML = listHtml(items, filters, locale, copy, selected);
     if (citiesEl) citiesEl.innerHTML = cityChipsHtml(items, filters, copy);
     if (emptyEl) emptyEl.hidden = items.some((item) => matchesMilonga(item, filters));
   }
