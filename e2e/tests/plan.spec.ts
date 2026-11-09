@@ -7,12 +7,42 @@ function nextFriday(): string {
   return date.toISOString().slice(0, 10);
 }
 
-test('the planner combines events and milongas for a city weekend', async ({ page }) => {
+function plusDays(iso: string, days: number): string {
+  const date = new Date(`${iso}T00:00:00Z`);
+  date.setUTCDate(date.getUTCDate() + days);
+  return date.toISOString().slice(0, 10);
+}
+
+test('the planner combines events and milongas for a city and a date range', async ({ page }) => {
   await page.goto(`/plan?city=Istanbul&weekend=${nextFriday()}`);
+  await expect(page.locator('h1')).toHaveText('Plan a tango experience');
   await expect(page.locator('[data-plan-summary]')).toContainText('in Istanbul');
   await expect(page.locator('.app-plan-section').first().locator('.app-plan-item-title').first()).toBeVisible();
   await expect(page.locator('.app-plan-day').first()).toBeVisible();
   await expect(page.locator('.app-plan-section').nth(1)).toContainText('Friday');
+});
+
+test('the planner takes a start and an end date', async ({ page }) => {
+  const start = nextFriday();
+  const end = plusDays(start, 2);
+  await page.goto(`/plan?city=Berlin&start=${start}&end=${end}`);
+  await expect(page.locator('[data-plan-start]')).toHaveValue(start);
+  await expect(page.locator('[data-plan-end]')).toHaveValue(end);
+  await expect(page.locator('[data-plan-summary]')).toContainText('in Berlin');
+  await expect(page.locator('.app-plan-day').first()).toContainText('Friday');
+  await expect(page).toHaveURL(new RegExp(`start=${start}&end=${end}`));
+});
+
+test('the city field suggests a short list, not the whole dictionary', async ({ page }) => {
+  await page.goto('/plan');
+  await expect(page.locator('datalist')).toHaveCount(0);
+  await page.locator('[data-plan-city]').fill('ber');
+  const options = page.locator('[data-plan-suggest] .app-suggest-item');
+  await expect(options.first()).toBeVisible();
+  await expect(options).toHaveCount(8);
+  await options.first().click();
+  await expect(page.locator('[data-plan-city]')).toHaveValue(/^Ber/i);
+  await expect(page.locator('[data-plan-suggest]')).toBeHidden();
 });
 
 test('the planner asks for a city first', async ({ page }) => {

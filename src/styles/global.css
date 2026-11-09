@@ -2859,7 +2859,6 @@ body.detail-open {
 
 .plan-page {
   max-width: 1000px;
-  margin: 0 auto;
   width: 100%;
 }
 
@@ -2890,9 +2889,18 @@ body.detail-open {
   color: var(--color-ink-soft);
 }
 
-.app-plan-field input,
-.app-plan-field select {
-  min-width: 240px;
+.app-plan-combo {
+  position: relative;
+  display: block;
+  min-width: 220px;
+}
+
+.app-plan-combo input {
+  width: 100%;
+}
+
+.app-plan-field input {
+  min-width: 220px;
   padding: 9px 12px;
   font: inherit;
   font-size: 0.9rem;
@@ -2900,10 +2908,6 @@ body.detail-open {
   background: var(--color-paper);
   border: 1px solid var(--color-rule);
   border-radius: 8px;
-}
-
-.app-plan-field select {
-  min-width: 200px;
 }
 
 .app-plan-form .app-btn {
@@ -2999,8 +3003,7 @@ body.detail-open {
     grid-template-columns: 1fr;
   }
 
-  .app-plan-field input,
-  .app-plan-field select {
+  .app-plan-field input {
     min-width: 0;
     width: 100%;
   }

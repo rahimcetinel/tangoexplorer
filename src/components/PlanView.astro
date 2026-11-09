@@ -3,7 +3,7 @@ import AppShell from '../layouts/AppShell.astro';
 import Header from '../components/Header.astro';
 import { MILONGAS } from '../lib/milongas';
 import { getNews, newsSlug } from '../lib/news';
-import { homePath, kindLabels, monthShort, ui } from '../lib/i18n';
+import { homePath, kindLabels, ui } from '../lib/i18n';
 import type { Milonga } from '../lib/hoy';
 
 const copy = ui.en;
@@ -32,32 +32,18 @@ const slimMilongas = milongas.map((item) => ({
   r: item.region,
 }));
 
+// Default plan: the coming Friday to the Sunday after it.
 const day = 86_400_000;
 const today = new Date();
-const friday = new Date(Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()));
-const weekday = friday.getUTCDay();
-friday.setUTCDate(friday.getUTCDate() + ((5 - weekday + 7) % 7));
-const weekends: { value: string; label: string }[] = [];
-for (let index = 0; index < 12; index += 1) {
-  const start = new Date(friday.getTime() + index * 7 * day);
-  const end = new Date(start.getTime() + 2 * day);
-  weekends.push({
-    value: start.toISOString().slice(0, 10),
-    label: `Fri ${start.getUTCDate()} – Sun ${end.getUTCDate()} ${monthShort.en[end.getUTCMonth()]}`,
-  });
-}
-
-const cities = [
-  ...new Set([
-    ...posts.map((post) => post.data.city).filter((city): city is string => Boolean(city)),
-    ...milongas.map((item) => item.city).filter(Boolean),
-  ]),
-].sort((a, b) => a.localeCompare(b, 'en'));
+const first = new Date(Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()));
+first.setUTCDate(first.getUTCDate() + ((5 - first.getUTCDay() + 7) % 7));
+const defaultStart = first.toISOString().slice(0, 10);
+const defaultEnd = new Date(first.getTime() + 2 * day).toISOString().slice(0, 10);
 ---
 
 <AppShell
-  title={`Plan a tango weekend — ${copy.brand}`}
-  description="Pick a city and a weekend to see the tango events and milongas happening then."
+  title={`Plan a tango experience — ${copy.brand}`}
+  description="Pick a city and your dates to see the tango events and milongas happening then."
   locale="en"
   mode="page"
   posts={posts}
@@ -67,39 +53,46 @@ const cities = [
       locale="en"
       crumbs={[
         { label: copy.home, href: homePath('en') },
-        { label: 'Plan a weekend' },
+        { label: 'Plan an experience' },
       ]}
     />
     <main id="main" class="app-page plan-page" data-plan-page>
-      <h1 class="app-page-title">Plan a tango weekend</h1>
+      <h1 class="app-page-title">Plan a tango experience</h1>
       <p class="app-prose">
-        Pick a city and a weekend. We show the festivals and marathons that overlap those dates, plus the
-        milongas that run on Friday, Saturday or Sunday.
+        Pick a city and your dates. We show the festivals and marathons that overlap that window, plus the
+        milongas that run on those days.
       </p>
 
       <form class="app-plan-form" action="/plan" method="get" data-plan-form>
         <label class="app-plan-field">
           <span>City</span>
-          <input
-            type="text"
-            name="city"
-            list="plan-cities"
-            placeholder="Istanbul, Berlin, Buenos Aires…"
-            autocomplete="off"
-            data-plan-city
-          />
+          <span class="app-plan-combo">
+            <input
+              type="text"
+              name="city"
+              placeholder="Istanbul, Berlin, Buenos Aires…"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="plan-city-suggest"
+              data-plan-city
+            />
+            <div class="app-suggest" id="plan-city-suggest" role="listbox" data-plan-suggest hidden></div>
+          </span>
         </label>
         <label class="app-plan-field">
-          <span>Weekend</span>
-          <select name="weekend" data-plan-weekend>
-            {weekends.map((weekend) => <option value={weekend.value}>{weekend.label}</option>)}
-          </select>
+          <span>Start date</span>
+          <input type="date" name="start" value={defaultStart} data-plan-start />
         </label>
-        <button class="app-btn app-btn-solid" type="submit">Show weekend</button>
+        <label class="app-plan-field">
+          <span>End date</span>
+          <input type="date" name="end" value={defaultEnd} data-plan-end />
+        </label>
+        <button class="app-btn app-btn-solid" type="submit">Show plan</button>
       </form>
-      <datalist id="plan-cities">
-        {cities.map((city) => <option value={city} />)}
-      </datalist>
 
       <p class="app-plan-summary" data-plan-summary aria-live="polite"></p>
       <div class="app-plan-results" data-plan-results></div>
