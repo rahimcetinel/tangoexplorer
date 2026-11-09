@@ -33,8 +33,11 @@ export function initDetailPanel() {
   const panel = document.querySelector<HTMLElement>('[data-detail-panel]');
   const frame = document.querySelector<HTMLElement>('[data-article-frame]');
   const backdrop = document.querySelector<HTMLElement>('[data-detail-backdrop]');
+  // Board templates get the drawer from their mode; a page template opts in
+  // with `detail` (the planner lists events and shows them in place).
+  const drawerShell = shell?.hasAttribute('data-drawer') ?? false;
   const boardMode = ['home', 'category', 'search'].includes(shell?.dataset.mode ?? '');
-  if (!shell || !panel || !frame || !boardMode) {
+  if (!shell || !panel || !frame || (!boardMode && !drawerShell)) {
     return null;
   }
 

@@ -16,6 +16,8 @@ interface Props {
   robots?: string;
   jsonLd?: object[];
   closePath?: string;
+  /** A page template that also wants the slide-over detail drawer. */
+  detail?: boolean;
 }
 
 const {
@@ -29,10 +31,12 @@ const {
   robots,
   jsonLd,
   closePath,
+  detail = false,
 } = Astro.props;
 const copy = ui[locale];
 const isBoard = mode === 'home' || mode === 'category' || mode === 'milonga' || mode === 'search';
-const drawer = mode === 'home' || mode === 'category' || mode === 'search';
+const hasPanel = isBoard || detail;
+const drawer = mode === 'home' || mode === 'category' || mode === 'search' || detail;
 const resolvedClosePath = closePath ?? homePath(locale);
 ---
 
@@ -52,7 +56,7 @@ const resolvedClosePath = closePath ?? homePath(locale);
     data-drawer={drawer ? '' : undefined}
     data-locale={locale}
     data-home-path={homePath(locale)}
-    data-close-path={isBoard ? resolvedClosePath : undefined}
+    data-close-path={hasPanel ? resolvedClosePath : undefined}
     data-i18n-count="{n} events"
   >
     <TopBar locale={locale} mode={mode} posts={posts} />
@@ -62,9 +66,9 @@ const resolvedClosePath = closePath ?? homePath(locale);
       </div>
       <aside
         class="app-detail"
-        data-detail-panel={isBoard ? '' : undefined}
+        data-detail-panel={hasPanel ? '' : undefined}
         aria-label={copy.detailEyebrow}
-        id={isBoard ? 'detail-panel' : undefined}
+        id={hasPanel ? 'detail-panel' : undefined}
       >
         <slot name="detail" />
       </aside>

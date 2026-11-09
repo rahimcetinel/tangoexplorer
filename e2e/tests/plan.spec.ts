@@ -64,6 +64,38 @@ test('an end date before the start clamps to the start', async ({ page }) => {
   await expect(page.locator('[data-plan-start]')).toHaveValue(start);
 });
 
+test('a planner event opens in the side panel, not a new page', async ({ page }) => {
+  await page.goto('/plan');
+  // Pick a city/date pair straight from the embedded payload so the test does
+  // not depend on which events happen to be in the dataset this week.
+  const target = await page.evaluate(() => {
+    const raw = JSON.parse(document.querySelector('[data-plan-events]')?.textContent ?? '[]') as {
+      st: string;
+      en: string;
+      ci: string;
+    }[];
+    const event = raw.find((item) => item.st && item.ci);
+    return event ? { city: event.ci, start: event.st, end: event.en || event.st } : null;
+  });
+  expect(target).not.toBeNull();
+  await page.goto(
+    `/plan?city=${encodeURIComponent(target!.city)}&start=${target!.start}&end=${target!.end}`,
+  );
+
+  const panel = page.locator('[data-detail-panel]');
+  await expect(panel).toHaveCount(1);
+  await expect(panel).not.toHaveClass(/is-open/);
+
+  await page.locator('.app-plan-section a[data-detail-link]').first().click();
+  await expect(panel).toHaveClass(/is-open/);
+  await expect(page).toHaveURL(/\/news\//);
+  await expect(panel.locator('[data-article-frame]')).not.toBeEmpty();
+
+  await page.locator('[data-detail-close]').click();
+  await expect(panel).not.toHaveClass(/is-open/);
+  await expect(page).toHaveURL(/\/plan\?/);
+});
+
 test('the planner asks for a city first', async ({ page }) => {
   await page.goto('/plan');
   await expect(page.locator('.app-plan-hint')).toContainText('Istanbul');

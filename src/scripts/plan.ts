@@ -198,7 +198,7 @@ export function initPlan(): void {
       ? `<ul class="app-plan-list">${matchedEvents
           .map(
             (event) =>
-              `<li><a class="app-plan-item" href="/news/${escapeHtml(event.s)}">` +
+              `<li><a class="app-plan-item" data-card data-detail-link href="/news/${escapeHtml(event.s)}">` +
               `<span class="app-plan-item-title">${escapeHtml(event.t)}</span>` +
               `<span class="app-plan-item-meta">${escapeHtml(shortRange(event.st, event.en))}` +
               (event.k ? ` · ${escapeHtml(event.k)}` : '') +

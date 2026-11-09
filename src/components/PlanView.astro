@@ -1,6 +1,7 @@
 ---
 import AppShell from '../layouts/AppShell.astro';
 import Header from '../components/Header.astro';
+import DetailPanel from '../components/DetailPanel.astro';
 import { MILONGAS } from '../lib/milongas';
 import { getNews, newsSlug } from '../lib/news';
 import { homePath, kindLabels, ui } from '../lib/i18n';
@@ -46,6 +47,8 @@ const defaultEnd = new Date(first.getTime() + 2 * day).toISOString().slice(0, 10
   description="Pick a city and your dates to see the tango events and milongas happening then."
   locale="en"
   mode="page"
+  detail
+  closePath="/plan"
   posts={posts}
 >
   <Fragment slot="center">
@@ -104,8 +107,13 @@ const defaultEnd = new Date(first.getTime() + 2 * day).toISOString().slice(0, 10
       <script type="application/json" data-plan-milongas set:html={JSON.stringify(slimMilongas)} />
     </main>
   </Fragment>
+  <Fragment slot="detail">
+    <DetailPanel locale="en" />
+  </Fragment>
 </AppShell>
 <script>
+  import { initDetailPanel } from '../scripts/detail-panel';
   import { initPlan } from '../scripts/plan';
+  initDetailPanel();
   initPlan();
 </script>
