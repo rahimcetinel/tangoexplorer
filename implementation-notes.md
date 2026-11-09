@@ -131,3 +131,12 @@ Instagram duman testi (yayın yok): `python agentic-python/ingest_instagram.py -
 Yerel vitrin: `npm run dev`
 
 Wrangler ilk deploy’da Cloudflare girişi ister. Domain ve Pages projesi dashboard’dan önceden açılmak zorunda değil.
+
+## Yol haritası
+
+Sırayla değil, hazır oldukça ele alınacak açık işler.
+
+- **Karanlık mod (P6) — ertelendi** (2026-11-09): şimdilik istenmiyor. Yeri hazır: tüm renkler `@theme` / `:root` token'larından geliyor, `prefers-color-scheme` için tek bir `@media` bloğu + `color-scheme: light dark` + `BaseLayout`'ta `<meta name="theme-color">` yeterli. Yapıldığında ölçüm: `palette-audit.mjs`'i `colorScheme: 'dark'` ile koşturup **0 ihlal** şartı; `--shadow-card` koyu zeminde gölge yerine hairline'a dönmeli. Detay: `docs/palette-action-plan.md` §P6.
+- **CI kapıları**: `deploy.yml` şu an yalnız build + deploy yapıyor (push'ta hiç kontrol yok). Öneri: deploy **öncesi** `npm run check:palette` (tarayıcısız, ~1 sn, palet/tip tabanı regresyonlarını deploy'a çıkmadan keser) ve `update.yml`'de görsel kontrolün yanına `npm run check:palette:live` (canlı sayfada kontrast taraması, `--check` çıkış kodu).
+- **`src/lib/when.ts:41`**: `tsc --noEmit` burada `'end' is possibly 'undefined'` veriyor (bu değişikliklerden önce de vardı); build etkilenmiyor çünkü Astro yalnız esbuild ile derliyor.
+- **P3/P4 dışında kalan rapor bulguları**: yok — 3.1–3.8 ve 3.10 kapandı, 3.9 (karanlık mod) yukarıda ertelendi.
