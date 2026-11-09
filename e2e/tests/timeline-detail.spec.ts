@@ -121,6 +121,17 @@ test('Escape, backdrop, and browser back close the drawer', async ({ page }, tes
   }
 });
 
+test('a ?q= landing filters the board without opening a drawer', async ({ page }) => {
+  await page.goto('/?q=istanbul');
+  const result = page.locator('[data-result]').first();
+  await expect(result).toBeVisible();
+  // The board switches to the result list, and no detail panel slides in unasked.
+  await expect(page.locator('.app-viewport')).toBeHidden();
+  await expect(page.locator('[data-detail-panel]')).not.toHaveClass(/is-open/);
+  await result.click();
+  await expect(page.locator('[data-detail-panel]')).toHaveClass(/is-open/);
+});
+
 test('modified click opens the full story in a new tab', async ({ page, context }) => {
   await page.goto('/');
   const card = page.locator('[data-month-col][data-lazy="false"] [data-detail-link]').first();

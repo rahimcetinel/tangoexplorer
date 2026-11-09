@@ -476,7 +476,7 @@ function initFilters(detail: DetailApi) {
     return items;
   }
 
-  async function apply(options: { preview?: boolean } = {}) {
+  async function apply() {
     writeUrl(filters, shell!.dataset.closePath || window.location.pathname);
     syncControls();
     renderSummary();
@@ -490,10 +490,9 @@ function initFilters(detail: DetailApi) {
         '<div class="app-results-skeleton"><div class="app-card-skeleton"></div><div class="app-card-skeleton"></div><div class="app-card-skeleton"></div></div>';
     }
     await loadIndex();
-    const items = renderResults();
-    if (options.preview && filters.q && items.length && !window.matchMedia('(max-width: 1279px)').matches) {
-      detail?.open(`${newsBase}${items[0]!.s}`, false, false);
-    }
+    // The first match used to be opened in the drawer automatically; that made
+    // a plain ?q= landing slide a panel over the board unasked, so it is click-only now.
+    renderResults();
   }
 
   document.addEventListener('click', (event) => {
@@ -749,7 +748,7 @@ function initFilters(detail: DetailApi) {
   });
 
   syncControls();
-  void apply({ preview: true });
+  void apply();
 }
 
 export function initAppShell() {
