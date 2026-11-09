@@ -189,7 +189,7 @@ Yapılanlar ve sapmalar:
 - **Eksik kalan:** `palette-audit.mjs` (canlı sayfa kontrastı) bu ortamda koşamıyor (sandbox Chromium IPC'yi engelliyor). Betik güncellendi (opacity artık orana katılıyor, kapsam 9 sayfa + drawer + makale, `--check` modu) ama ilk gerçek koşu sandbox dışında ya da CI'da yapılmalı; taban çizgisi dosyası o koşudan sonra yazılacak.
 
 
-### P3 — Mikro etiketler (2–3 saat)
+### P3 — Mikro etiketler — ✅ uygulandı (9 Kas 2026)
 
 - 10 px altı **tüm caps** etiketleri 11 px tabanına çek: `.app-ev-cat` (8.8), `.app-ev-day` (9.28), `.app-mitem-type` (9.6), `.app-mitem-city` (10.56), `.app-when-badge` (9.92), `.app-mgroup-head.is-today em` (9.6), `.app-ev-open` (9.92), `.app-save` çevresi.
 - Tek bir yardımcı ile: `font-size: max(0.6875rem, 11px)` (0.6875rem = 11 px, kök punto büyürse ölçeklenir).
@@ -198,6 +198,14 @@ Yapılanlar ve sapmalar:
 **Risk (raporda yok):** `.app-ev-in` **sabit** `height: 7.6rem` (`:1299`). Başlık 2 satır + kategori + rozet + "Registration open" bugün ~88 px kullanıyor; etiketler +2–3 px büyüyünce taşma/kırpılma başlar. Çözüm: `height` → `min-height`, `-webkit-line-clamp: 2` korunur. `.app-mitem` mobil 56 px saat kolonu ve `auto` etiket kolonu için 360 px'te taşma kontrolü şart.
 
 **Kabul:** denetimde 11 px altı metin **0**; `visual-check` 360/390/1440'ta `overflowX: false`, `badRows: 0`.
+
+#### Uygulama notu
+
+- Planın listelediği 9 seçici gerçekte **24 kural** çıktı (`.app-now-tag`, `.app-acc-sub`, `.app-select-label`, `.app-facts-label`, `.app-facts-dl dt`, `.app-rail-label`, `.app-ribbon-label`, `.app-detail-eyebrow`, `.app-acc-head`, `.app-suggest-meta`, `.app-result-month`, `.app-results-month`, `.app-search-month`, `.app-milonga-cities .app-chip b`, `.app-ev-loc` …). Hepsi tek tabana bağlandı: `:root { --text-mini: max(0.6875rem, 11px) }` (mevcut `--text-xs/sm/base` ölçeğinin yanına), altı küçük değer (`0.55/0.58/0.6/0.62/0.66/0.68rem`) `var(--text-mini)` oldu.
+- `.app-ev-in`: `height` → `min-height` (kart etiketle birlikte büyüyebilir, satırlar eşit kalır).
+- `.app-ev-cat`: `letter-spacing` 0.12em → **0.06em** (uzun "EUROPE · ENCUENTRO" 11 px'te 150 px'lik kartta sarmasın diye; 360–390 px'te 2 kolon ≈ 160–175 px, iç genişlik ≈ 140 px).
+- Kapı artık **hata** veriyor: `palette-tokens.mjs` her kuralı tarayıp 11 px altı `font-size` görürse kırmızı. Kalan tek uyarı P4'ün `--cc` kancası.
+
 
 ### P4 — Rozetleri nötrleştir (2–3 saat)
 

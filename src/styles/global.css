@@ -52,6 +52,7 @@
 }
 
 :root {
+  --text-mini: max(0.6875rem, 11px);
   --text-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.8rem);
   --text-sm: clamp(0.82rem, 0.78rem + 0.25vw, 0.95rem);
   --text-base: clamp(0.95rem, 0.9rem + 0.3vw, 1.05rem);
@@ -434,7 +435,7 @@ body:has(.app-shell) {
   justify-content: space-between;
   align-items: center;
   padding: 8px 0;
-  font-size: 0.68rem;
+  font-size: var(--text-mini);
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 700;
@@ -456,7 +457,7 @@ body:has(.app-shell) {
 }
 
 .app-acc-sub {
-  font-size: 0.62rem;
+  font-size: var(--text-mini);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 700;
@@ -488,7 +489,7 @@ body:has(.app-shell) {
 }
 
 .app-rail-label {
-  font-size: 0.66rem;
+  font-size: var(--text-mini);
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-ink-soft);
@@ -590,7 +591,7 @@ body:has(.app-shell) {
 }
 
 .app-select-label {
-  font-size: 0.62rem;
+  font-size: var(--text-mini);
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -713,7 +714,7 @@ body:has(.app-shell) {
 }
 
 .app-crumbbar-kicker {
-  font-size: 0.66rem;
+  font-size: var(--text-mini);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-ink-soft);
@@ -815,7 +816,7 @@ body:has(.app-shell) {
 .app-suggest-meta {
   display: block;
   margin-top: 2px;
-  font-size: 0.68rem;
+  font-size: var(--text-mini);
   color: var(--color-ink-soft);
 }
 
@@ -877,7 +878,7 @@ body:has(.app-shell) {
 }
 
 .app-ribbon-label {
-  font-size: 0.66rem;
+  font-size: var(--text-mini);
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -938,7 +939,7 @@ body:has(.app-shell) {
 .app-mchip b {
   background: var(--surface-muted);
   color: var(--color-accent);
-  font-size: 0.68rem;
+  font-size: var(--text-mini);
   border-radius: 999px;
   padding: 1px 7px;
 }
@@ -1055,7 +1056,7 @@ body:has(.app-shell) {
 }
 
 .app-result-month {
-  font-size: 0.68rem;
+  font-size: var(--text-mini);
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1076,7 +1077,7 @@ body:has(.app-shell) {
 .app-results-month {
   margin: 18px 0 4px;
   padding: 0 10px;
-  font-size: 0.68rem;
+  font-size: var(--text-mini);
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1280,7 +1281,7 @@ body:has(.app-shell) {
   background: var(--color-paper);
   border-radius: 6px;
   padding: 2px 6px;
-  font-size: 0.58rem;
+  font-size: var(--text-mini);
   font-weight: 800;
   color: var(--color-accent);
   letter-spacing: 0.03em;
@@ -1296,13 +1297,13 @@ body:has(.app-shell) {
   padding: 10px 11px 12px;
   display: flex;
   flex-direction: column;
-  height: 7.6rem;
+  min-height: 7.6rem;
 }
 
 .app-ev-cat {
-  font-size: 0.55rem;
+  font-size: var(--text-mini);
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-ink-soft);
   margin: 0;
@@ -1320,7 +1321,7 @@ body:has(.app-shell) {
 }
 
 .app-ev-loc {
-  font-size: 0.68rem;
+  font-size: var(--text-mini);
   color: var(--color-ink-soft);
   margin: 0;
   margin-top: auto;
@@ -1358,7 +1359,7 @@ body:has(.app-shell) {
 }
 
 .app-detail-eyebrow {
-  font-size: 0.66rem;
+  font-size: var(--text-mini);
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1448,7 +1449,7 @@ body.detail-open {
   border-radius: 999px;
   padding: 2px 8px;
   letter-spacing: 0.06em;
-  font-size: 0.62rem;
+  font-size: var(--text-mini);
 }
 
 .app-article-title {
@@ -1527,7 +1528,7 @@ body.detail-open {
 }
 
 .app-facts-label {
-  font-size: 0.62rem;
+  font-size: var(--text-mini);
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1550,7 +1551,7 @@ body.detail-open {
 }
 
 .app-facts-dl dt {
-  font-size: 0.62rem;
+  font-size: var(--text-mini);
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1827,7 +1828,7 @@ body.detail-open {
 
 .app-milonga-cities .app-chip b {
   margin-left: 4px;
-  font-size: 0.68rem;
+  font-size: var(--text-mini);
   color: var(--color-ink-soft);
 }
 
@@ -1915,7 +1916,7 @@ body.detail-open {
 .app-mgroup-head.is-today em {
   font-family: var(--font-sans);
   font-style: normal;
-  font-size: 0.6rem;
+  font-size: var(--text-mini);
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1998,7 +1999,7 @@ body.detail-open {
 }
 
 .app-mitem-type {
-  font-size: 0.6rem;
+  font-size: var(--text-mini);
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2023,7 +2024,7 @@ body.detail-open {
 }
 
 .app-mitem-city {
-  font-size: 0.66rem;
+  font-size: var(--text-mini);
   font-weight: 800;
   border-radius: 999px;
   padding: 2px 9px;
@@ -2308,7 +2309,7 @@ body.detail-open {
 
 .app-search-month {
   margin: 0 0 6px;
-  font-size: 0.68rem;
+  font-size: var(--text-mini);
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -2499,7 +2500,7 @@ body.detail-open {
   margin-bottom: 3px;
   padding: 2px 7px;
   border-radius: 4px;
-  font-size: 0.6rem;
+  font-size: var(--text-mini);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2784,7 +2785,7 @@ body.detail-open {
   border-radius: 999px;
   background: color-mix(in srgb, var(--color-teal) 10%, var(--color-cream));
   color: var(--color-teal);
-  font-size: 0.62rem;
+  font-size: var(--text-mini);
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;

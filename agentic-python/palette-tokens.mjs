@@ -106,21 +106,17 @@ const leftoverHits = leftovers.map(([name, re, level]) => {
   return { name, hits, level, ok: hits === 0 };
 });
 
-/* 4. micro label sizes (P3 target — reported, not enforced yet) */
-const LABELS = [
-  '.app-ev-cat', '.app-ev-day', '.app-mitem-type', '.app-mitem-city', '.app-when-badge',
-  '.app-mgroup-head.is-today em', '.app-ev-open', '.app-crumbbar-kicker', '.app-mchip b',
-];
+/* 4. type floor: nothing below 11px (P3 — enforced) */
 const small = [];
 for (const m of css.matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
   const selector = m[1].replace(/\/\*[\s\S]*?\*\//g, '').trim().replace(/\s+/g, ' ');
   const body = m[2];
-  const fs2 = body.match(/font-size:\s*(0?\.\d+)rem/);
-  if (!fs2) continue;
-  const px = +(Number(fs2[1]) * 16).toFixed(2);
-  if (px < 11 && LABELS.some((l) => selector.includes(l))) small.push({ selector: selector.slice(0, 70), px });
+  const size = body.match(/font-size:\s*(0?\.\d+)rem/);
+  if (!size) continue;
+  const px = +(Number(size[1]) * 16).toFixed(2);
+  if (px < 11) small.push({ selector: selector.slice(0, 70), px });
 }
-if (small.length) warnings.push(`${small.length} mikro etiket 11 px altında (P3)`);
+if (small.length) errors.push(`${small.length} kural 11 px altında metin kullanıyor (taban: --text-mini)`);
 
 /* 5. orphan tokens */
 const used = new Set([...css.matchAll(/var\((--[a-z0-9-]+)\)/g)].map((m) => m[1]));
