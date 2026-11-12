@@ -114,7 +114,7 @@
       "checkedAt": "2026-11-12"
     },
     "https://www.calientetangomarathon.com/en": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-12"
     },
     "https://tangocat.net/go/10th+Caliente+Tango+Marathon+Antalya/10910": {
@@ -134,11 +134,11 @@
       "checkedAt": "2026-11-12"
     },
     "https://www.aurovilletango.org/festival/?utm_source=chatgpt.com": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-12"
     },
     "https://tangocat.net/go/14th+Auroville+Tango+Festival/11237": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-12"
     },
     "https://viennacallingtangomarathon.com/": {
@@ -410,11 +410,11 @@
       "checkedAt": "2026-11-12"
     },
     "https://www.arcobalenotangomarathon.com/2027/": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-12"
     },
     "https://tangocat.net/go/Arcobaleno+Tango+Marathon+2027/11273": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-12"
     },
     "https://artetango-festival.com/accueil-festival-2/": {
@@ -978,7 +978,7 @@
       "checkedAt": "2026-11-12"
     },
     "https://tangocat.net/go/EMPATHIC+TANGO+Marathon+Verona/10288": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-12"
     },
     "https://www.empathictango.it/IT/marzo-2027/": {
@@ -1430,7 +1430,7 @@
       "checkedAt": "2026-11-12"
     },
     "https://tangocat.net/go/La+Macarena+Milonguero+Encuentro+2027+5th+Edition/10668": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-12"
     },
     "https://www.tangolamadrugada.com": {
@@ -1462,7 +1462,7 @@
       "checkedAt": "2026-11-12"
     },
     "https://www.facebook.com/lamareatango": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-12"
     },
     "https://lapromesatangofestival.com/": {
@@ -1474,11 +1474,11 @@
       "checkedAt": "2026-11-12"
     },
     "https://www.facebook.com/groups/1386297641629844/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-12"
     },
     "https://tangocat.net/go/La+Reuni%C3%B2n+Milonguera/10778": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-12"
     },
     "https://www.tangograncanaria.com": {
@@ -1490,11 +1490,11 @@
       "checkedAt": "2026-11-12"
     },
     "https://www.facebook.com/groups/669366859873564/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-12"
     },
     "https://tangocat.net/go/La+Sabauda/11022": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-12"
     },
     "https://www.facebook.com/events/1046415491647608": {
@@ -1538,11 +1538,11 @@
       "checkedAt": "2026-11-12"
     },
     "https://www.facebook.com/groups/479205355504568/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-12"
     },
     "https://tangocat.net/go/Le+Rendez-vous+Milonguero/10441": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-12"
     },
     "https://asierymarion.com/milongas-de-gala-reveillon/": {
@@ -1562,11 +1562,11 @@
       "checkedAt": "2026-11-12"
     },
     "https://www.facebook.com/groups/1708542870454649": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-12"
     },
     "https://tangocat.net/go/Lisboa+Menina+Encuentro+Milonguero/10875": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-12"
     },
     "https://www.lusitango.com/": {
@@ -1602,11 +1602,11 @@
       "checkedAt": "2026-11-12"
     },
     "https://www.facebook.com/groups/344080901544265/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-12"
     },
     "https://tangocat.net/go/Los+Amigos+en+Tallinn+Tango+marathon/11149": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-12"
     },
     "https://www.losangelesencuentromilonguero.com/": {
@@ -2538,11 +2538,11 @@
       "checkedAt": "2026-11-12"
     },
     "https://helltango.no/tango-in-hell-2027/": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-12"
     },
     "https://tangocat.net/go/Tango+in+Hell+2027/11299": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-12"
     },
     "https://www.tangoallegria.it/en/tango-in-salento--tango-in-september": {
@@ -3402,7 +3402,7 @@
       "checkedAt": "2026-11-12"
     },
     "https://midsommartango.se/en_gb/": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-12"
     },
     "https://www.tangomarathons.com/events/2027-midsommartango-edition-14/": {
