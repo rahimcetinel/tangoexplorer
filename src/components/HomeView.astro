@@ -25,7 +25,7 @@ const selectedSlug = selected ? newsSlug(selected) : undefined;
 const eagerMonths = eagerMonthKeys(selected);
 const stats = { ...boardStats(await getNews(locale)), total: posts.length };
 const title =
-  locale === 'en' ? 'TangoExplorer — Argentine tango news' : 'TangoExplorer — Arjantin tangosu haberleri';
+  'TangoExplorer — tango festivals & milonga guide';
 ---
 
 <AppShell title={title} locale={locale} mode="home" posts={posts}>

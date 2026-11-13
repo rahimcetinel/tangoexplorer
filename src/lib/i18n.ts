@@ -187,7 +187,8 @@ export const ui = {
     whenToday: 'Today',
     whenTomorrow: 'Tomorrow',
     whenThisWeek: 'This week',
-    defaultDescription: 'Argentine tango news: festivals, milongas, Turkey and the world.',
+    defaultDescription:
+    'Tango festivals, marathons and weekly milongas worldwide, with a date planner for your next trip.',
     footerBlurb: 'Updated daily from Tangocat, Hoy Milonga, tango-calendar.de, tangokalendern.se, milongas.ch and Instagram.',
     sourcesLabel: 'Sources',
     aboutTitle: 'About',

@@ -5,10 +5,10 @@ category: dunya
 source: TMD
 sourceUrl: https://www.tangomarathons.com/events/2026-naples-hny27-edition-2/
 locale: en
-summary: "Naples HNY27 is listed for 31 December 2026 – 2 January 2027 in Italy, naples. Source: TMD."
+summary: "Naples HNY27 is listed for 31 December 2026 – 2 January 2027 in Italy, Naples. Source: TMD."
 eventName: "Naples HNY27"
 eventWhen: "31 December 2026 – 2 January 2027"
-eventLocation: "Italy, naples"
+eventLocation: "Italy, Naples"
 image: "/events/tmd-naples-hny27.jpg"
 imageCredit: "TMD"
 imageSourceUrl: https://www.tangomarathons.com/events/2026-naples-hny27-edition-2/
@@ -16,11 +16,11 @@ format: etkinlik
 sourceKey: tmd
 edition: 2
 country: "Italy"
-city: "naples"
+city: "Naples"
 eventStart: 2026-12-31
 eventEnd: 2027-01-02
 ---
 
-Naples HNY27 is listed for 31 December 2026 – 2 January 2027 in Italy, naples. This is a date and place summary, not a copy of the source listing.
+Naples HNY27 is listed for 31 December 2026 – 2 January 2027 in Italy, Naples. This is a date and place summary, not a copy of the source listing.
 
 Programme and registration can change. Follow the TMD listing for current details.

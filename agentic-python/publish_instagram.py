@@ -262,6 +262,12 @@ def main() -> int:
         if en_path.exists() or tr_path.exists():
             print(f"SKIP {slug} (var)")
             continue
+        # Bir yer çıkarılamadıysa yayınlama: yer-şehir alanı boş kayıtlar listede
+        # yersiz festival gibi duruyor ve kullanıcıya hiçbir şey söylemiyor.
+        country, city = place_from(item["username"], item.get("captionPreview") or "")
+        if not country and not city:
+            print(f"SKIP {slug} (yer yok)")
+            continue
         if args.dry_run:
             print(f"DRY {slug}: {title_from_caption(item.get('captionPreview') or '', item['username'], '')}")
             written += 1

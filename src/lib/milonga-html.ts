@@ -69,7 +69,11 @@ export function milongaTimeHtml(start?: string, end?: string): string {
   if (!start) {
     return `<span class="app-mitem-time">—</span>`;
   }
-  const endHtml = end ? `<span class="app-mitem-time-end">${escapeHtml(end)}</span>` : '';
+  // The two spans sit on separate lines, so screen readers and copy/paste
+  // used to glue the times together ("19:3022:30").
+  const endHtml = end
+    ? `<span class="sr-only">–</span><span class="app-mitem-time-end">${escapeHtml(end)}</span>`
+    : '';
   return (
     `<span class="app-mitem-time">` +
     `<span class="app-mitem-time-start">${escapeHtml(start)}</span>${endHtml}` +
