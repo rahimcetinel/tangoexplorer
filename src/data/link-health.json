@@ -206,11 +206,11 @@
       "checkedAt": "2026-11-14"
     },
     "http://brillosotangofest.com": {
-      "status": "ok",
+      "status": "blocked",
       "checkedAt": "2026-11-14"
     },
     "https://tangocat.net/go/3+Brilloso+Big+Tango+Festival/10832": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-14"
     },
     "https://stayhappening.com/e/3-mon-tresor-tango-embrace-E2ISYP21QD2?utm_source=chatgpt.com": {
@@ -402,11 +402,11 @@
       "checkedAt": "2026-11-14"
     },
     "https://www.arcobalenotangomarathon.com/2027/": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-14"
     },
     "https://tangocat.net/go/Arcobaleno+Tango+Marathon+2027/11273": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-14"
     },
     "https://artetango-festival.com/accueil-festival-2/": {
@@ -1434,7 +1434,7 @@
       "checkedAt": "2026-11-14"
     },
     "https://www.facebook.com/groups/169363763708355/": {
-      "status": "error",
+      "status": "ok",
       "checkedAt": "2026-11-14"
     },
     "https://tangocat.net/go/La+Befana+Milonguera/11031": {
@@ -1458,7 +1458,7 @@
       "checkedAt": "2026-11-14"
     },
     "https://www.facebook.com/groups/26265849106420354/": {
-      "status": "error",
+      "status": "ok",
       "checkedAt": "2026-11-14"
     },
     "https://tangocat.net/go/La+FIestita/11277": {
@@ -1466,7 +1466,7 @@
       "checkedAt": "2026-11-14"
     },
     "https://facebook.com/events/s/la-macarena-5th-edition-7-to-1/969597469391636/": {
-      "status": "error",
+      "status": "ok",
       "checkedAt": "2026-11-14"
     },
     "https://tangocat.net/go/La+Macarena+Milonguero+Encuentro+2027+5th+Edition/10668": {
@@ -3454,7 +3454,7 @@
       "checkedAt": "2026-11-14"
     },
     "https://intango.de/en/heidelberg-live/": {
-      "status": "unreachable",
+      "status": "ok",
       "checkedAt": "2026-11-14"
     },
     "https://www.tangomarathons.com/events/2027-heidelberg-live-weekend-edition-3/": {
@@ -3514,7 +3514,7 @@
       "checkedAt": "2026-11-14"
     },
     "https://www.intango.de/en/neonights": {
-      "status": "unreachable",
+      "status": "ok",
       "checkedAt": "2026-11-14"
     },
     "https://www.tangomarathons.com/events/2027-neo-nights-edition-11/": {
@@ -3522,7 +3522,7 @@
       "checkedAt": "2026-11-14"
     },
     "https://www.intango.de/en/newyear": {
-      "status": "unreachable",
+      "status": "ok",
       "checkedAt": "2026-11-14"
     },
     "https://www.tangomarathons.com/events/2026-new-years-tango-weekend-heidelberg-edition-1/": {
