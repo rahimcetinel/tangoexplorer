@@ -18,6 +18,9 @@ country: "France"
 city: "Strasbourg"
 eventStart: 2026-09-12
 eventEnd: 2026-09-13
+image: "/events/tangocat-tango-weekend-with-alexander-sossa.webp"
+imageCredit: "Event image (tangocat.net)"
+imageSourceUrl: https://static.xx.fbcdn.net/rsrc.php/yd/r/LiSc0sYjn_n.webp
 ---
 
 Tango weekend with Alexander Sossa is listed (September 12-13 2026) in France, Strasbourg. This is a date and place summary, not a copy of the source programme.
