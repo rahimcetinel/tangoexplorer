@@ -1975,9 +1975,10 @@ body.detail-open {
 }
 
 /* End time is secondary: same column, dimmed so the pair reads as start → end. */
+/* Secondary, not dimmed: opacity dropped the pair to 3.45:1 on cream. */
 .app-mitem-time-end {
   font-weight: 600;
-  opacity: 0.62;
+  color: var(--color-ink-soft);
 }
 
 .app-mitem-body {

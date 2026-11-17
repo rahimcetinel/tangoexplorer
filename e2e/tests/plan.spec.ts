@@ -49,7 +49,8 @@ test('the planner combines events and milongas for a city and a date range', asy
   await expect(page.locator('h1')).toHaveText('Plan a tango experience');
   await expect(page.locator('[data-plan-summary]')).toContainText(`in ${target!.city}`);
   await expect(page.locator('.app-plan-section').first().locator('.app-plan-item-title').first()).toBeVisible();
-  await expect(page.locator('.app-plan-day').first()).toBeVisible();
+  // The derived city has an event, but not necessarily milongas: day groups are
+  // covered by the start/end test, which derives a city with a Friday milonga.
 });
 
 test('the planner takes a start and an end date', async ({ page }) => {
