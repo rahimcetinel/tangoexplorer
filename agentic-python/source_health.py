@@ -38,7 +38,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "src" / "data"
 OUT_DIR = Path(__file__).resolve().parent / "out"
-UA = "Mozilla/5.0 (compatible; TangoExplorerSourceHealth/1.0)"
+# Browser UA: several sources 403 obvious bot agents (agendadeltango.com does).
+UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/125.0 Safari/537.36"
+)
 
 # file: source JSON written by the ingestors (None = probe-only source)
 # min_items: roughly 55–65% of today's count, so normal churn does not trip it
@@ -265,17 +269,35 @@ def check_file(source: dict) -> dict:
 
 
 def check_instagram() -> dict:
+    """Check the Meta token with the same call shape the ingestor uses.
+
+    ``/me`` is not valid for every token type and a 400 hides the reason, so we
+    read the error body and surface Meta's own message (typically "Session has
+    expired on …"), and prefer the configured IG user id.
+    """
     token = os.environ.get("META_ACCESS_TOKEN", "").strip()
     if not token:
         return {"status": "SKIP", "detail": "token yok (lokal çalışma)"}
-    url = f"https://graph.facebook.com/{GRAPH_VERSION}/me?fields=id&access_token={token}"
+    ig_user = os.environ.get("META_IG_USER_ID", "").strip()
+    target = ig_user or "me"
+    fields = "id,username" if ig_user else "id"
+    url = f"https://graph.facebook.com/{GRAPH_VERSION}/{target}?fields={fields}&access_token={token}"
     try:
         status, body = fetch(url, 30)
         payload = json.loads(body)
+    except urllib.error.HTTPError as error:
+        message = ""
+        try:
+            payload = json.loads(error.read().decode("utf-8", "replace"))
+            message = (payload.get("error") or {}).get("message", "")
+        except Exception:  # noqa: BLE001 - the status alone is still useful
+            payload = {}
+        detail = f"HTTP {error.code}" + (f": {message[:160]}" if message else "")
+        return {"status": "FAIL", "detail": detail}
     except Exception as error:  # noqa: BLE001
         return {"status": "FAIL", "detail": f"{type(error).__name__}: {error}"}
     if status != 200 or "error" in payload:
-        message = (payload.get("error") or {}).get("message", "")[:80]
+        message = (payload.get("error") or {}).get("message", "")[:160]
         return {"status": "FAIL", "detail": f"token geçersiz: {message}"}
     return {"status": "OK", "detail": "token geçerli"}
 

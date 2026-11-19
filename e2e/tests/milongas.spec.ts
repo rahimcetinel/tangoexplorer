@@ -1,5 +1,22 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type APIRequestContext } from '@playwright/test';
 import { NO_MATCH, focusSearch, isMobile, openFilters, searchParams } from '../support/site';
+
+type MilongaRecord = { id: string; name: string; region: string; city: string; source?: string };
+
+/**
+ * Pick a listing from the public JSON instead of pinning a title: the source
+ * sites rename their milongas (tango-calendar.de turned "Noche Azul" into
+ * "Milonga Azul" on 2026-11-18), which used to break the live E2E run.
+ */
+async function milongaFromJson(
+  request: APIRequestContext,
+  match: (item: MilongaRecord) => boolean,
+): Promise<MilongaRecord | undefined> {
+  const response = await request.get('/milongas.json');
+  expect(response.ok(), 'milongas.json').toBeTruthy();
+  const data = (await response.json()) as { items: MilongaRecord[] };
+  return data.items.find(match);
+}
 
 test('milonga JSON is public and the page opens on a country', async ({ page, request }) => {
   const response = await request.get('/hoy-milongas.json');
@@ -35,9 +52,15 @@ test('the toolbar surfaces cities and the country switch', async ({ page }) => {
   await expect(page.locator('[data-milonga-id]').first()).toBeVisible();
 });
 
-test('the German source fills Frankfurt and names its source', async ({ page }) => {
+test('the German source fills Frankfurt and names its source', async ({ page, request }) => {
+  const target = await milongaFromJson(
+    request,
+    (item) => item.region === 'germany' && item.city === 'Frankfurt' && item.source === 'tangocalendar',
+  );
+  test.skip(!target, 'tango-calendar.de lists no Frankfurt milonga right now');
+
   await page.goto('/milongas?region=germany&city=Frankfurt');
-  const item = page.locator('[data-milonga-id]', { hasText: 'Noche Azul' });
+  const item = page.locator('[data-milonga-id]', { hasText: target!.name }).first();
   await expect(item).toBeVisible();
   await expect(page.locator('[data-milonga-region]')).toHaveValue('germany');
 
@@ -169,9 +192,15 @@ test('legacy region links still resolve to a country', async ({ page }) => {
   await expect(page.locator('[data-milonga-id]').first()).toBeVisible();
 });
 
-test('the Swedish source fills Stockholm and names its source', async ({ page }) => {
+test('the Swedish source fills Stockholm and names its source', async ({ page, request }) => {
+  const target = await milongaFromJson(
+    request,
+    (item) => item.region === 'sweden' && item.source === 'sweden',
+  );
+  test.skip(!target, 'the Swedish calendar lists no milonga right now');
+
   await page.goto('/milongas?region=sweden');
-  const item = page.locator('[data-milonga-id]').first();
+  const item = page.locator('[data-milonga-id]', { hasText: target!.name }).first();
   await expect(item).toBeVisible();
   await expect(page.locator('[data-milonga-region]')).toHaveValue('sweden');
   await item.click();

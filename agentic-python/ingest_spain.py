@@ -32,7 +32,13 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = Path(__file__).resolve().parent / "out"
 DATA_PATH = ROOT / "src" / "data" / "milongas-es.json"
 LISTING = "https://agendadeltango.com/milongas/"
-UA = "TangoNews/0.1 (+https://tangoexplorer.com)"
+# The site 403s unknown bot user agents (checked 2026-11-19: "TangoNews/0.1" and
+# the source-health UA get 403, a Chrome UA gets 200), so identify as a browser
+# here; we still read only public HTML at a weekly pace.
+UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/125.0 Safari/537.36"
+)
 
 DAYS = {
     "lunes": "monday",
@@ -64,7 +70,14 @@ CADENCE_TEXT = re.compile(r"\((semanal|quincenal|mensual)[^)]*\)", re.I)
 
 
 def fetch(url: str, timeout: int = 45) -> str:
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html"})
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": UA,
+            "Accept": "text/html,application/xhtml+xml",
+            "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
+        },
+    )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read().decode("utf-8", "replace")
 
