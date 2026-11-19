@@ -21,6 +21,7 @@ eventEnd: 2027-01-04
 image: "/events/tangocat-tango-new-year-barcelona-underground.jpg"
 imageCredit: "Event image (tangocat.net)"
 imageSourceUrl: https://web.pointsoftango.app/pots_logo_64.png
+edition: 2
 ---
 
 TANGO NEW YEAR Barcelona Underground is listed (December 29 - January 4 , 2027) in Spain, Barcelona. This is a date and place summary, not a copy of the source programme.
