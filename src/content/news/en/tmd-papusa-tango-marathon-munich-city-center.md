@@ -18,7 +18,7 @@ kinds:
 format: etkinlik
 sourceKey: tmd
 edition: 4
-registrationStart: 2027-01-02
+registrationStart: 2026-12-02
 country: "Germany"
 city: "Munich"
 eventStart: 2027-07-02
