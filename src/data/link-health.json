@@ -1394,11 +1394,11 @@
       "checkedAt": "2026-11-22"
     },
     "https://krakusaires.com/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-22"
     },
     "https://tangocat.net/go/Krakus+Aires+Tango+Festival/10947": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-22"
     },
     "http://www.kristianiatangofestival.com": {
@@ -1510,7 +1510,7 @@
       "checkedAt": "2026-11-22"
     },
     "https://tangocat.net/go/La+Reuni%C3%B2n+Milonguera/10778": {
-      "status": "error",
+      "status": "ok",
       "checkedAt": "2026-11-22"
     },
     "http://www.lasabatica.it": {
@@ -1526,7 +1526,7 @@
       "checkedAt": "2026-11-22"
     },
     "https://tangocat.net/go/La+Sabauda/11022": {
-      "status": "error",
+      "status": "ok",
       "checkedAt": "2026-11-22"
     },
     "https://www.facebook.com/events/1046415491647608": {
@@ -1570,11 +1570,11 @@
       "checkedAt": "2026-11-22"
     },
     "https://www.facebook.com/groups/479205355504568/": {
-      "status": "error",
+      "status": "ok",
       "checkedAt": "2026-11-22"
     },
     "https://tangocat.net/go/Le+Rendez-vous+Milonguero/10441": {
-      "status": "error",
+      "status": "ok",
       "checkedAt": "2026-11-22"
     },
     "https://asierymarion.com/milongas-de-gala-reveillon/": {
@@ -1594,11 +1594,11 @@
       "checkedAt": "2026-11-22"
     },
     "https://www.facebook.com/groups/1708542870454649": {
-      "status": "error",
+      "status": "ok",
       "checkedAt": "2026-11-22"
     },
     "https://tangocat.net/go/Lisboa+Menina+Encuentro+Milonguero/10875": {
-      "status": "error",
+      "status": "ok",
       "checkedAt": "2026-11-22"
     },
     "https://www.lusitango.com/": {
@@ -1634,7 +1634,7 @@
       "checkedAt": "2026-11-22"
     },
     "https://www.facebook.com/groups/344080901544265/": {
-      "status": "error",
+      "status": "ok",
       "checkedAt": "2026-11-22"
     },
     "https://tangocat.net/go/Los+Amigos+en+Tallinn+Tango+marathon/11149": {
@@ -3258,6 +3258,14 @@
       "checkedAt": "2026-11-22"
     },
     "https://tangoverse.net/events/tango-mistico-weekend-budapest-2026": {
+      "status": "ok",
+      "checkedAt": "2026-11-22"
+    },
+    "https://www.tangoto.com/competition.html?slug=miami": {
+      "status": "ok",
+      "checkedAt": "2026-11-22"
+    },
+    "https://tangoverse.net/events/tangoto-world-cup-miami-2026": {
       "status": "ok",
       "checkedAt": "2026-11-22"
     },
