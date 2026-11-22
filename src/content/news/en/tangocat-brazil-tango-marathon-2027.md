@@ -18,6 +18,9 @@ country: "Bolivia"
 city: "Fortaleza"
 eventStart: 2027-03-19
 eventEnd: 2027-03-21
+image: "/events/tangocat-brazil-tango-marathon-2027.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/brazil-tango-marathon-2027
 ---
 
 Brazil Tango Marathon 2027 is listed (March 19-21, 2027) in Bolivia, Fortaleza. This is a date and place summary, not a copy of the source programme.

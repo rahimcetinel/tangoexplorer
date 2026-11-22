@@ -18,6 +18,9 @@ country: "Hungary"
 city: "Röjtökmuzsaj"
 eventStart: 2027-06-04
 eventEnd: 2027-06-06
+image: "/events/tangocat-2nd-dias-de-sonrisas-encuentro-milonguero.jpg"
+imageCredit: "Tangoverse"
+imageSourceUrl: https://tangoverse.net/events/2nd-dias-de-luz-y-sonrisas-encuentro-milonguero-d14ffe
 ---
 
 2nd Días de Sonrisas Encuentro Milonguero is listed (June 4-6, 2027) in Hungary, Röjtökmuzsaj. This is a date and place summary, not a copy of the source programme.
