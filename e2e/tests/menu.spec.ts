@@ -15,8 +15,10 @@ test('menu opens, labels itself, and closes from backdrop and Escape', async ({ 
   await expect(toggle).toHaveAttribute('aria-expanded', 'true');
   await expect(panel).toBeVisible();
   await expect(page.locator('body')).toHaveClass(/menu-open/);
-  await expect(panel.locator('.app-foot')).toContainText('Tangocat');
-  await expect(panel.locator('.app-foot')).toContainText('Hoy Milonga');
+  // Menü altındaki "Updated daily / Sources" bloğu kaldırıldı; kaynak listesi
+  // About sayfasında. Blok geri gelirse bu satır yakalar.
+  await expect(panel.locator('.app-foot')).toHaveCount(0);
+  await expect(panel).not.toContainText('Updated daily from');
 
   const backdrop = page.locator('[data-menu-backdrop]');
   const gap = await page.evaluate(() => {

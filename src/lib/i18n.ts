@@ -189,8 +189,7 @@ export const ui = {
     whenThisWeek: 'This week',
     defaultDescription:
     'Tango festivals, marathons and weekly milongas worldwide, with a date planner for your next trip.',
-    footerBlurb: 'Updated daily from Tangocat, Hoy Milonga, tango-calendar.de, tangokalendern.se, milongas.ch and Instagram.',
-    sourcesLabel: 'Sources',
+    aboutUpdated: 'Updated daily from the sources listed on this page.',
     aboutTitle: 'About',
     aboutP1:
       'TangoExplorer is a short digest of Argentine tango events and notes, gathered in one place. The same idea as a club news desk: cite the source, summarize, and send the reader on.',
