@@ -58,6 +58,27 @@ jobs:
           restore-keys: |
             astro-images-${{ runner.os }}-
 
+      # Token ölmeden haber verir: 2026-11-11'de süresi doldu ve on iki koşu
+      # boyunca Instagram verisi sessizce yazılmadı (`|| true` hatayı yuttu,
+      # source_health ise yalnızca raporun yaşına bakıyor). Adım koşuyu kırmaz;
+      # kırmızıyı "Source health" verir, buradaki işaret yolu gösterir.
+      - name: Meta token health
+        if: always()
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+        run: |
+          set +e
+          python agentic-python/meta_token.py --check --summary | tee -a "$GITHUB_STEP_SUMMARY"
+          status=${PIPESTATUS[0]}
+          set -e
+          if [ "$status" -eq 2 ]; then
+            echo "::error title=Meta token expired::META_ACCESS_TOKEN yenilenmeli — python agentic-python/meta_token.py --refresh, sonra gh secret set META_ACCESS_TOKEN. Bu koşuda Instagram verisi yazılmadı."
+          elif [ "$status" -eq 3 ]; then
+            echo "::warning title=Meta token expiring::Yedi günden az kaldı; --refresh ile 60 gün daha uzatın."
+          fi
+          exit 0
+
       - name: Ingest and publish
         env:
           META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
@@ -179,11 +200,11 @@ jobs:
         run: npm run test:e2e
 
       # Canlı sayfalarda ölçülen kontrast (11 sayfa + drawer + makale, iki
-      # viewport). Chromium bir üst adımda kuruldu. Şimdilik rapor edici:
-      # ilk temiz koşudan sonra `continue-on-error` kaldırılıp gerçek kapı olur.
+      # viewport). Chromium bir üst adımda kuruldu. `--check` herhangi bir
+      # ihlalde exit 1 verir; 2026-11-19'daki arka arkaya temiz koşudan sonra
+      # rapor edici moddan çıkıp gerçek kapı oldu.
       - name: Palette audit (live site)
         if: always() && steps.deploy.outcome == 'success' && (github.event_name == 'schedule' || inputs.checks)
-        continue-on-error: true
         run: npm run check:palette:live
 
       - name: Upload palette audit
@@ -213,12 +234,16 @@ jobs:
       # Ingest adımları `|| true` ile koşuyor; bozuk bir kaynak (ölü ICS, değişen
       # HTML, süresi geçmiş IG token'ı) sessizce eski veriyi bırakır. Bu adım
       # sonucu kontrol eder ve gerçek bir sorunda koşuyu kırmızıya çevirir.
+      # `tee` boru hattı çıkış kodunu yutuyordu (`pipefail` yoktu) — bu yüzden
+      # 2026-11-08'den beri süren Instagram arızası yeşil koşularda görünmedi.
       - name: Source health
         if: always()
         env:
           META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
           META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
-        run: python agentic-python/source_health.py | tee -a "$GITHUB_STEP_SUMMARY"
+        run: |
+          set -o pipefail
+          python agentic-python/source_health.py | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Upload source health report
         if: always()
