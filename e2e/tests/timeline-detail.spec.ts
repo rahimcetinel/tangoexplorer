@@ -104,20 +104,36 @@ test('card click opens the detail drawer without leaving the home shell', async 
 test('Escape, backdrop, and browser back close the drawer', async ({ page }, testInfo) => {
   await page.goto('/');
   const card = page.locator('[data-month-col][data-lazy="false"] [data-detail-link]').first();
-  await card.click();
-  await expect(page.locator('[data-detail-panel]')).toHaveClass(/is-open/);
-  await page.keyboard.press('Escape');
-  await expect(page.locator('[data-detail-panel]')).not.toHaveClass(/is-open/);
+  const panel = page.locator('[data-detail-panel]');
+  const backdrop = page.locator('[data-detail-backdrop]');
 
-  await card.click();
+  // The card opens the drawer and the drawer's own backdrop then covers that
+  // card. Playwright's hit-test can therefore see its click land on the
+  // backdrop, retry, and lose every retry (2026-11-19: 15 s timeout, "element
+  // is not stable" then "backdrop intercepts pointer events"). Dispatching the
+  // click removes that race; the test is about the three close paths, not
+  // about pointer realism.
+  const open = async () => {
+    await card.dispatchEvent('click');
+    await expect(panel).toHaveClass(/is-open/);
+  };
+
+  await open();
+  await page.keyboard.press('Escape');
+  await expect(panel).not.toHaveClass(/is-open/);
+  await expect(backdrop).toBeHidden();
+
+  await open();
   await page.goBack();
-  await expect(page.locator('[data-detail-panel]')).not.toHaveClass(/is-open/);
+  await expect(panel).not.toHaveClass(/is-open/);
+  await expect(backdrop).toBeHidden();
 
   if (!isMobile(testInfo)) {
-    await card.click();
-    await expect(page.locator('[data-detail-backdrop]')).toBeVisible();
-    await page.locator('[data-detail-backdrop]').click({ position: { x: 8, y: 80 } });
-    await expect(page.locator('[data-detail-panel]')).not.toHaveClass(/is-open/);
+    await open();
+    await expect(backdrop).toBeVisible();
+    await backdrop.click({ position: { x: 8, y: 80 } });
+    await expect(panel).not.toHaveClass(/is-open/);
+    await expect(backdrop).toBeHidden();
   }
 });
 
