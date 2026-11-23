@@ -43,6 +43,15 @@ değiştirilir.
 token ölmüşse `::error::` annotation'ı ve adım özeti satırı bırakır; koşuyu
 kırmızıya çeviren adım `Source health`'dir (artık `pipefail` ile gerçek kapı).
 
+## Duraklatma
+
+Instagram çekimi `INSTAGRAM_INGEST=off` ile duraklatıldığında (bkz.
+`implementation-notes.md` → “Instagram'ı geçici durdurma”) `Meta token health`
+adımı da atlanır: Graph'a hiç istek gitmez, token süresi uyarısı da görünmez.
+Duraklatma 60 günü aşarsa token sessizce dolar; devam etmeden önce
+`python agentic-python/meta_token.py --check` çalıştırıp gerekirse `--refresh
+--write-env` ile yenileyin.
+
 ## Otomasyon (opsiyonel)
 
 `--refresh` her ay bir kez çalıştırılıp secret güncellenirse token hiç dolmaz.

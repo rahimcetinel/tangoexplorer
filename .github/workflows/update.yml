@@ -25,6 +25,12 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    # Instagram'dan veri çekmeyi tek satırdan duraklatır: "off" iken token
+    # kontrolü, feed taraması, Instagram yayını ve kapak görseli için Graph
+    # çağrısı atlanır; `source_health.py` Instagram satırını SKIP yazar.
+    # Devam etmek için "on" yapın (ya da bu satırı silin).
+    env:
+      INSTAGRAM_INGEST: "off"
     steps:
       - uses: actions/checkout@v4
 
@@ -68,6 +74,10 @@ jobs:
           META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
           META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
         run: |
+          if [ "${INSTAGRAM_INGEST:-on}" != "on" ]; then
+            echo "Instagram duraklatıldı (INSTAGRAM_INGEST=$INSTAGRAM_INGEST) — token kontrolü atlandı." | tee -a "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
           set +e
           python agentic-python/meta_token.py --check --summary | tee -a "$GITHUB_STEP_SUMMARY"
           status=${PIPESTATUS[0]}
@@ -104,8 +114,14 @@ jobs:
           python agentic-python/ingest_tangoverse.py --images || true
           python agentic-python/ingest_tangoverse.py --publish || true
           python agentic-python/ingest_tmd.py || true
-          python agentic-python/ingest_instagram.py || true
-          python agentic-python/publish_instagram.py || true
+          if [ "${INSTAGRAM_INGEST:-on}" = "on" ]; then
+            python agentic-python/ingest_instagram.py || true
+            python agentic-python/publish_instagram.py || true
+          else
+            # Duraklatma: ne Graph taranır ne yeni IG haberi yazılır. Mevcut
+            # IG kayıtları sitede kalır; akış kaldığı yerden devam eder.
+            echo "Instagram ingest duraklatıldı (INSTAGRAM_INGEST=$INSTAGRAM_INGEST)"
+          fi
           python agentic-python/collect_images.py --limit 60 || true
           # PNG olarak inen kapakları JPEG'e çevirir (build/deploy boyutu ve
           # `<Picture>` fallback'i için); frontmatter referanslarını da günceller.

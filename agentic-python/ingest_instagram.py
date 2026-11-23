@@ -19,6 +19,7 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 
 from classify import MONTHS
+from instagram_switch import is_paused
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = Path(__file__).resolve().parent / "out"
@@ -380,6 +381,13 @@ def main() -> int:
 
     if args.self_test:
         self_test()
+        return 0
+
+    if is_paused():
+        print(
+            "Instagram ingest duraklatıldı (INSTAGRAM_INGEST=off) — Graph'a istek atılmadı.",
+            flush=True,
+        )
         return 0
 
     load_dotenv(ROOT / ".env")

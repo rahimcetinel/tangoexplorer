@@ -11,6 +11,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from event_links import download_image, scrape_event_site, scrape_og_image, scrape_page_images
+from instagram_switch import is_paused
 
 ROOT = Path(__file__).resolve().parents[1]
 NEWS_DIR = ROOT / "src" / "content" / "news"
@@ -75,6 +76,9 @@ def instagram_username(url: str) -> str:
 
 
 def instagram_media_url(username: str, env: dict[str, str]) -> str | None:
+    if is_paused():
+        # Instagram duraklatıldı: kapak görseli için Graph'a sorulmaz.
+        return None
     token = env.get("META_ACCESS_TOKEN")
     user_id = env.get("META_IG_USER_ID")
     if not token or not user_id or not username:

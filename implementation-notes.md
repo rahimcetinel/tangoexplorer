@@ -132,6 +132,36 @@ Bu sıra `update.yml` ile birebir; yerelde tek tek çalıştırmak yerine yalnı
 
 Instagram duman testi (yayın yok): `python agentic-python/ingest_instagram.py --usernames chillouttangomarathon,istanbultangoweekend,laturcatango_istanbul`
 
+## Instagram'ı geçici durdurma
+
+Instagram Graph erişimi **tek anahtardan** kapanır: `INSTAGRAM_INGEST=off`.
+Varsayılan `on`; yani anahtar yoksa her şey eskisi gibi çalışır.
+
+- **Duraklatmak için:** `.github/workflows/update.yml` içindeki `env:
+  INSTAGRAM_INGEST: "off"` satırı zaten `off` (2026-11-23'ten itibaren). Değişiklik
+  push edildiğinde bir sonraki `Update site` koşusu Instagram'a hiç gitmez.
+- **Devam etmek için:** aynı satırı `"on"` yap (ya da satırı sil) ve push et.
+- **Yerelde:** `INSTAGRAM_INGEST=off python agentic-python/ingest_instagram.py`
+  (PowerShell: `$env:INSTAGRAM_INGEST='off'`).
+
+Anahtar açıkken (`off`) atlananlar:
+
+| Nerede | Ne yapılmıyor |
+|---|---|
+| `update.yml` → Meta token health | Graph'a `/me` sorgusu yok, token süresi uyarısı yok |
+| `update.yml` → Ingest | `ingest_instagram.py` ve `publish_instagram.py` çalışmıyor |
+| `collect_images.py` | Instagram `media_url` (kapak görseli) sorulmuyor |
+| `source_health.py` | Instagram satırı **FAIL** değil **SKIP** yazıyor → koşu kırmızıya dönmüyor |
+
+Mevcut Instagram kayıtları (`src/content/news/en/ig-*.md`, 20 dosya) sitede kalır;
+duraklatma yalnız **yeni çekmeyi** durdurur. Akış devam ettiğinde `out/instagram.json`
+tazelenir, `ingest_instagram.py` zaten yayınlanmış permalink'leri `already_published`
+sayar, yani kaldığı yerden devam eder (`--fresh` gerekmez).
+
+Dikkat: 60 günden uzun duraklatmada `META_ACCESS_TOKEN` dolar (bkz.
+`docs/meta-token.md`); devam etmeden önce `python agentic-python/meta_token.py
+--refresh --write-env` ile yenile ve GitHub secret'ını güncelle.
+
 Yerel vitrin: `npm run dev`
 
 Wrangler ilk deploy’da Cloudflare girişi ister. Domain ve Pages projesi dashboard’dan önceden açılmak zorunda değil.

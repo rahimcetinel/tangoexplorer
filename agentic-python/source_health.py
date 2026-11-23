@@ -10,7 +10,8 @@ instead of the exit codes:
   days, so their window is wider);
 * the source endpoint must answer with the expected marker (HTTP 200 and a
   signature string), which catches redirects to a holding page or a login wall;
-* the Instagram token must still resolve against the Graph API.
+* the Instagram report must be fresh and error-free (while `INSTAGRAM_INGEST=off`
+  the row is reported as SKIP: a deliberate pause is not an outage).
 
 Prints a Markdown table (also appended to the GitHub step summary when there is
 one) and writes `agentic-python/out/source-health.json`. Exits 1 when something
@@ -34,6 +35,8 @@ import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+
+from instagram_switch import is_paused
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "src" / "data"
@@ -280,6 +283,10 @@ def check_instagram() -> dict:
     report is the evidence: if it is missing, old, or full of errors, the ingest
     has not been able to write Instagram data.
     """
+    if is_paused():
+        # Bilinçli duraklatma: rapor yaşlanacak, bu bir arıza değil. FAIL yerine
+        # SKIP yazıyoruz ki altı saatte bir koşan hat kırmızıya dönmesin.
+        return {"status": "SKIP", "detail": "Instagram duraklatıldı (INSTAGRAM_INGEST=off)"}
     path = OUT_DIR / "instagram.json"
     if not path.exists():
         return {"status": "WARN", "detail": "out/instagram.json yok (ingest çalışmamış)"}

@@ -10,6 +10,7 @@ from datetime import date
 from pathlib import Path
 
 from classify import attach_filters, classify_kinds
+from instagram_switch import is_paused
 from slugify import slugify
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -244,6 +245,13 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--limit", type=int, default=MAX_STORIES)
     args = parser.parse_args()
+
+    if is_paused():
+        print(
+            "Instagram yayını duraklatıldı (INSTAGRAM_INGEST=off) — yeni haber yazılmadı.",
+            flush=True,
+        )
+        return 0
 
     if not RAW_PATH.exists():
         raise SystemExit("instagram.json yok. Önce ingest_instagram.py çalıştır.")
