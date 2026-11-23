@@ -269,37 +269,34 @@ def check_file(source: dict) -> dict:
 
 
 def check_instagram() -> dict:
-    """Check the Meta token with the same call shape the ingestor uses.
+    """Read the report the ingest wrote a few steps earlier.
 
-    ``/me`` is not valid for every token type and a 400 hides the reason, so we
-    read the error body and surface Meta's own message (typically "Session has
-    expired on …"), and prefer the configured IG user id.
+    The 2026-11-18 "400: Session has expired" was not a false alarm: the token
+    really had expired on 11-Nov-26 and Business Discovery was dead too, which
+    is why the report stopped being refreshed. The direct Graph probe is still
+    gone — one HTTP call cannot tell "expired" from "endpoint refuses" without
+    also knowing the token's own expiry, so ``meta_token.py`` owns that check
+    (it reports the expiry date Meta gives and can refresh the token). Here the
+    report is the evidence: if it is missing, old, or full of errors, the ingest
+    has not been able to write Instagram data.
     """
-    token = os.environ.get("META_ACCESS_TOKEN", "").strip()
-    if not token:
-        return {"status": "SKIP", "detail": "token yok (lokal çalışma)"}
-    ig_user = os.environ.get("META_IG_USER_ID", "").strip()
-    target = ig_user or "me"
-    fields = "id,username" if ig_user else "id"
-    url = f"https://graph.facebook.com/{GRAPH_VERSION}/{target}?fields={fields}&access_token={token}"
+    path = OUT_DIR / "instagram.json"
+    if not path.exists():
+        return {"status": "WARN", "detail": "out/instagram.json yok (ingest çalışmamış)"}
     try:
-        status, body = fetch(url, 30)
-        payload = json.loads(body)
-    except urllib.error.HTTPError as error:
-        message = ""
-        try:
-            payload = json.loads(error.read().decode("utf-8", "replace"))
-            message = (payload.get("error") or {}).get("message", "")
-        except Exception:  # noqa: BLE001 - the status alone is still useful
-            payload = {}
-        detail = f"HTTP {error.code}" + (f": {message[:160]}" if message else "")
-        return {"status": "FAIL", "detail": detail}
-    except Exception as error:  # noqa: BLE001
-        return {"status": "FAIL", "detail": f"{type(error).__name__}: {error}"}
-    if status != 200 or "error" in payload:
-        message = (payload.get("error") or {}).get("message", "")[:160]
-        return {"status": "FAIL", "detail": f"token geçersiz: {message}"}
-    return {"status": "OK", "detail": "token geçerli"}
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"status": "FAIL", "detail": "out/instagram.json bozuk"}
+    ok = int(payload.get("okCount") or 0)
+    errors = int(payload.get("errorCount") or 0)
+    age = age_hours(payload.get("generatedAt", ""))
+    if age is None:
+        return {"status": "WARN", "detail": f"{ok} hesap, tarih okunamadı"}
+    if age > 26:
+        return {"status": "FAIL", "detail": f"rapor {age / 24:.1f} gün bayat — token/ingest kontrol edilmeli"}
+    if errors:
+        return {"status": "FAIL", "detail": f"{errors} hesap hata verdi ({ok} ok)"}
+    return {"status": "OK", "detail": f"{ok} hesap, 0 hata, {age:.0f} sa"}
 
 
 def main() -> int:
