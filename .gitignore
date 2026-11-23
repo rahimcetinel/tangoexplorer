@@ -42,6 +42,9 @@ Thumbs.db
 .npm-cache/
 .tools/
 
+# local secrets (gh token, refreshed Meta tokens)
+.secrets/
+
 # local launcher logs
 .logs/
 
