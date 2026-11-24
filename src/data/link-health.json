@@ -6,7 +6,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/bonavitatangomarathon": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/reel/DWlRuFDginx/": {
@@ -14,7 +14,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/bratislava_tango_party": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/reel/Dc8a3e2gNIZ/": {
@@ -22,7 +22,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/brunaestellita.tango": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/reel/Db5jQs-gp6m/": {
@@ -30,7 +30,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/istanbultango": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/reel/DWTmd0cjHFm/": {
@@ -38,7 +38,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/istanbultangonocturno": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/reel/DczzqSSNyW7/": {
@@ -46,7 +46,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/laturcatango_istanbul": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/p/DdI0UIQOjN0/": {
@@ -54,7 +54,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/odessaistanbultango": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://www.pasiontangomarathon.com": {
@@ -66,7 +66,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/pasiontangomarathon": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/p/Dc9DEbBNNS0/": {
@@ -74,7 +74,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/sarajevotangofestival": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/reel/Db25EZit_Ys/": {
@@ -82,7 +82,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/tangotoworldcup": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://tangoexplorer.com/about": {
@@ -118,7 +118,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/tangotoistanbul": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/tangotoistanbul": {
@@ -158,11 +158,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://tango-elements.com/en/dias-de-luz-y-sonrisas-milonguero-weekend/": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/2%E2%81%BF%E1%B5%88+D%C3%ADas+de+Luz+y+Sonrisas+Encuentro+Milonguero/10454": {
-      "status": "ok",
+      "status": "unreachable",
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/events/1585842799595097/?acontext=%7B%22ref%22%3A%2252%22%2C%22action_history%22%3A%22[%7B%5C%22surface%5C%22%3A%5C%22share_link%5C%22%2C%5C%22mechanism%5C%22%3A%5C%22share_link%5C%22%2C%5C%22extra_data%5C%22%3A%7B%5C%22invite_link_id%5C%22%3A1956434475022964%7D%7D]%22%7D": {
@@ -546,7 +546,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/bosphorustango": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/bosphorustango": {
@@ -1314,11 +1314,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/kraljevo.tango.fest": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/King's+Town+Tango+Fest+-+3rd+edition/11356": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/profile.php?id=61577419894922": {
@@ -1362,19 +1362,19 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/169363763708355/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/La+Befana+Milonguera/11031": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/1418710595940478/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/La+Bora+Encuentro+de+Trieste/10574": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/profile.php?id=100091272394131": {
@@ -1386,11 +1386,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/26265849106420354/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/La+FIestita/11277": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://linktr.ee/lafincadeltango": {
@@ -1402,11 +1402,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://facebook.com/events/s/la-macarena-5th-edition-7-to-1/969597469391636/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/La+Macarena+Milonguero+Encuentro+2027+5th+Edition/10668": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://www.tangolamadrugada.com": {
@@ -1418,7 +1418,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/tangolamadrugada": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/La+Magnifika+Tango+Marathon/11057": {
@@ -1434,11 +1434,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/lamareatango": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/lamareatango": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://facebook.com/events/s/la-primera-tanda-festiwal-gold/2555660051569592/": {
@@ -1458,11 +1458,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/1386297641629844/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/La+Reuni%C3%B2n+Milonguera/10778": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "http://www.lasabatica.it": {
@@ -1474,11 +1474,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/669366859873564/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/La+Sabauda/11022": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/events/1046415491647608": {
@@ -1506,7 +1506,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.instagram.com/laventanatangofestival": {
-      "status": "blocked",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/Ladies+Tango+%26+Yoga+Retreat/10975": {
@@ -1522,11 +1522,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/479205355504568/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/Le+Rendez-vous+Milonguero/10441": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://asierymarion.com/milongas-de-gala-reveillon/": {
@@ -1546,11 +1546,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/1708542870454649": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/Lisboa+Menina+Encuentro+Milonguero/10875": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://www.lusitango.com/": {
@@ -1586,11 +1586,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/344080901544265/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/Los+Amigos+en+Tallinn+Tango+marathon/11149": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://www.losangelesencuentromilonguero.com/": {
@@ -2514,11 +2514,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/770509519985304/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/Tango+Marathon+Entre+Arcos+Before+Spring/11134": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://en.tangomayafest.com/": {
@@ -2678,11 +2678,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/728580404013102/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/Tbilisi+Tango+Marathon/10266": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tenerifetangomarathon.com/index.php/en/tenerife-tango-marathon/": {
@@ -2714,7 +2714,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/The+Living+Tango+Marathon/10640": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://www.tangostuttgart.de/events/the-loft-marathon.html": {
@@ -2774,11 +2774,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/916603932696464/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/Tormenta+Tango+Marathon+Opatija/10628": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "http://www.TorontoSpringTangoMarathon.com": {
@@ -2846,11 +2846,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/1462693474932199/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/Vienna+Vibes+Tango+Marathon/11011": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://www.maudeandrey.com/viento-norte-festivalito-english.html": {
@@ -2862,11 +2862,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/205452512918008/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/Vietnam+Tango+Marathon+2027/10566": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/events/1587639503144225/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22group%22%7D]%7D": {
@@ -2878,11 +2878,11 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/381942907767760/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/Vilnius+Tango+Weekend+2027/11287": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/Vinilo+Budapest+Encuentro+Milonguero/11056": {
@@ -2890,11 +2890,11 @@
       "checkedAt": "2026-11-24"
     },
     "http://www.vivamexicotangofestival.com": {
-      "status": "unreachable",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/Viva+Mexico+Tango+Festival/10739": {
-      "status": "unreachable",
+      "status": "ok",
       "checkedAt": "2026-11-24"
     },
     "https://facebook.com/events/s/vratislavia-tango-wroclaw-pola/1661795272188379/": {
@@ -2962,19 +2962,19 @@
       "checkedAt": "2026-11-24"
     },
     "https://facebook.com/events/s/xii-sol-de-invierno-internacio/1190278679940130/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/XII+Sol+de+Invierno+Internacional+Tango+Meeting/10836": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/761303068713370/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangocat.net/go/Xmas+in+Embrace/10261": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://facebook.com/events/s/zar-tanga-2nd-edition/1361763762632162/": {
@@ -3086,7 +3086,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.facebook.com/groups/1301116590704961/": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangoverse.net/events/tango-celebration-in-belgium-30cd5c": {
@@ -3110,7 +3110,7 @@
       "checkedAt": "2026-11-24"
     },
     "https://www.tarbesentango.fr": {
-      "status": "ok",
+      "status": "error",
       "checkedAt": "2026-11-24"
     },
     "https://tangoverse.net/events/tarbes-en-tango-2027": {
