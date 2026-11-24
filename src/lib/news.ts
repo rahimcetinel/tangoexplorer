@@ -75,9 +75,14 @@ export async function getNews(locale: Locale): Promise<NewsEntry[]> {
     cached = getCollection('news', (entry) => entry.data.locale === locale).then((posts) =>
       posts
         // The link checker marks entries the source has withdrawn (Tangocat
-        // answers 302 → /en/festivals). They stay reachable as pages, but they
-        // no longer belong on the board, in search or in the feed.
-        .filter((post) => healthFor(post.data.sourceUrl)?.status !== 'gone')
+        // answers 302 → /en/festivals) or whose source page is now 404/410.
+        // Those leave the board, search, feed and their own page. Anything
+        // weaker — blocked by a bot wall, a timeout, a 5xx — is ignored on
+        // purpose: an unreachable site is not a reason to drop an event.
+        .filter((post) => {
+          const status = healthFor(post.data.sourceUrl)?.status;
+          return status !== 'gone' && status !== 'dead';
+        })
         .filter((post) => hasNotEnded(post))
         .sort((a, b) => compareByEventDate(a, b)),
     );

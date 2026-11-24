@@ -10,6 +10,9 @@ instead of the exit codes:
   days, so their window is wider);
 * the source endpoint must answer with the expected marker (HTTP 200 and a
   signature string), which catches redirects to a holding page or a login wall;
+  an endpoint we cannot reach at all (403/429 bot wall, 5xx, timeout, DNS) is
+  reported as WARN and ignored — an unreachable site is not a broken site, and
+  its stale data is ignored with it;
 * the Instagram report must be fresh and error-free (while `INSTAGRAM_INGEST=off`
   the row is reported as SKIP: a deliberate pause is not an outage).
 
@@ -222,24 +225,39 @@ def fetch(url: str, timeout: int) -> tuple[int, str]:
         return response.status, raw.decode(charset, "replace")
 
 
+IGNORED_HTTP = {401, 403, 405, 429}
+
+
 def probe(url: str, marker: str, timeout: int) -> dict:
+    """Return OK / WARN / FAIL for one endpoint.
+
+    WARN means "we could not reach it": a bot wall (401/403/429), a 5xx, a
+    timeout or a DNS/TLS error. That is not our outage — the ingest simply keeps
+    yesterday's file — so the scheduled run must not turn red for it. FAIL stays
+    for an endpoint that answers but no longer looks like the source (marker
+    missing) or that has been removed (404/410), because those need a human.
+    """
     last_error = ""
     for attempt in range(2):
         try:
             status, body = fetch(url, timeout)
-            if status != 200:
-                last_error = f"HTTP {status}"
-                continue
-            if marker.lower() not in body.lower():
-                return {"ok": False, "detail": f"marker '{marker}' yok"}
-            return {"ok": True, "detail": f"HTTP {status}, {len(body) // 1024} kB"}
         except urllib.error.HTTPError as error:
-            return {"ok": False, "detail": f"HTTP {error.code}"}
+            if error.code in IGNORED_HTTP or error.code >= 500:
+                return {"status": "WARN", "detail": f"erişilemiyor (HTTP {error.code}) — yok sayıldı"}
+            return {"status": "FAIL", "detail": f"HTTP {error.code}"}
         except Exception as error:  # noqa: BLE001 - network errors are the point
             last_error = f"{type(error).__name__}: {error}"
             if attempt == 0:
                 continue
-    return {"ok": False, "detail": last_error or "ulaşılamadı"}
+            return {"status": "WARN", "detail": f"erişilemiyor ({last_error[:90]}) — yok sayıldı"}
+        if not 200 <= status < 300:
+            if status in IGNORED_HTTP or status >= 500:
+                return {"status": "WARN", "detail": f"erişilemiyor (HTTP {status}) — yok sayıldı"}
+            return {"status": "FAIL", "detail": f"HTTP {status}"}
+        if marker.lower() not in body.lower():
+            return {"status": "FAIL", "detail": f"marker '{marker}' yok"}
+        return {"status": "OK", "detail": f"HTTP {status}, {len(body) // 1024} kB"}
+    return {"status": "WARN", "detail": f"erişilemiyor ({last_error[:90]}) — yok sayıldı"}
 
 
 def age_hours(stamp: str) -> float | None:
@@ -331,11 +349,7 @@ def main() -> int:
             row["items"] = len(payload.get("items") or [])
             row["ageHours"] = round(age_hours(payload.get("generatedAt", "")) or 0, 1)
         if not args.no_probe:
-            result = probe(source["url"], source["marker"], source.get("timeout", 30))
-            row["probe"] = {
-                "status": "OK" if result["ok"] else "FAIL",
-                "detail": result["detail"],
-            }
+            row["probe"] = probe(source["url"], source["marker"], source.get("timeout", 30))
         rows.append(row)
 
     instagram = check_instagram()
@@ -350,6 +364,18 @@ def main() -> int:
             "probe": {"status": "SKIP", "detail": "—"},
         }
     )
+
+    # The probe is the tie-breaker. A source we cannot reach (blocked, timed
+    # out) cannot refresh its JSON either, so stale data there is not an outage
+    # of the site: the ingest keeps the last good file and we move on. Only a
+    # source that answers but no longer looks right (marker changed, page
+    # removed) stays a failure.
+    for row in rows:
+        if row["probe"]["status"] == "WARN" and row["data"]["status"] == "FAIL":
+            row["data"] = {
+                "status": "WARN",
+                "detail": f"{row['data']['detail']} — kaynak erişilemiyor, yok sayıldı",
+            }
 
     failed = [row for row in rows if "FAIL" in (row["data"]["status"], row["probe"]["status"])]
     warnings = [row for row in rows if "WARN" in (row["data"]["status"], row["probe"]["status"])]
@@ -374,7 +400,7 @@ def main() -> int:
         else:
             print(f"Tüm kaynaklar sağlıklı ({len(rows)} kontrol).")
         if warnings:
-            print(f"Uyarı: " + ", ".join(row["label"] for row in warnings))
+            print("Yok sayıldı: " + ", ".join(row["label"] for row in warnings))
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     (OUT_DIR / "source-health.json").write_text(
