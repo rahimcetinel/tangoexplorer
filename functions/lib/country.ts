@@ -15,7 +15,6 @@ export const COUNTRY_BY_CODE: Record<string, string> = {
   NO: 'norway',
   AT: 'austria',
   IT: 'italy',
-  ES: 'spain',
   NL: 'netherlands',
   FR: 'france',
   PL: 'poland',

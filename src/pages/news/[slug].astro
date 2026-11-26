@@ -3,9 +3,9 @@ import ArticleView from '../../components/ArticleView.astro';
 import { getNews, newsSlug } from '../../lib/news';
 
 export async function getStaticPaths() {
-  // getNews() drops ended events and entries the link checker marked `gone`
-  // (the source withdrew them) or `dead` (404/410), so those URLs 404 instead
-  // of lingering.
+  // getNews() drops ended events and entries whose source link has been
+  // `gone` or `dead` for three days (link-health.ts), so those URLs 404 instead
+  // of lingering. A fresh 404 keeps the page up: the link may be back.
   const posts = await getNews('en');
   return posts.map((post) => ({
     params: { slug: newsSlug(post) },

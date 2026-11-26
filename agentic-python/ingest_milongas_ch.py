@@ -3,7 +3,8 @@
 The home page renders the MEC calendar as one card per occurrence. Each card
 carries the occurrence date in its link (`?occurrence=YYYY-MM-DD`), the local
 time ("19:30 - 21:30"), a numbered category ("02. Milonga régulière"), the
-venue/city and the DJ. Past cards are flagged with `mec-past-event`.
+venue/city and the DJ. Past cards are flagged with `mec-past-event`. The page
+shows only the current month, so the next month is loaded via MEC's AJAX call.
 
 Writes src/data/milongas-ch.json.
 
@@ -24,6 +25,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
+from mec_calendar import next_months
 from milonga_series import build_item, cluster_series, norm
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -70,6 +72,13 @@ def main() -> int:
 
     page = fetch(PAGE)
     cards = CARD.findall(page)
+    # The page holds only the current month; add the next one so the window
+    # never shrinks to a few days at month-end (see mec_calendar.py).
+    try:
+        for chunk in next_months(page, PAGE, UA):
+            cards.extend(CARD.findall(chunk))
+    except Exception as error:  # noqa: BLE001 - keep the current month
+        print(f"warning: next month not loaded ({type(error).__name__}: {error})")
     print(f"cards: {len(cards)}")
 
     stats = Counter()
@@ -106,6 +115,11 @@ def main() -> int:
                 venue, city = ", ".join(parts[:-1]), parts[-1]
             elif parts:
                 city = parts[0]
+        # The agenda also lists a few events across the border ("Thyez,
+        # France"); they would land in Switzerland with city "France".
+        if city.lower() in {"france", "italia", "italie", "deutschland"}:
+            stats["skip-outside-ch"] += 1
+            continue
 
         day = datetime.strptime(date_match.group(1), "%Y-%m-%d")
         occurrences.append(

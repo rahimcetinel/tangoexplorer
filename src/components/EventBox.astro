@@ -163,7 +163,7 @@ function hostOf(url: string): string {
                 </ExternalLink>
               </p>
             )}
-            {sourceHealth?.status === 'dead' && (
+            {(sourceHealth?.status === 'dead' || sourceHealth?.status === 'gone') && (
               <p class="app-source-warn">This source link looks broken; use the event website above.</p>
             )}
           </div>

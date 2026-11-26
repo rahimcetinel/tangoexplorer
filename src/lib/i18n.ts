@@ -208,7 +208,6 @@ export const ui = {
     aboutOslo: 'milongas, practicas and classes in Oslo',
     aboutVienna: 'milongas and practicas in Vienna',
     aboutItaly: 'milongas and practicas across Italy',
-    aboutSpain: 'milongas and practicas across Spain',
     aboutLondon: 'milongas and practicas in London',
     aboutNetherlands: 'salons across the Netherlands',
     aboutSocial: 'Instagram and Facebook — for scenes and organisers the calendars miss',

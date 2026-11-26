@@ -110,7 +110,6 @@ export const MILONGA_SOURCES: Record<string, string> = {
   oslo: 'tango.oslo.no',
   vienna: 'tango-wien.at',
   italy: 'FAItango',
-  spain: 'Agenda del Tango',
   london: 'London Milongas',
   netherlands: 'tangokalender.nl',
   tangoargentin: 'tango-argentin.fr',

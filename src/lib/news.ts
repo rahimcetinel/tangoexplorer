@@ -1,7 +1,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { eventKinds, contentFormats, sourceKeys } from '../content.config';
 import { type Category, type Locale } from './i18n';
-import { healthFor } from './link-health';
+import { sourceRetired } from './link-health';
 
 export type NewsEntry = CollectionEntry<'news'>;
 export type { Category };
@@ -74,15 +74,13 @@ export async function getNews(locale: Locale): Promise<NewsEntry[]> {
   if (!cached) {
     cached = getCollection('news', (entry) => entry.data.locale === locale).then((posts) =>
       posts
-        // The link checker marks entries the source has withdrawn (Tangocat
-        // answers 302 → /en/festivals) or whose source page is now 404/410.
-        // Those leave the board, search, feed and their own page. Anything
-        // weaker — blocked by a bot wall, a timeout, a 5xx — is ignored on
-        // purpose: an unreachable site is not a reason to drop an event.
-        .filter((post) => {
-          const status = healthFor(post.data.sourceUrl)?.status;
-          return status !== 'gone' && status !== 'dead';
-        })
+        // The link checker records `dead` (404/410) and `gone` (the source
+        // withdrew the listing) in link-health.json. A card leaves the board,
+        // search, feed and its own page only after that state has lasted three
+        // days: a publisher moving a page for an afternoon, a redirect that
+        // still lands, or a bot wall aimed at the GitHub runner must not delete
+        // an event. Anything weaker — blocked, a timeout, a 5xx — never counts.
+        .filter((post) => !sourceRetired(post.data.sourceUrl))
         .filter((post) => hasNotEnded(post))
         .sort((a, b) => compareByEventDate(a, b)),
     );

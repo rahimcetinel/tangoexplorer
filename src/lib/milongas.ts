@@ -2,7 +2,6 @@ import atJson from '../data/milongas-at.json';
 import chJson from '../data/milongas-ch.json';
 import czJson from '../data/milongas-cz.json';
 import deJson from '../data/milongas-de.json';
-import esJson from '../data/milongas-es.json';
 import frJson from '../data/milongas-fr.json';
 import hoyJson from '../data/hoy-milongas.json';
 import itJson from '../data/milongas-it.json';
@@ -27,7 +26,6 @@ const ch = (chJson as unknown as SourceFile).items ?? [];
 const no = (noJson as unknown as SourceFile).items ?? [];
 const at = (atJson as unknown as SourceFile).items ?? [];
 const it = (itJson as unknown as SourceFile).items ?? [];
-const es = (esJson as unknown as SourceFile).items ?? [];
 const ldn = (ldnJson as unknown as SourceFile).items ?? [];
 const nl = (nlJson as unknown as SourceFile).items ?? [];
 const fr = (frJson as unknown as SourceFile).items ?? [];
@@ -70,7 +68,6 @@ export const MILONGAS: Milonga[] = [
   ...no.map((item) => normalize(item, 'oslo')),
   ...at.map((item) => normalize(item, 'vienna')),
   ...it.map((item) => normalize(item, 'italy')),
-  ...es.map((item) => normalize(item, 'spain')),
   ...ldn.map((item) => normalize(item, 'london')),
   ...nl.map((item) => normalize(item, 'netherlands')),
   ...fr.map((item) => normalize(item, 'tangoargentin')),
@@ -87,7 +84,6 @@ const SOURCE_FILES = [
   noJson,
   atJson,
   itJson,
-  esJson,
   ldnJson,
   nlJson,
   frJson,

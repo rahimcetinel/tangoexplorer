@@ -103,7 +103,6 @@ jobs:
           python agentic-python/ingest_oslo.py --publish || true
           python agentic-python/ingest_vienna.py --publish || true
           python agentic-python/ingest_italy.py --publish || true
-          python agentic-python/ingest_spain.py --publish || true
           python agentic-python/ingest_london.py --publish || true
           python agentic-python/ingest_netherlands.py --publish || true
           python agentic-python/ingest_france.py --publish || true
@@ -249,7 +248,11 @@ jobs:
 
       # Ingest adımları `|| true` ile koşuyor; bozuk bir kaynak (ölü ICS, değişen
       # HTML, süresi geçmiş IG token'ı) sessizce eski veriyi bırakır. Bu adım
-      # sonucu kontrol eder ve gerçek bir sorunda koşuyu kırmızıya çevirir.
+      # sonucu kontrol eder. Kırmızı yalnızca *bizim* tarafımızdaki arıza içindir
+      # (parser, bayat veri, kaldırılmış uç nokta); üçüncü tarafın çökmesi burada
+      # sarı kalır ve süresi `max_age_h + 48 sa`yı aşarsa `source-watch.yml`
+      # kırmızıya döner. Yayın hattının kırmızısı "bizde bir şey bozuk" anlamını
+      # korumalı, yoksa gerçek arıza da okunmaz hale gelir.
       # `tee` boru hattı çıkış kodunu yutuyordu (`pipefail` yoktu) — bu yüzden
       # 2026-11-08'den beri süren Instagram arızası yeşil koşularda görünmedi.
       - name: Source health
@@ -260,6 +263,25 @@ jobs:
         run: |
           set -o pipefail
           python agentic-python/source_health.py | tee -a "$GITHUB_STEP_SUMMARY"
+
+      # `source_health.py` bir sonraki koşunun "kaç gündür taze veri yok"
+      # sorusunu cevaplayabilmesi için son iyi veri zamanını yazar. Commit
+      # ediliyor ki `source-watch` hattı ağa hiç çıkmadan okuyabilsin: oradaki
+      # saat, kaynağın kendisi kadar hattın durmasını da gösterir.
+      - name: Persist source freshness
+        if: always()
+        run: |
+          if [ ! -f src/data/source-freshness.json ]; then
+            echo "no freshness ledger written" | tee -a "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/source-freshness.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update source freshness [skip ci]"
+            git push
+          fi
 
       - name: Upload source health report
         if: always()

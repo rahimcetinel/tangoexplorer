@@ -4,7 +4,19 @@ Collects eventWebsite, sourceUrl, eventInstagram and eventFacebook, requests
 them with a short timeout and reports dead or unreachable links. Writes
 out/link-check.json; exits non-zero only with --strict.
 
-Usage: python agentic-python/check_links.py [--limit N] [--timeout S] [--strict]
+With --write it also maintains `src/data/link-health.json`, the site's only
+memory of a dead link. `news.ts` retires a card once its source has been
+404/410 for `SOURCE_GONE_AFTER_H` (72 h — twelve six-hourly runs, or three days
+with slack), so the file must remember *when* the failure started, not only
+whether it is still there: a publisher moving a page for an afternoon, or a bot
+wall aimed at the GitHub runner, must not delete an event.
+
+Only `dead` (404/410/451) and `gone` (the source withdrew the listing, e.g.
+Tangocat 302 → /en/festivals) advance that clock. `blocked`, `unreachable` and
+`error` say nothing about the page, so they leave the clock exactly where it
+was — neither starting nor resetting it.
+
+Usage: python agentic-python/check_links.py [--limit N] [--timeout S] [--strict] [--all] [--write]
 """
 
 from __future__ import annotations
@@ -17,7 +29,7 @@ import sys
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlsplit, urljoin
 
@@ -38,6 +50,15 @@ BLOCKED = {401, 403, 405, 429}
 GONE_MARKERS = ("/en/festivals",)
 
 FIELDS = ("eventWebsite", "sourceUrl", "eventInstagram", "eventFacebook")
+
+# Kartın "kaynağı kaldırıldı" sayılması için ölü linkin bu kadar süre üst üste
+# görülmesi gerekir. `src/lib/link-health.ts` aynı sayıyı kullanır; ikisi
+# birlikte değişmeli.
+SOURCE_GONE_AFTER_H = 72
+
+# Sadece bu iki durum sayfa hakkında kesin bir kanıttır. Bot duvarı (blocked),
+# zaman aşımı (unreachable) ve diğer hatalar kanıt değil.
+BAD_STATES = {"dead", "gone"}
 
 
 class _NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -117,6 +138,80 @@ def check(url: str, timeout: float) -> dict:
     return result
 
 
+def hours_since(stamp: str) -> float | None:
+    try:
+        return (datetime.now(timezone.utc) - datetime.fromisoformat(stamp)).total_seconds() / 3600
+    except (TypeError, ValueError):
+        return None
+
+
+def write_health(results: list[dict]) -> Path:
+    """Merge this run into src/data/link-health.json, keeping the outage clocks.
+
+    Entries for URLs that were not checked this run (ended events, `--limit`) are
+    carried over untouched: one limited run must not wipe the history that the
+    72-hour rule depends on.
+    """
+    target = ROOT / "src" / "data" / "link-health.json"
+    previous: dict[str, dict] = {}
+    if target.exists():
+        try:
+            payload = json.loads(target.read_text(encoding="utf-8"))
+            links_in_file = payload.get("links")
+            previous = links_in_file if isinstance(links_in_file, dict) else {}
+        except json.JSONDecodeError:
+            previous = {}
+
+    now_dt = datetime.now(timezone.utc).replace(microsecond=0)
+    now = now_dt.isoformat()
+    today = date.today().isoformat()
+    links = dict(previous)
+    for item in results:
+        url = item["url"]
+        state = item["state"]
+        old = previous.get(url) or {}
+        entry: dict = {"status": state, "checkedAt": today}
+        if state in BAD_STATES:
+            if old.get("firstBadAt"):
+                entry["firstBadAt"] = old["firstBadAt"]
+            elif old.get("status") in BAD_STATES:
+                # Geçiş: bu defter saati yazmadan önce de düşük durumdaydı, yani
+                # kart zaten gizliydi. Saati "dolmuş" yazıp kartı bir anda geri
+                # getirmiyoruz; yeni arızalarda saat sıfırdan başlar.
+                entry["firstBadAt"] = (now_dt - timedelta(hours=SOURCE_GONE_AFTER_H)).isoformat()
+            else:
+                entry["firstBadAt"] = now
+            entry["badCount"] = int(old.get("badCount") or 0) + 1
+            if old.get("lastOkAt"):
+                entry["lastOkAt"] = old["lastOkAt"]
+        elif state == "ok":
+            entry["lastOkAt"] = now
+            entry["badCount"] = 0
+        else:
+            # Bot duvarı / zaman aşımı / beklenmeyen hata: sayfa hakkında kanıt
+            # değil, saati ne başlatır ne sıfırlar.
+            for key in ("firstBadAt", "lastOkAt", "badCount"):
+                if old.get(key) is not None:
+                    entry[key] = old[key]
+        links[url] = entry
+
+    target.write_text(
+        json.dumps({"generatedAt": today, "links": links}, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+    retired = sum(
+        1
+        for entry in links.values()
+        if entry.get("firstBadAt") and (hours_since(entry["firstBadAt"]) or 0) >= SOURCE_GONE_AFTER_H
+    )
+    print(
+        f"link health: {len(results)} checked, {retired} link(s) past the "
+        f"{SOURCE_GONE_AFTER_H} h limit — those cards are dropped by news.ts"
+    )
+    return target
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=0, help="check only the first N unique URLs")
@@ -161,13 +256,7 @@ def main() -> int:
     )
 
     if args.write:
-        today = date.today().isoformat()
-        payload = {
-            "generatedAt": today,
-            "links": {item["url"]: {"status": item["state"], "checkedAt": today} for item in results},
-        }
-        target = ROOT / "src" / "data" / "link-health.json"
-        target.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        target = write_health(results)
         print(f"wrote {target.relative_to(ROOT)}")
 
     print(

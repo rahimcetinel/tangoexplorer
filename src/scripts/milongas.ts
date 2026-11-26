@@ -51,10 +51,16 @@ export function initMilongas() {
   }
   let selected: string | null = null;
   let filters = readUrl();
+  const available = [...new Set(items.map((item) => item.region))];
+  // A country we no longer list (e.g. `?region=spain` after a source was
+  // dropped) would render an empty page with a blank selector; treat it as
+  // unset so the visitor lands on a country that has listings.
+  if (filters.region && !available.includes(filters.region)) {
+    filters.region = '';
+  }
   if (!filters.region) {
     // "Show my country first": the browser time zone is the best signal a static
     // page has; language is the fallback; Türkiye is the house default.
-    const available = [...new Set(items.map((item) => item.region))];
     filters.region = detectCountry(available) || 'turkiye';
   }
 

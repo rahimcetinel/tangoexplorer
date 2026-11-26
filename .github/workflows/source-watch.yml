@@ -1,0 +1,52 @@
+name: Source watch
+
+# Üçüncü taraf kaynaklarının "süreklilik" denetimi. `Update site` bu işi bilerek
+# yapmıyor: orada kırmızı "bizde bir şey bozuk" demek. Bir kaynak kendi
+# kadansını 48 saatten fazla aşacak kadar taze veri vermediyse (6 saatlik
+# kaynaklarda ~3 gün, haftalıklarda ~10 gün) bu hat kırmızıya döner; yayın hattı
+# yeşil kalır. Tek seferlik bir kesinti hiçbir yerde kırmızı üretmez.
+#
+# `--from-state`: ağa hiç çıkmaz. `update.yml` her koşuda
+# `src/data/source-freshness.json` dosyasını commit'ler, burası onu okur. Böylece
+# ne rate limit, ne Cloudflare'in GitHub runner IP'sine bakan bot duvarı, ne de
+# on beş siteye günlük gereksiz istek var. Dosya 12 saatten eskiyse hattın
+# kendisi durmuş demektir; adım bunu uyarı olarak yazar.
+
+on:
+  schedule:
+    # 05:23 UTC: altı saatlik güncellemelerin (:00) arasına düşsün ve GitHub'ın
+    # yoğun saatlerde :00 koşularını atlamasından etkilenmesin.
+    - cron: "23 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: source-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Çıkış kodu 2: en az bir kaynak toleransını aşmış. 0: hepsi sınır içinde.
+      # 1 bu modda oluşmaz — veri/uç nokta kontrolü yapılmıyor.
+      - name: Source freshness
+        run: |
+          set -o pipefail
+          python agentic-python/source_health.py --from-state --fail-on-external | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-watch
+          path: agentic-python/out/source-health.json
+          if-no-files-found: warn

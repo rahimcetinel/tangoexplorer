@@ -5,7 +5,8 @@
 one ``<article class="mec-event-article">`` per occurrence, with the time, the
 title, the event page and the venue/address.
 
-We take the printed window (about five weeks), group occurrences into series and
+The page prints only the current month, so the next month is loaded through
+MEC's AJAX call (`mec_calendar.py`). We take that window, group occurrences into series and
 keep the weekly/biweekly ones. The directory changes weekly, so the script
 refreshes at most every N days.
 
@@ -28,6 +29,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
+from mec_calendar import next_months
 from milonga_series import build_item, cluster_series, norm
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -75,6 +77,14 @@ def main() -> int:
 
     page = fetch(PAGE)
     sections = SECTION.findall(page)
+    # Each of the four zone calendars shows only the current month; add the
+    # next one so month-end runs keep ~5 weeks (see mec_calendar.py). Chunks
+    # are parsed one by one so a day section never runs into the next reply.
+    try:
+        for chunk in next_months(page, PAGE, UA):
+            sections.extend(SECTION.findall(chunk))
+    except Exception as error:  # noqa: BLE001 - keep the current month
+        print(f"warning: next month not loaded ({type(error).__name__}: {error})")
     print(f"day sections: {len(sections)}")
 
     seen: dict[tuple, dict] = {}
