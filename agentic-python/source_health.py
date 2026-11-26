@@ -89,16 +89,8 @@ SOURCES: list[dict] = [
         "marker": "milonga",
         "timeout": 30,
     },
-    {
-        "key": "tangocalendar",
-        "label": "tango-calendar.de",
-        "file": "milongas-de.json",
-        "min_items": 8,
-        "max_age_h": 30,
-        "url": "https://tango-calendar.de/kalender.ics",
-        "marker": "BEGIN:VCALENDAR",
-        "timeout": 30,
-    },
+    # tango-calendar.de: ingest durduruldu (2026-11-26, izin bekleniyor); veri
+    # dondurulmuş olduğu için tazelik kontrolü ve /kalender.ics probu da kapalı.
     {
         "key": "sweden",
         "label": "tangokalendern.se",

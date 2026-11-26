@@ -97,7 +97,9 @@ jobs:
           python agentic-python/ingest.py || true
           python agentic-python/publish.py || true
           python agentic-python/ingest_hoy.py || true
-          python agentic-python/ingest_tango_de.py --publish || true
+          # tango-calendar.de durduruldu (2026-11-26): Impressum otomatik okumayı ve
+          # başka dizinlere aktarmayı yazılı izne bağlıyor, robots.txt /kalender.ics
+          # yolunu kapatıyor. İzin/feed gelene kadar mevcut veri dondurulmuş kalır.
           python agentic-python/ingest_sweden.py --publish || true
           python agentic-python/ingest_milongas_ch.py --publish || true
           python agentic-python/ingest_oslo.py --publish || true
