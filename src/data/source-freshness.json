@@ -1,35 +1,35 @@
 {
-  "generatedAt": "2026-11-26T16:36:53+00:00",
+  "generatedAt": "2026-11-27T01:40:42+00:00",
   "sources": {
     "hoymilonga": {
-      "lastOkAt": "2026-11-26T16:28:31.762874+00:00",
+      "lastOkAt": "2026-11-27T01:30:50.507275+00:00",
       "verdict": "OK",
-      "items": 429
+      "items": 432
     },
     "sweden": {
-      "lastOkAt": "2026-11-26T16:28:32.889064+00:00",
+      "lastOkAt": "2026-11-27T01:30:52.961220+00:00",
       "verdict": "OK",
-      "items": 33
+      "items": 34
     },
     "milongasch": {
-      "lastOkAt": "2026-11-26T16:28:39.193425+00:00",
+      "lastOkAt": "2026-11-27T01:30:59.448019+00:00",
       "verdict": "OK",
-      "items": 17
+      "items": 18
     },
     "oslo": {
-      "lastOkAt": "2026-11-26T16:28:39.545226+00:00",
+      "lastOkAt": "2026-11-27T01:31:00.016470+00:00",
       "verdict": "OK",
       "items": 8
     },
     "vienna": {
-      "lastOkAt": "2026-11-26T16:28:47.115125+00:00",
+      "lastOkAt": "2026-11-27T01:31:07.610313+00:00",
       "verdict": "OK",
       "items": 19
     },
     "italy": {
-      "lastOkAt": "2026-11-26T16:29:07.197083+00:00",
+      "lastOkAt": "2026-11-27T01:31:37.008727+00:00",
       "verdict": "OK",
-      "items": 68
+      "items": 69
     },
     "london": {
       "lastOkAt": "2026-11-26T11:32:47.631852+00:00",
@@ -37,37 +37,37 @@
       "items": 39
     },
     "netherlands": {
-      "lastOkAt": "2026-11-26T16:29:33.066484+00:00",
+      "lastOkAt": "2026-11-27T01:32:19.248685+00:00",
       "verdict": "OK",
-      "items": 59
+      "items": 58
     },
     "tangoargentin": {
-      "lastOkAt": "2026-11-26T16:29:34.892072+00:00",
+      "lastOkAt": "2026-11-27T01:32:21.929574+00:00",
       "verdict": "OK",
       "items": 34
     },
     "tangoprague": {
-      "lastOkAt": "2026-11-26T16:29:42.625791+00:00",
+      "lastOkAt": "2026-11-27T01:32:32.416627+00:00",
       "verdict": "OK",
       "items": 6
     },
     "krakow": {
-      "lastOkAt": "2026-11-26T16:29:44.848058+00:00",
+      "lastOkAt": "2026-11-27T01:32:34.849617+00:00",
       "verdict": "OK",
       "items": 10
     },
     "milongaro": {
-      "lastOkAt": "2026-11-26T16:29:58.036622+00:00",
+      "lastOkAt": "2026-11-27T01:33:00.828383+00:00",
       "verdict": "OK",
       "items": 4
     },
     "tangocat": {
-      "lastOkAt": "2026-11-26T16:36:53+00:00",
+      "lastOkAt": "2026-11-27T01:40:42+00:00",
       "verdict": "OK",
       "items": null
     },
     "tmd": {
-      "lastOkAt": "2026-11-26T16:36:53+00:00",
+      "lastOkAt": "2026-11-27T01:40:42+00:00",
       "verdict": "OK",
       "items": null
     }
